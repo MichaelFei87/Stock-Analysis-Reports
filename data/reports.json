@@ -1,0 +1,54 @@
+{
+  "schema_version": "v1",
+  "last_updated": "2026-05-14",
+  "reports": [
+    {
+      "slug": "宁德时代",
+      "ticker": "300750.SZ",
+      "name": "CATL",
+      "name_cn": "宁德时代",
+      "sector": "New Energy",
+      "market": "a",
+      "report_date": "2026-05-14",
+      "version": "v1",
+      "composite_score": 7.8,
+      "verdict": "Bullish",
+      "verdict_tone": "bullish",
+      "valuation_tag": "Anchor ¥525.0",
+      "one_liner": "全球动力电池绝对龙头（市占率~37%），2026Q1营收+52.45%增长重新加速，PEG 0.48显著低估；储能第二曲线（624亿/年）已验证。",
+      "metrics": [
+        { "label": "Score", "value": "7.8/10", "tone": "positive" },
+        { "label": "Anchor", "value": "¥525.0", "tone": "neutral" },
+        { "label": "PB", "value": "5.49x", "tone": "neutral" }
+      ],
+      "badges": [
+        { "label": "Bullish 7.8/10", "variant": "green" },
+        { "label": "Anchor ¥525", "variant": "amber" }
+      ]
+    },
+    {
+      "slug": "贵州茅台",
+      "ticker": "600519.SH",
+      "name": "Kweichow Moutai",
+      "name_cn": "贵州茅台",
+      "sector": "Consumer Staples",
+      "market": "a",
+      "report_date": "2026-05-14",
+      "version": "v1",
+      "composite_score": 7.8,
+      "verdict": "Bullish",
+      "verdict_tone": "bullish",
+      "valuation_tag": "Anchor ¥454.0",
+      "one_liner": "五重复合护城河全球烈酒无出其右，2025年行业寒冬中营收仅-1.21%验证抗周期能力；PB处近1年0%分位+股息率3.85%构成双重支撑。",
+      "metrics": [
+        { "label": "Score", "value": "7.8/10", "tone": "positive" },
+        { "label": "Anchor", "value": "¥454.0", "tone": "neutral" },
+        { "label": "PB", "value": "6.2x", "tone": "neutral" }
+      ],
+      "badges": [
+        { "label": "Bullish 7.8/10", "variant": "green" },
+        { "label": "Anchor ¥454", "variant": "amber" }
+      ]
+    }
+  ]
+}
