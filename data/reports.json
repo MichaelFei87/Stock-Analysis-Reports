@@ -17,13 +17,31 @@
       "valuation_tag": "Anchor ¥525.0",
       "one_liner": "全球动力电池绝对龙头（市占率~37%），2026Q1营收+52.45%增长重新加速，PEG 0.48显著低估；储能第二曲线（624亿/年）已验证。",
       "metrics": [
-        { "label": "Score", "value": "7.8/10", "tone": "positive" },
-        { "label": "Anchor", "value": "¥525.0", "tone": "neutral" },
-        { "label": "PB", "value": "5.49x", "tone": "neutral" }
+        {
+          "label": "Score",
+          "value": "7.8/10",
+          "tone": "positive"
+        },
+        {
+          "label": "Anchor",
+          "value": "¥525.0",
+          "tone": "neutral"
+        },
+        {
+          "label": "PB",
+          "value": "5.49x",
+          "tone": "neutral"
+        }
       ],
       "badges": [
-        { "label": "Bullish 7.8/10", "variant": "green" },
-        { "label": "Anchor ¥525", "variant": "amber" }
+        {
+          "label": "Bullish 7.8/10",
+          "variant": "green"
+        },
+        {
+          "label": "Anchor ¥525",
+          "variant": "amber"
+        }
       ]
     },
     {
@@ -41,13 +59,117 @@
       "valuation_tag": "Anchor ¥454.0",
       "one_liner": "五重复合护城河全球烈酒无出其右，2025年行业寒冬中营收仅-1.21%验证抗周期能力；PB处近1年0%分位+股息率3.85%构成双重支撑。",
       "metrics": [
-        { "label": "Score", "value": "7.8/10", "tone": "positive" },
-        { "label": "Anchor", "value": "¥454.0", "tone": "neutral" },
-        { "label": "PB", "value": "6.2x", "tone": "neutral" }
+        {
+          "label": "Score",
+          "value": "7.8/10",
+          "tone": "positive"
+        },
+        {
+          "label": "Anchor",
+          "value": "¥454.0",
+          "tone": "neutral"
+        },
+        {
+          "label": "PB",
+          "value": "6.2x",
+          "tone": "neutral"
+        }
       ],
       "badges": [
-        { "label": "Bullish 7.8/10", "variant": "green" },
-        { "label": "Anchor ¥454", "variant": "amber" }
+        {
+          "label": "Bullish 7.8/10",
+          "variant": "green"
+        },
+        {
+          "label": "Anchor ¥454",
+          "variant": "amber"
+        }
+      ]
+    },
+    {
+      "slug": "MSFT_微软",
+      "ticker": "MSFT",
+      "name": "Microsoft Corporation",
+      "name_cn": "微软",
+      "sector": "Software - Infrastructure",
+      "market": "us",
+      "report_date": "2026-05-14",
+      "version": "v1",
+      "composite_score": 8.6,
+      "verdict": "Bullish",
+      "verdict_tone": "bullish",
+      "valuation_tag": "估值锚 406.6 元",
+      "one_liner": "看多 —— 微软作为全球最强企业科技平台（市值$3.01万亿），AI+云双轮驱动营收增速从FY2023的+6.9%重加速至Q3 FY2026的+18.3%，净利率升至38.3%，Trailing PE 24.15x远低于科技行业中位数，概率加权估值锚$406.6精确匹配当前价$405.21，多重催化剂窗口可见。",
+      "metrics": [
+        {
+          "label": "综合评分",
+          "value": "8.6/10",
+          "tone": "neutral"
+        },
+        {
+          "label": "期望收益",
+          "value": "+21.0%",
+          "tone": "positive"
+        },
+        {
+          "label": "估值锚",
+          "value": "406.6元",
+          "tone": "neutral"
+        }
+      ],
+      "expected_return_short": "+21.0%",
+      "badges": [
+        {
+          "label": "Bullish 8.6/10",
+          "variant": "amber"
+        },
+        {
+          "label": "估值锚 406.6 元",
+          "variant": "amber"
+        }
+      ]
+    },
+    {
+      "slug": "0700_腾讯控股",
+      "ticker": "0700.HK",
+      "name": "TENCENT",
+      "name_cn": "腾讯控股",
+      "sector": "Internet Content & Information",
+      "market": "hk",
+      "report_date": "",
+      "version": "v1",
+      "composite_score": 8.22,
+      "verdict": "Bullish",
+      "verdict_tone": "bullish",
+      "valuation_tag": "估值锚 489.0 元",
+      "one_liner": "看多方向 —— 腾讯凭借微信 13.85 亿 MAU 的垄断级网络效应 + 游戏常青化 (14 款) + 广告 AI 驱动增长 (+19.8% YoY)，FY2025 归母净利 +16%、1Q2026 +21.5% 加速增长，Forward PE 仅 11.8x 处于全球互联网同行最低 20% 分位，PEG 0.77 显示低估；核心不确定性来自中美地缘政治风险对估值修复的压制。",
+      "metrics": [
+        {
+          "label": "综合评分",
+          "value": "8.22/10",
+          "tone": "neutral"
+        },
+        {
+          "label": "期望收益",
+          "value": "+6.3%",
+          "tone": "positive"
+        },
+        {
+          "label": "估值锚",
+          "value": "489.0元",
+          "tone": "neutral"
+        }
+      ],
+      "expected_return_short": "+6.3%",
+      "badges": [
+        {
+          "label": "Bullish 8.22/10",
+          "variant": "amber"
+        },
+        {
+          "label": "估值锚 489.0 元",
+          "variant": "amber"
+        }
       ]
     }
   ]

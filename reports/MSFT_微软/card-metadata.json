@@ -1,0 +1,43 @@
+{
+  "slug": "MSFT_微软",
+  "ticker": "MSFT",
+  "name": "Microsoft Corporation",
+  "name_cn": "微软",
+  "sector": "Software - Infrastructure",
+  "market": "us",
+  "report_date": "2026-05-14",
+  "version": "v1",
+  "composite_score": 8.6,
+  "verdict": "Bullish",
+  "verdict_tone": "bullish",
+  "valuation_tag": "估值锚 406.6 元",
+  "one_liner": "看多 —— 微软作为全球最强企业科技平台（市值$3.01万亿），AI+云双轮驱动营收增速从FY2023的+6.9%重加速至Q3 FY2026的+18.3%，净利率升至38.3%，Trailing PE 24.15x远低于科技行业中位数，概率加权估值锚$406.6精确匹配当前价$405.21，多重催化剂窗口可见。",
+  "metrics": [
+    {
+      "label": "综合评分",
+      "value": "8.6/10",
+      "tone": "neutral"
+    },
+    {
+      "label": "期望收益",
+      "value": "+21.0%",
+      "tone": "positive"
+    },
+    {
+      "label": "估值锚",
+      "value": "406.6元",
+      "tone": "neutral"
+    }
+  ],
+  "expected_return_short": "+21.0%",
+  "badges": [
+    {
+      "label": "Bullish 8.6/10",
+      "variant": "amber"
+    },
+    {
+      "label": "估值锚 406.6 元",
+      "variant": "amber"
+    }
+  ]
+}
