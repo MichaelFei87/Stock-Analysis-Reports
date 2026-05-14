@@ -58,7 +58,7 @@ body {
 /* ── Nav ─────────────────────────────────────── */
 .nav {
   display: flex; align-items: center; justify-content: center;
-  padding: 0 32px; height: 56px;
+  padding: 0 32px; height: 56px; position: relative;
   border-bottom: 1px solid var(--border2);
   position: sticky; top: 0; z-index: 100;
   backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
@@ -68,13 +68,11 @@ body {
   font-family: var(--serif); font-weight: 600; font-size: 16px;
   color: var(--text); text-decoration: none;
 }
-.nav-links { display: flex; gap: 4px; align-items: center; }
-.nav-links a {
-  font-size: 13px; color: var(--text3); text-decoration: none;
-  font-weight: 500; padding: 6px 12px; border-radius: 8px;
-  transition: color .2s, background .2s;
+.nav-github {
+  position: absolute; right: 32px; top: 50%; transform: translateY(-50%);
+  color: var(--text3); transition: color .2s;
 }
-.nav-links a:hover { color: var(--text); background: var(--border); }
+.nav-github:hover { color: var(--text); }
 
 /* ── Hero ────────────────────────────────────── */
 .hero {
