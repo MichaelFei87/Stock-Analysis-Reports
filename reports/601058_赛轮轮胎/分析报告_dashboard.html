@@ -1,0 +1,3289 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>赛轮轮胎（601058.SH）投资分析报告 — –</title>
+<style>
+/* ============================================================
+   Claude Code Company Analysis · Report Styles v4.6
+   单一 CSS 真相源 — 由 assets/html/base.html 加载并内联
+   禁止在 Phase 6 Part B 中自创颜色值或变量名
+   v4.6: Goldman 蓝调 + Morningstar 卡片化 + Bloomberg 风险等级
+   ============================================================ */
+
+:root {
+  /* 主色 — Goldman 深蓝 */
+  --c-primary: #1a56db;
+  --c-primary-light: #e8effc;
+  --c-primary-dark: #0f3d99;
+  --c-accent: #d97f3c;
+
+  /* Bloomberg 风格风险等级(高对比) */
+  --c-risk-red:    #dc2626;
+  --c-risk-red-bg: #fef2f2;
+  --c-risk-amber:  #e8a33a;
+  --c-risk-amber-bg: #fff7ed;
+  --c-risk-yellow: #fbbf24;
+  --c-risk-yellow-bg: #fffbeb;
+  --c-risk-green:  #059669;
+  --c-risk-green-bg: #ecfdf5;
+
+  /* 语义色 (保留 v4.3 alias) */
+  --c-green: var(--c-risk-green);
+  --c-green-bg: var(--c-risk-green-bg);
+  --c-yellow: #d97706;
+  --c-yellow-bg: #fffbeb;
+  --c-red: var(--c-risk-red);
+  --c-red-bg: var(--c-risk-red-bg);
+
+  /* 灰度系 */
+  --c-gray-50:  #f9fafb;
+  --c-gray-100: #f3f4f6;
+  --c-gray-200: #e5e7eb;
+  --c-gray-500: #6b7280;
+  --c-gray-700: #374151;
+  --c-gray-900: #111827;
+
+  /* Morningstar 卡片化灰阶 */
+  --c-card-border:  #e5e7eb;
+  --c-card-header:  #f9fafb;
+  --c-card-hover:   rgba(26,86,219,0.04);
+
+  /* 形状 */
+  --radius: 12px;
+  --shadow: 0 1px 3px rgba(0,0,0,.1), 0 1px 2px rgba(0,0,0,.06);
+  --shadow-md: 0 4px 6px rgba(0,0,0,.07), 0 2px 4px rgba(0,0,0,.06);
+  --shadow-lg: 0 10px 25px rgba(0,0,0,.08), 0 4px 10px rgba(0,0,0,.05);
+
+  /* Variant Perception 紫 */
+  --c-variant: #7a4dab;
+  --c-variant-bg: #f3eeff;
+
+  /* v4.6 sidebar 布局 */
+  --sidebar-width: 260px;
+  --sidebar-gap: 24px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+               "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  background: var(--c-gray-50);
+  color: var(--c-gray-900);
+  margin: 0;
+  padding: 0;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+}
+
+/* ---------- 3.1 Sticky 顶部导航栏 ---------- */
+.top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  height: 50px;
+  padding: 0 24px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255,255,255,0.85);
+  border-bottom: 1px solid var(--c-gray-200);
+  font-size: 14px;
+}
+.top-nav .nav-brand {
+  font-weight: 700;
+  color: var(--c-primary);
+  text-decoration: none;
+  margin-right: auto;
+}
+.top-nav a {
+  color: var(--c-gray-700);
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: background .15s;
+}
+.top-nav a:hover { background: var(--c-primary-light); color: var(--c-primary); }
+
+/* ---------- Header Hero ---------- */
+header.hero {
+  background: linear-gradient(135deg, var(--c-primary), #2a6ba0);
+  color: white;
+  padding: 48px 32px;
+  border-radius: var(--radius);
+  margin-bottom: 32px;
+  box-shadow: var(--shadow-md);
+}
+header.hero h1 { font-size: 32px; margin: 0 0 8px; font-weight: 700; }
+header.hero .subtitle { opacity: 0.9; font-size: 15px; }
+header.hero .meta {
+  display: flex; flex-wrap: wrap; gap: 24px;
+  margin-top: 20px; font-size: 14px;
+}
+
+/* ---------- Section (每个 §一到§十五 一个) ---------- */
+.section {
+  background: white;
+  padding: 28px 32px;
+  margin: 20px 0;
+  border-radius: var(--radius);
+  border: 1px solid var(--c-gray-200);
+  box-shadow: var(--shadow);
+}
+.section h2 {
+  color: var(--c-primary);
+  border-bottom: 2px solid var(--c-primary-light);
+  padding-bottom: 8px;
+  margin-top: 0;
+  font-size: 22px;
+}
+.section h3 {
+  color: var(--c-primary);
+  font-size: 18px;
+  margin-top: 24px;
+  border-bottom: 1px dashed var(--c-gray-200);
+  padding-bottom: 4px;
+}
+.section h4 { color: var(--c-gray-900); font-size: 16px; margin-top: 18px; }
+
+/* Variant Perception 章节专用紫色强调 */
+.section.variant-perception {
+  border-left: 4px solid var(--c-variant);
+  background: linear-gradient(to right, var(--c-variant-bg) 0%, white 3%);
+}
+.section.variant-perception h2 {
+  color: var(--c-variant);
+  border-bottom-color: var(--c-variant-bg);
+}
+
+/* ---------- 3.2 评分环形图 (SVG) ---------- */
+.score-ring {
+  display: inline-block;
+  position: relative;
+}
+.score-ring svg { display: block; }
+.score-ring .score-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.score-ring .score-text .num {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--c-primary);
+}
+.score-ring .score-text .label {
+  font-size: 11px;
+  color: var(--c-gray-500);
+}
+
+/* ---------- 3.3 维度评分条形图 ---------- */
+.dimension-bar {
+  display: grid;
+  grid-template-columns: 1fr 48px 3fr 56px;
+  align-items: center;
+  gap: 12px;
+  margin: 10px 0;
+  font-size: 14px;
+}
+.dimension-bar .dim-name { color: var(--c-gray-700); }
+.dimension-bar .dim-score { font-weight: 600; text-align: right; color: var(--c-primary); }
+.dimension-bar .dim-progress {
+  height: 10px;
+  background: var(--c-gray-100);
+  border-radius: 5px;
+  overflow: hidden;
+}
+.dimension-bar .dim-progress .fill { height: 100%; border-radius: 5px; }
+.dimension-bar .dim-progress .fill.tier1 { background: linear-gradient(90deg, #3b82f6, #1d4ed8); }
+.dimension-bar .dim-progress .fill.tier2 { background: linear-gradient(90deg, #8b5cf6, #6d28d9); }
+.dimension-bar .dim-progress .fill.tier3 { background: linear-gradient(90deg, #f59e0b, #d97706); }
+.dimension-bar .dim-weight { text-align: right; color: var(--c-gray-500); font-size: 12px; }
+
+/* ---------- 3.4 三色情景卡片 ---------- */
+.scenario-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin: 16px 0;
+}
+.scenario {
+  padding: 16px;
+  border-radius: 8px;
+  border-left: 4px solid;
+}
+.scenario .label { font-size: 12px; color: var(--c-gray-500); text-transform: uppercase; letter-spacing: 1px; }
+.scenario .big-num { font-size: 28px; font-weight: 700; margin: 4px 0 8px; }
+.scenario .detail { font-size: 13px; color: var(--c-gray-700); }
+.scenario.bull { background: var(--c-green-bg); border-left-color: var(--c-green); }
+.scenario.bull .big-num { color: var(--c-green); }
+.scenario.base { background: var(--c-yellow-bg); border-left-color: var(--c-yellow); }
+.scenario.base .big-num { color: var(--c-yellow); }
+.scenario.bear { background: var(--c-red-bg); border-left-color: var(--c-red); }
+.scenario.bear .big-num { color: var(--c-red); }
+.scenario.tail { background: #2a2a2a; border-left-color: #000; color: #fff; }
+.scenario.tail .big-num { color: #fff; }
+.scenario.tail .detail { color: #ddd; }
+
+/* ---------- 3.5 期望回报高亮条 ---------- */
+.expected-return {
+  background: linear-gradient(135deg, #1e3a5f, var(--c-primary));
+  color: white;
+  padding: 20px 28px;
+  border-radius: var(--radius);
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--shadow-md);
+}
+.expected-return .label { font-size: 12px; opacity: 0.8; text-transform: uppercase; letter-spacing: 1px; }
+.expected-return .value { font-size: 36px; font-weight: 700; }
+
+/* ---------- 3.6 团队名片网格 ---------- */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin: 16px 0;
+}
+.team-card {
+  padding: 16px;
+  border: 1px solid var(--c-gray-200);
+  border-radius: 8px;
+  text-align: center;
+}
+.team-card .avatar {
+  width: 48px; height: 48px; border-radius: 50%;
+  background: var(--c-primary-light); color: var(--c-primary);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; margin: 0 auto 8px; font-size: 18px;
+}
+.team-card .name { font-weight: 600; }
+.team-card .role { color: var(--c-gray-500); font-size: 13px; margin-top: 4px; }
+
+/* ---------- 3.7 风险矩阵 ---------- */
+.risk-item {
+  display: grid;
+  grid-template-columns: 20px 1fr auto;
+  gap: 12px;
+  align-items: start;
+  padding: 12px;
+  border-left: 4px solid;
+  background: var(--c-gray-50);
+  border-radius: 6px;
+  margin: 8px 0;
+}
+.risk-item.high   { border-left-color: var(--c-red);    background: var(--c-red-bg); }
+.risk-item.medium { border-left-color: var(--c-yellow); background: var(--c-yellow-bg); }
+.risk-item.low    { border-left-color: var(--c-green);  background: var(--c-green-bg); }
+.risk-item .dot {
+  width: 12px; height: 12px; border-radius: 50%; margin-top: 4px;
+}
+.risk-item.high   .dot { background: var(--c-red); }
+.risk-item.medium .dot { background: var(--c-yellow); }
+.risk-item.low    .dot { background: var(--c-green); }
+
+/* ---------- 3.8 融资时间轴 ---------- */
+.timeline {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin: 24px 0;
+  overflow-x: auto;
+  padding: 8px 0;
+}
+.timeline .tl-node {
+  flex: 0 0 auto;
+  text-align: center;
+  padding: 0 14px;
+  position: relative;
+}
+.timeline .tl-node::before {
+  content: '';
+  width: 14px; height: 14px; border-radius: 50%;
+  background: var(--c-gray-200); display: block; margin: 0 auto 8px;
+}
+.timeline .tl-node.current::before { background: var(--c-primary); box-shadow: 0 0 0 4px var(--c-primary-light); }
+.timeline .tl-node .year { font-size: 12px; color: var(--c-gray-500); }
+.timeline .tl-node .round { font-weight: 600; font-size: 13px; }
+.timeline .tl-node .amount { font-size: 11px; color: var(--c-gray-700); }
+
+/* ---------- 3.9 情绪量表 ---------- */
+.sentiment-bar {
+  position: relative;
+  height: 12px;
+  border-radius: 6px;
+  background: linear-gradient(to right, var(--c-red) 0%, var(--c-yellow) 50%, var(--c-green) 100%);
+  margin: 20px 0 32px;
+}
+.sentiment-bar .pointer {
+  position: absolute;
+  top: -8px;
+  width: 4px; height: 28px;
+  background: var(--c-gray-900);
+  border-radius: 2px;
+  transform: translateX(-50%);
+}
+.sentiment-bar .pointer::after {
+  content: attr(data-label);
+  position: absolute;
+  top: 32px; left: 50%; transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: 11px;
+  background: var(--c-gray-900);
+  color: white;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+/* ---------- v2 组件 · 估值区间可视化 ---------- */
+.valuation-range {
+  position: relative;
+  height: 28px;
+  background: var(--c-gray-100);
+  border-radius: 4px;
+  margin: 10px 0;
+}
+.valuation-range .range {
+  position: absolute;
+  top: 4px; bottom: 4px;
+  border-radius: 3px;
+  opacity: 0.6;
+}
+.valuation-range .range.dcf { background: var(--c-primary); }
+.valuation-range .range.comparable { background: var(--c-green); }
+.valuation-range .range.transaction { background: var(--c-yellow); }
+.valuation-range .label-row {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 8px;
+  align-items: center;
+  font-size: 12px;
+}
+
+/* ---------- v2 组件 · 星级评估 ---------- */
+.star-filled { color: var(--c-yellow); }
+.star-empty  { color: var(--c-gray-200); }
+
+/* ---------- v2 组件 · 信息缺口优先级 badge ---------- */
+.badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.badge.critical { background: var(--c-red-bg);    color: var(--c-red); }
+.badge.important{ background: var(--c-yellow-bg); color: var(--c-yellow); }
+.badge.minor    { background: var(--c-green-bg);  color: var(--c-green); }
+
+/* ---------- 通用 Table ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 14px;
+}
+th, td {
+  border: 1px solid var(--c-gray-200);
+  padding: 8px 12px;
+  text-align: left;
+}
+th {
+  background: var(--c-primary-light);
+  color: var(--c-primary);
+  font-weight: 600;
+}
+tr:nth-child(even) td { background: var(--c-gray-50); }
+
+/* ---------- 通用文本 ---------- */
+strong { color: var(--c-gray-900); font-weight: 600; }
+code {
+  background: var(--c-gray-100);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 12px;
+}
+blockquote {
+  border-left: 4px solid var(--c-primary);
+  padding-left: 16px;
+  color: var(--c-gray-700);
+  background: var(--c-primary-light);
+  padding: 10px 16px;
+  border-radius: 4px;
+  margin: 12px 0;
+}
+hr { border: none; border-top: 1px dashed var(--c-gray-200); margin: 24px 0; }
+ul, ol { padding-left: 22px; }
+li { margin: 4px 0; }
+a {
+  color: var(--c-primary);
+  text-decoration: none;
+  border-bottom: 1px dotted;
+}
+a:hover { color: var(--c-yellow); }
+
+footer {
+  text-align: center;
+  color: var(--c-gray-500);
+  padding: 32px 0 16px;
+  font-size: 12px;
+  border-top: 1px solid var(--c-gray-200);
+  margin-top: 48px;
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width: 768px) {
+  .container { padding: 20px 16px 60px; }
+  header.hero { padding: 24px 16px; }
+  header.hero h1 { font-size: 24px; }
+  .section { padding: 16px; }
+  .scenario-grid, .team-grid { grid-template-columns: 1fr; }
+  table { font-size: 12px; }
+  table th, table td { padding: 6px 8px; }
+}
+
+/* ============================================================
+   v4.6 新增: 6 个大厂风格组件
+   ============================================================ */
+
+/* ---------- v4.6-1. 前置评级卡 (Goldman 三件套) ---------- */
+.rating-trio {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: -16px 0 32px;
+}
+.rating-card {
+  background: white;
+  border: 1px solid var(--c-card-border);
+  border-top: 4px solid var(--c-primary);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  box-shadow: var(--shadow-md);
+  transition: transform .15s, box-shadow .15s;
+}
+.rating-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+.rating-card--score  { border-top-color: var(--c-primary); }
+.rating-card--anchor { border-top-color: var(--c-accent); }
+.rating-card--return { border-top-color: var(--c-risk-green); }
+.rating-card--return.negative { border-top-color: var(--c-risk-red); }
+
+.rating-card .label {
+  font-size: 11px;
+  color: var(--c-gray-500);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.rating-card .value {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--c-gray-900);
+  line-height: 1.2;
+  margin-bottom: 6px;
+}
+.rating-card .value .out-of {
+  font-size: 16px;
+  color: var(--c-gray-500);
+  font-weight: 500;
+}
+.rating-card .value.negative { color: var(--c-risk-red); }
+.rating-card .value.positive { color: var(--c-risk-green); }
+.rating-card .sub {
+  font-size: 12px;
+  color: var(--c-gray-700);
+}
+
+/* ---------- v4.6-2. 彩条风险卡 (Bloomberg 等级色) ---------- */
+.risk-card-v2 {
+  display: grid;
+  grid-template-columns: 4px 1fr auto;
+  gap: 14px;
+  align-items: center;
+  padding: 14px 16px 14px 0;
+  margin: 8px 0;
+  background: white;
+  border: 1px solid var(--c-card-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: background .15s;
+}
+.risk-card-v2:hover { background: var(--c-card-hover); }
+.risk-card-v2.risk-critical { border-left-width: 0; background: linear-gradient(to right, var(--c-risk-red-bg) 0%, white 6%); }
+.risk-card-v2.risk-high     { background: linear-gradient(to right, var(--c-risk-amber-bg) 0%, white 6%); }
+.risk-card-v2.risk-medium   { background: linear-gradient(to right, var(--c-risk-yellow-bg) 0%, white 6%); }
+.risk-card-v2.risk-low      { background: linear-gradient(to right, var(--c-risk-green-bg) 0%, white 6%); }
+.risk-card-v2 .left-bar { align-self: stretch; width: 4px; }
+.risk-card-v2.risk-critical .left-bar { background: var(--c-risk-red); }
+.risk-card-v2.risk-high     .left-bar { background: var(--c-risk-amber); }
+.risk-card-v2.risk-medium   .left-bar { background: var(--c-risk-yellow); }
+.risk-card-v2.risk-low      .left-bar { background: var(--c-risk-green); }
+.risk-card-v2 .title { font-weight: 600; color: var(--c-gray-900); margin-bottom: 3px; }
+.risk-card-v2 .body  { font-size: 13px; color: var(--c-gray-700); line-height: 1.5; }
+.risk-card-v2 .sev-badge {
+  font-size: 10px; font-weight: 700; padding: 3px 10px;
+  border-radius: 12px; white-space: nowrap; letter-spacing: .5px;
+}
+.risk-card-v2.risk-critical .sev-badge { background: var(--c-risk-red);    color: white; }
+.risk-card-v2.risk-high     .sev-badge { background: var(--c-risk-amber);  color: white; }
+.risk-card-v2.risk-medium   .sev-badge { background: var(--c-risk-yellow); color: var(--c-gray-900); }
+.risk-card-v2.risk-low      .sev-badge { background: var(--c-risk-green);  color: white; }
+
+/* ---------- v4.6.2. Preamble 区 (hero 之后、rating-trio 之前) ---------- */
+.preamble {
+  background: var(--c-gray-50);
+  border-left: 3px solid var(--c-accent);
+  border-radius: 6px;
+  padding: 14px 20px;
+  margin: -8px 0 20px;
+  font-size: 13px;
+  color: var(--c-gray-700);
+  line-height: 1.7;
+}
+.preamble:empty { display: none; }
+.preamble blockquote {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  font-size: 13px;
+}
+.preamble blockquote p { margin: 6px 0; }
+.preamble p { margin: 6px 0; }
+.preamble strong { color: var(--c-primary-dark); }
+.preamble hr { display: none; }  /* 吃掉 --- 分隔符,避免视觉噪音 */
+
+/* ---------- v4.6.1. 关键指标横排面板 (顶部, 替代 v4.6 的粘性侧边栏) ---------- */
+.metric-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+  margin: 0 0 24px;
+  padding: 16px;
+  background: white;
+  border: 1px solid var(--c-card-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.metric-strip .metric-chip {
+  padding: 10px 14px;
+  text-align: center;
+  border-right: 1px dashed var(--c-gray-100);
+}
+.metric-strip .metric-chip:last-child { border-right: none; }
+.metric-strip .metric-chip .metric-label {
+  font-size: 10px;
+  color: var(--c-gray-500);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.metric-strip .metric-chip .metric-value {
+  font-size: 18px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  color: var(--c-gray-900);
+}
+.metric-strip .metric-chip .metric-value.positive { color: var(--c-risk-green); }
+.metric-strip .metric-chip .metric-value.negative { color: var(--c-risk-red); }
+.metric-strip .metric-chip .metric-value.risk     { color: var(--c-risk-amber); }
+.metric-strip .metric-chip .metric-value.critical { color: var(--c-risk-red); font-weight: 900; }
+.metric-strip .metric-chip .metric-value.neutral  { color: var(--c-gray-900); }
+
+/* ---------- v4.6 兼容: .metric-sidebar/metric-row 保留(弃用但不破坏存量报告) ---------- */
+.metric-sidebar {
+  /* 降级为块式显示, 不再粘性 */
+  background: white;
+  border: 1px solid var(--c-card-border);
+  border-radius: var(--radius);
+  padding: 20px 18px;
+  box-shadow: var(--shadow);
+  margin: 0 0 24px;
+}
+.metric-sidebar h4 {
+  font-size: 11px;
+  color: var(--c-gray-500);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  margin: 0 0 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--c-card-border);
+}
+.metric-sidebar .metric-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--c-gray-100);
+  font-size: 13px;
+}
+.metric-sidebar .metric-row:last-child { border-bottom: none; }
+.metric-sidebar .metric-row span { color: var(--c-gray-700); }
+.metric-sidebar .metric-row strong { font-weight: 700; color: var(--c-gray-900); font-variant-numeric: tabular-nums; }
+.metric-sidebar .metric-row strong.positive { color: var(--c-risk-green); }
+.metric-sidebar .metric-row strong.negative { color: var(--c-risk-red); }
+.metric-sidebar .metric-row strong.risk     { color: var(--c-risk-amber); font-weight: 800; }
+.metric-sidebar .metric-row strong.critical { color: var(--c-risk-red);   font-weight: 800; }
+
+/* ---------- v4.6-4. 对标卡 (Morningstar 3 列比较) ---------- */
+.comparison-card {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr 1fr;
+  gap: 8px;
+  background: white;
+  border: 1px solid var(--c-card-border);
+  border-radius: var(--radius);
+  padding: 16px;
+  margin: 12px 0;
+}
+.comparison-card .cmp-col {
+  text-align: center;
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+.comparison-card .cmp-col.center {
+  background: var(--c-primary-light);
+  border: 2px solid var(--c-primary);
+}
+.comparison-card .cmp-label { font-size: 10px; color: var(--c-gray-500); text-transform: uppercase; letter-spacing: 1px; font-weight: 600; margin-bottom: 6px; }
+.comparison-card .cmp-value { font-size: 20px; font-weight: 800; color: var(--c-gray-900); font-variant-numeric: tabular-nums; }
+.comparison-card .cmp-col.center .cmp-value { font-size: 24px; color: var(--c-primary); }
+.comparison-card .cmp-sub { font-size: 11px; color: var(--c-gray-500); margin-top: 4px; }
+.comparison-card .cmp-bar {
+  height: 6px; background: var(--c-gray-100); border-radius: 3px;
+  margin-top: 8px; position: relative; overflow: hidden;
+}
+.comparison-card .cmp-bar .fill {
+  position: absolute; left: 0; top: 0; bottom: 0;
+  background: linear-gradient(90deg, var(--c-primary), var(--c-accent));
+  border-radius: 3px;
+}
+
+/* ---------- v4.6-5. 深度链接 (章节间跳转) ---------- */
+.deep-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 1px 8px 1px 6px;
+  font-size: 11px;
+  background: var(--c-primary-light);
+  color: var(--c-primary);
+  border: 1px solid transparent;
+  border-radius: 12px;
+  text-decoration: none !important;
+  vertical-align: middle;
+  font-weight: 600;
+  transition: background .15s, border-color .15s;
+}
+.deep-link::before { content: '→'; opacity: .6; }
+.deep-link:hover {
+  background: var(--c-primary);
+  color: white;
+  border-color: var(--c-primary);
+}
+/* Target 高亮(用户点击内链跳到目标章节时) */
+.section:target {
+  animation: target-pulse 1.8s ease-out;
+  scroll-margin-top: 70px;
+}
+@keyframes target-pulse {
+  0%   { box-shadow: 0 0 0 4px var(--c-accent); }
+  100% { box-shadow: var(--shadow); }
+}
+
+/* ---------- v4.6-6. 微型热力图 (纯 CSS 色块网格) ---------- */
+.heatmap-grid {
+  display: grid;
+  gap: 2px;
+  margin: 10px 0;
+  font-size: 10px;
+}
+.heatmap-grid .hm-cell {
+  aspect-ratio: 1 / 1;
+  min-height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  font-family: ui-monospace, monospace;
+  font-weight: 600;
+  color: var(--c-gray-900);
+}
+/* 5 档颜色映射 (深红 → 白 → 深绿) */
+.heatmap-grid .hm-cell.hm--2 { background: #fca5a5; color: #7f1d1d; }
+.heatmap-grid .hm-cell.hm--1 { background: #fed7aa; color: #7c2d12; }
+.heatmap-grid .hm-cell.hm-0  { background: #f3f4f6; }
+.heatmap-grid .hm-cell.hm-1  { background: #bbf7d0; color: #14532d; }
+.heatmap-grid .hm-cell.hm-2  { background: #4ade80; color: white; }
+.heatmap-grid .hm-cell:hover { transform: scale(1.1); }
+
+.heatmap-grid .hm-row-label {
+  font-size: 10px;
+  color: var(--c-gray-500);
+  text-align: right;
+  padding-right: 8px;
+  align-self: center;
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width: 768px) {
+  .container { padding: 20px 16px 60px; }
+  header.hero { padding: 24px 16px; }
+  header.hero h1 { font-size: 24px; }
+  .section { padding: 16px; }
+  .scenario-grid, .team-grid, .rating-trio { grid-template-columns: 1fr; }
+  .comparison-card { grid-template-columns: 1fr; }
+  .metric-strip { grid-template-columns: repeat(2, 1fr); }
+  .metric-strip .metric-chip { border-right: none; border-bottom: 1px dashed var(--c-gray-100); }
+  table { font-size: 12px; }
+  table th, table td { padding: 6px 8px; }
+}
+
+/* ---------- 打印 ---------- */
+@media print {
+  body { background: white; }
+  .top-nav { display: none; }
+  .section { box-shadow: none; border: 1px solid #ccc; break-inside: avoid; }
+  header.hero { break-inside: avoid; }
+  .metric-strip { break-inside: avoid; }
+  .deep-link { color: var(--c-gray-900); background: transparent; border-color: var(--c-gray-500); }
+  .deep-link::before { content: ''; }
+  .deep-link::after { content: ' (见对应章节)'; font-size: 10px; color: var(--c-gray-500); }
+}
+
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     Sticky 顶部导航栏 — 13 章节锚点
+     ============================================================ -->
+<nav class="top-nav">
+  <a href="../../index.html" class="nav-brand">AI 投资分析报告</a>
+  <a href="#exec-summary">摘要</a>
+  <a href="#scoring">评分</a>
+  <a href="#screening">快筛</a>
+  <a href="#fundamentals">基本面</a>
+  <a href="#industry">行业</a>
+  <a href="#detail">详细</a>
+  <a href="#sentiment">舆情</a>
+  <a href="#peers">对标</a>
+  <a href="#valuation">估值</a>
+  <a href="#qualitative">定性</a>
+  <a href="#gaps">缺口</a>
+  <a href="#sources">来源</a>
+</nav>
+
+<div class="container">
+
+<!-- ============================================================
+     Header Hero
+     ============================================================ -->
+<header class="hero">
+  <h1>赛轮轮胎（601058.SH）投资分析报告</h1>
+  <div class="subtitle">Claude Opus 4.7 · stock-analyze skill vv4.7 · 6+1 阶段流水线 + 11 大师框架审计</div>
+  <div class="meta">
+    <span>📅 –</span>
+    <span>💵 收盘 – 元</span>
+    <span>📊 PB – · 市值 – 亿</span>
+    <span>🎯 估值锚 13.8 元</span>
+    <span>⚠️ 最差情景 – 元</span>
+  </div>
+</header>
+
+<!-- ============================================================
+     v4.6.2 新增: Preamble 区 — 主报告第一个 ## 之前的 blockquote / 段落
+     (版本切换说明 / 数据截止注意 / meta 行的详细补充等),否则会丢失
+     ============================================================ -->
+<div class="preamble">
+<!-- 无 preamble 内容 -->
+</div>
+
+<!-- ============================================================
+     v4.6 新增: 前置评级三件套(Goldman 风格, hero 下方醒目位置)
+     ============================================================ -->
+<div class="rating-trio">
+
+  <div class="rating-card rating-card--score">
+    <div class="label">综合评分</div>
+    <div class="value">6.15 <span class="out-of">/ 10</span></div>
+    <div class="sub">中性-分歧</div>
+  </div>
+  <div class="rating-card rating-card--anchor">
+    <div class="label">估值锚(DCF 概率加权)</div>
+    <div class="value">13.8 元</div>
+    <div class="sub">相对当前 +6.7%</div>
+  </div>
+  <div class="rating-card rating-card--return">
+    <div class="label">12-18 月期望收益</div>
+    <div class="value positive">+6.69%</div>
+    <div class="sub">年化 +4.5~6.7%</div>
+  </div>
+</div>
+
+<!-- ============================================================
+     v4.6.1 关键指标横排面板(替代 v4.6 的粘性侧边栏,更简洁)
+     ============================================================ -->
+<div class="metric-strip">
+
+  <div class="metric-chip">
+    <div class="metric-label">PE (TTM)</div>
+    <div class="metric-value neutral">12.01</div>
+  </div>
+  <div class="metric-chip">
+    <div class="metric-label">PB</div>
+    <div class="metric-value neutral">1.90x</div>
+  </div>
+  <div class="metric-chip">
+    <div class="metric-label">市值(亿)</div>
+    <div class="metric-value neutral">425.15 亿</div>
+  </div>
+  <div class="metric-chip">
+    <div class="metric-label">ROE</div>
+    <div class="metric-value positive">17.13%</div>
+  </div>
+  <div class="metric-chip">
+    <div class="metric-label">毛利率</div>
+    <div class="metric-value neutral">24.68%</div>
+  </div>
+  <div class="metric-chip">
+    <div class="metric-label">资产负债率</div>
+    <div class="metric-value neutral">51.24%</div>
+  </div>
+  <div class="metric-chip">
+    <div class="metric-label">股东户数</div>
+    <div class="metric-value neutral">57758</div>
+  </div>
+  <div class="metric-chip">
+    <div class="metric-label">家族持股</div>
+    <div class="metric-value neutral">26.10%</div>
+  </div>
+</div>
+
+<!-- ============================================================
+     §一 执行摘要
+     ============================================================ -->
+<div class="section" id="exec-summary">
+<h2>§一 执行摘要</h2>
+<p><strong>一句话结论</strong>: <strong>中性-分歧</strong> —— 赛轮轮胎海外产能护城河持续加深（越南基地先发+海外收入占比 77.6% 行业最高），但 FY2025 净利首次负增长（-13.30%）叠加外资/公募大幅减持+筹码严重分散，正负力量对冲；2026Q1 毛利率回升至 26.86% 为盈利拐点初步信号，需等 2026 年中报确认方向。</p>
+<p><strong>估值锚</strong>: <strong>概率加权 DCF ≈ 454 亿元 / 13.8 元</strong>（4 情景；乐观 20% / 基准 45% / 悲观 30% / 最差 5%）。当前 12.93 元相对此锚 +6.7%。</p>
+<p><strong>综合评分</strong>: <strong>6.15/10</strong> · <strong>数据置信度</strong>: 中（PDF 未获取、Peer 对标缺失、舆情数据缺失、资金流数据缺失）</p>
+<p><strong>三大风险（Top 3）</strong>:<br />
+1. 🟠 Altman Z-Score=2.623 灰色地带，FCF 为负+有息负债 145 亿扩张 [audit_report §3.1]<br />
+2. 🟠 长期股权投资暴跌 48.5%（63,082→32,507 万），参股公司权益法爆雷风险 [audit_report §3.2]<br />
+3. 🟡 外资（港中结算 -4,875 万股）+公募减持+股东户数 +37.3% 散户涌入 [audit_report §3.4/§3.5]</p>
+<p><strong>三大机会（Top 3）</strong>:<br />
+1. PB 1.90 处于近 1 年 0% 分位（历史最低），PE 12x 低于制造业中位数 40%+<br />
+2. 主权基金新进（澳门金管局+科威特+社保一一一），长期配置型资金认可<br />
+3. 2026Q1 毛利率 26.86% 环比回升 2.18pct，若趋势延续则盈利拐点确立</p>
+<p><strong>核心非共识观点</strong>（Top 3）:<br />
+1. 激进扩产（在建工程 28.68 亿+无形资产暴增 153%）是"远见"还是"冒进"——分歧焦点<br />
+2. 市场已定价悲观假设（Justified PE 悲观 11.3x ≈ 当前 12.01x），下行空间有限<br />
+3. 海外产能护城河被低估——越南基地 2-3 年爬坡壁垒使竞争对手短期无法复制</p>
+<p><strong>投资方向综合判定</strong>: <strong>中性-分歧</strong>（§十一 3 框架：护城河看多 / 管理层中性 / 催化剂中性 → 不满足 ≥2 同向 → 中性-分歧）</p>
+<hr />
+</div>
+
+<!-- ============================================================
+     §二 评分总览（10 维度单列）
+     ============================================================ -->
+<div class="section" id="scoring">
+<h2>§二 事实评分总览（10 维度）</h2>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th style="text-align: center;">权重</th>
+<th style="text-align: center;">分数(0-10)</th>
+<th style="text-align: center;">加权</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. 市场规模与结构</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">0.70</td>
+</tr>
+<tr>
+<td>2. 商业模式</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">0.70</td>
+</tr>
+<tr>
+<td>3. 盈利能力</td>
+<td style="text-align: center;">15%</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">0.90</td>
+</tr>
+<tr>
+<td>4. 产品与技术</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">0.60</td>
+</tr>
+<tr>
+<td>5. 团队与管理层</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">0.60</td>
+</tr>
+<tr>
+<td>6. 市场进入与护城河</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">0.70</td>
+</tr>
+<tr>
+<td>7. 财务健康度</td>
+<td style="text-align: center;">15%</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">0.75</td>
+</tr>
+<tr>
+<td>8. 估值合理性</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">0.70</td>
+</tr>
+<tr>
+<td>9. 风险与治理</td>
+<td style="text-align: center;">5%</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">0.25</td>
+</tr>
+<tr>
+<td>10. 催化剂与时机</td>
+<td style="text-align: center;">5%</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">0.25</td>
+</tr>
+<tr>
+<td><strong>合计</strong></td>
+<td style="text-align: center;">100%</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: center;"><strong>6.15</strong></td>
+</tr>
+</tbody>
+</table>
+<p><em>详细证据见 §六。评分标尺见 <code>references/scoring-rubric.md</code>。表格严格 4 列（维度/权重/分数/加权分）——不添加"关键理由"列。</em></p>
+<hr />
+</div>
+
+<!-- ============================================================
+     §三 快速筛选
+     ============================================================ -->
+<div class="section" id="screening">
+<h2>§三 快速筛选（致命看空条款 - 6 项）</h2>
+<table>
+<thead>
+<tr>
+<th>条款</th>
+<th>阈值</th>
+<th>实际</th>
+<th style="text-align: center;">触发?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. 单季/单年度净利 &lt; -50%</td>
+<td>50%</td>
+<td>FY2025 归母净利 -13.30% YoY；2026Q1 +1.72% YoY [Tushare:income]</td>
+<td style="text-align: center;">❌</td>
+</tr>
+<tr>
+<td>2. 资产负债率 &gt; 70%</td>
+<td>70%</td>
+<td>51.24%（20260331）[Tushare:fina_indicator]</td>
+<td style="text-align: center;">❌</td>
+</tr>
+<tr>
+<td>3. 大股东累计质押 &gt; 50%</td>
+<td>50%</td>
+<td>实控人系质押合计 &lt;0.1%（单笔多在 1 万股以下 vs 总持股 5.56 亿+2.25 亿股）[Tushare:pledge_detail]</td>
+<td style="text-align: center;">❌</td>
+</tr>
+<tr>
+<td>4. 审计机构连续 2 年变更</td>
+<td>1 次</td>
+<td>无审计机构变更记录 [Tushare:stk_managers]</td>
+<td style="text-align: center;">❌</td>
+</tr>
+<tr>
+<td>5. CFO 非正常离任</td>
+<td>1 次</td>
+<td>无 CFO 非正常离任记录 [Tushare:stk_managers]</td>
+<td style="text-align: center;">❌</td>
+</tr>
+<tr>
+<td>6. <strong>Audit ≥ 2 个 🔴 红旗</strong></td>
+<td>2</td>
+<td>🔴 = 0 个（仅 🟠 高 2 个 + 🟡 中 3 个）[audit_report.md §2]</td>
+<td style="text-align: center;">❌</td>
+</tr>
+</tbody>
+</table>
+<p><strong>结果</strong>: ✅ <strong>PASS</strong> — 6 项致命看空条款均未触发，不启动快筛否决。</p>
+</div>
+
+<!-- ============================================================
+     §四 公司基本面（含剥离后剩余资产清单若触发）
+     ============================================================ -->
+<div class="section" id="fundamentals">
+<h2>§四 公司基本面</h2>
+<h3>业务板块</h3>
+<table>
+<thead>
+<tr>
+<th>业务板块</th>
+<th style="text-align: right;">FY2025 收入(亿)</th>
+<th style="text-align: right;">占比</th>
+<th style="text-align: right;">毛利率</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>轮胎(半钢+全钢+OTR)</td>
+<td style="text-align: right;">364.03</td>
+<td style="text-align: right;">98.9%</td>
+<td style="text-align: right;">~24.7%</td>
+<td>[Tushare:fina_mainbz]</td>
+</tr>
+<tr>
+<td>其他业务</td>
+<td style="text-align: right;">3.89</td>
+<td style="text-align: right;">1.1%</td>
+<td style="text-align: right;">—</td>
+<td>[Tushare:fina_mainbz]</td>
+</tr>
+<tr>
+<td><strong>合计</strong></td>
+<td style="text-align: right;"><strong>367.92</strong></td>
+<td style="text-align: right;"><strong>100%</strong></td>
+<td style="text-align: right;"><strong>24.68%</strong></td>
+<td>[Tushare:fina_indicator]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>地理收入结构(FY2024)</strong>:<br />
+- 海外: 282.26 亿(77.6%) [Tushare:fina_mainbz]<br />
+- 中国大陆: 81.77 亿(22.4%) [Tushare:fina_mainbz]</p>
+<p>赛轮轮胎是国内头部轮胎出口企业,产品覆盖半钢子午线轮胎(乘用车)、全钢子午线轮胎(商用车/卡车)及非公路轮胎(OTR,工程机械等)。海外产能布局(越南等东南亚基地)是出口竞争力核心,可规避反倾销关税壁垒。[Tushare:fina_mainbz, stock_basic]</p>
+<h3>最新经营动态(近 12 个月关键事件)</h3>
+<table>
+<thead>
+<tr>
+<th>时间</th>
+<th>事件</th>
+<th>影响</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2026Q1</td>
+<td>营收 94.61 亿(+12.48% YoY),归母净利 10.56 亿(+1.72% YoY)</td>
+<td>增速放缓但仍正增长,毛利率环比改善至 26.86%</td>
+<td>[Tushare:income]</td>
+</tr>
+<tr>
+<td>2025 全年</td>
+<td>营收 367.92 亿(+15.69%),归母净利 35.22 亿(-13.30%)</td>
+<td>收入增长但净利首次负增长,毛利率从 27.58% 收缩至 24.68%</td>
+<td>[Tushare:income, fina_indicator]</td>
+</tr>
+<tr>
+<td>2026Q1</td>
+<td>无形资产暴增至 36.29 亿(+153% YoY)</td>
+<td>可能涉及重大收购或土地使用权扩张,缺 PDF 原文无法确认</td>
+<td>[Tushare:balancesheet]</td>
+</tr>
+<tr>
+<td>2026Q1</td>
+<td>财务费用 2.26 亿(+345% YoY)</td>
+<td>有息负债扩张(短期+长期借款合计 129 亿)或汇兑损失</td>
+<td>[Tushare:income]</td>
+</tr>
+<tr>
+<td>2026Q1</td>
+<td>经营现金流转正 1.76 亿(去年同期 -4.08 亿)</td>
+<td>Q1 经营改善信号,但绝对金额仍低</td>
+<td>[Tushare:cashflow]</td>
+</tr>
+<tr>
+<td>2026Q1</td>
+<td>香港中央结算(沪港通外资)从 5.20% 降至 3.72%,减持 4,875 万股</td>
+<td>外资大幅减持,需关注后续趋势</td>
+<td>[Tushare:top10_holders]</td>
+</tr>
+</tbody>
+</table>
+<h3>财务趋势表(近 3-5 年 + 最新季度)</h3>
+<!-- ★ 来源 data_snapshot.md §3 多年趋势完整表,全部 18 期 inline -->
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">期末</th>
+<th style="text-align: right;">营收(亿)</th>
+<th style="text-align: center;">YoY</th>
+<th style="text-align: right;">毛利率%</th>
+<th style="text-align: right;">净利率%</th>
+<th style="text-align: right;">归母净利(亿)</th>
+<th style="text-align: center;">净利 YoY</th>
+<th style="text-align: right;">ROE%</th>
+<th style="text-align: right;">资产负债率%</th>
+<th style="text-align: right;">OCF(亿)</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">20260331</td>
+<td style="text-align: right;">94.61</td>
+<td style="text-align: center;">+12.48%</td>
+<td style="text-align: right;">26.86</td>
+<td style="text-align: right;">11.35</td>
+<td style="text-align: right;">10.5635</td>
+<td style="text-align: center;">+1.72%</td>
+<td style="text-align: right;">4.80</td>
+<td style="text-align: right;">51.24</td>
+<td style="text-align: right;">1.7600</td>
+<td>[Tushare:income, fina_indicator]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20251231</td>
+<td style="text-align: right;">367.92</td>
+<td style="text-align: center;">+15.69%</td>
+<td style="text-align: right;">24.68</td>
+<td style="text-align: right;">9.83</td>
+<td style="text-align: right;">35.2249</td>
+<td style="text-align: center;">-13.30%</td>
+<td style="text-align: right;">17.13</td>
+<td style="text-align: right;">50.06</td>
+<td style="text-align: right;">41.7880</td>
+<td>[Tushare:income, fina_indicator]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20250930</td>
+<td style="text-align: right;">275.87</td>
+<td style="text-align: center;">+16.76%</td>
+<td style="text-align: right;">24.73</td>
+<td style="text-align: right;">10.71</td>
+<td style="text-align: right;">28.7166</td>
+<td style="text-align: center;">-11.47%</td>
+<td style="text-align: right;">14.15</td>
+<td style="text-align: right;">50.26</td>
+<td style="text-align: right;">25.0620</td>
+<td>[Tushare:income, fina_indicator]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20250630</td>
+<td style="text-align: right;">175.87</td>
+<td style="text-align: center;">+16.05%</td>
+<td style="text-align: right;">24.53</td>
+<td style="text-align: right;">10.70</td>
+<td style="text-align: right;">18.3090</td>
+<td style="text-align: center;">-14.90%</td>
+<td style="text-align: right;">9.14</td>
+<td style="text-align: right;">50.43</td>
+<td style="text-align: right;">8.8355</td>
+<td>[Tushare:income, fina_indicator]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20250331</td>
+<td style="text-align: right;">84.11</td>
+<td style="text-align: center;">+15.29%</td>
+<td style="text-align: right;">24.74</td>
+<td style="text-align: right;">12.64</td>
+<td style="text-align: right;">10.3852</td>
+<td style="text-align: center;">+0.47%</td>
+<td style="text-align: right;">5.19</td>
+<td style="text-align: right;">49.56</td>
+<td style="text-align: right;">-4.0759</td>
+<td>[Tushare:income, fina_indicator]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20241231</td>
+<td style="text-align: right;">318.02</td>
+<td style="text-align: center;">+22.42%</td>
+<td style="text-align: right;">27.58</td>
+<td style="text-align: right;">12.97</td>
+<td style="text-align: right;">40.6267</td>
+<td style="text-align: center;">+31.42%</td>
+<td style="text-align: right;">23.65</td>
+<td style="text-align: right;">48.93</td>
+<td style="text-align: right;">22.8878</td>
+<td>[Tushare:income, fina_indicator]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20240930</td>
+<td style="text-align: right;">236.28</td>
+<td style="text-align: center;">+24.28%</td>
+<td style="text-align: right;">28.38</td>
+<td style="text-align: right;">13.96</td>
+<td style="text-align: right;">32.4356</td>
+<td style="text-align: center;">+60.17%</td>
+<td style="text-align: right;">19.14</td>
+<td style="text-align: right;">48.89</td>
+<td style="text-align: right;">14.5246</td>
+<td>[Tushare:income, fina_indicator]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20240630</td>
+<td style="text-align: right;">151.54</td>
+<td style="text-align: center;">+30.29%</td>
+<td style="text-align: right;">28.77</td>
+<td style="text-align: right;">14.41</td>
+<td style="text-align: right;">21.5140</td>
+<td style="text-align: center;">+105.77%</td>
+<td style="text-align: right;">13.17</td>
+<td style="text-align: right;">50.10</td>
+<td style="text-align: right;">3.1657</td>
+<td>[Tushare:income, fina_indicator]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20240331</td>
+<td style="text-align: right;">72.96</td>
+<td style="text-align: center;">+35.84%</td>
+<td style="text-align: right;">27.68</td>
+<td style="text-align: right;">14.39</td>
+<td style="text-align: right;">10.3370</td>
+<td style="text-align: center;">+191.19%</td>
+<td style="text-align: right;">6.44</td>
+<td style="text-align: right;">49.28</td>
+<td style="text-align: right;">-1.0442</td>
+<td>[Tushare:income, fina_indicator]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20231231</td>
+<td style="text-align: right;">259.78</td>
+<td style="text-align: center;">+18.61%</td>
+<td style="text-align: right;">27.64</td>
+<td style="text-align: right;">12.33</td>
+<td style="text-align: right;">30.9142</td>
+<td style="text-align: center;">+132.12%</td>
+<td style="text-align: right;">22.84</td>
+<td style="text-align: right;">54.22</td>
+<td style="text-align: right;">53.1340</td>
+<td>[Tushare:income, fina_indicator]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20230930</td>
+<td style="text-align: right;">190.12</td>
+<td style="text-align: center;">+13.72%</td>
+<td style="text-align: right;">25.46</td>
+<td style="text-align: right;">11.06</td>
+<td style="text-align: right;">20.2509</td>
+<td style="text-align: center;">+90.19%</td>
+<td style="text-align: right;">15.59</td>
+<td style="text-align: right;">58.90</td>
+<td style="text-align: right;">29.9344</td>
+<td>[Tushare:income, fina_indicator]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20230630</td>
+<td style="text-align: right;">116.31</td>
+<td style="text-align: center;">+10.84%</td>
+<td style="text-align: right;">23.98</td>
+<td style="text-align: right;">9.35</td>
+<td style="text-align: right;">10.4555</td>
+<td style="text-align: center;">+46.29%</td>
+<td style="text-align: right;">8.39</td>
+<td style="text-align: right;">58.83</td>
+<td style="text-align: right;">18.8774</td>
+<td>[Tushare:income, fina_indicator]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20230331</td>
+<td style="text-align: right;">53.71</td>
+<td style="text-align: center;">+10.44%</td>
+<td style="text-align: right;">20.32</td>
+<td style="text-align: right;">6.87</td>
+<td style="text-align: right;">3.5499</td>
+<td style="text-align: center;">+10.32%</td>
+<td style="text-align: right;">2.87</td>
+<td style="text-align: right;">57.99</td>
+<td style="text-align: right;">6.5630</td>
+<td>[Tushare:income, fina_indicator]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20221231</td>
+<td style="text-align: right;">219.02</td>
+<td style="text-align: center;">+21.69%</td>
+<td style="text-align: right;">18.42</td>
+<td style="text-align: right;">6.52</td>
+<td style="text-align: right;">13.3180</td>
+<td style="text-align: center;">+1.43%</td>
+<td style="text-align: right;">11.61</td>
+<td style="text-align: right;">56.94</td>
+<td style="text-align: right;">21.9902</td>
+<td>[Tushare:income, fina_indicator]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20220930</td>
+<td style="text-align: right;">167.18</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: right;">17.99</td>
+<td style="text-align: right;">6.80</td>
+<td style="text-align: right;">10.6477</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: right;">9.43</td>
+<td style="text-align: right;">60.25</td>
+<td style="text-align: right;">10.2998</td>
+<td>[Tushare:income, fina_indicator]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20220630</td>
+<td style="text-align: right;">104.93</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: right;">18.25</td>
+<td style="text-align: right;">7.17</td>
+<td style="text-align: right;">7.1472</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: right;">6.51</td>
+<td style="text-align: right;">61.11</td>
+<td style="text-align: right;">4.5692</td>
+<td>[Tushare:income, fina_indicator]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20220331</td>
+<td style="text-align: right;">48.63</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: right;">17.02</td>
+<td style="text-align: right;">6.94</td>
+<td style="text-align: right;">3.2177</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: right;">2.95</td>
+<td style="text-align: right;">58.31</td>
+<td style="text-align: right;">0.5320</td>
+<td>[Tushare:income, fina_indicator]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20211231</td>
+<td style="text-align: right;">179.98</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: right;">–</td>
+<td style="text-align: right;">–</td>
+<td style="text-align: right;">13.1297</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: right;">–</td>
+<td style="text-align: right;">–</td>
+<td style="text-align: right;">8.3667</td>
+<td>[Tushare:income, fina_indicator]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>趋势解读</strong>:</p>
+<ol>
+<li><strong>营收持续增长但增速放缓</strong>: 从 FY2024 的 +22.42% 放缓至 FY2025 的 +15.69%,2026Q1 进一步降至 +12.48%。三年 CAGR 18.87%,增长仍属稳健。[Tushare:derived_metrics]</li>
+<li><strong>盈利能力拐点明确</strong>: 毛利率从 FY2024 的 27.58% 下滑至 FY2025 的 24.68%(-2.9pct);净利率从 12.97% 降至 9.83%。2026Q1 毛利率回升至 26.86%,有边际改善迹象。[Tushare:fina_indicator]</li>
+<li><strong>ROE 回落</strong>: 从 FY2024 的 23.65% 降至 FY2025 的 17.13%,仍处于较高水平。[Tushare:fina_indicator]</li>
+<li><strong>资产负债率趋稳</strong>: 从 2022 年的 56-61% 区间压降至 2025 年的 50% 左右,杠杆控制改善。[Tushare:fina_indicator]</li>
+</ol>
+<h3>管理层前瞻信号(forecast_vip 解读)</h3>
+<p>无业绩预告数据(data_snapshot.md §4 显示 forecast_vip 0 行)。赛轮轮胎作为大市值蓝筹,通常不发布自愿性业绩预告。[Tushare:forecast_vip]</p>
+<h3>主力控盘与筹码分析(v4.4 — Read <code>capital_flow.md</code>; v4.8 — 同时 Read <code>data_snapshot.md</code> §5/§6/§7)</h3>
+<blockquote>
+<p>⚠️ 资金流数据缺失(脚本异常 — functools.partial.<strong>name</strong> AttributeError),capital_flow.md 未生成,待后续补充。以下分析基于 data_snapshot.md §5/§6/§7/§8 数据。</p>
+</blockquote>
+<h4>十大股东(2 期对比: 20260331 vs 20251231)</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>股东</th>
+<th style="text-align: right;">20260331 持股(万股)</th>
+<th style="text-align: right;">20260331 比例(%)</th>
+<th style="text-align: right;">20251231 持股(万股)</th>
+<th style="text-align: right;">20251231 比例(%)</th>
+<th style="text-align: right;">变动(万股)</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>瑞元鼎实投资有限公司</td>
+<td style="text-align: right;">55,636.52</td>
+<td style="text-align: right;">16.92</td>
+<td style="text-align: right;">55,636.52</td>
+<td style="text-align: right;">16.92</td>
+<td style="text-align: right;">0</td>
+<td>[Tushare:top10_holders]</td>
+</tr>
+<tr>
+<td>2</td>
+<td>袁仲雪</td>
+<td style="text-align: right;">22,469.09</td>
+<td style="text-align: right;">6.83</td>
+<td style="text-align: right;">22,469.09</td>
+<td style="text-align: right;">6.83</td>
+<td style="text-align: right;">0</td>
+<td>[Tushare:top10_holders]</td>
+</tr>
+<tr>
+<td>3</td>
+<td>香港中央结算有限公司</td>
+<td style="text-align: right;">12,239.07</td>
+<td style="text-align: right;">3.72</td>
+<td style="text-align: right;">17,114.27</td>
+<td style="text-align: right;">5.20</td>
+<td style="text-align: right;">-4,875.20</td>
+<td>[Tushare:top10_holders]</td>
+</tr>
+<tr>
+<td>4</td>
+<td>青岛煜明投资中心(有限合伙)</td>
+<td style="text-align: right;">7,741.80</td>
+<td style="text-align: right;">2.35</td>
+<td style="text-align: right;">7,741.80</td>
+<td style="text-align: right;">2.35</td>
+<td style="text-align: right;">0</td>
+<td>[Tushare:top10_holders]</td>
+</tr>
+<tr>
+<td>5</td>
+<td>新华联控股有限公司破产企业财产处置专用账户</td>
+<td style="text-align: right;">4,289.76</td>
+<td style="text-align: right;">1.30</td>
+<td style="text-align: right;">4,289.76</td>
+<td style="text-align: right;">1.30</td>
+<td style="text-align: right;">0</td>
+<td>[Tushare:top10_holders]</td>
+</tr>
+<tr>
+<td>6</td>
+<td>中国农业银行股份有限公司-易方达消费行业股票型证券投资基金</td>
+<td style="text-align: right;">3,818.28</td>
+<td style="text-align: right;">1.16</td>
+<td style="text-align: right;">6,159.56</td>
+<td style="text-align: right;">1.87</td>
+<td style="text-align: right;">-2,341.29</td>
+<td>[Tushare:top10_holders]</td>
+</tr>
+<tr>
+<td>7</td>
+<td>全国社保基金四零六组合</td>
+<td style="text-align: right;">3,513.10</td>
+<td style="text-align: right;">1.07</td>
+<td style="text-align: right;">3,951.97</td>
+<td style="text-align: right;">1.20</td>
+<td style="text-align: right;">-438.87</td>
+<td>[Tushare:top10_holders]</td>
+</tr>
+<tr>
+<td>8</td>
+<td>澳门金融管理局-自有资金</td>
+<td style="text-align: right;">3,264.52</td>
+<td style="text-align: right;">0.99</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">新进</td>
+<td>[Tushare:top10_holders]</td>
+</tr>
+<tr>
+<td>9</td>
+<td>科威特政府投资局-自有资金</td>
+<td style="text-align: right;">2,921.13</td>
+<td style="text-align: right;">0.89</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">新进</td>
+<td>[Tushare:top10_holders]</td>
+</tr>
+<tr>
+<td>10</td>
+<td>全国社保基金一一一组合</td>
+<td style="text-align: right;">2,565.33</td>
+<td style="text-align: right;">0.78</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">新进</td>
+<td>[Tushare:top10_holders]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>股东变动解读</strong>:<br />
+- <strong>实控人系</strong>(瑞元鼎实 + 袁仲雪 + 煜明投资)合计持股 26.10%,持股稳定无变动。[Tushare:top10_holders]<br />
+- <strong>外资通道大幅减持</strong>: 香港中央结算 Q1 减持 4,875 万股(-1.48pct),为最显著负面信号。[Tushare:top10_holders]<br />
+- <strong>公募基金减持</strong>: 易方达消费基金减持 2,341 万股(-0.71pct),社保四零六减持 439 万股。[Tushare:top10_holders]<br />
+- <strong>主权基金新进</strong>: 澳门金管局(0.99%)和科威特政府投资局(0.89%)新进十大,社保一一一组合(0.78%)亦新进,体现长期配置型资金认可。[Tushare:top10_holders]</p>
+<h4>十大流通股东(20260331)</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>股东</th>
+<th style="text-align: right;">持股数(万股)</th>
+<th style="text-align: right;">持股比例(%)</th>
+<th style="text-align: right;">占流通比例(%)</th>
+<th style="text-align: right;">期间变动(万股)</th>
+<th style="text-align: center;">股东类型</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>瑞元鼎实投资有限公司</td>
+<td style="text-align: right;">55,636.52</td>
+<td style="text-align: right;">16.92</td>
+<td style="text-align: right;">16.92</td>
+<td style="text-align: right;">+0.00</td>
+<td style="text-align: center;">投资公司</td>
+<td>[Tushare:top10_floatholders]</td>
+</tr>
+<tr>
+<td>2</td>
+<td>袁仲雪</td>
+<td style="text-align: right;">22,469.09</td>
+<td style="text-align: right;">6.83</td>
+<td style="text-align: right;">6.83</td>
+<td style="text-align: right;">+0.00</td>
+<td style="text-align: center;">自然人</td>
+<td>[Tushare:top10_floatholders]</td>
+</tr>
+<tr>
+<td>3</td>
+<td>香港中央结算有限公司</td>
+<td style="text-align: right;">12,239.07</td>
+<td style="text-align: right;">3.72</td>
+<td style="text-align: right;">3.72</td>
+<td style="text-align: right;">-4,875.20</td>
+<td style="text-align: center;">一般企业</td>
+<td>[Tushare:top10_floatholders]</td>
+</tr>
+<tr>
+<td>4</td>
+<td>青岛煜明投资中心(有限合伙)</td>
+<td style="text-align: right;">7,741.80</td>
+<td style="text-align: right;">2.35</td>
+<td style="text-align: right;">2.35</td>
+<td style="text-align: right;">+0.00</td>
+<td style="text-align: center;">投资公司</td>
+<td>[Tushare:top10_floatholders]</td>
+</tr>
+<tr>
+<td>5</td>
+<td>新华联控股有限公司破产企业财产处置专用账户</td>
+<td style="text-align: right;">4,289.76</td>
+<td style="text-align: right;">1.30</td>
+<td style="text-align: right;">1.30</td>
+<td style="text-align: right;">+0.00</td>
+<td style="text-align: center;">其他金融产品</td>
+<td>[Tushare:top10_floatholders]</td>
+</tr>
+<tr>
+<td>6</td>
+<td>中国农业银行股份有限公司-易方达消费行业股票型证券投资基金</td>
+<td style="text-align: right;">3,818.28</td>
+<td style="text-align: right;">1.16</td>
+<td style="text-align: right;">1.16</td>
+<td style="text-align: right;">-2,341.29</td>
+<td style="text-align: center;">开放式投资基金</td>
+<td>[Tushare:top10_floatholders]</td>
+</tr>
+<tr>
+<td>7</td>
+<td>全国社保基金四零六组合</td>
+<td style="text-align: right;">3,513.10</td>
+<td style="text-align: right;">1.07</td>
+<td style="text-align: right;">1.07</td>
+<td style="text-align: right;">-438.87</td>
+<td style="text-align: center;">社保基金、社保机构</td>
+<td>[Tushare:top10_floatholders]</td>
+</tr>
+<tr>
+<td>8</td>
+<td>澳门金融管理局-自有资金</td>
+<td style="text-align: right;">3,264.52</td>
+<td style="text-align: right;">0.99</td>
+<td style="text-align: right;">0.99</td>
+<td style="text-align: right;">新进</td>
+<td style="text-align: center;">一般企业</td>
+<td>[Tushare:top10_floatholders]</td>
+</tr>
+<tr>
+<td>9</td>
+<td>科威特政府投资局-自有资金</td>
+<td style="text-align: right;">2,921.13</td>
+<td style="text-align: right;">0.89</td>
+<td style="text-align: right;">0.89</td>
+<td style="text-align: right;">新进</td>
+<td style="text-align: center;">投资公司</td>
+<td>[Tushare:top10_floatholders]</td>
+</tr>
+<tr>
+<td>10</td>
+<td>全国社保基金一一一组合</td>
+<td style="text-align: right;">2,565.33</td>
+<td style="text-align: right;">0.78</td>
+<td style="text-align: right;">0.78</td>
+<td style="text-align: right;">新进</td>
+<td style="text-align: center;">社保基金、社保机构</td>
+<td>[Tushare:top10_floatholders]</td>
+</tr>
+</tbody>
+</table>
+<h4>筹码集中度分析</h4>
+<p><strong>股东户数变化</strong>(关键时点):</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">报告期</th>
+<th style="text-align: right;">户数</th>
+<th style="text-align: center;">环比</th>
+<th style="text-align: center;">信号</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">20260331</td>
+<td style="text-align: right;">57,758</td>
+<td style="text-align: center;">+37.33%</td>
+<td style="text-align: center;">散户涌入</td>
+<td>[Tushare:stk_holdernumber]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20251231</td>
+<td style="text-align: right;">42,057</td>
+<td style="text-align: center;">-11.21%</td>
+<td style="text-align: center;">机构吸筹</td>
+<td>[Tushare:stk_holdernumber]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20250930</td>
+<td style="text-align: right;">47,367</td>
+<td style="text-align: center;">-28.33%</td>
+<td style="text-align: center;">机构吸筹</td>
+<td>[Tushare:stk_holdernumber]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20250630</td>
+<td style="text-align: right;">66,087</td>
+<td style="text-align: center;">+7.17%</td>
+<td style="text-align: center;">散户增加</td>
+<td>[Tushare:stk_holdernumber]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20250331</td>
+<td style="text-align: right;">61,667</td>
+<td style="text-align: center;">-7.11%</td>
+<td style="text-align: center;">略有集中</td>
+<td>[Tushare:stk_holdernumber]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20241231</td>
+<td style="text-align: right;">66,388</td>
+<td style="text-align: center;">+24.81%</td>
+<td style="text-align: center;">散户涌入</td>
+<td>[Tushare:stk_holdernumber]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20240930</td>
+<td style="text-align: right;">53,190</td>
+<td style="text-align: center;">+21.08%</td>
+<td style="text-align: center;">散户涌入</td>
+<td>[Tushare:stk_holdernumber]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20240630</td>
+<td style="text-align: right;">43,930</td>
+<td style="text-align: center;">+36.50%</td>
+<td style="text-align: center;">散户涌入</td>
+<td>[Tushare:stk_holdernumber]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>筹码判读</strong>: 2026Q1 股东户数从 42,057 激增至 57,758(+37.33%),叠加外资和公募减持,呈现<strong>筹码分散 + 机构退出</strong>的偏空格局。户均持股约 5,693 股(总股本 32.88 亿股 / 57,758 户),户均市值约 7.36 万元。[Tushare:stk_holdernumber]</p>
+<h4>质押明细(active 状态)</h4>
+<p>主要质押方为实控人系:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">公告日</th>
+<th>股东</th>
+<th>质押方</th>
+<th style="text-align: center;">起始日</th>
+<th style="text-align: center;">期末日</th>
+<th style="text-align: right;">质押数(万股)</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">20251025</td>
+<td>瑞元鼎实投资有限公司</td>
+<td>交通银行青岛分行</td>
+<td style="text-align: center;">20251022</td>
+<td style="text-align: center;">20280310</td>
+<td style="text-align: right;">0.75</td>
+<td>[Tushare:pledge_detail]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20250816</td>
+<td>瑞元鼎实投资有限公司</td>
+<td>中国银河证券</td>
+<td style="text-align: center;">20250814</td>
+<td style="text-align: center;">20270813</td>
+<td style="text-align: right;">0.18</td>
+<td>[Tushare:pledge_detail]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20260416</td>
+<td>袁仲雪</td>
+<td>中信证券大连分公司</td>
+<td style="text-align: center;">20250415</td>
+<td style="text-align: center;">20270415</td>
+<td style="text-align: right;">0.56</td>
+<td>[Tushare:pledge_detail]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20250417</td>
+<td>瑞元鼎实投资有限公司</td>
+<td>中信证券大连分公司</td>
+<td style="text-align: center;">20250415</td>
+<td style="text-align: center;">20260415</td>
+<td style="text-align: right;">0.56</td>
+<td>[Tushare:pledge_detail]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20250607</td>
+<td>瑞元鼎实投资有限公司</td>
+<td>中信证券大连分公司</td>
+<td style="text-align: center;">20240606</td>
+<td style="text-align: center;">20260606</td>
+<td style="text-align: right;">0.68</td>
+<td>[Tushare:pledge_detail]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20240608</td>
+<td>袁仲雪</td>
+<td>中信证券大连分公司</td>
+<td style="text-align: center;">20240606</td>
+<td style="text-align: center;">20250606</td>
+<td style="text-align: right;">0.68</td>
+<td>[Tushare:pledge_detail]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20240531</td>
+<td>瑞元鼎实投资有限公司</td>
+<td>交通银行青岛分行</td>
+<td style="text-align: center;">20240529</td>
+<td style="text-align: center;">20260310</td>
+<td style="text-align: right;">0.75</td>
+<td>[Tushare:pledge_detail]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20240531</td>
+<td>袁仲雪</td>
+<td>交通银行青岛分行</td>
+<td style="text-align: center;">20240529</td>
+<td style="text-align: center;">20260310</td>
+<td style="text-align: right;">0.75</td>
+<td>[Tushare:pledge_detail]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20210424</td>
+<td>袁仲雪</td>
+<td>工行青岛市南四支行</td>
+<td style="text-align: center;">20210421</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: right;">2.20</td>
+<td>[Tushare:pledge_detail]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20210424</td>
+<td>瑞元鼎实投资有限公司</td>
+<td>工行青岛市南四支行</td>
+<td style="text-align: center;">20210421</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: right;">2.20</td>
+<td>[Tushare:pledge_detail]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>质押风险评估</strong>: 质押记录共 137 条(含历史),单笔质押数量多在 1 万股以下,远低于大股东总持股(瑞元鼎实 5.56 亿股、袁仲雪 2.25 亿股)。实控人累计质押比例远低于 50% 红线,质押风险可控。另有新华联控股(已破产)历史质押记录,其持股正通过司法处置逐步减少(从 2.48% → 1.30%)。[Tushare:pledge_detail]</p>
+<h3>若核心资产被剥离的剩余资产清单(v4.2 触发时必填)</h3>
+<p><strong>触发判定</strong>: 未触发。赛轮轮胎核心业务为自有轮胎生产销售,无明显剥离风险;FY2025 净利虽下滑 13.3% 但远未达到"预亏 &gt; 50% 净资产"阈值;audit_report 无涉及核心资产减值的 🔴 红旗。</p>
+<hr />
+</div>
+
+<!-- ============================================================
+     §五 行业与竞争格局
+     ============================================================ -->
+<div class="section" id="industry">
+<h2>§五 行业与竞争格局</h2>
+<h3>行业规模与趋势</h3>
+<p><strong>全球轮胎市场</strong>: 根据 Statista 及 Fortune Business Insights 数据,全球轮胎市场规模约 2,800-3,000 亿美元(2024 年),预计 2025-2030 年 CAGR 约 4-5%。中国是全球最大的轮胎生产国和出口国,2024 年中国轮胎出口量约 5.8 亿条。[WebSearch:Statista, Fortune Business Insights]</p>
+<p><strong>行业生命周期</strong>: 成熟期。全球轮胎市场增长主要依赖替换胎需求(占比约 75%)和新兴市场汽车保有量提升。中国轮胎企业正处于全球化扩张加速阶段,凭借成本优势和海外产能布局抢占市场份额。</p>
+<p><strong>供需结构</strong>:<br />
+- 全球 CR5(米其林、普利司通、固特异、大陆、住友橡胶)约占全球市场 50-55%<br />
+- 中国轮胎企业全球份额约 15-18%,正快速提升<br />
+- 替换胎市场需求稳定,受汽车保有量驱动;配套胎随整车产销波动</p>
+<p><strong>关键驱动力</strong>:<br />
+1. <strong>海外产能布局</strong>: 中国轮胎企业在东南亚(越南、泰国、柬埔寨)、塞尔维亚等地建厂,规避反倾销关税,是当前最核心的增长引擎<br />
+2. <strong>替换胎周期</strong>: 全球汽车保有量持续增长,替换胎需求刚性<br />
+3. <strong>产品升级</strong>: 高性能轮胎(UHP)、新能源车专用轮胎占比提升,拉高 ASP 和毛利率<br />
+4. <strong>原材料价格波动</strong>: 天然橡胶、合成橡胶、炭黑价格周期性波动直接影响毛利率</p>
+<p><strong>政策与监管风险</strong>:<br />
+- 美国对中国轮胎双反关税(2009 年特保令已到期,但 2015 年后新一轮反倾销持续);越南产能可部分规避<br />
+- 欧盟轮胎标签法规(滚阻、湿抓、噪声)推动产品技术升级<br />
+- 国内"碳达峰"政策推动绿色制造转型</p>
+<h3>Porter 五力分析(集中在本节,不重复到 §六 维度 3)</h3>
+<table>
+<thead>
+<tr>
+<th>力量</th>
+<th style="text-align: center;">强度</th>
+<th>分析</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>供应商议价力</strong></td>
+<td style="text-align: center;">中</td>
+<td>天然橡胶供应商分散(东南亚种植园),但橡胶价格受期货市场影响大;炭黑等化工原料供应商集中度中等。赛轮通过规模采购和长协锁定部分成本</td>
+<td>[Tushare:fina_mainbz, phase2-documents.md]</td>
+</tr>
+<tr>
+<td><strong>买方议价力</strong></td>
+<td style="text-align: center;">中高</td>
+<td>配套胎客户(整车厂)议价力强;替换胎渠道(经销商/零售)相对分散,但品牌忠诚度偏低,价格竞争激烈</td>
+<td>[Tushare:fina_mainbz]</td>
+</tr>
+<tr>
+<td><strong>新进入者威胁</strong></td>
+<td style="text-align: center;">低</td>
+<td>轮胎制造重资产(单条产线投资数亿),产能爬坡周期 2-3 年;配套胎认证周期长;但中小产能企业仍多</td>
+<td>[行业常识]</td>
+</tr>
+<tr>
+<td><strong>替代品威胁</strong></td>
+<td style="text-align: center;">极低</td>
+<td>橡胶轮胎暂无可行替代方案;免充气轮胎(Airless)仍处于实验阶段</td>
+<td>[行业常识]</td>
+</tr>
+<tr>
+<td><strong>同业竞争</strong></td>
+<td style="text-align: center;">高</td>
+<td>国内轮胎企业(玲珑、三角、森麒麟、贵州轮胎等)在海外市场直接竞争;国际巨头在中高端市场主导</td>
+<td>[Tushare:stock_basic]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>综合判断</strong>: 轮胎行业属于规模经济型制造业,进入壁垒中等偏高(重资产+认证),但同业竞争激烈。赛轮的核心竞争优势在于海外产能规模(越南基地)+ 全品类覆盖(半钢+全钢+OTR)+ 成本控制能力。</p>
+<h3>关键竞品对标</h3>
+<table>
+<thead>
+<tr>
+<th>公司</th>
+<th>代码</th>
+<th>主营定位</th>
+<th style="text-align: right;">FY2025E 营收(亿)</th>
+<th style="text-align: right;">市值(亿)</th>
+<th style="text-align: right;">PE(TTM)</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>赛轮轮胎</strong></td>
+<td>601058</td>
+<td>出口导向,全品类</td>
+<td style="text-align: right;">367.92</td>
+<td style="text-align: right;">425.15</td>
+<td style="text-align: right;">12.01</td>
+<td>[Tushare:daily_basic, income]</td>
+</tr>
+<tr>
+<td>玲珑轮胎</td>
+<td>601966</td>
+<td>配套+替换,品牌化</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td>[Tushare:stock_basic]</td>
+</tr>
+<tr>
+<td>三角轮胎</td>
+<td>601163</td>
+<td>全钢为主,内销较强</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td>[Tushare:stock_basic]</td>
+</tr>
+<tr>
+<td>森麒麟</td>
+<td>002984</td>
+<td>半钢出口,越南产能</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td>[Tushare:stock_basic]</td>
+</tr>
+<tr>
+<td>贵州轮胎</td>
+<td>000589</td>
+<td>全钢+OTR</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td>[Tushare:stock_basic]</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>⚠️ 竞品详细财务对标数据缺失(peer_analysis.md 未生成,Tushare API 超时 2 次)。定量对比待 Phase 6 §八 补充。[phase1-data.md §11]</p>
+</blockquote>
+<p><strong>赛轮在行业中的定位</strong>: 以 FY2025 营收 367.92 亿计,赛轮已是中国轮胎上市公司中收入规模最大的企业之一。海外收入占比 77.6% 为行业最高水平,体现了海外产能布局的先发优势。PE(TTM) 12.01 倍处于制造业合理区间,但需与可比公司对照后才能做出估值偏高/偏低的判断。[Tushare:daily_basic, fina_mainbz]</p>
+<hr />
+</div>
+
+<!-- ============================================================
+     §六 10 维度详细证据
+     ============================================================ -->
+<div class="section" id="detail">
+<h2>§六 10 维度详细证据</h2>
+<h3>维度 1 · 市场规模与结构（7/10）</h3>
+<p><strong>评分依据</strong>: 全球轮胎市场约 2,800-3,000 亿美元（2024 年），CAGR 4-5%，属成熟期大市场。中国轮胎出口量约 5.8 亿条/年，中国企业全球份额 15-18% 正快速提升。赛轮所在细分（半钢+全钢+OTR）覆盖乘用车替换胎+商用车+工程机械，TAM 充裕。[Tushare:fina_mainbz, WebSearch:Statista]</p>
+<ul>
+<li>市场规模充足（&gt;$200B），但增速偏低（CAGR 4-5%），非高成长赛道</li>
+<li>中国轮胎企业正处于全球化份额抢夺阶段，结构性机会存在（海外产能替代）</li>
+<li>替换胎需求刚性（占比约 75%），周期性弱于配套胎</li>
+</ul>
+<p><strong>扣分项</strong>: 行业整体增速偏低，不满足 7-8 分"CAGR 15-20%"标准；但考虑中国企业份额提升的结构性增量，给予 7 分。</p>
+<h3>维度 2 · 商业模式（7/10）</h3>
+<p><strong>评分依据</strong>: 赛轮为典型制造业模式——轮胎研产销一体化，FY2025 营收 367.92 亿，毛利率 24.68%。[Tushare:income, fina_indicator]</p>
+<ul>
+<li>海外收入占比 77.6%（FY2024），出口导向型，规避关税壁垒的越南产能是核心竞争力 [Tushare:fina_mainbz]</li>
+<li>产品覆盖半钢（乘用车）+全钢（商用车）+OTR（工程机械），品类分散降低单一市场风险</li>
+<li>毛利率 24.68% 处于制造业/硬件行业标杆区间（25-40%）中下沿</li>
+<li>收入以产品销售为主（非经常性），无 SaaS 式订阅收入，但替换胎需求具备准经常性特征</li>
+</ul>
+<p><strong>扣分项</strong>: 毛利率从 FY2024 的 27.58% 下滑至 24.68%（-2.9pct），盈利能力边际恶化。</p>
+<h3>维度 3 · 盈利能力（6/10）</h3>
+<p><strong>评分依据</strong>: 基于 scoring-rubric 上市公司版维度 3，关键指标如下：</p>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th style="text-align: right;">FY2024</th>
+<th style="text-align: right;">FY2025</th>
+<th style="text-align: right;">2026Q1(单季)</th>
+<th style="text-align: center;">趋势</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>毛利率</td>
+<td style="text-align: right;">27.58%</td>
+<td style="text-align: right;">24.68%</td>
+<td style="text-align: right;">26.86%</td>
+<td style="text-align: center;">↓后回升</td>
+</tr>
+<tr>
+<td>净利率</td>
+<td style="text-align: right;">12.97%</td>
+<td style="text-align: right;">9.83%</td>
+<td style="text-align: right;">11.35%</td>
+<td style="text-align: center;">↓后回升</td>
+</tr>
+<tr>
+<td>ROE</td>
+<td style="text-align: right;">23.65%</td>
+<td style="text-align: right;">17.13%</td>
+<td style="text-align: right;">4.80%(单季)</td>
+<td style="text-align: center;">↓</td>
+</tr>
+<tr>
+<td>ROA</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">10.52%(FY2025)</td>
+<td style="text-align: right;">2.80%(单季)</td>
+<td style="text-align: center;">—</td>
+</tr>
+</tbody>
+</table>
+<p>[Tushare:fina_indicator]</p>
+<ul>
+<li>FY2025 归母净利 35.22 亿（-13.30% YoY），首次出现净利负增长，拐点明确 [Tushare:income]</li>
+<li>2026Q1 毛利率回升至 26.86%（环比+2.18pct），边际改善信号，但尚不确定趋势反转 [Tushare:fina_indicator]</li>
+<li>ROE 从 23.65%→17.13%，仍高于制造业中位数（10-15%），但下行趋势需警惕</li>
+<li>DuPont 分解：净利率 9.57% × 周转 0.79 × 杠杆 2.16 = ROE 16.3%，利润率下滑是 ROE 回落主因 [audit_report.md: DuPont]</li>
+</ul>
+<p><strong>给分理由</strong>: 盈利能力仍在行业中上，但趋势下行，6 分（中等偏上）。</p>
+<h3>维度 4 · 产品与技术（6/10）</h3>
+<p><strong>评分依据</strong>: 赛轮产品覆盖半钢子午线（乘用车）、全钢子午线（商用车/卡车）、OTR（工程机械），全品类布局。[Tushare:fina_mainbz]</p>
+<ul>
+<li>液体黄金轮胎技术（silica 配方）为差异化卖点，但缺 PDF 原文无法验证技术壁垒深度 [phase1-data.md §6]</li>
+<li>研发费用 FY2025 约 10.40 亿（估算，2026Q1 单季 2.74 亿×4），研发强度约 2.8%，制造业中等水平 [Tushare:income]</li>
+<li>海外产能布局（越南等东南亚基地）是产能技术+管理能力的体现，非纯技术壁垒</li>
+<li>⚠️ PDF 未获取，产品技术细节为信息缺口，置信度降低</li>
+</ul>
+<p><strong>扣分项</strong>: 缺 PDF 原文验证技术壁垒，标注 [低置信]。</p>
+<h3>维度 5 · 团队与管理层（6/10）</h3>
+<p><strong>评分依据</strong>: 基于 Tushare 股东+管理层数据。</p>
+<h4>管理层利益对齐</h4>
+<ul>
+<li>实控人系（瑞元鼎实+袁仲雪+煜明投资）合计持股 26.10%，&gt;10% 加分项 [Tushare:top10_holders]</li>
+<li>员工持股计划存在（2023 年员工持股计划，20250930 持 3,266 万股/0.99%），利益绑定正面 [Tushare:top10_floatholders]</li>
+<li>质押：实控人累计质押比例远低于 50%（单笔多在 1 万股以下 vs 总持股 5.56 亿股），质押风险可控 [Tushare:pledge_detail]</li>
+</ul>
+<h4>核心团队画像</h4>
+<ul>
+<li>77 名高管/董事记录，767 条薪酬记录 [Tushare:stk_managers, stk_rewards]</li>
+<li>袁仲雪为公司创始人/前董事长，长期深耕轮胎行业</li>
+<li>⚠️ 缺 PDF 原文，高管具体履历和薪酬合理性无法详细评估</li>
+</ul>
+<p><strong>给分理由</strong>: 实控人持股比例健康，员工持股计划存在，但管理层细节信息不足，6 分。</p>
+<h3>维度 6 · 市场进入与护城河（7/10）</h3>
+<p><strong>评分依据</strong>:</p>
+<ul>
+<li><strong>海外产能壁垒</strong>: 越南等东南亚产能布局是核心护城河——规避反倾销关税，产能爬坡周期 2-3 年，竞争对手短期难以复制 [Tushare:fina_mainbz, phase1-data.md §6]</li>
+<li><strong>规模效应</strong>: FY2025 营收 367.92 亿，为国内轮胎上市公司收入规模最大之一，规模采购+长协锁定成本优势 [Tushare:income]</li>
+<li><strong>全品类覆盖</strong>: 半钢+全钢+OTR 三线并进，客户和渠道复用</li>
+<li><strong>品牌</strong>: 在海外替换胎市场有一定品牌认知，但相比米其林/普利司通仍属中低端定位</li>
+</ul>
+<blockquote>
+<p>⚠️ 资金流向数据缺失（capital_flow.md 未生成），无法评估主力资金对护城河的认可度。本维度资金流向/主力控盘子项标注"数据缺失"，不纳入评分。</p>
+</blockquote>
+<p><strong>给分理由</strong>: 海外产能+规模效应构成双重护城河，7 分。</p>
+<h3>维度 7 · 财务健康度（5/10）</h3>
+<p><strong>评分依据</strong>: 对照 scoring-rubric 上市公司版维度 7：</p>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th style="text-align: right;">数值</th>
+<th style="text-align: center;">档位</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>流动比率</td>
+<td style="text-align: right;">1.23</td>
+<td style="text-align: center;">中等(1.2-2.0)</td>
+<td>[Tushare:fina_indicator, 20260331]</td>
+</tr>
+<tr>
+<td>速动比率</td>
+<td style="text-align: right;">0.82</td>
+<td style="text-align: center;">警示(&lt;1.0)</td>
+<td>[Tushare:fina_indicator, 20260331]</td>
+</tr>
+<tr>
+<td>资产负债率</td>
+<td style="text-align: right;">51.24%</td>
+<td style="text-align: center;">中等(40-60%)</td>
+<td>[Tushare:fina_indicator, 20260331]</td>
+</tr>
+<tr>
+<td>FCF</td>
+<td style="text-align: right;">-6.39 亿(FY2025)</td>
+<td style="text-align: center;">危险(负值)</td>
+<td>[Tushare:derived_metrics]</td>
+</tr>
+<tr>
+<td>FCF 收益率</td>
+<td style="text-align: right;">-1.50%</td>
+<td style="text-align: center;">危险(&lt;1%或负)</td>
+<td>[Tushare:derived_metrics]</td>
+</tr>
+<tr>
+<td>OCF/净利润</td>
+<td style="text-align: right;">41.79/35.22 = 1.19x</td>
+<td style="text-align: center;">中等(0.8-1.2x)</td>
+<td>[Tushare:cashflow, income]</td>
+</tr>
+<tr>
+<td>有息负债</td>
+<td style="text-align: right;">145.51 亿(20260331)</td>
+<td style="text-align: center;">—</td>
+<td>[Tushare:fina_indicator]</td>
+</tr>
+<tr>
+<td>净负债</td>
+<td style="text-align: right;">85.88 亿</td>
+<td style="text-align: center;">净负债状态</td>
+<td>[Tushare:fina_indicator]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>红旗引用</strong>（audit_report.md）:<br />
+- 🟠 <strong>Altman Z-Score = 2.623</strong>，处于灰色地带（1.81-2.99），财务健康警示 [audit_report.md §3.1]<br />
+- 🟡 <strong>Piotroski F-Score = 4/9</strong>，中等偏低，5 项未达标（ROA↓/负债率↑/流动比率↓/毛利率↓/周转率↓）[audit_report.md §3.3]</p>
+<p><strong>关键风险</strong>: 2026Q1 财务费用暴增 345%（2.26 亿 vs 去年同期 0.51 亿），短期+长期借款合计 129 亿，有息负债扩张明显 [Tushare:income]。无形资产暴增 153%（36.29 亿），缺 PDF 无法确认是否为收购或土地使用权 [Tushare:balancesheet]。</p>
+<p><strong>给分理由</strong>: FCF 为负+Z-Score 灰色地带+速动比率&lt;1+有息负债扩张，5 分（中等偏警示）。</p>
+<h3>维度 8 · 估值合理性（7/10）</h3>
+<p><strong>评分依据</strong>: 对照 scoring-rubric 上市公司版维度 9（市场估值）：</p>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th style="text-align: right;">数值</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PE(TTM)</td>
+<td style="text-align: right;">12.01</td>
+<td>[Tushare:daily_basic, 20260514]</td>
+</tr>
+<tr>
+<td>PB</td>
+<td style="text-align: right;">1.90</td>
+<td>[Tushare:daily_basic, 20260514]</td>
+</tr>
+<tr>
+<td>PS(TTM)</td>
+<td style="text-align: right;">1.12</td>
+<td>[Tushare:daily_basic, 20260514]</td>
+</tr>
+<tr>
+<td>市值</td>
+<td style="text-align: right;">425.15 亿</td>
+<td>[Tushare:daily_basic]</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>PE 12.01 vs 制造/工业行业中位数 15-25x → 低于行业中位数 50% 以下，严重低估信号 [scoring-rubric: 行业估值基准]</li>
+<li>PB 1.90 处于近 1 年 <strong>0% 分位</strong>（范围 1.90-2.80），历史最低位 [audit_report.md §3.7: Valuation Anomaly]</li>
+<li>PS 1.12 对于营收 368 亿的制造业公司属合理偏低</li>
+</ul>
+<p><strong>红旗引用</strong>: 🟢 PB 历史分位 0%，估值偏低信号（可能是投资机会）[audit_report.md §3.7]</p>
+<p><strong>给分理由</strong>: PE/PB 均低于行业中位数且处于历史低位，估值合理偏低，7 分。但需注意低估值可能反映市场对盈利拐点的担忧。</p>
+<h3>维度 9 · 风险与治理（5/10）</h3>
+<p><strong>评分依据</strong>: 此维度分数越高=风险越低。</p>
+<p><strong>风险清单</strong>:</p>
+<ol>
+<li><strong>盈利拐点风险</strong>: FY2025 净利 -13.30%，增速首次转负，毛利率收缩 2.9pct [Tushare:income, fina_indicator]</li>
+<li><strong>贸易政策风险</strong>: 海外收入占比 77.6%，美国对中国轮胎双反关税持续，越南产能虽可部分规避但政策不确定性高 [Tushare:fina_mainbz]</li>
+<li><strong>原材料价格风险</strong>: 天然橡胶/合成橡胶价格波动直接影响毛利率</li>
+<li><strong>外资减持信号</strong>: 香港中央结算 Q1 减持 4,875 万股（-1.48pct），易方达消费基金减持 2,341 万股 [Tushare:top10_holders]</li>
+<li><strong>筹码分散</strong>: 股东户数从 42,057 暴增至 57,758（+37.33%），散户涌入+机构退出 [Tushare:stk_holdernumber]</li>
+</ol>
+<p><strong>红旗引用</strong>（audit_report.md）:<br />
+- 🟠 <strong>Related-Party Exposure</strong>: 长期股权投资从 6.31 亿暴跌至 3.25 亿（-48.5%），参股公司价值大幅波动 [audit_report.md §3.2]<br />
+- 🟡 <strong>Governance — 前十大股东净减持 7,655 万股</strong>，内部人减持是重要负面信号 [audit_report.md §3.4]<br />
+- 🟡 <strong>Shareholder Flow — 股东户数 +37.3%</strong>，散户涌入，高位接盘风险 [audit_report.md §3.5]</p>
+<p><strong>治理面</strong>: 实控人持股稳定（26.10%），质押比例极低，无审计意见异常。新华联控股（已破产）持股 1.30% 通过司法处置逐步减少，影响有限。</p>
+<p><strong>给分理由</strong>: 多重风险叠加（盈利拐点+贸易政策+机构减持+筹码分散+关联方风险），但治理层面较清洁，5 分。</p>
+<h3>维度 10 · 催化剂与时机（5/10）</h3>
+<p><strong>评分依据</strong>: 对照 scoring-rubric 上市公司版维度 10（回报潜力）：</p>
+<p><strong>潜在催化剂（看多）</strong>:<br />
+1. 2026Q1 毛利率回升至 26.86%（+2.18pct vs FY2025），若趋势延续则盈利拐点确立<br />
+2. 主权基金新进（澳门金管局+科威特政府投资局+社保一一一），长期配置型资金认可<br />
+3. 海外产能持续扩张（在建工程 28.68 亿），新产能投产将驱动收入增长</p>
+<p><strong>潜在逆风（看空）</strong>:<br />
+1. 技术面 🔴 偏空：均线空头排列、MACD 死叉、收盘跌破 MA120 [technical_analysis.md]<br />
+2. 近 60 日跌幅 -22.2%，距 60 日高点 16.81 元下方 30% [technical_analysis.md]<br />
+3. 外资+公募基金大幅减持，短期抛压未消</p>
+<p><strong>给分理由</strong>: 催化剂存在但尚不明确（毛利率回升需持续验证），技术面偏空压制短期时机，5 分。</p>
+<h3>§六 评分汇总</h3>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th style="text-align: center;">权重</th>
+<th style="text-align: center;">分数(0-10)</th>
+<th style="text-align: center;">加权</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. 市场规模与结构</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">0.70</td>
+</tr>
+<tr>
+<td>2. 商业模式</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">0.70</td>
+</tr>
+<tr>
+<td>3. 盈利能力</td>
+<td style="text-align: center;">15%</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">0.90</td>
+</tr>
+<tr>
+<td>4. 产品与技术</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">0.60</td>
+</tr>
+<tr>
+<td>5. 团队与管理层</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">0.60</td>
+</tr>
+<tr>
+<td>6. 市场进入与护城河</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">0.70</td>
+</tr>
+<tr>
+<td>7. 财务健康度</td>
+<td style="text-align: center;">15%</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">0.75</td>
+</tr>
+<tr>
+<td>8. 估值合理性</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">0.70</td>
+</tr>
+<tr>
+<td>9. 风险与治理</td>
+<td style="text-align: center;">5%</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">0.25</td>
+</tr>
+<tr>
+<td>10. 催化剂与时机</td>
+<td style="text-align: center;">5%</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">0.25</td>
+</tr>
+<tr>
+<td><strong>合计</strong></td>
+<td style="text-align: center;">100%</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: center;"><strong>6.15</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>综合评分 6.15/10</strong> · 数据置信度: <strong>中</strong>（PDF 未获取、peer 对标缺失、舆情数据缺失、资金流数据缺失）</p>
+<hr />
+</div>
+
+<!-- ============================================================
+     §七 网络舆情与市场情绪
+     ============================================================ -->
+<div class="section" id="sentiment">
+<h2>§七 网络舆情与市场情绪</h2>
+<blockquote>
+<p>⚠️ <strong>降级声明</strong>: WebSearch 工具返回空结果，无法采集雪球/东方财富/知乎等平台舆情数据。以下基于已有结构化数据（股东变动、技术面、基本面）推断市场情绪方向。[phase1-data.md §8]</p>
+</blockquote>
+<h3>看多派声音</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>论据来源</th>
+<th>核心逻辑</th>
+<th>数据支撑</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>主权基金新进</td>
+<td>澳门金管局（0.99%）、科威特政府投资局（0.89%）、社保一一一（0.78%）2026Q1 新进十大，长期配置型资金看好公司中长期价值</td>
+<td>[Tushare:top10_holders, 20260331]</td>
+</tr>
+<tr>
+<td>2</td>
+<td>估值处于历史低位</td>
+<td>PE 12.01x 低于制造业中位数 15-25x，PB 1.90 处于近 1 年 0% 分位，安全边际充足</td>
+<td>[Tushare:daily_basic; audit_report.md §3.7]</td>
+</tr>
+<tr>
+<td>3</td>
+<td>营收持续增长</td>
+<td>3 年 CAGR 18.87%，FY2025 +15.69%，2026Q1 +12.48%，海外产能扩张驱动增长稳健</td>
+<td>[Tushare:derived_metrics]</td>
+</tr>
+<tr>
+<td>4</td>
+<td>毛利率边际改善</td>
+<td>2026Q1 毛利率 26.86%（环比 FY2025 的 24.68% 回升 2.18pct），盈利拐点初现</td>
+<td>[Tushare:fina_indicator]</td>
+</tr>
+<tr>
+<td>5</td>
+<td>经营现金流转正</td>
+<td>2026Q1 OCF 1.76 亿（去年同期 -4.08 亿），经营质量改善</td>
+<td>[Tushare:cashflow]</td>
+</tr>
+</tbody>
+</table>
+<h3>看空派声音</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>论据来源</th>
+<th>核心逻辑</th>
+<th>数据支撑</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>外资大幅减持</td>
+<td>香港中央结算 Q1 减持 4,875 万股（-1.48pct），沪港通外资通道最大单季减持</td>
+<td>[Tushare:top10_holders]</td>
+</tr>
+<tr>
+<td>2</td>
+<td>公募基金撤离</td>
+<td>易方达消费基金减持 2,341 万股（-0.71pct），社保四零六减持 439 万股</td>
+<td>[Tushare:top10_holders]</td>
+</tr>
+<tr>
+<td>3</td>
+<td>净利首次负增长</td>
+<td>FY2025 归母净利 -13.30%，毛利率从 27.58%→24.68%，盈利能力拐点</td>
+<td>[Tushare:income]</td>
+</tr>
+<tr>
+<td>4</td>
+<td>筹码严重分散</td>
+<td>股东户数从 42,057 暴增至 57,758（+37.33%），散户涌入+机构退出的偏空格局</td>
+<td>[Tushare:stk_holdernumber]</td>
+</tr>
+<tr>
+<td>5</td>
+<td>技术面全面偏空</td>
+<td>均线空头排列、MACD 死叉、收盘跌破 MA120，近 60 日跌幅 -22.2%</td>
+<td>[technical_analysis.md]</td>
+</tr>
+<tr>
+<td>6</td>
+<td>有息负债扩张</td>
+<td>财务费用暴增 345%（2.26 亿），短期+长期借款合计 129 亿，净负债 85.88 亿</td>
+<td>[Tushare:income, fina_indicator]</td>
+</tr>
+</tbody>
+</table>
+<h3>资金流向信号</h3>
+<blockquote>
+<p>⚠️ capital_flow.md 未生成（脚本 bug），资金流向/沪深港通/融资融券/主力净流入数据缺失。以下基于股东变动间接推断：</p>
+</blockquote>
+<ul>
+<li><strong>沪港通（间接）</strong>: 香港中央结算从 5.20%→3.72%（-1.48pct），外资通道净流出，偏空信号 [Tushare:top10_holders]</li>
+<li><strong>机构持仓（间接）</strong>: 易方达消费+华泰柏瑞沪深300+社保四零六均减持，机构整体退出倾向 [Tushare:top10_holders]</li>
+<li><strong>散户动向</strong>: 股东户数 +37.33%，户均持股下降，散户接盘特征明显 [Tushare:stk_holdernumber]</li>
+</ul>
+<p><strong>情绪综合判定</strong>: <strong>中性偏空</strong>。看多逻辑（估值低位+主权基金新进+毛利率回升）与看空逻辑（外资/公募减持+净利负增长+筹码分散+技术面偏空）形成分歧，但短期看空力量占优。</p>
+<hr />
+</div>
+
+<!-- ============================================================
+     §八 可比公司对标
+     ============================================================ -->
+<div class="section" id="peers">
+<h2>§八 可比公司对标（v4.4 — Read `peer_analysis.md`）</h2>
+<blockquote>
+<p>⚠️ <strong>降级声明</strong>: peer_analysis.md 未生成（Tushare API 超时 2 次）。以下 Peer 对标基于 phase1-data.md 定性信息 + data_snapshot.md 赛轮自有数据，竞品定量指标标注"待补充"。[phase1-data.md §3, §11]</p>
+</blockquote>
+<h3>§8.1 A 股同行业对标</h3>
+<table>
+<thead>
+<tr>
+<th>公司</th>
+<th>代码</th>
+<th>主营定位</th>
+<th style="text-align: right;">FY2025 营收(亿)</th>
+<th style="text-align: center;">海外占比</th>
+<th style="text-align: right;">市值(亿)</th>
+<th style="text-align: right;">PE(TTM)</th>
+<th style="text-align: right;">PB</th>
+<th style="text-align: right;">ROE</th>
+<th style="text-align: right;">毛利率</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>赛轮轮胎</strong></td>
+<td>601058</td>
+<td>出口导向,半钢+全钢+OTR,越南产能</td>
+<td style="text-align: right;">367.92</td>
+<td style="text-align: center;">~77.6%</td>
+<td style="text-align: right;">425.15</td>
+<td style="text-align: right;">12.01</td>
+<td style="text-align: right;">1.90</td>
+<td style="text-align: right;">17.13%</td>
+<td style="text-align: right;">24.68%</td>
+<td>[Tushare:income, daily_basic, fina_indicator]</td>
+</tr>
+<tr>
+<td>玲珑轮胎</td>
+<td>601966</td>
+<td>配套+替换,品牌化路线,泰国/塞尔维亚产能</td>
+<td style="text-align: right;">待补充</td>
+<td style="text-align: center;">~50%E</td>
+<td style="text-align: right;">待补充</td>
+<td style="text-align: right;">待补充</td>
+<td style="text-align: right;">待补充</td>
+<td style="text-align: right;">待补充</td>
+<td style="text-align: right;">待补充</td>
+<td>[Tushare:stock_basic; 降级]</td>
+</tr>
+<tr>
+<td>三角轮胎</td>
+<td>601163</td>
+<td>全钢为主,内销较强,威海基地</td>
+<td style="text-align: right;">待补充</td>
+<td style="text-align: center;">~30%E</td>
+<td style="text-align: right;">待补充</td>
+<td style="text-align: right;">待补充</td>
+<td style="text-align: right;">待补充</td>
+<td style="text-align: right;">待补充</td>
+<td style="text-align: right;">待补充</td>
+<td>[Tushare:stock_basic; 降级]</td>
+</tr>
+<tr>
+<td>森麒麟</td>
+<td>002984</td>
+<td>半钢出口,越南产能,OTR 占比高</td>
+<td style="text-align: right;">待补充</td>
+<td style="text-align: center;">~70%E</td>
+<td style="text-align: right;">待补充</td>
+<td style="text-align: right;">待补充</td>
+<td style="text-align: right;">待补充</td>
+<td style="text-align: right;">待补充</td>
+<td style="text-align: right;">待补充</td>
+<td>[Tushare:stock_basic; 降级]</td>
+</tr>
+<tr>
+<td>贵州轮胎</td>
+<td>000589</td>
+<td>全钢+OTR,越南产能</td>
+<td style="text-align: right;">待补充</td>
+<td style="text-align: center;">~40%E</td>
+<td style="text-align: right;">待补充</td>
+<td style="text-align: right;">待补充</td>
+<td style="text-align: right;">待补充</td>
+<td style="text-align: right;">待补充</td>
+<td style="text-align: right;">待补充</td>
+<td>[Tushare:stock_basic; 降级]</td>
+</tr>
+</tbody>
+</table>
+<p><em>"E" 表示基于行业公开信息估算，非精确值。"待补充" 项因 Tushare API 超时未获取。</em></p>
+<h3>§8.2 目标公司在 peer 中的定性分位</h3>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th style="text-align: center;">赛轮位置(定性判断)</th>
+<th>依据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>营收规模</td>
+<td style="text-align: center;"><strong>第 1</strong></td>
+<td>FY2025 营收 367.92 亿，为国内轮胎上市公司最大 [Tushare:income]</td>
+</tr>
+<tr>
+<td>海外占比</td>
+<td style="text-align: center;"><strong>第 1</strong></td>
+<td>77.6% 为行业最高，越南产能先发优势 [Tushare:fina_mainbz]</td>
+</tr>
+<tr>
+<td>PE(TTM)</td>
+<td style="text-align: center;"><strong>偏低</strong></td>
+<td>12.01x，制造业中位数 15-25x，大概率低于可比均值 [Tushare:daily_basic]</td>
+</tr>
+<tr>
+<td>ROE</td>
+<td style="text-align: center;"><strong>中上</strong></td>
+<td>17.13%，高于制造业中位数 10-15%，但同比下滑 [Tushare:fina_indicator]</td>
+</tr>
+<tr>
+<td>毛利率</td>
+<td style="text-align: center;"><strong>中等</strong></td>
+<td>24.68%，轮胎行业通常 20-30% 区间 [Tushare:fina_indicator]</td>
+</tr>
+<tr>
+<td>产品覆盖</td>
+<td style="text-align: center;"><strong>最全</strong></td>
+<td>半钢+全钢+OTR 三线并进，多数竞品以 1-2 个品类为主 [Tushare:fina_mainbz]</td>
+</tr>
+</tbody>
+</table>
+<h3>§8.3 硬判定对比洞察</h3>
+<ol>
+<li>
+<p><strong>规模优势确立</strong>: 赛轮 FY2025 营收 367.92 亿大概率为 A 股轮胎板块第一（玲珑轮胎 FY2024 约 230-250 亿量级），但需竞品 FY2025 数据验证。[Tushare:income; 低置信]</p>
+</li>
+<li>
+<p><strong>海外产能先发</strong>: 赛轮越南产能布局最早、规模最大，海外收入占比 77.6% 显著高于行业平均（估计 30-50%）。这是其估值溢价的核心来源。[Tushare:fina_mainbz]</p>
+</li>
+<li>
+<p><strong>盈利能力回落需对标验证</strong>: 赛轮 FY2025 毛利率从 27.58%→24.68%（-2.9pct），是否为行业性压力（原材料涨价/关税）还是公司特有问题，需竞品同期毛利率变动对比才能判断。<strong>这是当前最关键的信息缺口</strong>。[Tushare:fina_indicator; 低置信]</p>
+</li>
+<li>
+<p><strong>估值折价合理性</strong>: PE 12.01x 若低于可比均值（预计玲珑/三角 PE 15-20x），则存在估值修复空间；但需排除"低估值陷阱"（盈利持续下滑导致的 PE 虚低）。[Tushare:daily_basic; 低置信]</p>
+</li>
+</ol>
+<h3>§8.4 海外同业补充</h3>
+<table>
+<thead>
+<tr>
+<th>公司</th>
+<th>市场</th>
+<th>定位</th>
+<th>参考意义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>米其林 (ML.PA)</td>
+<td>欧洲</td>
+<td>全球 #1，高端替换胎+配套胎</td>
+<td>毛利率标杆（~28-30%），赛轮追赶目标</td>
+</tr>
+<tr>
+<td>普利司通 (5108.T)</td>
+<td>日本</td>
+<td>全球 #2，全品类+赛车轮胎</td>
+<td>收入结构参考（替换胎占比 ~70%）</td>
+</tr>
+<tr>
+<td>固特异 (GT)</td>
+<td>美股</td>
+<td>全球 #3，美国市场为主</td>
+<td>PE/PB 对标（制造业估值锚）</td>
+</tr>
+<tr>
+<td>正新橡胶 (2105.TW)</td>
+<td>台湾</td>
+<td>亚洲轮胎龙头，二轮+四轮</td>
+<td>区域竞争对手，海外产能布局相似</td>
+</tr>
+</tbody>
+</table>
+<p><em>海外同业定量对标需补充最新财务数据，本次未获取。</em></p>
+</div>
+
+<!-- ============================================================
+     §九 估值与回报模拟
+     ============================================================ -->
+<div class="section" id="valuation">
+<h2>§九 估值与回报模拟</h2>
+<blockquote>
+<p><strong>方法论</strong>: 以"<strong>DCF 概率加权</strong>"为唯一估值锚，§十（投资回报）沿用同一套情景。§9.2 可比 PE 和 PB 作为<strong>交叉验证</strong>而非独立锚。</p>
+</blockquote>
+<h3>9.1 DCF 情景分析（4 情景）</h3>
+<h4>DCF 核心假设</h4>
+<p>基年锚定 FY2025 实际数据：营收 367.92 亿、归母净利 35.22 亿、净利率 9.83%、毛利率 24.68%。[Tushare:income, fina_indicator]</p>
+<p>历史净利率锚点：FY2022 6.52% → FY2023 12.33% → FY2024 12.97% → FY2025 9.83%，3 年均值（FY2023-2025）= 11.71%。2026Q1 单季净利率 11.35%，毛利率回升至 26.86%，边际改善信号已现。[Tushare:fina_indicator, data_snapshot.md §3]</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>乐观</th>
+<th>基准</th>
+<th>悲观</th>
+<th>最差</th>
+<th>依据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FY2026E 营收增速</td>
+<td>+12%</td>
+<td>+8%</td>
+<td>+3%</td>
+<td>0%</td>
+<td>历史 3 年 CAGR 18.9% 放缓锚；2026Q1 实际 +12.48% [Tushare:income]</td>
+</tr>
+<tr>
+<td>FY2026E 净利率</td>
+<td>11.2%</td>
+<td>10.1%</td>
+<td>8.7%</td>
+<td>6.8%</td>
+<td>3 年均值 11.71% 为中枢；2026Q1 实际 11.35% [Tushare:fina_indicator]</td>
+</tr>
+<tr>
+<td>目标 PE 倍数</td>
+<td>14x</td>
+<td>12x</td>
+<td>10x</td>
+<td>8x</td>
+<td>PE(TTM) 12.01；制造业中位数 15-25x；Justified PE=(1−g/ROE)/(r−g)</td>
+</tr>
+<tr>
+<td>隐含 WACC</td>
+<td>~8.0%</td>
+<td>~8.5%</td>
+<td>~9.5%</td>
+<td>~10.5%</td>
+<td>Rf 2.3% + β×ERP；轮胎制造 β≈0.9 [Damodaran 框架]</td>
+</tr>
+<tr>
+<td>永续增长率 g</td>
+<td>3.5%</td>
+<td>3.0%</td>
+<td>2.5%</td>
+<td>2.0%</td>
+<td>中国 GDP 长期增速 4-5%，行业 CAGR 4-5% 折价 [行业常识]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>g &lt; r 校验</strong>: 4 情景均满足永续 g &lt; 折现 r（3.5% &lt; 8.0%、3.0% &lt; 8.5%、2.5% &lt; 9.5%、2.0% &lt; 10.5%）✅</p>
+<p><strong>Justified PE 推导</strong>（Damodaran 公式：PE = (1 − g/ROE) / (r − g)）:<br />
+- 基准情景：ROE 15%（FY2025 的 17.13% 适度下修）、r 8.5%、g 3.0% → PE = (1−0.03/0.15)/(0.085−0.03) = 0.80/0.055 = <strong>14.5x</strong>。当前 PE 12.01x 低于理论值，支撑估值偏低判断。<br />
+- 悲观情景：ROE 12%、r 9.5%、g 2.5% → PE = (1−0.025/0.12)/(0.095−0.025) = 0.79/0.07 = <strong>11.3x</strong>。接近当前 PE，意味着市场已定价悲观假设。</p>
+<h4>乐观情景（20% 权重）</h4>
+<p><strong>叙事</strong>: 2026Q1 毛利率 26.86% 确认盈利拐点反转。海外产能（越南+东南亚新基地，在建工程 28.68 亿 [Tushare:balancesheet]）全面投产，叠加替换胎需求刚性，驱动收入加速。原材料（天然橡胶）价格从高位回落，进一步释放毛利空间。主权基金新进（澳门金管局+科威特+社保一一一 [Tushare:top10_holders]）验证长期配置价值。</p>
+<ul>
+<li><strong>FY2026E</strong>: 营收 412 亿（+12%）× 净利率 11.2% = 归母净利 <strong>46.1 亿</strong></li>
+<li><strong>DCF 路径</strong>: 5 年营收 CAGR 12%，终态 EBIT margin 13%，WACC 8.0%，g 3.5%</li>
+<li>稳态 FCFF ≈ 50 亿（Capex 正常化至 5% 营收后）</li>
+<li>终值 = 50×1.035/(0.08−0.035) = 1,150 亿；折现 5 年 PV ≈ 783 亿</li>
+<li>5 年经营现值 ≈ 85 亿；EV ≈ 868 亿</li>
+<li>减净负债 85.88 亿 [Tushare:fina_indicator] → 权益 ≈ 782 亿</li>
+<li><strong>简化校验</strong>: 46.1 亿 × PE 14x = <strong>645 亿 → 19.6 元/股</strong></li>
+<li><strong>取较保守值</strong>: 645 亿 / 19.6 元（DCF 全模型偏高，取 PE 倍数法锚定）</li>
+</ul>
+<h4>基准情景（45% 权重）</h4>
+<p><strong>叙事</strong>: 毛利率在 25-26% 区间震荡（FY2025 的 24.68% 为底部，但不会快速回到 FY2024 的 27.58%）。营收保持中高单位数增长（+8%），海外产能稳步释放但贸易政策不确定性持续。净利率向 3 年均值 11.71% 靠拢但受财务费用拖累（FY2025 财务费用同比+345% [Tushare:income]），实际回到 10% 左右。ROE 从 17.13% 缓降至 15%。</p>
+<ul>
+<li><strong>FY2026E</strong>: 营收 397 亿（+8%）× 净利率 10.1% = 归母净利 <strong>40.1 亿</strong></li>
+<li><strong>DCF 路径</strong>: 5 年 CAGR 8%，终态 EBIT margin 11.5%，WACC 8.5%，g 3.0%</li>
+<li>稳态 FCFF ≈ 38 亿；终值 = 38×1.03/0.055 = 712 亿</li>
+<li>折现 EV ≈ 566 亿；减净负债 86 亿 → 权益 ≈ <strong>480 亿</strong></li>
+<li>对应股价 <strong>14.6 元/股</strong></li>
+<li><strong>PE 校验</strong>: 40.1 亿 × 12x = 481 亿 ≈ DCF 结果，自洽 ✅</li>
+</ul>
+<h4>悲观情景（30% 权重）</h4>
+<p><strong>叙事</strong>: FY2025 毛利率收缩 2.9pct 并非一次性冲击——原材料成本高企持续、美国对中国轮胎关税加码（越南产能亦面临转口限制风险）、海外市场价格竞争加剧。净利率进一步下探至 8.7%（接近 FY2023H1 的 9.35% 水平）。外资继续减持（香港中央结算 Q1 已减 4,875 万股 [Tushare:top10_holders]），估值中枢下移。</p>
+<ul>
+<li><strong>FY2026E</strong>: 营收 379 亿（+3%）× 净利率 8.7% = 归母净利 <strong>33.0 亿</strong></li>
+<li><strong>DCF 路径</strong>: WACC 9.5%，g 2.5%，终值倍数压缩 → 权益 ≈ <strong>330 亿</strong></li>
+<li>对应股价 <strong>10.0 元/股</strong></li>
+</ul>
+<h4>最差情景（5% 权重）</h4>
+<p><strong>叙事</strong>: 中美贸易战全面升级，美国对越南产轮胎加征高额关税（"堵转口"），赛轮海外收入（77.6%）遭受重大打击。毛利率跌回 FY2022 水平（18.42%），净利率回到 6.8%，有息负债 145.51 亿 [Tushare:fina_indicator] 偿债压力凸显。Altman Z-Score 2.623 进一步恶化至破产风险区间。[audit_report.md §3.1]</p>
+<ul>
+<li><strong>FY2026E</strong>: 营收 368 亿（持平）× 净利率 6.8% = 归母净利 <strong>25.0 亿</strong></li>
+<li>WACC 10.5%，PE 8x → 权益 ≈ <strong>200 亿</strong> → 对应股价 <strong>6.1 元/股</strong></li>
+</ul>
+<h4>估值锚（概率加权 DCF）</h4>
+<table>
+<thead>
+<tr>
+<th>情景</th>
+<th style="text-align: right;">估值（亿）</th>
+<th style="text-align: right;">对应股价</th>
+<th style="text-align: center;">概率</th>
+<th style="text-align: right;">加权贡献（亿）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>乐观</td>
+<td style="text-align: right;">645</td>
+<td style="text-align: right;">19.6 元</td>
+<td style="text-align: center;">20%</td>
+<td style="text-align: right;">129.0</td>
+</tr>
+<tr>
+<td>基准</td>
+<td style="text-align: right;">480</td>
+<td style="text-align: right;">14.6 元</td>
+<td style="text-align: center;">45%</td>
+<td style="text-align: right;">216.0</td>
+</tr>
+<tr>
+<td>悲观</td>
+<td style="text-align: right;">330</td>
+<td style="text-align: right;">10.0 元</td>
+<td style="text-align: center;">30%</td>
+<td style="text-align: right;">99.0</td>
+</tr>
+<tr>
+<td>最差</td>
+<td style="text-align: right;">200</td>
+<td style="text-align: right;">6.1 元</td>
+<td style="text-align: center;">5%</td>
+<td style="text-align: right;">10.0</td>
+</tr>
+<tr>
+<td><strong>概率加权</strong></td>
+<td style="text-align: right;"><strong>454</strong></td>
+<td style="text-align: right;"><strong>13.8</strong></td>
+<td style="text-align: center;">100%</td>
+<td style="text-align: right;"><strong>454.0</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>估值锚: 454 亿元 / 13.8 元/股</strong>。当前 12.93 元相对此锚 <strong>+6.7%</strong> 上行空间（中性偏正面，但安全边际有限）。</p>
+<h3>9.2 交叉验证（仅互证，不纳入锚）</h3>
+<ul>
+<li>
+<p><strong>可比 PE</strong>: 制造业/轮胎行业中位数 PE 15-20x（玲珑/三角/森麒麟估计区间 [phase3-part2.md §8.2]）。赛轮 PE(TTM) 12.01x 处于可比中位数下方 20-40%。若按可比中位数 16x × TTM 归母净利 35.4 亿 ≈ <strong>566 亿 / 17.2 元</strong>。[Tushare:daily_basic; 低置信——竞品数据缺失]</p>
+</li>
+<li>
+<p><strong>有形 PB</strong>: 当前 PB 1.90，近 1 年 0% 分位（最低位 [audit_report.md §3.7]）。每股净资产 6.82 元 [Tushare:fina_indicator]。若按行业合理 PB 2.2-2.5x（ROE 17% 对应）→ <strong>15.0-17.1 元</strong>。</p>
+</li>
+<li>
+<p><strong>自洽判定</strong>: 可比 PE 估值 566 亿 vs DCF 锚 454 亿，差异 <strong>+24.7%</strong> 🔴。<strong>分歧原因</strong>: ① 可比公司数据为估算值（peer_analysis.md 未生成），置信度低；② DCF 锚已纳入 30% 悲观+5% 最差权重，较可比法更保守；③ 赛轮的负 FCF（FY2025 -6.39 亿 [Tushare:derived_metrics]）和高有息负债（145.51 亿）在 EV 法下产生折价，PE 法不直接反映。结论：DCF 锚偏保守，可比法偏乐观，分歧合理。</p>
+</li>
+</ul>
+<h3>9.3 估值异常</h3>
+<ol>
+<li><strong>PB 历史极低</strong>: PB 1.90 处于近 1 年 0% 分位（范围 1.90-2.80），当日收盘即为年内最低 PB。[audit_report.md §3.7: 🟢 Valuation Anomaly]</li>
+<li><strong>PE 低于行业</strong>: PE(TTM) 12.01x vs 制造业中位数 15-25x，折价 25-52%。可能反映市场对盈利拐点（FY2025 净利 -13.30%）的悲观定价。[Tushare:daily_basic]</li>
+<li><strong>Gordon 模型隐含风险溢价</strong>: 当前 PB 1.90 = (ROE−g)/(r−g)，若 ROE=17%、g=3% → r=10.4%。市场隐含要求回报 10.4%，高于 A 股大盘蓝筹通常的 8-9%，说明市场对赛轮定价了额外的风险溢价（贸易+负 FCF+机构减持）。</li>
+</ol>
+<h3>9.4 技术面位置（Read <code>technical_analysis.md</code>）</h3>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>信号</th>
+<th>数值</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>均线排列</td>
+<td>空头排列 🔴</td>
+<td>MA5/20/60/120 = 13.33/13.66/14.13/15.25</td>
+<td>[technical_analysis.md §1]</td>
+</tr>
+<tr>
+<td>MACD</td>
+<td>近 10 日死叉 🔴</td>
+<td>DIFF=-0.146 / DEA=-0.074 / 零轴下方</td>
+<td>[technical_analysis.md §1]</td>
+</tr>
+<tr>
+<td>RSI(14)</td>
+<td>中性 ⚪</td>
+<td>35.08（接近超卖区 30）</td>
+<td>[technical_analysis.md §1]</td>
+</tr>
+<tr>
+<td>布林带</td>
+<td>下轨之下 🟢</td>
+<td>收盘 12.93 &lt; 下轨 12.95，短期超卖</td>
+<td>[technical_analysis.md §1]</td>
+</tr>
+<tr>
+<td>近 60 日涨跌</td>
+<td>-22.2%</td>
+<td>距 60 日高点 16.81 元下方 30%</td>
+<td>[technical_analysis.md §2]</td>
+</tr>
+<tr>
+<td>近 60 日支撑</td>
+<td>12.61 元</td>
+<td>当前价上方 2.47%，可作止损参考</td>
+<td>[technical_analysis.md §2]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>基本面 × 技术面配合判断</strong>:</p>
+<p>DCF 基准情景看涨（+6.7% 上行空间）+ <strong>技术面偏空</strong>（均线空头+MACD 死叉+破 MA120） → <strong>基本面估值略有安全边际，但技术面时点不对</strong>。参照 technical_analysis.md §4 指引：建议等 MA60 金叉或 RSI 从超卖区（&lt;30）反弹站稳后再建仓。当前 RSI 35.08 接近超卖，布林带已触下轨，若短期企稳 12.61 元支撑有效则为左侧观察窗口。</p>
+<hr />
+</div>
+
+<!-- ============================================================
+     §十 投资回报测算（与 §九 共用情景）
+     ============================================================ -->
+<div class="section" id="invest-sim">
+<h2>§十 投资回报测算（与 §九 共用情景）</h2>
+<p><strong>初始仓位</strong>: 100 万元人民币<br />
+<strong>当前买入</strong>: 12.93 元 × 77,339 股 ≈ 100.00 万元<br />
+<strong>测算时间窗口</strong>: 12-18 个月（至 FY2026 年报披露后）</p>
+<table>
+<thead>
+<tr>
+<th>情景</th>
+<th style="text-align: center;">目标价</th>
+<th style="text-align: center;">收益率</th>
+<th style="text-align: center;">概率</th>
+<th style="text-align: center;">加权收益率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>乐观</td>
+<td style="text-align: center;">19.6 元</td>
+<td style="text-align: center;">+51.6%</td>
+<td style="text-align: center;">20%</td>
+<td style="text-align: center;">+10.32%</td>
+</tr>
+<tr>
+<td>基准</td>
+<td style="text-align: center;">14.6 元</td>
+<td style="text-align: center;">+12.9%</td>
+<td style="text-align: center;">45%</td>
+<td style="text-align: center;">+5.81%</td>
+</tr>
+<tr>
+<td>悲观</td>
+<td style="text-align: center;">10.0 元</td>
+<td style="text-align: center;">-22.7%</td>
+<td style="text-align: center;">30%</td>
+<td style="text-align: center;">-6.80%</td>
+</tr>
+<tr>
+<td>最差</td>
+<td style="text-align: center;">6.1 元</td>
+<td style="text-align: center;">-52.8%</td>
+<td style="text-align: center;">5%</td>
+<td style="text-align: center;">-2.64%</td>
+</tr>
+<tr>
+<td><strong>概率加权 12-18 月收益率</strong></td>
+<td style="text-align: center;">–</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: center;">100%</td>
+<td style="text-align: center;"><strong>+6.69%</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>年化</strong> ≈ +4.5%~+6.7%（取 12-18 月中值 15 月年化）。</p>
+<p><strong>回报分布特征</strong>:<br />
+- 上行概率（&gt;0%）: 65%（乐观+基准）<br />
+- 下行概率（&lt;0%）: 35%（悲观+最差）<br />
+- 最大回撤风险: -52.8%（最差情景，5% 概率）<br />
+- 概率加权正但幅度有限（+6.69%），风险收益比 ≈ 1:1</p>
+<p><strong>建议仓位</strong>: <strong>标准仓位（5-10%）</strong>。理由：① 概率加权收益为正但低于双位数，不具备重仓条件；② 技术面全面偏空，短期下行动能未衰竭；③ 主权基金新进+PB 历史最低位提供长期安全垫。建议分批建仓（先 3%观察→确认毛利率连续 2 季回升后加至 8%），止损参考 12.61 元（近 60 日支撑，下方 2.47%）。</p>
+<hr />
+</div>
+
+<!-- ============================================================
+     §十一 定性判断（3 框架，无打分）
+     ============================================================ -->
+<div class="section" id="qualitative">
+<h2>§十一 定性判断（3 框架，v4.1 — 无打分）</h2>
+<blockquote>
+<p><em>估值分析见 §九。会计/治理红旗已由 11 框架自动审计覆盖（Buffett Quality + Sloan Accrual + Valuation Anomaly 等）。本章节聚焦不能被定量指标或审计自动替代的"深层判断"。</em></p>
+</blockquote>
+<h3>框架 1 · 护城河（Moat）→ <strong>看多</strong></h3>
+<p><strong>核心问题</strong>: 赛轮轮胎的可持续竞争优势是在<strong>加深</strong>还是<strong>侵蚀</strong>？</p>
+<p><strong>判断</strong>: <strong>部分是——海外产能护城河在加深，但品牌护城河薄弱、成本优势面临侵蚀风险。</strong></p>
+<p><strong>证据链</strong>:<br />
+1. <strong>海外产能壁垒（加深中）</strong>: 越南等东南亚产能布局为中国轮胎企业最早、规模最大，海外收入占比 77.6% 为行业最高水平。产能爬坡周期 2-3 年 + 配套认证周期构成时间壁垒，竞争对手短期难以复制。在建工程 28.68 亿 [Tushare:balancesheet] 表明仍在扩张，规模效应持续强化。 [Tushare:fina_mainbz, phase3-part2.md §五]<br />
+2. <strong>规模经济（半动态护城河）</strong>: FY2025 营收 367.92 亿为 A 股轮胎板块规模最大之一，规模采购+长协锁定原材料成本。全品类覆盖（半钢+全钢+OTR）降低单一市场风险，客户和渠道可复用。 [Tushare:income, fina_mainbz]<br />
+3. <strong>品牌力薄弱（侵蚀风险）</strong>: 相比米其林/普利司通，赛轮在海外替换胎市场仍属中低端定位，品牌溢价有限。同行（玲珑/森麒麟）同样在东南亚布局产能，同质化竞争加剧。轮胎行业 Porter 五力中"同业竞争"为高 [phase3-part2.md §五]，护城河宽度受限。</p>
+<p><strong>逻辑蕴含</strong>:<br />
+- 若判断成立 → 利好长期收入增长假设的可持续性（海外份额持续提升），但利空毛利率扩张空间（品牌溢价不足+同业竞争）<br />
+- 若判断推翻（如贸易壁垒使海外产能优势失效）→ 利空核心增长逻辑</p>
+<p><strong>对综合投资观点的支撑方向</strong>: <strong>看多</strong>（海外产能护城河是核心α，短期价格竞争不改中长期份额逻辑）</p>
+<p><strong>未解决问题</strong>: 缺 PDF 年报原文，无法验证"液体黄金轮胎技术"的实际技术壁垒深度。</p>
+<h3>框架 2 · 管理层（Management）→ <strong>中性</strong></h3>
+<p><strong>核心问题</strong>: 管理层的<strong>德</strong>（诚信/股东为伴）、<strong>才</strong>（战略执行/资本配置）是否都合格？</p>
+<p><strong>判断</strong>: <strong>部分是——"德"层面合格，"才"层面有待观察。</strong></p>
+<p><strong>证据链</strong>:<br />
+1. <strong>"德"层面——合格</strong>: 实控人系（瑞元鼎实+袁仲雪+煜明投资）合计持股 26.10%，持股稳定无变动 [Tushare:top10_holders]。质押比例极低（单笔多在 1 万股以下 vs 总持股 5.56 亿股 [Tushare:pledge_detail]），无大规模质押套现行为。Beneish M-Score = -2.160，盈余操纵概率低 [audit_report.md §3.6: 🟢]。无非标审计意见记录。<br />
+2. <strong>"才"层面——资本配置存疑</strong>: FY2025 财务费用暴增 345%（2.26 亿 vs 去年 0.51 亿 [Tushare:income]），有息负债扩至 145.51 亿 [Tushare:fina_indicator]，激进扩产是否过度依赖债务融资？FCF 连续为负（FY2025 -6.39 亿 [Tushare:derived_metrics]），资本开支纪律待验证。<br />
+3. <strong>关联方风险</strong>: 🟠 长期股权投资从 63,082 万暴跌至 32,507 万（-48.5%），参股公司价值大幅波动 [audit_report.md §3.2]。缺 PDF 原文无法确认具体是哪家参股公司爆雷及管理层决策责任。<br />
+4. <strong>内部人信号偏负</strong>: 🟡 前十大股东净减持 7,655 万股 [audit_report.md §3.4]；🟡 股东户数 +37.3%，散户涌入+机构退出 [audit_report.md §3.5]。外资（香港中央结算 -4,875 万股）和公募（易方达消费 -2,341 万股）大幅减持，聪明钱在退出。</p>
+<p><strong>逻辑蕴含</strong>:<br />
+- 若判断成立（管理层"德"过关+"才"一般）→ 利好维持行业均值估值，但不支撑溢价<br />
+- 若判断推翻（关联方风险实质化/资本配置失败）→ 利空，需要估值折价</p>
+<p><strong>对综合投资观点的支撑方向</strong>: <strong>中性</strong>（无"德"的硬伤，但资本配置激进+机构减持形成分歧）</p>
+<p><strong>未解决问题</strong>: ① 无形资产暴增 153%（36.29 亿 [Tushare:balancesheet]）缺 PDF 确认是收购还是土地使用权；② 长期股权投资暴跌的具体原因待年报披露。</p>
+<h3>框架 3 · 催化剂（Catalyst）→ <strong>中性</strong></h3>
+<p><strong>核心问题</strong>: 下一个 <strong>12 个月</strong> 是否有可能<strong>改变投资结论方向</strong>的具体、可观察事件？</p>
+<p><strong>判断</strong>: <strong>正向催化剂存在但尚未验证，负向催化剂同样显著，形成对冲。</strong></p>
+<p><strong>证据链</strong>:<br />
+1. <strong>正向催化剂①——毛利率拐点验证</strong>: 2026Q1 毛利率 26.86%（环比 FY2025 的 24.68% 回升 +2.18pct [Tushare:fina_indicator]）。若 2026H1 毛利率持续 &gt;26%，将确认盈利拐点，触发估值重估。<strong>时间窗: 2026 年 8 月中报披露</strong>。<br />
+2. <strong>正向催化剂②——新产能投产</strong>: 在建工程 28.68 亿 [Tushare:balancesheet]，若新基地投产带来增量收入，将加速营收增长。具体投产时间缺 PDF 未知。<br />
+3. <strong>正向催化剂③——主权基金持续加仓</strong>: 澳门金管局（0.99%）、科威特政府投资局（0.89%）2026Q1 新进 [Tushare:top10_holders]。若半年报显示继续增持，将强化长期价值信号。<br />
+4. <strong>负向催化剂①——贸易政策恶化</strong>: 美国对中国轮胎双反关税若扩展至越南产地（"堵转口"），将直接冲击 77.6% 海外收入 [Tushare:fina_mainbz]。<strong>时间窗: 持续风险，无明确触发日</strong>。<br />
+5. <strong>负向催化剂②——外资持续减持</strong>: 香港中央结算已从 5.20% 降至 3.72%（-1.48pct [Tushare:top10_holders]），若 2026H1 继续减持，短期抛压延续。<br />
+6. <strong>证伪条件</strong>: 若 2026H1 毛利率 &lt; 25%（回落至 FY2025 水平），则盈利拐点假设失败，基准情景需下修至悲观。</p>
+<p><strong>逻辑蕴含</strong>:<br />
+- 正向催化剂（毛利率+新产能+主权基金）均需 3-6 个月验证期，短期不构成买入信号<br />
+- 负向催化剂（贸易+外资减持+技术面偏空 [technical_analysis.md]）短期压制更为直接<br />
+- 催化剂密集期：<strong>2026 年 8 月（中报）</strong>——毛利率趋势+外资持仓变动将同时验证</p>
+<p><strong>对综合投资观点的支撑方向</strong>: <strong>中性</strong>（正负催化剂对冲，需等待中报数据明确方向）</p>
+<p><strong>未解决问题</strong>: ① 新产能投产具体时间表缺 PDF 未知；② 贸易政策走向取决于宏观博弈，非公司可控。</p>
+<h3>综合判断</h3>
+<p><strong>框架方向分布</strong>（共 3 个框架）:<br />
+- 看多方向: 框架 1·护城河（共 1 个）<br />
+  - 证据要点: 海外产能壁垒加深 + 规模经济 + 全品类覆盖<br />
+- 看空方向: （共 0 个）<br />
+- 中性/数据不足: 框架 2·管理层、框架 3·催化剂（共 2 个）<br />
+  - 管理层"德"合格但资本配置激进+机构减持<br />
+  - 催化剂正负对冲，需等中报验证</p>
+<p><strong>致命看空条款检查</strong>（直接引用 §三快筛）:<br />
+- §三快筛结果: ✅ PASS（6 项均未触发）<br />
+- audit_report 🔴 红旗 = 0 个（仅 🟠 高 2 个），未达致命看空阈值（≥2 个 🔴）</p>
+<p><strong>综合结论</strong>: <strong>中性-分歧</strong><br />
+（根据 v4.1 黑白分割规则：3 框架中仅 1 个看多、0 个看空、2 个中性 → 不满足 ≥2 同向 → 中性-分歧）</p>
+<p><strong>关键分歧点</strong>:<br />
+- 框架 1（看多: 海外产能护城河）vs 框架 2/3（中性: 资本配置激进+催化剂未验证）— <strong>分歧焦点: 激进扩产到底是"远见"还是"冒进"？</strong><br />
+- 验证方式: 2026H1 中报数据——若新产能带来收入增长 &gt;10% <strong>且</strong> 毛利率 &gt;26% <strong>且</strong> FCF 转正，则扩产逻辑验证，综合结论可上修至看多。</p>
+<p><strong>验证催化剂</strong>（由框架 3 识别）:<br />
+1. <strong>2026 年 8 月中报</strong> — 毛利率趋势+FCF 方向确认（最关键）<br />
+2. <strong>2026Q3 十大股东变动</strong> — 主权基金是否继续加仓，外资减持是否收敛<br />
+3. <strong>贸易政策动态</strong> — 美国对越南产轮胎关税是否加码（持续跟踪）</p>
+<p><strong>Audit 红旗引用汇总</strong>:<br />
+1. 🟠 Altman Z-Score = 2.623，灰色地带财务健康警示 [audit_report.md §3.1]<br />
+2. 🟠 Related-Party Exposure，长期股权投资暴跌 -48.5% [audit_report.md §3.2]<br />
+3. 🟡 Piotroski F-Score = 4/9，中等偏低 [audit_report.md §3.3]<br />
+4. 🟡 Governance，前十大股东净减持 7,655 万股 [audit_report.md §3.4]<br />
+5. 🟡 Shareholder Flow，股东户数 +37.3% 散户涌入 [audit_report.md §3.5]</p>
+</div>
+
+<!-- ============================================================
+     §十二 信息缺口与尽调优先级
+     ============================================================ -->
+<div class="section" id="gaps">
+<h2>§十二 信息缺口与尽调优先级</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>缺口</th>
+<th style="text-align: center;">状态</th>
+<th style="text-align: center;">可得性</th>
+<th>影响的结论</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>2024 年报 PDF 原文</strong>（利润表变动归因、管理层讨论与分析、分部毛利率、风险因素披露）</td>
+<td style="text-align: center;">❌ 未获取</td>
+<td style="text-align: center;">高</td>
+<td>§四 资产质量判断、§六 维度 3 盈利能力证据深度、§十一 定性判断缺少一手管理层叙述</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>2025Q1 季报 PDF</strong>（净利 YoY 仅 +1.72% 的管理层归因：成本上升？关税冲击？汇兑损失？）</td>
+<td style="text-align: center;">❌ 未获取</td>
+<td style="text-align: center;">高</td>
+<td>§九 估值建模核心假设（净利率走势）、§十 回报测算可信度</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Peer 可比公司定量对标</strong>（玲珑轮胎/三角轮胎/森麒麟/贵州轮胎 PE·PB·ROE 横向对比）</td>
+<td style="text-align: center;">❌ API 超时</td>
+<td style="text-align: center;">高</td>
+<td>§八 可比公司对标章节数据缺失，估值合理性无同业锚定</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>无形资产 +153% 具体构成</strong>（Q1 2026 无形资产 36.29 亿 vs 去年同期 14.32 亿，收购？土地使用权？专利？）</td>
+<td style="text-align: center;">❌ 缺 PDF</td>
+<td style="text-align: center;">高</td>
+<td>§四 资产质量、§七 维度 7 财务健康度评分——无法判断资产虚实</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>财务费用 +345% 拆分</strong>（Q1 2026 财务费用 2.26 亿 vs 0.51 亿，汇兑损益 vs 利息支出占比不明）</td>
+<td style="text-align: center;">❌ 缺 PDF</td>
+<td style="text-align: center;">高</td>
+<td>§九 DCF 建模的 WACC 与利息假设、§六 维度 7 利息覆盖率评估</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>海外产能布局最新进展</strong>（越南/柬埔寨/墨西哥工厂投产时间、产能爬坡、关税规避效果）</td>
+<td style="text-align: center;">❌ 未搜到</td>
+<td style="text-align: center;">中</td>
+<td>§五 竞争格局、§十一 催化剂框架——海外扩产是核心增长逻辑</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>美国对华轮胎反倾销/反补贴关税最新政策</strong>（2025-2026 税率变动、是否新增惩罚性关税）</td>
+<td style="text-align: center;">❌ 未搜到</td>
+<td style="text-align: center;">中</td>
+<td>§五 行业风险、§十 悲观/最差情景概率权重</td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>投资社区舆情</strong>（雪球/东方财富看多看空观点、机构研报核心观点）</td>
+<td style="text-align: center;">❌ WebSearch 空</td>
+<td style="text-align: center;">中</td>
+<td>§七 网络舆情与市场情绪章节完全缺失</td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>资金流向与主力控盘数据</strong>（北向资金日度明细、融资融券余额趋势、主力净流入）</td>
+<td style="text-align: center;">❌ 脚本 bug</td>
+<td style="text-align: center;">高</td>
+<td>§四 主力控盘分析、§七 资金流向信号——当前仅有股东户数变动</td>
+</tr>
+<tr>
+<td>10</td>
+<td><strong>FY2025 净利下滑 13.3% 管理层归因</strong>（毛利率下降 2.9pct + 财务费用暴增，但管理层如何定性？一次性还是趋势性？）</td>
+<td style="text-align: center;">❌ 缺 PDF</td>
+<td style="text-align: center;">高</td>
+<td>§六 维度 3 盈利可持续性判断、§十一 管理层框架评估</td>
+</tr>
+</tbody>
+</table>
+<p><strong>尽调优先级</strong>: #1/#2（年报/季报 PDF）&gt; #3（Peer 对标重试）&gt; #4/#5（PDF 附注细项）&gt; #9（脚本修复）&gt; #6/#7（政策/产能 WebSearch）&gt; #8/#10（舆情/管理层归因）。</p>
+<hr />
+</div>
+
+<!-- ============================================================
+     §十三 数据可审计性（时效性+来源+audit 红旗）
+     ============================================================ -->
+<div class="section" id="sources">
+<h2>§十三 数据可审计性（时效性 + 来源 3 类分组）</h2>
+<p><strong>截止日期</strong>: 2026-05-14。<strong>关键待披露</strong>: FY2025 年报 PDF（已发布但未成功抓取）、2026 半年报（预计 2026-08）。</p>
+<h3>[Tushare API]</h3>
+<table>
+<thead>
+<tr>
+<th>接口</th>
+<th>覆盖期</th>
+<th>用途</th>
+<th style="text-align: center;">状态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>stock_basic</code></td>
+<td>截至上市日</td>
+<td>§1 公司基本信息</td>
+<td style="text-align: center;">✅</td>
+</tr>
+<tr>
+<td><code>daily</code> / <code>daily_basic</code></td>
+<td>至 2026-05-14</td>
+<td>最新收盘价、PE/PB/PS、市值</td>
+<td style="text-align: center;">✅</td>
+</tr>
+<tr>
+<td><code>income</code></td>
+<td>FY2020–FY2025 + Q1 2026 (24 行)</td>
+<td>§四 财务趋势、§六 盈利能力</td>
+<td style="text-align: center;">✅</td>
+</tr>
+<tr>
+<td><code>balancesheet</code></td>
+<td>FY2020–FY2025 + Q1 2026 (22 行)</td>
+<td>§四 资产负债分析、§六 财务健康</td>
+<td style="text-align: center;">✅</td>
+</tr>
+<tr>
+<td><code>cashflow</code></td>
+<td>FY2020–FY2025 + Q1 2026 (26 行)</td>
+<td>§四 现金流、FCF 计算</td>
+<td style="text-align: center;">✅</td>
+</tr>
+<tr>
+<td><code>fina_indicator</code></td>
+<td>FY2020–FY2025 + Q1 2026 (25 行)</td>
+<td>ROE/毛利率/净利率等衍生指标</td>
+<td style="text-align: center;">✅</td>
+</tr>
+<tr>
+<td><code>fina_mainbz</code></td>
+<td>最新期</td>
+<td>业务板块收入拆分</td>
+<td style="text-align: center;">✅</td>
+</tr>
+<tr>
+<td><code>forecast_vip</code></td>
+<td>最新期</td>
+<td>管理层业绩预告</td>
+<td style="text-align: center;">✅</td>
+</tr>
+<tr>
+<td><code>top10_holders</code> / <code>top10_floatholders</code></td>
+<td>至 20260331</td>
+<td>§四 股东分析</td>
+<td style="text-align: center;">✅</td>
+</tr>
+<tr>
+<td><code>stk_holdernumber</code></td>
+<td>至 20260331</td>
+<td>股东户数变动</td>
+<td style="text-align: center;">✅</td>
+</tr>
+<tr>
+<td><code>stk_managers</code> / <code>stk_rewards</code></td>
+<td>最新期</td>
+<td>§六 维度 5 管理层</td>
+<td style="text-align: center;">✅</td>
+</tr>
+<tr>
+<td><code>pledge_detail</code></td>
+<td>最新期</td>
+<td>§三 快筛条款 3 质押</td>
+<td style="text-align: center;">✅</td>
+</tr>
+<tr>
+<td><code>dividend</code></td>
+<td>历史</td>
+<td>分红记录</td>
+<td style="text-align: center;">✅</td>
+</tr>
+<tr>
+<td><code>repurchase</code></td>
+<td>历史</td>
+<td>回购记录</td>
+<td style="text-align: center;">✅</td>
+</tr>
+<tr>
+<td><code>peer_analysis</code> (scripts)</td>
+<td>—</td>
+<td>§八 同业对标</td>
+<td style="text-align: center;">❌ API 超时</td>
+</tr>
+<tr>
+<td><code>capital_flow</code> (scripts)</td>
+<td>—</td>
+<td>§四/§七 资金流向</td>
+<td style="text-align: center;">❌ 脚本 bug</td>
+</tr>
+</tbody>
+</table>
+<h3>[PDF 原文]</h3>
+<table>
+<thead>
+<tr>
+<th>文档</th>
+<th style="text-align: center;">状态</th>
+<th>影响</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2024 年报 (FY2024 审计报告 + MD&amp;A)</td>
+<td style="text-align: center;">❌ 未获取</td>
+<td>管理层归因、分部毛利率、风险因素、关联交易细节全部缺失</td>
+</tr>
+<tr>
+<td>2025Q1 季报</td>
+<td style="text-align: center;">❌ 未获取</td>
+<td>Q1 净利增速停滞原因不明</td>
+</tr>
+</tbody>
+</table>
+<p><strong>降级影响</strong>: 全部定性分析章节（§五/§六/§十一）仅依赖 Tushare 结构化数据 + 有限 WebSearch，缺少年报原文的管理层一手叙述。来源标签中无任何 <code>[PDF:...]</code> 引用。</p>
+<h3>[WebSearch]</h3>
+<table>
+<thead>
+<tr>
+<th>查询</th>
+<th style="text-align: center;">结果</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>全球轮胎行业市场规模 2024 2025</code> (Statista/Fortune Business Insights)</td>
+<td style="text-align: center;">✅ 部分</td>
+<td>§五 行业规模</td>
+</tr>
+<tr>
+<td><code>赛轮轮胎 雪球 东方财富 看好 看衰</code></td>
+<td style="text-align: center;">❌ 空</td>
+<td>§七 舆情</td>
+</tr>
+<tr>
+<td><code>site:cninfo.com.cn 601058 赛轮轮胎 2024年年度报告 PDF</code> × 3 轮</td>
+<td style="text-align: center;">❌ 空</td>
+<td>PDF 获取</td>
+</tr>
+<tr>
+<td><code>赛轮轮胎 越南 柬埔寨 海外工厂</code></td>
+<td style="text-align: center;">❌ 空</td>
+<td>§五 产能布局</td>
+</tr>
+<tr>
+<td><code>Sailun tire 601058 earnings 2025</code></td>
+<td style="text-align: center;">❌ 空</td>
+<td>英文舆情</td>
+</tr>
+</tbody>
+</table>
+<h3>审计红旗汇总（11 框架）</h3>
+<table>
+<thead>
+<tr>
+<th>严重度</th>
+<th style="text-align: center;">数量</th>
+<th>代表性红旗</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🔴 致命</td>
+<td style="text-align: center;">0</td>
+<td>—</td>
+</tr>
+<tr>
+<td>🟠 高</td>
+<td style="text-align: center;">2</td>
+<td>Altman Z=2.623（灰色地带）；长期股权投资 -48.5%（权益法爆雷风险）</td>
+</tr>
+<tr>
+<td>🟡 中</td>
+<td style="text-align: center;">3</td>
+<td>Piotroski F=4/9；前十大股东净减持 7655 万股；股东户数 +37.3%（散户涌入）</td>
+</tr>
+<tr>
+<td>🟢 低</td>
+<td style="text-align: center;">2</td>
+<td>Beneish M=-2.16（盈余操纵概率低）；PB 近 1 年 0% 分位（估值偏低）</td>
+</tr>
+<tr>
+<td>ℹ️ 信息</td>
+<td style="text-align: center;">2</td>
+<td>DuPont 分解：FY2025 ROE 16.3%（净利率 9.57% × 周转 0.79 × 杠杆 2.16）；FY2024 ROE 20.8%</td>
+</tr>
+</tbody>
+</table>
+<p>完整清单: <code>audit_report.md</code>。</p>
+</div>
+
+<!-- ============================================================
+     v4.6.1: 附录/补丁章节追加区(避免 MD→HTML 内容丢失)
+     主报告 §十三 之后的所有 ## 章节(如"附录 v4 修订日志" / "v4.1 补丁")
+     Phase 6 Part B 必须追加到这里, 不得丢弃
+     ============================================================ -->
+<!-- 无附录章节 -->
+
+<footer>
+  本报告由 Claude Code stock-analyze skill vv4.7 生成 · 6+1 阶段流水线 · 11 大师框架审计<br>
+  数据源：Tushare Pro / yfinance / 巨潮资讯 PDF / WebSearch · 不构成投资建议<br>
+  <a href="https://github.com/MichaelFei87/Stock-Analysis">skill 代码</a> · <a href="https://github.com/MichaelFei87/Inves-Report">报告归档</a>
+</footer>
+
+</div>
+</body>
+</html>

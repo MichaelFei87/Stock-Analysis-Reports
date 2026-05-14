@@ -1,0 +1,43 @@
+{
+  "slug": "601058_赛轮轮胎",
+  "ticker": "601058.SH",
+  "name": "赛轮轮胎",
+  "name_cn": "赛轮轮胎",
+  "sector": "汽车配件",
+  "market": "a",
+  "report_date": "",
+  "version": "v1",
+  "composite_score": 6.15,
+  "verdict": "Neutral",
+  "verdict_tone": "bullish",
+  "valuation_tag": "估值锚 13.8 元",
+  "one_liner": "中性-分歧 —— 赛轮轮胎海外产能护城河持续加深（越南基地先发+海外收入占比 77.6% 行业最高），但 FY2025 净利首次负增长（-13.30%）叠加外资/公募大幅减持+筹码严重分散，正负力量对冲；2026Q1 毛利率回升至 26.86% 为盈利拐点初步信号，需等 2026 年中报确认方向。",
+  "metrics": [
+    {
+      "label": "综合评分",
+      "value": "6.15/10",
+      "tone": "neutral"
+    },
+    {
+      "label": "期望收益",
+      "value": "+6.69%",
+      "tone": "positive"
+    },
+    {
+      "label": "估值锚",
+      "value": "13.8元",
+      "tone": "neutral"
+    }
+  ],
+  "expected_return_short": "+6.69%",
+  "badges": [
+    {
+      "label": "Neutral 6.15/10",
+      "variant": "amber"
+    },
+    {
+      "label": "估值锚 13.8 元",
+      "variant": "amber"
+    }
+  ]
+}
