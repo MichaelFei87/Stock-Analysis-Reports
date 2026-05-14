@@ -181,36 +181,36 @@
       "market": "a",
       "report_date": "",
       "version": "v1",
-      "composite_score": 6.15,
+      "composite_score": 6.4,
       "verdict": "Neutral",
       "verdict_tone": "bullish",
-      "valuation_tag": "估值锚 13.8 元",
-      "one_liner": "中性-分歧 —— 赛轮轮胎海外产能护城河持续加深（越南基地先发+海外收入占比 77.6% 行业最高），但 FY2025 净利首次负增长（-13.30%）叠加外资/公募大幅减持+筹码严重分散，正负力量对冲；2026Q1 毛利率回升至 26.86% 为盈利拐点初步信号，需等 2026 年中报确认方向。",
+      "valuation_tag": "估值锚 13.08 元",
+      "one_liner": "中性-分歧 —— 赛轮轮胎是中国轮胎出海的成功范例，越南+柬埔寨产能使其在全球贸易壁垒中获得关税缓冲（海外利润占 67%），PE 12x 与米其林/普利司通持平；但 2025 年增收不增利（营收+15.69%/净利-13.30%）+欧盟反倾销调查悬而未决+机构大规模退出（陆股通-28.5%/易方达-38%），短期负面催化剂密度显著高于正面催化剂。",
       "metrics": [
         {
           "label": "综合评分",
-          "value": "6.15/10",
+          "value": "6.4/10",
           "tone": "neutral"
         },
         {
           "label": "期望收益",
-          "value": "+6.69%",
+          "value": "+1.14%",
           "tone": "positive"
         },
         {
           "label": "估值锚",
-          "value": "13.8元",
+          "value": "13.08元",
           "tone": "neutral"
         }
       ],
-      "expected_return_short": "+6.69%",
+      "expected_return_short": "+1.14%",
       "badges": [
         {
-          "label": "Neutral 6.15/10",
+          "label": "Neutral 6.4/10",
           "variant": "amber"
         },
         {
-          "label": "估值锚 13.8 元",
+          "label": "估值锚 13.08 元",
           "variant": "amber"
         }
       ]
