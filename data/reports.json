@@ -259,6 +259,49 @@
           "variant": "amber"
         }
       ]
+    },
+    {
+      "slug": "601058_赛轮轮胎",
+      "ticker": "601058.SH",
+      "name": "赛轮轮胎",
+      "name_cn": "赛轮轮胎",
+      "sector": "汽车配件",
+      "market": "a",
+      "report_date": "",
+      "version": "v1",
+      "composite_score": 6.6,
+      "verdict": "Bullish",
+      "verdict_tone": "bullish",
+      "valuation_tag": "估值锚 20.49 元",
+      "one_liner": "看多方向 —— 全球第10大轮胎企业，5国海外产能布局构成规模+技术+渠道三重护城河，2025年\"增收降利\"为原材料周期低点，2026Q1毛利率回升至26.86%确认盈利修复趋势，DCF概率加权公允20.49元较现价12.93元低估37%，但技术面空头排列+机构减持需等短期企稳信号。",
+      "metrics": [
+        {
+          "label": "综合评分",
+          "value": "6.6/10",
+          "tone": "neutral"
+        },
+        {
+          "label": "期望收益",
+          "value": "+58.46%",
+          "tone": "positive"
+        },
+        {
+          "label": "估值锚",
+          "value": "20.49元",
+          "tone": "neutral"
+        }
+      ],
+      "expected_return_short": "+58.46%",
+      "badges": [
+        {
+          "label": "Bullish 6.6/10",
+          "variant": "amber"
+        },
+        {
+          "label": "估值锚 20.49 元",
+          "variant": "amber"
+        }
+      ]
     }
   ]
 }
