@@ -1,0 +1,43 @@
+{
+  "slug": "9988_阿里巴巴",
+  "ticker": "9988.HK",
+  "name": "阿里巴巴",
+  "name_cn": "阿里巴巴",
+  "sector": "电商+云计算+AI+国际商业",
+  "market": "hk",
+  "report_date": "",
+  "version": "v1",
+  "composite_score": 6.48,
+  "verdict": "Bullish",
+  "verdict_tone": "bullish",
+  "valuation_tag": "估值锚 131.9 元",
+  "one_liner": "看多方向 —— 阿里巴巴\"芯片+云+模型+应用\"AI全栈能力在中国互联网中最完整，云外部收入+40%加速增长，Forward PE仅14x处于行业下沿；但FY2026 FCF历史性转负(-RMB 46.6B)、Adj. EBITA margin从17.5%暴跌至7.5%，AI投入回报需FY2027-FY2028验证。",
+  "metrics": [
+    {
+      "label": "综合评分",
+      "value": "6.48/10",
+      "tone": "neutral"
+    },
+    {
+      "label": "期望收益",
+      "value": "-4.39%",
+      "tone": "neutral"
+    },
+    {
+      "label": "估值锚",
+      "value": "131.9元",
+      "tone": "neutral"
+    }
+  ],
+  "expected_return_short": "-4.39%",
+  "badges": [
+    {
+      "label": "Bullish 6.48/10",
+      "variant": "amber"
+    },
+    {
+      "label": "估值锚 131.9 元",
+      "variant": "amber"
+    }
+  ]
+}
