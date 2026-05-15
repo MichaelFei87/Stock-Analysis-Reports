@@ -1,0 +1,43 @@
+{
+  "slug": "GOOGL_Google",
+  "ticker": "GOOGL",
+  "name": "Alphabet Inc.",
+  "name_cn": "Google",
+  "sector": "Internet Content & Information",
+  "market": "us",
+  "report_date": "",
+  "version": "v1",
+  "composite_score": 7.7,
+  "verdict": "Bullish",
+  "verdict_tone": "bullish",
+  "valuation_tag": "估值锚 190.0 元",
+  "one_liner": "看多方向 —— Alphabet 四重复合护城河（搜索数据飞轮+YouTube 网络效应+TPU 技术壁垒+$281B PP&E 规模壁垒）在 3-5 年内仍可持续，Cloud +63% 加速增长 + backlog $460B+ 验证 AI 货币化逻辑，当前 $170 较 DCF 锚 $190 折让 12%，但 capex 军备竞赛（$175-185B/年）与反垄断双线诉讼构成重大不确定性。",
+  "metrics": [
+    {
+      "label": "综合评分",
+      "value": "7.7/10",
+      "tone": "neutral"
+    },
+    {
+      "label": "期望收益",
+      "value": "+12.1%",
+      "tone": "positive"
+    },
+    {
+      "label": "估值锚",
+      "value": "190.0元",
+      "tone": "neutral"
+    }
+  ],
+  "expected_return_short": "+12.1%",
+  "badges": [
+    {
+      "label": "Bullish 7.7/10",
+      "variant": "amber"
+    },
+    {
+      "label": "估值锚 190.0 元",
+      "variant": "amber"
+    }
+  ]
+}
