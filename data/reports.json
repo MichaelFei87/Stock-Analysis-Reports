@@ -130,6 +130,49 @@
           "variant": "amber"
         }
       ]
+    },
+    {
+      "slug": "MSFT_微软",
+      "ticker": "MSFT",
+      "name": "Microsoft Corporation",
+      "name_cn": "微软",
+      "sector": "Software - Infrastructure",
+      "market": "us",
+      "report_date": "",
+      "version": "v1",
+      "composite_score": 8.55,
+      "verdict": "Bullish",
+      "verdict_tone": "bullish",
+      "valuation_tag": "估值锚 331.0 元",
+      "one_liner": "看多方向 —— 微软拥有科技行业最深厚的 7 层复合护城河（网络效应+转换成本+规模经济+品牌+数据壁垒+生态系统+OpenAI 独家 AI 权利），FY2025 收入 $281.7B / 营业利润率 45.6% / Azure +34% 增速在 $3T 体量科技公司中独一档；3/3 定性框架均判定看多，但当前 $405.21 较 DCF 锚溢价 22%，属\"优质资产合理偏贵\"，需等待 CapEx 效率拐点或股价回落至 $330-$360 区间再重仓。",
+      "metrics": [
+        {
+          "label": "综合评分",
+          "value": "8.55/10",
+          "tone": "neutral"
+        },
+        {
+          "label": "期望收益",
+          "value": "-16.6%",
+          "tone": "negative"
+        },
+        {
+          "label": "估值锚",
+          "value": "331.0元",
+          "tone": "neutral"
+        }
+      ],
+      "expected_return_short": "-16.6%",
+      "badges": [
+        {
+          "label": "Bullish 8.55/10",
+          "variant": "amber"
+        },
+        {
+          "label": "估值锚 331.0 元",
+          "variant": "amber"
+        }
+      ]
     }
   ]
 }

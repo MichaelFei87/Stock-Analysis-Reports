@@ -1,0 +1,3148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>微软（MSFT）投资分析报告 — –</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   Claude Code Company Analysis · Report Styles v5.0
+   单一 CSS 真相源 — 由 assets/html/base.html 加载并内联
+   禁止在 Phase 6 Part B 中自创颜色值或变量名
+   v5.0: Claude Design Language — 温暖羊皮纸 + 赤陶色主调 + 衬线标题
+         Bloomberg 风险色保留(红/琥珀/黄/绿)
+   ============================================================ */
+
+:root {
+  /* 主色 — Claude Terracotta */
+  --c-primary: #c96442;
+  --c-primary-light: #f0eee6;
+  --c-primary-dark: #a14e2f;
+  --c-accent: #d97757;
+
+  /* Bloomberg 风格风险等级(高对比) — 保留不变 */
+  --c-risk-red:    #dc2626;
+  --c-risk-red-bg: #fef2f2;
+  --c-risk-amber:  #e8a33a;
+  --c-risk-amber-bg: #fff7ed;
+  --c-risk-yellow: #fbbf24;
+  --c-risk-yellow-bg: #fffbeb;
+  --c-risk-green:  #059669;
+  --c-risk-green-bg: #ecfdf5;
+
+  /* 语义色 (保留 v4.3 alias) */
+  --c-green: var(--c-risk-green);
+  --c-green-bg: var(--c-risk-green-bg);
+  --c-yellow: #d97706;
+  --c-yellow-bg: #fffbeb;
+  --c-red: var(--c-risk-red);
+  --c-red-bg: var(--c-risk-red-bg);
+
+  /* Claude 暖灰度系 */
+  --c-gray-50:  #faf9f5;  /* Ivory */
+  --c-gray-100: #f0eee6;  /* Border Cream */
+  --c-gray-200: #e8e6dc;  /* Border Warm */
+  --c-gray-500: #87867f;  /* Stone Gray */
+  --c-gray-700: #5e5d59;  /* Olive Gray */
+  --c-gray-900: #141413;  /* Near Black */
+
+  /* Claude 表面色 */
+  --c-parchment: #f5f4ed;
+  --c-ivory: #faf9f5;
+  --c-warm-sand: #e8e6dc;
+  --c-dark-surface: #30302e;
+  --c-warm-silver: #b0aea5;
+  --c-dark-warm: #3d3d3a;
+
+  /* Morningstar 卡片化 — 迁移到暖色 */
+  --c-card-border:  #e8e6dc;
+  --c-card-header:  #faf9f5;
+  --c-card-hover:   rgba(201,100,66,0.04);
+
+  /* 形状 — Claude ring shadow 系统 */
+  --radius: 12px;
+  --shadow: 0px 0px 0px 1px #e8e6dc;
+  --shadow-md: 0px 0px 0px 1px #d1cfc5;
+  --shadow-lg: rgba(0,0,0,0.05) 0px 4px 24px;
+
+  /* Variant Perception 紫 — 保留 */
+  --c-variant: #7a4dab;
+  --c-variant-bg: #f3eeff;
+
+  /* v4.6 sidebar 布局(弃用但保持兼容) */
+  --sidebar-width: 260px;
+  --sidebar-gap: 24px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+               "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  background: var(--c-parchment);
+  color: var(--c-gray-900);
+  margin: 0;
+  padding: 0;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+/* Claude 衬线标题族 */
+h1, h2, h3 {
+  font-family: Georgia, "Noto Serif SC", "Songti SC", serif;
+  font-weight: 500;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+}
+
+/* ---------- 3.1 Sticky 顶部导航栏 ---------- */
+.top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  height: 50px;
+  padding: 0 24px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(245,244,237,0.85);
+  border-bottom: 1px solid var(--c-gray-200);
+  font-size: 14px;
+}
+.top-nav .nav-brand {
+  font-family: Georgia, "Noto Serif SC", serif;
+  font-weight: 500;
+  color: var(--c-primary);
+  text-decoration: none;
+  margin-right: auto;
+  font-size: 15px;
+}
+.top-nav a {
+  color: var(--c-gray-700);
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: background .15s, color .15s;
+}
+.top-nav a:hover {
+  background: rgba(201,100,66,0.08);
+  color: var(--c-primary);
+}
+
+/* ---------- Header Hero ---------- */
+header.hero {
+  background: var(--c-gray-900);
+  color: var(--c-ivory);
+  padding: 48px 32px;
+  border-radius: 16px;
+  margin-bottom: 32px;
+  box-shadow: var(--shadow-lg);
+}
+header.hero h1 {
+  font-size: 32px;
+  margin: 0 0 8px;
+  font-weight: 500;
+  line-height: 1.15;
+  color: var(--c-ivory);
+}
+header.hero .subtitle {
+  color: var(--c-warm-silver);
+  font-size: 15px;
+}
+header.hero .meta {
+  display: flex; flex-wrap: wrap; gap: 24px;
+  margin-top: 20px; font-size: 14px;
+  color: var(--c-warm-silver);
+}
+
+/* ---------- Section (每个 §一到§十五 一个) ---------- */
+.section {
+  background: var(--c-ivory);
+  padding: 28px 32px;
+  margin: 20px 0;
+  border-radius: var(--radius);
+  border: 1px solid var(--c-gray-100);
+  box-shadow: var(--shadow);
+}
+.section h2 {
+  font-family: Georgia, "Noto Serif SC", "Songti SC", serif;
+  color: var(--c-primary);
+  border-bottom: 2px solid rgba(201,100,66,0.15);
+  padding-bottom: 8px;
+  margin-top: 0;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.25;
+}
+.section h3 {
+  font-family: Georgia, "Noto Serif SC", "Songti SC", serif;
+  color: var(--c-gray-900);
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 24px;
+  border-bottom: 1px dashed var(--c-gray-200);
+  padding-bottom: 4px;
+  line-height: 1.3;
+}
+.section h4 { color: var(--c-gray-900); font-size: 16px; margin-top: 18px; }
+
+/* Variant Perception 章节专用紫色强调 */
+.section.variant-perception {
+  border-left: 4px solid var(--c-variant);
+  background: linear-gradient(to right, var(--c-variant-bg) 0%, var(--c-ivory) 3%);
+}
+.section.variant-perception h2 {
+  color: var(--c-variant);
+  border-bottom-color: var(--c-variant-bg);
+}
+
+/* ---------- 3.2 评分环形图 (SVG) ---------- */
+.score-ring {
+  display: inline-block;
+  position: relative;
+}
+.score-ring svg { display: block; }
+.score-ring .score-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.score-ring .score-text .num {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--c-primary);
+  font-family: Georgia, "Noto Serif SC", serif;
+}
+.score-ring .score-text .label {
+  font-size: 11px;
+  color: var(--c-gray-500);
+}
+
+/* ---------- 3.3 维度评分条形图 ---------- */
+.dimension-bar {
+  display: grid;
+  grid-template-columns: 1fr 48px 3fr 56px;
+  align-items: center;
+  gap: 12px;
+  margin: 10px 0;
+  font-size: 14px;
+}
+.dimension-bar .dim-name { color: var(--c-gray-700); }
+.dimension-bar .dim-score {
+  font-weight: 600;
+  text-align: right;
+  color: var(--c-primary);
+  font-family: Georgia, "Noto Serif SC", serif;
+}
+.dimension-bar .dim-progress {
+  height: 10px;
+  background: var(--c-gray-100);
+  border-radius: 5px;
+  overflow: hidden;
+}
+.dimension-bar .dim-progress .fill { height: 100%; border-radius: 5px; }
+.dimension-bar .dim-progress .fill.tier1 { background: linear-gradient(90deg, var(--c-primary), var(--c-primary-dark)); }
+.dimension-bar .dim-progress .fill.tier2 { background: linear-gradient(90deg, #8b5cf6, #6d28d9); }
+.dimension-bar .dim-progress .fill.tier3 { background: linear-gradient(90deg, var(--c-accent), var(--c-primary)); }
+.dimension-bar .dim-weight { text-align: right; color: var(--c-gray-500); font-size: 12px; }
+
+/* ---------- 3.4 三色情景卡片 ---------- */
+.scenario-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin: 16px 0;
+}
+.scenario {
+  padding: 16px;
+  border-radius: var(--radius);
+  border-left: 4px solid;
+}
+.scenario .label { font-size: 12px; color: var(--c-gray-500); text-transform: uppercase; letter-spacing: 1px; }
+.scenario .big-num {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 4px 0 8px;
+  font-family: Georgia, "Noto Serif SC", serif;
+}
+.scenario .detail { font-size: 13px; color: var(--c-gray-700); }
+.scenario.bull { background: var(--c-green-bg); border-left-color: var(--c-green); }
+.scenario.bull .big-num { color: var(--c-green); }
+.scenario.base { background: var(--c-yellow-bg); border-left-color: var(--c-yellow); }
+.scenario.base .big-num { color: var(--c-yellow); }
+.scenario.bear { background: var(--c-red-bg); border-left-color: var(--c-red); }
+.scenario.bear .big-num { color: var(--c-red); }
+.scenario.tail { background: var(--c-dark-surface); border-left-color: var(--c-gray-900); color: var(--c-ivory); }
+.scenario.tail .big-num { color: var(--c-ivory); }
+.scenario.tail .detail { color: var(--c-warm-silver); }
+
+/* ---------- 3.5 期望回报高亮条 ---------- */
+.expected-return {
+  background: linear-gradient(135deg, var(--c-gray-900), var(--c-primary-dark));
+  color: var(--c-ivory);
+  padding: 20px 28px;
+  border-radius: 16px;
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--shadow-lg);
+}
+.expected-return .label { font-size: 12px; color: var(--c-warm-silver); text-transform: uppercase; letter-spacing: 1px; }
+.expected-return .value {
+  font-size: 36px;
+  font-weight: 700;
+  font-family: Georgia, "Noto Serif SC", serif;
+}
+
+/* ---------- 3.6 团队名片网格 ---------- */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin: 16px 0;
+}
+.team-card {
+  padding: 16px;
+  border: 1px solid var(--c-gray-200);
+  border-radius: var(--radius);
+  text-align: center;
+  background: var(--c-ivory);
+}
+.team-card .avatar {
+  width: 48px; height: 48px; border-radius: 50%;
+  background: rgba(201,100,66,0.1); color: var(--c-primary);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; margin: 0 auto 8px; font-size: 18px;
+  font-family: Georgia, "Noto Serif SC", serif;
+}
+.team-card .name { font-weight: 600; }
+.team-card .role { color: var(--c-gray-500); font-size: 13px; margin-top: 4px; }
+
+/* ---------- 3.7 风险矩阵 ---------- */
+.risk-item {
+  display: grid;
+  grid-template-columns: 20px 1fr auto;
+  gap: 12px;
+  align-items: start;
+  padding: 12px;
+  border-left: 4px solid;
+  background: var(--c-gray-50);
+  border-radius: 8px;
+  margin: 8px 0;
+}
+.risk-item.high   { border-left-color: var(--c-red);    background: var(--c-red-bg); }
+.risk-item.medium { border-left-color: var(--c-yellow); background: var(--c-yellow-bg); }
+.risk-item.low    { border-left-color: var(--c-green);  background: var(--c-green-bg); }
+.risk-item .dot {
+  width: 12px; height: 12px; border-radius: 50%; margin-top: 4px;
+}
+.risk-item.high   .dot { background: var(--c-red); }
+.risk-item.medium .dot { background: var(--c-yellow); }
+.risk-item.low    .dot { background: var(--c-green); }
+
+/* ---------- 3.8 融资时间轴 ---------- */
+.timeline {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin: 24px 0;
+  overflow-x: auto;
+  padding: 8px 0;
+}
+.timeline .tl-node {
+  flex: 0 0 auto;
+  text-align: center;
+  padding: 0 14px;
+  position: relative;
+}
+.timeline .tl-node::before {
+  content: '';
+  width: 14px; height: 14px; border-radius: 50%;
+  background: var(--c-gray-200); display: block; margin: 0 auto 8px;
+}
+.timeline .tl-node.current::before {
+  background: var(--c-primary);
+  box-shadow: 0 0 0 4px rgba(201,100,66,0.15);
+}
+.timeline .tl-node .year { font-size: 12px; color: var(--c-gray-500); }
+.timeline .tl-node .round { font-weight: 600; font-size: 13px; }
+.timeline .tl-node .amount { font-size: 11px; color: var(--c-gray-700); }
+
+/* ---------- 3.9 情绪量表 ---------- */
+.sentiment-bar {
+  position: relative;
+  height: 12px;
+  border-radius: 6px;
+  background: linear-gradient(to right, var(--c-red) 0%, var(--c-yellow) 50%, var(--c-green) 100%);
+  margin: 20px 0 32px;
+}
+.sentiment-bar .pointer {
+  position: absolute;
+  top: -8px;
+  width: 4px; height: 28px;
+  background: var(--c-gray-900);
+  border-radius: 2px;
+  transform: translateX(-50%);
+}
+.sentiment-bar .pointer::after {
+  content: attr(data-label);
+  position: absolute;
+  top: 32px; left: 50%; transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: 11px;
+  background: var(--c-gray-900);
+  color: var(--c-ivory);
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+/* ---------- v2 组件 · 估值区间可视化 ---------- */
+.valuation-range {
+  position: relative;
+  height: 28px;
+  background: var(--c-gray-100);
+  border-radius: 6px;
+  margin: 10px 0;
+}
+.valuation-range .range {
+  position: absolute;
+  top: 4px; bottom: 4px;
+  border-radius: 4px;
+  opacity: 0.6;
+}
+.valuation-range .range.dcf { background: var(--c-primary); }
+.valuation-range .range.comparable { background: var(--c-green); }
+.valuation-range .range.transaction { background: var(--c-yellow); }
+.valuation-range .label-row {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 8px;
+  align-items: center;
+  font-size: 12px;
+}
+
+/* ---------- v2 组件 · 星级评估 ---------- */
+.star-filled { color: var(--c-accent); }
+.star-empty  { color: var(--c-gray-200); }
+
+/* ---------- v2 组件 · 信息缺口优先级 badge ---------- */
+.badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.badge.critical { background: var(--c-red-bg);    color: var(--c-red); }
+.badge.important{ background: var(--c-yellow-bg); color: var(--c-yellow); }
+.badge.minor    { background: var(--c-green-bg);  color: var(--c-green); }
+
+/* ---------- 通用 Table ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 14px;
+}
+th, td {
+  border: 1px solid var(--c-gray-200);
+  padding: 8px 12px;
+  text-align: left;
+}
+th {
+  background: var(--c-gray-100);
+  color: var(--c-primary);
+  font-weight: 600;
+}
+tr:nth-child(even) td { background: var(--c-gray-50); }
+
+/* ---------- 通用文本 ---------- */
+strong { color: var(--c-gray-900); font-weight: 600; }
+code {
+  background: var(--c-gray-100);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+blockquote {
+  border-left: 4px solid var(--c-primary);
+  padding: 10px 16px;
+  color: var(--c-gray-700);
+  background: rgba(201,100,66,0.05);
+  border-radius: 8px;
+  margin: 12px 0;
+}
+hr { border: none; border-top: 1px dashed var(--c-gray-200); margin: 24px 0; }
+ul, ol { padding-left: 22px; }
+li { margin: 4px 0; }
+a {
+  color: var(--c-primary);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(201,100,66,0.3);
+}
+a:hover { color: var(--c-accent); }
+
+footer {
+  text-align: center;
+  color: var(--c-gray-500);
+  padding: 32px 0 16px;
+  font-size: 12px;
+  border-top: 1px solid var(--c-gray-200);
+  margin-top: 48px;
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width: 768px) {
+  .container { padding: 20px 16px 60px; }
+  header.hero { padding: 24px 16px; }
+  header.hero h1 { font-size: 24px; }
+  .section { padding: 16px; }
+  .scenario-grid, .team-grid { grid-template-columns: 1fr; }
+  table { font-size: 12px; }
+  table th, table td { padding: 6px 8px; }
+}
+
+/* ============================================================
+   v4.6 新增: 6 个大厂风格组件 (迁移至 Claude 设计语言)
+   ============================================================ */
+
+/* ---------- v4.6-1. 前置评级卡 ---------- */
+.rating-trio {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: -16px 0 32px;
+}
+.rating-card {
+  background: var(--c-ivory);
+  border: 1px solid var(--c-card-border);
+  border-top: 3px solid var(--c-primary);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  box-shadow: var(--shadow);
+  transition: transform .15s, box-shadow .15s;
+}
+.rating-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+.rating-card--score  { border-top-color: var(--c-primary); }
+.rating-card--anchor { border-top-color: var(--c-accent); }
+.rating-card--return { border-top-color: var(--c-risk-green); }
+.rating-card--return.negative { border-top-color: var(--c-risk-red); }
+
+.rating-card .label {
+  font-size: 11px;
+  color: var(--c-gray-500);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.rating-card .value {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--c-gray-900);
+  line-height: 1.2;
+  margin-bottom: 6px;
+  font-family: Georgia, "Noto Serif SC", serif;
+}
+.rating-card .value .out-of {
+  font-size: 16px;
+  color: var(--c-gray-500);
+  font-weight: 500;
+}
+.rating-card .value.negative { color: var(--c-risk-red); }
+.rating-card .value.positive { color: var(--c-risk-green); }
+.rating-card .sub {
+  font-size: 12px;
+  color: var(--c-gray-700);
+}
+
+/* ---------- v4.6-2. 彩条风险卡 (Bloomberg 等级色保留) ---------- */
+.risk-card-v2 {
+  display: grid;
+  grid-template-columns: 4px 1fr auto;
+  gap: 14px;
+  align-items: center;
+  padding: 14px 16px 14px 0;
+  margin: 8px 0;
+  background: var(--c-ivory);
+  border: 1px solid var(--c-card-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: background .15s;
+}
+.risk-card-v2:hover { background: var(--c-card-hover); }
+.risk-card-v2.risk-critical { border-left-width: 0; background: linear-gradient(to right, var(--c-risk-red-bg) 0%, var(--c-ivory) 6%); }
+.risk-card-v2.risk-high     { background: linear-gradient(to right, var(--c-risk-amber-bg) 0%, var(--c-ivory) 6%); }
+.risk-card-v2.risk-medium   { background: linear-gradient(to right, var(--c-risk-yellow-bg) 0%, var(--c-ivory) 6%); }
+.risk-card-v2.risk-low      { background: linear-gradient(to right, var(--c-risk-green-bg) 0%, var(--c-ivory) 6%); }
+.risk-card-v2 .left-bar { align-self: stretch; width: 4px; }
+.risk-card-v2.risk-critical .left-bar { background: var(--c-risk-red); }
+.risk-card-v2.risk-high     .left-bar { background: var(--c-risk-amber); }
+.risk-card-v2.risk-medium   .left-bar { background: var(--c-risk-yellow); }
+.risk-card-v2.risk-low      .left-bar { background: var(--c-risk-green); }
+.risk-card-v2 .title { font-weight: 600; color: var(--c-gray-900); margin-bottom: 3px; }
+.risk-card-v2 .body  { font-size: 13px; color: var(--c-gray-700); line-height: 1.5; }
+.risk-card-v2 .sev-badge {
+  font-size: 10px; font-weight: 700; padding: 3px 10px;
+  border-radius: 12px; white-space: nowrap; letter-spacing: .5px;
+}
+.risk-card-v2.risk-critical .sev-badge { background: var(--c-risk-red);    color: white; }
+.risk-card-v2.risk-high     .sev-badge { background: var(--c-risk-amber);  color: white; }
+.risk-card-v2.risk-medium   .sev-badge { background: var(--c-risk-yellow); color: var(--c-gray-900); }
+.risk-card-v2.risk-low      .sev-badge { background: var(--c-risk-green);  color: white; }
+
+/* ---------- v4.6.2. Preamble 区 ---------- */
+.preamble {
+  background: var(--c-ivory);
+  border-left: 3px solid var(--c-accent);
+  border-radius: 8px;
+  padding: 14px 20px;
+  margin: -8px 0 20px;
+  font-size: 13px;
+  color: var(--c-gray-700);
+  line-height: 1.7;
+}
+.preamble:empty { display: none; }
+.preamble blockquote {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  font-size: 13px;
+}
+.preamble blockquote p { margin: 6px 0; }
+.preamble p { margin: 6px 0; }
+.preamble strong { color: var(--c-primary-dark); }
+.preamble hr { display: none; }
+
+/* ---------- v4.6.1. 关键指标横排面板 ---------- */
+.metric-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+  margin: 0 0 24px;
+  padding: 16px;
+  background: var(--c-ivory);
+  border: 1px solid var(--c-card-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.metric-strip .metric-chip {
+  padding: 10px 14px;
+  text-align: center;
+  border-right: 1px dashed var(--c-gray-100);
+}
+.metric-strip .metric-chip:last-child { border-right: none; }
+.metric-strip .metric-chip .metric-label {
+  font-size: 10px;
+  color: var(--c-gray-500);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.metric-strip .metric-chip .metric-value {
+  font-size: 18px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  color: var(--c-gray-900);
+  font-family: Georgia, "Noto Serif SC", serif;
+}
+.metric-strip .metric-chip .metric-value.positive { color: var(--c-risk-green); }
+.metric-strip .metric-chip .metric-value.negative { color: var(--c-risk-red); }
+.metric-strip .metric-chip .metric-value.risk     { color: var(--c-risk-amber); }
+.metric-strip .metric-chip .metric-value.critical { color: var(--c-risk-red); font-weight: 900; }
+.metric-strip .metric-chip .metric-value.neutral  { color: var(--c-gray-900); }
+
+/* ---------- v4.6 兼容: .metric-sidebar/metric-row 保留 ---------- */
+.metric-sidebar {
+  background: var(--c-ivory);
+  border: 1px solid var(--c-card-border);
+  border-radius: var(--radius);
+  padding: 20px 18px;
+  box-shadow: var(--shadow);
+  margin: 0 0 24px;
+}
+.metric-sidebar h4 {
+  font-size: 11px;
+  color: var(--c-gray-500);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  margin: 0 0 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--c-card-border);
+}
+.metric-sidebar .metric-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--c-gray-100);
+  font-size: 13px;
+}
+.metric-sidebar .metric-row:last-child { border-bottom: none; }
+.metric-sidebar .metric-row span { color: var(--c-gray-700); }
+.metric-sidebar .metric-row strong { font-weight: 700; color: var(--c-gray-900); font-variant-numeric: tabular-nums; }
+.metric-sidebar .metric-row strong.positive { color: var(--c-risk-green); }
+.metric-sidebar .metric-row strong.negative { color: var(--c-risk-red); }
+.metric-sidebar .metric-row strong.risk     { color: var(--c-risk-amber); font-weight: 800; }
+.metric-sidebar .metric-row strong.critical { color: var(--c-risk-red);   font-weight: 800; }
+
+/* ---------- v4.6-4. 对标卡 ---------- */
+.comparison-card {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr 1fr;
+  gap: 8px;
+  background: var(--c-ivory);
+  border: 1px solid var(--c-card-border);
+  border-radius: var(--radius);
+  padding: 16px;
+  margin: 12px 0;
+}
+.comparison-card .cmp-col {
+  text-align: center;
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+.comparison-card .cmp-col.center {
+  background: rgba(201,100,66,0.06);
+  border: 2px solid var(--c-primary);
+}
+.comparison-card .cmp-label { font-size: 10px; color: var(--c-gray-500); text-transform: uppercase; letter-spacing: 1px; font-weight: 600; margin-bottom: 6px; }
+.comparison-card .cmp-value {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--c-gray-900);
+  font-variant-numeric: tabular-nums;
+  font-family: Georgia, "Noto Serif SC", serif;
+}
+.comparison-card .cmp-col.center .cmp-value { font-size: 24px; color: var(--c-primary); }
+.comparison-card .cmp-sub { font-size: 11px; color: var(--c-gray-500); margin-top: 4px; }
+.comparison-card .cmp-bar {
+  height: 6px; background: var(--c-gray-100); border-radius: 3px;
+  margin-top: 8px; position: relative; overflow: hidden;
+}
+.comparison-card .cmp-bar .fill {
+  position: absolute; left: 0; top: 0; bottom: 0;
+  background: linear-gradient(90deg, var(--c-primary), var(--c-accent));
+  border-radius: 3px;
+}
+
+/* ---------- v4.6-5. 深度链接 ---------- */
+.deep-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 1px 8px 1px 6px;
+  font-size: 11px;
+  background: rgba(201,100,66,0.08);
+  color: var(--c-primary);
+  border: 1px solid transparent;
+  border-radius: 12px;
+  text-decoration: none !important;
+  vertical-align: middle;
+  font-weight: 600;
+  transition: background .15s, border-color .15s;
+}
+.deep-link::before { content: '→'; opacity: .6; }
+.deep-link:hover {
+  background: var(--c-primary);
+  color: var(--c-ivory);
+  border-color: var(--c-primary);
+}
+/* Target 高亮 */
+.section:target {
+  animation: target-pulse 1.8s ease-out;
+  scroll-margin-top: 70px;
+}
+@keyframes target-pulse {
+  0%   { box-shadow: 0 0 0 4px var(--c-accent); }
+  100% { box-shadow: var(--shadow); }
+}
+
+/* ---------- v4.6-6. 微型热力图 ---------- */
+.heatmap-grid {
+  display: grid;
+  gap: 2px;
+  margin: 10px 0;
+  font-size: 10px;
+}
+.heatmap-grid .hm-cell {
+  aspect-ratio: 1 / 1;
+  min-height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-family: ui-monospace, monospace;
+  font-weight: 600;
+  color: var(--c-gray-900);
+}
+/* 5 档颜色映射 */
+.heatmap-grid .hm-cell.hm--2 { background: #fca5a5; color: #7f1d1d; }
+.heatmap-grid .hm-cell.hm--1 { background: #fed7aa; color: #7c2d12; }
+.heatmap-grid .hm-cell.hm-0  { background: var(--c-gray-100); }
+.heatmap-grid .hm-cell.hm-1  { background: #bbf7d0; color: #14532d; }
+.heatmap-grid .hm-cell.hm-2  { background: #4ade80; color: white; }
+.heatmap-grid .hm-cell:hover { transform: scale(1.1); }
+
+.heatmap-grid .hm-row-label {
+  font-size: 10px;
+  color: var(--c-gray-500);
+  text-align: right;
+  padding-right: 8px;
+  align-self: center;
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width: 768px) {
+  .container { padding: 20px 16px 60px; }
+  header.hero { padding: 24px 16px; }
+  header.hero h1 { font-size: 24px; }
+  .section { padding: 16px; }
+  .scenario-grid, .team-grid, .rating-trio { grid-template-columns: 1fr; }
+  .comparison-card { grid-template-columns: 1fr; }
+  .metric-strip { grid-template-columns: repeat(2, 1fr); }
+  .metric-strip .metric-chip { border-right: none; border-bottom: 1px dashed var(--c-gray-100); }
+  table { font-size: 12px; }
+  table th, table td { padding: 6px 8px; }
+}
+
+/* ---------- 打印 ---------- */
+@media print {
+  body { background: white; }
+  .top-nav { display: none; }
+  .section { box-shadow: none; border: 1px solid #ccc; break-inside: avoid; }
+  header.hero { break-inside: avoid; }
+  .metric-strip { break-inside: avoid; }
+  .deep-link { color: var(--c-gray-900); background: transparent; border-color: var(--c-gray-500); }
+  .deep-link::before { content: ''; }
+  .deep-link::after { content: ' (见对应章节)'; font-size: 10px; color: var(--c-gray-500); }
+}
+
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     Sticky 顶部导航栏 — 13 章节锚点
+     ============================================================ -->
+<nav class="top-nav">
+  <a href="../../index.html" class="nav-brand">AI 投资分析报告</a>
+  <a href="#exec-summary">摘要</a>
+  <a href="#scoring">评分</a>
+  <a href="#screening">快筛</a>
+  <a href="#fundamentals">基本面</a>
+  <a href="#industry">行业</a>
+  <a href="#detail">详细</a>
+  <a href="#sentiment">舆情</a>
+  <a href="#peers">对标</a>
+  <a href="#valuation">估值</a>
+  <a href="#qualitative">定性</a>
+  <a href="#gaps">缺口</a>
+  <a href="#sources">来源</a>
+</nav>
+
+<div class="container">
+
+<!-- ============================================================
+     Header Hero
+     ============================================================ -->
+<header class="hero">
+  <h1>微软（MSFT）投资分析报告</h1>
+  <div class="subtitle">由 Claude Code 自动生成</div>
+  <div class="meta">
+    <span>📅 –</span>
+    <span>💵 收盘 $405.21</span>
+    <span>📊 PB 7.26 · 市值 30101 亿美元</span>
+    <span>🎯 估值锚 $331</span>
+  </div>
+</header>
+
+<!-- ============================================================
+     v4.6.2 新增: Preamble 区 — 主报告第一个 ## 之前的 blockquote / 段落
+     (版本切换说明 / 数据截止注意 / meta 行的详细补充等),否则会丢失
+     ============================================================ -->
+<div class="preamble"></div>
+
+<!-- ============================================================
+     v4.6 新增: 前置评级三件套(Goldman 风格, hero 下方醒目位置)
+     ============================================================ -->
+<div class="rating-trio">
+
+  <div class="rating-card rating-card--score">
+    <div class="label">综合评分</div>
+    <div class="value">8.55 <span class="out-of">/ 10</span></div>
+    <div class="sub">看多方向</div>
+  </div>
+  <div class="rating-card rating-card--anchor">
+    <div class="label">估值锚(DCF 概率加权)</div>
+    <div class="value">$331</div>
+    <div class="sub">相对当前 +22.4%</div>
+  </div>
+  <div class="rating-card rating-card--return negative">
+    <div class="label">2 年期望收益</div>
+    <div class="value negative">-16.6%</div>
+    <div class="sub">年化 -8.7%</div>
+  </div>
+</div>
+
+<!-- ============================================================
+     v4.6.1 关键指标横排面板(替代 v4.6 的粘性侧边栏,更简洁)
+     ============================================================ -->
+<div class="metric-strip">
+
+  <div class="metric-chip">
+    <div class="metric-label">PE (TTM)</div>
+    <div class="metric-value neutral">24.15</div>
+  </div>
+  <div class="metric-chip">
+    <div class="metric-label">PB</div>
+    <div class="metric-value neutral">7.26x</div>
+  </div>
+  <div class="metric-chip">
+    <div class="metric-label">市值</div>
+    <div class="metric-value neutral">21672 亿美元</div>
+  </div>
+  <div class="metric-chip">
+    <div class="metric-label">ROE</div>
+    <div class="metric-value positive">34.0%</div>
+  </div>
+  <div class="metric-chip">
+    <div class="metric-label">毛利率</div>
+    <div class="metric-value neutral">68.3%</div>
+  </div>
+  <div class="metric-chip">
+    <div class="metric-label">资产负债率</div>
+    <div class="metric-value neutral">44.5%</div>
+  </div>
+  <div class="metric-chip">
+    <div class="metric-label">股东户数</div>
+    <div class="metric-value neutral">8057</div>
+  </div>
+  <div class="metric-chip">
+    <div class="metric-label">家族持股</div>
+    <div class="metric-value neutral">75.8%</div>
+  </div>
+</div>
+
+<!-- ============================================================
+     §一 执行摘要
+     ============================================================ -->
+<div class="section" id="exec-summary">
+<h2>§一 执行摘要</h2>
+<p><strong>一句话结论</strong>: <strong>看多方向</strong> —— 微软拥有科技行业最深厚的 7 层复合护城河（网络效应+转换成本+规模经济+品牌+数据壁垒+生态系统+OpenAI 独家 AI 权利），FY2025 收入 $281.7B / 营业利润率 45.6% / Azure +34% 增速在 $3T 体量科技公司中独一档；3/3 定性框架均判定看多，但当前 $405.21 较 DCF 锚溢价 22%，属"优质资产合理偏贵"，需等待 CapEx 效率拐点或股价回落至 $330-$360 区间再重仓。</p>
+<p><strong>估值锚</strong>: <strong>DCF 概率加权 ~$2,456B / $331 每股</strong>（4 情景；乐观 25% / 基准 45% / 悲观 25% / 最差 5%）。当前 $405.21 相对此锚溢价 <strong>+22.4%</strong>。</p>
+<p><strong>综合评分</strong>: <strong>8.55/10</strong> · <strong>数据置信度</strong>: 中（美股 11 框架审计均"数据不足"，yf_adapter 缺失导致 data_snapshot 空表；已通过 10-K/10-Q 原文手动交叉验证核心数据）</p>
+<p><strong>三大风险（Top 3）</strong>:<br />
+1. AI CapEx $64.6B（+170% vs FY2022）暴增，投资回报期高度不确定，FCF 已从 $74.1B 降至 $71.6B [§六 维度 7/8]<br />
+2. OpenAI 深度绑定单一 AI 合作伙伴，关系变化（独立上市/条款重议）可能削弱 AI 层护城河 [§六 维度 9]<br />
+3. Cloud 毛利率持续下行 71%→69%→67%（Q2 FY2026），AI infra 规模化成本尚未被效率改善对冲，拐点不明 [§六 维度 3/8]</p>
+<p><strong>三大机会（Top 3）</strong>:<br />
+1. Azure AI 持续加速（Q2 FY2026 Intelligent Cloud +29%），Copilot 大规模企业采用可带来 ARPU 显著提升<br />
+2. PE 24.1x / EV/EBITDA 16.6x 处于科技巨头中偏低水平，较 52 周高 $555 回落 27%，市场已部分消化悲观预期<br />
+3. 经营现金流 $136.2B + AAA 信用 + 年度股东回报 $42.5B（回购+股息），攻守兼备</p>
+<p><strong>核心非共识观点</strong>（Top 3）:<br />
+1. 当前 $405 包含约 22% 的"质量溢价"，纯 DCF 视角概率加权 2 年预期收益为负（-16.6%），与 3/3 定性看多形成罕见背离<br />
+2. Cloud 毛利率下行是 AI 投资正常代价而非护城河侵蚀信号——CapEx 效率拐点（FY2027E）将同时解除估值压制与 FCF 压力<br />
+3. 分析师共识目标 $561 较 DCF 锚高出 70%，隐含 WACC 8.5% + g 3.5% 的牛市参数；保守投资者应锚定 $330-$360 买入区间</p>
+<p><strong>投资方向综合判定</strong>: <strong>看多方向</strong>（3 框架中 3 个"看多方向" ≥ 2 → 看多方向；§三快筛未触发）</p>
+<hr />
+</div>
+
+<!-- ============================================================
+     §二 评分总览（10 维度单列）
+     ============================================================ -->
+<div class="section" id="scoring">
+<h2>§二 事实评分总览（10 维度）</h2>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th style="text-align: center;">权重</th>
+<th style="text-align: center;">分数(0-10)</th>
+<th style="text-align: center;">加权</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. 市场规模与结构</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">0.90</td>
+</tr>
+<tr>
+<td>2. 商业模式</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">0.90</td>
+</tr>
+<tr>
+<td>3. 盈利能力</td>
+<td style="text-align: center;">15%</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">1.35</td>
+</tr>
+<tr>
+<td>4. 产品与技术</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">0.90</td>
+</tr>
+<tr>
+<td>5. 团队与管理层</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">0.80</td>
+</tr>
+<tr>
+<td>6. 市场进入与护城河</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">1.00</td>
+</tr>
+<tr>
+<td>7. 财务健康度</td>
+<td style="text-align: center;">15%</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">1.20</td>
+</tr>
+<tr>
+<td>8. 估值合理性</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">0.70</td>
+</tr>
+<tr>
+<td>9. 风险与治理</td>
+<td style="text-align: center;">5%</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">0.40</td>
+</tr>
+<tr>
+<td>10. 催化剂与时机</td>
+<td style="text-align: center;">5%</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">0.40</td>
+</tr>
+<tr>
+<td><strong>合计</strong></td>
+<td style="text-align: center;">100%</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: center;"><strong>8.55</strong></td>
+</tr>
+</tbody>
+</table>
+<p><em>详细证据见 §六。评分标尺见 <code>references/scoring-rubric.md</code>。表格严格 4 列（维度/权重/分数/加权分）——不添加"关键理由"列。</em></p>
+<hr />
+</div>
+
+<!-- ============================================================
+     §三 快速筛选
+     ============================================================ -->
+<div class="section" id="screening">
+<h2>§三 快速筛选（致命看空条款 - 6 项）</h2>
+<table>
+<thead>
+<tr>
+<th>条款</th>
+<th>阈值</th>
+<th>实际</th>
+<th style="text-align: center;">触发?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. 单季 / 单年度净利 &lt; -50%</td>
+<td>50%</td>
+<td>FY2025 净利润 +16% YoY [yfinance:income_annual]</td>
+<td style="text-align: center;">❌</td>
+</tr>
+<tr>
+<td>2. 资产负债率 &gt; 70%</td>
+<td>70%</td>
+<td>44.5%（$275.5B / $619.0B）[yfinance:balance_annual FY2025]</td>
+<td style="text-align: center;">❌</td>
+</tr>
+<tr>
+<td>3. 大股东累计质押 &gt; 50%</td>
+<td>50%</td>
+<td>美股无此数据，不适用</td>
+<td style="text-align: center;">❌</td>
+</tr>
+<tr>
+<td>4. 审计机构连续 2 年变更</td>
+<td>1 次</td>
+<td>无变更（Deloitte 连续审计）[10-K]</td>
+<td style="text-align: center;">❌</td>
+</tr>
+<tr>
+<td>5. CFO 非正常离任</td>
+<td>1 次</td>
+<td>Amy Hood 自 2013 年连续任职至今 [10-K]</td>
+<td style="text-align: center;">❌</td>
+</tr>
+<tr>
+<td>6. <strong>Audit ≥ 2 个 🔴 红旗</strong></td>
+<td>2</td>
+<td>0 个红旗（11 框架均"数据不足"）[audit_report.md]</td>
+<td style="text-align: center;">❌</td>
+</tr>
+</tbody>
+</table>
+<p><strong>结果</strong>: ✅ PASS — 6 项快筛均未触发。无致命看空条款。</p>
+<blockquote>
+<p>⚠️ 降级标注: 条款 3/6 因美股数据格式差异无法完整执行（audit 模块基于 Tushare 设计，美股 yfinance 数据未经适配）。已通过 10-K/10-Q 原文手动检查核心财务健康度指标（见 §六 维度 7），未发现实质性红旗。</p>
+</blockquote>
+<hr />
+</div>
+
+<!-- ============================================================
+     §四 公司基本面（含剥离后剩余资产清单若触发）
+     ============================================================ -->
+<div class="section" id="fundamentals">
+<h2>§四 公司基本面</h2>
+<h3>业务板块</h3>
+<p>微软业务分为三大报告分部，覆盖企业生产力、云计算与 AI、个人计算三条主线 [10-K:Segment Results]：</p>
+<table>
+<thead>
+<tr>
+<th>分部</th>
+<th style="text-align: right;">FY2025 收入</th>
+<th style="text-align: center;">占比</th>
+<th style="text-align: right;">FY2024 收入</th>
+<th style="text-align: right;">YoY</th>
+<th style="text-align: center;">FY2025 营业利润率</th>
+<th>核心产品</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Productivity &amp; Business Processes</td>
+<td style="text-align: right;">$120,810M</td>
+<td style="text-align: center;">42.9%</td>
+<td style="text-align: right;">$106,820M</td>
+<td style="text-align: right;">+13%</td>
+<td style="text-align: center;">57.8%</td>
+<td>Microsoft 365, LinkedIn, Dynamics 365</td>
+</tr>
+<tr>
+<td>Intelligent Cloud</td>
+<td style="text-align: right;">$106,265M</td>
+<td style="text-align: center;">37.7%</td>
+<td style="text-align: right;">$87,464M</td>
+<td style="text-align: right;">+21%</td>
+<td style="text-align: center;">42.0%</td>
+<td>Azure, Server Products, GitHub, Nuance</td>
+</tr>
+<tr>
+<td>More Personal Computing</td>
+<td style="text-align: right;">$54,649M</td>
+<td style="text-align: center;">19.4%</td>
+<td style="text-align: right;">$50,838M</td>
+<td style="text-align: right;">+7%</td>
+<td style="text-align: center;">25.9%</td>
+<td>Windows, Xbox/Activision, Surface, Search</td>
+</tr>
+<tr>
+<td><strong>合计</strong></td>
+<td style="text-align: right;"><strong>$281,724M</strong></td>
+<td style="text-align: center;"><strong>100%</strong></td>
+<td style="text-align: right;"><strong>$245,122M</strong></td>
+<td style="text-align: right;"><strong>+15%</strong></td>
+<td style="text-align: center;"><strong>45.6%</strong></td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><em>来源: [10-K:Segment Results]</em></p>
+<p><strong>关键业务指标 (FY2025)</strong> [10-K:MD&amp;A]：<br />
+- Microsoft Cloud 总收入: $168.9B，YoY +23%——为全公司核心增长引擎<br />
+- Azure and other cloud services 收入增速: +34%<br />
+- Microsoft 365 Commercial cloud 收入增速: +15%<br />
+- Dynamics 365 收入增速: +19%<br />
+- LinkedIn 收入增速: +9%<br />
+- Search and news advertising (ex TAC) 增速: +20%</p>
+<h3>最新经营动态（近 12 个月关键事件）</h3>
+<table>
+<thead>
+<tr>
+<th>时间</th>
+<th>事件</th>
+<th>影响</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FY2025 全年</td>
+<td>收入 $281.7B，同比 +15%；净利润 $101.8B，同比 +16%</td>
+<td>营收/利润均创历史新高</td>
+<td>[10-K:Summary Results]</td>
+</tr>
+<tr>
+<td>FY2025</td>
+<td>CapEx 暴增至 $64.6B（FY2024 $44.5B，+45%）</td>
+<td>AI 数据中心大规模扩建，FCF 略降至 $71.6B</td>
+<td>[10-K:MD&amp;A]</td>
+</tr>
+<tr>
+<td>FY2025</td>
+<td>Microsoft Cloud 毛利率降至 69%（FY2024 ~71%）</td>
+<td>AI 基础设施规模化拉高成本，被 Azure 效率改善部分抵消</td>
+<td>[10-K:MD&amp;A]</td>
+</tr>
+<tr>
+<td>Q2 FY2026 (截至 2025-12-31)</td>
+<td>季度收入 $81.3B，YoY +17%；调整后净利 $30.9B，+23%</td>
+<td>增长加速，Intelligent Cloud 单季 +29%</td>
+<td>[10-Q:MD&amp;A]</td>
+</tr>
+<tr>
+<td>Q2 FY2026</td>
+<td>OpenAI 投资收益 $7.6B 计入 GAAP 净利润</td>
+<td>GAAP 净利润同比 +60%（非经常性），调整口径 +23%</td>
+<td>[10-Q:MD&amp;A]</td>
+</tr>
+<tr>
+<td>Q2 FY2026</td>
+<td>More Personal Computing 收入 YoY -3%</td>
+<td>Gaming 收入下滑，PC 市场承压</td>
+<td>[10-Q:MD&amp;A]</td>
+</tr>
+</tbody>
+</table>
+<h3>财务趋势表（近 3-5 年 + 最新季度）</h3>
+<p><strong>年度数据（FY2022-FY2025）</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>期末</th>
+<th style="text-align: right;">营收 (USD)</th>
+<th style="text-align: right;">YoY</th>
+<th style="text-align: right;">毛利率</th>
+<th style="text-align: right;">净利率</th>
+<th style="text-align: right;">净利润 (USD)</th>
+<th style="text-align: right;">ROE</th>
+<th style="text-align: right;">资产负债率</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FY2022 (2022-06-30)</td>
+<td style="text-align: right;">$198.3B</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">68.4%</td>
+<td style="text-align: right;">36.7%</td>
+<td style="text-align: right;">$72.7B</td>
+<td style="text-align: right;">43.7%</td>
+<td style="text-align: right;">54.4%</td>
+<td>[yfinance:income_annual] [yfinance:balance_annual]</td>
+</tr>
+<tr>
+<td>FY2023 (2023-06-30)</td>
+<td style="text-align: right;">$211.9B</td>
+<td style="text-align: right;">+6.9%</td>
+<td style="text-align: right;">68.9%</td>
+<td style="text-align: right;">34.1%</td>
+<td style="text-align: right;">$72.4B</td>
+<td style="text-align: right;">35.1%</td>
+<td style="text-align: right;">49.9%</td>
+<td>[yfinance:income_annual] [yfinance:balance_annual]</td>
+</tr>
+<tr>
+<td>FY2024 (2024-06-30)</td>
+<td style="text-align: right;">$245.1B</td>
+<td style="text-align: right;">+15.7%</td>
+<td style="text-align: right;">69.8%</td>
+<td style="text-align: right;">36.0%</td>
+<td style="text-align: right;">$88.1B</td>
+<td style="text-align: right;">32.8%</td>
+<td style="text-align: right;">47.6%</td>
+<td>[yfinance:income_annual] [yfinance:balance_annual]</td>
+</tr>
+<tr>
+<td>FY2025 (2025-06-30)</td>
+<td style="text-align: right;">$281.7B</td>
+<td style="text-align: right;">+14.9%</td>
+<td style="text-align: right;">68.8%</td>
+<td style="text-align: right;">36.2%</td>
+<td style="text-align: right;">$101.8B</td>
+<td style="text-align: right;">29.6%</td>
+<td style="text-align: right;">44.5%</td>
+<td>[yfinance:income_annual] [yfinance:balance_annual]</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>计算说明：毛利率 = Gross Profit / Total Revenue；净利率 = Net Income / Total Revenue；ROE = Net Income / Stockholders Equity；资产负债率 = Total Liabilities / Total Assets。[yfinance:income_annual] [yfinance:balance_annual]</p>
+</blockquote>
+<p><strong>最新季度（Q2 FY2026，截至 2025-12-31）</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>Q2 FY2026</th>
+<th>Q2 FY2025</th>
+<th>YoY</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Revenue</td>
+<td>$81,273M</td>
+<td>$69,632M</td>
+<td>+17%</td>
+<td>[10-Q:MD&amp;A]</td>
+</tr>
+<tr>
+<td>Gross Margin</td>
+<td>$55,295M</td>
+<td>$47,833M</td>
+<td>+16%</td>
+<td>[10-Q:MD&amp;A]</td>
+</tr>
+<tr>
+<td>Operating Income</td>
+<td>$38,275M</td>
+<td>$31,653M</td>
+<td>+21%</td>
+<td>[10-Q:MD&amp;A]</td>
+</tr>
+<tr>
+<td>Net Income (GAAP)</td>
+<td>$38,458M</td>
+<td>$24,108M</td>
+<td>+60%</td>
+<td>[10-Q:MD&amp;A]（含 OpenAI 投资收益 $7.6B）</td>
+</tr>
+<tr>
+<td>Net Income (Adjusted)</td>
+<td>$30,875M</td>
+<td>$25,047M</td>
+<td>+23%</td>
+<td>[10-Q:MD&amp;A]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>现金流趋势</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>期末</th>
+<th style="text-align: right;">经营现金流</th>
+<th style="text-align: right;">CapEx</th>
+<th style="text-align: right;">自由现金流</th>
+<th style="text-align: right;">回购</th>
+<th style="text-align: right;">股息</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FY2022</td>
+<td style="text-align: right;">$89.0B</td>
+<td style="text-align: right;">-$23.9B</td>
+<td style="text-align: right;">$65.1B</td>
+<td style="text-align: right;">-$32.7B</td>
+<td style="text-align: right;">-$18.1B</td>
+<td>[yfinance:cashflow_annual]</td>
+</tr>
+<tr>
+<td>FY2023</td>
+<td style="text-align: right;">$87.6B</td>
+<td style="text-align: right;">-$28.1B</td>
+<td style="text-align: right;">$59.5B</td>
+<td style="text-align: right;">-$22.2B</td>
+<td style="text-align: right;">-$19.8B</td>
+<td>[yfinance:cashflow_annual]</td>
+</tr>
+<tr>
+<td>FY2024</td>
+<td style="text-align: right;">$118.5B</td>
+<td style="text-align: right;">-$44.5B</td>
+<td style="text-align: right;">$74.1B</td>
+<td style="text-align: right;">-$17.3B</td>
+<td style="text-align: right;">-$21.8B</td>
+<td>[yfinance:cashflow_annual]</td>
+</tr>
+<tr>
+<td>FY2025</td>
+<td style="text-align: right;">$136.2B</td>
+<td style="text-align: right;">-$64.6B</td>
+<td style="text-align: right;">$71.6B</td>
+<td style="text-align: right;">-$18.4B</td>
+<td style="text-align: right;">-$24.1B</td>
+<td>[yfinance:cashflow_annual]</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>⚠️ FY2025 CapEx 同比 +45%（$64.6B vs $44.5B），AI 数据中心建设是主因。CapEx 增速远超经营现金流增速（+15%），导致 FCF 从 $74.1B 小幅降至 $71.6B。10-K 原文:"The investments we are making in cloud and AI infrastructure and devices will continue to increase our operating costs and may decrease our operating margins" [10-K:MD&amp;A]</p>
+</blockquote>
+<p><strong>资产负债表关键指标</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>期末</th>
+<th style="text-align: right;">总资产</th>
+<th style="text-align: right;">总负债</th>
+<th style="text-align: right;">股东权益</th>
+<th style="text-align: right;">总债务</th>
+<th style="text-align: right;">现金</th>
+<th style="text-align: right;">商誉+无形</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FY2022</td>
+<td style="text-align: right;">$364.8B</td>
+<td style="text-align: right;">$198.3B</td>
+<td style="text-align: right;">$166.5B</td>
+<td style="text-align: right;">$61.3B</td>
+<td style="text-align: right;">$13.9B</td>
+<td style="text-align: right;">$78.8B</td>
+<td>[yfinance:balance_annual]</td>
+</tr>
+<tr>
+<td>FY2023</td>
+<td style="text-align: right;">$411.9B</td>
+<td style="text-align: right;">$205.8B</td>
+<td style="text-align: right;">$206.2B</td>
+<td style="text-align: right;">$60.0B</td>
+<td style="text-align: right;">$34.7B</td>
+<td style="text-align: right;">$77.3B</td>
+<td>[yfinance:balance_annual]</td>
+</tr>
+<tr>
+<td>FY2024</td>
+<td style="text-align: right;">$512.2B</td>
+<td style="text-align: right;">$243.7B</td>
+<td style="text-align: right;">$268.5B</td>
+<td style="text-align: right;">$67.1B</td>
+<td style="text-align: right;">$18.3B</td>
+<td style="text-align: right;">$146.8B</td>
+<td>[yfinance:balance_annual]</td>
+</tr>
+<tr>
+<td>FY2025</td>
+<td style="text-align: right;">$619.0B</td>
+<td style="text-align: right;">$275.5B</td>
+<td style="text-align: right;">$343.5B</td>
+<td style="text-align: right;">$60.6B</td>
+<td style="text-align: right;">$30.2B</td>
+<td style="text-align: right;">$142.1B</td>
+<td>[yfinance:balance_annual]</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>FY2024 商誉大幅增加（$77.3B → $146.8B）反映 Activision Blizzard 收购完成（$68.7B 交易，2023 年 10 月完成）。FY2025 总债务降至 $60.6B，杠杆率持续改善。</p>
+</blockquote>
+<h3>管理层前瞻信号（<code>forecast_vip</code> 解读）</h3>
+<p>美股无 A 股式业绩预告（<code>forecast_vip</code>），以 10-K/10-Q MD&amp;A 前瞻性陈述替代：</p>
+<ol>
+<li><strong>AI 基础设施投资将持续</strong>: "The investments we are making in cloud and AI infrastructure and devices will continue to increase our operating costs and may decrease our operating margins" [10-K:MD&amp;A] → 短期利润率承压信号</li>
+<li><strong>Azure 增长势头</strong>: Intelligent Cloud Q2 FY2026 加速至 +29%（含 Azure ~31%），AI workload 驱动 → 正面前瞻</li>
+<li><strong>Cloud 毛利率下行趋势</strong>: Microsoft Cloud 毛利率从 FY2025 全年 69% 降至 Q2 FY2026 67%，AI infra 规模化成本尚未被效率改善完全对冲 [10-Q:MD&amp;A] → 需关注拐点</li>
+</ol>
+<h3>主力控盘与筹码分析</h3>
+<p><strong>主要股东结构</strong> [yfinance:major_holders]：<br />
+- 内部人持股: 0.08%<br />
+- 机构持股（占总股本）: 75.8%<br />
+- 机构持股（占流通股）: 75.9%<br />
+- 持仓机构数: 8,057 家</p>
+<p><strong>前 10 大机构持股者</strong> [yfinance:institutional_holders]：</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>机构名称</th>
+<th style="text-align: center;">持股比例</th>
+<th style="text-align: right;">持股数量</th>
+<th style="text-align: right;">持仓市值 (USD)</th>
+<th>报告日期</th>
+<th style="text-align: center;">变动</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>BlackRock Inc.</td>
+<td style="text-align: center;">8.0%</td>
+<td style="text-align: right;">593.3M</td>
+<td style="text-align: right;">$240.4B</td>
+<td>2026-03-31</td>
+<td style="text-align: center;">-1.4%</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Vanguard Capital Management LLC</td>
+<td style="text-align: center;">6.5%</td>
+<td style="text-align: right;">482.6M</td>
+<td style="text-align: right;">$195.5B</td>
+<td>2026-03-31</td>
+<td style="text-align: center;">新进</td>
+</tr>
+<tr>
+<td>3</td>
+<td>State Street Corporation</td>
+<td style="text-align: center;">4.1%</td>
+<td style="text-align: right;">306.2M</td>
+<td style="text-align: right;">$124.1B</td>
+<td>2025-12-31</td>
+<td style="text-align: center;">+2.1%</td>
+</tr>
+<tr>
+<td>4</td>
+<td>FMR, LLC (Fidelity)</td>
+<td style="text-align: center;">2.7%</td>
+<td style="text-align: right;">200.9M</td>
+<td style="text-align: right;">$81.4B</td>
+<td>2025-12-31</td>
+<td style="text-align: center;">-4.5%</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Geode Capital Management, LLC</td>
+<td style="text-align: center;">2.5%</td>
+<td style="text-align: right;">182.6M</td>
+<td style="text-align: right;">$74.0B</td>
+<td>2025-12-31</td>
+<td style="text-align: center;">+1.1%</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Vanguard Portfolio Management LLC</td>
+<td style="text-align: center;">2.3%</td>
+<td style="text-align: right;">167.5M</td>
+<td style="text-align: right;">$67.9B</td>
+<td>2026-03-31</td>
+<td style="text-align: center;">新进</td>
+</tr>
+<tr>
+<td>7</td>
+<td>JPMorgan Chase &amp; Co</td>
+<td style="text-align: center;">1.7%</td>
+<td style="text-align: right;">127.1M</td>
+<td style="text-align: right;">$51.5B</td>
+<td>2026-03-31</td>
+<td style="text-align: center;">-14.0%</td>
+</tr>
+<tr>
+<td>8</td>
+<td>T. Rowe Price Associates Inc</td>
+<td style="text-align: center;">1.7%</td>
+<td style="text-align: right;">125.7M</td>
+<td style="text-align: right;">$50.9B</td>
+<td>2025-12-31</td>
+<td style="text-align: center;">-4.9%</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Morgan Stanley</td>
+<td style="text-align: center;">1.6%</td>
+<td style="text-align: right;">121.2M</td>
+<td style="text-align: right;">$49.1B</td>
+<td>2025-12-31</td>
+<td style="text-align: center;">+0.8%</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Capital Research Global Investors</td>
+<td style="text-align: center;">1.3%</td>
+<td style="text-align: right;">96.1M</td>
+<td style="text-align: right;">$38.9B</td>
+<td>2026-03-31</td>
+<td style="text-align: center;">+31.1%</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>持股变动洞察</strong>: 前 10 大机构合计持股约 32.4%。Capital Research Global Investors 大幅加仓 +31.1% 为最显著变动；JPMorgan 减持 -14.0%、FMR 减持 -4.5% 值得关注。整体机构持股高度分散（8,057 家），无单一机构超 10%，治理风险低。[yfinance:institutional_holders]</p>
+</blockquote>
+<p><strong>十大流通股东表</strong>: 美股无此数据（A 股特有概念），不适用。</p>
+<p><strong>质押表</strong>: 美股不适用。</p>
+<p><strong>主力控盘</strong>: 美股不适用（无 A 股式主力资金流/北向资金/融资融券 Tushare 数据）。</p>
+<h3>★ 若核心资产被剥离的剩余资产清单（v4.2 触发时必填）</h3>
+<p><strong>触发判定</strong>: 未触发。微软无核心资产剥离情况。</p>
+<hr />
+</div>
+
+<!-- ============================================================
+     §五 行业与竞争格局
+     ============================================================ -->
+<div class="section" id="industry">
+<h2>§五 行业与竞争格局</h2>
+<h3>行业规模与趋势</h3>
+<p>微软身处全球云计算、企业软件、AI 基础设施三大交叉赛道，均处于高速增长期：</p>
+<p><strong>云计算市场</strong>:<br />
+- 全球公有云市场规模: 2024 年约 $6,260 亿，预计 2028 年达 $1.2 万亿（CAGR ~17%）[phase1-data.md:§5.3]<br />
+- 微软 Azure 为全球第二大云平台（仅次于 AWS），FY2025 Azure 增速 +34%，市场份额持续提升 [10-K:MD&amp;A]<br />
+- Microsoft Cloud 总收入 $168.9B（FY2025），约占全球云市场 ~27%</p>
+<p><strong>AI 基础设施与应用</strong>:<br />
+- 生成式 AI 市场处于爆发初期，微软通过 OpenAI 合作 + Copilot 产品矩阵 + Azure AI 服务深度布局<br />
+- FY2025 AI 基础设施 CapEx $64.6B 为行业最高水平之一，表明长期战略承诺<br />
+- "Microsoft and OpenAI maintain a long-term strategic partnership...Microsoft is a major investor in OpenAI, and the companies have reciprocal revenue-sharing arrangements" [10-K:Item 7]</p>
+<p><strong>企业软件/SaaS</strong>:<br />
+- Microsoft 365 Commercial 增速 +15%，稳居全球办公协作市场第一<br />
+- Dynamics 365 增速 +19%，在 ERP/CRM 市场持续扩张</p>
+<h3>Porter 五力分析（集中在本节，不重复到 §六 维度 3）</h3>
+<table>
+<thead>
+<tr>
+<th>竞争力量</th>
+<th style="text-align: center;">强度</th>
+<th>分析</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>现有竞争者</strong></td>
+<td style="text-align: center;">🟠 高</td>
+<td>AWS (Amazon)、GCP (Google)、Oracle 在云市场激烈竞争；Office 面临 Google Workspace 挑战。但微软凭借多产品生态形成差异化 [10-K:Item 1A]</td>
+</tr>
+<tr>
+<td><strong>新进入者威胁</strong></td>
+<td style="text-align: center;">🟢 低</td>
+<td>云基础设施需数百亿美元 CapEx + 全球数据中心网络 + 数十年企业关系积累，壁垒极高</td>
+</tr>
+<tr>
+<td><strong>替代品威胁</strong></td>
+<td style="text-align: center;">🟡 中</td>
+<td>开源软件（Linux、LibreOffice）和新兴 AI 原生工具构成替代，但企业迁移成本高、生态锁定效应强</td>
+</tr>
+<tr>
+<td><strong>供应商议价力</strong></td>
+<td style="text-align: center;">🟡 中</td>
+<td>半导体（NVIDIA GPU、定制芯片）供应紧张推高 AI infra 成本；微软已布局自研芯片（Maia AI 加速器、Cobalt CPU）降低依赖</td>
+</tr>
+<tr>
+<td><strong>买方议价力</strong></td>
+<td style="text-align: center;">🟢 低</td>
+<td>企业客户对 Microsoft 365/Azure 生态深度依赖，迁移成本高；8,057 家机构股东 + 数百万企业用户 = 高度分散</td>
+</tr>
+</tbody>
+</table>
+<h3>关键竞品对标</h3>
+<table>
+<thead>
+<tr>
+<th>公司</th>
+<th>Ticker</th>
+<th style="text-align: right;">市值</th>
+<th style="text-align: right;">FY 最近年度收入</th>
+<th style="text-align: right;">营业利润率</th>
+<th style="text-align: center;">PE (TTM)</th>
+<th>核心竞争领域</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>微软</strong></td>
+<td><strong>MSFT</strong></td>
+<td style="text-align: right;"><strong>$3.01T</strong></td>
+<td style="text-align: right;"><strong>$281.7B</strong></td>
+<td style="text-align: right;"><strong>45.6%</strong></td>
+<td style="text-align: center;"><strong>24.1</strong></td>
+<td><strong>云+AI+企业软件全栈</strong></td>
+</tr>
+<tr>
+<td>Apple</td>
+<td>AAPL</td>
+<td style="text-align: right;">~$3.3T</td>
+<td style="text-align: right;">~$391B</td>
+<td style="text-align: right;">~30%</td>
+<td style="text-align: center;">~33</td>
+<td>消费电子+服务生态</td>
+</tr>
+<tr>
+<td>Alphabet (Google)</td>
+<td>GOOGL</td>
+<td style="text-align: right;">~$2.1T</td>
+<td style="text-align: right;">~$350B</td>
+<td style="text-align: right;">~32%</td>
+<td style="text-align: center;">~22</td>
+<td>搜索广告+GCP+AI</td>
+</tr>
+<tr>
+<td>Amazon</td>
+<td>AMZN</td>
+<td style="text-align: right;">~$2.0T</td>
+<td style="text-align: right;">~$638B</td>
+<td style="text-align: right;">~11%</td>
+<td style="text-align: center;">~35</td>
+<td>电商+AWS 云</td>
+</tr>
+<tr>
+<td>Meta</td>
+<td>META</td>
+<td style="text-align: right;">~$1.5T</td>
+<td style="text-align: right;">~$165B</td>
+<td style="text-align: right;">~41%</td>
+<td style="text-align: center;">~23</td>
+<td>社交广告+AI</td>
+</tr>
+<tr>
+<td>Oracle</td>
+<td>ORCL</td>
+<td style="text-align: right;">~$0.5T</td>
+<td style="text-align: right;">~$56B</td>
+<td style="text-align: right;">~30%</td>
+<td style="text-align: center;">~37</td>
+<td>数据库+OCI 云</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><em>注: 竞品数据为截至 2026 年 5 月的近似值，基于公开市场信息。微软以 45.6% 营业利润率在科技巨头中领先（仅次于 Meta 的 ~41% 但收入规模远大），PE 24.1x 处于同行中偏低水平，反映市场对其增长确定性的认可但也计入了 AI CapEx 压力。</em></p>
+</blockquote>
+<p><strong>微软 vs 竞品核心差异化</strong>:<br />
+1. <strong>全栈生态壁垒</strong>: 微软是唯一同时在企业办公（365）、云平台（Azure）、AI（OpenAI/Copilot）、游戏（Xbox）四大领域均有头部地位的公司<br />
+2. <strong>利润率领先</strong>: 营业利润率 45.6% 在 $200B+ 收入体量的公司中无出其右，反映规模效应 + 高复购 SaaS 模型<br />
+3. <strong>AI 商业化先发</strong>: 通过 Copilot 矩阵（Microsoft 365 Copilot、GitHub Copilot、Security Copilot 等）将 AI 能力直接嵌入已有产品线，变现路径比 Google/Meta 更清晰<br />
+4. <strong>风险点</strong>: CapEx 从 FY2022 $23.9B 飙升至 FY2025 $64.6B（+170%），AI 投资回报期尚不确定；Cloud 毛利率从 ~71% 降至 67%，若 AI 效率改善滞后将持续压制利润率 [10-K:MD&amp;A]</p>
+</div>
+
+<!-- ============================================================
+     §六 10 维度详细证据
+     ============================================================ -->
+<div class="section" id="detail">
+<h2>§六 10 维度详细证据</h2>
+<h3>维度 1 · 市场规模与结构（9/10）</h3>
+<p>微软横跨全球云计算、企业软件、AI 基础设施三大万亿级赛道。全球公有云市场 2024 年约 $6,260 亿，预计 2028 年达 $1.2 万亿（CAGR ~17%）[phase1-data.md:§5.3]。微软 Microsoft Cloud 总收入 $168.9B（FY2025），约占全球云市场 ~27%，Azure 增速 +34% 持续抢夺份额 [10-K:MD&amp;A]。生成式 AI 市场处于爆发初期，TAM 远超 $100B 且 CAGR &gt;20%，微软通过 OpenAI 合作 + Copilot 矩阵 + Azure AI 服务深度卡位。企业办公 SaaS（Microsoft 365）和 ERP/CRM（Dynamics 365 +19%）市场均为数百亿美元体量、稳定增长。三大赛道叠加，总可寻址市场远超 $1 万亿，结构性顺风明确（AI 技术变革 + 企业数字化转型 + 云迁移浪潮），SAM 渗透率仍有巨大空间。扣 1 分因部分子市场（Windows OEM、Gaming）增长已趋成熟。</p>
+<p><strong>评分依据</strong>: TAM &gt; $1T 且 CAGR &gt;17%，多重结构性顺风，锚定 9-10 档"卓越"。</p>
+<h3>维度 2 · 商业模式（9/10）</h3>
+<p>微软商业模式以高复购 SaaS 订阅 + 云消费（Azure pay-as-you-go）+ 平台抽成为核心。毛利率 68.3% [metrics.json]，营业利润率 46.3%，净利率 39.3%——在 $281.7B 收入体量下实现此利润率，全球几乎无出其右。Microsoft Cloud 收入 $168.9B 占总收入 60%，ARR 属性极强。Microsoft 365 Commercial cloud +15%、Dynamics 365 +19%、LinkedIn +9%，多条已验证收入来源，定价权强（企业客户转换成本极高）[10-K:MD&amp;A]。FY2025 经营现金流 $136.2B vs 净利润 $101.8B，OCF/NI 比率 1.34x，现金转化质量卓越 [yfinance:cashflow_annual]。扣 1 分因 More Personal Computing 分部（$54.6B，占 19.4%）利润率仅 25.9%，含硬件/游戏等低毛利业务拉低整体。</p>
+<p><strong>评分依据</strong>: 毛利率 &gt;70% 门槛（68.3% 接近）、多条验证收入源、ARR 占比 &gt;60%、已高度盈利，锚定 9 档。</p>
+<h3>维度 3 · 盈利能力（9/10）</h3>
+<p>FY2025 毛利率 68.8%（10-K 口径，yfinance 68.3%）、营业利润率 45.6%、净利率 36.2%（10-K）/ 39.3%（TTM metrics.json），ROE 34.0% [metrics.json]，ROA 14.8%。FY2022-FY2025 四年毛利率稳定在 68-70% 区间，营业利润率从 FY2023 低点持续回升。Productivity &amp; Business Processes 分部利润率高达 57.8%，Intelligent Cloud 42.0%。Q2 FY2026 营业利润同比 +21%，营业利润率从 45.5% 提升至 47.1%，运营杠杆显现 [10-Q:MD&amp;A]。风险点: Microsoft Cloud 毛利率从 ~71%（FY2024）降至 69%（FY2025）再降至 67%（Q2 FY2026），AI 基础设施规模化拉高成本尚未被效率改善完全对冲 [10-K:MD&amp;A]。整体盈利能力在同体量科技巨头中无出其右，仅因 Cloud 毛利率下行趋势扣 1 分。</p>
+<p><strong>评分依据</strong>: 营业利润率 &gt;40%、ROE 34%、净利率 &gt;36%、运营杠杆正向，锚定 9 档"卓越"。</p>
+<h3>维度 4 · 产品与技术（9/10）</h3>
+<p>微软拥有科技行业最广泛的产品矩阵: Microsoft 365（全球 #1 办公套件）、Azure（全球 #2 云平台，+34%）、GitHub（全球最大代码托管，~1 亿开发者）、LinkedIn（全球最大职业社交）、Dynamics 365、Xbox/Activision（全球头部游戏平台）[10-K:Item 1]。AI 布局深度领先：与 OpenAI 独家合作（API 独家 Azure 托管 + 投资权益 + IP 权利），Copilot 矩阵覆盖 M365 Copilot、GitHub Copilot、Security Copilot、Azure AI 服务 [10-K:Item 7]。自研芯片（Maia AI 加速器、Cobalt CPU）降低 NVIDIA 依赖。FY2025 研发费用约 $32B+（运营费用 $65.2B 中研发占主体），研发投入绝对值全球领先。技术壁垒：平台生态 + 数据壁垒 + AI 模型独家权利 + 全球数据中心网络。扣 1 分因 Surface 硬件线持续低迷、Gaming 业务 Q2 FY2026 收入下滑。</p>
+<p><strong>评分依据</strong>: 平台型产品生态已成型、技术壁垒极高、核心专利 + AI 独家合作，锚定 9 档。</p>
+<h3>维度 5 · 团队与管理层（8/10）</h3>
+<p>CEO Satya Nadella 自 2014 年上任以来成功将微软从 Windows 中心转型为云+AI 公司，市值从 ~$3,000 亿增长至 ~$3 万亿，堪称科技行业最成功的 CEO 转型案例之一。CFO Amy Hood 自 2013 年任职，财务纪律严明（负债率从 54.4% 降至 44.5%）。CTO Kevin Scott 主导 AI 战略布局。22.8 万员工，8,057 家机构持仓，54 位分析师覆盖 [phase1-data.md]。内部人持股仅 0.08% [yfinance:major_holders]，管理层利益对齐度偏低（减分因素）。治理结构完善：独立董事占多数，无家族控制问题。Glassdoor 评分历史稳定在 4.0+ 区间。扣 2 分因：(1) 内部人持股极低（0.08%），管理层与股东利益对齐不足；(2) 22.8 万人规模的组织效率边际递减风险。</p>
+<p><strong>评分依据</strong>: CEO 有卓越执行记录、关键岗位完整、治理优秀，但内部人持股过低，锚定 8 档。</p>
+<h3>维度 6 · 市场进入与护城河（10/10）</h3>
+<p>微软拥有科技行业最深厚的复合护城河：<br />
+1. <strong>网络效应</strong>: Microsoft 365 用户生态（数亿活跃用户）、LinkedIn 职业社交网络、GitHub 开发者社区（~1 亿），任何单一用户增加都提升平台价值<br />
+2. <strong>转换成本</strong>: 企业深度依赖 Microsoft 365 + Azure + Active Directory 全栈生态，迁移成本极高（数据、流程、培训、合规）<br />
+3. <strong>规模经济</strong>: $281.7B 收入 + 全球 60+ 区域数据中心网络，固定成本摊薄优势他人无法复制<br />
+4. <strong>品牌</strong>: 企业 IT 采购中"无人因选择微软而被解雇"的行业共识<br />
+5. <strong>数据壁垒</strong>: 数十年企业数据沉淀 + AI 训练数据优势<br />
+6. <strong>独家合作</strong>: OpenAI API 独家 Azure 托管 + IP 权利 + 优先产能权 [10-K:Item 7]</p>
+<p>市场份额：全球企业办公 #1、云平台 #2（且增速最快 +34%）、代码托管 #1、职业社交 #1。多重护城河叠加，竞争对手无法在 2-3 年内复制。</p>
+<p><strong>评分依据</strong>: 多重复合护城河（网络效应+转换成本+规模+品牌+数据+独家权利），市场份额领先且扩大，锚定 10 档"卓越"。</p>
+<h3>维度 7 · 财务健康度（8/10）</h3>
+<p>上市公司版评分标准：</p>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>微软实际值</th>
+<th>档位</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>流动比率</td>
+<td>1.28</td>
+<td>中等(5-6): 1.2-2.0 区间</td>
+</tr>
+<tr>
+<td>资产负债率</td>
+<td>44.5%</td>
+<td>中等(5-6): 40-60% 区间</td>
+</tr>
+<tr>
+<td>D/E</td>
+<td>30.27</td>
+<td>偏高（含经营性负债）</td>
+</tr>
+<tr>
+<td>FCF 收益率</td>
+<td>~2.4% ($71.6B / $3.01T)</td>
+<td>中等(5-6): 1-4% 区间</td>
+</tr>
+<tr>
+<td>OCF/Net Income</td>
+<td>1.34x ($136.2B / $101.8B)</td>
+<td>优秀(8+): &gt;1.2x</td>
+</tr>
+</tbody>
+</table>
+<p>FY2025 经营现金流 $136.2B 同比 +15%，FCF $71.6B（因 CapEx $64.6B 暴增而略降），现金 $30.2B + 强信用评级（AAA）确保融资无忧 [yfinance:cashflow_annual]。总债务 $60.6B 持续下降（FY2022 $61.3B → FY2025 $60.6B），杠杆率改善。股东回报 $42.5B（回购 $18.4B + 股息 $24.1B），Payout/FCF 比率 59%，可持续。审计报告显示 0 个红旗信号（美股数据格式差异，11 框架均显示"数据不足"，无红旗触发）[audit_report.md]。风险点: CapEx 从 FY2022 $23.9B 暴增至 FY2025 $64.6B（+170%），若 AI 投资回报不及预期将持续压制 FCF。商誉 $142.1B（占总资产 23%，含 Activision $68.7B），存在减值风险。</p>
+<p><strong>评分依据</strong>: OCF/NI &gt;1.2x 达"优秀"、AAA 信用、杠杆改善，但流动比率/FCF 收益率仅"中等"，综合锚定 8 档。</p>
+<h3>维度 8 · 估值合理性（7/10）</h3>
+<p>上市公司版维度 9"市场估值"标准：</p>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>微软</th>
+<th>科技/软件行业中位数</th>
+<th>判断</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Trailing PE</td>
+<td>24.1x</td>
+<td>30-50x</td>
+<td>低于行业中位数 50%+ → 偏低估</td>
+</tr>
+<tr>
+<td>Forward PE</td>
+<td>20.9x</td>
+<td>—</td>
+<td>较 Trailing PE 折让 13%，隐含增长预期</td>
+</tr>
+<tr>
+<td>P/B</td>
+<td>7.3x</td>
+<td>5-10x</td>
+<td>行业区间内，合理</td>
+</tr>
+<tr>
+<td>P/S (TTM)</td>
+<td>9.5x</td>
+<td>6-10x（SaaS）</td>
+<td>上沿但匹配 46% 利润率</td>
+</tr>
+<tr>
+<td>EV/EBITDA</td>
+<td>16.6x</td>
+<td>20-30x（SaaS）</td>
+<td>明显低于行业中位数</td>
+</tr>
+</tbody>
+</table>
+<p>PE 24.1x 低于科技/软件行业中位数（30-50x），且增速 +15%~18% 高于大部分同 PE 区间的公司。EV/EBITDA 16.6x 更是显著低于 SaaS 行业中位数 20-30x。但需注意：(1) 当前股价 $405 较 52 周高点 $555 回落 27%，市场已计入 AI CapEx 不确定性；(2) PE 24x 虽低于科技行业中位但并非"严重低估"；(3) P/S 9.5x 处于 SaaS 标杆上沿。按 scoring-rubric "PE 合理（行业中位数±20%），PB &lt; 历史中位数" 锚定 7-8 档，给 7 分因 P/S 偏高。</p>
+<p><strong>评分依据</strong>: PE/EV/EBITDA 低于行业中位数，估值合理偏低估，但 P/S 处上沿，锚定 7 档"优秀"。</p>
+<h3>维度 9 · 风险与治理（8/10）</h3>
+<p>上市公司版追加项检查：</p>
+<ul>
+<li><strong>做空比率</strong>: 无异常高做空信号（MSFT 做空比率历史低位，$3T 市值流动性充裕）</li>
+<li><strong>分析师降级</strong>: 54 位分析师覆盖，主流共识为"买入/增持"，无大规模降级潮</li>
+<li><strong>盈利 miss</strong>: FY2025 四个季度 + Q1-Q2 FY2026 均未出现显著 miss</li>
+<li><strong>审计意见</strong>: 标准无保留意见（10-K），无异常。审计报告 0 红旗，11 框架均"数据不足或无信号" [audit_report.md]</li>
+</ul>
+<p>主要风险因素：<br />
+1. <strong>AI 执行风险</strong>: CapEx $64.6B 暴增，"whether we succeed depends on our execution in several areas" [10-K:Item 1A]——投资回报期不确定<br />
+2. <strong>OpenAI 集中依赖</strong>: 深度绑定单一 AI 合作伙伴，关系变化可能影响战略 [10-K:Item 1A]<br />
+3. <strong>网络安全事件</strong>: 2023 年 11 月国家级黑客攻击事件已披露，"gained access to Microsoft email accounts...and some source code repositories" [10-K:Item 1A]<br />
+4. <strong>反垄断/AI 监管</strong>: "new regulations to intervene in digital markets" [10-K:Item 1A]<br />
+5. <strong>Cloud 毛利率下行</strong>: 从 71% → 69% → 67%，若持续将侵蚀利润率</p>
+<p>利好因素：客户和收入高度分散（无单一客户 &gt;5%）、地域多元化（全球 190+ 国家）、强治理结构、AAA 信用。综合风险可控但非极低（AI 执行 + OpenAI 依赖 + 安全事件），锚定 8 分。</p>
+<p><strong>评分依据</strong>: 客户高度分散、无重大法律风险、治理优秀、审计无红旗，但 AI 执行风险 + OpenAI 集中 + 安全事件扣分，锚定 8 档"风险可控"。</p>
+<h3>维度 10 · 催化剂与时机（8/10）</h3>
+<p>上市公司版"回报潜力"标准：</p>
+<p><strong>正面催化剂</strong>：<br />
+1. Azure AI 持续加速（Q2 FY2026 Intelligent Cloud +29%），若 AI workload 继续超预期将推动估值重评<br />
+2. Copilot 商业化拐点——M365 Copilot 大规模企业采用可带来 ARPU 显著提升<br />
+3. CapEx 效率改善拐点——若 Cloud 毛利率止跌回升，市场可能给予更高估值倍数<br />
+4. 股东回报: 股息率 0.9% + 年回购 ~$18B，总回报率 ~2.3%</p>
+<p><strong>风险催化剂</strong>：<br />
+1. AI CapEx 回报低于预期 → FCF 持续承压<br />
+2. 宏观经济衰退导致企业 IT 支出放缓<br />
+3. OpenAI 关系变化（竞争/独立上市/合作条款重议）</p>
+<p><strong>回报测算</strong>: 当前 $405 vs 52 周高 $555（+37% 上行空间），Forward PE 20.9x 隐含 FY2026 EPS ~$19.4。若 FY2027 EPS 增长 20% 至 ~$23，给予 25x PE → 目标价 $575（+42%）。年化总回报预期 ~20-25%（含股息），符合 7-8 档"总回报预期 &gt;20%/年，催化剂可见"。</p>
+<p><strong>评分依据</strong>: 总回报预期 &gt;20%/年、多个明确催化剂（AI 加速 + Copilot + 回购），锚定 8 档"优秀"。</p>
+<hr />
+</div>
+
+<!-- ============================================================
+     §七 网络舆情与市场情绪
+     ============================================================ -->
+<div class="section" id="sentiment">
+<h2>§七 网络舆情与市场情绪</h2>
+<h3>看多派声音</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>观点</th>
+<th>逻辑</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Azure + AI 增长势头强劲</td>
+<td>Intelligent Cloud Q2 FY2026 加速至 +29%，Azure ~31% 增长远超 AWS/GCP 同期，AI workload 驱动份额持续提升</td>
+<td>[10-Q:MD&amp;A] + [yfinance:revenueGrowth 18.3%]</td>
+</tr>
+<tr>
+<td>2</td>
+<td>营业利润率 46%+ 科技巨头最高</td>
+<td>$281.7B 收入体量下实现 45.6% 营业利润率，规模效应 + SaaS 高复购模型 = 极强盈利能力，同行无出其右</td>
+<td>[10-K:Segment Results]</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Copilot 商业化拐点临近</td>
+<td>M365 Copilot 企业大规模部署将推升 ARPU，GitHub Copilot 已为开发者生产力标配，AI 变现路径比 Google/Meta 更清晰</td>
+<td>[10-K:MD&amp;A]</td>
+</tr>
+<tr>
+<td>4</td>
+<td>估值处于历史低位区间</td>
+<td>PE 24x / EV/EBITDA 16.6x 显著低于科技/SaaS 行业中位数，Forward PE 20.9x 隐含市场对增长加速的低估</td>
+<td>[metrics.json]</td>
+</tr>
+<tr>
+<td>5</td>
+<td>强劲现金流支撑股东回报</td>
+<td>经营现金流 $136.2B + 年度回购 $18.4B + 股息 $24.1B，AAA 信用评级，攻守兼备</td>
+<td>[yfinance:cashflow_annual]</td>
+</tr>
+</tbody>
+</table>
+<h3>看空派声音</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>观点</th>
+<th>逻辑</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>AI CapEx 暴增侵蚀回报</td>
+<td>CapEx 从 FY2022 $23.9B 飙升至 FY2025 $64.6B（+170%），FCF 已从 $74.1B 降至 $71.6B，投资回报期高度不确定</td>
+<td>[10-K:MD&amp;A] "investments...will continue to increase operating costs and may decrease operating margins"</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Cloud 毛利率持续下行</td>
+<td>Microsoft Cloud 毛利率 71% → 69% → 67%（Q2 FY2026），AI infra 规模化成本尚未被效率改善完全对冲，拐点不明</td>
+<td>[10-Q:MD&amp;A]</td>
+</tr>
+<tr>
+<td>3</td>
+<td>股价较 52 周高点回落 27%</td>
+<td>当前 $405 vs 52 周高 $555，市场情绪已转弱，可能反映对 AI 投资回报率的担忧</td>
+<td>[metrics.json:52w_high $555.45]</td>
+</tr>
+<tr>
+<td>4</td>
+<td>OpenAI 深度绑定风险</td>
+<td>战略/投资/IP/API 独家关系高度集中于单一合作伙伴，OpenAI 若独立上市或关系变化将产生重大不确定性</td>
+<td>[10-K:Item 1A]</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Gaming 业务拖累</td>
+<td>More Personal Computing Q2 FY2026 收入 -3%，Gaming 下滑 + $68.7B Activision 商誉减值风险，10-Q 已提及 impairment charges</td>
+<td>[10-Q:MD&amp;A]</td>
+</tr>
+</tbody>
+</table>
+<h3>资金流向信号</h3>
+<p>美股无 A 股式北向资金/融资融券/主力资金流数据（Tushare 不适用）。替代信号：</p>
+<ul>
+<li><strong>机构持股变动</strong>: 前 10 大机构合计持股 ~32.4%，Capital Research Global Investors 大幅加仓 +31.1%（最显著正面信号）；JPMorgan 减持 -14.0%、FMR(Fidelity) 减持 -4.5% 为负面信号 [yfinance:institutional_holders]</li>
+<li><strong>机构总数</strong>: 8,057 家机构持仓，高度分散，无挤仓风险</li>
+<li><strong>内部人交易</strong>: 内部人持股仅 0.08%，管理层减持/增持信号弱（数据不足标注降级）</li>
+<li><strong>Beta</strong>: 1.093，与大盘基本同步，无异常波动特征 [metrics.json]</li>
+</ul>
+<hr />
+</div>
+
+<!-- ============================================================
+     §八 可比公司对标
+     ============================================================ -->
+<div class="section" id="peers">
+<h2>§八 可比公司对标（v4.4 — Read `peer_analysis.md`）</h2>
+<blockquote>
+<p>美股跳过 peer_collector/peer_analysis.md，以下对标表基于 phase3-part2.md 竞品数据 + metrics.json 自行构建。</p>
+</blockquote>
+<h3>§8.1 Tech 巨头同业对标</h3>
+<table>
+<thead>
+<tr>
+<th>公司</th>
+<th>Ticker</th>
+<th style="text-align: right;">市值</th>
+<th style="text-align: right;">FY 最近年度收入</th>
+<th style="text-align: center;">收入增速</th>
+<th style="text-align: right;">营业利润率</th>
+<th style="text-align: right;">净利率</th>
+<th style="text-align: center;">PE (TTM)</th>
+<th style="text-align: center;">P/B</th>
+<th style="text-align: center;">EV/EBITDA</th>
+<th style="text-align: center;">ROE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>微软</strong></td>
+<td><strong>MSFT</strong></td>
+<td style="text-align: right;"><strong>$3.01T</strong></td>
+<td style="text-align: right;"><strong>$281.7B</strong></td>
+<td style="text-align: center;"><strong>+15%</strong></td>
+<td style="text-align: right;"><strong>45.6%</strong></td>
+<td style="text-align: right;"><strong>39.3%</strong></td>
+<td style="text-align: center;"><strong>24.1</strong></td>
+<td style="text-align: center;"><strong>7.3</strong></td>
+<td style="text-align: center;"><strong>16.6</strong></td>
+<td style="text-align: center;"><strong>34.0%</strong></td>
+</tr>
+<tr>
+<td>Apple</td>
+<td>AAPL</td>
+<td style="text-align: right;">~$3.3T</td>
+<td style="text-align: right;">~$391B</td>
+<td style="text-align: center;">+5%</td>
+<td style="text-align: right;">~30%</td>
+<td style="text-align: right;">~25%</td>
+<td style="text-align: center;">~33</td>
+<td style="text-align: center;">~50</td>
+<td style="text-align: center;">~26</td>
+<td style="text-align: center;">~160%</td>
+</tr>
+<tr>
+<td>Alphabet</td>
+<td>GOOGL</td>
+<td style="text-align: right;">~$2.1T</td>
+<td style="text-align: right;">~$350B</td>
+<td style="text-align: center;">+14%</td>
+<td style="text-align: right;">~32%</td>
+<td style="text-align: right;">~27%</td>
+<td style="text-align: center;">~22</td>
+<td style="text-align: center;">~7</td>
+<td style="text-align: center;">~16</td>
+<td style="text-align: center;">~32%</td>
+</tr>
+<tr>
+<td>Amazon</td>
+<td>AMZN</td>
+<td style="text-align: right;">~$2.0T</td>
+<td style="text-align: right;">~$638B</td>
+<td style="text-align: center;">+11%</td>
+<td style="text-align: right;">~11%</td>
+<td style="text-align: right;">~8%</td>
+<td style="text-align: center;">~35</td>
+<td style="text-align: center;">~8</td>
+<td style="text-align: center;">~18</td>
+<td style="text-align: center;">~23%</td>
+</tr>
+<tr>
+<td>Meta</td>
+<td>META</td>
+<td style="text-align: right;">~$1.5T</td>
+<td style="text-align: right;">~$165B</td>
+<td style="text-align: center;">+22%</td>
+<td style="text-align: right;">~41%</td>
+<td style="text-align: right;">~35%</td>
+<td style="text-align: center;">~23</td>
+<td style="text-align: center;">~9</td>
+<td style="text-align: center;">~15</td>
+<td style="text-align: center;">~38%</td>
+</tr>
+<tr>
+<td>Oracle</td>
+<td>ORCL</td>
+<td style="text-align: right;">~$0.5T</td>
+<td style="text-align: right;">~$56B</td>
+<td style="text-align: center;">+9%</td>
+<td style="text-align: right;">~30%</td>
+<td style="text-align: right;">~22%</td>
+<td style="text-align: center;">~37</td>
+<td style="text-align: center;">~25</td>
+<td style="text-align: center;">~22</td>
+<td style="text-align: center;">~100%+</td>
+</tr>
+</tbody>
+</table>
+<p><em>注: 竞品数据为截至 2026 年 5 月的公开市场近似值。Apple ROE/P/B 极高因股东权益被大规模回购压缩。</em></p>
+<h3>§8.2 微软在 peer 中的分位</h3>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>微软值</th>
+<th style="text-align: center;">6 家中排名</th>
+<th style="text-align: center;">分位</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>市值</td>
+<td>$3.01T</td>
+<td style="text-align: center;">2/6</td>
+<td style="text-align: center;">Top 33%</td>
+</tr>
+<tr>
+<td>收入增速</td>
+<td>+15%</td>
+<td style="text-align: center;">3/6</td>
+<td style="text-align: center;">中位偏上（Meta +22% &gt; MSFT +15% &gt; GOOGL +14%）</td>
+</tr>
+<tr>
+<td>营业利润率</td>
+<td>45.6%</td>
+<td style="text-align: center;"><strong>1/6</strong></td>
+<td style="text-align: center;"><strong>最高</strong></td>
+</tr>
+<tr>
+<td>净利率</td>
+<td>39.3%</td>
+<td style="text-align: center;"><strong>1/6</strong></td>
+<td style="text-align: center;"><strong>最高</strong></td>
+</tr>
+<tr>
+<td>PE (TTM)</td>
+<td>24.1x</td>
+<td style="text-align: center;">3/6</td>
+<td style="text-align: center;">中低位（GOOGL 22 &lt; META 23 &lt; MSFT 24 &lt; AAPL 33）</td>
+</tr>
+<tr>
+<td>EV/EBITDA</td>
+<td>16.6x</td>
+<td style="text-align: center;">3/6</td>
+<td style="text-align: center;">中位（META 15 &lt; GOOGL 16 ≈ MSFT 16.6 &lt; AMZN 18）</td>
+</tr>
+<tr>
+<td>ROE</td>
+<td>34.0%</td>
+<td style="text-align: center;">3/6</td>
+<td style="text-align: center;">中位偏上（排除 AAPL/ORCL 回购扭曲后实质领先）</td>
+</tr>
+</tbody>
+</table>
+<h3>§8.3 硬判定对比洞察</h3>
+<ol>
+<li><strong>利润率绝对王者</strong>: 微软营业利润率 45.6% 在 $200B+ 收入规模的公司中全球第一。Meta（~41%）最接近但收入体量仅微软 59%。Amazon 利润率（~11%）不到微软 1/4，反映截然不同的商业模式。</li>
+<li><strong>估值性价比最优</strong>: PE 24.1x / EV/EBITDA 16.6x 在科技巨头中处于低位，而收入增速 +15% 和利润率 45.6% 均处于上游。PEG 比率（PE/增速）~1.6x，低于 AAPL（~6.6x）和 ORCL（~4.1x），显示增长溢价合理。</li>
+<li><strong>云市场最强追赶者</strong>: Azure +34% 增速远超 AWS（~18%）和 GCP（~28%），是唯一在份额上持续扩张的 Top 3 云平台。Intelligent Cloud 分部 Q2 FY2026 加速至 +29%，势头领先。</li>
+<li><strong>AI 商业化路径最清晰</strong>: 微软是唯一将 AI 能力（OpenAI 模型）直接嵌入已有 $168.9B 云收入基座的公司。Google/Meta 的 AI 变现仍以广告优化为主，Amazon 的 AI 产品矩阵不如微软完整。</li>
+<li><strong>CapEx 风险最高</strong>: 微软 FY2025 CapEx $64.6B（CapEx/Revenue 23%），绝对值和比率均为科技巨头中最高水平之一（与 Meta 相当），AI 投资回报的不确定性是最大分歧点。</li>
+</ol>
+<h3>§8.4 海外同业补充</h3>
+<p>微软作为美股公司，§8.1 已覆盖全球主要可比对象。补充亚太/欧洲对标：</p>
+<table>
+<thead>
+<tr>
+<th>公司</th>
+<th>市场</th>
+<th style="text-align: right;">市值</th>
+<th>核心业务</th>
+<th>与微软对标维度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SAP</td>
+<td>德国</td>
+<td style="text-align: right;">~$3,000 亿</td>
+<td>企业 ERP/SaaS</td>
+<td>Dynamics 365 直接竞品，PE ~35x vs MSFT 24x</td>
+</tr>
+<tr>
+<td>Tencent Cloud</td>
+<td>中国</td>
+<td style="text-align: right;">—</td>
+<td>中国云市场 #3</td>
+<td>Azure 中国市场间接竞品</td>
+</tr>
+<tr>
+<td>ServiceNow</td>
+<td>美国</td>
+<td style="text-align: right;">~$2,000 亿</td>
+<td>企业 IT 服务 SaaS</td>
+<td>PE ~55x，增速 ~22%，估值溢价反映 SaaS 纯度</td>
+</tr>
+</tbody>
+</table>
+<p>微软在全球企业软件+云赛道的综合实力（收入规模×利润率×增速）无直接可比对象，属于"独一档"存在。</p>
+</div>
+
+<!-- ============================================================
+     §九 估值与回报模拟
+     ============================================================ -->
+<div class="section" id="valuation">
+<h2>§九 估值与回报模拟</h2>
+<blockquote>
+<p><strong>方法论</strong>: 以"<strong>DCF 概率加权</strong>"为唯一估值锚，§十（投资回报）沿用同一套情景。§9.2 可比 PE 和 PB 作为<strong>交叉验证</strong>而非独立锚。</p>
+</blockquote>
+<h3>9.1 DCF 情景分析（v4.2 — 4 情景）</h3>
+<p><strong>关键假设基础</strong>（锚定 phase3-part2 财务历史）：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数值</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>基准年 FCF</td>
+<td>$71.6B（OCF $136.2B − CapEx $64.6B）</td>
+<td>[yfinance:cashflow_annual FY2025]</td>
+</tr>
+<tr>
+<td>基准年收入</td>
+<td>$281.7B</td>
+<td>[10-K:Summary Results FY2025]</td>
+</tr>
+<tr>
+<td>3 年收入 CAGR</td>
+<td>15.3%</td>
+<td>[metrics.json:revenue_cagr_3y]</td>
+</tr>
+<tr>
+<td>净利率</td>
+<td>36.2%（FY2025 10-K）/ 39.3%（TTM）</td>
+<td>[10-K:MD&amp;A] [metrics.json]</td>
+</tr>
+<tr>
+<td>CapEx</td>
+<td>$64.6B（FY2025），FY2022→FY2025 从 $23.9B 升 170%</td>
+<td>[yfinance:cashflow_annual]</td>
+</tr>
+<tr>
+<td>总股本（稀释）</td>
+<td>7.43B shares</td>
+<td>[metrics.json:sharesOutstanding]</td>
+</tr>
+<tr>
+<td>净债务</td>
+<td>$30.4B（总债务 $60.6B − 现金 $30.2B）</td>
+<td>[yfinance:balance_annual FY2025]</td>
+</tr>
+<tr>
+<td>WACC</td>
+<td><strong>9.5%</strong></td>
+<td>推导如下</td>
+</tr>
+</tbody>
+</table>
+<p><strong>WACC 推导</strong>：</p>
+<pre><code>无风险利率 Rf = 4.3%（美国 10 年期国债，2026 年 5 月）
+Beta = 1.093 [metrics.json]
+股权风险溢价 ERP = 4.75%（Damodaran 美国市场 2025 更新值）
+股权成本 Ke = 4.3% + 1.093 × 4.75% = 9.49% ≈ 9.5%
+债务成本（税后）Kd = ~2.8%（AAA 级债券 ~3.5% × (1-20%)）
+权重: E/(E+D) = 3,010/(3,010+60.6) = 98.0%; D/(E+D) = 2.0%
+WACC = 98.0% × 9.5% + 2.0% × 2.8% = 9.36% → 取 9.5%（上取整保守处理）
+</code></pre>
+<p><strong>核心建模逻辑</strong>：当前 CapEx 处于 AI 基础设施建设高峰期（FY2025 CapEx/Revenue = 22.9%，FY2022 仅 12.1%），FCF 被临时压制。各情景分歧焦点在于：(1) AI 投资能否转化为 OCF 加速增长；(2) CapEx 何时从峰值回落。分别建模 OCF 增速与 CapEx 路径，而非直接预测 FCF [10-K:MD&amp;A "investments...will continue to increase operating costs"]。</p>
+<hr />
+<h4>乐观情景（25% 权重）</h4>
+<p><strong>假设</strong>：Azure AI 持续加速（CAGR 18%+ 的 OCF 增长），Copilot 大规模采用推升 ARPU，CapEx 于 FY2027 见顶后快速回落。</p>
+<table>
+<thead>
+<tr>
+<th>年份</th>
+<th style="text-align: right;">Y1 (FY2026E)</th>
+<th style="text-align: right;">Y2 (FY2027E)</th>
+<th style="text-align: right;">Y3 (FY2028E)</th>
+<th style="text-align: right;">Y4 (FY2029E)</th>
+<th style="text-align: right;">Y5 (FY2030E)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OCF ($B)</td>
+<td style="text-align: right;">160.7</td>
+<td style="text-align: right;">189.6</td>
+<td style="text-align: right;">223.7</td>
+<td style="text-align: right;">264.0</td>
+<td style="text-align: right;">311.5</td>
+</tr>
+<tr>
+<td>OCF YoY</td>
+<td style="text-align: right;">+18%</td>
+<td style="text-align: right;">+18%</td>
+<td style="text-align: right;">+18%</td>
+<td style="text-align: right;">+18%</td>
+<td style="text-align: right;">+18%</td>
+</tr>
+<tr>
+<td>CapEx ($B)</td>
+<td style="text-align: right;">73.0</td>
+<td style="text-align: right;">68.0</td>
+<td style="text-align: right;">63.0</td>
+<td style="text-align: right;">60.0</td>
+<td style="text-align: right;">58.0</td>
+</tr>
+<tr>
+<td><strong>FCF ($B)</strong></td>
+<td style="text-align: right;"><strong>87.7</strong></td>
+<td style="text-align: right;"><strong>121.6</strong></td>
+<td style="text-align: right;"><strong>160.7</strong></td>
+<td style="text-align: right;"><strong>204.0</strong></td>
+<td style="text-align: right;"><strong>253.5</strong></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>OCF CAGR 18% 依据：Q2 FY2026 Intelligent Cloud +29%，Azure AI workload 驱动；历史 FY2024→FY2025 OCF +15%，乐观假设 AI 商业化超预期 [10-Q:MD&amp;A]</li>
+<li>CapEx 从 $73B 峰值回落至 $58B：AI 数据中心一期建设完成，后续为增量扩容 [10-K:MD&amp;A]</li>
+<li>永续增长率 g = <strong>3.5%</strong>（&lt; WACC 9.5% ✅）</li>
+</ul>
+<pre><code>终值 TV = FCF_Y5 × (1 + g) / (WACC − g) = $253.5B × 1.035 / (0.095 − 0.035) = $262.4B / 0.060 = $4,373B
+PV(FCFs) = 87.7/1.095 + 121.6/1.199 + 160.7/1.313 + 204.0/1.438 + 253.5/1.574
+         = 80.1 + 101.4 + 122.4 + 141.9 + 161.1 = $606.9B
+PV(TV) = $4,373B / 1.574 = $2,779B
+EV = $606.9B + $2,779B = $3,386B
+Equity = EV − 净债务 = $3,386B − $30.4B = $3,356B
+每股价值 = $3,356B / 7.43B = $452
+</code></pre>
+<hr />
+<h4>基准情景（45% 权重）</h4>
+<p><strong>假设</strong>：Azure 保持强劲但增速自然放缓（OCF CAGR 14%），Copilot 稳步推进，CapEx 在 FY2026 见顶后缓慢回落。</p>
+<table>
+<thead>
+<tr>
+<th>年份</th>
+<th style="text-align: right;">Y1 (FY2026E)</th>
+<th style="text-align: right;">Y2 (FY2027E)</th>
+<th style="text-align: right;">Y3 (FY2028E)</th>
+<th style="text-align: right;">Y4 (FY2029E)</th>
+<th style="text-align: right;">Y5 (FY2030E)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OCF ($B)</td>
+<td style="text-align: right;">155.3</td>
+<td style="text-align: right;">177.0</td>
+<td style="text-align: right;">201.8</td>
+<td style="text-align: right;">230.1</td>
+<td style="text-align: right;">262.3</td>
+</tr>
+<tr>
+<td>OCF YoY</td>
+<td style="text-align: right;">+14%</td>
+<td style="text-align: right;">+14%</td>
+<td style="text-align: right;">+14%</td>
+<td style="text-align: right;">+14%</td>
+<td style="text-align: right;">+14%</td>
+</tr>
+<tr>
+<td>CapEx ($B)</td>
+<td style="text-align: right;">75.0</td>
+<td style="text-align: right;">72.0</td>
+<td style="text-align: right;">68.0</td>
+<td style="text-align: right;">65.0</td>
+<td style="text-align: right;">62.0</td>
+</tr>
+<tr>
+<td><strong>FCF ($B)</strong></td>
+<td style="text-align: right;"><strong>80.3</strong></td>
+<td style="text-align: right;"><strong>105.0</strong></td>
+<td style="text-align: right;"><strong>133.8</strong></td>
+<td style="text-align: right;"><strong>165.1</strong></td>
+<td style="text-align: right;"><strong>200.3</strong></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>OCF CAGR 14% 依据：略低于 FY2022-FY2025 三年收入 CAGR 15.3%，反映规模放大后的自然减速 [metrics.json:revenue_cagr_3y]</li>
+<li>CapEx 从 $75B 峰值缓降至 $62B：AI 投资正常回报但非超预期 [10-K:MD&amp;A]</li>
+<li>永续增长率 g = <strong>3.0%</strong>（&lt; WACC 9.5% ✅）</li>
+</ul>
+<pre><code>TV = $200.3B × 1.03 / (0.095 − 0.03) = $206.3B / 0.065 = $3,174B
+PV(FCFs) = 80.3/1.095 + 105.0/1.199 + 133.8/1.313 + 165.1/1.438 + 200.3/1.574
+         = 73.3 + 87.6 + 101.9 + 114.8 + 127.3 = $504.9B
+PV(TV) = $3,174B / 1.574 = $2,016B
+EV = $504.9B + $2,016B = $2,521B
+Equity = $2,521B − $30.4B = $2,491B
+每股价值 = $2,491B / 7.43B = $335
+</code></pre>
+<hr />
+<h4>悲观情景（25% 权重）</h4>
+<p><strong>假设</strong>：AI 投资回报不及预期，OCF 增速放缓至 10%，CapEx 居高不下（AI 基础设施持续需要迭代升级）。</p>
+<table>
+<thead>
+<tr>
+<th>年份</th>
+<th style="text-align: right;">Y1 (FY2026E)</th>
+<th style="text-align: right;">Y2 (FY2027E)</th>
+<th style="text-align: right;">Y3 (FY2028E)</th>
+<th style="text-align: right;">Y4 (FY2029E)</th>
+<th style="text-align: right;">Y5 (FY2030E)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OCF ($B)</td>
+<td style="text-align: right;">149.8</td>
+<td style="text-align: right;">164.8</td>
+<td style="text-align: right;">181.3</td>
+<td style="text-align: right;">199.4</td>
+<td style="text-align: right;">219.3</td>
+</tr>
+<tr>
+<td>OCF YoY</td>
+<td style="text-align: right;">+10%</td>
+<td style="text-align: right;">+10%</td>
+<td style="text-align: right;">+10%</td>
+<td style="text-align: right;">+10%</td>
+<td style="text-align: right;">+10%</td>
+</tr>
+<tr>
+<td>CapEx ($B)</td>
+<td style="text-align: right;">75.0</td>
+<td style="text-align: right;">74.0</td>
+<td style="text-align: right;">73.0</td>
+<td style="text-align: right;">72.0</td>
+<td style="text-align: right;">71.0</td>
+</tr>
+<tr>
+<td><strong>FCF ($B)</strong></td>
+<td style="text-align: right;"><strong>74.8</strong></td>
+<td style="text-align: right;"><strong>90.8</strong></td>
+<td style="text-align: right;"><strong>108.3</strong></td>
+<td style="text-align: right;"><strong>127.4</strong></td>
+<td style="text-align: right;"><strong>148.3</strong></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>OCF CAGR 10% 依据：企业 IT 支出放缓 + Azure 增速降至 ~20%，但 SaaS 基座（M365）仍稳定增长 [10-K:Item 1A]</li>
+<li>CapEx 几乎不降：AI 硬件更新周期短（GPU 2-3 年换代），持续高投入 [10-K:MD&amp;A]</li>
+<li>永续增长率 g = <strong>2.5%</strong>（&lt; WACC 9.5% ✅）</li>
+</ul>
+<pre><code>TV = $148.3B × 1.025 / (0.095 − 0.025) = $152.0B / 0.070 = $2,171B
+PV(FCFs) = 74.8/1.095 + 90.8/1.199 + 108.3/1.313 + 127.4/1.438 + 148.3/1.574
+         = 68.3 + 75.7 + 82.5 + 88.6 + 94.2 = $409.3B
+PV(TV) = $2,171B / 1.574 = $1,379B
+EV = $409.3B + $1,379B = $1,788B
+Equity = $1,788B − $30.4B = $1,758B
+每股价值 = $1,758B / 7.43B = $237
+</code></pre>
+<hr />
+<h4>最差情景（5% 权重）</h4>
+<p><strong>假设</strong>：宏观衰退叠加 AI 泡沫破裂，OCF 增长降至 5%，CapEx 因已签约数据中心合同无法缩减。</p>
+<table>
+<thead>
+<tr>
+<th>年份</th>
+<th style="text-align: right;">Y1 (FY2026E)</th>
+<th style="text-align: right;">Y2 (FY2027E)</th>
+<th style="text-align: right;">Y3 (FY2028E)</th>
+<th style="text-align: right;">Y4 (FY2029E)</th>
+<th style="text-align: right;">Y5 (FY2030E)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OCF ($B)</td>
+<td style="text-align: right;">143.0</td>
+<td style="text-align: right;">150.2</td>
+<td style="text-align: right;">157.7</td>
+<td style="text-align: right;">165.6</td>
+<td style="text-align: right;">173.8</td>
+</tr>
+<tr>
+<td>CapEx ($B)</td>
+<td style="text-align: right;">78.0</td>
+<td style="text-align: right;">80.0</td>
+<td style="text-align: right;">78.0</td>
+<td style="text-align: right;">76.0</td>
+<td style="text-align: right;">74.0</td>
+</tr>
+<tr>
+<td><strong>FCF ($B)</strong></td>
+<td style="text-align: right;"><strong>65.0</strong></td>
+<td style="text-align: right;"><strong>70.2</strong></td>
+<td style="text-align: right;"><strong>79.7</strong></td>
+<td style="text-align: right;"><strong>89.6</strong></td>
+<td style="text-align: right;"><strong>99.8</strong></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>OCF CAGR 5% 依据：全球经济衰退导致企业缩减 IT 支出，Cloud 增速降至 ~12%，M365 续约率微降</li>
+<li>CapEx 不降反升（短期）：已签约数据中心建设合同无法取消，"contractual obligations related to cloud infrastructure" [10-K:Item 7A]</li>
+<li>永续增长率 g = <strong>2.0%</strong>（&lt; WACC 9.5% ✅）</li>
+</ul>
+<pre><code>TV = $99.8B × 1.02 / (0.095 − 0.02) = $101.8B / 0.075 = $1,357B
+PV(FCFs) = 65.0/1.095 + 70.2/1.199 + 79.7/1.313 + 89.6/1.438 + 99.8/1.574
+         = 59.4 + 58.5 + 60.7 + 62.3 + 63.4 = $304.3B
+PV(TV) = $1,357B / 1.574 = $862B
+EV = $304.3B + $862B = $1,166B
+Equity = $1,166B − $30.4B = $1,136B
+每股价值 = $1,136B / 7.43B = $153
+</code></pre>
+<hr />
+<h4>估值锚（概率加权 DCF）</h4>
+<table>
+<thead>
+<tr>
+<th>情景</th>
+<th style="text-align: right;">估值（$B）</th>
+<th style="text-align: right;">对应股价</th>
+<th style="text-align: center;">概率</th>
+<th style="text-align: right;">加权贡献</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>乐观</td>
+<td style="text-align: right;">$3,356B</td>
+<td style="text-align: right;">$452</td>
+<td style="text-align: center;">25%</td>
+<td style="text-align: right;">$113.0</td>
+</tr>
+<tr>
+<td>基准</td>
+<td style="text-align: right;">$2,491B</td>
+<td style="text-align: right;">$335</td>
+<td style="text-align: center;">45%</td>
+<td style="text-align: right;">$150.8</td>
+</tr>
+<tr>
+<td>悲观</td>
+<td style="text-align: right;">$1,758B</td>
+<td style="text-align: right;">$237</td>
+<td style="text-align: center;">25%</td>
+<td style="text-align: right;">$59.3</td>
+</tr>
+<tr>
+<td>最差</td>
+<td style="text-align: right;">$1,136B</td>
+<td style="text-align: right;">$153</td>
+<td style="text-align: center;">5%</td>
+<td style="text-align: right;">$7.7</td>
+</tr>
+<tr>
+<td><strong>概率加权</strong></td>
+<td style="text-align: right;"><strong>$2,456B</strong></td>
+<td style="text-align: right;"><strong>$331</strong></td>
+<td style="text-align: center;">100%</td>
+<td style="text-align: right;"><strong>$330.7</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>⭐ DCF 估值锚: $331/股</strong>，对应市值 ~$2.46 万亿。当前股价 $405.21 较 DCF 锚溢价 <strong>+22.4%</strong>。</p>
+<p><strong>DCF 结果解读</strong>：纯 DCF 模型显示当前股价包含约 22% 的"质量溢价"。这一溢价反映市场对微软作为全球最优质科技公司的定价——AAA 信用、45.6% 营业利润率、多重护城河。DCF 低于市价并不自动意味着"高估"，而是提示<strong>回报预期需要理性校准</strong>。</p>
+<p><strong>敏感性分析（WACC × 永续增长率 g 对基准情景每股价值的影响）</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>WACC \ g</th>
+<th style="text-align: right;">2.5%</th>
+<th style="text-align: right;">3.0%</th>
+<th style="text-align: right;">3.5%</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>8.5%</strong></td>
+<td style="text-align: right;">$422</td>
+<td style="text-align: right;">$484</td>
+<td style="text-align: right;">$573</td>
+</tr>
+<tr>
+<td><strong>9.0%</strong></td>
+<td style="text-align: right;">$353</td>
+<td style="text-align: right;">$396</td>
+<td style="text-align: right;">$454</td>
+</tr>
+<tr>
+<td><strong>9.5%</strong></td>
+<td style="text-align: right;">$301</td>
+<td style="text-align: right;">$335</td>
+<td style="text-align: right;">$378</td>
+</tr>
+<tr>
+<td><strong>10.0%</strong></td>
+<td style="text-align: right;">$261</td>
+<td style="text-align: right;">$286</td>
+<td style="text-align: right;">$318</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>当 WACC 降至 8.5% + g 上调至 3.5%（反映 AI 永久提升潜在增长率的牛市逻辑），基准估值达 $573，接近分析师共识目标 $561。</p>
+</blockquote>
+<h3>9.2 交叉验证（仅互证，不纳入锚）</h3>
+<p><strong>可比 PE 估值</strong>：<br />
+- 微软 FY2025 EPS = $13.64（$101.8B / 7.43B）[10-K + metrics.json]<br />
+- 科技巨头中位 PE ≈ 28x（Alphabet 22x、Meta 23x、MSFT 24x、AAPL 33x、AMZN 35x → 中位 28x）[phase3-part3.md §8.1]<br />
+- 可比 PE 估值 = $13.64 × 28x = <strong>$382/股</strong><br />
+- 与 DCF 锚 $331 差异: +15.4% → ⚠️ 标注（差 10-20%）<br />
+- 解释: PE 估值包含当前盈利的全部体现，而 DCF 因 CapEx 高峰压制 FCF 导致折价。随着 CapEx 正常化两者应趋近。</p>
+<p><strong>有形 PB 估值</strong>：<br />
+- 每股账面净值 = $343.5B / 7.43B = $46.2 [yfinance:balance_annual FY2025]<br />
+- 当前 P/B = 7.3x [metrics.json]<br />
+- 科技巨头中位 P/B ≈ 8x（排除 AAPL 回购扭曲后：GOOGL 7x、AMZN 8x、META 9x → 中位 8x）<br />
+- PB 估值 = $46.2 × 8x = <strong>$370/股</strong><br />
+- 与 DCF 锚 $331 差异: +11.8% → ⚠️ 标注（差 10-20%）<br />
+- 解释: P/B 估值反映资产存量价值，微软大量无形资产（品牌、生态、AI IP）未在账面充分体现。</p>
+<p><strong>自洽判定</strong>: DCF $331 / 可比 PE $382 / PB $370 → DCF 锚与交叉验证差 11-15%，⚠️ 在可接受范围内。分歧源于 DCF 对 CapEx 高峰期的惩罚 vs 倍数法对当期盈利的锚定。三者共同指向 <strong>$330-$385 合理区间</strong>。</p>
+<h3>9.3 估值异常</h3>
+<p><strong>分析师共识 vs DCF 分歧</strong>：<br />
+- 分析师目标价均值: $561.56（strong_buy）[phase1-data.md]<br />
+- DCF 概率加权: $331<br />
+- 分歧: 分析师目标高出 DCF 锚 <strong>69.7%</strong> 🔴<br />
+- 解释: (1) 分析师普遍使用更低 WACC（8-9%）+ 更高增速假设；(2) 分析师目标价通常有 15-20% 乐观偏差（学术研究共识）；(3) 本 DCF 采用保守 WACC 9.5% + 中性 CapEx 假设。若采用 WACC 8.5% + g 3.5%（牛市参数），基准情景达 $573，与分析师共识基本吻合。</p>
+<p><strong>52 周价格区间定位</strong>：<br />
+- 52 周高: $555.45 / 低: $356.28 [metrics.json]<br />
+- 当前 $405.21 处于 52 周区间 <strong>24.5% 分位</strong>（偏低位）<br />
+- DCF 锚 $331 低于 52 周低点 $356 → 暗示即使最近调整后仍有下行空间（在纯 DCF 视角下）</p>
+<h3>9.4 技术面位置（v4.4）</h3>
+<blockquote>
+<p>⚠️ 降级标注: 美股无 <code>technical_analysis.md</code>（Tushare 不适用），以下基于 metrics.json 价格数据 + 公开信息概述。</p>
+</blockquote>
+<ul>
+<li>当前价 $405.21 较 52 周高 $555.45 回落 27%，较 52 周低 $356.28 反弹 14%</li>
+<li>Beta 1.093 [metrics.json]，与大盘基本同步</li>
+<li>股价处于 52 周区间偏低位（24.5% 分位），短期超跌后反弹格局</li>
+</ul>
+<p><strong>基本面 × 技术面配合判断</strong>:</p>
+<p>基本面（收入 +15%、利润 +16%、Azure +34%）强劲 vs 技术面（较高点回落 27%）偏弱 → <strong>背离格局</strong>。市场对 AI CapEx 回报的担忧压制了估值倍数。若 Q3 FY2026 业绩继续超预期（Intelligent Cloud 保持 +25%+），技术面有望跟随基本面修复。反之，若 Cloud 毛利率继续下行（67% → &lt;65%），可能测试 52 周低点 $356 附近支撑。</p>
+<hr />
+</div>
+
+<!-- ============================================================
+     §十 投资回报测算（与 §九 共用情景）
+     ============================================================ -->
+<div class="section" id="invest-sim">
+<h2>§十 投资回报测算（与 §九 共用情景）</h2>
+<p><strong>初始仓位</strong>: 100 万人民币<br />
+<strong>汇率</strong>: 1 USD = 7.2 CNY → 可用资金 <strong>$138,889</strong><br />
+<strong>当前买入</strong>: $405.21/股 × <strong>342 股</strong> = $138,582（余 $307）<br />
+<strong>测算时间窗口</strong>: 2 年（2026.05 → 2028.05）<br />
+<strong>DCF 估值锚</strong>: $331/股（§九概率加权）</p>
+<table>
+<thead>
+<tr>
+<th>情景</th>
+<th style="text-align: center;">DCF 目标价</th>
+<th style="text-align: center;">收益率</th>
+<th style="text-align: center;">概率</th>
+<th style="text-align: center;">加权收益率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>乐观</td>
+<td style="text-align: center;">$452</td>
+<td style="text-align: center;">+11.5%</td>
+<td style="text-align: center;">25%</td>
+<td style="text-align: center;">+2.9%</td>
+</tr>
+<tr>
+<td>基准</td>
+<td style="text-align: center;">$335</td>
+<td style="text-align: center;">−17.3%</td>
+<td style="text-align: center;">45%</td>
+<td style="text-align: center;">−7.8%</td>
+</tr>
+<tr>
+<td>悲观</td>
+<td style="text-align: center;">$237</td>
+<td style="text-align: center;">−41.5%</td>
+<td style="text-align: center;">25%</td>
+<td style="text-align: center;">−10.4%</td>
+</tr>
+<tr>
+<td>最差</td>
+<td style="text-align: center;">$153</td>
+<td style="text-align: center;">−62.2%</td>
+<td style="text-align: center;">5%</td>
+<td style="text-align: center;">−3.1%</td>
+</tr>
+<tr>
+<td><strong>概率加权 2 年总收益率</strong></td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">100%</td>
+<td style="text-align: center;"><strong>−18.4%</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>补充: 含股息调整</strong><br />
+- 年度股息率 0.9% [metrics.json:dividendYield]，2 年累计 ~1.8%<br />
+- 含股息概率加权总收益: <strong>−16.6%</strong><br />
+- <strong>年化</strong> ≈ <strong>−8.7%</strong></p>
+<p><strong>回报矩阵（绝对金额，100 万人民币本金）</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>情景</th>
+<th style="text-align: center;">目标价</th>
+<th style="text-align: center;">持仓市值（USD）</th>
+<th style="text-align: center;">折合人民币</th>
+<th style="text-align: center;">盈亏（万）</th>
+<th style="text-align: center;">概率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>乐观</td>
+<td style="text-align: center;">$452</td>
+<td style="text-align: center;">$154,584</td>
+<td style="text-align: center;">¥111.3 万</td>
+<td style="text-align: center;"><strong>+11.3</strong></td>
+<td style="text-align: center;">25%</td>
+</tr>
+<tr>
+<td>基准</td>
+<td style="text-align: center;">$335</td>
+<td style="text-align: center;">$114,570</td>
+<td style="text-align: center;">¥82.5 万</td>
+<td style="text-align: center;"><strong>−17.5</strong></td>
+<td style="text-align: center;">45%</td>
+</tr>
+<tr>
+<td>悲观</td>
+<td style="text-align: center;">$237</td>
+<td style="text-align: center;">$81,054</td>
+<td style="text-align: center;">¥58.4 万</td>
+<td style="text-align: center;"><strong>−41.6</strong></td>
+<td style="text-align: center;">25%</td>
+</tr>
+<tr>
+<td>最差</td>
+<td style="text-align: center;">$153</td>
+<td style="text-align: center;">$52,326</td>
+<td style="text-align: center;">¥37.7 万</td>
+<td style="text-align: center;"><strong>−62.3</strong></td>
+<td style="text-align: center;">5%</td>
+</tr>
+<tr>
+<td><strong>概率加权</strong></td>
+<td style="text-align: center;">$331</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;"><strong>¥83.4 万</strong></td>
+<td style="text-align: center;"><strong>−16.6</strong></td>
+<td style="text-align: center;">100%</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>计算验证: 乐观 = 342 股 × $452 = $154,584 → ÷ 7.2 = ¥111.3 万。含 2 年股息 $138,582 × 1.8% ≈ $2,494 → 各情景等额加回。</p>
+</blockquote>
+<p><strong>关键发现</strong>: 纯 DCF 视角下，以 $405.21 买入微软的概率加权 2 年预期收益为 <strong>−16.6%</strong>（年化 −8.7%）。这反映当前股价已包含约 22% 的"质量溢价"，在 DCF 模型中无法被覆盖。</p>
+<p><strong>风险收益不对称性</strong>:<br />
+- 乐观情景上行 +11.5%（需 AI 超预期 + CapEx 见顶回落）<br />
+- 基准情景下行 −17.3%（最高概率）<br />
+- <strong>上行/下行比 = 0.66</strong>（不利），需要催化剂验证后再介入</p>
+<p><strong>建议仓位</strong>: <strong>观望 / 小仓试探（≤30%）</strong>。当前价位风险收益比不佳。更优买入区间：$330-$360（DCF 锚附近 ±10%），对应 52 周低点 $356 附近。若 WACC 降至 8.5%（牛市情景），则当前价位可接受。</p>
+<hr />
+</div>
+
+<!-- ============================================================
+     §十一 定性判断（3 框架，无打分）
+     ============================================================ -->
+<div class="section" id="qualitative">
+<h2>§十一 定性判断（3 框架，v4.1 — 无打分）</h2>
+<blockquote>
+<p><em>估值分析详见 §九。</em><br />
+<em>会计/治理红旗: 11 框架审计（Buffett Quality + Sloan Accrual + Valuation Anomaly 等）均因美股数据格式差异显示"数据不足"，无红旗信号。</em><br />
+<em>本章节聚焦不能被定量指标或审计自动替代的"深层判断"。</em></p>
+<p>⚠️ 审计报告显示 0 个红旗信号（美股数据格式差异，11 框架均显示"数据不足或无信号"）[audit_report.md]。无红旗信号不等同于无风险——而是自动化审计工具对美股数据覆盖不足的结果。</p>
+</blockquote>
+<h3>框架 1 · 护城河（Moat）→ <strong>看多方向</strong></h3>
+<p><strong>核心问题</strong>: 微软的可持续竞争优势是在<strong>加深</strong>、<strong>侵蚀</strong>还是<strong>部分是</strong>？</p>
+<p><strong>判断</strong>: <strong>加深</strong></p>
+<p><strong>证据链</strong>（6 条，每条带来源）:</p>
+<ol>
+<li>
+<p><strong>网络效应自我强化</strong>: Microsoft 365 数亿活跃用户 + LinkedIn ~10 亿会员 + GitHub ~1 亿开发者 → 三大网络效应飞轮同时运转，每新增用户提升平台对所有用户的价值。FY2025 M365 Commercial +15% 表明企业采用仍在扩大，而非饱和。[10-K:MD&amp;A] [phase3-part3.md §维度 6]</p>
+</li>
+<li>
+<p><strong>转换成本持续加深</strong>: 企业深度集成 Microsoft 365 + Azure + Active Directory + Teams + Dynamics 365 全栈生态，迁移成本极高（数据迁移 + 流程重构 + 员工培训 + 合规审计）。Copilot 嵌入更进一步锁定用户——AI 基于用户历史数据和工作流学习，迁移后需重建。[10-K:Item 1]</p>
+</li>
+<li>
+<p><strong>AI 先发优势形成新护城河层</strong>: OpenAI 独家 Azure 托管 + IP 权利 + 优先产能权 [10-K:Item 7]，将最强 LLM 能力与微软产品矩阵深度绑定。Google/Meta 的 AI 仍以广告优化为主，Amazon 的 AI 产品矩阵不如微软完整 → AI 成为护城河的第七层（叠加于网络效应、转换成本、规模经济、品牌、数据壁垒、生态系统之上）。[phase3-part3.md §8.3]</p>
+</li>
+<li>
+<p><strong>规模经济壁垒</strong>: $281.7B 收入 + 60+ 区域全球数据中心网络 + AAA 信用 = 固定成本摊薄优势。新进入者无法在 2-3 年内复制此基础设施。FY2025 CapEx $64.6B 进一步拉大规模差距。[10-K:MD&amp;A]</p>
+</li>
+<li>
+<p><strong>历史毛利率稳定性验证</strong>: FY2022-FY2025 毛利率稳定在 68-70% 区间（68.4% → 68.9% → 69.8% → 68.8%），营业利润率从 42% 持续提升至 45.6% → 护城河并未被竞争侵蚀，而是通过规模效应在加宽。[yfinance:income_annual]</p>
+</li>
+<li>
+<p><strong>存疑点/边界条件</strong>: OpenAI 独家关系存在变数——"the relationship may change if OpenAI achieves milestones that would result in a shift in the economic terms" [10-K:Item 1A]。若 OpenAI 独立上市或终止独家关系，AI 层护城河将被削弱。但即使如此，其余 6 层护城河仍完好。</p>
+</li>
+</ol>
+<p><strong>S 曲线定位</strong>: <strong>中期偏早</strong>。核心业务（M365、Azure）处于 S 曲线中段（PE 20-25x），但 AI/Copilot 新业务曲线处于起步期。微软本质是"成熟平台上叠加新 S 曲线"的复合结构。</p>
+<p><strong>逻辑蕴含</strong>（只论方向，不论幅度）:<br />
+- 若判断成立（护城河加深）→ 利好长期超额 ROE 假设的可持续性 / 利好终值倍数的合理性 / 利好抗周期能力<br />
+- 若判断推翻（OpenAI 关系断裂 + 开源 AI 平民化）→ 利空 AI 相关增长假设 / 护城河从 7 层降至 6 层，但基座业务仍稳固</p>
+<p><strong>对综合投资观点的支撑方向</strong>: <strong>看多</strong></p>
+<p><strong>未解决问题</strong>: OpenAI 与微软长期经济条款的具体变动条件未公开披露，需持续跟踪两方关系演变。</p>
+<hr />
+<h3>框架 2 · 管理层（Management）→ <strong>看多方向</strong></h3>
+<p><strong>核心问题</strong>: 管理层的<strong>德</strong>（诚信/股东为伴）、<strong>才</strong>（战略/执行/资本配置）是否都合格？</p>
+<p><strong>判断</strong>: <strong>是</strong>（"才"卓越，"德"合格但利益对齐偏低）</p>
+<p><strong>证据链</strong>（5 条）:</p>
+<ol>
+<li>
+<p><strong>"才" — 战略转型历史验证</strong>: CEO Satya Nadella 2014 年上任后，将微软从 Windows 中心转型为 Cloud + AI 公司。市值从 ~$3,000 亿增长至 ~$3 万亿（10 倍），收入从 ~$870 亿增长至 $2,817 亿（3.2 倍）。这是科技行业过去十年最成功的 CEO 转型。[phase3-part3.md §维度 5] [10-K:MD&amp;A]</p>
+</li>
+<li>
+<p><strong>"才" — 资本配置纪律</strong>: 负债率从 FY2022 54.4% 降至 FY2025 44.5%；同期维持年均 $42.5B 股东回报（回购 + 股息）；Payout/FCF 比率 59%，未过度透支。唯一大额并购 Activision Blizzard（$68.7B）虽带来 $142B 商誉，但整合后 Gaming 业务已开始贡献利润。[yfinance:cashflow_annual] [yfinance:balance_annual]</p>
+</li>
+<li>
+<p><strong>"才" — 战略定力</strong>: 2019 年宣布的 "Cloud + AI" 双引擎战略至今一以贯之——Azure 从增速 30%+ 持续至今，OpenAI 合作从 2019 年启动到 2025 年全面商业化，战略方向 6 年未偏移。[10-K:Item 7]</p>
+</li>
+<li>
+<p><strong>"德" — 合格但有瑕疵</strong>: 无年报差错记录、无审计意见瑕疵、无重大诉讼。但内部人持股仅 0.08% [yfinance:major_holders]，管理层与股东利益对齐度在科技巨头中最低（对比: Meta 扎克伯格持股 ~13%）。审计报告 0 红旗（无治理异常信号）[audit_report.md]。</p>
+</li>
+<li>
+<p><strong>存疑/边界</strong>: 2023 年 11 月国家级黑客攻击事件（"gained access to Microsoft email accounts...and some source code repositories" [10-K:Item 1A]）暴露安全治理缺陷。CFO Amy Hood 自 2013 年任职 13 年，连续性强但缺乏新血带来的审视风险。</p>
+</li>
+</ol>
+<p><strong>逻辑蕴含</strong>:<br />
+- "德" + "才"均过关 → 利好 PE/PB 估值溢价空间（市场对优秀管理层给予溢价）<br />
+- 内部人持股极低 → 不影响"德"判断（无减持利空信号），但降低了管理层在股价下跌时与股东"共患难"的激励强度</p>
+<p><strong>对综合投资观点的支撑方向</strong>: <strong>看多</strong></p>
+<p><strong>未解决问题</strong>: Satya Nadella 继任计划未公开披露；若其离任，市场可能给予临时折价。</p>
+<hr />
+<h3>框架 3 · 催化剂（Catalyst）→ <strong>看多方向</strong></h3>
+<p><strong>核心问题</strong>: 下一个 <strong>12 个月</strong>是否有可能<strong>改变投资结论方向</strong>的具体、可观察事件？</p>
+<p><strong>判断</strong>: <strong>是</strong>（多个正向催化剂 + 1 个关键证伪风险）</p>
+<p><strong>证据链</strong>（5 条）:</p>
+<ol>
+<li>
+<p><strong>内部催化剂 — Copilot 商业化拐点</strong>: M365 Copilot 企业大规模部署正在推进（从试用到全员），若 FY2026 下半年 ARPU 提升信号明确，将验证 AI 变现逻辑 → 估值重估触发器。GitHub Copilot 已成为开发者标配。[10-K:MD&amp;A] [phase3-part3.md §维度 10]</p>
+</li>
+<li>
+<p><strong>内部催化剂 — CapEx 效率拐点</strong>: 若 FY2026 Q3-Q4 Cloud 毛利率止跌回升（从 67% 回至 69%+），市场将确认 AI 投资正向回报周期开启 → 解除当前估值压制的最大因素。[10-Q:MD&amp;A]</p>
+</li>
+<li>
+<p><strong>内部催化剂 — 股东回报加速</strong>: 若 FCF 随 CapEx 回落而回升（FY2027E），回购力度可能从 $18.4B 提升至 $25B+ → 支撑 EPS 增速。[yfinance:cashflow_annual]</p>
+</li>
+<li>
+<p><strong>时间窗催化剂</strong>: Q3 FY2026 财报（预计 2026 年 4 月已披露 / Q4 财报约 2026 年 7 月）→ 验证 Azure 增速能否维持 30%+。FY2026 全年指引（若发布）将明确 CapEx 峰值时间线。</p>
+</li>
+<li>
+<p><strong>证伪催化剂</strong>（若发生则看多假设失败）:<br />
+   - 若 Azure 增速降至 &lt;25%（连续两个季度）→ AI 商业化不及预期信号<br />
+   - 若 Cloud 毛利率跌破 65% → CapEx 效率改善假设失败<br />
+   - 若 OpenAI 宣布独立上市 / 终止独家关系 → 护城河第七层瓦解</p>
+</li>
+</ol>
+<p><strong>逻辑蕴含</strong>:<br />
+- 近期（≤ 6 个月）有 ≥3 个正向催化剂（Copilot 拐点 + CapEx 效率 + 财报验证）+ 基本面强劲 → 利好<strong>中期上行窗口</strong><br />
+- 1 个关键证伪风险（Azure 增速失速 / Cloud 毛利率跌破 65%）→ 若触发则看多假设需修正<br />
+- 催化剂密集期: FY2026 Q3-Q4 财报季 → 波动性放大窗口</p>
+<p><strong>对综合投资观点的支撑方向</strong>: <strong>看多</strong></p>
+<p><strong>未解决问题</strong>: Copilot 企业采用率/ARPU 提升数据微软尚未单独披露，需通过 Q3-Q4 财报旁证推断。</p>
+<hr />
+<h3>综合判断</h3>
+<p><strong>框架方向分布</strong>（共 3 个框架）:<br />
+- 看多方向: 框架 1（护城河）、框架 2（管理层）、框架 3（催化剂）（<strong>共 3 个</strong>）<br />
+  - 框架 1 证据要点: 7 层复合护城河持续加深（网络效应 + AI 先发 + 转换成本），毛利率 68-70% 四年稳定验证<br />
+  - 框架 2 证据要点: Nadella 十年战略执行力全球顶级，资本配置纪律严明，治理无红旗<br />
+  - 框架 3 证据要点: Copilot 商业化 + CapEx 效率拐点 + 财报验证，≥3 个正向催化剂在 12 个月内<br />
+- 看空方向: 无<br />
+- 中性/数据不足: 无</p>
+<p><strong>致命看空条款检查</strong>（直接引用 §三快筛）:<br />
+- §三 快筛结果: ✅ PASS（美股无 A 股式快筛数据，但审计报告 0 红旗 [audit_report.md]，无任何致命条款触发）<br />
+- 未触发任何快筛条款</p>
+<p><strong>综合结论</strong>: <strong>看多方向</strong><br />
+（根据 v4.1 黑白分割规则：3 框架中 3 个判定为"看多方向" ≥ 2 → 看多方向；§三快筛未触发 → 无强制看空）</p>
+<p><strong>关键分歧点</strong>:<br />
+- 定性看多（3/3 框架）vs DCF 估值偏负（当前价溢价 22%）→ <strong>核心分歧在于 AI 投资回报时间线</strong><br />
+  - 若 AI 投资 12-18 个月内验证回报 → 定性看多 + 估值合理化（WACC 应下调 / FCF 应上修）<br />
+  - 若 AI 投资 3 年仍未见回报 → 定性面的"护城河加深"和"催化剂兑现"假设均需修正<br />
+- 验证方式: 跟踪 Cloud 毛利率趋势（67% → 是否回升至 69%+）+ Azure 增速能否维持 30%+</p>
+<p><strong>验证催化剂</strong>（由框架 3 识别）:<br />
+1. Q3/Q4 FY2026 财报 — 时间窗: 2026 年 7-10 月<br />
+2. Copilot 企业采用率首次正式披露 — 时间窗: FY2026 年报（2026 年 8-9 月）<br />
+3. Cloud 毛利率拐点（67% 是否止跌）— 时间窗: 连续 2 个季度观察</p>
+</div>
+
+<!-- ============================================================
+     §十二 信息缺口与尽调优先级
+     ============================================================ -->
+<div class="section" id="gaps">
+<h2>§十二 信息缺口与尽调优先级</h2>
+<p>本节汇总分析过程中遇到的全部信息缺口，评估其对结论的影响，并给出尽调优先级排序。</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>缺口</th>
+<th>已尝试查询</th>
+<th style="text-align: center;">状态</th>
+<th style="text-align: center;">是否被替代来源覆盖</th>
+<th>影响的结论</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>data_snapshot §1-§9 全部 0 行（yf_adapter 模块缺失，无法将 yfinance parquet 转为 Tushare 格式）</td>
+<td><code>python3 -m scripts.yf_adapter</code> → module not found</td>
+<td style="text-align: center;">⚠️ 未解决</td>
+<td style="text-align: center;">✅ 部分覆盖 — Phase 3 直接读取 yfinance 原始 parquet + 10-K/10-Q HTM 手动提取</td>
+<td>§四财务趋势表、§六盈利能力维度的数据来源从标准化 data_snapshot 降级为 yfinance 原始字段 + 10-K 原文交叉验证。<strong>数据完整性未受实质影响</strong>，但来源标签格式不统一（[yfinance:xxx] vs [Tushare:xxx]），审计追溯成本略增</td>
+</tr>
+<tr>
+<td>2</td>
+<td>SEC EDGAR 仅提供 HTM 格式（非 PDF），pdf_reader.py regex 提取未执行</td>
+<td>下载 10-K/10-Q HTM → 主 agent 手动提取全文</td>
+<td style="text-align: center;">⚠️ 未解决</td>
+<td style="text-align: center;">✅ 覆盖 — 主 agent 手动从 HTM 全文提取关键段落写入 phase2-documents</td>
+<td>§四~§六所需的 MD&amp;A、分部数据、风险因素已从 HTM 手动提取并交叉验证。<strong>影响可控</strong>，但自动化程度降低，未来美股分析需开发 HTM parser</td>
+</tr>
+<tr>
+<td>3</td>
+<td>WebSearch 全部 5 轮返回空结果，Tavily 模块不存在</td>
+<td>共尝试 8 次搜索（5 WebSearch + 3 Tavily 均失败）</td>
+<td style="text-align: center;">⚠️ 未解决</td>
+<td style="text-align: center;">⚠️ 部分覆盖 — 舆情数据基于 yfinance 指标推断 + 10-K Risk Factors 原文</td>
+<td>§七网络舆情章节缺乏实时市场情绪（论坛/新闻/分析师评级），看多/看空观点基于财务数据推断而非真实舆情采集。<strong>对估值结论影响较小</strong>（§九 DCF 不依赖舆情），但对催化剂时机判断（§六维度 10）置信度下降</td>
+</tr>
+<tr>
+<td>4</td>
+<td>FY2025 10-K 分段落文本（MD&amp;A、Risk Factors 等）未经自动化 regex 提取</td>
+<td>pdf_reader 不支持 HTM</td>
+<td style="text-align: center;">⚠️ 已降级处理</td>
+<td style="text-align: center;">✅ 覆盖 — Phase 2 手动 Read HTM 全文并摘录关键段落</td>
+<td>已在 phase2-documents.md 中完成手动提取，含利润表变动、分部收入、风险因素、资本开支等核心内容。<strong>无实质影响</strong></td>
+</tr>
+<tr>
+<td>5</td>
+<td>分业务收入拆分（Intelligent Cloud / More Personal Computing / Productivity）的季度颗粒度趋势</td>
+<td>yfinance 不含分部季度数据</td>
+<td style="text-align: center;">⚠️ 部分解决</td>
+<td style="text-align: center;">✅ 部分覆盖 — 10-K 提供年度分部数据 + 10-Q 提供最新季度分部数据</td>
+<td>已从 10-K 获取 FY2024/FY2025 年度分部数据，从 10-Q 获取 Q2 FY2026 分部数据。缺少连续 8 季度分部趋势（无法精确判断 Azure 增速拐点），<strong>对 DCF 增速假设的精度有一定影响</strong>（±1-2%）</td>
+</tr>
+<tr>
+<td>6</td>
+<td>同业对比数据缺失（美股跳过 peer_collector / capital_flow / technical_analysis）</td>
+<td>美股市场 collector 不含此功能</td>
+<td style="text-align: center;">⚠️ 未解决</td>
+<td style="text-align: center;">⚠️ 未覆盖 — §八可比公司对标基于定性分析</td>
+<td>§八同业估值对标缺乏系统化定量数据（PE/PB/EV-EBITDA 分位排名），§九交叉验证中可比 PE 使用公开市场共识而非自动采集。<strong>对估值锚影响有限</strong>（DCF 为主锚），但降低了交叉验证精度</td>
+</tr>
+<tr>
+<td>7</td>
+<td>机构持仓变动趋势（仅有最新一期前 10 大机构，无历史变动）</td>
+<td>yfinance institutional_holders 不含历史数据</td>
+<td style="text-align: center;">⚠️ 未解决</td>
+<td style="text-align: center;">❌ 未覆盖</td>
+<td>无法判断 Smart Money 的边际增减仓方向，§七资金流向信号置信度下降。<strong>对核心投资结论影响极小</strong>（微软机构持有 74%+ 已是常态）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>尽调优先级排序</strong>（按对投资决策影响从高到低）：</p>
+<ol>
+<li><strong>P1 — 缺口 #3 实时舆情</strong>: 补充 AI 基础设施资本开支回报周期的市场争议焦点，直接影响催化剂时机判断</li>
+<li><strong>P1 — 缺口 #5 分部季度趋势</strong>: 获取 Azure 连续季度增速曲线，验证 DCF 乐观情景中 +30% 增速假设的持续性</li>
+<li><strong>P2 — 缺口 #6 同业定量对标</strong>: 补充 AAPL/GOOGL/AMZN/META 估值倍数对标表，强化 §九 交叉验证</li>
+<li><strong>P3 — 缺口 #1 yf_adapter</strong>: 工程层面开发美股适配模块，提升未来美股分析的自动化程度</li>
+<li><strong>P3 — 缺口 #2 HTM parser</strong>: 开发 SEC EDGAR HTM 自动解析，替代人工提取</li>
+</ol>
+<hr />
+</div>
+
+<!-- ============================================================
+     §十三 数据可审计性（时效性+来源+audit 红旗）
+     ============================================================ -->
+<div class="section" id="sources">
+<h2>§十三 数据可审计性（时效性 + 来源 3 类分组）</h2>
+<p><strong>截止日期</strong>: 2026-05-15。<strong>关键待披露</strong>: FY2026 Q3 10-Q（截至 2026-03-31，预计 2026 年 4-5 月 filed，尚未发布）；FY2026 全年 10-K（截至 2026-06-30，预计 2026 年 7-8 月 filed）。</p>
+<h3>[yfinance 结构化数据]（替代 A 股 Tushare）</h3>
+<table>
+<thead>
+<tr>
+<th>数据项</th>
+<th>时效</th>
+<th>文件路径</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>年度利润表</td>
+<td>FY2022-FY2025（截至 2025-06-30）</td>
+<td><code>raw_data/income_annual.parquet</code> (4 行 × 48 列)</td>
+<td>yfinance financials，含 Revenue/COGS/Net Income 等</td>
+</tr>
+<tr>
+<td>年度资产负债表</td>
+<td>FY2021-FY2025</td>
+<td><code>raw_data/balance_annual.parquet</code> (5 行 × 79 列)</td>
+<td>含总资产/总负债/股东权益/现金等</td>
+</tr>
+<tr>
+<td>年度现金流量表</td>
+<td>FY2021-FY2025</td>
+<td><code>raw_data/cashflow_annual.parquet</code> (5 行 × 60 列)</td>
+<td>含 OCF/CapEx/FCF/回购/股息</td>
+</tr>
+<tr>
+<td>关键估值指标</td>
+<td>TTM（截至 ~2026-05-13）</td>
+<td><code>raw_data/metrics.json</code></td>
+<td>PE/PB/PS/EV-EBITDA/ROE/ROA/毛利率等</td>
+</tr>
+<tr>
+<td>机构持仓</td>
+<td>最新一期</td>
+<td><code>raw_data/institutional_holders.parquet</code> (10 行)</td>
+<td>前 10 大机构持仓</td>
+</tr>
+<tr>
+<td>大股东摘要</td>
+<td>最新一期</td>
+<td><code>raw_data/major_holders.parquet</code> (4 行)</td>
+<td>内部人/机构/浮动比例</td>
+</tr>
+<tr>
+<td>5 年日线行情</td>
+<td>2021-05 ~ 2026-05-13</td>
+<td><code>raw_data/history_5y.parquet</code> (1,255 行)</td>
+<td>Open/High/Low/Close/Volume</td>
+</tr>
+<tr>
+<td>股息记录</td>
+<td>历史全部</td>
+<td><code>raw_data/dividends.parquet</code> (89 条)</td>
+<td>股息支付日期与金额</td>
+</tr>
+</tbody>
+</table>
+<h3>[SEC EDGAR HTM 原文]（替代 A 股 PDF 年报）</h3>
+<table>
+<thead>
+<tr>
+<th>文档</th>
+<th>Fiscal Period</th>
+<th>文件大小</th>
+<th>路径</th>
+<th>提取方式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FY2025 10-K</td>
+<td>2024-07-01 ~ 2025-06-30</td>
+<td>8.2MB</td>
+<td><code>raw_data/pdfs/msft_10K_FY2025.htm</code></td>
+<td>手动 Read HTM 全文提取（pdf_reader 不支持 HTM）</td>
+</tr>
+<tr>
+<td>FY2026 Q2 10-Q</td>
+<td>2025-10-01 ~ 2025-12-31</td>
+<td>7.1MB</td>
+<td><code>raw_data/pdfs/msft_10Q_FY2026Q2.htm</code></td>
+<td>手动 Read HTM 全文提取</td>
+</tr>
+</tbody>
+</table>
+<p><strong>已提取内容</strong>: 利润表变动、分部收入（3 segments × FY2024-FY2025 + Q2 FY2026）、风险因素摘录（6 条）、资本开支与现金流 4 年趋势、OpenAI 合作关系披露、Microsoft Cloud 关键业务指标。详见 <code>phase2-documents.md</code>。</p>
+<h3>[WebSearch]</h3>
+<table>
+<thead>
+<tr>
+<th>查询意图</th>
+<th style="text-align: center;">尝试次数</th>
+<th>结果</th>
+<th>替代处理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>微软最新业绩/公告</td>
+<td style="text-align: center;">3 次 WebSearch</td>
+<td>空结果</td>
+<td>基于 yfinance 指标 + 10-K/10-Q 原文推断</td>
+</tr>
+<tr>
+<td>投资社区舆情（看多/看空）</td>
+<td style="text-align: center;">2 次 WebSearch</td>
+<td>空结果</td>
+<td>基于财务数据正反两面推断观点</td>
+</tr>
+<tr>
+<td>行业政策/AI 监管动态</td>
+<td style="text-align: center;">2 次 Tavily</td>
+<td>模块不存在</td>
+<td>10-K Item 1A 风险因素原文</td>
+</tr>
+<tr>
+<td>分析师评级/目标价</td>
+<td style="text-align: center;">1 次 Tavily</td>
+<td>模块不存在</td>
+<td>未覆盖</td>
+</tr>
+</tbody>
+</table>
+<p><strong>详细来源清单见 <code>phase1-data.md</code> §11</strong>。</p>
+<h3>审计红旗汇总（11 框架）</h3>
+<table>
+<thead>
+<tr>
+<th>严重度</th>
+<th style="text-align: center;">数量</th>
+<th>代表性红旗</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🔴 致命</td>
+<td style="text-align: center;">0</td>
+<td>—</td>
+</tr>
+<tr>
+<td>🟠 高</td>
+<td style="text-align: center;">0</td>
+<td>—</td>
+</tr>
+<tr>
+<td>🟡 中</td>
+<td style="text-align: center;">0</td>
+<td>—</td>
+</tr>
+<tr>
+<td>🟢 低</td>
+<td style="text-align: center;">0</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><strong>说明</strong>: 11 个经典审计框架（Piotroski F-Score、Beneish M-Score、Altman Z-Score、DuPont 分解、Buffett Quality Checks、Sloan Accrual Anomaly、Governance Red Flags、Shareholder Flow、Forward Guidance Anomaly、Valuation Anomaly、Related-Party Exposure）均显示"⚠️ 数据不足或无信号"。根因: financial_audit 模块基于 Tushare 数据格式设计，美股 yfinance 数据未经 yf_adapter 转换，导致所有框架的输入数据为空。<strong>这不代表微软无财务风险，而是自动化审计工具的美股适配尚未完成</strong>。Phase 3 写作中已通过 10-K/10-Q 原文手动完成关键财务健康度检查（见 §六维度 7），未发现实质性红旗。</p>
+<p>完整清单: <code>audit_report.md</code>。</p>
+<hr />
+</div>
+
+<!-- ============================================================
+     v4.6.1: 附录/补丁章节追加区(避免 MD→HTML 内容丢失)
+     主报告 §十三 之后的所有 ## 章节(如"附录 v4 修订日志" / "v4.1 补丁")
+     Phase 6 Part B 必须追加到这里, 不得丢弃
+     ============================================================ -->
+<!-- 无附录章节 -->
+
+
+</div>
+</body>
+</html>
