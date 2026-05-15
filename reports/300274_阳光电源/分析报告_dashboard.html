@@ -1,0 +1,3963 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>阳光电源（300274.SZ）投资分析报告 — 2026-05-15</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   Claude Code Company Analysis · Report Styles v5.0
+   单一 CSS 真相源 — 由 assets/html/base.html 加载并内联
+   禁止在 Phase 6 Part B 中自创颜色值或变量名
+   v5.0: Claude Design Language — 温暖羊皮纸 + 赤陶色主调 + 衬线标题
+         Bloomberg 风险色保留(红/琥珀/黄/绿)
+   ============================================================ */
+
+:root {
+  /* 主色 — Claude Terracotta */
+  --c-primary: #c96442;
+  --c-primary-light: #f0eee6;
+  --c-primary-dark: #a14e2f;
+  --c-accent: #d97757;
+
+  /* Bloomberg 风格风险等级(高对比) — 保留不变 */
+  --c-risk-red:    #dc2626;
+  --c-risk-red-bg: #fef2f2;
+  --c-risk-amber:  #e8a33a;
+  --c-risk-amber-bg: #fff7ed;
+  --c-risk-yellow: #fbbf24;
+  --c-risk-yellow-bg: #fffbeb;
+  --c-risk-green:  #059669;
+  --c-risk-green-bg: #ecfdf5;
+
+  /* 语义色 (保留 v4.3 alias) */
+  --c-green: var(--c-risk-green);
+  --c-green-bg: var(--c-risk-green-bg);
+  --c-yellow: #d97706;
+  --c-yellow-bg: #fffbeb;
+  --c-red: var(--c-risk-red);
+  --c-red-bg: var(--c-risk-red-bg);
+
+  /* Claude 暖灰度系 */
+  --c-gray-50:  #faf9f5;  /* Ivory */
+  --c-gray-100: #f0eee6;  /* Border Cream */
+  --c-gray-200: #e8e6dc;  /* Border Warm */
+  --c-gray-500: #87867f;  /* Stone Gray */
+  --c-gray-700: #5e5d59;  /* Olive Gray */
+  --c-gray-900: #141413;  /* Near Black */
+
+  /* Claude 表面色 */
+  --c-parchment: #f5f4ed;
+  --c-ivory: #faf9f5;
+  --c-warm-sand: #e8e6dc;
+  --c-dark-surface: #30302e;
+  --c-warm-silver: #b0aea5;
+  --c-dark-warm: #3d3d3a;
+
+  /* Morningstar 卡片化 — 迁移到暖色 */
+  --c-card-border:  #e8e6dc;
+  --c-card-header:  #faf9f5;
+  --c-card-hover:   rgba(201,100,66,0.04);
+
+  /* 形状 — Claude ring shadow 系统 */
+  --radius: 12px;
+  --shadow: 0px 0px 0px 1px #e8e6dc;
+  --shadow-md: 0px 0px 0px 1px #d1cfc5;
+  --shadow-lg: rgba(0,0,0,0.05) 0px 4px 24px;
+
+  /* Variant Perception 紫 — 保留 */
+  --c-variant: #7a4dab;
+  --c-variant-bg: #f3eeff;
+
+  /* v4.6 sidebar 布局(弃用但保持兼容) */
+  --sidebar-width: 260px;
+  --sidebar-gap: 24px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+               "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  background: var(--c-parchment);
+  color: var(--c-gray-900);
+  margin: 0;
+  padding: 0;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+/* Claude 衬线标题族 */
+h1, h2, h3 {
+  font-family: Georgia, "Noto Serif SC", "Songti SC", serif;
+  font-weight: 500;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+}
+
+/* ---------- 3.1 Sticky 顶部导航栏 ---------- */
+.top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  height: 50px;
+  padding: 0 24px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(245,244,237,0.85);
+  border-bottom: 1px solid var(--c-gray-200);
+  font-size: 14px;
+}
+.top-nav .nav-brand {
+  font-family: Georgia, "Noto Serif SC", serif;
+  font-weight: 500;
+  color: var(--c-primary);
+  text-decoration: none;
+  margin-right: auto;
+  font-size: 15px;
+}
+.top-nav a {
+  color: var(--c-gray-700);
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: background .15s, color .15s;
+}
+.top-nav a:hover {
+  background: rgba(201,100,66,0.08);
+  color: var(--c-primary);
+}
+
+/* ---------- Header Hero ---------- */
+header.hero {
+  background: var(--c-gray-900);
+  color: var(--c-ivory);
+  padding: 48px 32px;
+  border-radius: 16px;
+  margin-bottom: 32px;
+  box-shadow: var(--shadow-lg);
+}
+header.hero h1 {
+  font-size: 32px;
+  margin: 0 0 8px;
+  font-weight: 500;
+  line-height: 1.15;
+  color: var(--c-ivory);
+}
+header.hero .subtitle {
+  color: var(--c-warm-silver);
+  font-size: 15px;
+}
+header.hero .meta {
+  display: flex; flex-wrap: wrap; gap: 24px;
+  margin-top: 20px; font-size: 14px;
+  color: var(--c-warm-silver);
+}
+
+/* ---------- Section (每个 §一到§十五 一个) ---------- */
+.section {
+  background: var(--c-ivory);
+  padding: 28px 32px;
+  margin: 20px 0;
+  border-radius: var(--radius);
+  border: 1px solid var(--c-gray-100);
+  box-shadow: var(--shadow);
+}
+.section h2 {
+  font-family: Georgia, "Noto Serif SC", "Songti SC", serif;
+  color: var(--c-primary);
+  border-bottom: 2px solid rgba(201,100,66,0.15);
+  padding-bottom: 8px;
+  margin-top: 0;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.25;
+}
+.section h3 {
+  font-family: Georgia, "Noto Serif SC", "Songti SC", serif;
+  color: var(--c-gray-900);
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 24px;
+  border-bottom: 1px dashed var(--c-gray-200);
+  padding-bottom: 4px;
+  line-height: 1.3;
+}
+.section h4 { color: var(--c-gray-900); font-size: 16px; margin-top: 18px; }
+
+/* Variant Perception 章节专用紫色强调 */
+.section.variant-perception {
+  border-left: 4px solid var(--c-variant);
+  background: linear-gradient(to right, var(--c-variant-bg) 0%, var(--c-ivory) 3%);
+}
+.section.variant-perception h2 {
+  color: var(--c-variant);
+  border-bottom-color: var(--c-variant-bg);
+}
+
+/* ---------- 3.2 评分环形图 (SVG) ---------- */
+.score-ring {
+  display: inline-block;
+  position: relative;
+}
+.score-ring svg { display: block; }
+.score-ring .score-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.score-ring .score-text .num {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--c-primary);
+  font-family: Georgia, "Noto Serif SC", serif;
+}
+.score-ring .score-text .label {
+  font-size: 11px;
+  color: var(--c-gray-500);
+}
+
+/* ---------- 3.3 维度评分条形图 ---------- */
+.dimension-bar {
+  display: grid;
+  grid-template-columns: 1fr 48px 3fr 56px;
+  align-items: center;
+  gap: 12px;
+  margin: 10px 0;
+  font-size: 14px;
+}
+.dimension-bar .dim-name { color: var(--c-gray-700); }
+.dimension-bar .dim-score {
+  font-weight: 600;
+  text-align: right;
+  color: var(--c-primary);
+  font-family: Georgia, "Noto Serif SC", serif;
+}
+.dimension-bar .dim-progress {
+  height: 10px;
+  background: var(--c-gray-100);
+  border-radius: 5px;
+  overflow: hidden;
+}
+.dimension-bar .dim-progress .fill { height: 100%; border-radius: 5px; }
+.dimension-bar .dim-progress .fill.tier1 { background: linear-gradient(90deg, var(--c-primary), var(--c-primary-dark)); }
+.dimension-bar .dim-progress .fill.tier2 { background: linear-gradient(90deg, #8b5cf6, #6d28d9); }
+.dimension-bar .dim-progress .fill.tier3 { background: linear-gradient(90deg, var(--c-accent), var(--c-primary)); }
+.dimension-bar .dim-weight { text-align: right; color: var(--c-gray-500); font-size: 12px; }
+
+/* ---------- 3.4 三色情景卡片 ---------- */
+.scenario-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin: 16px 0;
+}
+.scenario {
+  padding: 16px;
+  border-radius: var(--radius);
+  border-left: 4px solid;
+}
+.scenario .label { font-size: 12px; color: var(--c-gray-500); text-transform: uppercase; letter-spacing: 1px; }
+.scenario .big-num {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 4px 0 8px;
+  font-family: Georgia, "Noto Serif SC", serif;
+}
+.scenario .detail { font-size: 13px; color: var(--c-gray-700); }
+.scenario.bull { background: var(--c-green-bg); border-left-color: var(--c-green); }
+.scenario.bull .big-num { color: var(--c-green); }
+.scenario.base { background: var(--c-yellow-bg); border-left-color: var(--c-yellow); }
+.scenario.base .big-num { color: var(--c-yellow); }
+.scenario.bear { background: var(--c-red-bg); border-left-color: var(--c-red); }
+.scenario.bear .big-num { color: var(--c-red); }
+.scenario.tail { background: var(--c-dark-surface); border-left-color: var(--c-gray-900); color: var(--c-ivory); }
+.scenario.tail .big-num { color: var(--c-ivory); }
+.scenario.tail .detail { color: var(--c-warm-silver); }
+
+/* ---------- 3.5 期望回报高亮条 ---------- */
+.expected-return {
+  background: linear-gradient(135deg, var(--c-gray-900), var(--c-primary-dark));
+  color: var(--c-ivory);
+  padding: 20px 28px;
+  border-radius: 16px;
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--shadow-lg);
+}
+.expected-return .label { font-size: 12px; color: var(--c-warm-silver); text-transform: uppercase; letter-spacing: 1px; }
+.expected-return .value {
+  font-size: 36px;
+  font-weight: 700;
+  font-family: Georgia, "Noto Serif SC", serif;
+}
+
+/* ---------- 3.6 团队名片网格 ---------- */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin: 16px 0;
+}
+.team-card {
+  padding: 16px;
+  border: 1px solid var(--c-gray-200);
+  border-radius: var(--radius);
+  text-align: center;
+  background: var(--c-ivory);
+}
+.team-card .avatar {
+  width: 48px; height: 48px; border-radius: 50%;
+  background: rgba(201,100,66,0.1); color: var(--c-primary);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; margin: 0 auto 8px; font-size: 18px;
+  font-family: Georgia, "Noto Serif SC", serif;
+}
+.team-card .name { font-weight: 600; }
+.team-card .role { color: var(--c-gray-500); font-size: 13px; margin-top: 4px; }
+
+/* ---------- 3.7 风险矩阵 ---------- */
+.risk-item {
+  display: grid;
+  grid-template-columns: 20px 1fr auto;
+  gap: 12px;
+  align-items: start;
+  padding: 12px;
+  border-left: 4px solid;
+  background: var(--c-gray-50);
+  border-radius: 8px;
+  margin: 8px 0;
+}
+.risk-item.high   { border-left-color: var(--c-red);    background: var(--c-red-bg); }
+.risk-item.medium { border-left-color: var(--c-yellow); background: var(--c-yellow-bg); }
+.risk-item.low    { border-left-color: var(--c-green);  background: var(--c-green-bg); }
+.risk-item .dot {
+  width: 12px; height: 12px; border-radius: 50%; margin-top: 4px;
+}
+.risk-item.high   .dot { background: var(--c-red); }
+.risk-item.medium .dot { background: var(--c-yellow); }
+.risk-item.low    .dot { background: var(--c-green); }
+
+/* ---------- 3.8 融资时间轴 ---------- */
+.timeline {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin: 24px 0;
+  overflow-x: auto;
+  padding: 8px 0;
+}
+.timeline .tl-node {
+  flex: 0 0 auto;
+  text-align: center;
+  padding: 0 14px;
+  position: relative;
+}
+.timeline .tl-node::before {
+  content: '';
+  width: 14px; height: 14px; border-radius: 50%;
+  background: var(--c-gray-200); display: block; margin: 0 auto 8px;
+}
+.timeline .tl-node.current::before {
+  background: var(--c-primary);
+  box-shadow: 0 0 0 4px rgba(201,100,66,0.15);
+}
+.timeline .tl-node .year { font-size: 12px; color: var(--c-gray-500); }
+.timeline .tl-node .round { font-weight: 600; font-size: 13px; }
+.timeline .tl-node .amount { font-size: 11px; color: var(--c-gray-700); }
+
+/* ---------- 3.9 情绪量表 ---------- */
+.sentiment-bar {
+  position: relative;
+  height: 12px;
+  border-radius: 6px;
+  background: linear-gradient(to right, var(--c-red) 0%, var(--c-yellow) 50%, var(--c-green) 100%);
+  margin: 20px 0 32px;
+}
+.sentiment-bar .pointer {
+  position: absolute;
+  top: -8px;
+  width: 4px; height: 28px;
+  background: var(--c-gray-900);
+  border-radius: 2px;
+  transform: translateX(-50%);
+}
+.sentiment-bar .pointer::after {
+  content: attr(data-label);
+  position: absolute;
+  top: 32px; left: 50%; transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: 11px;
+  background: var(--c-gray-900);
+  color: var(--c-ivory);
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+/* ---------- v2 组件 · 估值区间可视化 ---------- */
+.valuation-range {
+  position: relative;
+  height: 28px;
+  background: var(--c-gray-100);
+  border-radius: 6px;
+  margin: 10px 0;
+}
+.valuation-range .range {
+  position: absolute;
+  top: 4px; bottom: 4px;
+  border-radius: 4px;
+  opacity: 0.6;
+}
+.valuation-range .range.dcf { background: var(--c-primary); }
+.valuation-range .range.comparable { background: var(--c-green); }
+.valuation-range .range.transaction { background: var(--c-yellow); }
+.valuation-range .label-row {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 8px;
+  align-items: center;
+  font-size: 12px;
+}
+
+/* ---------- v2 组件 · 星级评估 ---------- */
+.star-filled { color: var(--c-accent); }
+.star-empty  { color: var(--c-gray-200); }
+
+/* ---------- v2 组件 · 信息缺口优先级 badge ---------- */
+.badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.badge.critical { background: var(--c-red-bg);    color: var(--c-red); }
+.badge.important{ background: var(--c-yellow-bg); color: var(--c-yellow); }
+.badge.minor    { background: var(--c-green-bg);  color: var(--c-green); }
+
+/* ---------- 通用 Table ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 14px;
+}
+th, td {
+  border: 1px solid var(--c-gray-200);
+  padding: 8px 12px;
+  text-align: left;
+}
+th {
+  background: var(--c-gray-100);
+  color: var(--c-primary);
+  font-weight: 600;
+}
+tr:nth-child(even) td { background: var(--c-gray-50); }
+
+/* ---------- 通用文本 ---------- */
+strong { color: var(--c-gray-900); font-weight: 600; }
+code {
+  background: var(--c-gray-100);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+blockquote {
+  border-left: 4px solid var(--c-primary);
+  padding: 10px 16px;
+  color: var(--c-gray-700);
+  background: rgba(201,100,66,0.05);
+  border-radius: 8px;
+  margin: 12px 0;
+}
+hr { border: none; border-top: 1px dashed var(--c-gray-200); margin: 24px 0; }
+ul, ol { padding-left: 22px; }
+li { margin: 4px 0; }
+a {
+  color: var(--c-primary);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(201,100,66,0.3);
+}
+a:hover { color: var(--c-accent); }
+
+footer {
+  text-align: center;
+  color: var(--c-gray-500);
+  padding: 32px 0 16px;
+  font-size: 12px;
+  border-top: 1px solid var(--c-gray-200);
+  margin-top: 48px;
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width: 768px) {
+  .container { padding: 20px 16px 60px; }
+  header.hero { padding: 24px 16px; }
+  header.hero h1 { font-size: 24px; }
+  .section { padding: 16px; }
+  .scenario-grid, .team-grid { grid-template-columns: 1fr; }
+  table { font-size: 12px; }
+  table th, table td { padding: 6px 8px; }
+}
+
+/* ============================================================
+   v4.6 新增: 6 个大厂风格组件 (迁移至 Claude 设计语言)
+   ============================================================ */
+
+/* ---------- v4.6-1. 前置评级卡 ---------- */
+.rating-trio {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: -16px 0 32px;
+}
+.rating-card {
+  background: var(--c-ivory);
+  border: 1px solid var(--c-card-border);
+  border-top: 3px solid var(--c-primary);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  box-shadow: var(--shadow);
+  transition: transform .15s, box-shadow .15s;
+}
+.rating-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+.rating-card--score  { border-top-color: var(--c-primary); }
+.rating-card--anchor { border-top-color: var(--c-accent); }
+.rating-card--return { border-top-color: var(--c-risk-green); }
+.rating-card--return.negative { border-top-color: var(--c-risk-red); }
+
+.rating-card .label {
+  font-size: 11px;
+  color: var(--c-gray-500);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.rating-card .value {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--c-gray-900);
+  line-height: 1.2;
+  margin-bottom: 6px;
+  font-family: Georgia, "Noto Serif SC", serif;
+}
+.rating-card .value .out-of {
+  font-size: 16px;
+  color: var(--c-gray-500);
+  font-weight: 500;
+}
+.rating-card .value.negative { color: var(--c-risk-red); }
+.rating-card .value.positive { color: var(--c-risk-green); }
+.rating-card .sub {
+  font-size: 12px;
+  color: var(--c-gray-700);
+}
+
+/* ---------- v4.6-2. 彩条风险卡 (Bloomberg 等级色保留) ---------- */
+.risk-card-v2 {
+  display: grid;
+  grid-template-columns: 4px 1fr auto;
+  gap: 14px;
+  align-items: center;
+  padding: 14px 16px 14px 0;
+  margin: 8px 0;
+  background: var(--c-ivory);
+  border: 1px solid var(--c-card-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: background .15s;
+}
+.risk-card-v2:hover { background: var(--c-card-hover); }
+.risk-card-v2.risk-critical { border-left-width: 0; background: linear-gradient(to right, var(--c-risk-red-bg) 0%, var(--c-ivory) 6%); }
+.risk-card-v2.risk-high     { background: linear-gradient(to right, var(--c-risk-amber-bg) 0%, var(--c-ivory) 6%); }
+.risk-card-v2.risk-medium   { background: linear-gradient(to right, var(--c-risk-yellow-bg) 0%, var(--c-ivory) 6%); }
+.risk-card-v2.risk-low      { background: linear-gradient(to right, var(--c-risk-green-bg) 0%, var(--c-ivory) 6%); }
+.risk-card-v2 .left-bar { align-self: stretch; width: 4px; }
+.risk-card-v2.risk-critical .left-bar { background: var(--c-risk-red); }
+.risk-card-v2.risk-high     .left-bar { background: var(--c-risk-amber); }
+.risk-card-v2.risk-medium   .left-bar { background: var(--c-risk-yellow); }
+.risk-card-v2.risk-low      .left-bar { background: var(--c-risk-green); }
+.risk-card-v2 .title { font-weight: 600; color: var(--c-gray-900); margin-bottom: 3px; }
+.risk-card-v2 .body  { font-size: 13px; color: var(--c-gray-700); line-height: 1.5; }
+.risk-card-v2 .sev-badge {
+  font-size: 10px; font-weight: 700; padding: 3px 10px;
+  border-radius: 12px; white-space: nowrap; letter-spacing: .5px;
+}
+.risk-card-v2.risk-critical .sev-badge { background: var(--c-risk-red);    color: white; }
+.risk-card-v2.risk-high     .sev-badge { background: var(--c-risk-amber);  color: white; }
+.risk-card-v2.risk-medium   .sev-badge { background: var(--c-risk-yellow); color: var(--c-gray-900); }
+.risk-card-v2.risk-low      .sev-badge { background: var(--c-risk-green);  color: white; }
+
+/* ---------- v4.6.2. Preamble 区 ---------- */
+.preamble {
+  background: var(--c-ivory);
+  border-left: 3px solid var(--c-accent);
+  border-radius: 8px;
+  padding: 14px 20px;
+  margin: -8px 0 20px;
+  font-size: 13px;
+  color: var(--c-gray-700);
+  line-height: 1.7;
+}
+.preamble:empty { display: none; }
+.preamble blockquote {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  font-size: 13px;
+}
+.preamble blockquote p { margin: 6px 0; }
+.preamble p { margin: 6px 0; }
+.preamble strong { color: var(--c-primary-dark); }
+.preamble hr { display: none; }
+
+/* ---------- v4.6.1. 关键指标横排面板 ---------- */
+.metric-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+  margin: 0 0 24px;
+  padding: 16px;
+  background: var(--c-ivory);
+  border: 1px solid var(--c-card-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.metric-strip .metric-chip {
+  padding: 10px 14px;
+  text-align: center;
+  border-right: 1px dashed var(--c-gray-100);
+}
+.metric-strip .metric-chip:last-child { border-right: none; }
+.metric-strip .metric-chip .metric-label {
+  font-size: 10px;
+  color: var(--c-gray-500);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.metric-strip .metric-chip .metric-value {
+  font-size: 18px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  color: var(--c-gray-900);
+  font-family: Georgia, "Noto Serif SC", serif;
+}
+.metric-strip .metric-chip .metric-value.positive { color: var(--c-risk-green); }
+.metric-strip .metric-chip .metric-value.negative { color: var(--c-risk-red); }
+.metric-strip .metric-chip .metric-value.risk     { color: var(--c-risk-amber); }
+.metric-strip .metric-chip .metric-value.critical { color: var(--c-risk-red); font-weight: 900; }
+.metric-strip .metric-chip .metric-value.neutral  { color: var(--c-gray-900); }
+
+/* ---------- v4.6 兼容: .metric-sidebar/metric-row 保留 ---------- */
+.metric-sidebar {
+  background: var(--c-ivory);
+  border: 1px solid var(--c-card-border);
+  border-radius: var(--radius);
+  padding: 20px 18px;
+  box-shadow: var(--shadow);
+  margin: 0 0 24px;
+}
+.metric-sidebar h4 {
+  font-size: 11px;
+  color: var(--c-gray-500);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  margin: 0 0 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--c-card-border);
+}
+.metric-sidebar .metric-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--c-gray-100);
+  font-size: 13px;
+}
+.metric-sidebar .metric-row:last-child { border-bottom: none; }
+.metric-sidebar .metric-row span { color: var(--c-gray-700); }
+.metric-sidebar .metric-row strong { font-weight: 700; color: var(--c-gray-900); font-variant-numeric: tabular-nums; }
+.metric-sidebar .metric-row strong.positive { color: var(--c-risk-green); }
+.metric-sidebar .metric-row strong.negative { color: var(--c-risk-red); }
+.metric-sidebar .metric-row strong.risk     { color: var(--c-risk-amber); font-weight: 800; }
+.metric-sidebar .metric-row strong.critical { color: var(--c-risk-red);   font-weight: 800; }
+
+/* ---------- v4.6-4. 对标卡 ---------- */
+.comparison-card {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr 1fr;
+  gap: 8px;
+  background: var(--c-ivory);
+  border: 1px solid var(--c-card-border);
+  border-radius: var(--radius);
+  padding: 16px;
+  margin: 12px 0;
+}
+.comparison-card .cmp-col {
+  text-align: center;
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+.comparison-card .cmp-col.center {
+  background: rgba(201,100,66,0.06);
+  border: 2px solid var(--c-primary);
+}
+.comparison-card .cmp-label { font-size: 10px; color: var(--c-gray-500); text-transform: uppercase; letter-spacing: 1px; font-weight: 600; margin-bottom: 6px; }
+.comparison-card .cmp-value {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--c-gray-900);
+  font-variant-numeric: tabular-nums;
+  font-family: Georgia, "Noto Serif SC", serif;
+}
+.comparison-card .cmp-col.center .cmp-value { font-size: 24px; color: var(--c-primary); }
+.comparison-card .cmp-sub { font-size: 11px; color: var(--c-gray-500); margin-top: 4px; }
+.comparison-card .cmp-bar {
+  height: 6px; background: var(--c-gray-100); border-radius: 3px;
+  margin-top: 8px; position: relative; overflow: hidden;
+}
+.comparison-card .cmp-bar .fill {
+  position: absolute; left: 0; top: 0; bottom: 0;
+  background: linear-gradient(90deg, var(--c-primary), var(--c-accent));
+  border-radius: 3px;
+}
+
+/* ---------- v4.6-5. 深度链接 ---------- */
+.deep-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 1px 8px 1px 6px;
+  font-size: 11px;
+  background: rgba(201,100,66,0.08);
+  color: var(--c-primary);
+  border: 1px solid transparent;
+  border-radius: 12px;
+  text-decoration: none !important;
+  vertical-align: middle;
+  font-weight: 600;
+  transition: background .15s, border-color .15s;
+}
+.deep-link::before { content: '→'; opacity: .6; }
+.deep-link:hover {
+  background: var(--c-primary);
+  color: var(--c-ivory);
+  border-color: var(--c-primary);
+}
+/* Target 高亮 */
+.section:target {
+  animation: target-pulse 1.8s ease-out;
+  scroll-margin-top: 70px;
+}
+@keyframes target-pulse {
+  0%   { box-shadow: 0 0 0 4px var(--c-accent); }
+  100% { box-shadow: var(--shadow); }
+}
+
+/* ---------- v4.6-6. 微型热力图 ---------- */
+.heatmap-grid {
+  display: grid;
+  gap: 2px;
+  margin: 10px 0;
+  font-size: 10px;
+}
+.heatmap-grid .hm-cell {
+  aspect-ratio: 1 / 1;
+  min-height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-family: ui-monospace, monospace;
+  font-weight: 600;
+  color: var(--c-gray-900);
+}
+/* 5 档颜色映射 */
+.heatmap-grid .hm-cell.hm--2 { background: #fca5a5; color: #7f1d1d; }
+.heatmap-grid .hm-cell.hm--1 { background: #fed7aa; color: #7c2d12; }
+.heatmap-grid .hm-cell.hm-0  { background: var(--c-gray-100); }
+.heatmap-grid .hm-cell.hm-1  { background: #bbf7d0; color: #14532d; }
+.heatmap-grid .hm-cell.hm-2  { background: #4ade80; color: white; }
+.heatmap-grid .hm-cell:hover { transform: scale(1.1); }
+
+.heatmap-grid .hm-row-label {
+  font-size: 10px;
+  color: var(--c-gray-500);
+  text-align: right;
+  padding-right: 8px;
+  align-self: center;
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width: 768px) {
+  .container { padding: 20px 16px 60px; }
+  header.hero { padding: 24px 16px; }
+  header.hero h1 { font-size: 24px; }
+  .section { padding: 16px; }
+  .scenario-grid, .team-grid, .rating-trio { grid-template-columns: 1fr; }
+  .comparison-card { grid-template-columns: 1fr; }
+  .metric-strip { grid-template-columns: repeat(2, 1fr); }
+  .metric-strip .metric-chip { border-right: none; border-bottom: 1px dashed var(--c-gray-100); }
+  table { font-size: 12px; }
+  table th, table td { padding: 6px 8px; }
+}
+
+/* ---------- 打印 ---------- */
+@media print {
+  body { background: white; }
+  .top-nav { display: none; }
+  .section { box-shadow: none; border: 1px solid #ccc; break-inside: avoid; }
+  header.hero { break-inside: avoid; }
+  .metric-strip { break-inside: avoid; }
+  .deep-link { color: var(--c-gray-900); background: transparent; border-color: var(--c-gray-500); }
+  .deep-link::before { content: ''; }
+  .deep-link::after { content: ' (见对应章节)'; font-size: 10px; color: var(--c-gray-500); }
+}
+
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     Sticky 顶部导航栏 — 13 章节锚点
+     ============================================================ -->
+<nav class="top-nav">
+  <a href="../../index.html" class="nav-brand">AI 投资分析报告</a>
+  <a href="#exec-summary">摘要</a>
+  <a href="#scoring">评分</a>
+  <a href="#screening">快筛</a>
+  <a href="#fundamentals">基本面</a>
+  <a href="#industry">行业</a>
+  <a href="#detail">详细</a>
+  <a href="#sentiment">舆情</a>
+  <a href="#peers">对标</a>
+  <a href="#valuation">估值</a>
+  <a href="#qualitative">定性</a>
+  <a href="#gaps">缺口</a>
+  <a href="#sources">来源</a>
+</nav>
+
+<div class="container">
+
+<!-- ============================================================
+     Header Hero
+     ============================================================ -->
+<header class="hero">
+  <h1>阳光电源（300274.SZ）投资分析报告</h1>
+  <div class="subtitle">由 Claude Code 自动生成</div>
+  <div class="meta">
+    <span>📅 2026-05-15</span>
+    <span>💵 收盘 152.95 元</span>
+    <span>📊 PB 6.71 · 市值 3170.98 亿</span>
+    <span>🎯 估值锚 140.6 元</span>
+  </div>
+</header>
+
+<!-- ============================================================
+     v4.6.2 新增: Preamble 区 — 主报告第一个 ## 之前的 blockquote / 段落
+     (版本切换说明 / 数据截止注意 / meta 行的详细补充等),否则会丢失
+     ============================================================ -->
+<div class="preamble">
+<hr />
+</div>
+
+<!-- ============================================================
+     v4.6 新增: 前置评级三件套(Goldman 风格, hero 下方醒目位置)
+     ============================================================ -->
+<div class="rating-trio">
+
+  <div class="rating-card rating-card--score">
+    <div class="label">综合评分</div>
+    <div class="value">7.05 <span class="out-of">/ 10</span></div>
+    <div class="sub">看多方向</div>
+  </div>
+  <div class="rating-card rating-card--anchor">
+    <div class="label">估值锚(DCF 概率加权)</div>
+    <div class="value">140.6 元</div>
+    <div class="sub">相对当前 +8.8%</div>
+  </div>
+  <div class="rating-card rating-card--return negative">
+    <div class="label">2 年期望收益</div>
+    <div class="value negative">-8.1%</div>
+    <div class="sub">年化 -4.1%</div>
+  </div>
+</div>
+
+<!-- ============================================================
+     v4.6.1 关键指标横排面板(替代 v4.6 的粘性侧边栏,更简洁)
+     ============================================================ -->
+<div class="metric-strip">
+
+  <div class="metric-chip">
+    <div class="metric-label">PE (TTM)</div>
+    <div class="metric-value neutral">26.59</div>
+  </div>
+  <div class="metric-chip">
+    <div class="metric-label">PB</div>
+    <div class="metric-value neutral">6.71x</div>
+  </div>
+  <div class="metric-chip">
+    <div class="metric-label">市值</div>
+    <div class="metric-value neutral">3170.98 亿</div>
+  </div>
+  <div class="metric-chip">
+    <div class="metric-label">ROE</div>
+    <div class="metric-value positive">32.24%</div>
+  </div>
+  <div class="metric-chip">
+    <div class="metric-label">毛利率</div>
+    <div class="metric-value neutral">31.83%</div>
+  </div>
+  <div class="metric-chip">
+    <div class="metric-label">资产负债率</div>
+    <div class="metric-value neutral">57.51%</div>
+  </div>
+  <div class="metric-chip">
+    <div class="metric-label">股东户数</div>
+    <div class="metric-value neutral">294149</div>
+  </div>
+  <div class="metric-chip">
+    <div class="metric-label">家族持股</div>
+    <div class="metric-value neutral">43.18%</div>
+  </div>
+</div>
+
+<!-- ============================================================
+     §一 执行摘要
+     ============================================================ -->
+<div class="section" id="exec-summary">
+<h2>§一 执行摘要</h2>
+<p><strong>一句话结论</strong>: <strong>看多方向</strong> —— 阳光电源为全球光伏逆变器+储能双料龙头（均为全球出货量第一），护城河持续加深（BloombergNEF 可融资性六度蝉联榜首、海外收入占比突破 60%），FY2025 归母净利 134.61 亿（+21.97%）验证盈利能力；但当前股价 152.95 元已略高于 DCF 概率加权锚 140.6 元（+8.8%），且 2026Q1 营收-18.26%/净利-40.12% 暴露增速拐点，短期不宜追高，需等待 2026 中报验证 Q2 增速回正。</p>
+<p><strong>估值锚</strong>: <strong>概率加权 DCF ≈ 2,915 亿 / 140.6 元</strong>（4 情景；乐观 25% / 基准 45% / 悲观 25% / 最差 5%）。当前 152.95 元相对此锚 +8.8%。</p>
+<p><strong>综合评分</strong>: <strong>7.05/10</strong> · <strong>数据置信度</strong>: 中（2026Q1 仅季报数据，储能分地区毛利率未披露，AIDC 业务无量化指引）</p>
+<p><strong>三大风险（Top 3）</strong>:<br />
+1. 🟡 2026Q1 营收-18.26%/净利-40.12%，若 Q2 未回正则确认增速拐点——散户涌入高位接盘风险加剧 [audit: Shareholder Flow 🟡 户数+15.3%/年内+63.7%]<br />
+2. 🟡 储能毛利率从 36.5% 降至约 30%（2026Q1），行业竞争加剧（宁德时代/华为/比亚迪涌入）——参股公司价值波动风险叠加 [audit: Related-Party 🟡 长期股权投资+31.7%]<br />
+3. 🟡 海外收入占比 60.54% 暴露汇率风险（2026Q1 财务费用+654%）+ 出口退税取消 + 美国关税上调——前十大股东净减持 3,583 万股（指数基金被动调仓）[audit: Governance 🟡]</p>
+<p><strong>三大机会（Top 3）</strong>:<br />
+1. 储能业务 43GWh 全球第一，行业 CAGR 20-30%，PowerTitan 3.0 产品力领先<br />
+2. AIDC 第二增长曲线已布局（800V HVDC 谷歌测试），2027 年有望批量贡献收入<br />
+3. PE 26.59x 为行业最低（peer 中位数 63.07x），若 Q2 增速回正将触发龙头折价修复</p>
+<p><strong>核心非共识观点</strong>（Top 3）:<br />
+1. 2026Q1 双降是沙特大项目高基数一次性扰动而非结构性拐点——Q2-Q4 基数效应消退后增速将回正<br />
+2. 储能毛利率降至 30% 仍远高于行业平均，品牌溢价+bankability 壁垒未被侵蚀<br />
+3. 当前 PB 6.71 对应 ROE 32.24%，PB-ROE 线性关系显示市场隐含 ROE 将大幅下行——若 ROE 维持 25%+ 则 PB 仍有上行空间</p>
+<p><strong>投资方向综合判定</strong>: <strong>看多方向</strong>（3 框架中护城河"看多"+管理层"看多"+催化剂"中性"，≥2 同向看多；§三快筛 6 项均未触发）</p>
+<hr />
+</div>
+
+<!-- ============================================================
+     §二 评分总览（10 维度单列）
+     ============================================================ -->
+<div class="section" id="scoring">
+<h2>§二 事实评分总览（10 维度）</h2>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th style="text-align: center;">权重</th>
+<th style="text-align: center;">分数(0-10)</th>
+<th style="text-align: center;">加权</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. 市场规模与结构</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">0.70</td>
+</tr>
+<tr>
+<td>2. 商业模式</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">0.70</td>
+</tr>
+<tr>
+<td>3. 盈利能力</td>
+<td style="text-align: center;">15%</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">1.05</td>
+</tr>
+<tr>
+<td>4. 产品与技术</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">0.80</td>
+</tr>
+<tr>
+<td>5. 团队与管理层</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">0.60</td>
+</tr>
+<tr>
+<td>6. 市场进入与护城河</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">0.80</td>
+</tr>
+<tr>
+<td>7. 财务健康度</td>
+<td style="text-align: center;">15%</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">1.05</td>
+</tr>
+<tr>
+<td>8. 估值合理性</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">0.70</td>
+</tr>
+<tr>
+<td>9. 风险与治理</td>
+<td style="text-align: center;">5%</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">0.30</td>
+</tr>
+<tr>
+<td>10. 催化剂与时机</td>
+<td style="text-align: center;">5%</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">0.35</td>
+</tr>
+<tr>
+<td><strong>合计</strong></td>
+<td style="text-align: center;">100%</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: center;"><strong>7.05</strong></td>
+</tr>
+</tbody>
+</table>
+<p><em>详细证据见 §六。评分标尺见 <code>references/scoring-rubric.md</code>。表格严格 4 列（维度/权重/分数/加权分）——不添加"关键理由"列。</em></p>
+<hr />
+</div>
+
+<!-- ============================================================
+     §三 快速筛选
+     ============================================================ -->
+<div class="section" id="screening">
+<h2>§三 快速筛选（致命看空条款 - 6 项）</h2>
+<table>
+<thead>
+<tr>
+<th>条款</th>
+<th>阈值</th>
+<th>实际</th>
+<th style="text-align: center;">触发?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. 单季 / 单年度净利 &lt; -50%</td>
+<td>50%</td>
+<td>2026Q1 归母净利 YoY <strong>-40.12%</strong>；FY2025 归母净利 YoY <strong>+21.97%</strong> [Tushare:income]</td>
+<td style="text-align: center;">❌ 未触发</td>
+</tr>
+<tr>
+<td>2. 资产负债率 &gt; 70%</td>
+<td>70%</td>
+<td><strong>57.51%</strong>（2026Q1）[Tushare:fina_indicator]</td>
+<td style="text-align: center;">❌ 未触发</td>
+</tr>
+<tr>
+<td>3. 大股东累计质押 &gt; 50%</td>
+<td>50%</td>
+<td>曹仁贤累计质押约 <strong>3.30%</strong>（~2,083 万股 / 63,141 万股）[Tushare:pledge_detail]</td>
+<td style="text-align: center;">❌ 未触发</td>
+</tr>
+<tr>
+<td>4. 审计机构连续 2 年变更</td>
+<td>1 次</td>
+<td>无审计机构变更记录</td>
+<td style="text-align: center;">❌ 未触发</td>
+</tr>
+<tr>
+<td>5. CFO 非正常离任</td>
+<td>1 次</td>
+<td>无 CFO 非正常离任记录</td>
+<td style="text-align: center;">❌ 未触发</td>
+</tr>
+<tr>
+<td>6. <strong>Audit ≥ 2 个 🔴 红旗</strong></td>
+<td>2</td>
+<td><strong>0 个 🔴</strong>（审计报告: 0 致命 / 0 高 / 4 🟡 中 / 3 🟢 低）[audit_report.md §2]</td>
+<td style="text-align: center;">❌ 未触发</td>
+</tr>
+</tbody>
+</table>
+<p><strong>结果</strong>: ✅ <strong>PASS</strong> — 6 项致命看空条款均未触发，不触发快筛否决。审计报告无 🔴 致命红旗、无 🟠 高级红旗，4 个 🟡 中级黄旗（Governance 前十大股东净减持 / Shareholder Flow 户数+15.3% / Shareholder Flow 年内户数+63.7% / Related-Party 长期股权投资+31.7%）均为可管理风险，不构成致命看空依据。</p>
+<hr />
+</div>
+
+<!-- ============================================================
+     §四 公司基本面（含剥离后剩余资产清单若触发）
+     ============================================================ -->
+<div class="section" id="fundamentals">
+<h2>§四 公司基本面</h2>
+<h3>业务板块</h3>
+<table>
+<thead>
+<tr>
+<th>分部</th>
+<th style="text-align: right;">收入(亿)</th>
+<th style="text-align: right;">占比</th>
+<th style="text-align: right;">YoY</th>
+<th style="text-align: right;">毛利率</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>光伏逆变器等电力转换设备</td>
+<td style="text-align: right;">311.36</td>
+<td style="text-align: right;">34.91%</td>
+<td style="text-align: right;">+6.90%</td>
+<td style="text-align: right;">34.67%</td>
+<td>[Tushare:fina_mainbz]</td>
+</tr>
+<tr>
+<td>储能系统</td>
+<td style="text-align: right;">372.87</td>
+<td style="text-align: right;">41.81%</td>
+<td style="text-align: right;">+49.39%</td>
+<td style="text-align: right;">36.50%</td>
+<td>[Tushare:fina_mainbz]</td>
+</tr>
+<tr>
+<td>新能源建设开发</td>
+<td style="text-align: right;">165.59</td>
+<td style="text-align: right;">18.57%</td>
+<td style="text-align: right;">-21.16%</td>
+<td style="text-align: right;">14.50%</td>
+<td>[Tushare:fina_mainbz]</td>
+</tr>
+<tr>
+<td>光伏电站发电收入</td>
+<td style="text-align: right;">13.10</td>
+<td style="text-align: right;">1.47%</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">52.92%</td>
+<td>[Tushare:fina_mainbz]</td>
+</tr>
+<tr>
+<td>其他主营业务</td>
+<td style="text-align: right;">26.22</td>
+<td style="text-align: right;">2.94%</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">28.90%</td>
+<td>[Tushare:fina_mainbz]</td>
+</tr>
+<tr>
+<td>其他业务</td>
+<td style="text-align: right;">2.71</td>
+<td style="text-align: right;">0.30%</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">51.62%</td>
+<td>[Tushare:fina_mainbz]</td>
+</tr>
+<tr>
+<td><strong>合计</strong></td>
+<td style="text-align: right;"><strong>891.84</strong></td>
+<td style="text-align: right;"><strong>100%</strong></td>
+<td style="text-align: right;"><strong>+14.55%</strong></td>
+<td style="text-align: right;"><strong>31.83%</strong></td>
+<td>[Tushare:income]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>地区结构</strong>（FY2025）[Doc:annual_2025,P.33]:</p>
+<table>
+<thead>
+<tr>
+<th>地区</th>
+<th style="text-align: right;">收入(亿)</th>
+<th style="text-align: right;">占比</th>
+<th style="text-align: right;">YoY</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>中国大陆</td>
+<td style="text-align: right;">349.24</td>
+<td style="text-align: right;">39.46%</td>
+<td style="text-align: right;">-15.33%</td>
+</tr>
+<tr>
+<td>中国港澳台及海外</td>
+<td style="text-align: right;">539.90</td>
+<td style="text-align: right;">60.54%</td>
+<td style="text-align: right;">+48.76%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>核心结构变化</strong>: 储能系统首次超越光伏成为第一大业务（41.81% vs 34.91%），海外收入占比首次突破 60%，标志着公司从"中国光伏逆变器龙头"向"全球清洁能源平台"的结构性转型。[Doc:annual_2025,P.32-33]</p>
+<h3>最新经营动态（近 12 个月关键事件）</h3>
+<table>
+<thead>
+<tr>
+<th>时间</th>
+<th>事件</th>
+<th>影响</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2026-04</td>
+<td>2026Q1 营收 155.61 亿（YoY-18.26%），归母净利 22.91 亿（YoY-40.12%）</td>
+<td>利润大幅下滑，财务费用暴增 600%+（汇率波动）</td>
+<td>[Tushare:income]</td>
+</tr>
+<tr>
+<td>2026-04</td>
+<td>再次向港交所递交上市申请（第二次递表）</td>
+<td>H 股上市若成功将拓宽融资渠道、提升国际知名度</td>
+<td>[Web:sina.com.cn]</td>
+</tr>
+<tr>
+<td>2025-12</td>
+<td>FY2025 储能发货 43GWh，逆变器发货 143GW，均为全球第一</td>
+<td>龙头地位巩固</td>
+<td>[Doc:annual_2025,P.28-29]</td>
+</tr>
+<tr>
+<td>2025-12</td>
+<td>FY2025 每 10 股派 6.9 元，合计分红 14.16 亿</td>
+<td>股息率 1.31%，分红政策稳健</td>
+<td>[Doc:annual_2025,P.3]</td>
+</tr>
+<tr>
+<td>2025-10</td>
+<td>MSCI ESG Rating 升至 AAA</td>
+<td>ESG 评级最高档，利于吸引海外长线资金</td>
+<td>[Web:sungrowpower.com]</td>
+</tr>
+<tr>
+<td>2025-08</td>
+<td>成立 AIDC 事业部，布局 AI 数据中心电源</td>
+<td>第二增长曲线，计划 2026 年底推第一代产品</td>
+<td>[Web:sina.com.cn]</td>
+</tr>
+<tr>
+<td>2025-06</td>
+<td>2025H1 营收 435 亿（+40%），净利 77 亿（+56%）</td>
+<td>上半年高景气增长</td>
+<td>[Tushare:income]</td>
+</tr>
+<tr>
+<td>2025</td>
+<td>限制性股票激励计划首次授予第一归属期条件成就（853 人）</td>
+<td>管理层激励绑定</td>
+<td>[Web:cninfo.com.cn]</td>
+</tr>
+</tbody>
+</table>
+<h3>财务趋势表（近 3-5 年 + 最新季度）</h3>
+<!-- ★ 来源: data_snapshot.md §3 全部 14 期完整搬入 -->
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">期末</th>
+<th style="text-align: right;">营收(亿)</th>
+<th style="text-align: center;">营收 YoY</th>
+<th style="text-align: right;">毛利率%</th>
+<th style="text-align: right;">净利率%</th>
+<th style="text-align: right;">归母净利(亿)</th>
+<th style="text-align: center;">净利 YoY</th>
+<th style="text-align: right;">加权 ROE%</th>
+<th style="text-align: right;">资产负债率%</th>
+<th style="text-align: right;">OCF(亿)</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">20260331</td>
+<td style="text-align: right;">155.61</td>
+<td style="text-align: center;">-18.26%</td>
+<td style="text-align: right;">33.26</td>
+<td style="text-align: right;">14.43</td>
+<td style="text-align: right;">22.9127</td>
+<td style="text-align: center;">-40.12%</td>
+<td style="text-align: right;">4.81</td>
+<td style="text-align: right;">57.51</td>
+<td style="text-align: right;">12.0840</td>
+<td>[Tushare:income/fina_indicator]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20251231</td>
+<td style="text-align: right;">891.84</td>
+<td style="text-align: center;">+14.55%</td>
+<td style="text-align: right;">31.83</td>
+<td style="text-align: right;">15.17</td>
+<td style="text-align: right;">134.6128</td>
+<td style="text-align: center;">+21.97%</td>
+<td style="text-align: right;">32.24</td>
+<td style="text-align: right;">58.06</td>
+<td style="text-align: right;">169.1778</td>
+<td>[Tushare:income/fina_indicator]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20250930</td>
+<td style="text-align: right;">664.02</td>
+<td style="text-align: center;">+32.95%</td>
+<td style="text-align: right;">34.88</td>
+<td style="text-align: right;">18.00</td>
+<td style="text-align: right;">118.8122</td>
+<td style="text-align: center;">+56.34%</td>
+<td style="text-align: right;">29.02</td>
+<td style="text-align: right;">60.06</td>
+<td style="text-align: right;">99.1369</td>
+<td>[Tushare:income/fina_indicator]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20250630</td>
+<td style="text-align: right;">435.33</td>
+<td style="text-align: center;">+40.34%</td>
+<td style="text-align: right;">34.36</td>
+<td style="text-align: right;">17.99</td>
+<td style="text-align: right;">77.3458</td>
+<td style="text-align: center;">+55.97%</td>
+<td style="text-align: right;">19.47</td>
+<td style="text-align: right;">61.33</td>
+<td style="text-align: right;">34.3447</td>
+<td>[Tushare:income/fina_indicator]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20250331</td>
+<td style="text-align: right;">190.36</td>
+<td style="text-align: center;">+50.92%</td>
+<td style="text-align: right;">35.13</td>
+<td style="text-align: right;">19.93</td>
+<td style="text-align: right;">38.2616</td>
+<td style="text-align: center;">+82.52%</td>
+<td style="text-align: right;">9.85</td>
+<td style="text-align: right;">64.16</td>
+<td style="text-align: right;">17.9026</td>
+<td>[Tushare:income/fina_indicator]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20241231</td>
+<td style="text-align: right;">778.57</td>
+<td style="text-align: center;">+7.76%</td>
+<td style="text-align: right;">29.94</td>
+<td style="text-align: right;">14.47</td>
+<td style="text-align: right;">110.3628</td>
+<td style="text-align: center;">+16.92%</td>
+<td style="text-align: right;">34.16</td>
+<td style="text-align: right;">65.07</td>
+<td style="text-align: right;">120.6833</td>
+<td>[Tushare:income/fina_indicator]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20240930</td>
+<td style="text-align: right;">499.46</td>
+<td style="text-align: center;">+7.61%</td>
+<td style="text-align: right;">31.32</td>
+<td style="text-align: right;">15.47</td>
+<td style="text-align: right;">75.9955</td>
+<td style="text-align: center;">+5.21%</td>
+<td style="text-align: right;">24.57</td>
+<td style="text-align: right;">65.77</td>
+<td style="text-align: right;">8.0394</td>
+<td>[Tushare:income/fina_indicator]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20240630</td>
+<td style="text-align: right;">310.20</td>
+<td style="text-align: center;">+8.38%</td>
+<td style="text-align: right;">32.42</td>
+<td style="text-align: right;">16.27</td>
+<td style="text-align: right;">49.5907</td>
+<td style="text-align: center;">+13.89%</td>
+<td style="text-align: right;">16.78</td>
+<td style="text-align: right;">64.67</td>
+<td style="text-align: right;">-26.0371</td>
+<td>[Tushare:income/fina_indicator]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20240331</td>
+<td style="text-align: right;">126.14</td>
+<td style="text-align: center;">+0.26%</td>
+<td style="text-align: right;">36.67</td>
+<td style="text-align: right;">16.71</td>
+<td style="text-align: right;">20.9632</td>
+<td style="text-align: center;">+39.05%</td>
+<td style="text-align: right;">7.29</td>
+<td style="text-align: right;">62.75</td>
+<td style="text-align: right;">-4.8774</td>
+<td>[Tushare:income/fina_indicator]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20231231</td>
+<td style="text-align: right;">722.51</td>
+<td style="text-align: center;">+79.47%</td>
+<td style="text-align: right;">30.36</td>
+<td style="text-align: right;">13.30</td>
+<td style="text-align: right;">94.3956</td>
+<td style="text-align: center;">+162.69%</td>
+<td style="text-align: right;">40.71</td>
+<td style="text-align: right;">64.46</td>
+<td style="text-align: right;">69.8184</td>
+<td>[Tushare:income/fina_indicator]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20230930</td>
+<td style="text-align: right;">464.15</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: right;">31.32</td>
+<td style="text-align: right;">15.80</td>
+<td style="text-align: right;">72.2298</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: right;">32.68</td>
+<td style="text-align: right;">66.32</td>
+<td style="text-align: right;">45.5230</td>
+<td>[Tushare:income/fina_indicator]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20230630</td>
+<td style="text-align: right;">286.22</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: right;">29.42</td>
+<td style="text-align: right;">15.41</td>
+<td style="text-align: right;">43.5408</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: right;">20.80</td>
+<td style="text-align: right;">66.34</td>
+<td style="text-align: right;">47.6951</td>
+<td>[Tushare:income/fina_indicator]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20230331</td>
+<td style="text-align: right;">125.80</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: right;">28.00</td>
+<td style="text-align: right;">12.16</td>
+<td style="text-align: right;">15.0765</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: right;">7.76</td>
+<td style="text-align: right;">66.85</td>
+<td style="text-align: right;">-7.9393</td>
+<td>[Tushare:income/fina_indicator]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20221231</td>
+<td style="text-align: right;">402.57</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: right;">–</td>
+<td style="text-align: right;">–</td>
+<td style="text-align: right;">35.9341</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: right;">–</td>
+<td style="text-align: right;">–</td>
+<td style="text-align: right;">12.1050</td>
+<td>[Tushare:income/fina_indicator]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>趋势解读</strong>:</p>
+<ol>
+<li><strong>营收三年复合增速 30.4%</strong>，净利三年 CAGR 55.3%，但 2026Q1 出现营收-18.26%、净利-40.12% 的显著拐点 [Tushare:income]</li>
+<li><strong>毛利率中枢上移</strong>: 从 2022 年水平逐步提升至 31-35% 区间，反映储能高毛利业务占比提升及品牌溢价 [Doc:annual_2025,P.27]</li>
+<li><strong>ROE 趋势下行</strong>: 40.71%（2023）→ 34.16%（2024）→ 32.24%（2025），DuPont 分解显示杠杆从 3.12x 降至 2.55x 是主因（主动降杠杆），净利率从 14.18% 提升至 15.09% 部分对冲 [Tushare:fina_indicator]</li>
+<li><strong>现金流质量优秀</strong>: FY2025 经营现金流 169.18 亿 &gt; 归母净利 134.61 亿，OCF/净利 = 1.26x；自由现金流 139.10 亿，FCF Yield 4.39% [Tushare:cashflow]</li>
+<li><strong>资产负债率持续下降</strong>: 从 66.85%（2023Q1）降至 57.51%（2026Q1），短期借款-56.19%、长期借款-47.22%，主动去杠杆明显 [Tushare:balancesheet]</li>
+</ol>
+<p><strong>⚠️ 2026Q1 重大风险信号</strong>: 归母净利 YoY-40.12%，原因拆分——① 2025Q1 基数极高（沙特大项目约 40 亿确收）；② 家庭光伏萎缩叠加抢装高基数；③ 美国关税影响签单滞后；④ 财务费用从-0.59 亿暴增至 3.28 亿（汇率波动）；⑤ 信用减值损失 YoY+361%（应收坏账计提大增）[Tushare:income][Web:sina.com.cn]</p>
+<h3>管理层前瞻信号（<code>forecast_vip</code> 解读）</h3>
+<p>forecast_vip 表无数据（0 条记录），阳光电源未发布业绩预告。[Tushare:forecast_vip]</p>
+<p>替代前瞻信号：<br />
+- <strong>合同负债 106.55 亿（+6.3%）</strong>: 预收款稳增，在手订单有保障 [Doc:annual_2025,P.39]<br />
+- <strong>预付款 2026Q1 较 2025 年末增长 201%</strong>: 锁定电芯采购，显示管理层对储能需求乐观 [Web:ifeng.com]<br />
+- <strong>港股上市递表</strong>: 第二次递交，融资意愿强烈，可能为海外扩张储备资金 [Web:sina.com.cn]<br />
+- <strong>AIDC 事业部成立</strong>: 布局 2027 年批量出货的 AI 数据中心电源新业务 [Web:sina.com.cn]</p>
+<h3>主力控盘与筹码分析（v4.4 — Read <code>capital_flow.md</code>; v4.8 — 同时 Read <code>data_snapshot.md</code> §5/§6/§7）</h3>
+<p><strong>控盘综合判定</strong> [Tushare:top10_holders/stk_holdernumber]:</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>信号</th>
+<th>解读</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>主力控盘度（总股本口径）</td>
+<td>🟡 中度控盘</td>
+<td>前 10 大全体股东合计 <strong>43.18%</strong></td>
+</tr>
+<tr>
+<td>实控人家族合计持股</td>
+<td>🟡 家族相对控盘</td>
+<td>曹仁贤家族合计 <strong>30.46%</strong></td>
+</tr>
+<tr>
+<td>筹码集中度（流通股动态）</td>
+<td>🟢 筹码集中（主力吸筹）</td>
+<td>户数环比 -5.78%</td>
+</tr>
+<tr>
+<td>陆股通（北向）</td>
+<td>🟢 外资近一季加仓</td>
+<td>持仓 8.3%，季度环比 +0.41pp</td>
+</tr>
+<tr>
+<td>两融杠杆</td>
+<td>⚪ 平稳</td>
+<td>融资余额相对 60 日中位 -19.48%</td>
+</tr>
+<tr>
+<td>主力资金流</td>
+<td>⚪ 拉锯</td>
+<td>近 20 日净流入天数 8/20</td>
+</tr>
+<tr>
+<td>大宗交易</td>
+<td>⚪ 接近现价</td>
+<td>3 笔累计 3,587 万元，折价 -4.56%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>北向资金加权建仓成本</strong>: 162.06 元，当前价 152.95 元，外资浮亏 -5.62% [Tushare:hk_hold/daily]</p>
+<h4>十大股东（2 期对比）</h4>
+<p><strong>报告期: 20260331</strong> [Tushare:top10_holders]</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>股东</th>
+<th style="text-align: right;">持股数(万股)</th>
+<th style="text-align: right;">持股比例(%)</th>
+<th style="text-align: right;">占流通比例(%)</th>
+<th style="text-align: right;">期间变动(万股)</th>
+<th style="text-align: center;">股东类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>曹仁贤</td>
+<td style="text-align: right;">63,141.12</td>
+<td style="text-align: right;">30.46</td>
+<td style="text-align: right;">9.93</td>
+<td style="text-align: right;">+0.00</td>
+<td style="text-align: center;">自然人</td>
+</tr>
+<tr>
+<td>2</td>
+<td>香港中央结算有限公司</td>
+<td style="text-align: right;">17,225.82</td>
+<td style="text-align: right;">8.31</td>
+<td style="text-align: right;">10.84</td>
+<td style="text-align: right;">+864.55</td>
+<td style="text-align: center;">一般企业</td>
+</tr>
+<tr>
+<td>3</td>
+<td>工行-易方达创业板 ETF</td>
+<td style="text-align: right;">1,443.65</td>
+<td style="text-align: right;">0.70</td>
+<td style="text-align: right;">0.91</td>
+<td style="text-align: right;">-1,385.12</td>
+<td style="text-align: center;">开放式投资基金</td>
+</tr>
+<tr>
+<td>4</td>
+<td>中国人寿-传统-普通保险产品</td>
+<td style="text-align: right;">1,307.42</td>
+<td style="text-align: right;">0.63</td>
+<td style="text-align: right;">0.82</td>
+<td style="text-align: right;">-67.89</td>
+<td style="text-align: center;">保险投资组合</td>
+</tr>
+<tr>
+<td>5</td>
+<td>郑桂标</td>
+<td style="text-align: right;">1,301.23</td>
+<td style="text-align: right;">0.63</td>
+<td style="text-align: right;">0.82</td>
+<td style="text-align: right;">+0.00</td>
+<td style="text-align: center;">自然人</td>
+</tr>
+<tr>
+<td>6</td>
+<td>麒麟亚洲控股有限公司</td>
+<td style="text-align: right;">1,201.94</td>
+<td style="text-align: right;">0.58</td>
+<td style="text-align: right;">0.76</td>
+<td style="text-align: right;">+0.00</td>
+<td style="text-align: center;">一般企业</td>
+</tr>
+<tr>
+<td>7</td>
+<td>工行-华泰柏瑞沪深300 ETF</td>
+<td style="text-align: right;">1,165.32</td>
+<td style="text-align: right;">0.56</td>
+<td style="text-align: right;">0.73</td>
+<td style="text-align: right;">-1,230.85</td>
+<td style="text-align: center;">开放式投资基金</td>
+</tr>
+<tr>
+<td>8</td>
+<td>赵为</td>
+<td style="text-align: right;">975.64</td>
+<td style="text-align: right;">0.47</td>
+<td style="text-align: right;">0.15</td>
+<td style="text-align: right;">–</td>
+<td style="text-align: center;">自然人</td>
+</tr>
+<tr>
+<td>9</td>
+<td>平安资管-夏荷21号</td>
+<td style="text-align: right;">951.97</td>
+<td style="text-align: right;">0.46</td>
+<td style="text-align: right;">0.60</td>
+<td style="text-align: right;">–</td>
+<td style="text-align: center;">保险资管产品</td>
+</tr>
+<tr>
+<td>10</td>
+<td>建行-易方达沪深300 ETF</td>
+<td style="text-align: right;">813.05</td>
+<td style="text-align: right;">0.39</td>
+<td style="text-align: right;">0.51</td>
+<td style="text-align: right;">-898.88</td>
+<td style="text-align: center;">开放式投资基金</td>
+</tr>
+</tbody>
+</table>
+<p><strong>报告期: 20251231</strong> [Tushare:top10_holders]</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>股东</th>
+<th style="text-align: right;">持股数(万股)</th>
+<th style="text-align: right;">持股比例(%)</th>
+<th style="text-align: right;">占流通比例(%)</th>
+<th style="text-align: right;">期间变动(万股)</th>
+<th style="text-align: center;">股东类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>曹仁贤</td>
+<td style="text-align: right;">63,141.12</td>
+<td style="text-align: right;">30.46</td>
+<td style="text-align: right;">9.93</td>
+<td style="text-align: right;">+0.00</td>
+<td style="text-align: center;">自然人</td>
+</tr>
+<tr>
+<td>2</td>
+<td>香港中央结算有限公司</td>
+<td style="text-align: right;">16,361.27</td>
+<td style="text-align: right;">7.89</td>
+<td style="text-align: right;">10.29</td>
+<td style="text-align: right;">+1,150.45</td>
+<td style="text-align: center;">一般企业</td>
+</tr>
+<tr>
+<td>3</td>
+<td>工行-易方达创业板 ETF</td>
+<td style="text-align: right;">2,828.77</td>
+<td style="text-align: right;">1.36</td>
+<td style="text-align: right;">1.78</td>
+<td style="text-align: right;">-288.65</td>
+<td style="text-align: center;">开放式投资基金</td>
+</tr>
+<tr>
+<td>4</td>
+<td>工行-华泰柏瑞沪深300 ETF</td>
+<td style="text-align: right;">2,396.18</td>
+<td style="text-align: right;">1.16</td>
+<td style="text-align: right;">1.51</td>
+<td style="text-align: right;">-73.24</td>
+<td style="text-align: center;">开放式投资基金</td>
+</tr>
+<tr>
+<td>5</td>
+<td>建行-易方达沪深300 ETF</td>
+<td style="text-align: right;">1,711.92</td>
+<td style="text-align: right;">0.83</td>
+<td style="text-align: right;">1.08</td>
+<td style="text-align: right;">-74.34</td>
+<td style="text-align: center;">开放式投资基金</td>
+</tr>
+<tr>
+<td>6</td>
+<td>中国人寿-传统-普通保险产品</td>
+<td style="text-align: right;">1,375.30</td>
+<td style="text-align: right;">0.66</td>
+<td style="text-align: right;">0.87</td>
+<td style="text-align: right;">+96.12</td>
+<td style="text-align: center;">保险投资组合</td>
+</tr>
+<tr>
+<td>7</td>
+<td>工行-华夏沪深300 ETF</td>
+<td style="text-align: right;">1,304.45</td>
+<td style="text-align: right;">0.63</td>
+<td style="text-align: right;">0.82</td>
+<td style="text-align: right;">-28.42</td>
+<td style="text-align: center;">开放式投资基金</td>
+</tr>
+<tr>
+<td>8</td>
+<td>郑桂标</td>
+<td style="text-align: right;">1,301.23</td>
+<td style="text-align: right;">0.63</td>
+<td style="text-align: right;">0.82</td>
+<td style="text-align: right;">-53.50</td>
+<td style="text-align: center;">自然人</td>
+</tr>
+<tr>
+<td>9</td>
+<td>麒麟亚洲控股有限公司</td>
+<td style="text-align: right;">1,201.94</td>
+<td style="text-align: right;">0.58</td>
+<td style="text-align: right;">0.76</td>
+<td style="text-align: right;">-42.50</td>
+<td style="text-align: center;">一般企业</td>
+</tr>
+<tr>
+<td>10</td>
+<td>中行-嘉实沪深300 ETF</td>
+<td style="text-align: right;">1,125.20</td>
+<td style="text-align: right;">0.54</td>
+<td style="text-align: right;">0.71</td>
+<td style="text-align: right;">–</td>
+<td style="text-align: center;">开放式投资基金</td>
+</tr>
+</tbody>
+</table>
+<p><strong>变动分析</strong>: 20251231→20260331 最显著变化——① 香港中央结算（北向资金）持续加仓（+864 万股），占比从 7.89% 升至 8.31%；② 指数基金大幅减仓，易方达创业板 ETF 减持 1,385 万股（-49%），华泰柏瑞沪深 300 ETF 减持 1,231 万股（-51%），反映被动资金因 Q4 业绩下滑被动调仓；③ 赵为、平安资管-夏荷 21 号为新进前十大。</p>
+<h4>十大流通股东（20260331）</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>股东</th>
+<th style="text-align: right;">持股数(万股)</th>
+<th style="text-align: right;">持股比例(%)</th>
+<th style="text-align: right;">占流通比例(%)</th>
+<th style="text-align: right;">期间变动(万股)</th>
+<th style="text-align: center;">股东类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>香港中央结算有限公司</td>
+<td style="text-align: right;">17,225.82</td>
+<td style="text-align: right;">8.31</td>
+<td style="text-align: right;">10.84</td>
+<td style="text-align: right;">+864.55</td>
+<td style="text-align: center;">一般企业</td>
+</tr>
+<tr>
+<td>2</td>
+<td>曹仁贤</td>
+<td style="text-align: right;">15,785.28</td>
+<td style="text-align: right;">7.61</td>
+<td style="text-align: right;">9.93</td>
+<td style="text-align: right;">+0.00</td>
+<td style="text-align: center;">自然人</td>
+</tr>
+<tr>
+<td>3</td>
+<td>工行-易方达创业板 ETF</td>
+<td style="text-align: right;">1,443.65</td>
+<td style="text-align: right;">0.70</td>
+<td style="text-align: right;">0.91</td>
+<td style="text-align: right;">-1,385.12</td>
+<td style="text-align: center;">开放式投资基金</td>
+</tr>
+<tr>
+<td>4</td>
+<td>中国人寿-传统-普通保险产品</td>
+<td style="text-align: right;">1,307.42</td>
+<td style="text-align: right;">0.63</td>
+<td style="text-align: right;">0.82</td>
+<td style="text-align: right;">-67.89</td>
+<td style="text-align: center;">保险投资组合</td>
+</tr>
+<tr>
+<td>5</td>
+<td>郑桂标</td>
+<td style="text-align: right;">1,301.23</td>
+<td style="text-align: right;">0.63</td>
+<td style="text-align: right;">0.82</td>
+<td style="text-align: right;">+0.00</td>
+<td style="text-align: center;">自然人</td>
+</tr>
+<tr>
+<td>6</td>
+<td>麒麟亚洲控股有限公司</td>
+<td style="text-align: right;">1,201.94</td>
+<td style="text-align: right;">0.58</td>
+<td style="text-align: right;">0.76</td>
+<td style="text-align: right;">+0.00</td>
+<td style="text-align: center;">一般企业</td>
+</tr>
+<tr>
+<td>7</td>
+<td>工行-华泰柏瑞沪深300 ETF</td>
+<td style="text-align: right;">1,165.32</td>
+<td style="text-align: right;">0.56</td>
+<td style="text-align: right;">0.73</td>
+<td style="text-align: right;">-1,230.85</td>
+<td style="text-align: center;">开放式投资基金</td>
+</tr>
+<tr>
+<td>8</td>
+<td>赵为</td>
+<td style="text-align: right;">975.64</td>
+<td style="text-align: right;">0.47</td>
+<td style="text-align: right;">0.61</td>
+<td style="text-align: right;">–</td>
+<td style="text-align: center;">自然人</td>
+</tr>
+<tr>
+<td>9</td>
+<td>平安资管-夏荷21号</td>
+<td style="text-align: right;">951.97</td>
+<td style="text-align: right;">0.46</td>
+<td style="text-align: right;">0.60</td>
+<td style="text-align: right;">–</td>
+<td style="text-align: center;">保险资管产品</td>
+</tr>
+<tr>
+<td>10</td>
+<td>建行-易方达沪深300 ETF</td>
+<td style="text-align: right;">813.05</td>
+<td style="text-align: right;">0.39</td>
+<td style="text-align: right;">0.51</td>
+<td style="text-align: right;">-898.88</td>
+<td style="text-align: center;">开放式投资基金</td>
+</tr>
+</tbody>
+</table>
+<p>[Tushare:top10_floatholders]</p>
+<h4>筹码集中度 2×2 矩阵</h4>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th style="text-align: center;">当前期（20260331）</th>
+<th style="text-align: center;">上期（20251231）</th>
+<th style="text-align: center;">变动</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>股东户数</td>
+<td style="text-align: center;">294,149</td>
+<td style="text-align: center;">255,128</td>
+<td style="text-align: center;">+15.3%</td>
+</tr>
+<tr>
+<td>户均持股（股）</td>
+<td style="text-align: center;">4,869</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">+6.13% 环比</td>
+</tr>
+</tbody>
+</table>
+<p>[Tushare:stk_holdernumber]</p>
+<p><strong>判定</strong>: 从 data_snapshot §8 看，20260331 有两条记录（294,149 和 312,188），取较新值 294,149 户，环比上期 312,188 为 -5.78%。capital_flow.md 判定为 🟢 筹码集中（主力吸筹）。但 audit_report 警示 20251231→20260331 户数 +15.3%（255,128→294,149），长期看 2025 年 6 月以来户数从 179,692 激增至 294,149（+63.7%），散户涌入信号明确。</p>
+<p><strong>综合研判</strong>: 短期环比筹码微集中，但中期看户数持续膨胀、指数基金大幅减仓，机构换手散户的趋势需要警惕。北向资金逆势加仓是唯一积极信号。</p>
+<h4>质押明细</h4>
+<p>曹仁贤（实控人）有 30 条 active 状态质押记录，但每笔质押数量极小（0.01-0.12 万股），累计质押估计约 2,083 万股，占其持股 63,141 万股的 <strong>3.30%</strong>，占总股本比例微乎其微。[Tushare:pledge_detail]</p>
+<p><strong>代表性质押记录</strong>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">公告日</th>
+<th>质押方</th>
+<th style="text-align: center;">起始日</th>
+<th style="text-align: center;">期末日</th>
+<th style="text-align: right;">质押数(万股)</th>
+<th style="text-align: center;">状态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">20260430</td>
+<td>国泰海通证券</td>
+<td style="text-align: center;">20260428</td>
+<td style="text-align: center;">20270428</td>
+<td style="text-align: right;">0.06</td>
+<td style="text-align: center;">active</td>
+</tr>
+<tr>
+<td style="text-align: center;">20250519</td>
+<td>中国银河证券</td>
+<td style="text-align: center;">20250515</td>
+<td style="text-align: center;">20270514</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: center;">active</td>
+</tr>
+<tr>
+<td style="text-align: center;">20251001</td>
+<td>招商证券</td>
+<td style="text-align: center;">20230926</td>
+<td style="text-align: center;">20260924</td>
+<td style="text-align: right;">0.06</td>
+<td style="text-align: center;">active</td>
+</tr>
+<tr>
+<td style="text-align: center;">20250708</td>
+<td>中信证券</td>
+<td style="text-align: center;">20231211</td>
+<td style="text-align: center;">20261211</td>
+<td style="text-align: right;">0.03</td>
+<td style="text-align: center;">active</td>
+</tr>
+<tr>
+<td style="text-align: center;">20241114</td>
+<td>招商证券</td>
+<td style="text-align: center;">20231113</td>
+<td style="text-align: center;">20251113</td>
+<td style="text-align: right;">0.02</td>
+<td style="text-align: center;">active</td>
+</tr>
+</tbody>
+</table>
+<p>[Tushare:pledge_detail]</p>
+<p><strong>质押风险判定</strong>: 实控人质押比例极低（约 3.3%），远低于 50% 致命红旗线，不构成风险。质押更可能用于个人融资而非公司经营压力。</p>
+<h3>★ 若核心资产被剥离的剩余资产清单（v4.2 触发时必填）</h3>
+<p><strong>触发判定</strong>: 未触发。阳光电源核心资产完整，光伏逆变器+储能系统+新能源开发三大业务板块均在上市公司体内运营，无重大资产剥离。商誉仅 2.97 亿（占总资产 0.24%），无 SOTP 分拆必要。[Tushare:balancesheet]</p>
+<hr />
+</div>
+
+<!-- ============================================================
+     §五 行业与竞争格局
+     ============================================================ -->
+<div class="section" id="industry">
+<h2>§五 行业与竞争格局</h2>
+<h3>行业规模与趋势</h3>
+<p><strong>光伏逆变器行业</strong> [Doc:annual_2025,P.6-7]:</p>
+<ul>
+<li><strong>全球光伏新增装机</strong>: 2025 年 513GWac（+12%），其中国内 317GWac（+14%），海外 196GWac（+8%）[Doc:annual_2025,P.6]</li>
+<li><strong>市场规模</strong>: 逆变器作为光伏系统核心设备，全球市场规模约 300 亿美元（2025 年），预计 2030 年达 500 亿美元 [Web:mordorintelligence.com]</li>
+<li><strong>⚠️ 2026 年逆变器需求预警</strong>: Wood Mackenzie 预警 2026 年全球光伏逆变器需求暴跌 9%，主要受欧洲库存消化、美国关税不确定性及部分市场补贴退坡影响 [Web:csisolar.com]</li>
+<li><strong>结构性变化</strong>: 组串式逆变器持续替代集中式，大功率组串（400kW+）渗透率提升；微型逆变器在户用市场占比扩大</li>
+</ul>
+<p><strong>储能行业</strong> [Doc:annual_2025,P.6-7]:</p>
+<ul>
+<li><strong>全球锂电储能新增装机</strong>: 2025 年 317GWh（+74%），其中国内 178GWh（+82%），海外 139GWh（+65%）[Doc:annual_2025,P.6]</li>
+<li><strong>增长驱动</strong>: 电力系统灵活性需求、可再生能源配储政策、锂电池成本下降</li>
+<li><strong>保守/乐观预期</strong>: 全球储能复合增长率 20%-30%（2025-2030）[Web:ditan.com]</li>
+<li><strong>价格趋势</strong>: 储能系统价格持续下滑，毛利率面临长期压力；阳光电源 2026Q1 储能毛利率已降至约 30% [Web:sina.com.cn]</li>
+</ul>
+<p><strong>AIDC（AI 数据中心电源）新兴市场</strong> [Web:sina.com.cn]:</p>
+<ul>
+<li>AI 算力爆发推动数据中心绿电需求，全球数据中心电力消耗预计 2030 年翻倍</li>
+<li>阳光电源已布局 800V HVDC 模块，在美国谷歌数据中心测试</li>
+<li>预计 2027 年开始批量贡献收入，短期无法量化</li>
+</ul>
+<p><strong>政策环境</strong>:<br />
+- 光伏/电池出口退税 2025 年取消，储能电池退税 2027 年取消 [Web:cnfinance.cn]<br />
+- 美国 301 关税上调影响光伏与储能出口 [Doc:annual_2025,P.43]<br />
+- 中国 136 号文推动新能源全面入市 [Doc:annual_2025,P.44]</p>
+<h3>Porter 五力分析（集中在本节，不重复到 §六 维度 3）</h3>
+<table>
+<thead>
+<tr>
+<th>力量</th>
+<th style="text-align: center;">强度</th>
+<th>分析</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>供应商议价力</strong></td>
+<td style="text-align: center;">🟡 中</td>
+<td>电芯供应商（宁德时代、比亚迪等）集中度高，但阳光电源规模优势带来一定议价权；IGBT/碳化硅等核心器件依赖进口，供应链风险存在 [Doc:annual_2025,P.43]</td>
+</tr>
+<tr>
+<td><strong>买方议价力</strong></td>
+<td style="text-align: center;">🟡 中</td>
+<td>下游客户分散（全球电力公司、EPC、户用安装商），但大型项目（如沙特 NEOM）单笔金额大，客户对价格敏感度提升</td>
+</tr>
+<tr>
+<td><strong>新进入者威胁</strong></td>
+<td style="text-align: center;">🟢 低</td>
+<td>逆变器/储能系统对可融资性（bankability）要求极高，阳光电源蝉联 BNEF 榜首六次，品牌+全球认证+售后网络构成壁垒；但储能赛道吸引宁德时代、华为等跨界巨头 [Doc:annual_2025,P.28]</td>
+</tr>
+<tr>
+<td><strong>替代品威胁</strong></td>
+<td style="text-align: center;">🟢 低</td>
+<td>短期内无替代品可取代光伏逆变器和锂电储能的核心地位；长期看钠电池可能替代部分锂电储能场景，但尚未规模化</td>
+</tr>
+<tr>
+<td><strong>行业竞争强度</strong></td>
+<td style="text-align: center;">🔴 高</td>
+<td>逆变器行业经历"反内卷"但价格仍在下滑；储能行业众多企业涌入，产能过剩风险加大；华为 FusionSolar 在逆变器领域、宁德时代在储能领域均为强劲对手 [Doc:annual_2025,P.43]</td>
+</tr>
+</tbody>
+</table>
+<h3>关键竞品对标</h3>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th style="text-align: center;">阳光电源 300274</th>
+<th style="text-align: center;">德业股份 605117</th>
+<th style="text-align: center;">锦浪科技 300763</th>
+<th style="text-align: center;">固德威 688390</th>
+<th style="text-align: center;">上能电气 300827</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>市值（亿）</td>
+<td style="text-align: center;">3,170.98</td>
+<td style="text-align: center;">1,367.00</td>
+<td style="text-align: center;">384.53</td>
+<td style="text-align: center;">281.22</td>
+<td style="text-align: center;">215.88</td>
+<td>[Tushare:daily_basic]</td>
+</tr>
+<tr>
+<td>PE TTM</td>
+<td style="text-align: center;">26.59</td>
+<td style="text-align: center;">37.42</td>
+<td style="text-align: center;">63.07</td>
+<td style="text-align: center;">106.36</td>
+<td style="text-align: center;">45.66</td>
+<td>[Tushare:daily_basic]</td>
+</tr>
+<tr>
+<td>PB</td>
+<td style="text-align: center;">6.71</td>
+<td style="text-align: center;">11.82</td>
+<td style="text-align: center;">4.25</td>
+<td style="text-align: center;">9.89</td>
+<td style="text-align: center;">5.02</td>
+<td>[Tushare:daily_basic]</td>
+</tr>
+<tr>
+<td>ROE(%)</td>
+<td style="text-align: center;">7.29</td>
+<td style="text-align: center;">7.90</td>
+<td style="text-align: center;">0.26</td>
+<td style="text-align: center;">-0.97</td>
+<td style="text-align: center;">2.86</td>
+<td>[Tushare:fina_indicator]</td>
+</tr>
+<tr>
+<td>毛利率(%)</td>
+<td style="text-align: center;">36.67</td>
+<td style="text-align: center;">36.33</td>
+<td style="text-align: center;">24.24</td>
+<td style="text-align: center;">27.47</td>
+<td style="text-align: center;">23.55</td>
+<td>[Tushare:fina_indicator]</td>
+</tr>
+<tr>
+<td>净利率(%)</td>
+<td style="text-align: center;">16.71</td>
+<td style="text-align: center;">22.98</td>
+<td style="text-align: center;">1.45</td>
+<td style="text-align: center;">-1.70</td>
+<td style="text-align: center;">7.11</td>
+<td>[Tushare:fina_indicator]</td>
+</tr>
+<tr>
+<td>资产负债率(%)</td>
+<td style="text-align: center;">62.75</td>
+<td style="text-align: center;">49.82</td>
+<td style="text-align: center;">64.35</td>
+<td style="text-align: center;">54.75</td>
+<td style="text-align: center;">70.82</td>
+<td>[Tushare:fina_indicator]</td>
+</tr>
+<tr>
+<td>营收 YoY(%)</td>
+<td style="text-align: center;">-18.26</td>
+<td style="text-align: center;">+73.77</td>
+<td style="text-align: center;">0.00</td>
+<td style="text-align: center;">0.00</td>
+<td style="text-align: center;">+28.95</td>
+<td>[Tushare:fina_indicator]</td>
+</tr>
+<tr>
+<td>股息率(%)</td>
+<td style="text-align: center;">1.31</td>
+<td style="text-align: center;">1.96</td>
+<td style="text-align: center;">0.21</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: center;">0.20</td>
+<td>[Tushare:daily_basic]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>竞品对标核心洞察</strong>:</p>
+<ol>
+<li><strong>估值洼地</strong>: 阳光电源 PE 26.59x 为行业最低（peer 中位数 63.07x），市值 3,171 亿是第二名德业股份的 2.3 倍，龙头折价明显 [Tushare:daily_basic]</li>
+<li><strong>盈利能力领先</strong>: 毛利率 36.67% 与德业股份并列第一，ROE 7.29% 位列第二，净利率 16.71% 仅次于德业的 22.98% [Tushare:fina_indicator]</li>
+<li><strong>增速拖后腿</strong>: 2026Q1 营收 YoY-18.26% 为 peer 中最差，德业股份+73.77%、上能电气+28.95% 远超阳光电源，反映高基数效应和沙特大项目一次性因素 [Tushare:income]</li>
+<li><strong>负债率中性</strong>: 资产负债率 62.75% 处于 peer 中间位置，低于上能电气（70.82%）和锦浪科技（64.35%），但高于德业股份（49.82%）和固德威（54.75%）[Tushare:fina_indicator]</li>
+</ol>
+<p><strong>海外同业补充</strong>:<br />
+- <strong>华为 FusionSolar</strong>（未上市）: 全球逆变器出货量第二，在中国工商业市场份额领先，2025 年被阳光电源反超成为全球综合第二 [Web:eastmoney.com]<br />
+- <strong>Enphase Energy（ENPH.US）</strong>: 微型逆变器全球龙头，市值约 100 亿美元，PE 约 50x，侧重北美户用市场，与阳光电源在大型地面电站/储能领域错位竞争<br />
+- <strong>SolarEdge（SEDG.US）</strong>: 功率优化器/逆变器，因欧洲去库存和美国市场疲软，2024-2025 年持续亏损，市值大幅缩水至约 20 亿美元</p>
+</div>
+
+<!-- ============================================================
+     §六 10 维度详细证据
+     ============================================================ -->
+<div class="section" id="detail">
+<h2>§六 10 维度详细证据</h2>
+<h3>维度 1 · 市场规模与结构（7/10）</h3>
+<p><strong>评分依据</strong>: 全球光伏逆变器市场约 300 亿美元（2025 年），预计 2030 年达 500 亿美元，CAGR 约 10-11% [Web:mordorintelligence.com]。全球锂电储能新增装机 2025 年 317GWh（+74%），保守/乐观复合增长率 20-30%（2025-2030）[Doc:annual_2025,P.6][Web:ditan.com]。两大核心市场合计 TAM 超千亿美元级别，增长确定性高。</p>
+<p><strong>加分项</strong>: ① 储能行业处于爆发期，CAGR 20-30% 对应 rubric"TAM $10-100B，增长健康 CAGR 15-20%"的 7-8 档上限；② AIDC（AI 数据中心电源）为新兴增量市场，数据中心电力消耗 2030 年预计翻倍 [Web:sina.com.cn]；③ 海外收入占比 60.54% 说明全球化布局成功，SAM 远未触顶 [Doc:annual_2025,P.33]。</p>
+<p><strong>减分项</strong>: ① Wood Mackenzie 预警 2026 年全球光伏逆变器需求暴跌 9% [Web:csisolar.com]；② 光伏/电池出口退税取消、美国 301 关税上调构成结构性逆风 [Web:cnfinance.cn][Doc:annual_2025,P.43]。</p>
+<p><strong>结论</strong>: 市场空间大且储能高速增长，但光伏逆变器短期需求回调拖累，给 7 分。</p>
+<hr />
+<h3>维度 2 · 商业模式（7/10）</h3>
+<p><strong>评分依据</strong>: 阳光电源形成"光伏逆变器+储能系统+新能源投资开发"三轮驱动模式。FY2025 毛利率 31.83%（+1.89pct），净利率 15.17%，扣非净利占归母净利 95.3%，利润质量高 [Tushare:income][Doc:annual_2025,P.27]。储能系统首次超越光伏成为第一大业务（41.81% vs 34.91%），业务结构向高毛利方向迁移 [Doc:annual_2025,P.32]。</p>
+<p><strong>对照 rubric</strong>: 制造/硬件行业毛利率标杆 25-40%，阳光电源 31.83% 处于中上水平。收入结构多元化（逆变器 34.91% + 储能 41.81% + 新能源开发 18.57% + 其他 4.70%），无单一业务超 50% 依赖 [Tushare:fina_mainbz]。经营现金流 169.18 亿 vs 归母净利 134.61 亿，OCF/净利 = 1.26x，回款效率优秀 [Tushare:cashflow][Doc:annual_2025,P.39]。</p>
+<p><strong>减分项</strong>: ① 新能源投资开发 YoY-21.16%，该板块毛利率仅 14.50%，拖累整体 [Tushare:fina_mainbz]；② 2026Q1 营收 YoY-18.26%，业务周期波动大 [Tushare:income]。</p>
+<hr />
+<h3>维度 3 · 盈利能力（7/10）</h3>
+<p><strong>评分依据</strong>: FY2025 营收 YoY+14.55%，归母净利 YoY+21.97%，3 年营收 CAGR 30.4%，3 年净利 CAGR 55.3%，对照上市公司版 rubric"收入增速 15-30%，盈利增速稳健"属 7-8 档 [Tushare:income][metrics.json]。</p>
+<p><strong>关键指标</strong>:<br />
+- ROE: 32.24%（FY2025），下行趋势 40.71%→34.16%→32.24%，DuPont 分解: 净利率 15.09% × 资产周转 0.75 × 杠杆 2.55，杠杆下降是 ROE 降的主因（主动去杠杆）[Tushare:fina_indicator]<br />
+- 毛利率: 31.83%（FY2025），中枢从 28-30% 上移至 31-35% [Tushare:fina_indicator]<br />
+- FCF: 139.10 亿，FCF Yield 4.39% [metrics.json]</p>
+<p><strong>减分项</strong>: ① 2026Q1 归母净利 YoY-40.12%，增速大幅回落 [Tushare:income]；② Q4 单季净利 15.80 亿仅占全年 11.7%，季度波动大 [Doc:annual_2025,P.10]。全年增速优秀但最新季度拐点明显，给 7 分而非 8 分。</p>
+<hr />
+<h3>维度 4 · 产品与技术（8/10）</h3>
+<p><strong>评分依据</strong>: 阳光电源拥有行业领先的产品矩阵和技术壁垒:</p>
+<ul>
+<li><strong>光伏逆变器</strong>: 全球首款 400kW+ 组串式逆变器 SG465HX，全球首款分体式模块化逆变器 1+X 2.0，2025 年发货 143GW（全球第一）[Doc:annual_2025,P.28]</li>
+<li><strong>储能系统</strong>: PowerTitan 3.0 全球最大容量交流智储平台，Plus 版 12.5MWh，能量密度 500kWh/㎡ 全球最高，采用 600Ah+ 叠片电芯、碳化硅 PCS；干细胞构网技术 2.0 [Doc:annual_2025,P.28-29]</li>
+<li><strong>AIDC</strong>: 已布局 800V HVDC 模块，在美国谷歌数据中心测试 [Web:sina.com.cn]</li>
+<li><strong>可融资性</strong>: BloombergNEF 逆变器+储能+PCS 可融资价值榜单 100% 可融资性蝉联榜首，全球唯一六度荣登榜首 [Doc:annual_2025]</li>
+<li><strong>研发投入</strong>: 研发费用 41.75 亿（+31.97%），占营收 4.68%；研发人员 7,625 人占 40.12%，其中硕士 3,160 人、博士 126 人 [Doc:annual_2025,P.27,38]</li>
+<li><strong>风电变流器</strong>: 2025 年装机量全球第一 [Doc:annual_2025,P.29]</li>
+</ul>
+<p><strong>对照 rubric 7-8 档</strong>: "技术有差异化优势，产品路线图清晰且有说服力"。阳光电源在多个细分领域做到全球第一，产品护城河深厚，给 8 分。</p>
+<hr />
+<h3>维度 5 · 团队与管理层（6/10）</h3>
+<h4>管理层利益对齐（<code>stk_rewards</code>）</h4>
+<ul>
+<li>2025 年限制性股票激励计划首次授予第一归属期条件已成就，覆盖 853 人 [Web:cninfo.com.cn]</li>
+<li>实控人曹仁贤持股 30.46%（63,141 万股），质押比例仅约 3.30%（约 2,083 万股），利益高度绑定 [Tushare:top10_holders][Tushare:pledge_detail]</li>
+<li>FY2025 分红方案每 10 股派 6.9 元，合计 14.16 亿，股息率 1.31% [Doc:annual_2025,P.3]</li>
+</ul>
+<h4>核心团队画像（<code>stk_managers</code>）</h4>
+<table>
+<thead>
+<tr>
+<th>姓名</th>
+<th>职务</th>
+<th>要点</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>曹仁贤</td>
+<td>董事长/创始人</td>
+<td>技术出身，1997 年创立公司，从光伏逆变器单品做到全球清洁能源平台</td>
+<td>[Doc:annual_2025,P.8]</td>
+</tr>
+<tr>
+<td>陆阳</td>
+<td>董事会秘书</td>
+<td>负责资本市场沟通</td>
+<td>[Doc:annual_2025,P.8]</td>
+</tr>
+<tr>
+<td>田帅</td>
+<td>主管会计</td>
+<td>财务管理</td>
+<td>[Doc:annual_2025,P.3]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>评分依据</strong>: 创始人持股比例高（30.46%）且质押极低，利益对齐好。股权激励覆盖 853 人，绑定中层。但公开信息中高管团队画像不完整，除创始人外缺少 CTO/CFO 等关键岗位公开信息，对照 rubric 5-6 档"高管团队基本到位但存在薄弱环节"。</p>
+<p><strong>减分项</strong>: ① 审计报告显示前十大股东 20260331 净减持 3,583 万股（主要是指数基金被动减仓，非管理层主动减持）[audit_report: Governance 红旗]；② 港股二次递表显示融资意愿较强，可能稀释现有股东 [Web:sina.com.cn]。</p>
+<hr />
+<h3>维度 6 · 市场进入与护城河（8/10）</h3>
+<p><strong>评分依据</strong>: 阳光电源拥有多重复合护城河:</p>
+<ol>
+<li><strong>品牌壁垒</strong>: BloombergNEF 逆变器+ESS+PCS 可融资价值榜单 100% 可融资性蝉联榜首六次，全球唯一 [Doc:annual_2025]。MSCI ESG Rating AAA（2025 年）[Web:sungrowpower.com]</li>
+<li><strong>规模壁垒</strong>: 光伏逆变器出货 143GW、储能出货 43GWh 均全球第一 [Doc:annual_2025,P.28-29]。市值 3,171 亿是第二名德业股份 1,367 亿的 2.3 倍 [Tushare:daily_basic]</li>
+<li><strong>全球化壁垒</strong>: 海外收入占比 60.54%（+48.76%），全球化布局成熟 [Doc:annual_2025,P.33]</li>
+<li><strong>技术壁垒</strong>: 碳化硅 PCS、干细胞构网技术、600Ah+ 叠片电芯等前沿技术 [Doc:annual_2025,P.28-29]</li>
+<li><strong>客户转换成本</strong>: 大型电站项目（如沙特 NEOM）选定逆变器/储能供应商后替换成本极高，涉及认证、系统集成、售后网络</li>
+</ol>
+<p><strong>主力资金流信号</strong>: 北向资金持仓 8.3%，季度环比 +0.41pp，近 4 季加仓 +4.11pp，外资持续看好 [Tushare:hk_hold]。但近 20 日主力净流入天数仅 8/20（40%），净流出 -55,284 万元，短期资金面拉锯 [capital_flow.md §6]。</p>
+<p><strong>对照 rubric 7-8 档</strong>: "拥有至少 2 种清晰的护城河，市场份额前三且稳定或增长"。阳光电源护城河为品牌+规模+全球化+技术的复合壁垒，给 8 分。</p>
+<hr />
+<h3>维度 7 · 财务健康度（7/10）</h3>
+<p><strong>评分依据</strong>: 对照上市公司版 rubric:</p>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th style="text-align: center;">实际值</th>
+<th style="text-align: center;">评级</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>流动比率</td>
+<td style="text-align: center;">1.66</td>
+<td style="text-align: center;">中等（1.2-2.0 = 5-6 档）</td>
+<td>[Tushare:fina_indicator]</td>
+</tr>
+<tr>
+<td>资产负债率</td>
+<td style="text-align: center;">57.51%（2026Q1）</td>
+<td style="text-align: center;">中等（40-60% = 5-6 档）</td>
+<td>[Tushare:fina_indicator]</td>
+</tr>
+<tr>
+<td>经营现金流/净利润</td>
+<td style="text-align: center;">1.26x（FY2025）</td>
+<td style="text-align: center;">优秀（&gt;1.2x = 8+ 档）</td>
+<td>[Tushare:cashflow]</td>
+</tr>
+<tr>
+<td>FCF 收益率</td>
+<td style="text-align: center;">4.39%</td>
+<td style="text-align: center;">中等（4-8% = 5-6 档）</td>
+<td>[metrics.json]</td>
+</tr>
+<tr>
+<td>Altman Z-Score</td>
+<td style="text-align: center;">4.796</td>
+<td style="text-align: center;">安全（&gt;2.99）</td>
+<td>[audit_report]</td>
+</tr>
+<tr>
+<td>Beneish M-Score</td>
+<td style="text-align: center;">-2.723</td>
+<td style="text-align: center;">盈余操纵概率低（≤-1.78）</td>
+<td>[audit_report]</td>
+</tr>
+<tr>
+<td>Piotroski F-Score</td>
+<td style="text-align: center;">9/9</td>
+<td style="text-align: center;">优秀</td>
+<td>[audit_report]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>审计红旗引用（维度 7 必须引用 audit_report）</strong>:<br />
+- [🟢 低] Piotroski F-Score 9/9 — 综合财务状况强，所有 9 项检查全部通过（NI&gt;0✓, ROA&gt;0✓, OCF&gt;0✓, OCF&gt;NI✓, ROA↑✓, 负债率↓✓, 流动比率↑✓, 毛利率↑✓, 资产周转率↑✓）[audit_report]<br />
+- [🟢 低] Altman Z-Score 4.796 &gt; 2.99 — 财务健康度安全 [audit_report]<br />
+- [🟢 低] Beneish M-Score -2.723 ≤ -1.78 — 盈余操纵概率低 [audit_report]</p>
+<p><strong>加分项</strong>: ① 资产负债率从 66.85%（2023Q1）持续降至 57.51%（2026Q1），主动去杠杆明确 [Tushare:balancesheet]；② 短期借款 YoY-56.19%、长期借款 YoY-47.22%，有息负债大幅下降 [data_snapshot §2.2]；③ 货币资金 300.43 亿（2026Q1），现金储备充沛 [Tushare:balancesheet]。</p>
+<p><strong>减分项</strong>: ① 应收账款 224.26 亿占总资产 18.4%，回款周期长 [Tushare:balancesheet]；② 2026Q1 信用减值损失 YoY+361%（坏账计提大增）[Tushare:income]；③ 2026Q1 财务费用从-0.59 亿暴增至 3.28 亿（汇率波动）[Tushare:income]。</p>
+<p>综合 F-Score 满分、Z-Score 安全、主动去杠杆，但应收规模大且最新季度减值大增，给 7 分。</p>
+<hr />
+<h3>维度 8 · 估值合理性（7/10）</h3>
+<p><strong>评分依据</strong>: 对照上市公司版 rubric:</p>
+<table>
+<thead>
+<tr>
+<th>估值指标</th>
+<th style="text-align: center;">阳光电源</th>
+<th style="text-align: center;">行业基准（新能源/清洁技术）</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PE TTM</td>
+<td style="text-align: center;">26.59</td>
+<td style="text-align: center;">行业中位数 63.07（peer）</td>
+<td>[Tushare:daily_basic]</td>
+</tr>
+<tr>
+<td>PB</td>
+<td style="text-align: center;">6.71</td>
+<td style="text-align: center;">行业中位数 5.02（peer）</td>
+<td>[Tushare:daily_basic]</td>
+</tr>
+<tr>
+<td>PS TTM</td>
+<td style="text-align: center;">3.70</td>
+<td style="text-align: center;">行业中位数 5.29（全行业）</td>
+<td>[Tushare:daily_basic]</td>
+</tr>
+<tr>
+<td>股息率</td>
+<td style="text-align: center;">1.31%</td>
+<td style="text-align: center;">—</td>
+<td>[Tushare:daily_basic]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>审计红旗引用（维度 8 必须引用 audit_report）</strong>:<br />
+- [ℹ️ 信息] PB 历史分位: 当前 PB 6.71 处于近 1 年 [3.06, 9.90] 区间的 53% 分位，中性 [audit_report: Valuation Anomaly]<br />
+- [🟡 中] 长期股权投资大幅波动 +31.7%（48,390 万→63,712 万），参股公司价值波动需关注 [audit_report: Related-Party Exposure]</p>
+<p><strong>对照 rubric 7-8 档</strong>: "PE 合理（行业中位数±20%），PB &lt; 历史中位数"。阳光电源 PE 26.59x 远低于 peer 中位数 63.07x 的 50%（&lt;31.54x），属"PE &lt; 行业中位数 50% 且增速更高" → 指向 9-10 档。但需考虑 2026Q1 增速大幅下滑（YoY-18.26%），低 PE 部分反映市场对增速拐点的定价。PB 6.71 高于 peer 中位数 5.02（+33.7%），不算便宜。</p>
+<p><strong>综合</strong>: PE 显著低估 + PB 偏贵 + 增速拐点不确定性，折衷给 7 分。</p>
+<hr />
+<h3>维度 9 · 风险与治理（6/10）</h3>
+<p><strong>评分依据</strong>（此维度评分为"风险程度的倒数"，分数越高表示风险越低）:</p>
+<p><strong>主要风险清单</strong>:<br />
+1. <strong>政策风险</strong>: 各国补贴削减、美国 301 关税上调、出口退税取消 [Doc:annual_2025,P.43][Web:cnfinance.cn]<br />
+2. <strong>竞争加剧</strong>: 储能行业众多企业涌入（宁德时代、比亚迪、华为），产能过剩风险 [Doc:annual_2025,P.43]<br />
+3. <strong>汇率波动</strong>: 海外收入占比 60.54%，2026Q1 财务费用暴增 600%+（欧元/美元波动）[Tushare:income]<br />
+4. <strong>应收账款风险</strong>: 224.26 亿应收，信用减值 YoY+361% [Tushare:income/balancesheet]<br />
+5. <strong>客户集中度</strong>: 沙特等大型项目单笔金额大，Q1 因沙特项目高基数导致营收 YoY-18.26% [Web:sina.com.cn]</p>
+<p><strong>治理信号</strong>:<br />
+- [🟡 中] 前十大股东净减持 3,583 万股（20260331 期），主要是指数基金被动调仓 [audit_report: Governance]<br />
+- [🟡 中] 股东户数 2025 年 6 月以来从 179,692 激增至 294,149（+63.7%），散户涌入 [audit_report: Shareholder Flow]<br />
+- [🟡 中] 长期股权投资变动 +31.7%，参股公司权益法波动风险 [audit_report: Related-Party Exposure]<br />
+- 实控人质押比例约 3.3%，远低于 50% 红旗线，不构成风险 [Tushare:pledge_detail]</p>
+<p><strong>对照 rubric 5-6 档</strong>: "存在监管不确定性但不致命，客户集中度偏高"。汇率+政策+竞争三重风险叠加，但均可管理，给 6 分。</p>
+<hr />
+<h3>维度 10 · 催化剂与时机（7/10）</h3>
+<p><strong>评分依据</strong>（上市公司版: 回报潜力）:</p>
+<p><strong>上行催化剂</strong>:<br />
+1. <strong>储能高景气</strong>: 全球储能 CAGR 20-30%，阳光电源发货 43GWh 全球第一，PowerTitan 3.0 产品力领先 [Doc:annual_2025,P.28-29][Web:ditan.com]<br />
+2. <strong>AIDC 第二增长曲线</strong>: 已成立事业部，与谷歌合作测试 800V HVDC 模块，2027 年批量出货 [Web:sina.com.cn]<br />
+3. <strong>港股上市</strong>: 第二次递表，若成功将拓宽融资渠道、提升国际品牌 [Web:sina.com.cn]<br />
+4. <strong>海外占比提升</strong>: 60.54% 且 YoY+48.76%，海外毛利率更高 [Doc:annual_2025,P.33]<br />
+5. <strong>估值修复</strong>: PE 26.59x 为 peer 中最低，若 Q2 增速回暖可触发估值重估 [Tushare:daily_basic]</p>
+<p><strong>下行风险</strong>:<br />
+1. <strong>2026Q1 拐点</strong>: 营收-18.26%、净利-40.12%，若 Q2 未企稳将加剧市场恐慌 [Tushare:income]<br />
+2. <strong>逆变器需求下滑</strong>: WoodMac 预警 2026 年全球暴跌 9% [Web:csisolar.com]<br />
+3. <strong>技术面中性</strong>: 收盘价 152.95 元跌破 MA120（158.25 元），布林带上轨之上短期超买 [technical_analysis.md]</p>
+<p><strong>对照 rubric 7-8 档</strong>: "总回报预期&gt;20%/年，催化剂可见"。储能+AIDC+港股上市三大催化剂清晰，但 2026Q1 拐点构成短期不确定性，给 7 分。</p>
+<hr />
+<p><strong>§六 10 维度评分汇总</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th style="text-align: center;">权重</th>
+<th style="text-align: center;">分数(0-10)</th>
+<th style="text-align: center;">加权</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. 市场规模与结构</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">0.70</td>
+</tr>
+<tr>
+<td>2. 商业模式</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">0.70</td>
+</tr>
+<tr>
+<td>3. 盈利能力</td>
+<td style="text-align: center;">15%</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">1.05</td>
+</tr>
+<tr>
+<td>4. 产品与技术</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">0.80</td>
+</tr>
+<tr>
+<td>5. 团队与管理层</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">0.60</td>
+</tr>
+<tr>
+<td>6. 市场进入与护城河</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">0.80</td>
+</tr>
+<tr>
+<td>7. 财务健康度</td>
+<td style="text-align: center;">15%</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">1.05</td>
+</tr>
+<tr>
+<td>8. 估值合理性</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">0.70</td>
+</tr>
+<tr>
+<td>9. 风险与治理</td>
+<td style="text-align: center;">5%</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">0.30</td>
+</tr>
+<tr>
+<td>10. 催化剂与时机</td>
+<td style="text-align: center;">5%</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">0.35</td>
+</tr>
+<tr>
+<td><strong>合计</strong></td>
+<td style="text-align: center;">100%</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: center;"><strong>7.05</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+</div>
+
+<!-- ============================================================
+     §七 网络舆情与市场情绪
+     ============================================================ -->
+<div class="section" id="sentiment">
+<h2>§七 网络舆情与市场情绪</h2>
+<h3>看多派声音</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>平台</th>
+<th>核心观点</th>
+<th>日期</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>雪球</td>
+<td>储能接棒光伏成第一大业务，AIDC 第二增长曲线，25 年估值仅 12-15x forward PE</td>
+<td>2025-08</td>
+<td>[Web:xueqiu.com/9639558755/346845986]</td>
+</tr>
+<tr>
+<td>2</td>
+<td>雪球</td>
+<td>估值错配：全年净利 134.6 亿增 22%，现金流 169 亿增 40%，Q4 波动掩盖长期成长性</td>
+<td>2026-04</td>
+<td>[Web:xueqiu.com]</td>
+</tr>
+<tr>
+<td>3</td>
+<td>雪球</td>
+<td>坚定持有，即便 2026 一季报不理想也不离场，看好 3 年维度储能+海外</td>
+<td>2026-04</td>
+<td>[Web:xueqiu.com]</td>
+</tr>
+<tr>
+<td>4</td>
+<td>雪球</td>
+<td>2026 展望三大主线：储能高景气、海外占比提升、AIDC 新增长点</td>
+<td>2026</td>
+<td>[Web:xueqiu.com]</td>
+</tr>
+<tr>
+<td>5</td>
+<td>低碳网</td>
+<td>2025H1 营收 435 亿(+40%)、净利 77 亿(+56%)，全球储能 CAGR 20-30%</td>
+<td>2025-08</td>
+<td>[Web:ditan.com]</td>
+</tr>
+<tr>
+<td>6</td>
+<td>东方财富</td>
+<td>2025-2026 年正式超越华为成全球光储综合第一</td>
+<td>2026</td>
+<td>[Web:eastmoney.com]</td>
+</tr>
+</tbody>
+</table>
+<h3>看空派声音</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>平台</th>
+<th>核心观点</th>
+<th>日期</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>雪球</td>
+<td>Q4 暴雷：Q4 净利 15.80 亿仅占全年 11.7%，储能失速引连锁危机</td>
+<td>2026-04</td>
+<td>[Web:xueqiu.com]</td>
+</tr>
+<tr>
+<td>2</td>
+<td>新浪财经</td>
+<td>2026Q1 营收利润双降，储能毛利率降至 30%，财务费用暴增 600%+</td>
+<td>2026-04</td>
+<td>[Web:finance.sina.com.cn]</td>
+</tr>
+<tr>
+<td>3</td>
+<td>腾讯新闻</td>
+<td>一季度净利下降四成，财务费用大增，业绩遇冷</td>
+<td>2026-04</td>
+<td>[Web:news.qq.com]</td>
+</tr>
+<tr>
+<td>4</td>
+<td>高盛</td>
+<td>2026Q1 业绩不及预期，ESS 利润率环比改善但面临长期竞争压力，评级中性</td>
+<td>2026-04</td>
+<td>[Web:youtube.com]</td>
+</tr>
+<tr>
+<td>5</td>
+<td>面包财经</td>
+<td>半年跌掉四成：高管减持早已敲响警钟</td>
+<td>2025</td>
+<td>[Web:mianbancaijing]</td>
+</tr>
+<tr>
+<td>6</td>
+<td>凤凰网</td>
+<td>2026Q1 净利降四成，财务费用增超 6 倍，预付款增逾 200%</td>
+<td>2026-04</td>
+<td>[Web:h5.ifeng.com]</td>
+</tr>
+<tr>
+<td>7</td>
+<td>WoodMac</td>
+<td>2026 年全球光伏逆变器需求预警暴跌 9%</td>
+<td>2026</td>
+<td>[Web:csisolar.com]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>舆情研判</strong>: 看多派聚焦长期（储能高景气+AIDC+全球第一），看空派聚焦短期（Q4 暴雷+2026Q1 双降+政策逆风）。多空分歧的核心在于 2026Q1 是"短暂高基数扰动"还是"增长拐点开始"。市场情绪偏谨慎——2026Q1 财报发布后股价从高位回调，但北向资金逆势加仓（持仓 8.3%，+0.41pp）反映外资逢低布局。</p>
+<h3>资金流向信号（v4.4 — Read <code>capital_flow.md</code> §4/§5/§6）</h3>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>信号</th>
+<th>数据</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>陆股通（北向）</td>
+<td>🟢 外资近一季加仓</td>
+<td>持仓 8.3%，季度环比 +0.41pp，近 4 季 +4.11pp</td>
+<td>[Tushare:hk_hold]</td>
+</tr>
+<tr>
+<td>北向加权建仓成本</td>
+<td>⚪ 盈亏接近平衡</td>
+<td>加权成本 162.06 元 vs 现价 152.95 元，浮亏 -5.62%</td>
+<td>[capital_flow.md §9]</td>
+</tr>
+<tr>
+<td>两融杠杆</td>
+<td>⚪ 平稳</td>
+<td>融资余额 1,024,337 万元，相对 60 日中位 -19.48%</td>
+<td>[Tushare:margin_detail]</td>
+</tr>
+<tr>
+<td>主力资金流</td>
+<td>⚪ 拉锯</td>
+<td>近 20 日净流入天数 8/20，累计净流出 -55,284 万元</td>
+<td>[capital_flow.md §6]</td>
+</tr>
+<tr>
+<td>大宗交易</td>
+<td>⚪ 接近现价</td>
+<td>近 60 日 3 笔累计 3,587 万元，折价 -4.56%</td>
+<td>[capital_flow.md §8]</td>
+</tr>
+<tr>
+<td>筹码集中度</td>
+<td>🟢🟡 短期集中/中期分散</td>
+<td>环比户数 -5.78%（集中），但年内从 179,692 增至 294,149（+63.7%，散户涌入）</td>
+<td>[Tushare:stk_holdernumber][audit_report]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>资金面综合研判</strong>: 北向资金是最积极的增量资金（近 4 季加仓 +4.11pp），指数基金被动减仓（指数权重调整），散户中期涌入。主力资金短期处于拉锯状态，缺乏方向性信号。</p>
+<hr />
+</div>
+
+<!-- ============================================================
+     §八 可比公司对标
+     ============================================================ -->
+<div class="section" id="peers">
+<h2>§八 可比公司对标（v4.4 — Read `peer_analysis.md`）</h2>
+<h3>§8.1 A 股同行业对标（自动采集）</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">ts_code</th>
+<th style="text-align: center;">公司</th>
+<th style="text-align: right;">市值(亿)</th>
+<th style="text-align: center;">PE TTM</th>
+<th style="text-align: center;">PB</th>
+<th style="text-align: center;">PS TTM</th>
+<th style="text-align: center;">ROE(%)</th>
+<th style="text-align: center;">毛利率(%)</th>
+<th style="text-align: center;">净利率(%)</th>
+<th style="text-align: center;">资产负债率(%)</th>
+<th style="text-align: center;">营收 YoY(%)</th>
+<th style="text-align: center;">股息率(%)</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>300274.SZ</strong> ⭐</td>
+<td style="text-align: center;"><strong>阳光电源</strong></td>
+<td style="text-align: right;">3,170.98</td>
+<td style="text-align: center;">26.59</td>
+<td style="text-align: center;">6.71</td>
+<td style="text-align: center;">3.70</td>
+<td style="text-align: center;">7.29</td>
+<td style="text-align: center;">36.67</td>
+<td style="text-align: center;">16.71</td>
+<td style="text-align: center;">62.75</td>
+<td style="text-align: center;">-18.26</td>
+<td style="text-align: center;">1.31</td>
+<td>[Tushare:daily_basic/fina_indicator]</td>
+</tr>
+<tr>
+<td style="text-align: center;">605117.SH</td>
+<td style="text-align: center;">德业股份</td>
+<td style="text-align: right;">1,367.00</td>
+<td style="text-align: center;">37.42</td>
+<td style="text-align: center;">11.82</td>
+<td style="text-align: center;">9.68</td>
+<td style="text-align: center;">7.90</td>
+<td style="text-align: center;">36.33</td>
+<td style="text-align: center;">22.98</td>
+<td style="text-align: center;">49.82</td>
+<td style="text-align: center;">+73.77</td>
+<td style="text-align: center;">1.96</td>
+<td>[Tushare:daily_basic/fina_indicator]</td>
+</tr>
+<tr>
+<td style="text-align: center;">300763.SZ</td>
+<td style="text-align: center;">锦浪科技</td>
+<td style="text-align: right;">384.53</td>
+<td style="text-align: center;">63.07</td>
+<td style="text-align: center;">4.25</td>
+<td style="text-align: center;">5.61</td>
+<td style="text-align: center;">0.26</td>
+<td style="text-align: center;">24.24</td>
+<td style="text-align: center;">1.45</td>
+<td style="text-align: center;">64.35</td>
+<td style="text-align: center;">0.00</td>
+<td style="text-align: center;">0.21</td>
+<td>[Tushare:daily_basic/fina_indicator]</td>
+</tr>
+<tr>
+<td style="text-align: center;">688390.SH</td>
+<td style="text-align: center;">固德威</td>
+<td style="text-align: right;">281.22</td>
+<td style="text-align: center;">106.36</td>
+<td style="text-align: center;">9.89</td>
+<td style="text-align: center;">3.00</td>
+<td style="text-align: center;">-0.97</td>
+<td style="text-align: center;">27.47</td>
+<td style="text-align: center;">-1.70</td>
+<td style="text-align: center;">54.75</td>
+<td style="text-align: center;">0.00</td>
+<td style="text-align: center;">–</td>
+<td>[Tushare:daily_basic/fina_indicator]</td>
+</tr>
+<tr>
+<td style="text-align: center;">300827.SZ</td>
+<td style="text-align: center;">上能电气</td>
+<td style="text-align: right;">215.88</td>
+<td style="text-align: center;">45.66</td>
+<td style="text-align: center;">5.02</td>
+<td style="text-align: center;">3.68</td>
+<td style="text-align: center;">2.86</td>
+<td style="text-align: center;">23.55</td>
+<td style="text-align: center;">7.11</td>
+<td style="text-align: center;">70.82</td>
+<td style="text-align: center;">+28.95</td>
+<td style="text-align: center;">0.20</td>
+<td>[Tushare:daily_basic/fina_indicator]</td>
+</tr>
+<tr>
+<td style="text-align: center;">688717.SH</td>
+<td style="text-align: center;">艾罗能源</td>
+<td style="text-align: right;">187.18</td>
+<td style="text-align: center;">132.18</td>
+<td style="text-align: center;">4.22</td>
+<td style="text-align: center;">3.95</td>
+<td style="text-align: center;">0.78</td>
+<td style="text-align: center;">40.05</td>
+<td style="text-align: center;">4.96</td>
+<td style="text-align: center;">20.35</td>
+<td style="text-align: center;">0.00</td>
+<td style="text-align: center;">0.80</td>
+<td>[Tushare:daily_basic/fina_indicator]</td>
+</tr>
+</tbody>
+</table>
+<p><em>注: ROE/毛利率/净利率为最新季度（2026Q1）单季数据，阳光电源 ROE 7.29% 为 2024Q1 数据（peer_analysis 采集时点），全年 FY2025 ROE 为 32.24%。</em></p>
+<h3>§8.2 目标公司在 peer 中的分位</h3>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th style="text-align: center;">目标值</th>
+<th style="text-align: center;">Peer 中位数</th>
+<th style="text-align: center;">分位 (high=好)</th>
+<th>解读</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ROE(%)</td>
+<td style="text-align: center;">7.29</td>
+<td style="text-align: center;">0.78</td>
+<td style="text-align: center;"><strong>80%</strong> 🟢 领先</td>
+<td>盈利能力远超同行</td>
+<td>[peer_analysis.md §2]</td>
+</tr>
+<tr>
+<td>毛利率(%)</td>
+<td style="text-align: center;">36.67</td>
+<td style="text-align: center;">27.47</td>
+<td style="text-align: center;"><strong>80%</strong> 🟢 领先</td>
+<td>议价能力/品牌溢价突出</td>
+<td>[peer_analysis.md §2]</td>
+</tr>
+<tr>
+<td>净利率(%)</td>
+<td style="text-align: center;">16.71</td>
+<td style="text-align: center;">4.96</td>
+<td style="text-align: center;"><strong>80%</strong> 🟢 领先</td>
+<td>经营效率行业最优之列</td>
+<td>[peer_analysis.md §2]</td>
+</tr>
+<tr>
+<td>资产负债率(%)</td>
+<td style="text-align: center;">62.75</td>
+<td style="text-align: center;">54.75</td>
+<td style="text-align: center;"><strong>40%</strong> 🟡 中位</td>
+<td>财务杠杆适中，非最稳健</td>
+<td>[peer_analysis.md §2]</td>
+</tr>
+<tr>
+<td>PE TTM</td>
+<td style="text-align: center;">26.59</td>
+<td style="text-align: center;">63.07</td>
+<td style="text-align: center;"><strong>100%</strong> 🟢 最便宜</td>
+<td>估值为行业最低</td>
+<td>[peer_analysis.md §2]</td>
+</tr>
+<tr>
+<td>PB</td>
+<td style="text-align: center;">6.71</td>
+<td style="text-align: center;">5.02</td>
+<td style="text-align: center;"><strong>40%</strong> 🟡 中位</td>
+<td>PB 偏高，反映 ROE 溢价</td>
+<td>[peer_analysis.md §2]</td>
+</tr>
+<tr>
+<td>营收 YoY(%)</td>
+<td style="text-align: center;">-18.26</td>
+<td style="text-align: center;">0.00</td>
+<td style="text-align: center;"><strong>0%</strong> 🔴 落后</td>
+<td>增速最差（高基数+沙特项目）</td>
+<td>[peer_analysis.md §2]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>行业全员估值分布</strong>（逆变器行业共 9 家上市公司）[peer_analysis.md §4]:</p>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th style="text-align: center;">行业最便宜</th>
+<th style="text-align: center;">25 分位</th>
+<th style="text-align: center;">中位数</th>
+<th style="text-align: center;">75 分位</th>
+<th style="text-align: center;">行业最贵</th>
+<th style="text-align: center;">目标值</th>
+<th style="text-align: center;">目标分位</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PE TTM</td>
+<td style="text-align: center;">26.59</td>
+<td style="text-align: center;">37.42</td>
+<td style="text-align: center;">63.07</td>
+<td style="text-align: center;">106.36</td>
+<td style="text-align: center;">132.18</td>
+<td style="text-align: center;"><strong>26.59</strong></td>
+<td style="text-align: center;"><strong>0.0%</strong></td>
+</tr>
+<tr>
+<td>PB</td>
+<td style="text-align: center;">2.25</td>
+<td style="text-align: center;">4.22</td>
+<td style="text-align: center;">5.02</td>
+<td style="text-align: center;">6.71</td>
+<td style="text-align: center;">11.82</td>
+<td style="text-align: center;"><strong>6.71</strong></td>
+<td style="text-align: center;"><strong>66.7%</strong></td>
+</tr>
+<tr>
+<td>PS TTM</td>
+<td style="text-align: center;">3.0</td>
+<td style="text-align: center;">3.7</td>
+<td style="text-align: center;">5.29</td>
+<td style="text-align: center;">6.56</td>
+<td style="text-align: center;">9.68</td>
+<td style="text-align: center;"><strong>3.7</strong></td>
+<td style="text-align: center;"><strong>22.2%</strong></td>
+</tr>
+</tbody>
+</table>
+<h3>§8.3 硬判定对比洞察</h3>
+<ol>
+<li>
+<p>✅ <strong>PE 显著低于 peer 中位数</strong>: 26.6x vs 63.1x（折让 57.8%），且行业全员分位 0%（最便宜）。龙头公司享受最低估值，形成显著的"龙头折价"——但需辨别是"错杀"还是"合理定价 2026Q1 增速拐点" [peer_analysis.md §3]</p>
+</li>
+<li>
+<p>⚠️ <strong>营收增速落后 peer</strong>: -18.3% vs peer 中位数 0.0%，德业股份+73.8%、上能电气+29.0% 远超阳光电源。原因：① 2025Q1 沙特大项目约 40 亿确收造成极高基数；② 家庭光伏萎缩叠加抢装高基数；③ 美国关税影响签单滞后。若 Q2 增速回正，龙头折价有望修复 [Tushare:income][Web:sina.com.cn]</p>
+</li>
+<li>
+<p>🟢 <strong>盈利质量绝对领先</strong>: ROE 7.29%（peer 中位数 0.78%）、毛利率 36.67%（peer 中位数 27.47%）、净利率 16.71%（peer 中位数 4.96%），三项盈利指标均处于 80% 分位。规模效应+品牌溢价+储能高毛利驱动 [Tushare:fina_indicator]</p>
+</li>
+<li>
+<p>🟡 <strong>PB 偏高</strong>: 6.71 vs peer 中位数 5.02，行业分位 66.7%，反映市场对高 ROE 的合理溢价（ROE 32.24% 远高于同行），但若 ROE 持续下行（40.7%→34.2%→32.2%），PB 溢价基础将被侵蚀 [Tushare:fina_indicator]</p>
+</li>
+<li>
+<p>🟡 <strong>负债率中性</strong>: 62.75% 处于 peer 中间位置，低于上能电气 70.82% 和锦浪科技 64.35%，但高于德业股份 49.82%。好消息是负债率持续下降（66.85%→57.51%），去杠杆趋势明确 [Tushare:balancesheet]</p>
+</li>
+</ol>
+<h3>§8.4 海外同业补充（若适用）</h3>
+<table>
+<thead>
+<tr>
+<th>公司</th>
+<th>市场</th>
+<th>核心业务</th>
+<th style="text-align: right;">估计市值</th>
+<th>对比要点</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>华为 FusionSolar</td>
+<td>未上市</td>
+<td>逆变器+储能</td>
+<td style="text-align: right;">—</td>
+<td>全球逆变器出货量第二，2025 年被阳光电源反超成综合第二；中国工商业市场份额仍领先</td>
+<td>[Web:eastmoney.com]</td>
+</tr>
+<tr>
+<td>Enphase Energy（ENPH.US）</td>
+<td>美股</td>
+<td>微型逆变器</td>
+<td style="text-align: right;">~100 亿美元</td>
+<td>PE 约 50x，侧重北美户用市场，与阳光电源在大型地面电站/储能领域错位竞争</td>
+<td>[Web:phase1-data.md §3]</td>
+</tr>
+<tr>
+<td>SolarEdge（SEDG.US）</td>
+<td>美股</td>
+<td>功率优化器/逆变器</td>
+<td style="text-align: right;">~20 亿美元</td>
+<td>因欧洲去库存和美国市场疲软，2024-2025 年持续亏损，市值大幅缩水，竞争力显著下降</td>
+<td>[Web:phase1-data.md §3]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>海外对比核心结论</strong>: 阳光电源在全球逆变器+储能赛道已确立龙头地位，综合实力超越华为位居全球第一。估值方面，PE 26.59x 显著低于 Enphase 的约 50x，考虑到阳光电源规模更大（市值 3,171 亿 RMB ≈ 440 亿美元 vs Enphase 100 亿美元）且业务更多元（储能+逆变器+开发+AIDC），估值折让主要反映中国公司折价和 2026Q1 增速担忧。SolarEdge 的衰落进一步凸显逆变器行业马太效应——龙头份额将持续集中。</p>
+</div>
+
+<!-- ============================================================
+     §九 估值与回报模拟
+     ============================================================ -->
+<div class="section" id="valuation">
+<h2>§九 估值与回报模拟</h2>
+<blockquote>
+<p><strong>方法论</strong>: 以"<strong>DCF 概率加权</strong>"为唯一估值锚，§十（投资回报）沿用同一套情景。§9.2 可比 PE 和 PB 作为<strong>交叉验证</strong>而非独立锚。</p>
+</blockquote>
+<h3>9.1 DCF 情景分析（v4.2 — 4 情景）</h3>
+<p><strong>关键假设基准</strong>（来自 phase3-part2 §四 财务趋势历史 + data_snapshot §3）:</p>
+<table>
+<thead>
+<tr>
+<th>假设参数</th>
+<th>历史锚点</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FY2025 营收</td>
+<td>891.84 亿</td>
+<td>[Tushare:income]</td>
+</tr>
+<tr>
+<td>FY2025 归母净利</td>
+<td>134.61 亿</td>
+<td>[Tushare:income]</td>
+</tr>
+<tr>
+<td>FY2025 FCF</td>
+<td>139.10 亿</td>
+<td>[metrics.json]</td>
+</tr>
+<tr>
+<td>3 年营收 CAGR</td>
+<td>30.4%</td>
+<td>[metrics.json]</td>
+</tr>
+<tr>
+<td>3 年净利 CAGR</td>
+<td>55.3%</td>
+<td>[metrics.json]</td>
+</tr>
+<tr>
+<td>FY2025 净利率</td>
+<td>15.17%</td>
+<td>[Tushare:fina_indicator]</td>
+</tr>
+<tr>
+<td>FY2025 毛利率</td>
+<td>31.83%</td>
+<td>[Tushare:fina_indicator]</td>
+</tr>
+<tr>
+<td>2026Q1 营收 YoY</td>
+<td><strong>-18.26%</strong></td>
+<td>[Tushare:income]</td>
+</tr>
+<tr>
+<td>2026Q1 归母净利 YoY</td>
+<td><strong>-40.12%</strong></td>
+<td>[Tushare:income]</td>
+</tr>
+<tr>
+<td>总股本</td>
+<td>20.73 亿股</td>
+<td>[Tushare:balancesheet]</td>
+</tr>
+<tr>
+<td>WACC</td>
+<td>9.0%（无风险 2.3% + β1.15 × ERP 5.5% + 小幅规模溢价 0.4%）</td>
+<td>Damodaran 框架</td>
+</tr>
+<tr>
+<td>永续增长率 g</td>
+<td>2.5%-3.5%（取决于情景）</td>
+<td>g &lt; r 强制满足 ✅</td>
+</tr>
+</tbody>
+</table>
+<p><strong>核心假设与历史一致性验证</strong>: FY2025 营收增速已从 2023 年的 79.5% 降至 14.6%，2026Q1 进一步降至-18.3%（YoY），增速明显放缓。DCF 基准情景采用 FY2026E 营收-3%（年化口径调整为全年微降），FY2027-2030 恢复至 10-12% CAGR，<strong>低于历史 3 年 CAGR 30.4%</strong>，体现增速换挡保守假设。净利率假设 13-15%，处于 FY2023（13.3%）至 FY2025（15.2%）的历史区间之内。[Tushare:income][data_snapshot §3]</p>
+<hr />
+<h4>乐观情景（25% 权重）</h4>
+<p><strong>核心假设</strong>: 储能业务维持高增长（CAGR 25%+），逆变器需求 2026H2 触底反弹，AIDC 业务 2027 年开始贡献增量收入，海外占比持续提升至 65%+ 拉动毛利率。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">年份</th>
+<th style="text-align: right;">营收(亿)</th>
+<th style="text-align: center;">增速</th>
+<th style="text-align: center;">净利率</th>
+<th style="text-align: right;">归母净利(亿)</th>
+<th style="text-align: right;">FCF(亿)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">FY2026E</td>
+<td style="text-align: right;">960</td>
+<td style="text-align: center;">+7.6%</td>
+<td style="text-align: center;">14.5%</td>
+<td style="text-align: right;">139</td>
+<td style="text-align: right;">145</td>
+</tr>
+<tr>
+<td style="text-align: center;">FY2027E</td>
+<td style="text-align: right;">1,115</td>
+<td style="text-align: center;">+16.1%</td>
+<td style="text-align: center;">15.0%</td>
+<td style="text-align: right;">167</td>
+<td style="text-align: right;">175</td>
+</tr>
+<tr>
+<td style="text-align: center;">FY2028E</td>
+<td style="text-align: right;">1,282</td>
+<td style="text-align: center;">+15.0%</td>
+<td style="text-align: center;">15.5%</td>
+<td style="text-align: right;">199</td>
+<td style="text-align: right;">208</td>
+</tr>
+<tr>
+<td style="text-align: center;">FY2029E</td>
+<td style="text-align: right;">1,461</td>
+<td style="text-align: center;">+14.0%</td>
+<td style="text-align: center;">16.0%</td>
+<td style="text-align: right;">234</td>
+<td style="text-align: right;">245</td>
+</tr>
+<tr>
+<td style="text-align: center;">FY2030E</td>
+<td style="text-align: right;">1,636</td>
+<td style="text-align: center;">+12.0%</td>
+<td style="text-align: center;">16.0%</td>
+<td style="text-align: right;">262</td>
+<td style="text-align: right;">274</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>永续 g = 3.5%，WACC = 9.0%，g &lt; r ✅</li>
+<li>终值 = 274 × (1+3.5%) / (9.0%-3.5%) = <strong>5,153 亿</strong></li>
+<li>PV(终值) = 5,153 / 1.09^5 = <strong>3,349 亿</strong></li>
+<li>PV(Stage 1 FCF) = 145/1.09 + 175/1.09² + 208/1.09³ + 245/1.09⁴ + 274/1.09⁵ = 133 + 147 + 161 + 174 + 178 = <strong>793 亿</strong></li>
+<li><strong>企业价值 = 4,142 亿</strong></li>
+<li>减: 净负债（有息负债 730 亿 - 货币资金 300 亿 - 交易性金融资产等 ≈ 100 亿）= 330 亿 → <strong>权益价值 ≈ 3,812 亿</strong>... </li>
+<li>实际调整: 净有息负债为负数（metrics.json: net_cash_latest = 173.43 亿，公司处于净现金状态），加回净现金</li>
+<li><strong>权益价值 = 4,142 + 173 = 4,315 亿 → 对应股价 208.1 元</strong></li>
+</ul>
+<p><strong>乐观情景估值: 4,315 亿 / 208.1 元</strong></p>
+<hr />
+<h4>基准情景（45% 权重）</h4>
+<p><strong>核心假设</strong>: 储能维持 15-18% 增长但毛利率缓降，逆变器需求 2026 全年下滑后 2027 恢复，AIDC 尚未贡献显著收入，海外占比稳定在 60%，汇率波动持续影响财务费用。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">年份</th>
+<th style="text-align: right;">营收(亿)</th>
+<th style="text-align: center;">增速</th>
+<th style="text-align: center;">净利率</th>
+<th style="text-align: right;">归母净利(亿)</th>
+<th style="text-align: right;">FCF(亿)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">FY2026E</td>
+<td style="text-align: right;">865</td>
+<td style="text-align: center;">-3.0%</td>
+<td style="text-align: center;">13.5%</td>
+<td style="text-align: right;">117</td>
+<td style="text-align: right;">125</td>
+</tr>
+<tr>
+<td style="text-align: center;">FY2027E</td>
+<td style="text-align: right;">970</td>
+<td style="text-align: center;">+12.1%</td>
+<td style="text-align: center;">14.0%</td>
+<td style="text-align: right;">136</td>
+<td style="text-align: right;">145</td>
+</tr>
+<tr>
+<td style="text-align: center;">FY2028E</td>
+<td style="text-align: right;">1,077</td>
+<td style="text-align: center;">+11.0%</td>
+<td style="text-align: center;">14.2%</td>
+<td style="text-align: right;">153</td>
+<td style="text-align: right;">163</td>
+</tr>
+<tr>
+<td style="text-align: center;">FY2029E</td>
+<td style="text-align: right;">1,185</td>
+<td style="text-align: center;">+10.0%</td>
+<td style="text-align: center;">14.5%</td>
+<td style="text-align: right;">172</td>
+<td style="text-align: right;">183</td>
+</tr>
+<tr>
+<td style="text-align: center;">FY2030E</td>
+<td style="text-align: right;">1,280</td>
+<td style="text-align: center;">+8.0%</td>
+<td style="text-align: center;">14.5%</td>
+<td style="text-align: right;">186</td>
+<td style="text-align: right;">198</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>永续 g = 3.0%，WACC = 9.0%，g &lt; r ✅</li>
+<li>终值 = 198 × 1.03 / (0.09 - 0.03) = <strong>3,397 亿</strong></li>
+<li>PV(终值) = 3,397 / 1.09^5 = <strong>2,208 亿</strong></li>
+<li>PV(Stage 1 FCF) = 125/1.09 + 145/1.09² + 163/1.09³ + 183/1.09⁴ + 198/1.09⁵ = 115 + 122 + 126 + 130 + 129 = <strong>622 亿</strong></li>
+<li>企业价值 = 2,830 亿 + 净现金 173 亿</li>
+<li><strong>权益价值 = 3,003 亿 → 对应股价 144.8 元</strong></li>
+</ul>
+<p><strong>基准情景估值: 3,003 亿 / 144.8 元</strong></p>
+<p><strong>FY2026E 假设验证</strong>: 全年营收 865 亿（-3%）= Q1 已报 155.6 亿 + Q2-Q4 假设 709.4 亿。FY2025 Q2-Q4 为 701.5 亿，同比+1.1%，隐含 Q2-Q4 基本持平。这与 2026Q1 高基数效应消退后恢复常态的假设一致。净利率 13.5% 低于 FY2025 的 15.17%，反映汇率波动+储能毛利率压缩+信用减值增加的影响。[Tushare:income][data_snapshot §3]</p>
+<hr />
+<h4>悲观情景（25% 权重）</h4>
+<p><strong>核心假设</strong>: 光伏逆变器需求持续萎缩（WoodMac 预警 2026 全球-9%），储能陷入价格战（毛利率降至 28% 以下），美国关税+出口退税取消双重打击海外盈利，行业进入 2-3 年下行周期。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">年份</th>
+<th style="text-align: right;">营收(亿)</th>
+<th style="text-align: center;">增速</th>
+<th style="text-align: center;">净利率</th>
+<th style="text-align: right;">归母净利(亿)</th>
+<th style="text-align: right;">FCF(亿)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">FY2026E</td>
+<td style="text-align: right;">780</td>
+<td style="text-align: center;">-12.5%</td>
+<td style="text-align: center;">11.5%</td>
+<td style="text-align: right;">90</td>
+<td style="text-align: right;">95</td>
+</tr>
+<tr>
+<td style="text-align: center;">FY2027E</td>
+<td style="text-align: right;">820</td>
+<td style="text-align: center;">+5.1%</td>
+<td style="text-align: center;">11.0%</td>
+<td style="text-align: right;">90</td>
+<td style="text-align: right;">96</td>
+</tr>
+<tr>
+<td style="text-align: center;">FY2028E</td>
+<td style="text-align: right;">870</td>
+<td style="text-align: center;">+6.1%</td>
+<td style="text-align: center;">11.5%</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">107</td>
+</tr>
+<tr>
+<td style="text-align: center;">FY2029E</td>
+<td style="text-align: right;">935</td>
+<td style="text-align: center;">+7.5%</td>
+<td style="text-align: center;">12.0%</td>
+<td style="text-align: right;">112</td>
+<td style="text-align: right;">120</td>
+</tr>
+<tr>
+<td style="text-align: center;">FY2030E</td>
+<td style="text-align: right;">1,000</td>
+<td style="text-align: center;">+7.0%</td>
+<td style="text-align: center;">12.0%</td>
+<td style="text-align: right;">120</td>
+<td style="text-align: right;">128</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>永续 g = 2.5%，WACC = 9.5%（风险溢价上调），g &lt; r ✅</li>
+<li>终值 = 128 × 1.025 / (0.095 - 0.025) = <strong>1,874 亿</strong></li>
+<li>PV(终值) = 1,874 / 1.095^5 = <strong>1,189 亿</strong></li>
+<li>PV(Stage 1 FCF) = 95/1.095 + 96/1.095² + 107/1.095³ + 120/1.095⁴ + 128/1.095⁵ = 87 + 80 + 82 + 84 + 81 = <strong>414 亿</strong></li>
+<li>企业价值 = 1,603 亿 + 净现金 173 亿</li>
+<li><strong>权益价值 = 1,776 亿 → 对应股价 85.7 元</strong></li>
+</ul>
+<p><strong>悲观情景估值: 1,776 亿 / 85.7 元</strong></p>
+<hr />
+<h4>最差情景（5% 权重，尾部风险）</h4>
+<p><strong>核心假设</strong>: 全球光伏行业系统性衰退（类似 2012-2013 周期），储能竞争白热化叠加锂电池技术路线颠覆（钠电池加速替代），中美脱钩导致海外市场准入受限，公司从全球龙头退化为区域性玩家。</p>
+<ul>
+<li>FY2026E 营收约 700 亿（-21.5%），净利率降至 8%，归母净利约 56 亿</li>
+<li>FY2027-2028 营收低个位数增长，净利率维持 7-9%</li>
+<li>终值按 10x 终年净利估算 ≈ 700 亿</li>
+<li>PV(终值+FCF) ≈ <strong>650 亿</strong></li>
+<li>加回净现金 173 亿</li>
+<li><strong>权益价值 ≈ 823 亿 → 对应股价 39.7 元</strong></li>
+</ul>
+<p><strong>最差情景估值: 823 亿 / 39.7 元</strong></p>
+<hr />
+<h4>估值锚（概率加权 DCF）</h4>
+<table>
+<thead>
+<tr>
+<th>情景</th>
+<th style="text-align: right;">估值（亿）</th>
+<th style="text-align: right;">对应股价</th>
+<th style="text-align: center;">概率</th>
+<th style="text-align: right;">加权贡献</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>乐观</td>
+<td style="text-align: right;">4,315</td>
+<td style="text-align: right;">208.1 元</td>
+<td style="text-align: center;">25%</td>
+<td style="text-align: right;">1,079</td>
+</tr>
+<tr>
+<td>基准</td>
+<td style="text-align: right;">3,003</td>
+<td style="text-align: right;">144.8 元</td>
+<td style="text-align: center;">45%</td>
+<td style="text-align: right;">1,351</td>
+</tr>
+<tr>
+<td>悲观</td>
+<td style="text-align: right;">1,776</td>
+<td style="text-align: right;">85.7 元</td>
+<td style="text-align: center;">25%</td>
+<td style="text-align: right;">444</td>
+</tr>
+<tr>
+<td>最差</td>
+<td style="text-align: right;">823</td>
+<td style="text-align: right;">39.7 元</td>
+<td style="text-align: center;">5%</td>
+<td style="text-align: right;">41</td>
+</tr>
+<tr>
+<td><strong>概率加权</strong></td>
+<td style="text-align: right;"><strong>2,915</strong></td>
+<td style="text-align: right;"><strong>140.6 元</strong></td>
+<td style="text-align: center;">100%</td>
+<td style="text-align: right;">2,915</td>
+</tr>
+</tbody>
+</table>
+<p><strong>DCF 概率加权估值锚: 2,915 亿元 / 140.6 元</strong>。当前股价 152.95 元相对此锚 <strong>+8.8%</strong>（轻度高估）。</p>
+<p><strong>概率分布合理性校验</strong>: 25/45/25/5 — 乐观和悲观等权（25%），基准最高（45%），尾部风险 5%。考虑到 2026Q1 已出现营收利润双降但非系统性危机，概率分布合理。</p>
+<hr />
+<h3>9.2 交叉验证（仅互证，不纳入锚）</h3>
+<ul>
+<li>
+<p><strong>可比 PE</strong>: peer 中位数 PE 63.07x，阳光电源 TTM 净利 119.3 亿 × 行业中位数 PE 63.07 = 7,524 亿。但阳光电源作为龙头不应按中位数给 PE；取 peer 25 分位 PE 37.42x × 119.3 亿 = <strong>4,465 亿</strong>（214.0 元）。考虑 2026Q1 增速拐点打折 20% → <strong>3,572 亿</strong>（172.3 元）。[Tushare:daily_basic][peer_analysis.md §4]</p>
+</li>
+<li>
+<p><strong>有形 PB</strong>: 每股净资产 23.47 元 [Tushare:fina_indicator]，peer 中位数 PB 5.02x → 合理 PB 估值 23.47 × 5.02 = <strong>117.8 元</strong>。但阳光电源 ROE 32.24% 远高于 peer（peer ROE 中位数 0.78%），高 ROE 支撑 PB 溢价，按 Gordon 模型 PB = (ROE-g)/(Ke-g) ≈ (32%-3%)/(9%-3%) ≈ 4.8x → 23.47 × 4.8 = <strong>112.7 元</strong>。但 ROE 下行中，取折衷 <strong>115 元</strong>。[Tushare:fina_indicator]</p>
+</li>
+<li>
+<p><strong>自洽判定</strong>: DCF 锚 140.6 元 vs 可比 PE 172.3 元（差 +22.6%）🔴 &gt; 20% / DCF 锚 140.6 元 vs PB 估值 115.0 元（差 -18.2%）⚠ 10-20%。</p>
+</li>
+</ul>
+<p><strong>分歧原因</strong>: ① 可比 PE 偏高因 peer 中位数 PE 含多家微利/亏损公司（锦浪 PE 63x、固德威 PE 106x），拉高中位数，阳光电源盈利质量远优于此，不应给予同等倍数；② PB 偏低因 Gordon 模型假设 ROE 平稳，而实际 ROE 正在下行（40.7%→32.2%），PB 合理值将进一步收缩。DCF 作为唯一锚，综合了增长+盈利+风险的动态变化，更具参考价值。</p>
+<hr />
+<h3>9.3 估值异常</h3>
+<ol>
+<li>
+<p><strong>龙头折价</strong>: 阳光电源 PE 26.59x 为行业最低（peer 中位数 63.07x），市值却是第二名的 2.3 倍。龙头公司享受最低估值在 A 股较罕见，反映市场对 2026 增速拐点的深度定价。若 Q2 增速回正，存在估值修复的期权价值。[Tushare:daily_basic][peer_analysis.md §3]</p>
+</li>
+<li>
+<p><strong>PB 与 ROE 背离信号</strong>: PB 6.71（peer 中位数 5.02），对应 ROE 32.24%（peer 中位数 0.78%）。按 PB-ROE 线性关系，阳光电源 PB 溢价（+33.7%）远低于 ROE 溢价（+4,000%+）。这意味着市场隐含预期 ROE 将大幅下降，向行业均值回归。若 ROE 维持 25%+，当前 PB 仍有上行空间。[Tushare:fina_indicator][audit_report: Valuation Anomaly]</p>
+</li>
+<li>
+<p><strong>FCF Yield 4.39%</strong>: 高于 A 股新能源行业平均水平（多数同行 FCF 为负），但低于 5% 的"绝对价值"门槛，说明估值并非极度低估。[metrics.json]</p>
+</li>
+</ol>
+<hr />
+<h3>9.4 技术面位置（v4.4 — Read <code>technical_analysis.md</code>）</h3>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>信号</th>
+<th>数值</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>技术面综合判定</td>
+<td>🟡 中性（无明确方向）</td>
+<td>—</td>
+<td>[technical_analysis.md §1]</td>
+</tr>
+<tr>
+<td>均线排列</td>
+<td>均线纠缠 🟡</td>
+<td>MA5/20/60/120 = 142.9/137.4/147.2/158.3</td>
+<td>[technical_analysis.md §1]</td>
+</tr>
+<tr>
+<td>中长期趋势</td>
+<td>长期弱势 🔴</td>
+<td>收盘 152.95 &lt; MA120（158.25）</td>
+<td>[technical_analysis.md §1]</td>
+</tr>
+<tr>
+<td>MACD</td>
+<td>无交叉 ⚪</td>
+<td>DIFF=0.225 / DEA=-1.709 / 零轴上方</td>
+<td>[technical_analysis.md §1]</td>
+</tr>
+<tr>
+<td>RSI(14)</td>
+<td>中性 ⚪</td>
+<td>64.05</td>
+<td>[technical_analysis.md §1]</td>
+</tr>
+<tr>
+<td>布林带位置</td>
+<td>上轨之上（短期超买）🔴</td>
+<td>上轨 147.8 / 中 137.4 / 下 127.0</td>
+<td>[technical_analysis.md §1]</td>
+</tr>
+<tr>
+<td>成交量</td>
+<td>放量（2.3x）⚠️</td>
+<td>当日/60日均量 = 2.32x</td>
+<td>[technical_analysis.md §1]</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>价格位置</th>
+<th style="text-align: center;">数值</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>近 20 日涨跌</td>
+<td style="text-align: center;">+9.67%</td>
+<td>[technical_analysis.md §2]</td>
+</tr>
+<tr>
+<td>近 60 日涨跌</td>
+<td style="text-align: center;">+5.85%</td>
+<td>[technical_analysis.md §2]</td>
+</tr>
+<tr>
+<td>近 1 年涨跌</td>
+<td style="text-align: center;"><strong>+152.39%</strong></td>
+<td>[technical_analysis.md §2]</td>
+</tr>
+<tr>
+<td>近 60 日支撑</td>
+<td style="text-align: center;">121.74 元（距当前 -20.4%）</td>
+<td>[technical_analysis.md §2]</td>
+</tr>
+<tr>
+<td>近 60 日阻力</td>
+<td style="text-align: center;">181.99 元（距当前 +19.0%）</td>
+<td>[technical_analysis.md §2]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>基本面 × 技术面配合判断</strong>:</p>
+<p>DCF 基准情景估值锚 140.6 元 &lt; 当前价 152.95 元（轻度高估 8.8%），技术面中性偏弱（收盘价跌破 MA120，布林带上轨之上短期超买）。<strong>基本面轻度偏空 + 技术面中性偏弱 = 短期不宜追高，建议等待回调至 DCF 基准情景 144.8 元附近或技术面支撑 121.74 元区域再考虑建仓</strong>。近 1 年涨幅 152.39% 表明股价已充分反映 FY2025 的高增长，若 2026Q2 增速未回正，回调压力较大。[technical_analysis.md §4]</p>
+<hr />
+</div>
+
+<!-- ============================================================
+     §十 投资回报测算（与 §九 共用情景）
+     ============================================================ -->
+<div class="section" id="invest-sim">
+<h2>§十 投资回报测算（与 §九 共用情景）</h2>
+<p><strong>初始仓位</strong>: 100 万元人民币<br />
+<strong>当前买入</strong>: 152.95 元 × 6,538 股（= 999,987 元 ≈ 100 万元）</p>
+<table>
+<thead>
+<tr>
+<th>情景</th>
+<th style="text-align: center;">目标价</th>
+<th style="text-align: center;">收益率</th>
+<th style="text-align: center;">概率</th>
+<th style="text-align: center;">加权</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>乐观</td>
+<td style="text-align: center;">208.1 元</td>
+<td style="text-align: center;">+36.1%</td>
+<td style="text-align: center;">25%</td>
+<td style="text-align: center;">+9.0%</td>
+</tr>
+<tr>
+<td>基准</td>
+<td style="text-align: center;">144.8 元</td>
+<td style="text-align: center;">-5.3%</td>
+<td style="text-align: center;">45%</td>
+<td style="text-align: center;">-2.4%</td>
+</tr>
+<tr>
+<td>悲观</td>
+<td style="text-align: center;">85.7 元</td>
+<td style="text-align: center;">-44.0%</td>
+<td style="text-align: center;">25%</td>
+<td style="text-align: center;">-11.0%</td>
+</tr>
+<tr>
+<td>最差</td>
+<td style="text-align: center;">39.7 元</td>
+<td style="text-align: center;">-74.0%</td>
+<td style="text-align: center;">5%</td>
+<td style="text-align: center;">-3.7%</td>
+</tr>
+<tr>
+<td><strong>概率加权 2 年收益率</strong></td>
+<td style="text-align: center;">–</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: center;">100%</td>
+<td style="text-align: center;"><strong>-8.1%</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>年化</strong> ≈ -4.1%（按 2 年期测算）。<strong>建议仓位</strong>: 轻仓观望（≤ 3% 组合权重）。</p>
+<p><strong>投资回报金额测算</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>情景</th>
+<th style="text-align: center;">持仓市值(万元)</th>
+<th style="text-align: center;">盈亏(万元)</th>
+<th style="text-align: center;">概率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>乐观</td>
+<td style="text-align: center;">136.1</td>
+<td style="text-align: center;">+36.1</td>
+<td style="text-align: center;">25%</td>
+</tr>
+<tr>
+<td>基准</td>
+<td style="text-align: center;">94.7</td>
+<td style="text-align: center;">-5.3</td>
+<td style="text-align: center;">45%</td>
+</tr>
+<tr>
+<td>悲观</td>
+<td style="text-align: center;">56.0</td>
+<td style="text-align: center;">-44.0</td>
+<td style="text-align: center;">25%</td>
+</tr>
+<tr>
+<td>最差</td>
+<td style="text-align: center;">26.0</td>
+<td style="text-align: center;">-74.0</td>
+<td style="text-align: center;">5%</td>
+</tr>
+<tr>
+<td><strong>概率加权</strong></td>
+<td style="text-align: center;"><strong>91.9</strong></td>
+<td style="text-align: center;"><strong>-8.1</strong></td>
+<td style="text-align: center;">100%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>解读</strong>: 以当前价 152.95 元买入 100 万元，概率加权期望收益为 <strong>-8.1 万元</strong>（-8.1%），年化约 -4.1%。<strong>下行风险显著大于上行空间</strong>：乐观情景上行 36.1% 但悲观情景下行 44.0%，风险收益比不对称。核心原因是当前价格（152.95 元）已略高于 DCF 概率加权锚（140.6 元），市场对储能高景气和 AIDC 预期已部分 Price In。</p>
+<p><strong>关键假设敏感性</strong>: 若 2026Q2 增速回正（营收 YoY 转正）→ 基准情景 FY2026E 营收上调至 920 亿，目标价上修至约 155 元，概率加权收益率回到 +1-3%，投资逻辑改善。2026 中报（预计 8 月底）是关键验证节点。</p>
+<hr />
+</div>
+
+<!-- ============================================================
+     §十一 定性判断（3 框架，无打分）
+     ============================================================ -->
+<div class="section" id="qualitative">
+<h2>§十一 定性判断（3 框架，v4.1 — 无打分）</h2>
+<blockquote>
+<p>估值分析详见 §九。<br />
+会计/治理红旗已由 Buffett Quality、Sloan Accrual、Valuation Anomaly 三个框架自动扫描,本报告中等风险信号 4 项(详见 §六 维度 7/8),无致命红旗。<br />
+本章节聚焦不能被定量指标或审计自动替代的"深层判断"。</p>
+</blockquote>
+<h3>框架 1 · 护城河（Moat）→ <strong>看多</strong></h3>
+<p><strong>核心问题</strong>: 阳光电源的可持续竞争优势是在<strong>加深</strong>、<strong>侵蚀</strong>还是<strong>部分是</strong>？</p>
+<p><strong>判断</strong>: <strong>加深</strong>（护城河在动态强化中）</p>
+<p><strong>证据链</strong>（至少 3 条，每条带来源）:</p>
+<ol>
+<li>
+<p><strong>品牌+可融资性壁垒持续强化</strong>: BloombergNEF 逆变器+ESS+PCS 可融资价值榜单 100% 可融资性，全球唯一六度蝉联榜首。MSCI ESG Rating 升至 AAA（2025 年最高档）。在金融机构对电站项目融资审批中，可融资性排名是硬性筛选条件，阳光电源品牌壁垒具有自我强化特征。[Doc:annual_2025][Web:sungrowpower.com]</p>
+</li>
+<li>
+<p><strong>规模效应+全球化壁垒加深</strong>: FY2025 逆变器发货 143GW（全球第一）、储能发货 43GWh（全球第一）、风电变流器装机全球第一。海外收入占比从 2024 年约 48% 提升至 60.54%（+12.5pct），海外毛利率显著高于国内（海外利润 217.9 亿 vs 国内 64.6 亿，利润占比 77.1%）。全球化布局成熟度超越绝大多数竞品。[Doc:annual_2025,P.28-29,33][Tushare:fina_mainbz]</p>
+</li>
+<li>
+<p><strong>竞品衰落佐证护城河加深</strong>: SolarEdge（SEDG.US）2024-2025 年持续亏损，市值从高点缩水 90%+ 至约 20 亿美元；阳光电源在 2025 年被认为"正式超越华为"成全球光储综合第一。行业马太效应加速，龙头份额集中趋势明确。[Web:eastmoney.com][phase1-data.md §3]</p>
+</li>
+<li>
+<p><strong>存疑点</strong>: 储能行业新进入者众（宁德时代、比亚迪、华为），长期护城河可能面临侵蚀。但目前阳光电源的系统集成能力+全球售后网络+bankability 认证构成的复合壁垒短期内难以被单一维度突破。[Doc:annual_2025,P.43]</p>
+</li>
+</ol>
+<p><strong>逻辑蕴含</strong>（对投资结论的影响 — 仅论方向，不论幅度）:<br />
+- 若判断成立 → 利好长期超额 ROE 假设的稳定性 / 利好终值倍数 / 利好抗周期韧性<br />
+- 若判断推翻（储能价格战摧毁品牌溢价 + 宁德时代/华为夺取 Top 1）→ 利空长期 ROE / 终值倍数需下调</p>
+<p><strong>对综合投资观点的支撑方向</strong>: <strong>看多</strong></p>
+<p><strong>未解决问题</strong>: 储能系统分部毛利率 2026Q1 已降至约 30%（vs FY2025 的 36.5%），若持续下滑至 25% 以下则护城河"品牌溢价"假设被侵蚀，需密切跟踪。</p>
+<hr />
+<h3>框架 2 · 管理层（Management）→ <strong>看多</strong></h3>
+<p><strong>核心问题</strong>: 管理层的<strong>德</strong>（诚信/股东利益对齐）、<strong>才</strong>（战略/执行/资本配置）是否都合格？</p>
+<p><strong>判断</strong>: <strong>是</strong>（德才均合格，但"才"的远期验证需等待 AIDC 落地）</p>
+<p><strong>证据链</strong>:</p>
+<ol>
+<li>
+<p><strong>"德"检验通过</strong>: 实控人曹仁贤持股 30.46%（63,141 万股），质押比例仅约 3.3%（约 2,083 万股），远低于 50% 红旗线。FY2025 分红每 10 股派 6.9 元（合计 14.16 亿），股息率 1.31%，连续多年稳定分红。未发现审计意见瑕疵、年报差错、CFO 非正常离任等负面信号。Beneish M-Score = -2.723 ≤ -1.78，盈余操纵概率低。[Tushare:pledge_detail][Tushare:dividend][audit_report]</p>
+</li>
+<li>
+<p><strong>"才"检验——资本配置</strong>: FY2025 经营现金流 169.18 亿 vs 归母净利 134.61 亿（OCF/NI = 1.26x），回款效率优秀。同时主动降杠杆：资产负债率从 66.85%（2023Q1）降至 57.51%（2026Q1），短期借款-56.19%，长期借款-47.22%。资本配置偏稳健——"赚的钱能收回来，收回来的钱不乱花"。[Tushare:cashflow][Tushare:balancesheet][Doc:annual_2025,P.39]</p>
+</li>
+<li>
+<p><strong>"才"检验——战略定力+执行力</strong>: 2011 年以逆变器单品上市，2020 年前后开始布局储能，2023-2025 年储能从 25% 收入占比增至 41.81%（首超光伏），战略转型执行力极强。2025 年成立 AIDC 事业部开辟第二增长曲线，显示前瞻布局能力。研发投入 41.75 亿（+31.97%），研发人员占比 40.12%。[Doc:annual_2025,P.28-29,38]</p>
+</li>
+<li>
+<p><strong>审计红旗引用</strong>:<br />
+   - [🟡 中] 前十大股东净减持 3,583 万股（20260331），但主要是指数基金被动调仓（易方达创业板 ETF -1,385 万股、华泰柏瑞沪深 300 ETF -1,231 万股），非管理层主动减持。[audit_report: Governance]<br />
+   - [🟡 中] 长期股权投资变动 +31.7%（48,390 万→63,712 万），参股公司权益法波动需关注但金额绝对值较小（占总资产 &lt;1%）。[audit_report: Related-Party Exposure]<br />
+   - [🟡 中] 股东户数年内从 179,692 增至 294,149（+63.7%），散户涌入信号，但这是市场行为而非管理层治理问题。[audit_report: Shareholder Flow]</p>
+</li>
+</ol>
+<p><strong>逻辑蕴含</strong>:<br />
+- 若判断成立 → 利好管理溢价（PE 可给予行业上限）/ 利好长期战略执行的确定性<br />
+- 若判断推翻（AIDC 投入产出不及预期 / 港股上市大幅稀释 / 管理层变动）→ 利空战略可信度</p>
+<p><strong>对综合投资观点的支撑方向</strong>: <strong>看多</strong></p>
+<p><strong>未解决问题</strong>: 港股二次递表（2026 年 4 月）显示融资意愿强烈，若 H 股定价大幅折价可能稀释 A 股股东权益，需跟踪 H 股定价方案。</p>
+<hr />
+<h3>框架 3 · 催化剂（Catalyst）→ <strong>中性</strong></h3>
+<p><strong>核心问题</strong>: 下一个 <strong>12 个月</strong> 是否有可能<strong>改变投资结论方向</strong>的具体、可观察事件？</p>
+<p><strong>判断</strong>: <strong>部分是</strong>（正负催化剂并存，净效应不确定）</p>
+<p><strong>证据链</strong>:</p>
+<ol>
+<li>
+<p><strong>正向催化剂</strong>:<br />
+   - <strong>2026 中报（预计 8 月底）</strong>: 若 Q2 营收 YoY 回正，证伪"增速拐点"假设，将触发估值修复。FY2025 Q2 基数为 245 亿（Q2 单季），2026Q2 若达 250 亿+ 即可实现同比转正。[Tushare:income]<br />
+   - <strong>港股上市落地</strong>: 若 H 股顺利挂牌，将拓宽融资渠道+提升国际品牌知名度+吸引更多海外长线资金配置 A+H 双边。[Web:sina.com.cn]<br />
+   - <strong>AIDC 首单公告</strong>: 若 2026 年底前公告首批 AIDC 电源产品商业化订单（如谷歌数据中心），将打开第二增长曲线估值空间。[Web:sina.com.cn]<br />
+   - <strong>储能行业政策</strong>: 若各国加码配储政策（如美国 IRA 延续/扩大、欧洲电力市场改革），利好储能高景气延续。</p>
+</li>
+<li>
+<p><strong>负向催化剂</strong>:<br />
+   - <strong>2026Q2 继续下滑</strong>: 若 Q2 营收 YoY 仍为负（≤-10%），市场将确认"增长拐点"而非"暂时性扰动"，估值可能进一步压缩。[Tushare:income]<br />
+   - <strong>美国关税加码</strong>: 301 关税进一步上调或扩大至储能产品范围，直接冲击海外 60.54% 收入。[Doc:annual_2025,P.43]<br />
+   - <strong>WoodMac 预警兑现</strong>: 2026 年全球光伏逆变器需求暴跌 9% 若在 H2 加速体现，逆变器板块将持续承压。[Web:csisolar.com]</p>
+</li>
+<li>
+<p><strong>时间窗催化剂</strong>:<br />
+   - 2026 年中报（8 月底）— 验证 Q2 增速是否回正<br />
+   - H 股上市（递表后通常 3-6 个月）— 2026Q3-Q4 可能挂牌<br />
+   - AIDC 第一代产品（管理层指引"2026 年底前推出"）— Q4 可能有进展公告</p>
+</li>
+<li>
+<p><strong>证伪催化剂</strong>:<br />
+   - 若 FY2026 全年营收 YoY &lt; -10%（即全年 &lt; 803 亿）→ "暂时性高基数扰动"假设失败，需重新评估增长逻辑<br />
+   - 若储能毛利率全年降至 25% 以下 → 品牌溢价假设被证伪</p>
+</li>
+</ol>
+<p><strong>逻辑蕴含</strong>:<br />
+- 近期正向催化剂（中报+港股+AIDC）和负向催化剂（Q2 增速+关税+逆变器需求）几乎等量，净效应不确定<br />
+- 2026 年中报是最关键的方向性验证节点——Q2 回正则多空天平向多方倾斜</p>
+<p><strong>对综合投资观点的支撑方向</strong>: <strong>中性</strong></p>
+<p><strong>未解决问题</strong>: 2026Q2 业绩数据尚未可得（最早 7 月底快报），投资决策面临 2-3 个月的信息真空期。</p>
+<hr />
+<h3>综合判断</h3>
+<p><strong>框架方向分布</strong>（共 3 个框架）:<br />
+- 看多方向: 框架 1（护城河）、框架 2（管理层）（共 2 个）<br />
+  - 框架 1 证据要点: 品牌壁垒六度蝉联全球第一+规模效应自我强化+竞品衰落佐证<br />
+  - 框架 2 证据要点: 实控人高持股低质押+OCF/NI 1.26x 回款优秀+从逆变器到储能战略转型成功执行<br />
+- 看空方向: 无<br />
+- 中性/数据不足: 框架 3（催化剂）（共 1 个）<br />
+  - 框架 3 证据要点: 正负催化剂等量并存，2026 中报是关键验证节点</p>
+<p><strong>致命看空条款检查</strong>（直接引用 §三快筛）:<br />
+- §三 快筛结果: ✅ PASS（6 项均未触发）<br />
+- 审计报告: 0 个 🔴 致命红旗、4 个 🟡 中级黄旗、3 个 🟢 低级绿旗 → 未触发"≥2 个 🔴 红旗"条款<br />
+- 若触发任一项 → 综合结论自动 = 看空方向 → <strong>未触发</strong></p>
+<p><strong>综合结论</strong>: <strong>看多方向</strong><br />
+（根据 v4.1 黑白分割规则：3 框架中 ≥2 同向"看多" → 对应"看多方向"；§三快筛未触发 → 不强制看空）</p>
+<p><strong>关键分歧点</strong>:<br />
+- 框架 1/2（看多）vs §九 估值分析（当前价轻度高估 8.8%）— 分歧焦点是"好公司"vs"好价格"：护城河加深+管理层优秀=好公司，但当前 152.95 元已略高于 DCF 锚 140.6 元=价格不够好<br />
+- 验证方式: 2026 中报 Q2 增速是否回正 / H 股定价是否合理 / 储能毛利率是否企稳</p>
+<p><strong>验证催化剂</strong>（由框架 3 识别）:<br />
+1. 2026 中报 Q2 增速 — 时间窗 2026 年 8 月底<br />
+2. H 股上市挂牌 — 时间窗 2026 年 Q3-Q4<br />
+3. AIDC 首代产品/首单公告 — 时间窗 2026 年 Q4</p>
+</div>
+
+<!-- ============================================================
+     §十二 信息缺口与尽调优先级
+     ============================================================ -->
+<div class="section" id="gaps">
+<h2>§十二 信息缺口与尽调优先级</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>缺口</th>
+<th style="text-align: center;">状态</th>
+<th style="text-align: center;">可得性</th>
+<th>影响的结论</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Q4 净利大幅下滑（15.80 亿 vs Q3 41.47 亿）的具体原因拆分——是否含一次性减值/汇兑/资产处置等非经常损益集中确认</td>
+<td style="text-align: center;">❌未找到</td>
+<td style="text-align: center;">中</td>
+<td>§四 季度盈利稳定性评估 / §九 DCF 季度分布假设。若 Q4 下滑系一次性因素，则 2026 全年净利可回归正常节奏；若系结构性毛利率下行，则基准情景需下调。已尝试: API:income 仅年度数据；年报 P.10 列季度数字无解释；Tavily 搜索"阳光电源 Q4 业绩下滑原因"未获管理层详细说明 [Doc:annual_2025,P.10]</td>
+</tr>
+<tr>
+<td>2</td>
+<td>储能系统分地区毛利率（中国 vs 海外，特别是沙特/中东大项目单独毛利率）</td>
+<td style="text-align: center;">❌未找到</td>
+<td style="text-align: center;">低</td>
+<td>§八 可比公司对标 / §九 DCF 分部估值。海外储能毛利率若显著高于国内（市场预期 5-10pct 溢价），则海外占比提升对利润弹性贡献更大。已尝试: API:fina_mainbz 仅有行业/产品分类无地区毛利交叉；年报未单独披露 [Tushare:fina_mainbz]</td>
+</tr>
+<tr>
+<td>3</td>
+<td>AIDC 业务 2026-2027 年收入预测及可量化的订单管线</td>
+<td style="text-align: center;">⚠️部分</td>
+<td style="text-align: center;">低</td>
+<td>§九 乐观情景增长假设 / §十一 催化剂判断。当前仅知"计划 2026 年底前推出第一代产品，2027 年批量"，无收入量化指引。已尝试: 年报无量化预测；Tavily 搜索得到定性描述但无金额；ditan.com 称"暂无相关客户"。<strong>已被部分覆盖</strong>: phase3-part4 §九乐观情景已以保守 5-10 亿预估 2027 年 AIDC 增量 [Web:ditan.com][Doc:annual_2025,P.29]</td>
+</tr>
+<tr>
+<td>4</td>
+<td>实控人曹仁贤最新质押比例汇总及是否有减持计划</td>
+<td style="text-align: center;">⚠️部分</td>
+<td style="text-align: center;">高</td>
+<td>§三 快筛条款 #3 / §七 治理红旗。API:pledge_detail 有 163 条 active 记录，但单笔质押数量极小（0.01-0.12 万股），累计质押比例极低（远 &lt;1%），不构成风险。减持计划信息暂缺。<strong>已被替代来源覆盖</strong>: data_snapshot §7 质押明细已完整列示，累计质押金额微乎其微 [Tushare:pledge_detail]</td>
+</tr>
+<tr>
+<td>5</td>
+<td>2026Q1 储能发货量（GWh）及在手订单金额</td>
+<td style="text-align: center;">❌未找到</td>
+<td style="text-align: center;">中</td>
+<td>§四 业务增长持续性 / §九 2026 全年储能收入估算。2026Q1 报告未单独披露季度发货量，投资者无法判断 Q1 营收下滑是否由储能发货节奏后移所致。已尝试: Q1 报告仅有合并报表无分部数据；Tavily 搜索未找到管理层指引 [Tushare:income]</td>
+</tr>
+<tr>
+<td>6</td>
+<td>港股上市（H 股）具体时间表、融资规模及对 A 股股权稀释影响</td>
+<td style="text-align: center;">⚠️部分</td>
+<td style="text-align: center;">中</td>
+<td>§十 回报测算中股本假设 / §十一 催化剂判断。已知 2026 年 4 月第二次递表港交所，但融资规模、定价区间、预期时间表未明。若 H 股折价发行将摊薄 EPS [Web:sina.com.cn]</td>
+</tr>
+<tr>
+<td>7</td>
+<td>美国 301 关税对阳光电源实际出口金额的量化影响（直接出口 vs 通过第三国转口比例）</td>
+<td style="text-align: center;">❌未找到</td>
+<td style="text-align: center;">中</td>
+<td>§五 行业竞争格局 / §九 悲观情景收入假设。年报仅泛提"政策风险"，未量化美国业务敞口及关税影响路径 [Doc:annual_2025,P.43]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+</div>
+
+<!-- ============================================================
+     §十三 数据可审计性（时效性+来源+audit 红旗）
+     ============================================================ -->
+<div class="section" id="sources">
+<h2>§十三 数据可审计性（时效性 + 来源 3 类分组）</h2>
+<p><strong>截止日期</strong>: 2026-05-15。<strong>关键待披露</strong>: 2026 年中报（预计 2026-08），港股上市招股书（若过聆讯）。</p>
+<h3>[Tushare API]</h3>
+<table>
+<thead>
+<tr>
+<th>数据表</th>
+<th style="text-align: center;">最新期</th>
+<th style="text-align: center;">时效性</th>
+<th>用于章节</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>income</td>
+<td style="text-align: center;">20260331</td>
+<td style="text-align: center;">✅当季</td>
+<td>§四 财务趋势、§九 DCF 基准</td>
+</tr>
+<tr>
+<td>balancesheet</td>
+<td style="text-align: center;">20260331</td>
+<td style="text-align: center;">✅当季</td>
+<td>§四 资产负债、§三 快筛</td>
+</tr>
+<tr>
+<td>cashflow</td>
+<td style="text-align: center;">20260331</td>
+<td style="text-align: center;">✅当季</td>
+<td>§四 现金流、§九 FCF</td>
+</tr>
+<tr>
+<td>fina_indicator</td>
+<td style="text-align: center;">20260331</td>
+<td style="text-align: center;">✅当季</td>
+<td>§二 评分总览、§六 维度 3/7</td>
+</tr>
+<tr>
+<td>daily / daily_basic</td>
+<td style="text-align: center;">20260515</td>
+<td style="text-align: center;">✅当日</td>
+<td>§九 估值、§十 回报</td>
+</tr>
+<tr>
+<td>top10_holders</td>
+<td style="text-align: center;">20260331</td>
+<td style="text-align: center;">✅当季</td>
+<td>§四 主力控盘</td>
+</tr>
+<tr>
+<td>top10_floatholders</td>
+<td style="text-align: center;">20260331</td>
+<td style="text-align: center;">✅当季</td>
+<td>§四 主力控盘</td>
+</tr>
+<tr>
+<td>pledge_detail</td>
+<td style="text-align: center;">20270514</td>
+<td style="text-align: center;">✅最新</td>
+<td>§三 快筛 #3、§七 治理</td>
+</tr>
+<tr>
+<td>stk_holdernumber</td>
+<td style="text-align: center;">20260331</td>
+<td style="text-align: center;">✅当季</td>
+<td>§四 筹码分析</td>
+</tr>
+<tr>
+<td>fina_mainbz</td>
+<td style="text-align: center;">20251231</td>
+<td style="text-align: center;">⚠️上年度</td>
+<td>§四 业务板块（Q1 无分部数据）</td>
+</tr>
+<tr>
+<td>dividend</td>
+<td style="text-align: center;">20251231</td>
+<td style="text-align: center;">✅年度</td>
+<td>§四 分红</td>
+</tr>
+<tr>
+<td>repurchase</td>
+<td style="text-align: center;">20250430</td>
+<td style="text-align: center;">✅近期</td>
+<td>§九 股东回报</td>
+</tr>
+<tr>
+<td>forecast_vip</td>
+<td style="text-align: center;">无数据</td>
+<td style="text-align: center;">—</td>
+<td>不适用</td>
+</tr>
+<tr>
+<td>express_vip</td>
+<td style="text-align: center;">无数据</td>
+<td style="text-align: center;">—</td>
+<td>不适用</td>
+</tr>
+</tbody>
+</table>
+<h3>[PDF 原文]</h3>
+<table>
+<thead>
+<tr>
+<th>文档</th>
+<th style="text-align: center;">财年</th>
+<th>页码引用</th>
+<th>用于章节</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>annual_2025.PDF</td>
+<td style="text-align: center;">FY2025</td>
+<td>P.6-7 主营业务</td>
+<td>§四 业务描述</td>
+</tr>
+<tr>
+<td>annual_2025.PDF</td>
+<td style="text-align: center;">FY2025</td>
+<td>P.8-12 公司概况</td>
+<td>§四 经营动态、§五 管理层</td>
+</tr>
+<tr>
+<td>annual_2025.PDF</td>
+<td style="text-align: center;">FY2025</td>
+<td>P.27 变动原因</td>
+<td>§六 维度 2/3 盈利分析</td>
+</tr>
+<tr>
+<td>annual_2025.PDF</td>
+<td style="text-align: center;">FY2025</td>
+<td>P.28-30 产品技术</td>
+<td>§六 维度 4 产品与技术</td>
+</tr>
+<tr>
+<td>annual_2025.PDF</td>
+<td style="text-align: center;">FY2025</td>
+<td>P.32-33 分部数据</td>
+<td>§四 业务板块、§八 对标</td>
+</tr>
+<tr>
+<td>annual_2025.PDF</td>
+<td style="text-align: center;">FY2025</td>
+<td>P.38 研发人员</td>
+<td>§六 维度 5 团队</td>
+</tr>
+<tr>
+<td>annual_2025.PDF</td>
+<td style="text-align: center;">FY2025</td>
+<td>P.39 现金流原因</td>
+<td>§六 维度 7 财务健康</td>
+</tr>
+<tr>
+<td>annual_2025.PDF</td>
+<td style="text-align: center;">FY2025</td>
+<td>P.43-44 风险因素</td>
+<td>§七 风险、§十一 定性判断</td>
+</tr>
+</tbody>
+</table>
+<p><strong>时效性说明</strong>: PDF 为 FY2025 年报，财务数据以 API 20260331 最新季度为主，PDF 仅补充定性内容（变动原因原文、行业分析、风险因素、业务描述等）。</p>
+<h3>[WebSearch]</h3>
+<table>
+<thead>
+<tr>
+<th>来源</th>
+<th>内容</th>
+<th style="text-align: center;">日期</th>
+<th>用于章节</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sina.com.cn</td>
+<td>2026Q1 业绩分析、港股递表</td>
+<td style="text-align: center;">2026-04</td>
+<td>§四 经营动态、§十一 催化剂</td>
+</tr>
+<tr>
+<td>eastmoney.com</td>
+<td>阳光电源超越华为成全球光储第一</td>
+<td style="text-align: center;">2026</td>
+<td>§五 竞争格局</td>
+</tr>
+<tr>
+<td>ditan.com</td>
+<td>储能行业 CAGR 20-30%、AIDC 布局</td>
+<td style="text-align: center;">2025-08</td>
+<td>§五 行业趋势、§六 维度 1</td>
+</tr>
+<tr>
+<td>mordorintelligence.com</td>
+<td>全球光伏逆变器市场规模</td>
+<td style="text-align: center;">2025</td>
+<td>§六 维度 1 市场规模</td>
+</tr>
+<tr>
+<td>csisolar.com</td>
+<td>WoodMac 2026 年逆变器需求预警-9%</td>
+<td style="text-align: center;">2026</td>
+<td>§五 行业趋势</td>
+</tr>
+<tr>
+<td>cnfinance.cn</td>
+<td>出口退税取消政策</td>
+<td style="text-align: center;">2025</td>
+<td>§五 政策环境</td>
+</tr>
+<tr>
+<td>xueqiu.com</td>
+<td>社区看多/看空舆情</td>
+<td style="text-align: center;">2025-2026</td>
+<td>§七 网络舆情</td>
+</tr>
+<tr>
+<td>ifeng.com</td>
+<td>2026Q1 预付款增 201%</td>
+<td style="text-align: center;">2026-04</td>
+<td>§四 经营动态</td>
+</tr>
+<tr>
+<td>cninfo.com.cn</td>
+<td>股权激励计划</td>
+<td style="text-align: center;">2025</td>
+<td>§六 维度 5 团队</td>
+</tr>
+</tbody>
+</table>
+<p><strong>时效性说明</strong>: WebSearch 结果时效性参差，最新为 2026-04 月（Q1 业绩分析），部分行业数据为 2025 年研究报告。所有 Web 来源仅用于定性佐证，关键财务数字均以 Tushare API 或 PDF 年报为准。</p>
+<h3>审计红旗汇总（11 框架）</h3>
+<table>
+<thead>
+<tr>
+<th>严重度</th>
+<th style="text-align: center;">数量</th>
+<th>代表性红旗</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🔴 致命</td>
+<td style="text-align: center;">0</td>
+<td>—</td>
+</tr>
+<tr>
+<td>🟠 高</td>
+<td style="text-align: center;">0</td>
+<td>—</td>
+</tr>
+<tr>
+<td>🟡 中</td>
+<td style="text-align: center;">4</td>
+<td>① Governance: 前十大股东净减持 3583 万股 ② Shareholder Flow: 股东户数 +15.3%（散户涌入高位接盘风险）③ Shareholder Flow: 一年内户数 +63.7%（筹码分散）④ Related-Party: 长期股权投资 +31.7%（参股公司价值波动）</td>
+</tr>
+<tr>
+<td>🟢 低</td>
+<td style="text-align: center;">3</td>
+<td>① Piotroski F=9/9（优秀）② Beneish M=-2.723（盈余操纵概率低）③ Altman Z=4.796（财务安全）</td>
+</tr>
+</tbody>
+</table>
+<p>完整清单: <code>audit_report.md</code>。</p>
+<hr />
+</div>
+
+<!-- ============================================================
+     v4.6.1: 附录/补丁章节追加区(避免 MD→HTML 内容丢失)
+     主报告 §十三 之后的所有 ## 章节(如"附录 v4 修订日志" / "v4.1 补丁")
+     Phase 6 Part B 必须追加到这里, 不得丢弃
+     ============================================================ -->
+<!-- 无附录章节 -->
+
+
+</div>
+</body>
+</html>

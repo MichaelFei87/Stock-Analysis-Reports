@@ -1,0 +1,43 @@
+{
+  "slug": "300274_阳光电源",
+  "ticker": "300274.SZ",
+  "name": "阳光电源",
+  "name_cn": "阳光电源",
+  "sector": "电气设备",
+  "market": "a",
+  "report_date": "",
+  "version": "v1",
+  "composite_score": 7.05,
+  "verdict": "Bullish",
+  "verdict_tone": "bullish",
+  "valuation_tag": "估值锚 140.6 元",
+  "one_liner": "看多方向 —— 阳光电源为全球光伏逆变器+储能双料龙头（均为全球出货量第一），护城河持续加深（BloombergNEF 可融资性六度蝉联榜首、海外收入占比突破 60%），FY2025 归母净利 134.61 亿（+21.97%）验证盈利能力；但当前股价 152.95 元已略高于 DCF 概率加权锚 140.6 元（+8.8%），且 2026Q1 营收-18.26%/净利-40.12% 暴露增速拐点，短期不宜追高，需等待 2026 中报验证 Q2 增速回正。",
+  "metrics": [
+    {
+      "label": "综合评分",
+      "value": "7.05/10",
+      "tone": "neutral"
+    },
+    {
+      "label": "期望收益",
+      "value": "-8.1%",
+      "tone": "neutral"
+    },
+    {
+      "label": "估值锚",
+      "value": "140.6元",
+      "tone": "neutral"
+    }
+  ],
+  "expected_return_short": "-8.1%",
+  "badges": [
+    {
+      "label": "Bullish 7.05/10",
+      "variant": "amber"
+    },
+    {
+      "label": "估值锚 140.6 元",
+      "variant": "amber"
+    }
+  ]
+}
