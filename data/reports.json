@@ -44,6 +44,49 @@
           "variant": "amber"
         }
       ]
+    },
+    {
+      "slug": "0700_腾讯控股",
+      "ticker": "0700.HK",
+      "name": "TENCENT",
+      "name_cn": "腾讯控股",
+      "sector": "Internet Content & Information",
+      "market": "hk",
+      "report_date": "",
+      "version": "v1",
+      "composite_score": 8.0,
+      "verdict": "Bullish",
+      "verdict_tone": "bullish",
+      "valuation_tag": "估值锚 647.0 元",
+      "one_liner": "看多 —— 腾讯拥有中国互联网最深复合护城河（微信13.8亿MAU社交网络效应+全球游戏Top 2+AI产品矩阵领先），AI变现从投入期转入收获期（云+20%、AIM+渗透30%→50%+），SOTP概率加权估值锚HKD 647较现价HKD 540有+19.8%上行空间，叠加年化~3.5%股东回报（回购+股息）。",
+      "metrics": [
+        {
+          "label": "综合评分",
+          "value": "8.0/10",
+          "tone": "neutral"
+        },
+        {
+          "label": "期望收益",
+          "value": "+19.8%",
+          "tone": "positive"
+        },
+        {
+          "label": "估值锚",
+          "value": "647.0元",
+          "tone": "neutral"
+        }
+      ],
+      "expected_return_short": "+19.8%",
+      "badges": [
+        {
+          "label": "Bullish 8.0/10",
+          "variant": "amber"
+        },
+        {
+          "label": "估值锚 647.0 元",
+          "variant": "amber"
+        }
+      ]
     }
   ]
 }
