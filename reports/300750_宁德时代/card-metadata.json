@@ -1,0 +1,43 @@
+{
+  "slug": "300750_宁德时代",
+  "ticker": "300750.SZ",
+  "name": "宁德时代",
+  "name_cn": "宁德时代",
+  "sector": "电气设备",
+  "market": "a",
+  "report_date": "",
+  "version": "v1",
+  "composite_score": 8.05,
+  "verdict": "Bullish",
+  "verdict_tone": "bullish",
+  "valuation_tag": "估值锚 600.0 元",
+  "one_liner": "看多方向 —— 全球动力电池绝对龙头（市占率39.2%连续9年第一），四重复合护城河（规模+技术+客户+专利）持续加深，2026Q1业绩爆发（营收+52.45%、净利+48.52%）确立加速增长趋势；DCF概率加权估值锚600元较当前427元低估约29%，但需关注国内产能过剩（3000GWh vs 1500GWh需求）和存货积压风险（增速58% vs 营收增速17%）。",
+  "metrics": [
+    {
+      "label": "综合评分",
+      "value": "8.05/10",
+      "tone": "neutral"
+    },
+    {
+      "label": "期望收益",
+      "value": "+40.5%",
+      "tone": "positive"
+    },
+    {
+      "label": "估值锚",
+      "value": "600.0元",
+      "tone": "neutral"
+    }
+  ],
+  "expected_return_short": "+40.5%",
+  "badges": [
+    {
+      "label": "Bullish 8.05/10",
+      "variant": "amber"
+    },
+    {
+      "label": "估值锚 600.0 元",
+      "variant": "amber"
+    }
+  ]
+}

@@ -1,0 +1,4051 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>宁德时代（300750.SZ）投资分析报告 — 2026-05-16</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   Claude Code Company Analysis · Report Styles v5.0
+   单一 CSS 真相源 — 由 assets/html/base.html 加载并内联
+   禁止在 Phase 6 Part B 中自创颜色值或变量名
+   v5.0: Claude Design Language — 温暖羊皮纸 + 赤陶色主调 + 衬线标题
+         Bloomberg 风险色保留(红/琥珀/黄/绿)
+   ============================================================ */
+
+:root {
+  /* 主色 — Claude Terracotta */
+  --c-primary: #c96442;
+  --c-primary-light: #f0eee6;
+  --c-primary-dark: #a14e2f;
+  --c-accent: #d97757;
+
+  /* Bloomberg 风格风险等级(高对比) — 保留不变 */
+  --c-risk-red:    #dc2626;
+  --c-risk-red-bg: #fef2f2;
+  --c-risk-amber:  #e8a33a;
+  --c-risk-amber-bg: #fff7ed;
+  --c-risk-yellow: #fbbf24;
+  --c-risk-yellow-bg: #fffbeb;
+  --c-risk-green:  #059669;
+  --c-risk-green-bg: #ecfdf5;
+
+  /* 语义色 (保留 v4.3 alias) */
+  --c-green: var(--c-risk-green);
+  --c-green-bg: var(--c-risk-green-bg);
+  --c-yellow: #d97706;
+  --c-yellow-bg: #fffbeb;
+  --c-red: var(--c-risk-red);
+  --c-red-bg: var(--c-risk-red-bg);
+
+  /* Claude 暖灰度系 */
+  --c-gray-50:  #faf9f5;  /* Ivory */
+  --c-gray-100: #f0eee6;  /* Border Cream */
+  --c-gray-200: #e8e6dc;  /* Border Warm */
+  --c-gray-500: #87867f;  /* Stone Gray */
+  --c-gray-700: #5e5d59;  /* Olive Gray */
+  --c-gray-900: #141413;  /* Near Black */
+
+  /* Claude 表面色 */
+  --c-parchment: #f5f4ed;
+  --c-ivory: #faf9f5;
+  --c-warm-sand: #e8e6dc;
+  --c-dark-surface: #30302e;
+  --c-warm-silver: #b0aea5;
+  --c-dark-warm: #3d3d3a;
+
+  /* Morningstar 卡片化 — 迁移到暖色 */
+  --c-card-border:  #e8e6dc;
+  --c-card-header:  #faf9f5;
+  --c-card-hover:   rgba(201,100,66,0.04);
+
+  /* 形状 — Claude ring shadow 系统 */
+  --radius: 12px;
+  --shadow: 0px 0px 0px 1px #e8e6dc;
+  --shadow-md: 0px 0px 0px 1px #d1cfc5;
+  --shadow-lg: rgba(0,0,0,0.05) 0px 4px 24px;
+
+  /* Variant Perception 紫 — 保留 */
+  --c-variant: #7a4dab;
+  --c-variant-bg: #f3eeff;
+
+  /* v4.6 sidebar 布局(弃用但保持兼容) */
+  --sidebar-width: 260px;
+  --sidebar-gap: 24px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+               "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  background: var(--c-parchment);
+  color: var(--c-gray-900);
+  margin: 0;
+  padding: 0;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+/* Claude 衬线标题族 */
+h1, h2, h3 {
+  font-family: Georgia, "Noto Serif SC", "Songti SC", serif;
+  font-weight: 500;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+}
+
+/* ---------- 3.1 Sticky 顶部导航栏 ---------- */
+.top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  height: 50px;
+  padding: 0 24px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(245,244,237,0.85);
+  border-bottom: 1px solid var(--c-gray-200);
+  font-size: 14px;
+}
+.top-nav .nav-brand {
+  font-family: Georgia, "Noto Serif SC", serif;
+  font-weight: 500;
+  color: var(--c-primary);
+  text-decoration: none;
+  margin-right: auto;
+  font-size: 15px;
+}
+.top-nav a {
+  color: var(--c-gray-700);
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: background .15s, color .15s;
+}
+.top-nav a:hover {
+  background: rgba(201,100,66,0.08);
+  color: var(--c-primary);
+}
+
+/* ---------- Header Hero ---------- */
+header.hero {
+  background: var(--c-gray-900);
+  color: var(--c-ivory);
+  padding: 48px 32px;
+  border-radius: 16px;
+  margin-bottom: 32px;
+  box-shadow: var(--shadow-lg);
+}
+header.hero h1 {
+  font-size: 32px;
+  margin: 0 0 8px;
+  font-weight: 500;
+  line-height: 1.15;
+  color: var(--c-ivory);
+}
+header.hero .subtitle {
+  color: var(--c-warm-silver);
+  font-size: 15px;
+}
+header.hero .meta {
+  display: flex; flex-wrap: wrap; gap: 24px;
+  margin-top: 20px; font-size: 14px;
+  color: var(--c-warm-silver);
+}
+
+/* ---------- Section (每个 §一到§十五 一个) ---------- */
+.section {
+  background: var(--c-ivory);
+  padding: 28px 32px;
+  margin: 20px 0;
+  border-radius: var(--radius);
+  border: 1px solid var(--c-gray-100);
+  box-shadow: var(--shadow);
+}
+.section h2 {
+  font-family: Georgia, "Noto Serif SC", "Songti SC", serif;
+  color: var(--c-primary);
+  border-bottom: 2px solid rgba(201,100,66,0.15);
+  padding-bottom: 8px;
+  margin-top: 0;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.25;
+}
+.section h3 {
+  font-family: Georgia, "Noto Serif SC", "Songti SC", serif;
+  color: var(--c-gray-900);
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 24px;
+  border-bottom: 1px dashed var(--c-gray-200);
+  padding-bottom: 4px;
+  line-height: 1.3;
+}
+.section h4 { color: var(--c-gray-900); font-size: 16px; margin-top: 18px; }
+
+/* Variant Perception 章节专用紫色强调 */
+.section.variant-perception {
+  border-left: 4px solid var(--c-variant);
+  background: linear-gradient(to right, var(--c-variant-bg) 0%, var(--c-ivory) 3%);
+}
+.section.variant-perception h2 {
+  color: var(--c-variant);
+  border-bottom-color: var(--c-variant-bg);
+}
+
+/* ---------- 3.2 评分环形图 (SVG) ---------- */
+.score-ring {
+  display: inline-block;
+  position: relative;
+}
+.score-ring svg { display: block; }
+.score-ring .score-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.score-ring .score-text .num {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--c-primary);
+  font-family: Georgia, "Noto Serif SC", serif;
+}
+.score-ring .score-text .label {
+  font-size: 11px;
+  color: var(--c-gray-500);
+}
+
+/* ---------- 3.3 维度评分条形图 ---------- */
+.dimension-bar {
+  display: grid;
+  grid-template-columns: 1fr 48px 3fr 56px;
+  align-items: center;
+  gap: 12px;
+  margin: 10px 0;
+  font-size: 14px;
+}
+.dimension-bar .dim-name { color: var(--c-gray-700); }
+.dimension-bar .dim-score {
+  font-weight: 600;
+  text-align: right;
+  color: var(--c-primary);
+  font-family: Georgia, "Noto Serif SC", serif;
+}
+.dimension-bar .dim-progress {
+  height: 10px;
+  background: var(--c-gray-100);
+  border-radius: 5px;
+  overflow: hidden;
+}
+.dimension-bar .dim-progress .fill { height: 100%; border-radius: 5px; }
+.dimension-bar .dim-progress .fill.tier1 { background: linear-gradient(90deg, var(--c-primary), var(--c-primary-dark)); }
+.dimension-bar .dim-progress .fill.tier2 { background: linear-gradient(90deg, #8b5cf6, #6d28d9); }
+.dimension-bar .dim-progress .fill.tier3 { background: linear-gradient(90deg, var(--c-accent), var(--c-primary)); }
+.dimension-bar .dim-weight { text-align: right; color: var(--c-gray-500); font-size: 12px; }
+
+/* ---------- 3.4 三色情景卡片 ---------- */
+.scenario-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin: 16px 0;
+}
+.scenario {
+  padding: 16px;
+  border-radius: var(--radius);
+  border-left: 4px solid;
+}
+.scenario .label { font-size: 12px; color: var(--c-gray-500); text-transform: uppercase; letter-spacing: 1px; }
+.scenario .big-num {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 4px 0 8px;
+  font-family: Georgia, "Noto Serif SC", serif;
+}
+.scenario .detail { font-size: 13px; color: var(--c-gray-700); }
+.scenario.bull { background: var(--c-green-bg); border-left-color: var(--c-green); }
+.scenario.bull .big-num { color: var(--c-green); }
+.scenario.base { background: var(--c-yellow-bg); border-left-color: var(--c-yellow); }
+.scenario.base .big-num { color: var(--c-yellow); }
+.scenario.bear { background: var(--c-red-bg); border-left-color: var(--c-red); }
+.scenario.bear .big-num { color: var(--c-red); }
+.scenario.tail { background: var(--c-dark-surface); border-left-color: var(--c-gray-900); color: var(--c-ivory); }
+.scenario.tail .big-num { color: var(--c-ivory); }
+.scenario.tail .detail { color: var(--c-warm-silver); }
+
+/* ---------- 3.5 期望回报高亮条 ---------- */
+.expected-return {
+  background: linear-gradient(135deg, var(--c-gray-900), var(--c-primary-dark));
+  color: var(--c-ivory);
+  padding: 20px 28px;
+  border-radius: 16px;
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--shadow-lg);
+}
+.expected-return .label { font-size: 12px; color: var(--c-warm-silver); text-transform: uppercase; letter-spacing: 1px; }
+.expected-return .value {
+  font-size: 36px;
+  font-weight: 700;
+  font-family: Georgia, "Noto Serif SC", serif;
+}
+
+/* ---------- 3.6 团队名片网格 ---------- */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin: 16px 0;
+}
+.team-card {
+  padding: 16px;
+  border: 1px solid var(--c-gray-200);
+  border-radius: var(--radius);
+  text-align: center;
+  background: var(--c-ivory);
+}
+.team-card .avatar {
+  width: 48px; height: 48px; border-radius: 50%;
+  background: rgba(201,100,66,0.1); color: var(--c-primary);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; margin: 0 auto 8px; font-size: 18px;
+  font-family: Georgia, "Noto Serif SC", serif;
+}
+.team-card .name { font-weight: 600; }
+.team-card .role { color: var(--c-gray-500); font-size: 13px; margin-top: 4px; }
+
+/* ---------- 3.7 风险矩阵 ---------- */
+.risk-item {
+  display: grid;
+  grid-template-columns: 20px 1fr auto;
+  gap: 12px;
+  align-items: start;
+  padding: 12px;
+  border-left: 4px solid;
+  background: var(--c-gray-50);
+  border-radius: 8px;
+  margin: 8px 0;
+}
+.risk-item.high   { border-left-color: var(--c-red);    background: var(--c-red-bg); }
+.risk-item.medium { border-left-color: var(--c-yellow); background: var(--c-yellow-bg); }
+.risk-item.low    { border-left-color: var(--c-green);  background: var(--c-green-bg); }
+.risk-item .dot {
+  width: 12px; height: 12px; border-radius: 50%; margin-top: 4px;
+}
+.risk-item.high   .dot { background: var(--c-red); }
+.risk-item.medium .dot { background: var(--c-yellow); }
+.risk-item.low    .dot { background: var(--c-green); }
+
+/* ---------- 3.8 融资时间轴 ---------- */
+.timeline {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin: 24px 0;
+  overflow-x: auto;
+  padding: 8px 0;
+}
+.timeline .tl-node {
+  flex: 0 0 auto;
+  text-align: center;
+  padding: 0 14px;
+  position: relative;
+}
+.timeline .tl-node::before {
+  content: '';
+  width: 14px; height: 14px; border-radius: 50%;
+  background: var(--c-gray-200); display: block; margin: 0 auto 8px;
+}
+.timeline .tl-node.current::before {
+  background: var(--c-primary);
+  box-shadow: 0 0 0 4px rgba(201,100,66,0.15);
+}
+.timeline .tl-node .year { font-size: 12px; color: var(--c-gray-500); }
+.timeline .tl-node .round { font-weight: 600; font-size: 13px; }
+.timeline .tl-node .amount { font-size: 11px; color: var(--c-gray-700); }
+
+/* ---------- 3.9 情绪量表 ---------- */
+.sentiment-bar {
+  position: relative;
+  height: 12px;
+  border-radius: 6px;
+  background: linear-gradient(to right, var(--c-red) 0%, var(--c-yellow) 50%, var(--c-green) 100%);
+  margin: 20px 0 32px;
+}
+.sentiment-bar .pointer {
+  position: absolute;
+  top: -8px;
+  width: 4px; height: 28px;
+  background: var(--c-gray-900);
+  border-radius: 2px;
+  transform: translateX(-50%);
+}
+.sentiment-bar .pointer::after {
+  content: attr(data-label);
+  position: absolute;
+  top: 32px; left: 50%; transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: 11px;
+  background: var(--c-gray-900);
+  color: var(--c-ivory);
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+/* ---------- v2 组件 · 估值区间可视化 ---------- */
+.valuation-range {
+  position: relative;
+  height: 28px;
+  background: var(--c-gray-100);
+  border-radius: 6px;
+  margin: 10px 0;
+}
+.valuation-range .range {
+  position: absolute;
+  top: 4px; bottom: 4px;
+  border-radius: 4px;
+  opacity: 0.6;
+}
+.valuation-range .range.dcf { background: var(--c-primary); }
+.valuation-range .range.comparable { background: var(--c-green); }
+.valuation-range .range.transaction { background: var(--c-yellow); }
+.valuation-range .label-row {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 8px;
+  align-items: center;
+  font-size: 12px;
+}
+
+/* ---------- v2 组件 · 星级评估 ---------- */
+.star-filled { color: var(--c-accent); }
+.star-empty  { color: var(--c-gray-200); }
+
+/* ---------- v2 组件 · 信息缺口优先级 badge ---------- */
+.badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.badge.critical { background: var(--c-red-bg);    color: var(--c-red); }
+.badge.important{ background: var(--c-yellow-bg); color: var(--c-yellow); }
+.badge.minor    { background: var(--c-green-bg);  color: var(--c-green); }
+
+/* ---------- 通用 Table ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 14px;
+}
+th, td {
+  border: 1px solid var(--c-gray-200);
+  padding: 8px 12px;
+  text-align: left;
+}
+th {
+  background: var(--c-gray-100);
+  color: var(--c-primary);
+  font-weight: 600;
+}
+tr:nth-child(even) td { background: var(--c-gray-50); }
+
+/* ---------- 通用文本 ---------- */
+strong { color: var(--c-gray-900); font-weight: 600; }
+code {
+  background: var(--c-gray-100);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+blockquote {
+  border-left: 4px solid var(--c-primary);
+  padding: 10px 16px;
+  color: var(--c-gray-700);
+  background: rgba(201,100,66,0.05);
+  border-radius: 8px;
+  margin: 12px 0;
+}
+hr { border: none; border-top: 1px dashed var(--c-gray-200); margin: 24px 0; }
+ul, ol { padding-left: 22px; }
+li { margin: 4px 0; }
+a {
+  color: var(--c-primary);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(201,100,66,0.3);
+}
+a:hover { color: var(--c-accent); }
+
+footer {
+  text-align: center;
+  color: var(--c-gray-500);
+  padding: 32px 0 16px;
+  font-size: 12px;
+  border-top: 1px solid var(--c-gray-200);
+  margin-top: 48px;
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width: 768px) {
+  .container { padding: 20px 16px 60px; }
+  header.hero { padding: 24px 16px; }
+  header.hero h1 { font-size: 24px; }
+  .section { padding: 16px; }
+  .scenario-grid, .team-grid { grid-template-columns: 1fr; }
+  table { font-size: 12px; }
+  table th, table td { padding: 6px 8px; }
+}
+
+/* ============================================================
+   v4.6 新增: 6 个大厂风格组件 (迁移至 Claude 设计语言)
+   ============================================================ */
+
+/* ---------- v4.6-1. 前置评级卡 ---------- */
+.rating-trio {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: -16px 0 32px;
+}
+.rating-card {
+  background: var(--c-ivory);
+  border: 1px solid var(--c-card-border);
+  border-top: 3px solid var(--c-primary);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  box-shadow: var(--shadow);
+  transition: transform .15s, box-shadow .15s;
+}
+.rating-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+.rating-card--score  { border-top-color: var(--c-primary); }
+.rating-card--anchor { border-top-color: var(--c-accent); }
+.rating-card--return { border-top-color: var(--c-risk-green); }
+.rating-card--return.negative { border-top-color: var(--c-risk-red); }
+
+.rating-card .label {
+  font-size: 11px;
+  color: var(--c-gray-500);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.rating-card .value {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--c-gray-900);
+  line-height: 1.2;
+  margin-bottom: 6px;
+  font-family: Georgia, "Noto Serif SC", serif;
+}
+.rating-card .value .out-of {
+  font-size: 16px;
+  color: var(--c-gray-500);
+  font-weight: 500;
+}
+.rating-card .value.negative { color: var(--c-risk-red); }
+.rating-card .value.positive { color: var(--c-risk-green); }
+.rating-card .sub {
+  font-size: 12px;
+  color: var(--c-gray-700);
+}
+
+/* ---------- v4.6-2. 彩条风险卡 (Bloomberg 等级色保留) ---------- */
+.risk-card-v2 {
+  display: grid;
+  grid-template-columns: 4px 1fr auto;
+  gap: 14px;
+  align-items: center;
+  padding: 14px 16px 14px 0;
+  margin: 8px 0;
+  background: var(--c-ivory);
+  border: 1px solid var(--c-card-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: background .15s;
+}
+.risk-card-v2:hover { background: var(--c-card-hover); }
+.risk-card-v2.risk-critical { border-left-width: 0; background: linear-gradient(to right, var(--c-risk-red-bg) 0%, var(--c-ivory) 6%); }
+.risk-card-v2.risk-high     { background: linear-gradient(to right, var(--c-risk-amber-bg) 0%, var(--c-ivory) 6%); }
+.risk-card-v2.risk-medium   { background: linear-gradient(to right, var(--c-risk-yellow-bg) 0%, var(--c-ivory) 6%); }
+.risk-card-v2.risk-low      { background: linear-gradient(to right, var(--c-risk-green-bg) 0%, var(--c-ivory) 6%); }
+.risk-card-v2 .left-bar { align-self: stretch; width: 4px; }
+.risk-card-v2.risk-critical .left-bar { background: var(--c-risk-red); }
+.risk-card-v2.risk-high     .left-bar { background: var(--c-risk-amber); }
+.risk-card-v2.risk-medium   .left-bar { background: var(--c-risk-yellow); }
+.risk-card-v2.risk-low      .left-bar { background: var(--c-risk-green); }
+.risk-card-v2 .title { font-weight: 600; color: var(--c-gray-900); margin-bottom: 3px; }
+.risk-card-v2 .body  { font-size: 13px; color: var(--c-gray-700); line-height: 1.5; }
+.risk-card-v2 .sev-badge {
+  font-size: 10px; font-weight: 700; padding: 3px 10px;
+  border-radius: 12px; white-space: nowrap; letter-spacing: .5px;
+}
+.risk-card-v2.risk-critical .sev-badge { background: var(--c-risk-red);    color: white; }
+.risk-card-v2.risk-high     .sev-badge { background: var(--c-risk-amber);  color: white; }
+.risk-card-v2.risk-medium   .sev-badge { background: var(--c-risk-yellow); color: var(--c-gray-900); }
+.risk-card-v2.risk-low      .sev-badge { background: var(--c-risk-green);  color: white; }
+
+/* ---------- v4.6.2. Preamble 区 ---------- */
+.preamble {
+  background: var(--c-ivory);
+  border-left: 3px solid var(--c-accent);
+  border-radius: 8px;
+  padding: 14px 20px;
+  margin: -8px 0 20px;
+  font-size: 13px;
+  color: var(--c-gray-700);
+  line-height: 1.7;
+}
+.preamble:empty { display: none; }
+.preamble blockquote {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  font-size: 13px;
+}
+.preamble blockquote p { margin: 6px 0; }
+.preamble p { margin: 6px 0; }
+.preamble strong { color: var(--c-primary-dark); }
+.preamble hr { display: none; }
+
+/* ---------- v4.6.1. 关键指标横排面板 ---------- */
+.metric-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+  margin: 0 0 24px;
+  padding: 16px;
+  background: var(--c-ivory);
+  border: 1px solid var(--c-card-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.metric-strip .metric-chip {
+  padding: 10px 14px;
+  text-align: center;
+  border-right: 1px dashed var(--c-gray-100);
+}
+.metric-strip .metric-chip:last-child { border-right: none; }
+.metric-strip .metric-chip .metric-label {
+  font-size: 10px;
+  color: var(--c-gray-500);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.metric-strip .metric-chip .metric-value {
+  font-size: 18px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  color: var(--c-gray-900);
+  font-family: Georgia, "Noto Serif SC", serif;
+}
+.metric-strip .metric-chip .metric-value.positive { color: var(--c-risk-green); }
+.metric-strip .metric-chip .metric-value.negative { color: var(--c-risk-red); }
+.metric-strip .metric-chip .metric-value.risk     { color: var(--c-risk-amber); }
+.metric-strip .metric-chip .metric-value.critical { color: var(--c-risk-red); font-weight: 900; }
+.metric-strip .metric-chip .metric-value.neutral  { color: var(--c-gray-900); }
+
+/* ---------- v4.6 兼容: .metric-sidebar/metric-row 保留 ---------- */
+.metric-sidebar {
+  background: var(--c-ivory);
+  border: 1px solid var(--c-card-border);
+  border-radius: var(--radius);
+  padding: 20px 18px;
+  box-shadow: var(--shadow);
+  margin: 0 0 24px;
+}
+.metric-sidebar h4 {
+  font-size: 11px;
+  color: var(--c-gray-500);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  margin: 0 0 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--c-card-border);
+}
+.metric-sidebar .metric-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--c-gray-100);
+  font-size: 13px;
+}
+.metric-sidebar .metric-row:last-child { border-bottom: none; }
+.metric-sidebar .metric-row span { color: var(--c-gray-700); }
+.metric-sidebar .metric-row strong { font-weight: 700; color: var(--c-gray-900); font-variant-numeric: tabular-nums; }
+.metric-sidebar .metric-row strong.positive { color: var(--c-risk-green); }
+.metric-sidebar .metric-row strong.negative { color: var(--c-risk-red); }
+.metric-sidebar .metric-row strong.risk     { color: var(--c-risk-amber); font-weight: 800; }
+.metric-sidebar .metric-row strong.critical { color: var(--c-risk-red);   font-weight: 800; }
+
+/* ---------- v4.6-4. 对标卡 ---------- */
+.comparison-card {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr 1fr;
+  gap: 8px;
+  background: var(--c-ivory);
+  border: 1px solid var(--c-card-border);
+  border-radius: var(--radius);
+  padding: 16px;
+  margin: 12px 0;
+}
+.comparison-card .cmp-col {
+  text-align: center;
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+.comparison-card .cmp-col.center {
+  background: rgba(201,100,66,0.06);
+  border: 2px solid var(--c-primary);
+}
+.comparison-card .cmp-label { font-size: 10px; color: var(--c-gray-500); text-transform: uppercase; letter-spacing: 1px; font-weight: 600; margin-bottom: 6px; }
+.comparison-card .cmp-value {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--c-gray-900);
+  font-variant-numeric: tabular-nums;
+  font-family: Georgia, "Noto Serif SC", serif;
+}
+.comparison-card .cmp-col.center .cmp-value { font-size: 24px; color: var(--c-primary); }
+.comparison-card .cmp-sub { font-size: 11px; color: var(--c-gray-500); margin-top: 4px; }
+.comparison-card .cmp-bar {
+  height: 6px; background: var(--c-gray-100); border-radius: 3px;
+  margin-top: 8px; position: relative; overflow: hidden;
+}
+.comparison-card .cmp-bar .fill {
+  position: absolute; left: 0; top: 0; bottom: 0;
+  background: linear-gradient(90deg, var(--c-primary), var(--c-accent));
+  border-radius: 3px;
+}
+
+/* ---------- v4.6-5. 深度链接 ---------- */
+.deep-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 1px 8px 1px 6px;
+  font-size: 11px;
+  background: rgba(201,100,66,0.08);
+  color: var(--c-primary);
+  border: 1px solid transparent;
+  border-radius: 12px;
+  text-decoration: none !important;
+  vertical-align: middle;
+  font-weight: 600;
+  transition: background .15s, border-color .15s;
+}
+.deep-link::before { content: '→'; opacity: .6; }
+.deep-link:hover {
+  background: var(--c-primary);
+  color: var(--c-ivory);
+  border-color: var(--c-primary);
+}
+/* Target 高亮 */
+.section:target {
+  animation: target-pulse 1.8s ease-out;
+  scroll-margin-top: 70px;
+}
+@keyframes target-pulse {
+  0%   { box-shadow: 0 0 0 4px var(--c-accent); }
+  100% { box-shadow: var(--shadow); }
+}
+
+/* ---------- v4.6-6. 微型热力图 ---------- */
+.heatmap-grid {
+  display: grid;
+  gap: 2px;
+  margin: 10px 0;
+  font-size: 10px;
+}
+.heatmap-grid .hm-cell {
+  aspect-ratio: 1 / 1;
+  min-height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-family: ui-monospace, monospace;
+  font-weight: 600;
+  color: var(--c-gray-900);
+}
+/* 5 档颜色映射 */
+.heatmap-grid .hm-cell.hm--2 { background: #fca5a5; color: #7f1d1d; }
+.heatmap-grid .hm-cell.hm--1 { background: #fed7aa; color: #7c2d12; }
+.heatmap-grid .hm-cell.hm-0  { background: var(--c-gray-100); }
+.heatmap-grid .hm-cell.hm-1  { background: #bbf7d0; color: #14532d; }
+.heatmap-grid .hm-cell.hm-2  { background: #4ade80; color: white; }
+.heatmap-grid .hm-cell:hover { transform: scale(1.1); }
+
+.heatmap-grid .hm-row-label {
+  font-size: 10px;
+  color: var(--c-gray-500);
+  text-align: right;
+  padding-right: 8px;
+  align-self: center;
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width: 768px) {
+  .container { padding: 20px 16px 60px; }
+  header.hero { padding: 24px 16px; }
+  header.hero h1 { font-size: 24px; }
+  .section { padding: 16px; }
+  .scenario-grid, .team-grid, .rating-trio { grid-template-columns: 1fr; }
+  .comparison-card { grid-template-columns: 1fr; }
+  .metric-strip { grid-template-columns: repeat(2, 1fr); }
+  .metric-strip .metric-chip { border-right: none; border-bottom: 1px dashed var(--c-gray-100); }
+  table { font-size: 12px; }
+  table th, table td { padding: 6px 8px; }
+}
+
+/* ---------- 打印 ---------- */
+@media print {
+  body { background: white; }
+  .top-nav { display: none; }
+  .section { box-shadow: none; border: 1px solid #ccc; break-inside: avoid; }
+  header.hero { break-inside: avoid; }
+  .metric-strip { break-inside: avoid; }
+  .deep-link { color: var(--c-gray-900); background: transparent; border-color: var(--c-gray-500); }
+  .deep-link::before { content: ''; }
+  .deep-link::after { content: ' (见对应章节)'; font-size: 10px; color: var(--c-gray-500); }
+}
+
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     Sticky 顶部导航栏 — 13 章节锚点
+     ============================================================ -->
+<nav class="top-nav">
+  <a href="../../index.html" class="nav-brand">AI 投资分析报告</a>
+  <a href="#exec-summary">摘要</a>
+  <a href="#scoring">评分</a>
+  <a href="#screening">快筛</a>
+  <a href="#fundamentals">基本面</a>
+  <a href="#industry">行业</a>
+  <a href="#detail">详细</a>
+  <a href="#sentiment">舆情</a>
+  <a href="#peers">对标</a>
+  <a href="#valuation">估值</a>
+  <a href="#qualitative">定性</a>
+  <a href="#gaps">缺口</a>
+  <a href="#sources">来源</a>
+</nav>
+
+<div class="container">
+
+<!-- ============================================================
+     Header Hero
+     ============================================================ -->
+<header class="hero">
+  <h1>宁德时代（300750.SZ）投资分析报告</h1>
+  <div class="subtitle">由 Claude Code 自动生成</div>
+  <div class="meta">
+    <span>📅 2026-05-16</span>
+    <span>💵 收盘 427.00 元</span>
+    <span>📊 PB 5.49 · 市值 19755.12 亿</span>
+    <span>🎯 估值锚 600 元</span>
+  </div>
+</header>
+
+<!-- ============================================================
+     v4.6.2 新增: Preamble 区 — 主报告第一个 ## 之前的 blockquote / 段落
+     (版本切换说明 / 数据截止注意 / meta 行的详细补充等),否则会丢失
+     ============================================================ -->
+<div class="preamble">
+<hr />
+</div>
+
+<!-- ============================================================
+     v4.6 新增: 前置评级三件套(Goldman 风格, hero 下方醒目位置)
+     ============================================================ -->
+<div class="rating-trio">
+
+  <div class="rating-card rating-card--score">
+    <div class="label">综合评分</div>
+    <div class="value">8.05 <span class="out-of">/ 10</span></div>
+    <div class="sub">看多方向</div>
+  </div>
+  <div class="rating-card rating-card--anchor">
+    <div class="label">估值锚(DCF 概率加权)</div>
+    <div class="value">600 元</div>
+    <div class="sub">相对当前 +40.5%</div>
+  </div>
+  <div class="rating-card rating-card--return">
+    <div class="label">12-24 月期望收益</div>
+    <div class="value positive">+40.5%</div>
+    <div class="sub">年化 +26.1%</div>
+  </div>
+</div>
+
+<!-- ============================================================
+     v4.6.1 关键指标横排面板(替代 v4.6 的粘性侧边栏,更简洁)
+     ============================================================ -->
+<div class="metric-strip">
+
+  <div class="metric-chip">
+    <div class="metric-label">PE (TTM)</div>
+    <div class="metric-value neutral">25.01</div>
+  </div>
+  <div class="metric-chip">
+    <div class="metric-label">PB</div>
+    <div class="metric-value neutral">5.49x</div>
+  </div>
+  <div class="metric-chip">
+    <div class="metric-label">市值</div>
+    <div class="metric-value neutral">19755 亿</div>
+  </div>
+  <div class="metric-chip">
+    <div class="metric-label">ROE</div>
+    <div class="metric-value positive">24.72%</div>
+  </div>
+  <div class="metric-chip">
+    <div class="metric-label">毛利率</div>
+    <div class="metric-value neutral">26.27%</div>
+  </div>
+  <div class="metric-chip">
+    <div class="metric-label">资产负债率</div>
+    <div class="metric-value neutral">62.32%</div>
+  </div>
+  <div class="metric-chip">
+    <div class="metric-label">股东户数</div>
+    <div class="metric-value neutral">204504</div>
+  </div>
+  <div class="metric-chip">
+    <div class="metric-label">家族持股</div>
+    <div class="metric-value risk">64.92%</div>
+  </div>
+</div>
+
+<!-- ============================================================
+     §一 执行摘要
+     ============================================================ -->
+<div class="section" id="exec-summary">
+<h2>§一 执行摘要</h2>
+<p><strong>一句话结论</strong>: <strong>看多方向</strong> —— 全球动力电池绝对龙头（市占率39.2%连续9年第一），四重复合护城河（规模+技术+客户+专利）持续加深，2026Q1业绩爆发（营收+52.45%、净利+48.52%）确立加速增长趋势；DCF概率加权估值锚600元较当前427元低估约29%，但需关注国内产能过剩（3000GWh vs 1500GWh需求）和存货积压风险（增速58% vs 营收增速17%）。</p>
+<p><strong>估值锚</strong>: <strong>概率加权 DCF ≈ 27,756 亿 / 600 元</strong>（4 情景；乐观 20% / 中性 45% / 悲观 25% / 极端悲观 10%）。当前 427 元相对此锚 +40.5%。</p>
+<p><strong>综合评分</strong>: <strong>8.05/10</strong> · <strong>数据置信度</strong>: 中（海外分区域利润率、储能独立毛利率、产能利用率等关键数据缺失，详见§十二）</p>
+<p><strong>三大风险（Top 3）</strong>:<br />
+1. 🟡 存货增速58%远超营收增速17%（差值41pp），存货积压风险——若为被动积压而非主动备货，未来可能大额计提跌价准备 [audit: Buffett Quality, 🟡 中]<br />
+2. 🟡 国内锂电产能3000GWh vs 实际需求1500GWh，利用率&lt;60%，产能严重过剩持续压制单位售价（营收+17%但产量+45%） [Web:sohu.com]<br />
+3. 🟡 PB 5.49处于行业最贵20%（分位80.6%），市场对高ROE溢价已较充分定价 [audit: Valuation, 🟡 中]</p>
+<p><strong>三大机会（Top 3）</strong>:<br />
+1. 2026Q1业绩爆发（营收+52.45%、净利+48.52%），增速加速趋势确立，V型反转 [Tushare:income]<br />
+2. 6大新品同时发布（凝聚态350Wh/kg完成航空器首飞验证，全球首家），技术代差无人匹敌 [Web:xueqiu.com]<br />
+3. PE 25x处于行业最便宜10%分位，而ROE/毛利率/净利率全部peer第一——典型"低估值高质量"组合 [peer_analysis.md §4]</p>
+<p><strong>核心非共识观点</strong>（Top 3）:<br />
+1. 产能过剩是行业洗牌催化剂而非宁德特有风险——CR2从~60%提升至~66%，龙头在洗牌中受益<br />
+2. 存货积压58%更可能是海外扩产主动备货（匈牙利/印尼）而非需求恶化的被动积压<br />
+3. PB 5.49虽处行业最贵20%，但PE 25x处于最便宜10%——市场低估了高ROE的可持续性</p>
+<p><strong>投资方向综合判定</strong>: <strong>看多方向</strong>（3 框架中 3 个判定为"看多方向"+ 0 个致命看空条款触发）</p>
+<hr />
+</div>
+
+<!-- ============================================================
+     §二 评分总览（10 维度单列）
+     ============================================================ -->
+<div class="section" id="scoring">
+<h2>§二 事实评分总览（10 维度）</h2>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th style="text-align: center;">权重</th>
+<th style="text-align: center;">分数(0-10)</th>
+<th style="text-align: center;">加权</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. 市场规模与结构</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">0.9</td>
+</tr>
+<tr>
+<td>2. 商业模式</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">0.8</td>
+</tr>
+<tr>
+<td>3. 盈利能力</td>
+<td style="text-align: center;">15%</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">1.2</td>
+</tr>
+<tr>
+<td>4. 产品与技术</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">0.9</td>
+</tr>
+<tr>
+<td>5. 团队与管理层</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">0.7</td>
+</tr>
+<tr>
+<td>6. 市场进入与护城河</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">0.9</td>
+</tr>
+<tr>
+<td>7. 财务健康度</td>
+<td style="text-align: center;">15%</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">1.2</td>
+</tr>
+<tr>
+<td>8. 估值合理性</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">0.7</td>
+</tr>
+<tr>
+<td>9. 风险与治理</td>
+<td style="text-align: center;">5%</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">0.35</td>
+</tr>
+<tr>
+<td>10. 催化剂与时机</td>
+<td style="text-align: center;">5%</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">0.4</td>
+</tr>
+<tr>
+<td><strong>合计</strong></td>
+<td style="text-align: center;">100%</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: center;"><strong>8.05</strong></td>
+</tr>
+</tbody>
+</table>
+<p><em>详细证据见 §六。评分标尺见 <code>references/scoring-rubric.md</code>。表格严格 4 列（维度/权重/分数/加权分）——不添加"关键理由"列。</em></p>
+<hr />
+</div>
+
+<!-- ============================================================
+     §三 快速筛选
+     ============================================================ -->
+<div class="section" id="screening">
+<h2>§三 快速筛选（致命看空条款 - 6 项）</h2>
+<table>
+<thead>
+<tr>
+<th>条款</th>
+<th>阈值</th>
+<th>实际</th>
+<th style="text-align: center;">触发?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. 单季 / 单年度净利 &lt; -50%</td>
+<td>50%</td>
+<td>2026Q1归母净利+48.52%、FY2025+42.28%，无亏损季度 [Tushare:income]</td>
+<td style="text-align: center;">❌</td>
+</tr>
+<tr>
+<td>2. 资产负债率 &gt; 70%</td>
+<td>70%</td>
+<td>62.32%（20260331）[Tushare:fina_indicator]</td>
+<td style="text-align: center;">❌</td>
+</tr>
+<tr>
+<td>3. 大股东累计质押 &gt; 50%</td>
+<td>50%</td>
+<td>李平/黄世霖质押均为百股级别，累计占持股不足1% [Tushare:pledge_detail]</td>
+<td style="text-align: center;">❌</td>
+</tr>
+<tr>
+<td>4. 审计机构连续 2 年变更</td>
+<td>1 次</td>
+<td>未变更（标准无保留审计意见）[Doc:annual_2025]</td>
+<td style="text-align: center;">❌</td>
+</tr>
+<tr>
+<td>5. CFO 非正常离任</td>
+<td>1 次</td>
+<td>无非正常离任记录 [Doc:annual_2025]</td>
+<td style="text-align: center;">❌</td>
+</tr>
+<tr>
+<td>6. <strong>Audit ≥ 2 个 🔴 红旗</strong></td>
+<td>2</td>
+<td>0 个 🔴（audit_report.md 统计：0🔴 + 0🟠 + 3🟡 + 4🟢 + 2ℹ️）[audit_report.md §2]</td>
+<td style="text-align: center;">❌</td>
+</tr>
+</tbody>
+</table>
+<p><strong>结果</strong>: ✅ 全部 6 项通过，无致命看空条款触发。3 个 🟡 中等红旗（存货增速偏高、前十大股东净减持、PB历史分位偏高）均为中等风险信号，不构成快筛否决。</p>
+</div>
+
+<!-- ============================================================
+     §四 公司基本面（含剥离后剩余资产清单若触发）
+     ============================================================ -->
+<div class="section" id="fundamentals">
+<h2>§四 公司基本面</h2>
+<h3>业务板块</h3>
+<p>宁德时代新能源科技股份有限公司（300750.SZ），全球动力电池与储能电池龙头企业，2018年6月创业板上市，2025年完成A+H双重上市（H股3750.HK）。公司总部位于福建宁德，实际控制人曾毓群通过厦门瑞庭投资间接控股。 [API:stock_basic] [Doc:annual_2025,P.42]</p>
+<p><strong>核心业务矩阵</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>业务板块</th>
+<th>主要产品/服务</th>
+<th>战略地位</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>动力电池系统</td>
+<td>磷酸铁锂/三元/钠电/凝聚态电池，覆盖乘用车、商用车</td>
+<td>核心引擎，全球市占率约39.2%，连续9年全球第一</td>
+<td>[Doc:annual_2025,P.14-20]</td>
+</tr>
+<tr>
+<td>储能电池系统</td>
+<td>EnerOne/EnerC/EnerD/EnerX/TENER系列，单体最高9MWh</td>
+<td>第二增长曲线，2025年全球储能电池出货量+79%</td>
+<td>[Doc:annual_2025,P.14]</td>
+</tr>
+<tr>
+<td>电池材料与回收</td>
+<td>锂盐、前驱体、正极材料一体化，电池金属循环利用</td>
+<td>垂直整合降本</td>
+<td>[Doc:annual_2025,P.14]</td>
+</tr>
+<tr>
+<td>新兴场景</td>
+<td>换电业务、低空经济航空器电池、船舶电动化、数据中心储能</td>
+<td>远期增量</td>
+<td>[Doc:annual_2025,P.14]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>全球化布局</strong>：截至2025年末，全球六大研发中心、24家电池工厂，加速推进海外产能规模化建设（匈牙利、印尼等）。 [PDF:annual_2025,MD&amp;A]</p>
+<h3>最新经营动态（近 12 个月关键事件）</h3>
+<table>
+<thead>
+<tr>
+<th>时间</th>
+<th>事件</th>
+<th>影响</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2026-04</td>
+<td>2026超级科技日发布6大新品（第三代神行/麒麟/凝聚态/骁遥/钠新/超换一体）</td>
+<td>产品矩阵全面升级，技术代差拉开</td>
+<td>[Web:xueqiu.com]</td>
+</tr>
+<tr>
+<td>2026-04</td>
+<td>H股配售完成，募集约391.9亿港元</td>
+<td>资本结构优化，海外扩张弹药充足</td>
+<td>[Web:capitalfutures.com.tw]</td>
+</tr>
+<tr>
+<td>2026-04</td>
+<td>第四大股东拟询价转让5800万股（占总股本1.27%），转让价410.34元/股</td>
+<td>短期供给压力，但非恐慌性减持</td>
+<td>[Web:stcn.com]</td>
+</tr>
+<tr>
+<td>2025</td>
+<td>全年产量748 GWh，同比+44.96%</td>
+<td>规模效应持续释放</td>
+<td>[Doc:annual_2025,P.27]</td>
+</tr>
+<tr>
+<td>2025</td>
+<td>年度分红每10股45.53元+中期分红10.07元+特别分红12.30元，合计近300亿</td>
+<td>股东回报大幅提升</td>
+<td>[Doc:annual_2025,P.41]</td>
+</tr>
+<tr>
+<td>2025</td>
+<td>回购方案累计回购43.86亿元</td>
+<td>彰显管理层信心</td>
+<td>[Doc:annual_2025,P.41]</td>
+</tr>
+<tr>
+<td>2025</td>
+<td>起诉海辰储能多起专利侵权</td>
+<td>行业竞争加剧，同时凸显专利壁垒</td>
+<td>[Web:sina.com.cn]</td>
+</tr>
+</tbody>
+</table>
+<h3>财务趋势表（近 3-5 年 + 最新季度）</h3>
+<!-- ★ 来源: data_snapshot.md §3 多年趋势完整表，共14期全部inline -->
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">期末</th>
+<th style="text-align: right;">营收(亿)</th>
+<th style="text-align: center;">营收 YoY</th>
+<th style="text-align: right;">毛利率%</th>
+<th style="text-align: right;">净利率%</th>
+<th style="text-align: right;">归母净利(亿)</th>
+<th style="text-align: center;">净利 YoY</th>
+<th style="text-align: right;">加权 ROE%</th>
+<th style="text-align: right;">资产负债率%</th>
+<th style="text-align: right;">OCF(亿)</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">20260331</td>
+<td style="text-align: right;">1291.31</td>
+<td style="text-align: center;">+52.45%</td>
+<td style="text-align: right;">24.82</td>
+<td style="text-align: right;">17.61</td>
+<td style="text-align: right;">207.3771</td>
+<td style="text-align: center;">+48.52%</td>
+<td style="text-align: right;">5.97</td>
+<td style="text-align: right;">62.32</td>
+<td style="text-align: right;">336.8085</td>
+<td>[Tushare:income/fina_indicator]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20251231</td>
+<td style="text-align: right;">4237.02</td>
+<td style="text-align: center;">+17.04%</td>
+<td style="text-align: right;">26.27</td>
+<td style="text-align: right;">18.12</td>
+<td style="text-align: right;">722.0128</td>
+<td style="text-align: center;">+42.28%</td>
+<td style="text-align: right;">24.72</td>
+<td style="text-align: right;">61.94</td>
+<td style="text-align: right;">1332.1998</td>
+<td>[Tushare:income/fina_indicator]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20250930</td>
+<td style="text-align: right;">2830.72</td>
+<td style="text-align: center;">+9.28%</td>
+<td style="text-align: right;">25.31</td>
+<td style="text-align: right;">18.47</td>
+<td style="text-align: right;">490.3411</td>
+<td style="text-align: center;">+36.20%</td>
+<td style="text-align: right;">17.48</td>
+<td style="text-align: right;">61.27</td>
+<td style="text-align: right;">806.6043</td>
+<td>[Tushare:income/fina_indicator]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20250630</td>
+<td style="text-align: right;">1788.86</td>
+<td style="text-align: center;">+7.27%</td>
+<td style="text-align: right;">25.02</td>
+<td style="text-align: right;">18.09</td>
+<td style="text-align: right;">304.8514</td>
+<td style="text-align: center;">+33.33%</td>
+<td style="text-align: right;">11.25</td>
+<td style="text-align: right;">62.59</td>
+<td style="text-align: right;">586.8707</td>
+<td>[Tushare:income/fina_indicator]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20250331</td>
+<td style="text-align: right;">847.05</td>
+<td style="text-align: center;">+6.18%</td>
+<td style="text-align: right;">24.41</td>
+<td style="text-align: right;">17.55</td>
+<td style="text-align: right;">139.6256</td>
+<td style="text-align: center;">+32.85%</td>
+<td style="text-align: right;">5.49</td>
+<td style="text-align: right;">64.74</td>
+<td style="text-align: right;">328.6826</td>
+<td>[Tushare:income/fina_indicator]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20241231</td>
+<td style="text-align: right;">3620.13</td>
+<td style="text-align: center;">-9.70%</td>
+<td style="text-align: right;">24.44</td>
+<td style="text-align: right;">14.92</td>
+<td style="text-align: right;">507.4468</td>
+<td style="text-align: center;">+15.01%</td>
+<td style="text-align: right;">22.83</td>
+<td style="text-align: right;">65.24</td>
+<td style="text-align: right;">969.9035</td>
+<td>[Tushare:income/fina_indicator]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20240930</td>
+<td style="text-align: right;">2590.45</td>
+<td style="text-align: center;">-12.09%</td>
+<td style="text-align: right;">28.18</td>
+<td style="text-align: right;">14.95</td>
+<td style="text-align: right;">360.0107</td>
+<td style="text-align: center;">+15.59%</td>
+<td style="text-align: right;">16.57</td>
+<td style="text-align: right;">64.33</td>
+<td style="text-align: right;">674.4360</td>
+<td>[Tushare:income/fina_indicator]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20240630</td>
+<td style="text-align: right;">1667.67</td>
+<td style="text-align: center;">-11.88%</td>
+<td style="text-align: right;">26.53</td>
+<td style="text-align: right;">14.92</td>
+<td style="text-align: right;">228.6499</td>
+<td style="text-align: center;">+10.37%</td>
+<td style="text-align: right;">11.61</td>
+<td style="text-align: right;">69.26</td>
+<td style="text-align: right;">447.0895</td>
+<td>[Tushare:income/fina_indicator]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20240331</td>
+<td style="text-align: right;">797.71</td>
+<td style="text-align: center;">-10.41%</td>
+<td style="text-align: right;">26.42</td>
+<td style="text-align: right;">14.03</td>
+<td style="text-align: right;">105.0992</td>
+<td style="text-align: center;">+7.00%</td>
+<td style="text-align: right;">5.18</td>
+<td style="text-align: right;">68.48</td>
+<td style="text-align: right;">283.5791</td>
+<td>[Tushare:income/fina_indicator]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20231231</td>
+<td style="text-align: right;">4009.17</td>
+<td style="text-align: center;">+22.01%</td>
+<td style="text-align: right;">22.91</td>
+<td style="text-align: right;">11.66</td>
+<td style="text-align: right;">441.2125</td>
+<td style="text-align: center;">+43.58%</td>
+<td style="text-align: right;">24.36</td>
+<td style="text-align: right;">69.34</td>
+<td style="text-align: right;">928.2612</td>
+<td>[Tushare:income/fina_indicator]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20230930</td>
+<td style="text-align: right;">2946.77</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: right;">21.92</td>
+<td style="text-align: right;">11.03</td>
+<td style="text-align: right;">311.4547</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: right;">18.08</td>
+<td style="text-align: right;">69.92</td>
+<td style="text-align: right;">526.5369</td>
+<td>[Tushare:income/fina_indicator]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20230630</td>
+<td style="text-align: right;">1892.46</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: right;">21.63</td>
+<td style="text-align: right;">11.35</td>
+<td style="text-align: right;">207.1726</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: right;">12.38</td>
+<td style="text-align: right;">70.10</td>
+<td style="text-align: right;">370.7037</td>
+<td>[Tushare:income/fina_indicator]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20230331</td>
+<td style="text-align: right;">890.38</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: right;">21.27</td>
+<td style="text-align: right;">11.32</td>
+<td style="text-align: right;">98.2227</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: right;">5.57</td>
+<td style="text-align: right;">67.40</td>
+<td style="text-align: right;">209.6628</td>
+<td>[Tushare:income/fina_indicator]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20221231</td>
+<td style="text-align: right;">3285.94</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: right;">–</td>
+<td style="text-align: right;">–</td>
+<td style="text-align: right;">307.2916</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: right;">–</td>
+<td style="text-align: right;">–</td>
+<td style="text-align: right;">612.0884</td>
+<td>[Tushare:income/fina_indicator]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>趋势解读</strong>：</p>
+<ol>
+<li><strong>营收拐点确认</strong>：2024年全年营收同比-9.70%（锂电行业去库存+碳酸锂价格暴跌），但2025年起逐季加速修复（Q1 +6.18% → Q2 +8.7% → Q3 +12.9% → Q4 +27.2%），2026Q1爆发至+52.45%，V型反转确立。 [Tushare:income]</li>
+<li><strong>盈利能力跃升</strong>：净利率从2023年的11.66%提升至2025年的18.12%，毛利率稳定在24-26%区间，说明规模效应+原材料降价红利（直接材料占成本从76.48%降至71.79%）双重驱动盈利弹性。 [PDF:annual_2025] [Tushare:fina_indicator]</li>
+<li><strong>杠杆率持续改善</strong>：资产负债率从2023年峰值70.10%降至2026Q1的62.32%，H股IPO募资+经营现金流充裕共同推动去杠杆。 [Tushare:balancesheet]</li>
+<li><strong>现金造血强劲</strong>：2025年OCF 1332亿，自由现金流充裕（尽管2026Q1 FCF 86.6亿因投资活动增加而下降）。OCF/净利润&gt;1，盈利质量优异。 [Tushare:cashflow]</li>
+</ol>
+<p><strong>交叉验证</strong>：营收+17%但产量+45%，单位售价继续下降（锂电池价格竞争），但规模效应和成本管控使利润增幅（+42.28%）远超营收增幅。 [Doc:annual_2025,P.27]</p>
+<h3>管理层前瞻信号（<code>forecast_vip</code> 解读）</h3>
+<p>data_snapshot.md §4 显示：无业绩预告数据（forecast_vip 行数为0）。宁德时代作为创业板头部公司，不强制披露业绩预告。2026Q1实际业绩已披露（归母净利207.4亿，同比+48.52%），增速超市场预期。 [Tushare:forecast_vip] [Tushare:income]</p>
+<h3>主力控盘与筹码分析</h3>
+<h4>控盘综合判定</h4>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>信号</th>
+<th>解读</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>主力控盘度（总股本口径）</td>
+<td>🔴 高度控盘</td>
+<td>前10大全体股东（含限售）合计 <strong>64.92%</strong></td>
+<td>[capital_flow.md §1]</td>
+</tr>
+<tr>
+<td>实控人家族合计持股</td>
+<td>🟢 家族非控盘</td>
+<td>黄世霖家族合计 <strong>9.21%</strong>（成员：黄世霖）</td>
+<td>[capital_flow.md §1]</td>
+</tr>
+<tr>
+<td>筹码集中度（流通股动态）</td>
+<td>🟢 筹码集中（主力吸筹）</td>
+<td>户数变化 -20.58%，户均持股+25.91%</td>
+<td>[capital_flow.md §3]</td>
+</tr>
+<tr>
+<td>陆股通（北向）</td>
+<td>🟢 外资近一季加仓</td>
+<td>持仓 17.27%，季度环比 +1.56pp，近4季+3.49pp</td>
+<td>[capital_flow.md §4]</td>
+</tr>
+<tr>
+<td>两融杠杆</td>
+<td>⚪ 两融余额平稳</td>
+<td>融资余额 2,141,380万元，相对近60日中位 -0.85%</td>
+<td>[capital_flow.md §5]</td>
+</tr>
+<tr>
+<td>主力资金流</td>
+<td>⚪ 主力资金近20日拉锯</td>
+<td>近20日净流入天数 9/20，净流入累计 -26,336万元</td>
+<td>[capital_flow.md §6]</td>
+</tr>
+<tr>
+<td>龙虎榜机构</td>
+<td>⚪ 近30日无龙虎榜上榜</td>
+<td>—</td>
+<td>[capital_flow.md §7]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>北向资金加权建仓成本</strong>：394.73元，当前股价427.00元，外资浮盈+8.17%。浮盈温和，减仓压力不大。 [capital_flow.md §9]</p>
+<p><strong>大宗交易</strong>：近60日29笔，累计成交246,674万元，平均折溢价-2.02%，接近现价，无异常。 [capital_flow.md §8]</p>
+<h4>前十大股东（2026Q1 vs 2025年报对比）</h4>
+<p><strong>报告期：20260331</strong></p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>股东</th>
+<th style="text-align: right;">持股数(万股)</th>
+<th style="text-align: right;">持股比例(%)</th>
+<th style="text-align: right;">占流通比例(%)</th>
+<th style="text-align: right;">期间变动(万股)</th>
+<th style="text-align: center;">股东类型</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>厦门瑞庭投资有限公司</td>
+<td style="text-align: right;">102,470.49</td>
+<td style="text-align: right;">22.45</td>
+<td style="text-align: right;">24.07</td>
+<td style="text-align: right;">+0.00</td>
+<td style="text-align: center;">投资公司</td>
+<td>[Tushare:top10_holders]</td>
+</tr>
+<tr>
+<td>2</td>
+<td>香港中央结算有限公司</td>
+<td style="text-align: right;">76,131.55</td>
+<td style="text-align: right;">16.68</td>
+<td style="text-align: right;">17.88</td>
+<td style="text-align: right;">+6,877.37</td>
+<td style="text-align: center;">一般企业</td>
+<td>[Tushare:top10_holders]</td>
+</tr>
+<tr>
+<td>3</td>
+<td>黄世霖</td>
+<td style="text-align: right;">42,038.89</td>
+<td style="text-align: right;">9.21</td>
+<td style="text-align: right;">9.88</td>
+<td style="text-align: right;">+0.00</td>
+<td style="text-align: center;">自然人</td>
+<td>[Tushare:top10_holders]</td>
+</tr>
+<tr>
+<td>4</td>
+<td>宁波联合创新新能源投资管理合伙企业(有限合伙)</td>
+<td style="text-align: right;">28,422.06</td>
+<td style="text-align: right;">6.23</td>
+<td style="text-align: right;">6.68</td>
+<td style="text-align: right;">+0.00</td>
+<td style="text-align: center;">投资公司</td>
+<td>[Tushare:top10_holders]</td>
+</tr>
+<tr>
+<td>5</td>
+<td>李平</td>
+<td style="text-align: right;">19,746.03</td>
+<td style="text-align: right;">4.33</td>
+<td style="text-align: right;">1.16</td>
+<td style="text-align: right;">+0.00</td>
+<td style="text-align: center;">自然人</td>
+<td>[Tushare:top10_holders]</td>
+</tr>
+<tr>
+<td>6</td>
+<td>HKSCCNOMINEESLIMITED</td>
+<td style="text-align: right;">15,590.76</td>
+<td style="text-align: right;">3.42</td>
+<td style="text-align: right;">–</td>
+<td style="text-align: right;">+0.08</td>
+<td style="text-align: center;">一般企业</td>
+<td>[Tushare:top10_holders]</td>
+</tr>
+<tr>
+<td>7</td>
+<td>本田技研工业(中国)投资有限公司</td>
+<td style="text-align: right;">4,140.00</td>
+<td style="text-align: right;">0.91</td>
+<td style="text-align: right;">0.97</td>
+<td style="text-align: right;">+0.00</td>
+<td style="text-align: center;">投资公司</td>
+<td>[Tushare:top10_holders]</td>
+</tr>
+<tr>
+<td>8</td>
+<td>富泰华工业(深圳)有限公司</td>
+<td style="text-align: right;">2,870.72</td>
+<td style="text-align: right;">0.63</td>
+<td style="text-align: right;">0.67</td>
+<td style="text-align: right;">–</td>
+<td style="text-align: center;">一般企业</td>
+<td>[Tushare:top10_holders]</td>
+</tr>
+<tr>
+<td>9</td>
+<td>中国工商银行股份有限公司-易方达创业板交易型开放式指数证券投资基金</td>
+<td style="text-align: right;">2,501.44</td>
+<td style="text-align: right;">0.55</td>
+<td style="text-align: right;">0.59</td>
+<td style="text-align: right;">-2,399.13</td>
+<td style="text-align: center;">开放式投资基金</td>
+<td>[Tushare:top10_holders]</td>
+</tr>
+<tr>
+<td>10</td>
+<td>北京华鼎新动力股权投资基金(有限合伙)</td>
+<td style="text-align: right;">2,389.28</td>
+<td style="text-align: right;">0.52</td>
+<td style="text-align: right;">0.56</td>
+<td style="text-align: right;">–</td>
+<td style="text-align: center;">风险投资公司</td>
+<td>[Tushare:top10_holders]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>报告期：20251231</strong></p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>股东</th>
+<th style="text-align: right;">持股数(万股)</th>
+<th style="text-align: right;">持股比例(%)</th>
+<th style="text-align: right;">占流通比例(%)</th>
+<th style="text-align: right;">期间变动(万股)</th>
+<th style="text-align: center;">股东类型</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>厦门瑞庭投资有限公司</td>
+<td style="text-align: right;">102,470.49</td>
+<td style="text-align: right;">22.45</td>
+<td style="text-align: right;">24.07</td>
+<td style="text-align: right;">+0.00</td>
+<td style="text-align: center;">投资公司</td>
+<td>[Tushare:top10_holders]</td>
+</tr>
+<tr>
+<td>2</td>
+<td>香港中央结算有限公司</td>
+<td style="text-align: right;">69,254.18</td>
+<td style="text-align: right;">15.17</td>
+<td style="text-align: right;">16.27</td>
+<td style="text-align: right;">+3,169.77</td>
+<td style="text-align: center;">一般企业</td>
+<td>[Tushare:top10_holders]</td>
+</tr>
+<tr>
+<td>3</td>
+<td>黄世霖</td>
+<td style="text-align: right;">42,038.89</td>
+<td style="text-align: right;">9.21</td>
+<td style="text-align: right;">9.88</td>
+<td style="text-align: right;">-4,563.24</td>
+<td style="text-align: center;">自然人</td>
+<td>[Tushare:top10_holders]</td>
+</tr>
+<tr>
+<td>4</td>
+<td>宁波联合创新新能源投资管理合伙企业(有限合伙)</td>
+<td style="text-align: right;">28,422.06</td>
+<td style="text-align: right;">6.23</td>
+<td style="text-align: right;">6.68</td>
+<td style="text-align: right;">+0.00</td>
+<td style="text-align: center;">投资公司</td>
+<td>[Tushare:top10_holders]</td>
+</tr>
+<tr>
+<td>5</td>
+<td>李平</td>
+<td style="text-align: right;">19,746.03</td>
+<td style="text-align: right;">4.33</td>
+<td style="text-align: right;">1.09</td>
+<td style="text-align: right;">+0.00</td>
+<td style="text-align: center;">自然人</td>
+<td>[Tushare:top10_holders]</td>
+</tr>
+<tr>
+<td>6</td>
+<td>HKSCCNOMINEESLIMITED</td>
+<td style="text-align: right;">15,590.68</td>
+<td style="text-align: right;">3.42</td>
+<td style="text-align: right;">–</td>
+<td style="text-align: right;">-0.12</td>
+<td style="text-align: center;">一般企业</td>
+<td>[Tushare:top10_holders]</td>
+</tr>
+<tr>
+<td>7</td>
+<td>中国工商银行-易方达创业板ETF</td>
+<td style="text-align: right;">4,900.57</td>
+<td style="text-align: right;">1.07</td>
+<td style="text-align: right;">1.15</td>
+<td style="text-align: right;">-585.43</td>
+<td style="text-align: center;">开放式投资基金</td>
+<td>[Tushare:top10_holders]</td>
+</tr>
+<tr>
+<td>8</td>
+<td>中国工商银行-华泰柏瑞沪深300ETF</td>
+<td style="text-align: right;">4,371.20</td>
+<td style="text-align: right;">0.96</td>
+<td style="text-align: right;">1.03</td>
+<td style="text-align: right;">-126.96</td>
+<td style="text-align: center;">开放式投资基金</td>
+<td>[Tushare:top10_holders]</td>
+</tr>
+<tr>
+<td>9</td>
+<td>本田技研工业(中国)投资有限公司</td>
+<td style="text-align: right;">4,140.00</td>
+<td style="text-align: right;">0.91</td>
+<td style="text-align: right;">0.97</td>
+<td style="text-align: right;">+0.00</td>
+<td style="text-align: center;">投资公司</td>
+<td>[Tushare:top10_holders]</td>
+</tr>
+<tr>
+<td>10</td>
+<td>中国建设银行-易方达沪深300ETF</td>
+<td style="text-align: right;">3,117.36</td>
+<td style="text-align: right;">0.68</td>
+<td style="text-align: right;">0.73</td>
+<td style="text-align: right;">-134.42</td>
+<td style="text-align: center;">开放式投资基金</td>
+<td>[Tushare:top10_holders]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>股东变动解读</strong>：<br />
+- <strong>香港中央结算（陆股通通道）</strong>：从69,254万股增至76,132万股（+6,877万股），外资持续加仓，为最大边际增量。<br />
+- <strong>黄世霖</strong>：Q1维持42,039万股不变，但2025年年报期减持4,563万股（从46,602万股降至42,039万股）。<br />
+- <strong>ETF被动基金</strong>：易方达创业板ETF从4,901万股骤降至2,501万股（-2,399万股），反映创业板ETF赎回压力，非对公司基本面看法。<br />
+- <strong>新进</strong>：富泰华工业（鸿海/富士康旗下）2,871万股、华鼎新动力2,389万股首次进入前十大。<br />
+- <strong>实控人</strong>：厦门瑞庭（曾毓群家族）稳定持有102,470万股（22.45%），无变动。</p>
+<h4>十大流通股东（2026Q1 vs 2025年报对比）</h4>
+<p><strong>报告期：20260331</strong></p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>股东</th>
+<th style="text-align: right;">持股数(万股)</th>
+<th style="text-align: right;">持股比例(%)</th>
+<th style="text-align: right;">占流通比例(%)</th>
+<th style="text-align: right;">期间变动(万股)</th>
+<th style="text-align: center;">股东类型</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>厦门瑞庭投资有限公司</td>
+<td style="text-align: right;">102,470.49</td>
+<td style="text-align: right;">22.45</td>
+<td style="text-align: right;">24.07</td>
+<td style="text-align: right;">+0.00</td>
+<td style="text-align: center;">投资公司</td>
+<td>[Tushare:top10_floatholders]</td>
+</tr>
+<tr>
+<td>2</td>
+<td>香港中央结算有限公司</td>
+<td style="text-align: right;">76,131.55</td>
+<td style="text-align: right;">16.68</td>
+<td style="text-align: right;">17.88</td>
+<td style="text-align: right;">+6,877.37</td>
+<td style="text-align: center;">一般企业</td>
+<td>[Tushare:top10_floatholders]</td>
+</tr>
+<tr>
+<td>3</td>
+<td>黄世霖</td>
+<td style="text-align: right;">42,038.89</td>
+<td style="text-align: right;">9.21</td>
+<td style="text-align: right;">9.88</td>
+<td style="text-align: right;">+0.00</td>
+<td style="text-align: center;">自然人</td>
+<td>[Tushare:top10_floatholders]</td>
+</tr>
+<tr>
+<td>4</td>
+<td>宁波联合创新新能源投资管理合伙企业(有限合伙)</td>
+<td style="text-align: right;">28,422.06</td>
+<td style="text-align: right;">6.23</td>
+<td style="text-align: right;">6.68</td>
+<td style="text-align: right;">+0.00</td>
+<td style="text-align: center;">投资公司</td>
+<td>[Tushare:top10_floatholders]</td>
+</tr>
+<tr>
+<td>5</td>
+<td>HKSCCNOMINEESLIMITED</td>
+<td style="text-align: right;">15,590.76</td>
+<td style="text-align: right;">3.42</td>
+<td style="text-align: right;">–</td>
+<td style="text-align: right;">+0.08</td>
+<td style="text-align: center;">一般企业</td>
+<td>[Tushare:top10_floatholders]</td>
+</tr>
+<tr>
+<td>6</td>
+<td>李平</td>
+<td style="text-align: right;">4,936.51</td>
+<td style="text-align: right;">1.08</td>
+<td style="text-align: right;">1.16</td>
+<td style="text-align: right;">+303.75</td>
+<td style="text-align: center;">自然人</td>
+<td>[Tushare:top10_floatholders]</td>
+</tr>
+<tr>
+<td>7</td>
+<td>本田技研工业(中国)投资有限公司</td>
+<td style="text-align: right;">4,140.00</td>
+<td style="text-align: right;">0.91</td>
+<td style="text-align: right;">0.97</td>
+<td style="text-align: right;">+0.00</td>
+<td style="text-align: center;">投资公司</td>
+<td>[Tushare:top10_floatholders]</td>
+</tr>
+<tr>
+<td>8</td>
+<td>富泰华工业(深圳)有限公司</td>
+<td style="text-align: right;">2,870.72</td>
+<td style="text-align: right;">0.63</td>
+<td style="text-align: right;">0.67</td>
+<td style="text-align: right;">–</td>
+<td style="text-align: center;">一般企业</td>
+<td>[Tushare:top10_floatholders]</td>
+</tr>
+<tr>
+<td>9</td>
+<td>中国工商银行-易方达创业板ETF</td>
+<td style="text-align: right;">2,501.44</td>
+<td style="text-align: right;">0.55</td>
+<td style="text-align: right;">0.59</td>
+<td style="text-align: right;">-2,399.13</td>
+<td style="text-align: center;">开放式投资基金</td>
+<td>[Tushare:top10_floatholders]</td>
+</tr>
+<tr>
+<td>10</td>
+<td>北京华鼎新动力股权投资基金(有限合伙)</td>
+<td style="text-align: right;">2,389.28</td>
+<td style="text-align: right;">0.52</td>
+<td style="text-align: right;">0.56</td>
+<td style="text-align: right;">–</td>
+<td style="text-align: center;">风险投资公司</td>
+<td>[Tushare:top10_floatholders]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>报告期：20251231</strong></p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>股东</th>
+<th style="text-align: right;">持股数(万股)</th>
+<th style="text-align: right;">持股比例(%)</th>
+<th style="text-align: right;">占流通比例(%)</th>
+<th style="text-align: right;">期间变动(万股)</th>
+<th style="text-align: center;">股东类型</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>厦门瑞庭投资有限公司</td>
+<td style="text-align: right;">102,470.49</td>
+<td style="text-align: right;">22.45</td>
+<td style="text-align: right;">24.07</td>
+<td style="text-align: right;">+0.00</td>
+<td style="text-align: center;">投资公司</td>
+<td>[Tushare:top10_floatholders]</td>
+</tr>
+<tr>
+<td>2</td>
+<td>香港中央结算有限公司</td>
+<td style="text-align: right;">69,254.18</td>
+<td style="text-align: right;">15.17</td>
+<td style="text-align: right;">16.27</td>
+<td style="text-align: right;">+3,169.77</td>
+<td style="text-align: center;">一般企业</td>
+<td>[Tushare:top10_floatholders]</td>
+</tr>
+<tr>
+<td>3</td>
+<td>黄世霖</td>
+<td style="text-align: right;">42,038.89</td>
+<td style="text-align: right;">9.21</td>
+<td style="text-align: right;">9.88</td>
+<td style="text-align: right;">-4,563.24</td>
+<td style="text-align: center;">自然人</td>
+<td>[Tushare:top10_floatholders]</td>
+</tr>
+<tr>
+<td>4</td>
+<td>宁波联合创新新能源投资管理合伙企业(有限合伙)</td>
+<td style="text-align: right;">28,422.06</td>
+<td style="text-align: right;">6.23</td>
+<td style="text-align: right;">6.68</td>
+<td style="text-align: right;">+0.00</td>
+<td style="text-align: center;">投资公司</td>
+<td>[Tushare:top10_floatholders]</td>
+</tr>
+<tr>
+<td>5</td>
+<td>HKSCCNOMINEESLIMITED</td>
+<td style="text-align: right;">15,590.68</td>
+<td style="text-align: right;">3.42</td>
+<td style="text-align: right;">–</td>
+<td style="text-align: right;">-0.12</td>
+<td style="text-align: center;">一般企业</td>
+<td>[Tushare:top10_floatholders]</td>
+</tr>
+<tr>
+<td>6</td>
+<td>中国工商银行-易方达创业板ETF</td>
+<td style="text-align: right;">4,900.57</td>
+<td style="text-align: right;">1.07</td>
+<td style="text-align: right;">1.15</td>
+<td style="text-align: right;">-585.43</td>
+<td style="text-align: center;">开放式投资基金</td>
+<td>[Tushare:top10_floatholders]</td>
+</tr>
+<tr>
+<td>7</td>
+<td>李平</td>
+<td style="text-align: right;">4,632.76</td>
+<td style="text-align: right;">1.02</td>
+<td style="text-align: right;">1.09</td>
+<td style="text-align: right;">+0.00</td>
+<td style="text-align: center;">自然人</td>
+<td>[Tushare:top10_floatholders]</td>
+</tr>
+<tr>
+<td>8</td>
+<td>中国工商银行-华泰柏瑞沪深300ETF</td>
+<td style="text-align: right;">4,371.20</td>
+<td style="text-align: right;">0.96</td>
+<td style="text-align: right;">1.03</td>
+<td style="text-align: right;">-126.96</td>
+<td style="text-align: center;">开放式投资基金</td>
+<td>[Tushare:top10_floatholders]</td>
+</tr>
+<tr>
+<td>9</td>
+<td>本田技研工业(中国)投资有限公司</td>
+<td style="text-align: right;">4,140.00</td>
+<td style="text-align: right;">0.91</td>
+<td style="text-align: right;">0.97</td>
+<td style="text-align: right;">+0.00</td>
+<td style="text-align: center;">投资公司</td>
+<td>[Tushare:top10_floatholders]</td>
+</tr>
+<tr>
+<td>10</td>
+<td>中国建设银行-易方达沪深300ETF</td>
+<td style="text-align: right;">3,117.36</td>
+<td style="text-align: right;">0.68</td>
+<td style="text-align: right;">0.73</td>
+<td style="text-align: right;">-134.42</td>
+<td style="text-align: center;">开放式投资基金</td>
+<td>[Tushare:top10_floatholders]</td>
+</tr>
+</tbody>
+</table>
+<h4>筹码集中度</h4>
+<p>当前期20260331，股东户数 <strong>204,504</strong>，环比 <strong>-20.58%</strong>，户均持股 13,774股，环比 +25.91%。</p>
+<p><strong>判定</strong>：🟢 <strong>筹码集中（主力吸筹）</strong> — 户数大幅减少+户均大幅上升，经典的机构吸筹信号。此前2025年全年户数从212,061升至249,777（散户入场），2026Q1逆转为204,504（散户出清），筹码快速向机构集中。 [Tushare:stk_holdernumber] [capital_flow.md §3]</p>
+<h4>质押明细</h4>
+<p>data_snapshot.md §7 显示共88条active质押记录，质押方主要为<strong>李平</strong>（副董事长）和<strong>黄世霖</strong>（联合创始人）。</p>
+<table>
+<thead>
+<tr>
+<th>股东</th>
+<th style="text-align: center;">质押笔数</th>
+<th>主要质押方</th>
+<th>质押规模</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>李平</td>
+<td style="text-align: center;">多笔</td>
+<td>中信建投/安信资管/广发资管/中信证券/西藏信托</td>
+<td>各笔金额极小（0.01-0.06万股），累计占其持股不足1%</td>
+<td>[Tushare:pledge_detail]</td>
+</tr>
+<tr>
+<td>黄世霖</td>
+<td style="text-align: center;">少量</td>
+<td>西藏信托/中信建投</td>
+<td>各笔0.05-0.07万股，占其持股不足0.01%</td>
+<td>[Tushare:pledge_detail]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>质押风险判定</strong>：质押绝对规模极小（单笔均为百股级别，非传统意义上的大额质押融资），远低于50%致命红旗阈值。质押更可能为股权管理安排而非融资需求，<strong>无质押爆仓风险</strong>。 [Tushare:pledge_detail]</p>
+<h3>★ 若核心资产被剥离的剩余资产清单（v4.2 触发时必填）</h3>
+<p><strong>触发判定</strong>：❌ 未触发。宁德时代无核心子公司占合并净利&gt;30%被剥离风险，无首亏预告，无核心资产减值🔴红旗。跳过本子节。</p>
+<hr />
+</div>
+
+<!-- ============================================================
+     §五 行业与竞争格局
+     ============================================================ -->
+<div class="section" id="industry">
+<h2>§五 行业与竞争格局</h2>
+<h3>行业规模与趋势</h3>
+<p><strong>全球动力电池市场</strong>：</p>
+<ul>
+<li><strong>2025年全球新能源车销量</strong>：2,147万辆，同比+21.5%（SNE Research） [PDF:annual_2025,MD&amp;A]</li>
+<li><strong>2025年全球动力电池使用量</strong>：1,187 GWh，同比+31.7%（SNE Research） [PDF:annual_2025,MD&amp;A]</li>
+<li><strong>2025年全球储能电池出货量</strong>：550 GWh，同比+79%（SNE Research） [PDF:annual_2025,MD&amp;A]</li>
+<li><strong>2026年全球锂电市场总需求预计</strong>：约2.5 TWh [Web:sohu.com]</li>
+</ul>
+<p><strong>行业生命周期</strong>：成长期中后段。全球新能源车渗透率仍在快速提升（中国已超40%，欧洲约25%，美国约12%），但增速放缓迹象初现；储能电池尚处成长期早期，增速远超动力电池。</p>
+<p><strong>供需结构</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>数值</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>国内电池产能规划</td>
+<td>&gt;3,000 GWh</td>
+<td>[Web:sohu.com]</td>
+</tr>
+<tr>
+<td>国内实际需求</td>
+<td>~1,500 GWh</td>
+<td>[Web:sohu.com]</td>
+</tr>
+<tr>
+<td>产能利用率</td>
+<td>普遍&lt;60%</td>
+<td>[Web:sohu.com]</td>
+</tr>
+<tr>
+<td>CR2（宁德+比亚迪）</td>
+<td>~66%</td>
+<td>[Web:xueqiu.com]</td>
+</tr>
+<tr>
+<td>宁德时代全球市占率</td>
+<td>39.2%</td>
+<td>[Doc:annual_2025,P.14]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>关键产能过剩信号</strong>：2026年3月国内动力电池产量178 GWh同比+32%，但装车率降至32%（历史低位），产能扩张显著快于终端需求。 [Web:sina.com.cn]</p>
+<p><strong>政策环境</strong>：</p>
+<ol>
+<li><strong>反内卷座谈会</strong>：2026年四部门联合要求优化产能规划，遏制低效产能扩张 [Web:ditan.com]</li>
+<li><strong>出口退税分步取消</strong>：2026年4月起从9%降至6%，2027年1月完全取消，倒逼海外建厂 [Web:ditan.com]</li>
+<li><strong>储能市场化推进</strong>：容量电价机制推进，从"强制配储"转向市场化，利好头部企业 [Web:finance.sina.com.cn]</li>
+</ol>
+<p><strong>技术演进方向</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>技术路线</th>
+<th>阶段</th>
+<th>代表企业</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>磷酸铁锂</td>
+<td>成熟量产</td>
+<td>宁德/比亚迪/国轩</td>
+<td>[Doc:annual_2025]</td>
+</tr>
+<tr>
+<td>三元高镍</td>
+<td>成熟量产</td>
+<td>宁德/LG新能源/三星SDI</td>
+<td>[Doc:annual_2025]</td>
+</tr>
+<tr>
+<td>凝聚态电池</td>
+<td>商用验证（350Wh/kg，已完成航空器首飞）</td>
+<td>宁德时代</td>
+<td>[Web:xueqiu.com]</td>
+</tr>
+<tr>
+<td>钠离子电池</td>
+<td>2026年底规模化量产</td>
+<td>宁德/中科海钠</td>
+<td>[Web:xueqiu.com]</td>
+</tr>
+<tr>
+<td>全固态电池</td>
+<td>实验室/预量产，预计2028-2030年量产</td>
+<td>丰田/三星SDI/宁德</td>
+<td>[Web:segmentfault.com]</td>
+</tr>
+</tbody>
+</table>
+<h3>Porter 五力分析</h3>
+<p><strong>1. 供应商议价能力：中等偏弱 ↓</strong></p>
+<p>锂、镍、钴等关键原材料价格已从2022年峰值大幅回落。宁德通过垂直整合（自建锂盐、前驱体、正极材料产线）+参股矿产资源投资（锂、镍、钴、磷矿）降低对外部供应商依赖。直接材料占营业成本从2024年76.48%降至2025年71.79%，议价能力持续增强。 [PDF:annual_2025] [Doc:annual_2025,P.14]</p>
+<p><strong>2. 买方议价能力：中等 →</strong></p>
+<p>下游车企（特斯拉、BMW、理想、蔚来等）为大客户，部分头部车企有自研电池倾向（比亚迪自产、特斯拉4680）。但宁德技术领先+规模优势形成的综合成本-性能组合难以替代，客户转换成本高。H股上市后国际大客户关系进一步巩固。</p>
+<p><strong>3. 新进入者威胁：低 ↓</strong></p>
+<p>动力电池行业资本壁垒极高（百亿级投资建单厂）、技术壁垒深（工艺know-how积累需5年以上）、认证壁垒长（车企导入周期2-3年）、专利壁垒密（宁德已起诉海辰储能专利侵权）。新进者难以在短期内形成有效竞争。</p>
+<p><strong>4. 替代品威胁：中低 →</strong></p>
+<p>氢燃料电池为远期替代方案但成本过高；全固态电池尚需3-5年量产。宁德的凝聚态电池（350Wh/kg）和钠离子电池为自身替代品预布局，技术迭代能力强，被颠覆风险可控。 [Web:segmentfault.com]</p>
+<p><strong>5. 行业内竞争：激烈 ↑</strong></p>
+<p>国内产能3,000GWh vs 需求1,500GWh，利用率&lt;60%，产能严重过剩。二线厂商（海辰储能、亿纬锂能、国轩高科）产能快速扩张。比亚迪以垂直整合+成本优势直接竞争。但头部集中趋势明确——CR2（宁德+比亚迪）约66%，尾部企业加速出清。 [Web:sohu.com] [Web:cls.cn]</p>
+<h3>关键竞品对标</h3>
+<p><strong>国内直接竞品</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>竞品</th>
+<th>竞争维度</th>
+<th>宁德时代优势</th>
+<th>竞品优势</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>比亚迪</td>
+<td>动力电池（全球#2，国内~27%）</td>
+<td>多材料体系（三元+铁锂+钠电+凝聚态），客户覆盖全球车企</td>
+<td>垂直整合（电池→整车闭环），成本优势，刀片电池品牌力</td>
+<td>[Web:qq.com]</td>
+</tr>
+<tr>
+<td>亿纬锂能</td>
+<td>圆柱+方形动力+储能</td>
+<td>规模和技术代差</td>
+<td>大圆柱（46系列）进展领先</td>
+<td>[Tushare:peer_analysis]</td>
+</tr>
+<tr>
+<td>国轩高科</td>
+<td>铁锂动力+储能</td>
+<td>技术密度、全球化程度</td>
+<td>大众入股背书，半固态电池布局</td>
+<td>[Tushare:peer_analysis]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>2026年补能网络正面竞争</strong>：宁德目标2026年4,000座超换一体站（充电+换电），比亚迪目标2万座闪充站（第二代刀片闪充5分钟充好），两家从电池制造延伸至能源服务直接交锋。 [Web:qq.com]</p>
+<p><strong>国际竞品</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>竞品</th>
+<th style="text-align: center;">全球市占率</th>
+<th>核心市场</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LG新能源</td>
+<td style="text-align: center;">~14%</td>
+<td>欧美，特斯拉/通用供应商</td>
+<td>[Web:xueqiu.com]</td>
+</tr>
+<tr>
+<td>三星SDI</td>
+<td style="text-align: center;">~6%</td>
+<td>欧美，BMW/Stellantis供应商</td>
+<td>[Web:xueqiu.com]</td>
+</tr>
+<tr>
+<td>SK On</td>
+<td style="text-align: center;">~5%</td>
+<td>北美，福特/现代供应商</td>
+<td>[Web:xueqiu.com]</td>
+</tr>
+<tr>
+<td>松下</td>
+<td style="text-align: center;">~5%</td>
+<td>北美，特斯拉供应商</td>
+<td>[Web:xueqiu.com]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>竞争格局总结</strong>：宁德时代以39.2%全球市占率遥遥领先，技术矩阵（从神行超充到凝聚态再到钠电）覆盖全场景，但面临比亚迪的国内追赶和产能过剩的行业性压力。核心护城河在于：(1)技术迭代速度（六大新品同时发布的研发厚度）；(2)全球化客户网络（24厂+A/H双上市）；(3)规模成本优势（产量748GWh形成的采购/制造规模壁垒）。短期最大变量是行业产能出清速度和出口退税取消后海外建厂进度。</p>
+</div>
+
+<!-- ============================================================
+     §六 10 维度详细证据
+     ============================================================ -->
+<div class="section" id="detail">
+<h2>§六 10 维度详细证据</h2>
+<h3>维度 1 · 市场规模与结构 — 9/10</h3>
+<p><strong>评分锚点参照</strong>: 9-10分（卓越）— TAM &gt; $100B 且快速增长（CAGR &gt; 20%），已有 bottom-up 数据验证市场规模，市场存在明显的结构性顺风。</p>
+<p><strong>支撑证据</strong>:<br />
+- 2025年全球动力电池使用量1,187 GWh，同比+31.7%；全球储能电池出货量550 GWh，同比+79%（SNE Research） [PDF:annual_2025,MD&amp;A]<br />
+- 2026年全球锂电市场总需求预计约2.5 TWh，对应市场规模远超$100B [Web:sohu.com]<br />
+- 2025年全球新能源车销量2,147万辆，同比+21.5%，渗透率持续提升（中国&gt;40%，欧洲~25%，美国~12%） [PDF:annual_2025,MD&amp;A]<br />
+- 储能电池作为第二增长曲线，2025年出货+79%，行业CAGR远超20% [PDF:annual_2025,MD&amp;A]</p>
+<p><strong>评分理由</strong>: 全球锂电池TAM已远超$100B（按2.5TWh×均价估算），动力+储能双轮驱动，结构性顺风（碳中和政策+新能源车渗透率提升）明确。bottom-up有SNE Research行业数据验证。符合9-10分卓越锚点。未给10分因国内产能过剩（3000GWh vs 需求1500GWh，利用率&lt;60%）构成中期压力。 [Web:sohu.com]</p>
+<hr />
+<h3>维度 2 · 商业模式 — 8/10</h3>
+<p><strong>评分锚点参照</strong>: 7-8分（优秀）— 核心收入模式已跑通，有扩展潜力；毛利率达到行业中上水平。<strong>上市公司调整</strong>: 硬件/制造行业毛利率标杆25-40%。</p>
+<p><strong>支撑证据</strong>:<br />
+- 2025年毛利率26.27%，处于行业中上水平（制造业标杆25-40%），且从2023年22.91%持续提升 [Tushare:fina_indicator]<br />
+- 多元收入结构：动力电池系统3165亿（74.7%）、储能系统624亿（14.7%）、电池材料与回收219亿（5.2%）、其他169亿 [Tushare:fina_mainbz]<br />
+- 直接材料占营业成本从2024年76.48%降至2025年71.79%（↓4.68pp），规模效应+原材料降价红利持续释放 [PDF:annual_2025]<br />
+- OCF/净利润 = 1332亿/722亿 = 1.84x，远超1.0x健康线，盈利质量优异 [Tushare:cashflow/income]</p>
+<p><strong>评分理由</strong>: 商业模式已充分验证——多化学体系（三元+铁锂+钠电+凝聚态）覆盖全场景，动力+储能+材料三大收入来源，定价权体现在毛利率逆势提升。给8分而非9分因单位售价仍在下降（营收+17%但产量+45%），行业价格竞争激烈。 [Doc:annual_2025,P.27]</p>
+<hr />
+<h3>维度 3 · 盈利能力 — 8/10</h3>
+<p><strong>评分锚点参照</strong>: 7-8分（优秀）— 收入增速15-30%，盈利增速稳健。<strong>上市公司版维度4增长标准适用</strong>。</p>
+<p><strong>支撑证据</strong>:<br />
+- 2025年营收4237亿+17.04%，归母净利722亿+42.28%，利润增幅远超营收增幅 [Tushare:income]<br />
+- 2026Q1营收1291亿+52.45%，归母净利207亿+48.52%，增速加速趋势确立 [Tushare:income]<br />
+- 3年营收CAGR 8.8%，3年净利润CAGR 32.9%——利润增速远超营收，经营杠杆强劲 [API:derived_metrics]<br />
+- ROE连续三年&gt;22%（2023年24.36%→2024年22.83%→2025年24.72%），DuPont分解显示净利率从14.02%提升至17.04%为主要驱动 [Tushare:fina_indicator] [audit: DuPont, ℹ️ 信息]<br />
+- Q4营收占全年33.2%，季节性分布正常（新能源汽车年底冲量） [PDF:annual_2025,分季度表]</p>
+<p><strong>评分理由</strong>: 2025年营收增速17%处于15-30%优秀区间，2026Q1爆发至52%进入卓越区间，EPS从2024年11.53元升至2025年16.14元+40%。给8分而非9分因2024年曾经历营收-9.7%的短暂下滑，增长稳定性略有瑕疵。</p>
+<hr />
+<h3>维度 4 · 产品与技术 — 9/10</h3>
+<p><strong>评分锚点参照</strong>: 9-10分（卓越）— 拥有核心专利或独特技术know-how，平台型产品生态系统已初步形成，产品迭代速度快。</p>
+<p><strong>支撑证据</strong>:<br />
+- 2026超级科技日一次发布6大新品：第三代神行（峰值15C超充，10%-80%仅3分44秒）、第三代麒麟（280Wh/kg，1000km续航）、凝聚态电池（350Wh/kg，已完成商用飞机首飞验证）、第二代骁遥超混、钠新电池（2026年底规模化量产）、超换一体补能网络 [Web:xueqiu.com]<br />
+- 2025年研发费用221亿元，同比+19%，占营收5.2%，绝对金额行业第一 [Doc:annual_2025,P.29]<br />
+- 多化学体系全覆盖：三元+铁锂+钠电+凝聚态，从乘用车到航空器全场景 [Doc:annual_2025,P.14]<br />
+- 全球六大研发中心、24家电池工厂，技术到量产的转化能力极强 [PDF:annual_2025,MD&amp;A]<br />
+- 起诉海辰储能多起专利侵权，专利壁垒形成实质护城河 [Web:sina.com.cn]</p>
+<p><strong>评分理由</strong>: 六大新品同时发布展现的研发厚度在全球电池行业无出其右，凝聚态350Wh/kg已完成航空器首飞验证（全球首家），技术代差明显。未给10分因全固态电池尚在实验室阶段（预计2028-2030年量产），丰田/三星SDI在该方向可能构成远期挑战。 [Web:segmentfault.com]</p>
+<hr />
+<h3>维度 5 · 团队与管理层 — 7/10</h3>
+<p><strong>评分锚点参照</strong>: 7-8分（优秀）— 创始人有相关行业深厚背景，关键岗位已到位，团队稳定性好。<strong>上市公司追加项</strong>: 内部人持股、治理评分。</p>
+<h4>管理层利益对齐</h4>
+<ul>
+<li>实控人曾毓群通过厦门瑞庭持股22.45%，利益高度绑定 [Tushare:top10_holders]</li>
+<li>累计1054条股权激励记录，激励覆盖面广 [API:stk_rewards]</li>
+<li>2025年度分红每10股45.53元+中期分红10.07元+特别分红12.30元，合计近300亿元，股东回报大幅提升 [Doc:annual_2025,P.41]</li>
+<li>回购方案累计43.86亿元，彰显管理层信心 [Doc:annual_2025,P.41]</li>
+</ul>
+<h4>核心团队画像</h4>
+<ul>
+<li>曾毓群：创始人、董事长兼总经理，香港永久性居民，中科院物理所博士后，电化学领域顶级专家 [phase1-data §5]</li>
+<li>核心管理层稳定，2025年年报披露高管39人，其中研发背景占比高 [Doc:annual_2025]</li>
+<li>2025年完成A+H双重上市，治理结构同步升级 [Doc:annual_2025,P.42]</li>
+</ul>
+<p><strong>支撑证据</strong>:<br />
+- [audit: Governance, 🟡 中] 前十大股东净减持2399万股（20260331期），主要为易方达创业板ETF被动减持-2399万股，非管理层主动减持 [Tushare:top10_holders]<br />
+- 黄世霖2025年年报期减持4563万股（从46602万降至42039万） [Tushare:top10_holders]<br />
+- 李平质押记录88条，但绝对规模极小（单笔百股级别），远低于50%致命红旗阈值 [Tushare:pledge_detail]</p>
+<p><strong>评分理由</strong>: 曾毓群为全球电池行业最具影响力的创始人之一，22.45%持股+近300亿分红+43.86亿回购充分体现利益对齐。黄世霖减持4563万股构成轻微负面（[audit: Governance, 🟡 中]），但联合创始人在公司上市8年后适度减持属正常。给7分而非8分因联合创始人减持信号。</p>
+<hr />
+<h3>维度 6 · 市场进入与护城河 — 9/10</h3>
+<p><strong>评分锚点参照</strong>: 9-10分（卓越）— 拥有多重复合护城河（规模+技术+品牌+客户网络），市场份额第一且持续扩大，竞争对手短期内无法复制核心优势。</p>
+<p><strong>支撑证据</strong>:<br />
+- 全球动力电池市占率39.2%，连续9年全球第一，遥遥领先第二名比亚迪（~27%） [Doc:annual_2025,P.14]<br />
+- 规模壁垒：产量748 GWh，24家全球工厂，采购/制造规模壁垒深厚 [Doc:annual_2025,P.27]<br />
+- 技术壁垒：多化学体系全覆盖，研发费用221亿/年（绝对金额行业第一），专利诉讼主动出击 [Doc:annual_2025,P.29]<br />
+- 客户网络壁垒：覆盖特斯拉、BMW、理想、蔚来等全球主流车企，客户转换成本极高（车企导入周期2-3年） [phase1-data §3]<br />
+- 品牌壁垒：A+H双上市提升国际信誉，本田技研直接投资持股0.91%、富泰华（鸿海）新进前十大 [Tushare:top10_holders]<br />
+- CR2（宁德+比亚迪）约66%，行业头部集中趋势明确，尾部企业加速出清 [Web:xueqiu.com]</p>
+<p><strong>评分理由</strong>: 四重复合护城河（规模+技术+客户网络+品牌）在全球电池行业无出其右。新进入者面临百亿级资本壁垒+5年以上技术积累+2-3年车企导入周期的三重门槛。给9分而非10分因比亚迪以垂直整合+成本优势形成实质竞争威胁，且储能领域海辰储能等二线追赶加速。</p>
+<hr />
+<h3>维度 7 · 财务健康度 — 8/10</h3>
+<p><strong>评分锚点参照</strong>: <strong>上市公司版维度7</strong> — 优秀(8+): 流动比率&gt;2.0, 资产负债率&lt;40%, FCF收益率&gt;8%, OCF/净利润&gt;1.2x。</p>
+<p><strong>支撑证据</strong>:<br />
+- 流动比率1.60（中等5-6分区间1.2-2.0），速动比率1.36 [Tushare:fina_indicator]<br />
+- 资产负债率62.32%（警示3-4分区间60-75%） [Tushare:fina_indicator]<br />
+- OCF/净利润 = 1332亿/722亿 = 1.84x（优秀&gt;1.2x）；2026Q1 OCF/净利润 = 337亿/227亿 = 1.48x [Tushare:cashflow/income]<br />
+- FCF收益率4.6%（中等4-8%区间） [metrics.json]<br />
+- Piotroski F-Score = 7/9（优秀） [audit: Piotroski, 🟢 低]<br />
+- Beneish M-Score = -2.609（≤-1.78，盈余操纵概率低） [audit: Beneish, 🟢 低]<br />
+- Altman Z-Score = 3.246（≥2.99，安全区） [audit: Altman, 🟢 低]<br />
+- [audit: Buffett Quality, 🟡 中] 存货增速58%远高于营收增速17%（差值41pp &gt; 30pp阈值），存货积压风险 [Tushare:balancesheet]<br />
+- 货币资金3520亿 vs 有息负债1265亿，净现金2255亿（净负债为负），现金储备极充裕 [Tushare:balancesheet]<br />
+- 财务费用为大额负值-79.4亿（净利息收入），说明利息收入远超利息支出 [PDF:annual_2025]<br />
+- 资产减值86.6亿（固定资产减值+存货跌价准备），产能过剩背景下需持续关注 [PDF:annual_2025,P.31]</p>
+<p><strong>评分理由</strong>: 三大安全指标（F=7、M=-2.6、Z=3.2）全部在安全区，OCF/NI=1.84x盈利质量优异，净现金2255亿提供极厚安全垫。减分项：资产负债率62.32%偏高（但已从2023年70.1%持续改善）、存货增速58%远超营收17%构成中风险（[audit: Buffett Quality, 🟡 中]）。综合给8分——现金充裕+盈利质量极高足以覆盖杠杆偏高和存货积压风险。</p>
+<hr />
+<h3>维度 8 · 估值合理性 — 7/10</h3>
+<p><strong>评分锚点参照</strong>: <strong>上市公司版维度9</strong> — 7-8分: PE合理（行业中位数±20%），PB&lt;历史中位数。</p>
+<p><strong>支撑证据</strong>:<br />
+- PE TTM = 25.01，行业（锂电池31家）PE中位数43.59，目标分位仅9.1%——处于行业最便宜20% [peer_analysis.md §4]<br />
+- PB = 5.49，行业中位数3.08，目标分位80.6%——处于行业最贵20% [peer_analysis.md §4] [audit: Valuation, 🟡 中]<br />
+- PS TTM = 4.22，行业分位71.0%，高于行业60% [peer_analysis.md §4]<br />
+- 股息率1.58%（年度分红45.53元/10股+中期10.07元+特别12.30元） [Tushare:daily_basic]<br />
+- FCF收益率4.6% [metrics.json]<br />
+- [audit: Valuation, 🟡 中] PB=5.49处于近1年[3.79, 6.44]的70%分位，略偏高 [audit_report.md]</p>
+<p><strong>评分理由</strong>: PE 25x在锂电池行业处于最便宜10%分位，考虑到宁德ROE 24.72%远超行业中位数、2026Q1净利增速+48.52%，PE估值具有吸引力。但PB 5.49处于行业最贵20%（[audit: Valuation, 🟡 中]），反映市场对高ROE的溢价已较充分。PE合理+PB偏贵的组合给7分。</p>
+<hr />
+<h3>维度 9 · 风险与治理 — 7/10</h3>
+<p><strong>评分锚点参照</strong>: 7-8分（风险可控）— 监管环境稳定且公司合规到位，无重大法律风险。</p>
+<p><strong>支撑证据</strong>:<br />
+- 审计意见：标准无保留意见 [Doc:annual_2025]<br />
+- 实控人厦门瑞庭稳定持有22.45%无变动，控制权稳固 [Tushare:top10_holders]<br />
+- [audit: Governance, 🟡 中] 前十大股东净减持2399万股——但主要为ETF被动减持，非核心管理层抛售 [audit_report.md]<br />
+- 质押风险极低：李平/黄世霖质押规模为百股级别，远低于50%致命阈值 [Tushare:pledge_detail]<br />
+- 第四大股东拟询价转让5800万股（占总股本1.27%），转让价410.34元/股，非恐慌性减持 [Web:stcn.com]<br />
+- 政策风险：出口退税2027年1月完全取消，倒逼海外建厂 [Web:ditan.com]<br />
+- 行业风险：国内产能3000GWh vs 需求1500GWh，产能严重过剩 [Web:sohu.com]</p>
+<p><strong>评分理由</strong>: 公司治理良好（A+H双上市、标准无保留审计意见、实控人稳定持股），无重大法律/合规问题。减分项为行业层面的产能过剩风险+出口退税取消政策变化。给7分——公司层面风险低，行业层面风险中等。</p>
+<hr />
+<h3>维度 10 · 催化剂与时机 — 8/10</h3>
+<p><strong>评分锚点参照</strong>: <strong>上市公司版维度10</strong> — 7-8分: 总回报预期&gt;20%/年，催化剂可见。9-10分: 分红+回购收益率&gt;5%+目标价上行空间&gt;40%+明确催化剂。</p>
+<p><strong>支撑证据</strong>:<br />
+- 2026Q1业绩爆发（营收+52.45%，净利+48.52%），增速加速趋势确立 [Tushare:income]<br />
+- 超级科技日6大新品发布，技术代差拉开（凝聚态350Wh/kg、第三代神行15C超充） [Web:xueqiu.com]<br />
+- H股配售完成募集391.9亿港元，海外扩张弹药充足 [Web:capitalfutures.com.tw]<br />
+- 超换一体补能网络目标2026年4000座、2028年超10万座——从制造商延伸至能源服务商的商业模式升级 [Web:xueqiu.com]<br />
+- 钠离子电池2026年底规模化量产，打开低端市场空间 [Web:xueqiu.com]<br />
+- 大摩升H股至"增持"首选股，2026-28年盈利CAGR从25%上调至30%，H股目标价815港元 [Web:ifeng.com]<br />
+- 分红+回购收益率：(近300亿分红+43.86亿回购)/19755亿市值 ≈ 1.74% [Doc:annual_2025,P.41]</p>
+<p><strong>评分理由</strong>: 催化剂密集且明确——Q1业绩超预期+6大新品+H股配售+补能网络+钠电量产，未来12个月可观察事件丰富。分红+回购收益率1.74%偏低（未达5%门槛），目标价上行空间依赖于增速持续性。给8分——催化剂密度和质量极高，但分红收益率不足以支撑9-10分。</p>
+<hr />
+</div>
+
+<!-- ============================================================
+     §七 网络舆情与市场情绪
+     ============================================================ -->
+<div class="section" id="sentiment">
+<h2>§七 网络舆情与市场情绪</h2>
+<h3>看多派声音</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>平台</th>
+<th>核心观点</th>
+<th>来源</th>
+<th>日期</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>雪球</td>
+<td>2026Q1业绩超预期，营收同比+52.45%，战略乐观但战术需冷静</td>
+<td>xueqiu.com/5241127869/384210277</td>
+<td>2026-04-16</td>
+</tr>
+<tr>
+<td>2</td>
+<td>雪球</td>
+<td>全球市占率39.2%连续9年第一，价值投资角度看护城河极深</td>
+<td>xueqiu.com/9956016446/387237761</td>
+<td>2026-05-05</td>
+</tr>
+<tr>
+<td>3</td>
+<td>大摩研报</td>
+<td>升H股至"增持"首选股，2026-28年盈利CAGR从25%上调至30%，H股目标价815港元</td>
+<td>h5.ifeng.com (大摩研报)</td>
+<td>2026-05</td>
+</tr>
+<tr>
+<td>4</td>
+<td>里昂</td>
+<td>维持"跑赢大市"，A股目标价570元，H股目标价820港元</td>
+<td>finance.sina.com.cn (里昂研报)</td>
+<td>2026-05-06</td>
+</tr>
+<tr>
+<td>5</td>
+<td>东吴证券</td>
+<td>"龙头份额再提升，业绩持续超预期"，看好26年高增长</td>
+<td>caifuhao.eastmoney.com</td>
+<td>2026-04-17</td>
+</tr>
+<tr>
+<td>6</td>
+<td>广发/中信/华泰</td>
+<td>买入评级，2026年目标价区间401.65-618元</td>
+<td>chuneng.ofweek.com</td>
+<td>2026-03</td>
+</tr>
+<tr>
+<td>7</td>
+<td>东方财富</td>
+<td>"外资把宁德时代当成穿越周期的科技股炒，贝莱德增持价667港元"</td>
+<td>guba.eastmoney.com</td>
+<td>2026-05</td>
+</tr>
+</tbody>
+</table>
+<h3>看空派声音</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>平台</th>
+<th>核心观点</th>
+<th>来源</th>
+<th>日期</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>雪球</td>
+<td>高增长背后隐忧：存货暴增+产能过剩+竞争加剧，需注意</td>
+<td>xueqiu.com/7001875864/385827948</td>
+<td>2026-04</td>
+</tr>
+<tr>
+<td>2</td>
+<td>雪球</td>
+<td>2025年技术护城河是优势，但需警惕产能扩张带来的风险</td>
+<td>xueqiu.com/7845869777/379477697</td>
+<td>2026-03-15</td>
+</tr>
+<tr>
+<td>3</td>
+<td>东方财富</td>
+<td>"宁德时代不具备投资价值还会继续暴跌，300守不住"</td>
+<td>guba.eastmoney.com (股吧)</td>
+<td>2026</td>
+</tr>
+<tr>
+<td>4</td>
+<td>雪球</td>
+<td>比亚迪闪充对宁德的补能网络构成直接竞争威胁</td>
+<td>xueqiu.com/5926945224/385135159</td>
+<td>2026-04-22</td>
+</tr>
+<tr>
+<td>5</td>
+<td>行业分析</td>
+<td>国内产能3000GWh vs 需求1500GWh，利用率&lt;60%，行业内卷严重</td>
+<td>sohu.com/a/990863997_491253</td>
+<td>2026</td>
+</tr>
+</tbody>
+</table>
+<p><strong>舆情结构判断</strong>: 看多7条 vs 看空5条。看多方以机构研报（大摩/里昂/东吴/广发/中信/华泰）为主力，逻辑集中于业绩超预期+技术护城河；看空方以散户论坛+行业分析为主，逻辑集中于产能过剩+存货积压+竞争加剧。机构共识强烈看多，散户情绪分化。</p>
+<h3>资金流向信号</h3>
+<p><strong>陆股通（北向资金）</strong>:<br />
+- 最新持仓比例17.27%（20260331），季度环比+1.56pp，近4季+3.49pp，外资持续加仓 [capital_flow.md §4]<br />
+- 加权平均建仓成本394.73元，当前股价427.00元，外资浮盈+8.17%——浮盈温和，减仓压力不大 [capital_flow.md §9]<br />
+- 香港中央结算（陆股通通道）持股从69,254万股增至76,132万股（+6,877万股），为最大边际增量 [Tushare:top10_holders]</p>
+<p><strong>两融杠杆</strong>:<br />
+- 最新融资余额2,141,380万元，相对近60日中位数-0.85%，两融余额平稳 [capital_flow.md §5]</p>
+<p><strong>主力资金流</strong>:<br />
+- 近20日主力净流入天数9/20（45.0%），净流入累计-26,336万元，主力资金近20日拉锯 [capital_flow.md §6]</p>
+<p><strong>大宗交易</strong>:<br />
+- 近60日29笔，累计成交246,674万元，平均折溢价-2.02%（接近现价），无异常 [capital_flow.md §8]</p>
+<p><strong>筹码集中度</strong>:<br />
+- 20260331股东户数204,504，环比-20.58%，户均持股13,774股，环比+25.91% [capital_flow.md §3]<br />
+- 判定：🟢 筹码集中（主力吸筹）——户数大幅减少+户均大幅上升，经典机构吸筹信号 [capital_flow.md §3]</p>
+<p><strong>资金流向综合信号</strong>: 外资持续加仓（🟢）+ 筹码集中/机构吸筹（🟢）+ 主力资金拉锯（⚪）+ 两融平稳（⚪），整体偏多。</p>
+<hr />
+</div>
+
+<!-- ============================================================
+     §八 可比公司对标
+     ============================================================ -->
+<div class="section" id="peers">
+<h2>§八 可比公司对标（v4.4 — Read `peer_analysis.md`）</h2>
+<h3>§8.1 A 股同行业对标（自动采集）</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">ts_code</th>
+<th style="text-align: center;">公司</th>
+<th style="text-align: center;">细分行业</th>
+<th style="text-align: center;">市值(亿)</th>
+<th style="text-align: center;">PE TTM</th>
+<th style="text-align: center;">PB</th>
+<th style="text-align: center;">PS TTM</th>
+<th style="text-align: center;">ROE(%)</th>
+<th style="text-align: center;">毛利率(%)</th>
+<th style="text-align: center;">净利率(%)</th>
+<th style="text-align: center;">资产负债率(%)</th>
+<th style="text-align: center;">营收 YoY(%)</th>
+<th style="text-align: center;">股息率(%)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>300750.SZ</strong> ⭐</td>
+<td style="text-align: center;"><strong>宁德时代</strong></td>
+<td style="text-align: center;">电气设备</td>
+<td style="text-align: center;">19,597.82</td>
+<td style="text-align: center;">24.81</td>
+<td style="text-align: center;">5.44</td>
+<td style="text-align: center;">4.19</td>
+<td style="text-align: center;">5.18</td>
+<td style="text-align: center;">26.42</td>
+<td style="text-align: center;">14.03</td>
+<td style="text-align: center;">68.48</td>
+<td style="text-align: center;">52.45</td>
+<td style="text-align: center;">1.59</td>
+</tr>
+<tr>
+<td style="text-align: center;">300014.SZ</td>
+<td style="text-align: center;">亿纬锂能</td>
+<td style="text-align: center;">电气设备</td>
+<td style="text-align: center;">1,429.59</td>
+<td style="text-align: center;">31.91</td>
+<td style="text-align: center;">2.98</td>
+<td style="text-align: center;">2.06</td>
+<td style="text-align: center;">3.02</td>
+<td style="text-align: center;">17.64</td>
+<td style="text-align: center;">11.33</td>
+<td style="text-align: center;">59.40</td>
+<td style="text-align: center;">0.00</td>
+<td style="text-align: center;">1.06</td>
+</tr>
+<tr>
+<td style="text-align: center;">301217.SZ</td>
+<td style="text-align: center;">铜冠铜箔</td>
+<td style="text-align: center;">元器件</td>
+<td style="text-align: center;">689.74</td>
+<td style="text-align: center;">419.95</td>
+<td style="text-align: center;">12.54</td>
+<td style="text-align: center;">9.67</td>
+<td style="text-align: center;">-0.50</td>
+<td style="text-align: center;">-0.45</td>
+<td style="text-align: center;">-3.10</td>
+<td style="text-align: center;">22.20</td>
+<td style="text-align: center;">32.04</td>
+<td style="text-align: center;">0.02</td>
+</tr>
+<tr>
+<td style="text-align: center;">002074.SZ</td>
+<td style="text-align: center;">国轩高科</td>
+<td style="text-align: center;">电气设备</td>
+<td style="text-align: center;">655.48</td>
+<td style="text-align: center;">28.45</td>
+<td style="text-align: center;">2.27</td>
+<td style="text-align: center;">1.37</td>
+<td style="text-align: center;">0.28</td>
+<td style="text-align: center;">17.86</td>
+<td style="text-align: center;">0.48</td>
+<td style="text-align: center;">73.67</td>
+<td style="text-align: center;">29.30</td>
+<td style="text-align: center;">0.27</td>
+</tr>
+<tr>
+<td style="text-align: center;">301511.SZ</td>
+<td style="text-align: center;">德福科技</td>
+<td style="text-align: center;">电气设备</td>
+<td style="text-align: center;">578.07</td>
+<td style="text-align: center;">239.32</td>
+<td style="text-align: center;">13.90</td>
+<td style="text-align: center;">4.05</td>
+<td style="text-align: center;">-2.25</td>
+<td style="text-align: center;">-3.10</td>
+<td style="text-align: center;">-11.40</td>
+<td style="text-align: center;">66.83</td>
+<td style="text-align: center;">0.00</td>
+<td style="text-align: center;">–</td>
+</tr>
+<tr>
+<td style="text-align: center;">002850.SZ</td>
+<td style="text-align: center;">科达利</td>
+<td style="text-align: center;">电气设备</td>
+<td style="text-align: center;">536.39</td>
+<td style="text-align: center;">29.19</td>
+<td style="text-align: center;">3.92</td>
+<td style="text-align: center;">3.28</td>
+<td style="text-align: center;">2.90</td>
+<td style="text-align: center;">22.18</td>
+<td style="text-align: center;">12.30</td>
+<td style="text-align: center;">36.78</td>
+<td style="text-align: center;">37.09</td>
+<td style="text-align: center;">1.02</td>
+</tr>
+</tbody>
+</table>
+<p><em>数据来源: peer_analysis.md §1，行业分类: 锂电池，Peer选取规则: 同行业+市值最接近的5家+目标公司，行情截至20260515</em></p>
+<h3>§8.2 目标公司在 peer 中的分位</h3>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th style="text-align: center;">目标值</th>
+<th style="text-align: center;">Peer 中位数</th>
+<th style="text-align: center;">分位 (high=好)</th>
+<th>解读</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ROE(%)</td>
+<td style="text-align: center;">5.18</td>
+<td style="text-align: center;">0.28</td>
+<td style="text-align: center;"><strong>100%</strong> 🟢 领先</td>
+<td>ROE越高盈利能力越强</td>
+</tr>
+<tr>
+<td>毛利率(%)</td>
+<td style="text-align: center;">26.42</td>
+<td style="text-align: center;">17.64</td>
+<td style="text-align: center;"><strong>100%</strong> 🟢 领先</td>
+<td>毛利率越高议价能力越强</td>
+</tr>
+<tr>
+<td>净利率(%)</td>
+<td style="text-align: center;">14.03</td>
+<td style="text-align: center;">0.48</td>
+<td style="text-align: center;"><strong>100%</strong> 🟢 领先</td>
+<td>净利率越高经营效率越高</td>
+</tr>
+<tr>
+<td>资产负债率(%)</td>
+<td style="text-align: center;">68.48</td>
+<td style="text-align: center;">59.40</td>
+<td style="text-align: center;"><strong>20%</strong> ⚠️ 偏高</td>
+<td>负债率低则财务稳健</td>
+</tr>
+<tr>
+<td>PE TTM</td>
+<td style="text-align: center;">24.81</td>
+<td style="text-align: center;">31.91</td>
+<td style="text-align: center;"><strong>100%</strong> 🟢 最便宜</td>
+<td>PE低估值便宜</td>
+</tr>
+<tr>
+<td>PB</td>
+<td style="text-align: center;">5.44</td>
+<td style="text-align: center;">3.92</td>
+<td style="text-align: center;"><strong>40%</strong> 🟡 中位</td>
+<td>PB低估值便宜</td>
+</tr>
+<tr>
+<td>营收 YoY(%)</td>
+<td style="text-align: center;">52.45</td>
+<td style="text-align: center;">29.30</td>
+<td style="text-align: center;"><strong>100%</strong> 🟢 领先</td>
+<td>营收高增长支撑估值</td>
+</tr>
+</tbody>
+</table>
+<p><em>数据来源: peer_analysis.md §2</em></p>
+<h3>§8.3 硬判定对比洞察</h3>
+<ul>
+<li>✅ <strong>营收增速显著超peer</strong>（+52.4% vs +29.3%），领先行业 [peer_analysis.md §3]</li>
+<li>✅ <strong>PE最低但盈利最强</strong>：PE 24.81x为5家peer中最低，同时ROE/毛利率/净利率全部peer第一——典型的"低估值高质量"组合</li>
+<li>⚠️ <strong>资产负债率偏高</strong>：68.48%高于peer中位数59.40%，仅优于国轩高科73.67%</li>
+<li>🟡 <strong>PB处于中位</strong>：5.44x虽高于peer中位数3.92x，但考虑ROE溢价合理</li>
+</ul>
+<h3>§8.4 行业全员估值分布（锂电池31家）</h3>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th style="text-align: center;">行业最便宜</th>
+<th style="text-align: center;">25分位</th>
+<th style="text-align: center;">中位数</th>
+<th style="text-align: center;">75分位</th>
+<th style="text-align: center;">行业最贵</th>
+<th style="text-align: center;">目标值</th>
+<th style="text-align: center;">目标分位</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PE_TTM</td>
+<td style="text-align: center;">16.63</td>
+<td style="text-align: center;">31.91</td>
+<td style="text-align: center;">43.59</td>
+<td style="text-align: center;">72.99</td>
+<td style="text-align: center;">133.09</td>
+<td style="text-align: center;"><strong>24.81</strong></td>
+<td style="text-align: center;"><strong>9.1%</strong></td>
+</tr>
+<tr>
+<td>PB</td>
+<td style="text-align: center;">1.53</td>
+<td style="text-align: center;">2.27</td>
+<td style="text-align: center;">3.08</td>
+<td style="text-align: center;">4.66</td>
+<td style="text-align: center;">13.9</td>
+<td style="text-align: center;"><strong>5.44</strong></td>
+<td style="text-align: center;"><strong>80.6%</strong></td>
+</tr>
+<tr>
+<td>PS_TTM</td>
+<td style="text-align: center;">0.45</td>
+<td style="text-align: center;">1.92</td>
+<td style="text-align: center;">2.66</td>
+<td style="text-align: center;">4.3</td>
+<td style="text-align: center;">9.67</td>
+<td style="text-align: center;"><strong>4.19</strong></td>
+<td style="text-align: center;"><strong>71.0%</strong></td>
+</tr>
+</tbody>
+</table>
+<p><em>数据来源: peer_analysis.md §4</em></p>
+<p><strong>信号判定</strong>（行业全员分位）:<br />
+- ✅ PE_TTM在行业最便宜20%（分位9%）——盈利增速远超行业，PE折价显著<br />
+- 🔴 PB在行业最贵20%（分位81%）——市场对高ROE给予PB溢价，但已较充分<br />
+- ⚠️ PS_TTM高于行业60%（分位71%）——反映龙头溢价</p>
+<h3>§8.5 海外同业补充</h3>
+<table>
+<thead>
+<tr>
+<th>公司</th>
+<th>市场</th>
+<th style="text-align: center;">全球市占率</th>
+<th>核心客户</th>
+<th>估值参考</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LG新能源 (373220.KS)</td>
+<td>韩国</td>
+<td style="text-align: center;">~14%</td>
+<td>特斯拉/通用</td>
+<td>PE ~40x（2025年亏损后2026年转盈预期）</td>
+</tr>
+<tr>
+<td>三星SDI (006400.KS)</td>
+<td>韩国</td>
+<td style="text-align: center;">~6%</td>
+<td>BMW/Stellantis</td>
+<td>PE ~25x</td>
+</tr>
+<tr>
+<td>SK On (未独立上市)</td>
+<td>韩国</td>
+<td style="text-align: center;">~5%</td>
+<td>福特/现代</td>
+<td>未上市，母公司SK Innovation PE ~15x</td>
+</tr>
+<tr>
+<td>松下 (6752.T)</td>
+<td>日本</td>
+<td style="text-align: center;">~5%</td>
+<td>特斯拉</td>
+<td>PE ~15x（多元化集团，电池仅为分部）</td>
+</tr>
+</tbody>
+</table>
+<p><em>注：海外peer估值为概略参考，宁德PE 25x与三星SDI相当，低于LG新能源，反映A股龙头并未相对国际同业高估。</em></p>
+<h3>§8.6 估值交叉验证结论</h3>
+<ul>
+<li>A股peer PE中位数31.91x → 对应peer-PE估值 = 722亿(2025归母净利) × 31.91 / 46.26亿股 ≈ <strong>498元/股</strong></li>
+<li>国际对标：三星SDI PE ~25x → 对应国际估值 ≈ 722亿 × 25 / 46.26亿股 ≈ <strong>390元/股</strong></li>
+<li>当前股价427元处于国际对标（390元）与A股peer对标（498元）之间，估值定位合理</li>
+</ul>
+</div>
+
+<!-- ============================================================
+     §九 估值与回报模拟
+     ============================================================ -->
+<div class="section" id="valuation">
+<h2>§九 估值与回报模拟</h2>
+<h3>9.1 估值方法选择</h3>
+<p>宁德时代（300750.SZ）为全球动力电池龙头上市公司，2025年归母净利722亿元，盈利稳定且增速强劲，适用<strong>完整 DCF（Damodaran 7步法）</strong>作为核心估值工具，辅以可比倍数交叉验证。</p>
+<p>不触发 SOTP 强制条件——无核心子公司占合并净利&gt;30%被剥离风险，无首亏预告，audit_report.md 无 🔴 致命级红旗。 [audit_report.md §2: 0个🔴]</p>
+<h3>9.2 DCF 估值（4 情景 + 概率加权）</h3>
+<h4>关键假设</h4>
+<p><strong>基期数据（FY2025）</strong>：<br />
+- 自由现金流（FCF）= 经营现金流 1,332.20 亿 − 资本支出 423.45 亿 = <strong>908.75 亿元</strong> [Tushare:cashflow] [metrics.json]<br />
+- 总股本：<strong>46.26 亿股</strong> [metrics.json: total_share]<br />
+- 最新收盘价：<strong>427.00 元</strong>（2026-05-14） [Tushare:daily]</p>
+<p><strong>WACC 推导</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th style="text-align: center;">数值</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>无风险利率 Rf</td>
+<td style="text-align: center;">2.2%</td>
+<td>中国10年期国债收益率</td>
+</tr>
+<tr>
+<td>股权风险溢价 ERP</td>
+<td style="text-align: center;">5.5%</td>
+<td>Damodaran 中国市场</td>
+</tr>
+<tr>
+<td>Beta</td>
+<td style="text-align: center;">1.15</td>
+<td>创业板龙头，高于市场均值</td>
+</tr>
+<tr>
+<td>股权成本 Ke = Rf + β×ERP</td>
+<td style="text-align: center;"><strong>8.53%</strong></td>
+<td>2.2% + 1.15×5.5%</td>
+</tr>
+<tr>
+<td>税后债务成本 Kd</td>
+<td style="text-align: center;">3.0%</td>
+<td>财务费用为负（利息收入&gt;支出），保守取3%</td>
+</tr>
+<tr>
+<td>有息负债</td>
+<td style="text-align: center;">1,265 亿</td>
+<td>[Tushare:fina_indicator]</td>
+</tr>
+<tr>
+<td>市值</td>
+<td style="text-align: center;">19,755 亿</td>
+<td>[metrics.json]</td>
+</tr>
+<tr>
+<td>D/(D+E)</td>
+<td style="text-align: center;">6.0%</td>
+<td>1265/(1265+19755)</td>
+</tr>
+<tr>
+<td><strong>WACC</strong></td>
+<td style="text-align: center;"><strong>8.2%</strong></td>
+<td>8.53%×94% + 3.0%×6%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>永续增长率 g 验证</strong>：所有情景 g ≤ 3.0% &lt; WACC 8.2% ✅（数学有效）</p>
+<p><strong>FCF 增速假设依据</strong>：<br />
+- 历史锚点：3年营收CAGR 8.8%，3年净利润CAGR 32.9%，2025年OCF同比+37.4% [metrics.json] [Tushare:cashflow]<br />
+- 2026Q1 营收+52.45%、净利+48.52% 加速趋势确立 [Tushare:income]<br />
+- 行业锚点：全球动力电池使用量+31.7%，储能+79%，但国内产能过剩（3000GWh vs 1500GWh需求） [PDF:annual_2025,MD&amp;A]<br />
+- 偏差说明：中性情景FCF增速15%显著低于2025-2026实际增速（30-50%），因为假设产能过剩+单位售价下降+Capex高位将压缩未来FCF增幅，更贴近长期可持续水平</p>
+<h4>情景 1：乐观（概率 20%）</h4>
+<p><strong>叙事</strong>：储能爆发+海外建厂落地+凝聚态电池商用化，FCF年增20%持续5年，后渐降。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">年份</th>
+<th style="text-align: right;">FCF(亿)</th>
+<th style="text-align: center;">增速</th>
+<th style="text-align: center;">折现因子(8.2%)</th>
+<th style="text-align: right;">PV(亿)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Y1(2026)</td>
+<td style="text-align: right;">1,091</td>
+<td style="text-align: center;">20%</td>
+<td style="text-align: center;">0.924</td>
+<td style="text-align: right;">1,008</td>
+</tr>
+<tr>
+<td style="text-align: center;">Y2(2027)</td>
+<td style="text-align: right;">1,309</td>
+<td style="text-align: center;">20%</td>
+<td style="text-align: center;">0.854</td>
+<td style="text-align: right;">1,118</td>
+</tr>
+<tr>
+<td style="text-align: center;">Y3(2028)</td>
+<td style="text-align: right;">1,571</td>
+<td style="text-align: center;">20%</td>
+<td style="text-align: center;">0.789</td>
+<td style="text-align: right;">1,240</td>
+</tr>
+<tr>
+<td style="text-align: center;">Y4(2029)</td>
+<td style="text-align: right;">1,806</td>
+<td style="text-align: center;">15%</td>
+<td style="text-align: center;">0.730</td>
+<td style="text-align: right;">1,318</td>
+</tr>
+<tr>
+<td style="text-align: center;">Y5(2030)</td>
+<td style="text-align: right;">1,987</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">0.674</td>
+<td style="text-align: right;">1,340</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>PV(FCF合计)</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: right;"><strong>6,024</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">终值 = 1987×1.03/(8.2%−3.0%)</td>
+<td style="text-align: right;"><strong>39,383</strong></td>
+<td style="text-align: center;">g=3.0%</td>
+<td style="text-align: center;">0.674</td>
+<td style="text-align: right;"><strong>26,554</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>企业价值 EV</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: right;"><strong>32,578</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">+ 净现金（现金3,335 − 有息负债1,265）</td>
+<td style="text-align: right;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: right;">+2,070</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>股权价值</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: right;"><strong>34,648</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>每股价值</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: right;"><strong>749 元</strong></td>
+</tr>
+</tbody>
+</table>
+<h4>情景 2：中性/基准（概率 45%）</h4>
+<p><strong>叙事</strong>：动力电池份额稳固+储能稳增+海外扩产按计划推进，FCF年增15%持续5年后渐降。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">年份</th>
+<th style="text-align: right;">FCF(亿)</th>
+<th style="text-align: center;">增速</th>
+<th style="text-align: center;">折现因子</th>
+<th style="text-align: right;">PV(亿)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Y1</td>
+<td style="text-align: right;">1,045</td>
+<td style="text-align: center;">15%</td>
+<td style="text-align: center;">0.924</td>
+<td style="text-align: right;">966</td>
+</tr>
+<tr>
+<td style="text-align: center;">Y2</td>
+<td style="text-align: right;">1,202</td>
+<td style="text-align: center;">15%</td>
+<td style="text-align: center;">0.854</td>
+<td style="text-align: right;">1,027</td>
+</tr>
+<tr>
+<td style="text-align: center;">Y3</td>
+<td style="text-align: right;">1,382</td>
+<td style="text-align: center;">15%</td>
+<td style="text-align: center;">0.789</td>
+<td style="text-align: right;">1,091</td>
+</tr>
+<tr>
+<td style="text-align: center;">Y4</td>
+<td style="text-align: right;">1,562</td>
+<td style="text-align: center;">13%</td>
+<td style="text-align: center;">0.730</td>
+<td style="text-align: right;">1,140</td>
+</tr>
+<tr>
+<td style="text-align: center;">Y5</td>
+<td style="text-align: right;">1,718</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">0.674</td>
+<td style="text-align: right;">1,159</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>PV(FCF合计)</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: right;"><strong>5,383</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">终值 = 1718×1.03/(8.2%−3.0%)</td>
+<td style="text-align: right;"><strong>34,051</strong></td>
+<td style="text-align: center;">g=3.0%</td>
+<td style="text-align: center;">0.674</td>
+<td style="text-align: right;"><strong>22,961</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>EV</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: right;"><strong>28,344</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">+ 净现金</td>
+<td style="text-align: right;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: right;">+2,070</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>股权价值</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: right;"><strong>30,414</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>每股价值</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: right;"><strong>658 元</strong></td>
+</tr>
+</tbody>
+</table>
+<h4>情景 3：悲观（概率 25%）</h4>
+<p><strong>叙事</strong>：产能过剩加剧+价格战恶化+海外建厂延迟，FCF仅增8%。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">年份</th>
+<th style="text-align: right;">FCF(亿)</th>
+<th style="text-align: center;">增速</th>
+<th style="text-align: center;">折现因子</th>
+<th style="text-align: right;">PV(亿)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Y1</td>
+<td style="text-align: right;">982</td>
+<td style="text-align: center;">8%</td>
+<td style="text-align: center;">0.924</td>
+<td style="text-align: right;">907</td>
+</tr>
+<tr>
+<td style="text-align: center;">Y2</td>
+<td style="text-align: right;">1,060</td>
+<td style="text-align: center;">8%</td>
+<td style="text-align: center;">0.854</td>
+<td style="text-align: right;">905</td>
+</tr>
+<tr>
+<td style="text-align: center;">Y3</td>
+<td style="text-align: right;">1,145</td>
+<td style="text-align: center;">8%</td>
+<td style="text-align: center;">0.789</td>
+<td style="text-align: right;">903</td>
+</tr>
+<tr>
+<td style="text-align: center;">Y4</td>
+<td style="text-align: right;">1,225</td>
+<td style="text-align: center;">7%</td>
+<td style="text-align: center;">0.730</td>
+<td style="text-align: right;">894</td>
+</tr>
+<tr>
+<td style="text-align: center;">Y5</td>
+<td style="text-align: right;">1,298</td>
+<td style="text-align: center;">6%</td>
+<td style="text-align: center;">0.674</td>
+<td style="text-align: right;">875</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>PV(FCF合计)</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: right;"><strong>4,484</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">终值 = 1298×1.025/(8.2%−2.5%)</td>
+<td style="text-align: right;"><strong>23,326</strong></td>
+<td style="text-align: center;">g=2.5%</td>
+<td style="text-align: center;">0.674</td>
+<td style="text-align: right;"><strong>15,724</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>EV</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: right;"><strong>20,208</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">+ 净现金</td>
+<td style="text-align: right;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: right;">+2,070</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>股权价值</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: right;"><strong>22,278</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>每股价值</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: right;"><strong>482 元</strong></td>
+</tr>
+</tbody>
+</table>
+<h4>情景 4：极端悲观（概率 10%）</h4>
+<p><strong>叙事</strong>：锂电行业大洗牌+技术路线被颠覆（全固态）+地缘政治阻断海外市场，FCF零增长。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">年份</th>
+<th style="text-align: right;">FCF(亿)</th>
+<th style="text-align: center;">增速</th>
+<th style="text-align: center;">折现因子</th>
+<th style="text-align: right;">PV(亿)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Y1-Y5</td>
+<td style="text-align: right;">909</td>
+<td style="text-align: center;">0%</td>
+<td style="text-align: center;">各年</td>
+<td style="text-align: right;">3,586</td>
+</tr>
+<tr>
+<td style="text-align: center;">终值 = 909×1.02/(8.2%−2.0%)</td>
+<td style="text-align: right;"><strong>14,952</strong></td>
+<td style="text-align: center;">g=2.0%</td>
+<td style="text-align: center;">0.674</td>
+<td style="text-align: right;"><strong>10,084</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>EV</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: right;"><strong>13,670</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">+ 净现金</td>
+<td style="text-align: right;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: right;">+2,070</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>股权价值</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: right;"><strong>15,740</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>每股价值</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: right;"><strong>340 元</strong></td>
+</tr>
+</tbody>
+</table>
+<h4>概率加权估值锚</h4>
+<table>
+<thead>
+<tr>
+<th>情景</th>
+<th style="text-align: right;">每股价值</th>
+<th style="text-align: center;">概率</th>
+<th style="text-align: right;">加权贡献</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🟢 乐观</td>
+<td style="text-align: right;">749 元</td>
+<td style="text-align: center;">20%</td>
+<td style="text-align: right;">149.8</td>
+</tr>
+<tr>
+<td>🟡 中性</td>
+<td style="text-align: right;">658 元</td>
+<td style="text-align: center;">45%</td>
+<td style="text-align: right;">296.1</td>
+</tr>
+<tr>
+<td>🔴 悲观</td>
+<td style="text-align: right;">482 元</td>
+<td style="text-align: center;">25%</td>
+<td style="text-align: right;">120.5</td>
+</tr>
+<tr>
+<td>⚫ 极端悲观</td>
+<td style="text-align: right;">340 元</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: right;">34.0</td>
+</tr>
+<tr>
+<td><strong>⭐ 概率加权公允价值</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: center;"><strong>100%</strong></td>
+<td style="text-align: right;"><strong>600 元</strong></td>
+</tr>
+</tbody>
+</table>
+<p>概率分布合理性：20/45/25/10，基准权重最高，极端情景不超过10%。 ✅</p>
+<p><strong>当前股价 427 元 vs 公允价值 600 元 → 低估 28.8%</strong> [Tushare:daily 20260514]</p>
+<h4>DCF 敏感性分析</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">WACC ↓ \ g →</th>
+<th style="text-align: center;">2.0%</th>
+<th style="text-align: center;">2.5%</th>
+<th style="text-align: center;">3.0%</th>
+<th style="text-align: center;">3.5%</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>7.5%</strong></td>
+<td style="text-align: center;">702</td>
+<td style="text-align: center;">756</td>
+<td style="text-align: center;">828</td>
+<td style="text-align: center;">930</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>8.2%</strong></td>
+<td style="text-align: center;">583</td>
+<td style="text-align: center;">618</td>
+<td style="text-align: center;">658</td>
+<td style="text-align: center;">710</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>9.0%</strong></td>
+<td style="text-align: center;">492</td>
+<td style="text-align: center;">516</td>
+<td style="text-align: center;">543</td>
+<td style="text-align: center;">576</td>
+</tr>
+</tbody>
+</table>
+<p><em>中性情景每股价值，单位：元。WACC ±0.8pp / g ±1pp 范围内波动 492-828 元，中枢 600 元附近。</em></p>
+<h3>9.3 交叉验证（可比倍数）</h3>
+<p><strong>v4.2 规则：DCF概率加权为唯一估值锚，可比倍数仅作交叉验证，不纳入锚计算。</strong></p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th style="text-align: right;">对应股价</th>
+<th style="text-align: center;">角色</th>
+<th>计算</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>DCF 概率加权</strong></td>
+<td style="text-align: right;"><strong>600 元</strong></td>
+<td style="text-align: center;"><strong>⭐ 估值锚</strong></td>
+<td>4情景加权</td>
+</tr>
+<tr>
+<td>A股 Peer PE（中位数31.91x）</td>
+<td style="text-align: right;">498 元</td>
+<td style="text-align: center;">交叉验证</td>
+<td>722亿×31.91/46.26亿股 [peer_analysis.md §4]</td>
+</tr>
+<tr>
+<td>国际对标 PE（三星SDI ~25x）</td>
+<td style="text-align: right;">390 元</td>
+<td style="text-align: center;">交叉验证</td>
+<td>722亿×25/46.26亿股 [phase3-part3.md §8.5]</td>
+</tr>
+<tr>
+<td>分析师共识（大摩/里昂/广发/中信）</td>
+<td style="text-align: right;">401-618 元</td>
+<td style="text-align: center;">交叉验证</td>
+<td>目标价区间 [phase3-part3.md §七]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>分歧判定</strong>：<br />
+- A股Peer PE 498 vs DCF锚 600 → 差 17.0% → ⚠️ 差10-20%，原因：Peer中位数PE 31.91x包含大量亏损/低ROE公司拖低中位数，宁德ROE 24.72%远超Peer中位数0.28%，PE溢价合理<br />
+- 国际对标 390 vs DCF锚 600 → 差 35.0% → 🔴 差&gt;20%，原因：三星SDI为多元化集团，电池仅为分部，且韩国市场估值系统性低于A股；LG新能源PE ~40x更接近宁德，但LG尚未稳定盈利不可直接对标<br />
+- 分析师共识中枢 ~500 vs DCF锚 600 → 差 16.7% → ⚠️ 差10-20%，分析师普遍打折15-20%保守给目标价，与DCF差异在合理范围</p>
+<h3>9.4 技术面位置</h3>
+<p>技术面综合判定：<strong>🟡 中性（无明确方向）</strong> [technical_analysis.md §1]</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>信号</th>
+<th>数值</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>均线排列</td>
+<td>均线纠缠 🟡</td>
+<td>MA5/20/60/120 = 435/440/402/386</td>
+<td>[technical_analysis.md §1]</td>
+</tr>
+<tr>
+<td>中长期趋势</td>
+<td>中期强势 🟢</td>
+<td>收盘427 &gt; MA60(402) &gt; MA120(386)</td>
+<td>[technical_analysis.md §1]</td>
+</tr>
+<tr>
+<td>MACD</td>
+<td>近10日金叉 🟢</td>
+<td>DIFF=7.14, DEA=10.45, 零轴上方</td>
+<td>[technical_analysis.md §1]</td>
+</tr>
+<tr>
+<td>RSI(14)</td>
+<td>中性 ⚪</td>
+<td>42.86</td>
+<td>[technical_analysis.md §1]</td>
+</tr>
+<tr>
+<td>布林带</td>
+<td>中轨之下（偏弱）</td>
+<td>上轨458/中440/下421</td>
+<td>[technical_analysis.md §1]</td>
+</tr>
+<tr>
+<td>近1年涨跌</td>
+<td>+84.03%</td>
+<td>—</td>
+<td>[technical_analysis.md §2]</td>
+</tr>
+<tr>
+<td>支撑位</td>
+<td>334 元（下方21.7%）</td>
+<td>近60日最低</td>
+<td>[technical_analysis.md §2]</td>
+</tr>
+<tr>
+<td>阻力位</td>
+<td>469 元（上方9.8%）</td>
+<td>近60日最高</td>
+<td>[technical_analysis.md §2]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>技术面与估值配合</strong>：DCF估值锚600元看涨（+40.5%） + 技术面中性 → 基本面看好但短期时点无明确方向，建议分批建仓而非一次性重仓。若突破469元阻力位则为技术面确认信号。 [technical_analysis.md §4]</p>
+<h3>9.5 估值总结</h3>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th style="text-align: right;">估值区间</th>
+<th style="text-align: center;">角色</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>DCF 概率加权</strong></td>
+<td style="text-align: right;"><strong>600 元</strong></td>
+<td style="text-align: center;"><strong>⭐ 估值锚</strong></td>
+<td>4情景 20/45/25/10 加权</td>
+</tr>
+<tr>
+<td>可比倍数（A股）</td>
+<td style="text-align: right;">498 元</td>
+<td style="text-align: center;">交叉验证</td>
+<td>Peer PE中位数31.91x</td>
+</tr>
+<tr>
+<td>可比倍数（国际）</td>
+<td style="text-align: right;">390 元</td>
+<td style="text-align: center;">交叉验证</td>
+<td>三星SDI ~25x</td>
+</tr>
+<tr>
+<td>分析师共识</td>
+<td style="text-align: right;">401-618 元</td>
+<td style="text-align: center;">交叉验证</td>
+<td>大摩/里昂/广发/中信</td>
+</tr>
+</tbody>
+</table>
+<p><strong>估值判断</strong>：当前 427 元相对 DCF 锚 600 元<strong>低估约 29%</strong>。即便取悲观情景 482 元，当前价仍有约 13% 安全边际。</p>
+<hr />
+</div>
+
+<!-- ============================================================
+     §十 投资回报测算（与 §九 共用情景）
+     ============================================================ -->
+<div class="section" id="invest-sim">
+<h2>§十 投资回报测算（与 §九 共用情景）</h2>
+<h3>10.1 投资参数</h3>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数值</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>投资金额</td>
+<td>100 万元</td>
+<td>用户指定</td>
+</tr>
+<tr>
+<td>买入价</td>
+<td>427.00 元/股</td>
+<td>最新收盘价 [Tushare:daily 20260514]</td>
+</tr>
+<tr>
+<td>可买入股数</td>
+<td>2,342 股（约23手）</td>
+<td>100万/427元</td>
+</tr>
+<tr>
+<td>投资市值</td>
+<td>99.92 万元</td>
+<td>2342×427</td>
+</tr>
+<tr>
+<td>估值锚</td>
+<td>600 元/股</td>
+<td>DCF概率加权（§九）</td>
+</tr>
+<tr>
+<td>投资期限</td>
+<td>12-24 个月</td>
+<td>基准假设</td>
+</tr>
+</tbody>
+</table>
+<h3>10.2 情景回报测算（与 §九 共用 4 情景）</h3>
+<table>
+<thead>
+<tr>
+<th>情景</th>
+<th style="text-align: center;">概率</th>
+<th style="text-align: right;">目标价</th>
+<th style="text-align: center;">预期收益率</th>
+<th style="text-align: right;">100万→</th>
+<th style="text-align: right;">持有期股息(估)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🟢 乐观</td>
+<td style="text-align: center;">20%</td>
+<td style="text-align: right;">749 元</td>
+<td style="text-align: center;">+75.4%</td>
+<td style="text-align: right;">175.4 万</td>
+<td style="text-align: right;">~1.6万</td>
+</tr>
+<tr>
+<td>🟡 中性</td>
+<td style="text-align: center;">45%</td>
+<td style="text-align: right;">658 元</td>
+<td style="text-align: center;">+54.1%</td>
+<td style="text-align: right;">154.1 万</td>
+<td style="text-align: right;">~1.6万</td>
+</tr>
+<tr>
+<td>🔴 悲观</td>
+<td style="text-align: center;">25%</td>
+<td style="text-align: right;">482 元</td>
+<td style="text-align: center;">+12.9%</td>
+<td style="text-align: right;">112.9 万</td>
+<td style="text-align: right;">~1.6万</td>
+</tr>
+<tr>
+<td>⚫ 极端悲观</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: right;">340 元</td>
+<td style="text-align: center;">-20.4%</td>
+<td style="text-align: right;">79.6 万</td>
+<td style="text-align: right;">~1.6万</td>
+</tr>
+</tbody>
+</table>
+<p><em>股息估算：2025年合计分红约67.9元/10股=6.79元/股，2342股×6.79元≈1.59万元 [Doc:annual_2025,P.41]</em></p>
+<h3>10.3 概率加权期望收益</h3>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th style="text-align: right;">数值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>概率加权目标价</td>
+<td style="text-align: right;">600 元</td>
+</tr>
+<tr>
+<td>概率加权收益率（不含股息）</td>
+<td style="text-align: right;">+40.5%</td>
+</tr>
+<tr>
+<td>加股息后总收益率</td>
+<td style="text-align: right;">+42.1%</td>
+</tr>
+<tr>
+<td>年化收益率（按18个月）</td>
+<td style="text-align: right;">+26.1%</td>
+</tr>
+<tr>
+<td>概率加权终值（100万本金）</td>
+<td style="text-align: right;">142.1 万元</td>
+</tr>
+<tr>
+<td>最大回撤风险（极端悲观）</td>
+<td style="text-align: right;">-20.4%（本金缩至79.6万）</td>
+</tr>
+</tbody>
+</table>
+<h3>10.4 风险收益评估</h3>
+<p><strong>凯利公式参考</strong>：<br />
+- 胜率（目标价&gt;买入价）= 20%+45%+25% = 90%<br />
+- 平均赢面 = (75.4%×20%+54.1%×45%+12.9%×25%)/90% = 47.4%<br />
+- 平均亏面 = 20.4%<br />
+- Kelly f* = 90%/20.4% − 10%/47.4% = 4.4 − 0.21 = 4.19 → 满仓信号（Kelly&gt;1）</p>
+<p><strong>投资建议（纯估值视角）</strong>：概率加权收益率+40.5%，极端悲观亏损-20.4%，风险收益比优异。但技术面中性、行业产能过剩、PB处于行业最贵20%等因素建议分批建仓，不宜一次性重仓。</p>
+<hr />
+</div>
+
+<!-- ============================================================
+     §十一 定性判断（3 框架，无打分）
+     ============================================================ -->
+<div class="section" id="qualitative">
+<h2>§十一 定性判断（3 框架，v4.1 — 无打分）</h2>
+<blockquote>
+<p>估值分析详见 §九。<br />
+会计/治理红旗详见审计报告（Buffett Quality + Sloan Accrual + Valuation Anomaly 三个框架已自动扫描）。审计结果：0 个 🔴 致命、0 个 🟠 高、3 个 🟡 中、4 个 🟢 低、2 个 ℹ️ 信息，合计 9 个信号 [audit_report.md §2]。<br />
+本章节聚焦不能被定量指标或审计自动替代的"深层判断"。</p>
+</blockquote>
+<h3>框架 1: 护城河判断</h3>
+<p><strong>核心问题</strong>: 宁德时代的可持续竞争优势是在<strong>加深</strong>还是<strong>侵蚀</strong>？</p>
+<p><strong>判断</strong>: <strong>加深（部分是）</strong> — 核心护城河在加深，但面临比亚迪垂直整合的结构性挑战。</p>
+<p><strong>证据链</strong>（6条）:<br />
+1. <strong>规模壁垒持续扩大</strong>：2025年产量748 GWh同比+45%，全球市占率39.2%连续9年第一，规模效应推动材料成本占比从76.48%降至71.79%（↓4.68pp） [Doc:annual_2025,P.27] [PDF:annual_2025]<br />
+2. <strong>技术迭代速度无人匹敌</strong>：2026超级科技日一次发布6大新品（凝聚态350Wh/kg完成航空器首飞，全球首家），研发费用221亿/年行业绝对第一 [Web:xueqiu.com] [Doc:annual_2025,P.29]<br />
+3. <strong>客户网络锁定加深</strong>：本田技研直接投资持股0.91%、富泰华（鸿海/富士康）2871万股新进前十大，从供应商升级为战略合作伙伴关系 [Tushare:top10_holders]<br />
+4. <strong>专利壁垒形成攻击性护城河</strong>：主动起诉海辰储能多起专利侵权，从被动防守转为主动出击 [Web:sina.com.cn]<br />
+5. <strong>反例——比亚迪垂直整合构成结构性挑战</strong>：比亚迪国内市占~27%，电池→整车闭环模式不依赖外部电池厂，2026年目标2万座闪充站直接竞争补能网络 [Web:qq.com] [phase3-part3.md §8.3]<br />
+6. <strong>反例——产能过剩侵蚀全行业定价权</strong>：国内产能3000GWh vs 需求1500GWh，利用率&lt;60%，单位售价持续下降（营收+17%但产量+45%） [Web:sohu.com] [Doc:annual_2025,P.27]</p>
+<p><strong>S曲线定位</strong>：成长期中后段。动力电池PE 25x + 营收增速17-52% + ROE 24.7% → 典型PE 20-35x估值区间，符合成长期中段特征。储能业务（+79%增速）尚处早期S曲线。</p>
+<p><strong>护城河类型</strong>：<br />
+| 类型 | 状态 | 趋势 |<br />
+|------|------|------|<br />
+| 规模经济 | ✅ 极强（748GWh全球第一） | 加深 |<br />
+| 技术迭代 | ✅ 极强（6大新品+221亿研发） | 加深 |<br />
+| 客户转换成本 | ✅ 强（车企导入2-3年） | 稳定 |<br />
+| 专利壁垒 | ✅ 中强（主动诉讼） | 加深 |<br />
+| 品牌认知 | ✅ 中强（A+H双上市） | 加深 |</p>
+<p><strong>逻辑蕴含</strong>:<br />
+- 若判断成立（护城河加深）→ 利好长期超额ROE假设的可持续性，利好DCF终值倍数，利好抗周期能力<br />
+- 若判断推翻（如全固态电池被丰田/三星率先量产并形成技术颠覆）→ 利空终值倍数，需大幅下调远期FCF假设</p>
+<p><strong>对综合投资观点的支撑方向</strong>: <strong>看多</strong></p>
+<p><strong>未解决问题</strong>: 全固态电池量产时间表（预计2028-2030年）——若竞品提前突破，护城河判断需重新评估</p>
+<hr />
+<h3>框架 2: 管理层判断</h3>
+<p><strong>核心问题</strong>: 宁德时代管理层的<strong>德</strong>（诚信/股东为伴）和<strong>才</strong>（战略/执行/资本配置）是否都合格？</p>
+<p><strong>判断</strong>: <strong>是</strong> — 德与才均过关，但联合创始人黄世霖减持构成轻微信号。</p>
+<p><strong>证据链</strong>（5条）:<br />
+1. <strong>"德"——实控人高度绑定</strong>：曾毓群通过厦门瑞庭稳定持有22.45%无变动，2025年度分红近300亿（每10股合计67.9元）+回购43.86亿元，股东回报大幅提升 [Tushare:top10_holders] [Doc:annual_2025,P.41]<br />
+2. <strong>"德"——审计干净</strong>：标准无保留审计意见，Beneish M-Score = -2.609（≤-1.78，盈余操纵概率低），无年报差错/诉讼/合规瑕疵 [audit_report.md: Beneish, 🟢] [Doc:annual_2025]<br />
+3. <strong>"才"——资本配置优秀</strong>：H股IPO募资~392亿港元用于海外扩产（匈牙利、印尼），ROE连续三年&gt;22%证明再投资创造价值；分红+回购≈344亿，资本回报节奏克制 [Doc:annual_2025,P.41] [Tushare:fina_indicator]<br />
+4. <strong>"才"——战略定力</strong>：2018年上市至今始终聚焦电池主业，从动力延伸至储能→材料→补能网络，战略方向一致性极强；曾毓群为中科院物理所博士后，创始人-行业匹配度满分 [phase1-data §1]<br />
+5. <strong>轻微负面信号——黄世霖减持</strong>：联合创始人2025年年报期减持4,563万股（从46,602降至42,039万股），占其持股约10% [Tushare:top10_holders]。审计报告标记"前十大股东净减持2,399万股" [audit_report.md: Governance, 🟡 中]。但减持规模为其持股的~10%，上市8年后联合创始人适度减持属行业常态，且实控人曾毓群零减持形成对比。李平质押记录88条，但绝对规模极小（单笔百股级别），远低于50%致命阈值 [Tushare:pledge_detail]。</p>
+<p><strong>逻辑蕴含</strong>:<br />
+- 若判断成立（德才兼备）→ 利好管理溢价，支撑PE/PB高于行业中位数<br />
+- 若判断推翻（如实控人大幅减持或出现关联方利益输送）→ 需要治理折价，PE应压缩至行业中位数以下</p>
+<p><strong>对综合投资观点的支撑方向</strong>: <strong>看多</strong></p>
+<p><strong>未解决问题</strong>: 黄世霖后续减持计划——若继续大幅减持（累计超50%持股），需重新评估内部人信心</p>
+<hr />
+<h3>框架 3: 催化剂判断</h3>
+<p><strong>核心问题</strong>: 下一个12个月是否有可能<strong>改变投资结论方向</strong>的具体、可观察事件？</p>
+<p><strong>判断</strong>: <strong>是</strong> — 正向催化剂密集，但需关注产能过剩加剧的证伪风险。</p>
+<p><strong>证据链</strong>（6条）:</p>
+<p><strong>内部催化剂（正向）</strong>:<br />
+1. <strong>2026Q1业绩超预期已兑现</strong>：营收+52.45%、净利+48.52%，增速加速趋势确立，2026H1/Q3业绩有望延续高增 [Tushare:income]<br />
+2. <strong>6大新品商用化落地窗口</strong>：凝聚态电池航空器商用、第三代神行15C超充规模化、钠离子电池2026年底量产——任一兑现均为重大正向催化 [Web:xueqiu.com]<br />
+3. <strong>超换一体补能网络规模化</strong>：目标2026年4,000座、2028年超10万座，从制造商→能源服务商的商业模式升级 [Web:xueqiu.com]</p>
+<p><strong>外部催化剂</strong>:<br />
+4. <strong>机构持续加仓</strong>：陆股通持仓17.27%（季度+1.56pp），户数-20.58%（机构吸筹信号），大摩升"增持首选股"——机构共识看多的正向循环 [capital_flow.md §4] [Tushare:stk_holdernumber] [Web:ifeng.com]<br />
+5. <strong>出口退税取消倒逼海外建厂加速</strong>：2026年4月退税从9%降至6%，2027年1月完全取消——短期利空但长期利好（海外产能布局加速，绕开关税壁垒） [Web:ditan.com]</p>
+<p><strong>证伪催化剂（风险）</strong>:<br />
+6. <strong>产能过剩持续恶化</strong>：若2026H2国内电池装车率持续低于35%（当前32%为历史低位），叠加二线厂商不退出，行业价格战可能进一步侵蚀毛利率，悲观情景概率上升 [Web:sina.com.cn]</p>
+<p><strong>逻辑蕴含</strong>:<br />
+- 近期（≤6个月）有≥3个正向催化剂（Q2业绩+新品落地+机构加仓）+ 基本面支持 → 利好短期上行窗口<br />
+- 若装车率持续恶化+存货继续超营收增速积压（当前存货增速58% vs 营收17%，[audit: Buffett Quality, 🟡 中]）→ 利空增长假设的激进空间</p>
+<p><strong>对综合投资观点的支撑方向</strong>: <strong>看多</strong></p>
+<p><strong>未解决问题</strong>: 2026H2装车率数据——若装车率回升至40%+，确认需求复苏；若持续&lt;35%，悲观情景概率应上调</p>
+<hr />
+<h3>综合判断</h3>
+<p><strong>框架方向分布</strong>（共 3 个框架）:<br />
+- 看多方向: 框架 1（护城河加深）、框架 2（管理层德才兼备）、框架 3（催化剂密集）（共 3 个）<br />
+  - 框架 1：四重复合护城河（规模+技术+客户+专利）持续加深，S曲线处于成长中后段<br />
+  - 框架 2：实控人22.45%稳定持股+近300亿分红+43.86亿回购，德才兼备<br />
+  - 框架 3：Q1超预期+6大新品+机构加仓，正向催化剂密集<br />
+- 看空方向: 无（共 0 个）<br />
+- 中性/数据不足: 无（共 0 个）</p>
+<p><strong>致命看空条款检查</strong>（直接引用 §三快筛）:<br />
+- §三 快筛结果: ✅ PASS（6项全部通过）<br />
+- 管理层"德"不过关？ ✅ 过关（标准无保留审计+M-Score安全+实控人零减持）<br />
+- Audit ≥2 个 🔴 致命级红旗？ ✅ 否（0个🔴）<br />
+- 若触发任一项 → 不适用</p>
+<p><strong>综合结论</strong>: <strong>看多方向</strong><br />
+（根据 v4.1 黑白分割规则：3 框架中 3 个判定为"看多方向"且无"致命看空" → 看多方向）</p>
+<p><strong>关键分歧点</strong>:<br />
+- 市场看空方的核心逻辑是"产能过剩+存货积压+PB偏贵"（[audit: Buffett Quality, 🟡 中] 存货增速58% vs 营收增速17%；[audit: Valuation, 🟡 中] PB 5.49处于行业最贵20%）<br />
+- 本分析认为产能过剩是行业现象而非公司特有风险——宁德以39.2%市占率+成本优势在洗牌中受益（CR2从~60%提升至~66%），存货积压为备货海外扩产的主动选择而非被动积压<br />
+- 分歧焦点：产能过剩是否导致宁德毛利率从26%显著下滑至20%以下？</p>
+<p><strong>验证催化剂</strong>（由框架 3 识别）:<br />
+1. 2026H1/Q3财报 — 时间窗 2026年7-10月：验证增速持续性<br />
+2. 国内电池装车率月度数据 — 持续跟踪：若回升至40%+确认需求复苏<br />
+3. 凝聚态电池/钠电量产公告 — 时间窗 2026年H2：验证技术落地<br />
+4. 匈牙利/印尼工厂投产进度 — 时间窗 2026-2027年：验证海外扩张</p>
+</div>
+
+<!-- ============================================================
+     §十二 信息缺口与尽调优先级
+     ============================================================ -->
+<div class="section" id="gaps">
+<h2>§十二 信息缺口与尽调优先级</h2>
+<h3>已知缺口</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>缺口项</th>
+<th>影响的结论</th>
+<th>已尝试的查询（具体接口/关键词/页码）</th>
+<th>当前状态</th>
+<th>可得性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>海外业务分区域收入及利润率明细</td>
+<td>§四 分部分析（海外 vs 国内盈利差异）、§六 维度 2 商业模式评分、§九 DCF 海外增速假设</td>
+<td>API:fina_mainbz — 仅有行业/产品维度无地区维度；年报 P.14-42 MD&amp;A 未按地区拆分利润率；WebSearch "宁德时代 海外收入 利润率 2025" — 仅有第三方估算</td>
+<td>❌ 未找到</td>
+<td>中（年报仅披露海外收入占比约30%，不披露分区利润率；半年报/季报更无此数据）</td>
+</tr>
+<tr>
+<td>2</td>
+<td>储能业务独立毛利率及增速</td>
+<td>§四 业务分部盈利能力对比（动力 vs 储能）、§六 维度 3 盈利能力评分精度、§九 储能业务单独估值</td>
+<td>API:fina_mainbz — 有产品分类收入（电池系统 vs 电池材料）但无毛利率字段；年报仅披露"电池系统"整体，未单独拆分储能毛利；WebSearch "宁德时代 储能毛利率" — 第三方推测 25-30%</td>
+<td>⚠️ 部分（有收入拆分但无毛利率）</td>
+<td>中（半年报可能有更细拆分，但本次未获取半年报 PDF）</td>
+</tr>
+<tr>
+<td>3</td>
+<td>产能利用率及各基地开工情况</td>
+<td>§四 产能分析、§五 行业供需判断、§九 DCF 中 Capex/产能假设、§六 维度 7 财务健康度（资产减值风险评估）</td>
+<td>年报 P.14-42 搜索"产能利用率"无匹配；WebSearch "宁德时代 产能利用率 2025" — 仅有第三方估算约 70-80%，无公司官方披露</td>
+<td>❌ 未找到</td>
+<td>低（公司不主动披露产能利用率，行业惯例仅在特定监管要求下披露）</td>
+</tr>
+<tr>
+<td>4</td>
+<td>海外建厂具体进度及资本支出计划（匈牙利、印尼等）</td>
+<td>§六 维度 6 市场进入与护城河评分、§九 DCF Capex 假设、§十一 催化剂判断时间窗验证</td>
+<td>年报 MD&amp;A 提及"加速推进海外产能规模化建设"但无具体金额/时间表；WebSearch "宁德时代 匈牙利工厂 进度 2026" — 第三方报道零散，无统一进度表；API 无对应接口</td>
+<td>⚠️ 部分（有方向性信息但无精确数据）</td>
+<td>中（公告零散披露，无统一进度表；需跟踪港交所/深交所公告）</td>
+</tr>
+<tr>
+<td>5</td>
+<td>2026Q1 存货结构明细（原材料/在制品/产成品拆分）</td>
+<td>§六 维度 7 财务健康度（[audit: Buffett Quality, 🟡 中] 存货增速 58% vs 营收增速 17% 的风险定性）、§十一 护城河判断中"存货积压为主动备货还是被动积压"的关键区分</td>
+<td>API:balancesheet — 仅有存货总额 1089 亿（20260331），无明细拆分；年报 FY2025 存货附注有拆分但仅到 2025 年末；2026Q1 季报未单独披露存货结构</td>
+<td>❌ 未找到</td>
+<td>低（季报不强制披露存货结构明细，需等 2026 半年报）</td>
+</tr>
+<tr>
+<td>6</td>
+<td>凝聚态电池商用飞机客户及订单规模</td>
+<td>§六 维度 4 产品与技术评分精度（350Wh/kg 凝聚态的商业化确定性）、§十一 催化剂判断</td>
+<td>WebSearch "宁德时代 凝聚态电池 航空 订单" — 仅有"已完成商用飞机首飞验证"的官方口径，无具体客户/订单量/交付时间表</td>
+<td>⚠️ 部分（有技术验证里程碑但无商业化数据）</td>
+<td>中（属企业保密信息，可能在后续航空合作公告中逐步披露）</td>
+</tr>
+</tbody>
+</table>
+<p><em>共 6 条缺口（继承 phase1-data.md §11 的 #1/#2/#3/#5 共 4 条 + Phase 3 写作中新发现 #5/#6 共 2 条）。Phase 1 §11 #4（曾毓群一致行动人持股变动）已在 data_snapshot.md §5 多期数据中解决，不再列入。</em></p>
+<hr />
+</div>
+
+<!-- ============================================================
+     §十三 数据可审计性（时效性+来源+audit 红旗）
+     ============================================================ -->
+<div class="section" id="sources">
+<h2>§十三 数据可审计性（时效性 + 来源 3 类分组）</h2>
+<p><strong>数据截止日期</strong>: 2026-05-16。<strong>最新财务数据期</strong>: 2026Q1（20260331）。<strong>最新行情数据</strong>: 2026-05-14。</p>
+<p><strong>关键待披露</strong>: 2026 半年报（预计 2026 年 8 月底）、2026Q2 季度数据。</p>
+<h3>[Tushare API] — 结构化数据（15 张表）</h3>
+<table>
+<thead>
+<tr>
+<th>数据表</th>
+<th style="text-align: center;">最新 end_date</th>
+<th>用于章节</th>
+<th>引用标签</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>income</td>
+<td style="text-align: center;">20260331</td>
+<td>§四 财务趋势、§六 维度 3 盈利能力、§九 DCF 基期</td>
+<td>[Tushare:income]</td>
+</tr>
+<tr>
+<td>balancesheet</td>
+<td style="text-align: center;">20260331</td>
+<td>§四 财务趋势、§六 维度 7 财务健康度、§九 净现金计算</td>
+<td>[Tushare:balancesheet]</td>
+</tr>
+<tr>
+<td>cashflow</td>
+<td style="text-align: center;">20260331</td>
+<td>§四 OCF/FCF、§六 维度 7、§九 DCF 基期 FCF</td>
+<td>[Tushare:cashflow]</td>
+</tr>
+<tr>
+<td>fina_indicator</td>
+<td style="text-align: center;">20260331</td>
+<td>§二 评分、§四 ROE/毛利率趋势、§六 全维度</td>
+<td>[Tushare:fina_indicator]</td>
+</tr>
+<tr>
+<td>daily</td>
+<td style="text-align: center;">20260514</td>
+<td>§九 最新收盘价、§十 买入价</td>
+<td>[Tushare:daily]</td>
+</tr>
+<tr>
+<td>daily_basic</td>
+<td style="text-align: center;">20260514</td>
+<td>§一 PE/PB/市值、§六 维度 8 估值、§八 peer 对标</td>
+<td>[Tushare:daily_basic]</td>
+</tr>
+<tr>
+<td>top10_holders</td>
+<td style="text-align: center;">20260331</td>
+<td>§四 前十大股东、§十一 管理层判断</td>
+<td>[Tushare:top10_holders]</td>
+</tr>
+<tr>
+<td>top10_floatholders</td>
+<td style="text-align: center;">20260331</td>
+<td>§四 十大流通股东、§七 筹码分析</td>
+<td>[Tushare:top10_floatholders]</td>
+</tr>
+<tr>
+<td>pledge_detail</td>
+<td style="text-align: center;">20241122</td>
+<td>§四 质押分析、§三 快筛#3</td>
+<td>[Tushare:pledge_detail]</td>
+</tr>
+<tr>
+<td>stk_holdernumber</td>
+<td style="text-align: center;">20260331</td>
+<td>§四 筹码集中度、§七 资金流向</td>
+<td>[Tushare:stk_holdernumber]</td>
+</tr>
+<tr>
+<td>fina_mainbz</td>
+<td style="text-align: center;">20251231</td>
+<td>§四 业务分部收入、§六 维度 2 商业模式</td>
+<td>[Tushare:fina_mainbz]</td>
+</tr>
+<tr>
+<td>dividend</td>
+<td style="text-align: center;">20251231</td>
+<td>§四 分红历史、§六 维度 8 股息率</td>
+<td>[Tushare:dividend]</td>
+</tr>
+<tr>
+<td>repurchase</td>
+<td style="text-align: center;">20260407</td>
+<td>§四 回购方案</td>
+<td>[Tushare:repurchase]</td>
+</tr>
+<tr>
+<td>forecast_vip</td>
+<td style="text-align: center;">—</td>
+<td>§四 管理层前瞻（无数据）</td>
+<td>[Tushare:forecast_vip]</td>
+</tr>
+<tr>
+<td>express_vip</td>
+<td style="text-align: center;">—</td>
+<td>§四 业绩快报（无数据）</td>
+<td>[Tushare:express_vip]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>衍生指标</strong>: metrics.json（由 scripts/data_snapshot.py 确定性计算），含 FCF、3年 CAGR、总股本等。 [API:derived_metrics]</p>
+<h3>[PDF 原文] — 年报文档精析</h3>
+<table>
+<thead>
+<tr>
+<th>文档</th>
+<th style="text-align: center;">报告期</th>
+<th>页码引用</th>
+<th>用于章节</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>annual_2025.pdf（宁德时代 2025 年年度报告）</td>
+<td style="text-align: center;">FY2025</td>
+<td>P.11 归母净利+42.28%</td>
+<td>§四 财务趋势解读</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align: center;"></td>
+<td>P.14-20 主营业务描述、全球市占率 39.2%</td>
+<td>§四 业务板块、§五 行业竞争</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align: center;"></td>
+<td>P.27 产量 748GWh +44.96%、行业持续增长</td>
+<td>§四 营收交叉验证、§六 维度 3</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align: center;"></td>
+<td>P.29 研发费用 221 亿+19%、财务费用-79.4 亿</td>
+<td>§六 维度 4 产品与技术、维度 7 财务健康</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align: center;"></td>
+<td>P.30 经营/投资/筹资现金流变动原因</td>
+<td>§四 现金流分析</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align: center;"></td>
+<td>P.31 资产减值 86.6 亿（固定资产+存货跌价）</td>
+<td>§六 维度 7、§十一 护城河判断</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align: center;"></td>
+<td>P.39-40 四大风险因素</td>
+<td>§六 维度 9 风险与治理</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align: center;"></td>
+<td>P.41 分红（每10股45.53元）+回购 43.86 亿</td>
+<td>§四 股东回报、§十一 管理层判断</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align: center;"></td>
+<td>P.42 A+H 双重上市</td>
+<td>§四 公司基本面</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align: center;"></td>
+<td>P.97-98 前十大股东</td>
+<td>§四 股东结构（与 Tushare 交叉验证）</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align: center;"></td>
+<td>MD&amp;A 全球六大研发中心、24 家电池工厂</td>
+<td>§四 全球化布局</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align: center;"></td>
+<td>分季度表 Q1-Q4 营收/净利明细</td>
+<td>§六 维度 3（Q4 季节性检验）</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align: center;"></td>
+<td>非经常性损益明细 87 亿</td>
+<td>§六 维度 3 盈利质量（非经占比 10.66%）</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align: center;"></td>
+<td>直接材料占成本 71.79%（↓4.68pp）</td>
+<td>§六 维度 2 成本结构</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align: center;"></td>
+<td>SNE Research: 全球新能源车 2147 万辆+21.5%、动力电池 1187GWh+31.7%、储能 550GWh+79%</td>
+<td>§五 行业规模与趋势</td>
+</tr>
+</tbody>
+</table>
+<h3>[WebSearch] — 网络信息补充</h3>
+<table>
+<thead>
+<tr>
+<th>来源</th>
+<th>内容</th>
+<th>用于章节</th>
+<th>引用标签</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>xueqiu.com</td>
+<td>2026 超级科技日 6 大新品（神行/麒麟/凝聚态/骁遥/钠新/超换一体）</td>
+<td>§四 最新动态、§六 维度 4、§十一 催化剂</td>
+<td>[Web:xueqiu.com]</td>
+</tr>
+<tr>
+<td>xueqiu.com</td>
+<td>全球市占率 39.2% 连续 9 年第一</td>
+<td>§五 竞争格局</td>
+<td>[Web:xueqiu.com]</td>
+</tr>
+<tr>
+<td>qq.com</td>
+<td>宁德 vs 比亚迪超充/补能网络对比</td>
+<td>§五 竞品对标</td>
+<td>[Web:qq.com]</td>
+</tr>
+<tr>
+<td>sohu.com</td>
+<td>国内产能 3000GWh vs 需求 1500GWh，利用率&lt;60%</td>
+<td>§五 供需结构</td>
+<td>[Web:sohu.com]</td>
+</tr>
+<tr>
+<td>stcn.com</td>
+<td>第四大股东拟询价转让 5800 万股</td>
+<td>§四 最新动态、§六 维度 9</td>
+<td>[Web:stcn.com]</td>
+</tr>
+<tr>
+<td>sina.com.cn</td>
+<td>起诉海辰储能专利侵权；2026年3月装车率降至32%</td>
+<td>§五 竞争、§十一 催化剂</td>
+<td>[Web:sina.com.cn]</td>
+</tr>
+<tr>
+<td>ditan.com</td>
+<td>四部门反内卷座谈会；出口退税分步取消</td>
+<td>§五 政策环境</td>
+<td>[Web:ditan.com]</td>
+</tr>
+<tr>
+<td>segmentfault.com</td>
+<td>全固态电池预计 2028-2030 年量产</td>
+<td>§五 技术演进、§十一 护城河</td>
+<td>[Web:segmentfault.com]</td>
+</tr>
+<tr>
+<td>capitalfutures.com.tw</td>
+<td>H 股配售完成，募集约 391.9 亿港元</td>
+<td>§四 最新动态</td>
+<td>[Web:capitalfutures.com.tw]</td>
+</tr>
+<tr>
+<td>ifeng.com / finance.sina.com.cn</td>
+<td>大摩/里昂研报目标价</td>
+<td>§七 看多派、§九 交叉验证</td>
+<td>[Web:ifeng.com]</td>
+</tr>
+<tr>
+<td>eastmoney.com</td>
+<td>东吴/广发/中信/华泰买入评级</td>
+<td>§七 看多派</td>
+<td>[Web:eastmoney.com]</td>
+</tr>
+<tr>
+<td>cls.cn</td>
+<td>海辰储能/亿纬锂能产能扩张</td>
+<td>§五 竞争格局</td>
+<td>[Web:cls.cn]</td>
+</tr>
+<tr>
+<td>finance.sina.com.cn</td>
+<td>储能容量电价机制推进</td>
+<td>§五 政策环境</td>
+<td>[Web:finance.sina.com.cn]</td>
+</tr>
+<tr>
+<td>smm.cn</td>
+<td>超级科技日产品规格细节</td>
+<td>§六 维度 4</td>
+<td>[Web:smm.cn]</td>
+</tr>
+</tbody>
+</table>
+<h3>审计红旗汇总（12 框架）</h3>
+<table>
+<thead>
+<tr>
+<th>严重度</th>
+<th style="text-align: center;">数量</th>
+<th>代表性红旗</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🔴 致命</td>
+<td style="text-align: center;">0</td>
+<td>—</td>
+</tr>
+<tr>
+<td>🟠 高</td>
+<td style="text-align: center;">0</td>
+<td>—</td>
+</tr>
+<tr>
+<td>🟡 中</td>
+<td style="text-align: center;">3</td>
+<td>① [Buffett Quality] 存货增速 58% 远高于营收增速 17%（差值 41pp &gt; 30pp 阈值），存货积压风险；② [Governance] 前十大股东净减持 2399 万股（主要为 ETF 被动减持）；③ [Valuation] PB=5.49 处于近 1 年 70% 分位，略偏高</td>
+</tr>
+<tr>
+<td>🟢 低</td>
+<td style="text-align: center;">4</td>
+<td>① [Piotroski] F=7/9 优秀；② [Beneish] M=-2.609 无操纵信号；③ [Altman] Z=3.246 安全区；④ [Shareholder Flow] 户数 -20.6%，散户减少/机构接盘</td>
+</tr>
+<tr>
+<td>ℹ️ 信息</td>
+<td style="text-align: center;">2</td>
+<td>① [DuPont] 最新 ROE=21.42%（净利率 17.04% × 周转 0.43 × 杠杆 2.89）；② [DuPont] 上期 ROE=20.55%（净利率 14.02% × 周转 0.46 × 杠杆 3.19）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>合计</strong>: 9 个信号（0 🔴 + 0 🟠 + 3 🟡 + 4 🟢 + 2 ℹ️）。<strong>快筛第 6 项（Audit ≥2 个 🔴）</strong>: ✅ 未触发（0 个 🔴）。</p>
+<p>完整清单: <code>audit_report.md</code>。</p>
+</div>
+
+<!-- ============================================================
+     v4.6.1: 附录/补丁章节追加区(避免 MD→HTML 内容丢失)
+     主报告 §十三 之后的所有 ## 章节(如"附录 v4 修订日志" / "v4.1 补丁")
+     Phase 6 Part B 必须追加到这里, 不得丢弃
+     ============================================================ -->
+<!-- 无附录章节 -->
+
+
+</div>
+</body>
+</html>
