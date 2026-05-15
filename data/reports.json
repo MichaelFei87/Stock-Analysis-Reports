@@ -216,6 +216,49 @@
           "variant": "amber"
         }
       ]
+    },
+    {
+      "slug": "FIG_Figma",
+      "ticker": "FIG",
+      "name": "Figma, Inc.",
+      "name_cn": "Figma",
+      "sector": "Software - Application",
+      "market": "us",
+      "report_date": "",
+      "version": "v1",
+      "composite_score": 7.05,
+      "verdict": "Bullish",
+      "verdict_tone": "bullish",
+      "valuation_tag": "估值锚 24.81 元",
+      "one_liner": "看多方向 —— Figma 作为浏览器原生设计协作平台具备多重复合护城河（网络效应+转换成本+技术壁垒），Q1 2026 营收 YoY+46% 加速增长、NDR 139% 行业顶尖、AI 变现正式启动；GAAP 净利率 -118% 完全由 IPO 后 SBC（占营收 129%）驱动，non-GAAP 已接近盈利、FCF 已转正 $2.37 亿。",
+      "metrics": [
+        {
+          "label": "综合评分",
+          "value": "7.05/10",
+          "tone": "neutral"
+        },
+        {
+          "label": "期望收益",
+          "value": "+22.6%",
+          "tone": "positive"
+        },
+        {
+          "label": "估值锚",
+          "value": "24.81元",
+          "tone": "neutral"
+        }
+      ],
+      "expected_return_short": "+22.6%",
+      "badges": [
+        {
+          "label": "Bullish 7.05/10",
+          "variant": "amber"
+        },
+        {
+          "label": "估值锚 24.81 元",
+          "variant": "amber"
+        }
+      ]
     }
   ]
 }

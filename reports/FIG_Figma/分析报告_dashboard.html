@@ -1,0 +1,3135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Figma（FIG）投资分析报告 — 2026-05-15</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   Claude Code Company Analysis · Report Styles v5.0
+   单一 CSS 真相源 — 由 assets/html/base.html 加载并内联
+   禁止在 Phase 6 Part B 中自创颜色值或变量名
+   v5.0: Claude Design Language — 温暖羊皮纸 + 赤陶色主调 + 衬线标题
+         Bloomberg 风险色保留(红/琥珀/黄/绿)
+   ============================================================ */
+
+:root {
+  /* 主色 — Claude Terracotta */
+  --c-primary: #c96442;
+  --c-primary-light: #f0eee6;
+  --c-primary-dark: #a14e2f;
+  --c-accent: #d97757;
+
+  /* Bloomberg 风格风险等级(高对比) — 保留不变 */
+  --c-risk-red:    #dc2626;
+  --c-risk-red-bg: #fef2f2;
+  --c-risk-amber:  #e8a33a;
+  --c-risk-amber-bg: #fff7ed;
+  --c-risk-yellow: #fbbf24;
+  --c-risk-yellow-bg: #fffbeb;
+  --c-risk-green:  #059669;
+  --c-risk-green-bg: #ecfdf5;
+
+  /* 语义色 (保留 v4.3 alias) */
+  --c-green: var(--c-risk-green);
+  --c-green-bg: var(--c-risk-green-bg);
+  --c-yellow: #d97706;
+  --c-yellow-bg: #fffbeb;
+  --c-red: var(--c-risk-red);
+  --c-red-bg: var(--c-risk-red-bg);
+
+  /* Claude 暖灰度系 */
+  --c-gray-50:  #faf9f5;  /* Ivory */
+  --c-gray-100: #f0eee6;  /* Border Cream */
+  --c-gray-200: #e8e6dc;  /* Border Warm */
+  --c-gray-500: #87867f;  /* Stone Gray */
+  --c-gray-700: #5e5d59;  /* Olive Gray */
+  --c-gray-900: #141413;  /* Near Black */
+
+  /* Claude 表面色 */
+  --c-parchment: #f5f4ed;
+  --c-ivory: #faf9f5;
+  --c-warm-sand: #e8e6dc;
+  --c-dark-surface: #30302e;
+  --c-warm-silver: #b0aea5;
+  --c-dark-warm: #3d3d3a;
+
+  /* Morningstar 卡片化 — 迁移到暖色 */
+  --c-card-border:  #e8e6dc;
+  --c-card-header:  #faf9f5;
+  --c-card-hover:   rgba(201,100,66,0.04);
+
+  /* 形状 — Claude ring shadow 系统 */
+  --radius: 12px;
+  --shadow: 0px 0px 0px 1px #e8e6dc;
+  --shadow-md: 0px 0px 0px 1px #d1cfc5;
+  --shadow-lg: rgba(0,0,0,0.05) 0px 4px 24px;
+
+  /* Variant Perception 紫 — 保留 */
+  --c-variant: #7a4dab;
+  --c-variant-bg: #f3eeff;
+
+  /* v4.6 sidebar 布局(弃用但保持兼容) */
+  --sidebar-width: 260px;
+  --sidebar-gap: 24px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+               "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  background: var(--c-parchment);
+  color: var(--c-gray-900);
+  margin: 0;
+  padding: 0;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+/* Claude 衬线标题族 */
+h1, h2, h3 {
+  font-family: Georgia, "Noto Serif SC", "Songti SC", serif;
+  font-weight: 500;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+}
+
+/* ---------- 3.1 Sticky 顶部导航栏 ---------- */
+.top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  height: 50px;
+  padding: 0 24px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(245,244,237,0.85);
+  border-bottom: 1px solid var(--c-gray-200);
+  font-size: 14px;
+}
+.top-nav .nav-brand {
+  font-family: Georgia, "Noto Serif SC", serif;
+  font-weight: 500;
+  color: var(--c-primary);
+  text-decoration: none;
+  margin-right: auto;
+  font-size: 15px;
+}
+.top-nav a {
+  color: var(--c-gray-700);
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: background .15s, color .15s;
+}
+.top-nav a:hover {
+  background: rgba(201,100,66,0.08);
+  color: var(--c-primary);
+}
+
+/* ---------- Header Hero ---------- */
+header.hero {
+  background: var(--c-gray-900);
+  color: var(--c-ivory);
+  padding: 48px 32px;
+  border-radius: 16px;
+  margin-bottom: 32px;
+  box-shadow: var(--shadow-lg);
+}
+header.hero h1 {
+  font-size: 32px;
+  margin: 0 0 8px;
+  font-weight: 500;
+  line-height: 1.15;
+  color: var(--c-ivory);
+}
+header.hero .subtitle {
+  color: var(--c-warm-silver);
+  font-size: 15px;
+}
+header.hero .meta {
+  display: flex; flex-wrap: wrap; gap: 24px;
+  margin-top: 20px; font-size: 14px;
+  color: var(--c-warm-silver);
+}
+
+/* ---------- Section (每个 §一到§十五 一个) ---------- */
+.section {
+  background: var(--c-ivory);
+  padding: 28px 32px;
+  margin: 20px 0;
+  border-radius: var(--radius);
+  border: 1px solid var(--c-gray-100);
+  box-shadow: var(--shadow);
+}
+.section h2 {
+  font-family: Georgia, "Noto Serif SC", "Songti SC", serif;
+  color: var(--c-primary);
+  border-bottom: 2px solid rgba(201,100,66,0.15);
+  padding-bottom: 8px;
+  margin-top: 0;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.25;
+}
+.section h3 {
+  font-family: Georgia, "Noto Serif SC", "Songti SC", serif;
+  color: var(--c-gray-900);
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 24px;
+  border-bottom: 1px dashed var(--c-gray-200);
+  padding-bottom: 4px;
+  line-height: 1.3;
+}
+.section h4 { color: var(--c-gray-900); font-size: 16px; margin-top: 18px; }
+
+/* Variant Perception 章节专用紫色强调 */
+.section.variant-perception {
+  border-left: 4px solid var(--c-variant);
+  background: linear-gradient(to right, var(--c-variant-bg) 0%, var(--c-ivory) 3%);
+}
+.section.variant-perception h2 {
+  color: var(--c-variant);
+  border-bottom-color: var(--c-variant-bg);
+}
+
+/* ---------- 3.2 评分环形图 (SVG) ---------- */
+.score-ring {
+  display: inline-block;
+  position: relative;
+}
+.score-ring svg { display: block; }
+.score-ring .score-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.score-ring .score-text .num {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--c-primary);
+  font-family: Georgia, "Noto Serif SC", serif;
+}
+.score-ring .score-text .label {
+  font-size: 11px;
+  color: var(--c-gray-500);
+}
+
+/* ---------- 3.3 维度评分条形图 ---------- */
+.dimension-bar {
+  display: grid;
+  grid-template-columns: 1fr 48px 3fr 56px;
+  align-items: center;
+  gap: 12px;
+  margin: 10px 0;
+  font-size: 14px;
+}
+.dimension-bar .dim-name { color: var(--c-gray-700); }
+.dimension-bar .dim-score {
+  font-weight: 600;
+  text-align: right;
+  color: var(--c-primary);
+  font-family: Georgia, "Noto Serif SC", serif;
+}
+.dimension-bar .dim-progress {
+  height: 10px;
+  background: var(--c-gray-100);
+  border-radius: 5px;
+  overflow: hidden;
+}
+.dimension-bar .dim-progress .fill { height: 100%; border-radius: 5px; }
+.dimension-bar .dim-progress .fill.tier1 { background: linear-gradient(90deg, var(--c-primary), var(--c-primary-dark)); }
+.dimension-bar .dim-progress .fill.tier2 { background: linear-gradient(90deg, #8b5cf6, #6d28d9); }
+.dimension-bar .dim-progress .fill.tier3 { background: linear-gradient(90deg, var(--c-accent), var(--c-primary)); }
+.dimension-bar .dim-weight { text-align: right; color: var(--c-gray-500); font-size: 12px; }
+
+/* ---------- 3.4 三色情景卡片 ---------- */
+.scenario-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin: 16px 0;
+}
+.scenario {
+  padding: 16px;
+  border-radius: var(--radius);
+  border-left: 4px solid;
+}
+.scenario .label { font-size: 12px; color: var(--c-gray-500); text-transform: uppercase; letter-spacing: 1px; }
+.scenario .big-num {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 4px 0 8px;
+  font-family: Georgia, "Noto Serif SC", serif;
+}
+.scenario .detail { font-size: 13px; color: var(--c-gray-700); }
+.scenario.bull { background: var(--c-green-bg); border-left-color: var(--c-green); }
+.scenario.bull .big-num { color: var(--c-green); }
+.scenario.base { background: var(--c-yellow-bg); border-left-color: var(--c-yellow); }
+.scenario.base .big-num { color: var(--c-yellow); }
+.scenario.bear { background: var(--c-red-bg); border-left-color: var(--c-red); }
+.scenario.bear .big-num { color: var(--c-red); }
+.scenario.tail { background: var(--c-dark-surface); border-left-color: var(--c-gray-900); color: var(--c-ivory); }
+.scenario.tail .big-num { color: var(--c-ivory); }
+.scenario.tail .detail { color: var(--c-warm-silver); }
+
+/* ---------- 3.5 期望回报高亮条 ---------- */
+.expected-return {
+  background: linear-gradient(135deg, var(--c-gray-900), var(--c-primary-dark));
+  color: var(--c-ivory);
+  padding: 20px 28px;
+  border-radius: 16px;
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--shadow-lg);
+}
+.expected-return .label { font-size: 12px; color: var(--c-warm-silver); text-transform: uppercase; letter-spacing: 1px; }
+.expected-return .value {
+  font-size: 36px;
+  font-weight: 700;
+  font-family: Georgia, "Noto Serif SC", serif;
+}
+
+/* ---------- 3.6 团队名片网格 ---------- */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin: 16px 0;
+}
+.team-card {
+  padding: 16px;
+  border: 1px solid var(--c-gray-200);
+  border-radius: var(--radius);
+  text-align: center;
+  background: var(--c-ivory);
+}
+.team-card .avatar {
+  width: 48px; height: 48px; border-radius: 50%;
+  background: rgba(201,100,66,0.1); color: var(--c-primary);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; margin: 0 auto 8px; font-size: 18px;
+  font-family: Georgia, "Noto Serif SC", serif;
+}
+.team-card .name { font-weight: 600; }
+.team-card .role { color: var(--c-gray-500); font-size: 13px; margin-top: 4px; }
+
+/* ---------- 3.7 风险矩阵 ---------- */
+.risk-item {
+  display: grid;
+  grid-template-columns: 20px 1fr auto;
+  gap: 12px;
+  align-items: start;
+  padding: 12px;
+  border-left: 4px solid;
+  background: var(--c-gray-50);
+  border-radius: 8px;
+  margin: 8px 0;
+}
+.risk-item.high   { border-left-color: var(--c-red);    background: var(--c-red-bg); }
+.risk-item.medium { border-left-color: var(--c-yellow); background: var(--c-yellow-bg); }
+.risk-item.low    { border-left-color: var(--c-green);  background: var(--c-green-bg); }
+.risk-item .dot {
+  width: 12px; height: 12px; border-radius: 50%; margin-top: 4px;
+}
+.risk-item.high   .dot { background: var(--c-red); }
+.risk-item.medium .dot { background: var(--c-yellow); }
+.risk-item.low    .dot { background: var(--c-green); }
+
+/* ---------- 3.8 融资时间轴 ---------- */
+.timeline {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin: 24px 0;
+  overflow-x: auto;
+  padding: 8px 0;
+}
+.timeline .tl-node {
+  flex: 0 0 auto;
+  text-align: center;
+  padding: 0 14px;
+  position: relative;
+}
+.timeline .tl-node::before {
+  content: '';
+  width: 14px; height: 14px; border-radius: 50%;
+  background: var(--c-gray-200); display: block; margin: 0 auto 8px;
+}
+.timeline .tl-node.current::before {
+  background: var(--c-primary);
+  box-shadow: 0 0 0 4px rgba(201,100,66,0.15);
+}
+.timeline .tl-node .year { font-size: 12px; color: var(--c-gray-500); }
+.timeline .tl-node .round { font-weight: 600; font-size: 13px; }
+.timeline .tl-node .amount { font-size: 11px; color: var(--c-gray-700); }
+
+/* ---------- 3.9 情绪量表 ---------- */
+.sentiment-bar {
+  position: relative;
+  height: 12px;
+  border-radius: 6px;
+  background: linear-gradient(to right, var(--c-red) 0%, var(--c-yellow) 50%, var(--c-green) 100%);
+  margin: 20px 0 32px;
+}
+.sentiment-bar .pointer {
+  position: absolute;
+  top: -8px;
+  width: 4px; height: 28px;
+  background: var(--c-gray-900);
+  border-radius: 2px;
+  transform: translateX(-50%);
+}
+.sentiment-bar .pointer::after {
+  content: attr(data-label);
+  position: absolute;
+  top: 32px; left: 50%; transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: 11px;
+  background: var(--c-gray-900);
+  color: var(--c-ivory);
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+/* ---------- v2 组件 · 估值区间可视化 ---------- */
+.valuation-range {
+  position: relative;
+  height: 28px;
+  background: var(--c-gray-100);
+  border-radius: 6px;
+  margin: 10px 0;
+}
+.valuation-range .range {
+  position: absolute;
+  top: 4px; bottom: 4px;
+  border-radius: 4px;
+  opacity: 0.6;
+}
+.valuation-range .range.dcf { background: var(--c-primary); }
+.valuation-range .range.comparable { background: var(--c-green); }
+.valuation-range .range.transaction { background: var(--c-yellow); }
+.valuation-range .label-row {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 8px;
+  align-items: center;
+  font-size: 12px;
+}
+
+/* ---------- v2 组件 · 星级评估 ---------- */
+.star-filled { color: var(--c-accent); }
+.star-empty  { color: var(--c-gray-200); }
+
+/* ---------- v2 组件 · 信息缺口优先级 badge ---------- */
+.badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.badge.critical { background: var(--c-red-bg);    color: var(--c-red); }
+.badge.important{ background: var(--c-yellow-bg); color: var(--c-yellow); }
+.badge.minor    { background: var(--c-green-bg);  color: var(--c-green); }
+
+/* ---------- 通用 Table ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 14px;
+}
+th, td {
+  border: 1px solid var(--c-gray-200);
+  padding: 8px 12px;
+  text-align: left;
+}
+th {
+  background: var(--c-gray-100);
+  color: var(--c-primary);
+  font-weight: 600;
+}
+tr:nth-child(even) td { background: var(--c-gray-50); }
+
+/* ---------- 通用文本 ---------- */
+strong { color: var(--c-gray-900); font-weight: 600; }
+code {
+  background: var(--c-gray-100);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+blockquote {
+  border-left: 4px solid var(--c-primary);
+  padding: 10px 16px;
+  color: var(--c-gray-700);
+  background: rgba(201,100,66,0.05);
+  border-radius: 8px;
+  margin: 12px 0;
+}
+hr { border: none; border-top: 1px dashed var(--c-gray-200); margin: 24px 0; }
+ul, ol { padding-left: 22px; }
+li { margin: 4px 0; }
+a {
+  color: var(--c-primary);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(201,100,66,0.3);
+}
+a:hover { color: var(--c-accent); }
+
+footer {
+  text-align: center;
+  color: var(--c-gray-500);
+  padding: 32px 0 16px;
+  font-size: 12px;
+  border-top: 1px solid var(--c-gray-200);
+  margin-top: 48px;
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width: 768px) {
+  .container { padding: 20px 16px 60px; }
+  header.hero { padding: 24px 16px; }
+  header.hero h1 { font-size: 24px; }
+  .section { padding: 16px; }
+  .scenario-grid, .team-grid { grid-template-columns: 1fr; }
+  table { font-size: 12px; }
+  table th, table td { padding: 6px 8px; }
+}
+
+/* ============================================================
+   v4.6 新增: 6 个大厂风格组件 (迁移至 Claude 设计语言)
+   ============================================================ */
+
+/* ---------- v4.6-1. 前置评级卡 ---------- */
+.rating-trio {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: -16px 0 32px;
+}
+.rating-card {
+  background: var(--c-ivory);
+  border: 1px solid var(--c-card-border);
+  border-top: 3px solid var(--c-primary);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  box-shadow: var(--shadow);
+  transition: transform .15s, box-shadow .15s;
+}
+.rating-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+.rating-card--score  { border-top-color: var(--c-primary); }
+.rating-card--anchor { border-top-color: var(--c-accent); }
+.rating-card--return { border-top-color: var(--c-risk-green); }
+.rating-card--return.negative { border-top-color: var(--c-risk-red); }
+
+.rating-card .label {
+  font-size: 11px;
+  color: var(--c-gray-500);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.rating-card .value {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--c-gray-900);
+  line-height: 1.2;
+  margin-bottom: 6px;
+  font-family: Georgia, "Noto Serif SC", serif;
+}
+.rating-card .value .out-of {
+  font-size: 16px;
+  color: var(--c-gray-500);
+  font-weight: 500;
+}
+.rating-card .value.negative { color: var(--c-risk-red); }
+.rating-card .value.positive { color: var(--c-risk-green); }
+.rating-card .sub {
+  font-size: 12px;
+  color: var(--c-gray-700);
+}
+
+/* ---------- v4.6-2. 彩条风险卡 (Bloomberg 等级色保留) ---------- */
+.risk-card-v2 {
+  display: grid;
+  grid-template-columns: 4px 1fr auto;
+  gap: 14px;
+  align-items: center;
+  padding: 14px 16px 14px 0;
+  margin: 8px 0;
+  background: var(--c-ivory);
+  border: 1px solid var(--c-card-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: background .15s;
+}
+.risk-card-v2:hover { background: var(--c-card-hover); }
+.risk-card-v2.risk-critical { border-left-width: 0; background: linear-gradient(to right, var(--c-risk-red-bg) 0%, var(--c-ivory) 6%); }
+.risk-card-v2.risk-high     { background: linear-gradient(to right, var(--c-risk-amber-bg) 0%, var(--c-ivory) 6%); }
+.risk-card-v2.risk-medium   { background: linear-gradient(to right, var(--c-risk-yellow-bg) 0%, var(--c-ivory) 6%); }
+.risk-card-v2.risk-low      { background: linear-gradient(to right, var(--c-risk-green-bg) 0%, var(--c-ivory) 6%); }
+.risk-card-v2 .left-bar { align-self: stretch; width: 4px; }
+.risk-card-v2.risk-critical .left-bar { background: var(--c-risk-red); }
+.risk-card-v2.risk-high     .left-bar { background: var(--c-risk-amber); }
+.risk-card-v2.risk-medium   .left-bar { background: var(--c-risk-yellow); }
+.risk-card-v2.risk-low      .left-bar { background: var(--c-risk-green); }
+.risk-card-v2 .title { font-weight: 600; color: var(--c-gray-900); margin-bottom: 3px; }
+.risk-card-v2 .body  { font-size: 13px; color: var(--c-gray-700); line-height: 1.5; }
+.risk-card-v2 .sev-badge {
+  font-size: 10px; font-weight: 700; padding: 3px 10px;
+  border-radius: 12px; white-space: nowrap; letter-spacing: .5px;
+}
+.risk-card-v2.risk-critical .sev-badge { background: var(--c-risk-red);    color: white; }
+.risk-card-v2.risk-high     .sev-badge { background: var(--c-risk-amber);  color: white; }
+.risk-card-v2.risk-medium   .sev-badge { background: var(--c-risk-yellow); color: var(--c-gray-900); }
+.risk-card-v2.risk-low      .sev-badge { background: var(--c-risk-green);  color: white; }
+
+/* ---------- v4.6.2. Preamble 区 ---------- */
+.preamble {
+  background: var(--c-ivory);
+  border-left: 3px solid var(--c-accent);
+  border-radius: 8px;
+  padding: 14px 20px;
+  margin: -8px 0 20px;
+  font-size: 13px;
+  color: var(--c-gray-700);
+  line-height: 1.7;
+}
+.preamble:empty { display: none; }
+.preamble blockquote {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  font-size: 13px;
+}
+.preamble blockquote p { margin: 6px 0; }
+.preamble p { margin: 6px 0; }
+.preamble strong { color: var(--c-primary-dark); }
+.preamble hr { display: none; }
+
+/* ---------- v4.6.1. 关键指标横排面板 ---------- */
+.metric-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+  margin: 0 0 24px;
+  padding: 16px;
+  background: var(--c-ivory);
+  border: 1px solid var(--c-card-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.metric-strip .metric-chip {
+  padding: 10px 14px;
+  text-align: center;
+  border-right: 1px dashed var(--c-gray-100);
+}
+.metric-strip .metric-chip:last-child { border-right: none; }
+.metric-strip .metric-chip .metric-label {
+  font-size: 10px;
+  color: var(--c-gray-500);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.metric-strip .metric-chip .metric-value {
+  font-size: 18px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  color: var(--c-gray-900);
+  font-family: Georgia, "Noto Serif SC", serif;
+}
+.metric-strip .metric-chip .metric-value.positive { color: var(--c-risk-green); }
+.metric-strip .metric-chip .metric-value.negative { color: var(--c-risk-red); }
+.metric-strip .metric-chip .metric-value.risk     { color: var(--c-risk-amber); }
+.metric-strip .metric-chip .metric-value.critical { color: var(--c-risk-red); font-weight: 900; }
+.metric-strip .metric-chip .metric-value.neutral  { color: var(--c-gray-900); }
+
+/* ---------- v4.6 兼容: .metric-sidebar/metric-row 保留 ---------- */
+.metric-sidebar {
+  background: var(--c-ivory);
+  border: 1px solid var(--c-card-border);
+  border-radius: var(--radius);
+  padding: 20px 18px;
+  box-shadow: var(--shadow);
+  margin: 0 0 24px;
+}
+.metric-sidebar h4 {
+  font-size: 11px;
+  color: var(--c-gray-500);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  margin: 0 0 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--c-card-border);
+}
+.metric-sidebar .metric-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--c-gray-100);
+  font-size: 13px;
+}
+.metric-sidebar .metric-row:last-child { border-bottom: none; }
+.metric-sidebar .metric-row span { color: var(--c-gray-700); }
+.metric-sidebar .metric-row strong { font-weight: 700; color: var(--c-gray-900); font-variant-numeric: tabular-nums; }
+.metric-sidebar .metric-row strong.positive { color: var(--c-risk-green); }
+.metric-sidebar .metric-row strong.negative { color: var(--c-risk-red); }
+.metric-sidebar .metric-row strong.risk     { color: var(--c-risk-amber); font-weight: 800; }
+.metric-sidebar .metric-row strong.critical { color: var(--c-risk-red);   font-weight: 800; }
+
+/* ---------- v4.6-4. 对标卡 ---------- */
+.comparison-card {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr 1fr;
+  gap: 8px;
+  background: var(--c-ivory);
+  border: 1px solid var(--c-card-border);
+  border-radius: var(--radius);
+  padding: 16px;
+  margin: 12px 0;
+}
+.comparison-card .cmp-col {
+  text-align: center;
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+.comparison-card .cmp-col.center {
+  background: rgba(201,100,66,0.06);
+  border: 2px solid var(--c-primary);
+}
+.comparison-card .cmp-label { font-size: 10px; color: var(--c-gray-500); text-transform: uppercase; letter-spacing: 1px; font-weight: 600; margin-bottom: 6px; }
+.comparison-card .cmp-value {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--c-gray-900);
+  font-variant-numeric: tabular-nums;
+  font-family: Georgia, "Noto Serif SC", serif;
+}
+.comparison-card .cmp-col.center .cmp-value { font-size: 24px; color: var(--c-primary); }
+.comparison-card .cmp-sub { font-size: 11px; color: var(--c-gray-500); margin-top: 4px; }
+.comparison-card .cmp-bar {
+  height: 6px; background: var(--c-gray-100); border-radius: 3px;
+  margin-top: 8px; position: relative; overflow: hidden;
+}
+.comparison-card .cmp-bar .fill {
+  position: absolute; left: 0; top: 0; bottom: 0;
+  background: linear-gradient(90deg, var(--c-primary), var(--c-accent));
+  border-radius: 3px;
+}
+
+/* ---------- v4.6-5. 深度链接 ---------- */
+.deep-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 1px 8px 1px 6px;
+  font-size: 11px;
+  background: rgba(201,100,66,0.08);
+  color: var(--c-primary);
+  border: 1px solid transparent;
+  border-radius: 12px;
+  text-decoration: none !important;
+  vertical-align: middle;
+  font-weight: 600;
+  transition: background .15s, border-color .15s;
+}
+.deep-link::before { content: '→'; opacity: .6; }
+.deep-link:hover {
+  background: var(--c-primary);
+  color: var(--c-ivory);
+  border-color: var(--c-primary);
+}
+/* Target 高亮 */
+.section:target {
+  animation: target-pulse 1.8s ease-out;
+  scroll-margin-top: 70px;
+}
+@keyframes target-pulse {
+  0%   { box-shadow: 0 0 0 4px var(--c-accent); }
+  100% { box-shadow: var(--shadow); }
+}
+
+/* ---------- v4.6-6. 微型热力图 ---------- */
+.heatmap-grid {
+  display: grid;
+  gap: 2px;
+  margin: 10px 0;
+  font-size: 10px;
+}
+.heatmap-grid .hm-cell {
+  aspect-ratio: 1 / 1;
+  min-height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-family: ui-monospace, monospace;
+  font-weight: 600;
+  color: var(--c-gray-900);
+}
+/* 5 档颜色映射 */
+.heatmap-grid .hm-cell.hm--2 { background: #fca5a5; color: #7f1d1d; }
+.heatmap-grid .hm-cell.hm--1 { background: #fed7aa; color: #7c2d12; }
+.heatmap-grid .hm-cell.hm-0  { background: var(--c-gray-100); }
+.heatmap-grid .hm-cell.hm-1  { background: #bbf7d0; color: #14532d; }
+.heatmap-grid .hm-cell.hm-2  { background: #4ade80; color: white; }
+.heatmap-grid .hm-cell:hover { transform: scale(1.1); }
+
+.heatmap-grid .hm-row-label {
+  font-size: 10px;
+  color: var(--c-gray-500);
+  text-align: right;
+  padding-right: 8px;
+  align-self: center;
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width: 768px) {
+  .container { padding: 20px 16px 60px; }
+  header.hero { padding: 24px 16px; }
+  header.hero h1 { font-size: 24px; }
+  .section { padding: 16px; }
+  .scenario-grid, .team-grid, .rating-trio { grid-template-columns: 1fr; }
+  .comparison-card { grid-template-columns: 1fr; }
+  .metric-strip { grid-template-columns: repeat(2, 1fr); }
+  .metric-strip .metric-chip { border-right: none; border-bottom: 1px dashed var(--c-gray-100); }
+  table { font-size: 12px; }
+  table th, table td { padding: 6px 8px; }
+}
+
+/* ---------- 打印 ---------- */
+@media print {
+  body { background: white; }
+  .top-nav { display: none; }
+  .section { box-shadow: none; border: 1px solid #ccc; break-inside: avoid; }
+  header.hero { break-inside: avoid; }
+  .metric-strip { break-inside: avoid; }
+  .deep-link { color: var(--c-gray-900); background: transparent; border-color: var(--c-gray-500); }
+  .deep-link::before { content: ''; }
+  .deep-link::after { content: ' (见对应章节)'; font-size: 10px; color: var(--c-gray-500); }
+}
+
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     Sticky 顶部导航栏 — 13 章节锚点
+     ============================================================ -->
+<nav class="top-nav">
+  <a href="../../index.html" class="nav-brand">AI 投资分析报告</a>
+  <a href="#exec-summary">摘要</a>
+  <a href="#scoring">评分</a>
+  <a href="#screening">快筛</a>
+  <a href="#fundamentals">基本面</a>
+  <a href="#industry">行业</a>
+  <a href="#detail">详细</a>
+  <a href="#sentiment">舆情</a>
+  <a href="#peers">对标</a>
+  <a href="#valuation">估值</a>
+  <a href="#qualitative">定性</a>
+  <a href="#gaps">缺口</a>
+  <a href="#sources">来源</a>
+</nav>
+
+<div class="container">
+
+<!-- ============================================================
+     Header Hero
+     ============================================================ -->
+<header class="hero">
+  <h1>Figma（FIG）投资分析报告</h1>
+  <div class="subtitle">由 Claude Code 自动生成</div>
+  <div class="meta">
+    <span>📅 2026-05-15</span>
+    <span>💵 收盘 $20.24</span>
+    <span>📊 PB N/A · 市值 107 亿美元</span>
+    <span>🎯 估值锚 $24.81</span>
+  </div>
+</header>
+
+<!-- ============================================================
+     v4.6.2 新增: Preamble 区 — 主报告第一个 ## 之前的 blockquote / 段落
+     (版本切换说明 / 数据截止注意 / meta 行的详细补充等),否则会丢失
+     ============================================================ -->
+<div class="preamble"></div>
+
+<!-- ============================================================
+     v4.6 新增: 前置评级三件套(Goldman 风格, hero 下方醒目位置)
+     ============================================================ -->
+<div class="rating-trio">
+
+  <div class="rating-card rating-card--score">
+    <div class="label">综合评分</div>
+    <div class="value">7.05 <span class="out-of">/ 10</span></div>
+    <div class="sub">看多方向</div>
+  </div>
+  <div class="rating-card rating-card--anchor">
+    <div class="label">估值锚(DCF 概率加权)</div>
+    <div class="value">$24.81</div>
+    <div class="sub">相对当前 +22.6%</div>
+  </div>
+  <div class="rating-card rating-card--return">
+    <div class="label">12-18 月期望收益</div>
+    <div class="value positive">+22.6%</div>
+    <div class="sub">年化 +17.6%</div>
+  </div>
+</div>
+
+<!-- ============================================================
+     v4.6.1 关键指标横排面板(替代 v4.6 的粘性侧边栏,更简洁)
+     ============================================================ -->
+<div class="metric-strip">
+
+  <div class="metric-chip">
+    <div class="metric-label">PE (TTM)</div>
+    <div class="metric-value neutral">–</div>
+  </div>
+  <div class="metric-chip">
+    <div class="metric-label">PB</div>
+    <div class="metric-value neutral">N/Ax</div>
+  </div>
+  <div class="metric-chip">
+    <div class="metric-label">市值</div>
+    <div class="metric-value neutral">106.4亿美元 亿美元</div>
+  </div>
+  <div class="metric-chip">
+    <div class="metric-label">ROE</div>
+    <div class="metric-value negative">-82.78%%</div>
+  </div>
+  <div class="metric-chip">
+    <div class="metric-label">毛利率</div>
+    <div class="metric-value neutral">82.43%%</div>
+  </div>
+  <div class="metric-chip">
+    <div class="metric-label">资产负债率</div>
+    <div class="metric-value neutral">35.67%%</div>
+  </div>
+  <div class="metric-chip">
+    <div class="metric-label">股东户数</div>
+    <div class="metric-value neutral">390家机构</div>
+  </div>
+  <div class="metric-chip">
+    <div class="metric-label">家族持股</div>
+    <div class="metric-value neutral">76.54%%</div>
+  </div>
+</div>
+
+<!-- ============================================================
+     §一 执行摘要
+     ============================================================ -->
+<div class="section" id="exec-summary">
+<h2>§一 执行摘要</h2>
+<p><strong>一句话结论</strong>: <strong>看多方向</strong> —— Figma 作为浏览器原生设计协作平台具备多重复合护城河（网络效应+转换成本+技术壁垒），Q1 2026 营收 YoY+46% 加速增长、NDR 139% 行业顶尖、AI 变现正式启动；GAAP 净利率 -118% 完全由 IPO 后 SBC（占营收 129%）驱动，non-GAAP 已接近盈利、FCF 已转正 $2.37 亿。</p>
+<p><strong>估值锚</strong>: <strong>概率加权 DCF ≈ $130.5 亿 / $24.81 每股</strong>（4 情景；乐观 25% / 基准 45% / 悲观 25% / 最差 5%）。当前 $20.24 相对此锚折让 <strong>+22.6%</strong> [phase3-part4 §9.2]。</p>
+<p><strong>综合评分</strong>: <strong>7.05/10</strong> · <strong>数据置信度</strong>: 中（ARR 未披露、AI 变现数据待 Q2 验证、SBC 正常化时间表不确定）</p>
+<p><strong>三大风险（Top 3）</strong>:<br />
+1. 🟠 Piotroski F=3/9，GAAP 层面多项财务健康指标同步恶化 [audit: Piotroski, 🟠 高]<br />
+2. 🟠 应收账款增速 88.8% 远超营收增速 41.0%，信用条件放宽风险 [audit: Buffett Quality, 🟠 高]<br />
+3. 🟠 OCF/NI=-0.2 利润质量偏弱（OCF $2.51亿 vs NI -$12.50亿），GAAP 利润含水分信号明确 [audit: Buffett Quality, 🟠 高]</p>
+<p><strong>三大机会（Top 3）</strong>:<br />
+1. NDR 139% + ARR&gt;$100K 客户 YoY+46%，平台粘性和 Enterprise 渗透加速 [10-Q: mda]<br />
+2. 4 个新产品（Make/Sites/Buzz/Draw）+ AI 变现启动，TAM 从设计工具扩展至产品开发平台 [10-Q: mda]<br />
+3. SBC 正常化后 GAAP 利润率将大幅改善，当前 $20.24 接近 52 周低位（较高点 -86%），估值已大幅回归 [yfinance]</p>
+<p><strong>核心非共识观点</strong>（Top 3）:<br />
+1. GAAP 净利率 -118% 是"假亏损"——SBC 占营收 129% 为 IPO 后 RSU vesting 典型现象，FCF 已转正，1-2 年内将正常化<br />
+2. 可比倍数法隐含 $50.6（DCF 锚 2 倍），分歧源于新 IPO 流通盘/信任度折价而非基本面<br />
+3. AI-native 设计工具（Bolt/v0/Lovable）颠覆"先设计再开发"范式的风险被市场低估，但 Figma 通过 Make + MCP Server 主动应对</p>
+<p><strong>投资方向综合判定</strong>: <strong>看多方向</strong>（3 框架中 3 个判定为"看多方向"，且无致命看空条款触发 [§十一]）</p>
+<hr />
+</div>
+
+<!-- ============================================================
+     §二 评分总览（10 维度单列）
+     ============================================================ -->
+<div class="section" id="scoring">
+<h2>§二 事实评分总览（10 维度）</h2>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th style="text-align: center;">权重</th>
+<th style="text-align: center;">分数(0-10)</th>
+<th style="text-align: center;">加权</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. 市场规模与结构</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">0.80</td>
+</tr>
+<tr>
+<td>2. 商业模式</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">0.90</td>
+</tr>
+<tr>
+<td>3. 盈利能力</td>
+<td style="text-align: center;">15%</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">0.75</td>
+</tr>
+<tr>
+<td>4. 产品与技术</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">0.90</td>
+</tr>
+<tr>
+<td>5. 团队与管理层</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">0.70</td>
+</tr>
+<tr>
+<td>6. 市场进入与护城河</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">0.90</td>
+</tr>
+<tr>
+<td>7. 财务健康度</td>
+<td style="text-align: center;">15%</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">0.90</td>
+</tr>
+<tr>
+<td>8. 估值合理性</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">0.50</td>
+</tr>
+<tr>
+<td>9. 风险与治理</td>
+<td style="text-align: center;">5%</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">0.30</td>
+</tr>
+<tr>
+<td>10. 催化剂与时机</td>
+<td style="text-align: center;">5%</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">0.40</td>
+</tr>
+<tr>
+<td><strong>合计</strong></td>
+<td style="text-align: center;">100%</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: center;"><strong>7.05</strong></td>
+</tr>
+</tbody>
+</table>
+<p><em>详细证据见 §六。评分标尺见 <code>references/scoring-rubric.md</code>。表格严格 4 列（维度/权重/分数/加权分）——不添加"关键理由"列。</em></p>
+<hr />
+</div>
+
+<!-- ============================================================
+     §三 快速筛选
+     ============================================================ -->
+<div class="section" id="screening">
+<h2>§三 快速筛选（致命看空条款 - 6 项）</h2>
+<table>
+<thead>
+<tr>
+<th>条款</th>
+<th>阈值</th>
+<th>实际</th>
+<th style="text-align: center;">触发?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. 单季/单年度净利 &lt; -50%</td>
+<td>50%</td>
+<td>FY2025 净利率 <strong>-118.44%</strong> [yfinance:income]</td>
+<td style="text-align: center;">⚠️ 形式触发</td>
+</tr>
+<tr>
+<td>2. 资产负债率 &gt; 70%</td>
+<td>70%</td>
+<td><strong>35.67%</strong> [yfinance:fina_indicator]</td>
+<td style="text-align: center;">❌</td>
+</tr>
+<tr>
+<td>3. 大股东累计质押 &gt; 50%</td>
+<td>50%</td>
+<td>美股无质押数据，N/A</td>
+<td style="text-align: center;">❌</td>
+</tr>
+<tr>
+<td>4. 审计机构连续 2 年变更</td>
+<td>1 次</td>
+<td>无变更记录 [10-K]</td>
+<td style="text-align: center;">❌</td>
+</tr>
+<tr>
+<td>5. CFO 非正常离任</td>
+<td>1 次</td>
+<td>无离任记录 [10-K]</td>
+<td style="text-align: center;">❌</td>
+</tr>
+<tr>
+<td>6. <strong>Audit ≥ 2 个 🔴 红旗</strong></td>
+<td>2</td>
+<td><strong>0 个 🔴</strong>（仅 3 个 🟠 高）[audit_report §2]</td>
+<td style="text-align: center;">❌</td>
+</tr>
+</tbody>
+</table>
+<p><strong>结果</strong>: 条款 1 形式触发（FY2025 GAAP 净利率 -118%），但需重要标注:</p>
+<blockquote>
+<p><strong>★ 条款 1 触发背景说明</strong>: Figma FY2025 GAAP 净亏损 $12.50 亿（净利率 -118%）<strong>完全由 SBC 驱动</strong>——FY2025 SBC 合计 $13.64 亿，占营收 129% [10-K: financial_statements]。这是 SaaS 公司 IPO 后 RSU vesting 集中释放的典型现象（参照 Snowflake/Confluent 上市后 1-2 年表现）。剔除 SBC 后:<br />
+- Non-GAAP 调整后 EPS $0.10（Q1 2026，超预期）[phase1-data §2]<br />
+- FY2025 OCF +$2.51 亿，FCF +$2.37 亿，现金流已为正 [yfinance:cashflow]<br />
+- Q1 2026 FCF margin 27%，经营质量良好 [10-Q: guidance]</p>
+<p><strong>判定: 形式触发但不构成致命看空</strong>——亏损为非经营性（SBC 非现金费用），核心经营已实现正现金流。此条款设计针对"经营性巨额亏损"，Figma 不属此情形。</p>
+</blockquote>
+<p><strong>快筛总结</strong>: <strong>PASS（附条件）</strong> — 1 条形式触发（条款 1，SBC 驱动非经营性亏损，不构成致命看空）；0 条实质触发。无 🔴 致命红旗（仅 3 个 🟠 高级审计红旗）。不触发快筛否决。</p>
+</div>
+
+<!-- ============================================================
+     §四 公司基本面（含剥离后剩余资产清单若触发）
+     ============================================================ -->
+<div class="section" id="fundamentals">
+<h2>§四 公司基本面</h2>
+<h3>业务板块</h3>
+<p>Figma 营收几乎 100% 来自<strong>平台订阅收入</strong>（subscription to platform），按合同期限分摊确认，合约以月度或年度为主，不可取消，通常预收款 [10-K: revenue_breakdown]。</p>
+<table>
+<thead>
+<tr>
+<th>产品/服务</th>
+<th>描述</th>
+<th style="text-align: center;">收入贡献</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Figma Design</td>
+<td>浏览器原生界面设计工具，实时多人协作</td>
+<td style="text-align: center;">~100%（单一报告分部）</td>
+<td>核心现金牛，NDR 139% [10-Q: mda]</td>
+</tr>
+<tr>
+<td>FigJam</td>
+<td>在线白板协作工具</td>
+<td style="text-align: center;">含在订阅内</td>
+<td>2021年推出，提升平台粘性</td>
+</tr>
+<tr>
+<td>Figma Slides</td>
+<td>演示文稿工具</td>
+<td style="text-align: center;">含在订阅内</td>
+<td>2024年推出</td>
+</tr>
+<tr>
+<td>Dev Mode</td>
+<td>开发者设计交付工具</td>
+<td style="text-align: center;">含在订阅内</td>
+<td>2023年推出，提升开发者付费意愿</td>
+</tr>
+<tr>
+<td>Figma Make (AI)</td>
+<td>AI 原型生成工具</td>
+<td style="text-align: center;">早期变现阶段</td>
+<td>2025年推出 [10-Q: mda]</td>
+</tr>
+<tr>
+<td>Figma Sites</td>
+<td>网站发布工具</td>
+<td style="text-align: center;">早期变现阶段</td>
+<td>2025年推出 [10-Q: mda]</td>
+</tr>
+<tr>
+<td>Figma Buzz</td>
+<td>营销资产管理</td>
+<td style="text-align: center;">早期变现阶段</td>
+<td>2025年推出 [10-Q: mda]</td>
+</tr>
+<tr>
+<td>Figma Draw</td>
+<td>矢量编辑工具</td>
+<td style="text-align: center;">早期变现阶段</td>
+<td>2025年推出 [10-Q: mda]</td>
+</tr>
+<tr>
+<td>AI Add-on / Credits</td>
+<td>AI 功能付费订阅 + 按量计费</td>
+<td style="text-align: center;">2026年3月起强制限额</td>
+<td>新变现引擎 [10-Q: guidance]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>商业模式核心特征</strong>:<br />
+- <strong>Freemium 转化</strong>: Starter Plan 免费 → 付费转化。免费用户带来大量 hosting 成本但无直接收入 [10-K: revenue_breakdown]<br />
+- <strong>NDR 139%</strong>（Q1 2026）: 现有客户持续扩大使用，Net Dollar Retention 极高，表明极强的平台粘性和 upsell 能力 [10-Q: mda]<br />
+- <strong>客户分层增长</strong>: FY2025 ARR&gt;$10K 客户数 YoY+32%，ARR&gt;$100K 客户数 YoY+46% [10-K: financial_statements]<br />
+- <strong>2025年产品大爆发</strong>: 一年推出 4 个新产品（Make/Sites/Buzz/Draw），平台化战略加速 [10-Q: mda]<br />
+- <strong>MCP Server</strong>: 推出 Model Context Protocol 服务器，允许开发者 IDE agent 直接读取 Figma 设计并转码，强化开发者生态 [10-Q: mda]</p>
+<h3>最新经营动态（近 12 个月关键事件）</h3>
+<table>
+<thead>
+<tr>
+<th>日期</th>
+<th>事件</th>
+<th>影响评估</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2025年</td>
+<td>Figma 完成 NYSE IPO，股票代码 FIG</td>
+<td>★ 里程碑事件，此前 Adobe 200亿美元收购因监管终止后独立上市 [phase1-data §1]</td>
+</tr>
+<tr>
+<td>2025 Q2</td>
+<td>首份公开财报：营收$249.6M，YoY+41%，略低于预期$250M</td>
+<td>股价暴跌20%，市场对 IPO 后首份财报极为敏感 [phase1-data §8]</td>
+</tr>
+<tr>
+<td>2025年</td>
+<td>一年推出4个新产品（Make/Sites/Buzz/Draw）</td>
+<td>平台化战略加速，但尚未贡献显著收入 [10-Q: mda]</td>
+</tr>
+<tr>
+<td>2026-03</td>
+<td>AI credit 限额强制实施，推出 AI add-on 订阅 + pay-as-you-go</td>
+<td>AI 变现模式正式启动，但存在用户反弹风险 [10-Q: guidance]</td>
+</tr>
+<tr>
+<td>2026-05-14</td>
+<td>Q1 2026 财报：营收$333.4M，YoY+46%，大幅超预期；上调全年指引</td>
+<td>★ 增长加速（上季+40%→本季+46%），调整后 EPS $0.10 vs 预期$0.06 [phase1-data §2]</td>
+</tr>
+</tbody>
+</table>
+<h3>财务趋势表（近 3-5 年 + 最新季度）</h3>
+<!-- ★ 来源: data_snapshot.md §3 多年趋势完整表 inline 全部行 + Q1 2026 10-Q 数据 -->
+
+<p><strong>年度趋势（data_snapshot.md §3 全量 inline）</strong>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">期末</th>
+<th style="text-align: right;">营收(亿$)</th>
+<th style="text-align: center;">YoY</th>
+<th style="text-align: right;">毛利率%</th>
+<th style="text-align: right;">净利率%</th>
+<th style="text-align: right;">归母净利(亿$)</th>
+<th style="text-align: center;">净利 YoY</th>
+<th style="text-align: right;">加权 ROE%</th>
+<th style="text-align: right;">资产负债率%</th>
+<th style="text-align: right;">OCF(亿$)</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">20251231</td>
+<td style="text-align: right;">10.56</td>
+<td style="text-align: center;">+40.96%</td>
+<td style="text-align: right;">82.43</td>
+<td style="text-align: right;">-118.44</td>
+<td style="text-align: right;">-12.5046</td>
+<td style="text-align: center;">+70.80%</td>
+<td style="text-align: right;">-82.78</td>
+<td style="text-align: right;">35.67</td>
+<td style="text-align: right;">2.5068</td>
+<td>[yfinance:income/fina_indicator]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20241231</td>
+<td style="text-align: right;">7.49</td>
+<td style="text-align: center;">+48.36%</td>
+<td style="text-align: right;">88.32</td>
+<td style="text-align: right;">-97.74</td>
+<td style="text-align: right;">-7.3212</td>
+<td style="text-align: center;">-356.11%</td>
+<td style="text-align: right;">-73.61</td>
+<td style="text-align: right;">26.16</td>
+<td style="text-align: right;">-0.6172</td>
+<td>[yfinance:income/fina_indicator]</td>
+</tr>
+<tr>
+<td style="text-align: center;">20231231</td>
+<td style="text-align: right;">5.05</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: right;">91.19</td>
+<td style="text-align: right;">56.62</td>
+<td style="text-align: right;">2.8586</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: right;">40.21</td>
+<td style="text-align: right;">34.88</td>
+<td style="text-align: right;">10.4733</td>
+<td>[yfinance:income/fina_indicator]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>最新季度 Q1 2026（2026-05-14 发布，10-Q 数据）</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>科目</th>
+<th style="text-align: right;">Q1 2026 ($M)</th>
+<th style="text-align: right;">Q1 2025 ($M)</th>
+<th style="text-align: center;">YoY</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>营收</td>
+<td style="text-align: right;">333.4</td>
+<td style="text-align: right;">228.2</td>
+<td style="text-align: center;">+46%</td>
+<td>[10-Q: financial_statements]</td>
+</tr>
+<tr>
+<td>营业成本</td>
+<td style="text-align: right;">68.7</td>
+<td style="text-align: right;">19.5</td>
+<td style="text-align: center;">+253%</td>
+<td>[10-Q: financial_statements]</td>
+</tr>
+<tr>
+<td>毛利</td>
+<td style="text-align: right;">264.8</td>
+<td style="text-align: right;">208.7</td>
+<td style="text-align: center;">+27%</td>
+<td>[10-Q: financial_statements]</td>
+</tr>
+<tr>
+<td>毛利率</td>
+<td style="text-align: right;">79.4%</td>
+<td style="text-align: right;">91.5%</td>
+<td style="text-align: center;">-12.1pp</td>
+<td>计算值</td>
+</tr>
+<tr>
+<td>营业亏损</td>
+<td style="text-align: right;">(137.4)</td>
+<td style="text-align: right;">39.7</td>
+<td style="text-align: center;">N/A</td>
+<td>[10-Q: financial_statements]</td>
+</tr>
+<tr>
+<td>净利润</td>
+<td style="text-align: right;">(142.4)</td>
+<td style="text-align: right;">44.9</td>
+<td style="text-align: center;">N/A</td>
+<td>[10-Q: financial_statements]</td>
+</tr>
+<tr>
+<td>经营现金流</td>
+<td style="text-align: right;">97.3</td>
+<td style="text-align: right;">97.2</td>
+<td style="text-align: center;">+0.1%</td>
+<td>[10-Q: guidance]</td>
+</tr>
+<tr>
+<td>自由现金流</td>
+<td style="text-align: right;">88.6</td>
+<td style="text-align: right;">94.6</td>
+<td style="text-align: center;">-6.3%</td>
+<td>[10-Q: guidance]</td>
+</tr>
+<tr>
+<td>OCF Margin</td>
+<td style="text-align: right;">29%</td>
+<td style="text-align: right;">43%</td>
+<td style="text-align: center;">-14pp</td>
+<td>计算值</td>
+</tr>
+<tr>
+<td>FCF Margin</td>
+<td style="text-align: right;">27%</td>
+<td style="text-align: right;">41%</td>
+<td style="text-align: center;">-14pp</td>
+<td>计算值</td>
+</tr>
+</tbody>
+</table>
+<p><strong>关键趋势解读</strong>:</p>
+<ol>
+<li>
+<p><strong>营收高速增长且加速</strong>: FY2023 $5.05亿 → FY2024 $7.49亿(+48%) → FY2025 $10.56亿(+41%) → Q1 2026 单季$3.33亿(YoY+46%)。Q1 增速反弹至46%，是自 FY2024 以来最快季度增速 [yfinance:income] [10-Q]。</p>
+</li>
+<li>
+<p><strong>毛利率持续下滑但仍处高位</strong>: FY2023 91.2% → FY2024 88.3% → FY2025 82.4% → Q1 2026 79.4%。下滑主因是 AI 基础设施成本上升——"primarily due to $49.1M of higher technical infrastructure and hosting costs relating to AI" [10-K: financial_statements]。毛利率仍在 SaaS 公司优秀区间(&gt;75%)。</p>
+</li>
+<li>
+<p><strong>★ SBC 是理解 Figma 财务的核心</strong>:<br />
+   - FY2025 SBC 合计 <strong>$13.64亿</strong>，占营收 <strong>129%</strong>（分拆: COGS $51M + R&amp;D $698M + S&amp;M $219M + G&amp;A $397M）[10-K: financial_statements]<br />
+   - FY2024 SBC $9.47亿（占营收 126%），FY2023 仅 $270万（IPO 前）[10-K: financial_statements]<br />
+   - <strong>SBC 暴增根因</strong>: IPO 后 RSU vesting 集中释放，这是 SaaS 公司 IPO 后 1-2 年的<strong>典型现象</strong>（参照 Snowflake、Confluent IPO 后 SBC 曲线）<br />
+   - <strong>剔除 SBC 后</strong>公司已接近 non-GAAP 盈利：Q1 2026 调整后 EPS $0.10 vs GAAP 大幅亏损 [phase1-data §2]<br />
+   - <strong>稀释效应</strong>: 股本从 FY2023 ~488M → FY2025 513M → Q1 2026 526M shares，年化稀释约 2-3% [10-K: risk_factors]</p>
+</li>
+<li>
+<p><strong>GAAP 亏损但现金流为正——典型 SBC 驱动型"假亏损"</strong>:<br />
+   - FY2025 GAAP 净亏 $12.5亿，但 OCF +$2.51亿，FCF +$2.37亿 [yfinance:cashflow]<br />
+   - Q1 2026 GAAP 净亏 $1.42亿，但 OCF $97.3M，FCF $88.6M [10-Q: guidance]<br />
+   - Q1 2026 OCF 包含 $56.1M 年度奖金支付（FY2025 accrued），扣除后 OCF margin 更高 [10-Q: guidance]</p>
+</li>
+<li>
+<p><strong>应收账款增速异常</strong>: FY2025 应收 $2.48亿 vs FY2024 $1.31亿，+89%，远超营收增速 41%，差距 48pp。可能原因: (1) 年末大客户签约集中; (2) 信用条件放宽 [10-K: balance_sheet]。⚠️ 需持续跟踪。</p>
+</li>
+<li>
+<p><strong>商誉暴增</strong>: FY2025 $1.01亿 vs FY2024 $0.11亿，+790%，暗示 FY2025 存在收购动作（10-K 中未显著披露具体标的）[yfinance:balancesheet]。</p>
+</li>
+</ol>
+<h3>管理层前瞻信号（<code>forecast_vip</code> 解读）</h3>
+<p>美股公司无 Tushare forecast_vip 数据。替代数据源:</p>
+<ul>
+<li><strong>Q1 2026 Earnings Call</strong>（2026-05-14）: 公司<strong>上调</strong> FY2026 全年营收和 non-GAAP 经营利润指引 [phase1-data §8]</li>
+<li>具体数字指引: 10-Q guidance section 提取不完整，列入 §十二 信息缺口 [10-Q: guidance]</li>
+<li><strong>信号判读</strong>: 上调指引 + Q1 超预期 = 强烈的正向前瞻信号</li>
+</ul>
+<h3>主力控盘与筹码分析</h3>
+<p><strong>美股市场不适用</strong> capital_flow.md（A股专用资金流向数据）。</p>
+<p><strong>替代: 机构持股结构</strong>（yfinance institutional_holders）:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">排名</th>
+<th>机构名称</th>
+<th style="text-align: right;">持股比例</th>
+<th style="text-align: right;">持股数(万股)</th>
+<th style="text-align: center;">报告日期</th>
+<th style="text-align: center;">变动</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td>Greylock XIV GP LLC</td>
+<td style="text-align: right;">13.15%</td>
+<td style="text-align: right;">5,842万</td>
+<td style="text-align: center;">2026-03-31</td>
+<td style="text-align: center;">持平</td>
+<td>[yfinance:institutional_holders]</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td>Index Venture Associates VI Ltd</td>
+<td style="text-align: right;">12.98%</td>
+<td style="text-align: right;">5,766万</td>
+<td style="text-align: center;">2025-12-31</td>
+<td style="text-align: center;">持平</td>
+<td>[yfinance:institutional_holders]</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td>SC US (TTGP), Ltd.</td>
+<td style="text-align: right;">5.69%</td>
+<td style="text-align: right;">2,526万</td>
+<td style="text-align: center;">2025-12-31</td>
+<td style="text-align: center;">持平</td>
+<td>[yfinance:institutional_holders]</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td>a16z Capital Management, L.L.C.</td>
+<td style="text-align: right;">3.66%</td>
+<td style="text-align: right;">1,625万</td>
+<td style="text-align: center;">2025-12-31</td>
+<td style="text-align: center;">持平</td>
+<td>[yfinance:institutional_holders]</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td>Vanguard Portfolio Management LLC</td>
+<td style="text-align: right;">2.25%</td>
+<td style="text-align: right;">1,000万</td>
+<td style="text-align: center;">2026-03-31</td>
+<td style="text-align: center;">新进</td>
+<td>[yfinance:institutional_holders]</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td>FMR, LLC (Fidelity)</td>
+<td style="text-align: right;">2.12%</td>
+<td style="text-align: right;">943万</td>
+<td style="text-align: center;">2025-12-31</td>
+<td style="text-align: center;">+24.2%</td>
+<td>[yfinance:institutional_holders]</td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td>Vanguard Capital Management LLC</td>
+<td style="text-align: right;">1.96%</td>
+<td style="text-align: right;">869万</td>
+<td style="text-align: center;">2026-03-31</td>
+<td style="text-align: center;">新进</td>
+<td>[yfinance:institutional_holders]</td>
+</tr>
+<tr>
+<td style="text-align: center;">8</td>
+<td>UBS Group AG</td>
+<td style="text-align: right;">1.81%</td>
+<td style="text-align: right;">805万</td>
+<td style="text-align: center;">2026-03-31</td>
+<td style="text-align: center;">+381.7%</td>
+<td>[yfinance:institutional_holders]</td>
+</tr>
+<tr>
+<td style="text-align: center;">9</td>
+<td>ICONIQ Capital, LLC</td>
+<td style="text-align: right;">1.31%</td>
+<td style="text-align: right;">581万</td>
+<td style="text-align: center;">2025-12-31</td>
+<td style="text-align: center;">-72.8%</td>
+<td>[yfinance:institutional_holders]</td>
+</tr>
+<tr>
+<td style="text-align: center;">10</td>
+<td>Viking Global Investors, L.P.</td>
+<td style="text-align: right;">1.29%</td>
+<td style="text-align: right;">575万</td>
+<td style="text-align: center;">2025-12-31</td>
+<td style="text-align: center;">新进</td>
+<td>[yfinance:institutional_holders]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>持股结构概览</strong> [yfinance:major_holders]:<br />
+- 内部人持股: 3.47%<br />
+- 机构持股: 76.54%<br />
+- 机构占流通股: 79.29%<br />
+- 机构持股家数: 390 家</p>
+<p><strong>股东结构分析</strong>:<br />
+1. <strong>VC 仍为最大股东群</strong>: Greylock(13.15%) + Index Ventures(12.98%) + SC US/Sequoia(5.69%) + a16z(3.66%) 合计约 35.5%。这些为 IPO 前投资者，锁定期后存在减持压力。<br />
+2. <strong>公募基金快速入场</strong>: Vanguard 两实体合计 4.21%（均为 Q1 2026 新进），Fidelity 2.12%（+24.2%），UBS 1.81%（+381.7%）——机构认可度快速提升。<br />
+3. <strong>ICONIQ 大幅减持 72.8%</strong>: 值得关注，可能为锁定期后获利了结。<br />
+4. <strong>双重股权结构</strong>: Class A(1票) / Class B(10票) / Class C(0票)，创始人 Dylan Field 通过 B 股控制投票权 [10-K: risk_factors]。内部人虽仅持 3.47% 经济权益，但投票控制权远超此比例。</p>
+<p><strong>Tushare 十大股东/十大流通股东/质押数据</strong>: 美股市场不适用（data_snapshot.md §5/§6/§7 均无数据）。</p>
+<h3>★ 若核心资产被剥离的剩余资产清单（v4.2 触发时必填）</h3>
+<p><strong>触发判定</strong>: 未触发。Figma 为单一业务平台公司，无核心资产剥离情况。</p>
+<hr />
+</div>
+
+<!-- ============================================================
+     §五 行业与竞争格局
+     ============================================================ -->
+<div class="section" id="industry">
+<h2>§五 行业与竞争格局</h2>
+<h3>行业规模与趋势</h3>
+<p><strong>目标市场</strong>: 设计协作软件 / 产品开发工具平台</p>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>数据</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>设计协作软件市场规模 (2026E)</td>
+<td>约 $150-200亿</td>
+<td>[phase1-data §10: MarkWide Research]</td>
+</tr>
+<tr>
+<td>2026-2033 CAGR</td>
+<td>~7.3%</td>
+<td>[phase1-data §10: MarkWide Research]</td>
+</tr>
+<tr>
+<td>更广泛图形设计软件市场</td>
+<td>持续增长，AI 驱动新一波工具革新</td>
+<td>[phase1-data §10]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>行业关键趋势</strong>:<br />
+1. <strong>从桌面端到浏览器端的迁移</strong>: 传统设计工具（Photoshop、Sketch）向浏览器原生协作工具转型，Figma 是这一趋势的<strong>定义者和最大受益者</strong> [10-K: business_overview]<br />
+2. <strong>设计-开发-产品协作一体化</strong>: 市场从"设计师工具"扩展到"产品团队协作平台"，TAM 显著扩大 [10-K: business_overview]<br />
+3. <strong>AI 重塑设计工具</strong>: AI 驱动的自动设计生成（如 Figma Make）正在改变设计流程，同时也降低了非专业用户的进入门槛，可能颠覆现有格局 [10-K: risk_factors]<br />
+4. <strong>Enterprise 渗透加深</strong>: 大型企业从个人/团队采购转向全组织统一采购，推高 ACV 和 NDR [10-K: financial_statements]<br />
+5. <strong>设计系统标准化</strong>: 组件库/设计令牌(Design Token)/变量系统成为企业刚需，Figma 在此领域处于领先地位 [10-Q: mda]</p>
+<h3>Porter 五力分析（集中在本节，不重复到 §六 维度 3）</h3>
+<table>
+<thead>
+<tr>
+<th>力量</th>
+<th style="text-align: center;">强度</th>
+<th>分析</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>供应商议价力</strong></td>
+<td style="text-align: center;">低</td>
+<td>主要成本为云基础设施(AWS/GCP)和人才。云服务商可替换性强；但 AI 基础设施(GPU)成本上升构成边际压力 [10-K: financial_statements]</td>
+</tr>
+<tr>
+<td><strong>买方议价力</strong></td>
+<td style="text-align: center;">中低</td>
+<td>设计师社区对 Figma 形成强路径依赖（文件格式/协作记忆/组件库生态），转换成本极高。但大型 Enterprise 客户具备一定议价能力 [10-K: business_overview]</td>
+</tr>
+<tr>
+<td><strong>新进入者威胁</strong></td>
+<td style="text-align: center;">中高</td>
+<td>AI-native 设计工具可能从零构建全新范式（如 Bolt/v0 等 AI 代码生成工具间接替代设计环节）；但构建 Figma 级别的协作基础设施 + 设计师生态壁垒极高 [10-K: risk_factors]</td>
+</tr>
+<tr>
+<td><strong>替代品威胁</strong></td>
+<td style="text-align: center;">中</td>
+<td>(1) AI 代码生成直接跳过设计环节; (2) Canva AI 从低端市场上攻; (3) "no-design" 运动（直接用组件库出品）。但专业级 UI 设计短期内不可替代 [10-K: risk_factors]</td>
+</tr>
+<tr>
+<td><strong>行业竞争强度</strong></td>
+<td style="text-align: center;">中高</td>
+<td>Adobe Creative Cloud 在大企业市场根基深厚；Canva 在非专业市场增长迅猛；新兴 AI 设计工具不断涌现。但 Figma 在专业设计师 + 产品团队协作细分市场占据主导地位 [phase1-data §10]</td>
+</tr>
+</tbody>
+</table>
+<h3>关键竞品对标</h3>
+<table>
+<thead>
+<tr>
+<th>竞品</th>
+<th>上市状态</th>
+<th>核心定位</th>
+<th>与 Figma 比较</th>
+<th style="text-align: center;">威胁等级</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Adobe (ADBE)</strong></td>
+<td>NYSE 上市</td>
+<td>全栈创意工具套件(Photoshop/Illustrator/XD)</td>
+<td>大企业市场根基深厚，但 XD 已实质放弃，Creative Cloud 向 Figma 导流</td>
+<td style="text-align: center;">★★★</td>
+</tr>
+<tr>
+<td><strong>Canva</strong></td>
+<td>私有（估值 $260亿+）</td>
+<td>非专业设计师的"人人可设计"平台</td>
+<td>从低端上攻，AI 功能激进；但与 Figma 目标用户群重叠有限</td>
+<td style="text-align: center;">★★☆</td>
+</tr>
+<tr>
+<td><strong>Sketch</strong></td>
+<td>私有</td>
+<td>macOS 原生 UI 设计工具（Figma 的前代主导者）</td>
+<td>市场份额持续流失给 Figma，已边缘化</td>
+<td style="text-align: center;">★☆☆</td>
+</tr>
+<tr>
+<td><strong>Miro</strong></td>
+<td>私有（估值 $175亿）</td>
+<td>在线白板/协作平台</td>
+<td>与 FigJam 直接竞争；但 Figma 核心设计工具无重叠</td>
+<td style="text-align: center;">★☆☆</td>
+</tr>
+<tr>
+<td><strong>Framer</strong></td>
+<td>私有</td>
+<td>设计+网站发布一体化</td>
+<td>与 Figma Sites 直接竞争；AI 功能激进</td>
+<td style="text-align: center;">★★☆</td>
+</tr>
+<tr>
+<td><strong>AI-native 工具群</strong></td>
+<td>多为早期</td>
+<td>Bolt/v0/Lovable 等 AI 代码生成</td>
+<td>可能跳过设计环节直接生成 UI 代码，长期颠覆风险</td>
+<td style="text-align: center;">★★★</td>
+</tr>
+</tbody>
+</table>
+<p><strong>竞争格局核心判断</strong>:</p>
+<ol>
+<li>
+<p><strong>Figma 在专业设计协作领域处于准垄断地位</strong>: 浏览器原生 + 实时协作 + 设计师社区网络效应构成"三合一护城河"。Adobe 试图以 $200亿收购即是对这一地位的最高认可 [phase1-data §1]。</p>
+</li>
+<li>
+<p><strong>最大威胁来自范式变迁而非直接竞品</strong>: AI 代码生成工具（如 Bolt、v0、Cursor）可能从根本上减少"先设计再开发"的需求。Figma 通过推出 Make（AI 原型）和 MCP Server（agent 直读设计）主动应对 [10-Q: mda]。</p>
+</li>
+<li>
+<p><strong>毛利率下滑是竞争成本的体现</strong>: 为保持 AI 功能竞争力，Figma 基础设施成本（COGS）FY2025 增长 112%，毛利率从 91%→82%→79%（Q1 2026）。这是必要的战略投入，但若 AI 变现不及预期，将持续侵蚀利润 [10-K: financial_statements]。</p>
+</li>
+<li>
+<p><strong>Adobe 从竞争对手转为间接助力</strong>: Adobe 放弃 XD 后，Creative Cloud 用户自然迁移至 Figma，形成事实上的生态互补 [phase1-data §10]。</p>
+</li>
+</ol>
+</div>
+
+<!-- ============================================================
+     §六 10 维度详细证据
+     ============================================================ -->
+<div class="section" id="detail">
+<h2>§六 10 维度详细证据</h2>
+<h3>维度 1 · 市场规模与结构（8/10）</h3>
+<p><strong>评分锚点参照</strong>: 7-8 分 = "TAM $10-100B，增长健康（CAGR 15-20%）；市场规模有多方数据交叉验证；明确的市场扩展路径；SAM 渗透率 5-15%；至少一个强顺风因素"</p>
+<p><strong>支撑证据</strong>:<br />
+- 设计协作软件市场 2026E 约 $150-200亿，2026-2033 CAGR ~7.3% [phase1-data §10: MarkWide Research]<br />
+- 更广泛的图形设计软件市场持续增长，AI 驱动新一波工具革新 [phase1-data §10]<br />
+- Figma 正在从"设计师工具"扩展到"产品团队协作平台"，TAM 因此显著扩大——2025年一年推出 4 个新产品（Make/Sites/Buzz/Draw）覆盖原型生成、网站发布、营销资产、矢量编辑 [10-Q: mda]<br />
+- 设计系统标准化（组件库/Design Token/变量系统）成为企业刚需，进一步拓展 TAM [10-Q: mda]<br />
+- Enterprise 渗透加深：FY2025 ARR&gt;$100K 客户数 YoY+46%，大型企业从个人/团队采购转向全组织统一采购 [10-K: financial_statements]</p>
+<p><strong>评分理由</strong>: TAM 在 $150-200亿区间且有明确扩展路径（从设计工具→产品开发平台），CAGR 7.3% 略低于 15-20% 标杆但 Figma 自身增速远超行业（46% YoY），且 AI + 平台化构成强顺风因素。给 8 分而非 9 分，是因为 CAGR 7.3% 相对温和，且"设计→代码"范式转移可能缩小设计工具 TAM。</p>
+<hr />
+<h3>维度 2 · 商业模式（9/10）</h3>
+<p><strong>评分锚点参照</strong>: 9-10 分 = "LTV/CAC &gt; 5x；毛利率 &gt; 70%（软件）或行业顶尖；多条已验证的收入来源，具备定价权；收入以经常性为主（ARR 占比 &gt; 80%）"</p>
+<p><strong>支撑证据</strong>:<br />
+- 收入 <strong>100% 订阅制</strong>，按合同期限分摊确认，合约不可取消，通常预收款 [10-K: revenue_breakdown]<br />
+- 毛利率 82.4%（FY2025），尽管较 FY2023 的 91.2% 有所下降，仍处于 SaaS 行业顶尖水平 [yfinance:fina_indicator]<br />
+- NDR <strong>139%</strong>（Q1 2026），远超 130% 卓越基准，表明极强的 upsell/expansion 能力 [10-Q: mda]<br />
+- Freemium 转化模型 + 自下而上的 land-and-expand 策略 + Enterprise 全组织采购三重增长引擎 [10-K: business_overview]<br />
+- FY2025 ARR&gt;$10K 客户数 YoY+32%，ARR&gt;$100K 客户数 YoY+46%，大客户增速更快 [10-K: financial_statements]<br />
+- AI 变现新引擎启动：2026年3月起 AI credit 限额 + AI add-on 订阅 + pay-as-you-go [10-Q: guidance]<br />
+- Q1 2026 non-GAAP 已接近盈利（调整后 EPS $0.10），GAAP 亏损完全由 SBC 驱动 [phase1-data §2]</p>
+<p><strong>评分理由</strong>: 100% 订阅收入 + 82% 毛利率 + 139% NDR + Freemium 转化 + AI 变现新引擎，完美匹配 9-10 分锚点。给 9 分而非 10 分，因为 AI 变现模型尚处早期，且毛利率呈下降趋势（91%→82%→79%）。</p>
+<hr />
+<h3>维度 3 · 盈利能力（5/10）</h3>
+<p><strong>评分锚点参照（上市公司版）</strong>: 需区分 GAAP vs non-GAAP。上市公司财务健康指标中，经营现金流/净利润 &gt; 1.2x = 优秀(8+)，0.8-1.2x = 中等(5-6)，&lt; 0.5x = 危险(1-2)。</p>
+<p><strong>支撑证据</strong>:<br />
+- <strong>GAAP 视角——巨额亏损</strong>:<br />
+  - FY2025 GAAP 净亏 $12.50亿，净利率 -118.44% [yfinance:income]<br />
+  - FY2024 GAAP 净亏 $7.32亿，净利率 -97.74% [yfinance:income]<br />
+  - FY2025 营业亏损 $12.90亿，占营收 -122% [10-K: financial_statements]<br />
+  - 加权 ROE -82.78%（FY2025），-73.61%（FY2024）[yfinance:fina_indicator]<br />
+  - DuPont 分解: ROE=-82.78% = 净利率 -118.44% × 资产周转 0.45 × 权益乘数 1.55 [audit: DuPont, ℹ️ 信息]</p>
+<ul>
+<li><strong>★ SBC 是理解盈利能力的核心</strong>:</li>
+<li>FY2025 SBC 合计 <strong>$13.64亿</strong>，占营收 <strong>129%</strong>（分拆: COGS $51M + R&amp;D $698M + S&amp;M $219M + G&amp;A $397M）[10-K: financial_statements]</li>
+<li>FY2024 SBC $9.47亿（占营收 126%），FY2023 仅 $270万（IPO 前）[10-K: financial_statements]</li>
+<li>
+<p>SBC 暴增根因: IPO 后 RSU vesting 集中释放，这是 SaaS 公司 IPO 后 1-2 年的典型现象 [10-K: financial_statements]</p>
+</li>
+<li>
+<p><strong>Non-GAAP 视角——接近盈利</strong>:</p>
+</li>
+<li>Q1 2026 调整后 EPS $0.10 vs 预期 $0.06，大幅超预期 [phase1-data §2]</li>
+<li>FY2025 OCF +$2.51亿，FCF +$2.37亿，现金流已为正 [yfinance:cashflow]</li>
+<li>Q1 2026 OCF $97.3M（margin 29%），FCF $88.6M（margin 27%）[10-Q: guidance]</li>
+<li>
+<p>GAAP 亏损但现金流为正——典型 SBC 驱动型"假亏损" [10-Q: guidance]</p>
+</li>
+<li>
+<p><strong>毛利率下滑趋势</strong>: FY2023 91.2% → FY2024 88.3% → FY2025 82.4% → Q1 2026 79.4%。主因是 AI 基础设施成本上升——"primarily due to $49.1M of higher technical infrastructure and hosting costs relating to AI" [10-K: financial_statements]</p>
+</li>
+</ul>
+<p><strong>评分理由</strong>: GAAP 维度看，ROE 为深度负数、净利率 -118%，属于 1-2 分区间。但考虑到 SBC 占营收 129% 是 IPO 后典型现象（非经营性亏损），且 non-GAAP 已接近盈利、FCF 已转正，实际经营盈利能力远好于 GAAP 表现。综合折衷给 5 分——承认 GAAP 巨亏的事实，同时认可 non-GAAP 转正的积极信号。若 SBC 在未来 2 年随 RSU vesting 高峰过去而正常化，评分可上调至 7-8。</p>
+<hr />
+<h3>维度 4 · 产品与技术（9/10）</h3>
+<p><strong>评分锚点参照</strong>: 9-10 分 = "产品 NPS &gt; 50；技术架构领先，形成真正技术壁垒；平台型产品，生态系统已初步形成；产品迭代速度快；拥有核心技术 know-how"</p>
+<p><strong>支撑证据</strong>:<br />
+- <strong>浏览器原生实时协作引擎</strong>: Figma 是全球首个完全浏览器原生的专业级 UI 设计工具，底层基于 WebGL/WebAssembly 自研渲染引擎，技术壁垒极高——Adobe 试图以 $200亿收购即是对这一技术价值的最高认可 [phase1-data §1]<br />
+- <strong>2025年产品大爆发</strong>: 一年推出 4 个新产品（Make/Sites/Buzz/Draw），从设计工具扩展到原型生成、网站发布、营销资产管理、矢量编辑全栈 [10-Q: mda]<br />
+- <strong>AI 功能矩阵</strong>: Figma AI（自动设计生成）+ Figma Make（AI 原型）+ AI credit 变现模型，AI adoption 在加速 [10-Q: mda]<br />
+- <strong>MCP Server</strong>: 推出 Model Context Protocol 服务器，允许开发者 IDE agent 直接读取 Figma 设计并转码，强化开发者生态闭环 [10-Q: mda]<br />
+- <strong>Dev Mode</strong>: 2023年推出的开发者交付工具，提升开发者付费意愿，连接设计与开发流程 [10-K: business_overview]<br />
+- <strong>平台生态</strong>: 插件市场 + 社区模板 + 设计系统（组件库/变量/Design Token）已形成完整生态 [10-K: business_overview]</p>
+<p><strong>评分理由</strong>: 浏览器原生技术壁垒 + 平台型产品生态 + 4 个新产品快速迭代 + AI 前沿整合 + MCP 开发者生态，完美匹配 9-10 分。给 9 分而非 10 分，因新产品（Sites/Make/Buzz/Draw）尚处早期，未贡献显著收入。</p>
+<hr />
+<h3>维度 5 · 团队与管理层（7/10）</h3>
+<p><strong>评分锚点参照（上市公司追加）</strong>: 7-8 分 = "创始人有相关行业深厚背景；关键岗位已到位；董事会构成合理；团队稳定性好"。上市公司追加: 内部人持股比例(&gt;10% 加分, &lt;1% 减分)、高管薪酬合理性、治理评分。</p>
+<h4>管理层利益对齐</h4>
+<ul>
+<li><strong>内部人持股</strong>: 3.47% [yfinance:major_holders]——低于 10% 标杆，但创始人 Dylan Field 通过 Class B 股票（10票/股）控制投票权，实际控制力远超经济权益 [10-K: risk_factors]</li>
+<li><strong>双重股权结构</strong>: Class A(1票)/Class B(10票)/Class C(0票)，创始人控制投票权 [10-K: risk_factors]——这是硅谷科技公司的常见结构（参照 Google/Meta），利于长期战略稳定但弱化小股东权利</li>
+<li><strong>SBC 占营收 129%</strong>: 大量薪酬以股权形式发放，高管与股东利益绑定，但也意味着持续稀释 [10-K: financial_statements]</li>
+</ul>
+<h4>核心团队画像</h4>
+<ul>
+<li><strong>Dylan Field (CEO/创始人)</strong>: 2012年创立 Figma（当时仅 20 岁），Thiel Fellow。带领公司从零到 $10亿+ 营收，成功拒绝 Adobe $200亿收购并独立 IPO [phase1-data §1]</li>
+<li>关键岗位已到位（CFO、CTO 等），成功完成 IPO 过渡</li>
+<li>机构持股 76.54%，机构家数 390 家，表明专业投资者高度认可 [yfinance:major_holders]</li>
+<li>Vanguard、Fidelity、UBS 等公募基金 Q1 2026 大幅加仓或新进 [yfinance:institutional_holders]</li>
+</ul>
+<p><strong>评分理由</strong>: 创始人 Dylan Field 背景优秀（Thiel Fellow、从零到 $10亿+营收），机构认可度极高（390 家机构持股 76.54%）。给 7 分而非 8 分，主要因为: (1) 内部人经济持股仅 3.47%，低于理想水平; (2) 双重股权结构弱化小股东权利; (3) 公开信息中高管团队其他成员画像有限（列入信息缺口）。</p>
+<hr />
+<h3>维度 6 · 市场进入与护城河（9/10）</h3>
+<p><strong>评分锚点参照</strong>: 9-10 分 = "拥有多重复合护城河（网络效应 + 数据壁垒 + 品牌 + 规模）；市场份额第一且持续扩大；竞争对手短期内无法复制核心优势；客户转换成本极高"</p>
+<p><strong>支撑证据</strong>:<br />
+- <strong>网络效应</strong>: 设计师协作产生强直接网络效应——团队中一人使用 Figma，全团队必须使用；NDR 139% 即是网络效应在组织内扩散的量化证据 [10-Q: mda]<br />
+- <strong>转换成本极高</strong>: 设计文件格式锁定 + 协作记忆 + 组件库/设计系统生态 + 团队工作流深度嵌入。从 Figma 迁出意味着重建整个设计系统 [10-K: business_overview]<br />
+- <strong>品牌/社区壁垒</strong>: Figma 在专业设计师社区的品牌认知度接近垄断级别；设计师社区（插件/模板/教程）构成生态护城河 [phase1-data §10]<br />
+- <strong>技术壁垒</strong>: 浏览器原生 WebGL/WebAssembly 实时协作引擎，竞争对手需 5-10 年重建 [10-K: business_overview]<br />
+- <strong>市场份额第一</strong>: Adobe 试图以 $200亿收购本身即是对 Figma 市场主导地位的确认；Adobe XD 已实质放弃 [phase1-data §1]<br />
+- <strong>平台效应</strong>: 2025年 4 个新产品将 Figma 从单一设计工具扩展为产品开发平台，进一步提高转换成本 [10-Q: mda]</p>
+<p><strong>评分理由</strong>: 网络效应 + 转换成本 + 品牌社区 + 技术壁垒 = 多重复合护城河，完美匹配 9-10 分。给 9 分而非 10 分，因为 AI-native 设计工具（如 Bolt/v0/Lovable）可能从根本上改变"先设计再开发"的范式，长期构成颠覆风险 [10-K: risk_factors]。</p>
+<hr />
+<h3>维度 7 · 财务健康度（6/10）</h3>
+<p><strong>评分锚点参照（上市公司版）</strong>: 流动比率 &gt;2.0 = 优秀(8+)；资产负债率 &lt;40% = 优秀(8+)；经营现金流/净利润需区分 SBC 影响。</p>
+<p><strong>支撑证据</strong>:<br />
+- <strong>流动比率 2.58</strong>: 处于优秀区间(&gt;2.0) [yfinance:fina_indicator]<br />
+- <strong>资产负债率 35.67%</strong>: 处于优秀区间(&lt;40%) [yfinance:fina_indicator]<br />
+- <strong>有息负债仅 $5,848万</strong>: 债务负担极轻 [yfinance:fina_indicator]<br />
+- <strong>现金 $4.03亿</strong>: FY2025 末现金 $4.03亿(较 FY2024 $4.87亿减少 17%，但考虑到 IPO 后 SBC 现金替代效应) [yfinance:balancesheet]<br />
+- <strong>FCF 转正</strong>: FY2025 FCF +$2.37亿，FY2024 FCF -$0.69亿，大幅改善 [yfinance:cashflow]<br />
+- <strong>★ 审计红旗引用</strong>:<br />
+  - [audit: Piotroski F-Score, 🟠 高] F=3/9，财务健康指标恶化中。逐项: NI&lt;0 ✗、ROA&lt;0 ✗、OCF&gt;0 ✓、OCF&gt;NI ✓、ROA↑ ✗（-0.408→-0.533）、资产负债率↑ ✗（0.262→0.357）、流动比率↓ ✗（3.665→2.583）、毛利率↓ ✗（0.883→0.824）、资产周转率↑ ✓（0.418→0.450）<br />
+  - [audit: Buffett Quality, 🟠 高] OCF/NI = -0.2（因 NI 为大额负数，比值失真——实际 OCF 为正$2.51亿，NI 为负$12.50亿，数学上 OCF/NI &lt; 0 但经济含义是"现金流远好于利润"）<br />
+  - [audit: Buffett Quality, 🟠 高] 应收账款增速 88.8% vs 营收增速 41.0%，差距 48pp——可能原因: (1) 年末大客户签约集中; (2) 信用条件放宽 [10-K: balance_sheet]<br />
+  - [audit: Sloan Accrual, 🟡 中] 高应计比例 -0.639（应计=-15.01亿/TA=23.48亿），但主要由 SBC 非现金费用驱动，非传统应计异常</p>
+<ul>
+<li><strong>★ SBC 对财务健康的影响</strong>:</li>
+<li>FY2025 SBC $13.64亿占营收 129%，导致 GAAP 巨亏，但不消耗现金</li>
+<li>稀释效应: 股本 FY2023 ~488M → FY2025 513M → Q1 2026 526M，年化稀释约 2-3% [10-K: risk_factors]</li>
+<li>
+<p>IPO 后 RSU vesting 高峰预计 1-2 年内过去，SBC 将逐步正常化</p>
+</li>
+<li>
+<p><strong>商誉暴增</strong>: FY2025 $1.01亿 vs FY2024 $0.11亿，+790%，暗示 FY2025 存在收购动作 [yfinance:balancesheet]</p>
+</li>
+</ul>
+<p><strong>评分理由</strong>: 流动比率和资产负债率均处优秀区间，FCF 已转正，有息负债极低。但 Piotroski F=3/9（🟠 高）、应收账款增速异常（🟠 高）、SBC 导致的持续股权稀释构成显著隐患。综合给 6 分——资产负债表健康，但 GAAP 层面的财务指标普遍恶化（F-Score 仅 3 分、ROA/ROE 深度为负），且应收账款增速需密切跟踪。</p>
+<hr />
+<h3>维度 8 · 估值合理性（5/10）</h3>
+<p><strong>评分锚点参照（上市公司版）</strong>: 5-6 分 = "PE 与行业持平，无明显低估或高估"。SaaS 行业 EV/Revenue 标杆 6-10x，增速基准 20-40%。</p>
+<p><strong>支撑证据</strong>:<br />
+- <strong>当前估值水平</strong>: Figma 作为 FY2025 营收 $10.56亿、YoY+41% 的高增长 SaaS 公司，IPO 后股价波动剧烈（52周高 $142.92 / 52周低 $16.60）[phase1-data §4]<br />
+- <strong>GAAP PE 不适用</strong>: 公司处于 GAAP 亏损状态，PE 无意义<br />
+- <strong>PS 估值</strong>: 以 SaaS 行业 EV/Revenue 6-10x 为基准。Figma 增速 41-46% 远超行业中位数(20-40%)，NDR 139% 为顶级水平，理论上可支撑 10-15x PS<br />
+- <strong>SBC 稀释风险</strong>: SBC 占营收 129%，即使 non-GAAP 接近盈利，考虑稀释后的 PE 仍然极高<br />
+- <strong>可比参照</strong>: Adobe (ADBE) 增速约 10%，PS 约 8-10x；Figma 增速是 Adobe 的 4 倍，可支撑更高倍数，但绝对估值水平仍需观察<br />
+- [audit: Altman Z-Score, ℹ️ 信息] Z=-0.736，处于"破产风险区"，但⚠️公式降级（MV=0 缺失），结论不可靠。对于无 net income 的高增长 SaaS 公司，Z-Score 不适用</p>
+<p><strong>评分理由</strong>: 高增长 SaaS 公司的估值天然偏高，Figma 41-46% 增速 + 139% NDR 可支撑高于行业中位数的 PS 倍数。但 GAAP 巨亏 + SBC 稀释 + IPO 后股价剧烈波动（首份财报 miss 即暴跌 20%）表明市场对其估值极为敏感。给 5 分表示"估值不低但增速可支撑"——既非低估也非泡沫，需要后续几个季度持续超预期才能维持当前水平。</p>
+<hr />
+<h3>维度 9 · 风险与治理（6/10）</h3>
+<p><strong>评分锚点参照</strong>: 5-6 分 = "存在监管不确定性但不致命；客户集中度偏高；存在关键人物依赖"。上市公司追加: 做空比率、分析师降级、盈利 miss 次数、审计意见。</p>
+<p><strong>支撑证据</strong>:<br />
+- <strong>★ 审计红旗汇总引用</strong>:<br />
+  - [audit: Piotroski F-Score, 🟠 高] F=3/9，多项财务健康指标同步恶化<br />
+  - [audit: Buffett Quality, 🟠 高] 应收账款增速 88.8% 远超营收增速 41.0%<br />
+  - [audit: Sloan Accrual, 🟡 中] 高应计比例（SBC 驱动）<br />
+  - [audit: Beneish M-Score, 🟢 低] M=-4.557，盈余操纵概率低（正面信号）<br />
+  - 审计红旗统计: 0 个 🔴 致命 / 3 个 🟠 高 / 1 个 🟡 中 / 1 个 🟢 低 / 3 个 ℹ️ 信息</p>
+<ul>
+<li><strong>双重股权结构</strong>: 创始人控制投票权，小股东无力制衡——这是长期治理隐患但短期有利于战略一致性 [10-K: risk_factors]</li>
+<li><strong>关键人物依赖</strong>: 创始人 Dylan Field 作为 CEO 的重要性极高，无明确继任计划披露</li>
+<li><strong>竞争风险</strong>: AI-native 设计工具可能颠覆 Figma 的市场定位 [10-K: risk_factors]</li>
+<li><strong>单一产品集中</strong>: 营收几乎 100% 来自 Figma Design 平台订阅 [10-K: risk_factors]</li>
+<li><strong>客户分散度</strong>: 未披露前 5 大客户收入占比，但 SaaS 订阅模式天然分散（数十万组织用户）</li>
+<li><strong>盈利 miss 记录</strong>: Q2 2025 首份公开财报略低于预期致股价暴跌 20% [phase1-data §8]</li>
+<li><strong>正面</strong>: Beneish M-Score = -4.557，远低于 -1.78 警示线，盈余操纵概率极低 [audit: Beneish, 🟢 低]</li>
+</ul>
+<p><strong>评分理由</strong>: 无 🔴 致命红旗，Beneish M-Score 良好（无操纵嫌疑），客户天然分散。但 3 个 🟠 高级审计红旗 + 双重股权 + 关键人物依赖 + 单一产品集中 + AI 颠覆风险叠加，风险不算低。给 6 分——风险可管理但不可忽视。</p>
+<hr />
+<h3>维度 10 · 催化剂与时机（8/10）</h3>
+<p><strong>评分锚点参照（上市公司版）</strong>: 7-8 分 = "总回报预期&gt;20%/年，催化剂可见"</p>
+<p><strong>支撑证据</strong>:<br />
+- <strong>Q1 2026 大幅超预期催化</strong>: 营收 $333.4M YoY+46%（加速增长），调整后 EPS $0.10 vs 预期 $0.06，公司上调全年指引 [phase1-data §2]<br />
+- <strong>AI 变现启动</strong>: 2026年3月开始 AI credit 限额，推出 AI add-on 订阅 + pay-as-you-go，新增长引擎 [10-Q: guidance]<br />
+- <strong>4 个新产品 TAM 扩展</strong>: Make/Sites/Buzz/Draw 将在 FY2026-2027 逐步贡献收入 [10-Q: mda]<br />
+- <strong>Enterprise 渗透深化</strong>: ARR&gt;$100K 客户数 YoY+46%，大客户增速快于整体 [10-K: financial_statements]<br />
+- <strong>SBC 正常化预期</strong>: IPO 后 RSU vesting 高峰预计 1-2 年内过去，GAAP 利润率将大幅改善 [10-K: financial_statements]<br />
+- <strong>MCP Server 开发者生态</strong>: 连接 AI agent 和 Figma 设计，可能开启全新的"设计即 API"范式 [10-Q: mda]</p>
+<p><strong>评分理由</strong>: 短期催化剂密集（Q1 超预期 + 上调指引 + AI 变现启动），中期催化剂清晰（新产品收入贡献 + SBC 正常化 + Enterprise 渗透）。给 8 分，因为催化剂可见且时点确定（Q2/Q3 2026 将验证 AI 变现 + 新产品收入），但若增速放缓或 AI 变现不及预期，估值将面临大幅调整。</p>
+<hr />
+</div>
+
+<!-- ============================================================
+     §七 网络舆情与市场情绪
+     ============================================================ -->
+<div class="section" id="sentiment">
+<h2>§七 网络舆情与市场情绪</h2>
+<h3>看多派声音</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>核心观点</th>
+<th>证据/逻辑</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Q1 2026 营收加速增长证明产品-市场契合度极强</td>
+<td>营收 YoY+46%（vs 上季度+40%），增速不减反加；调整后 EPS $0.10 大幅超预期 $0.06</td>
+<td>[phase1-data §9: 投资社区舆情]</td>
+</tr>
+<tr>
+<td>2</td>
+<td>NDR 139% 表明平台粘性和 upsell 能力为行业顶尖</td>
+<td>现有客户持续扩大使用，远超 SaaS 行业 120% 优秀基准；ARR&gt;$100K 客户数 YoY+46%</td>
+<td>[phase1-data §9] [10-Q: mda]</td>
+</tr>
+<tr>
+<td>3</td>
+<td>AI 功能整合为长期增长提供全新引擎</td>
+<td>Figma AI adoption 加速，2026年3月起 AI credit 变现启动；Figma Make(AI 原型) + MCP Server(agent 直读设计)开拓全新 TAM</td>
+<td>[phase1-data §9] [10-Q: guidance]</td>
+</tr>
+<tr>
+<td>4</td>
+<td>设计协作市场仍处早期渗透阶段，TAM 远未触顶</td>
+<td>从设计师工具扩展到产品团队协作平台（4 个新产品），Enterprise 全组织采购趋势加速</td>
+<td>[phase1-data §9]</td>
+</tr>
+</tbody>
+</table>
+<h3>看空派声音</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>核心观点</th>
+<th>证据/逻辑</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>IPO 后首份财报即低于预期致股价暴跌 20%，执行风险仍存</td>
+<td>Q2 2025 营收 $249.6M 略低于预期 $250M，市场反应极为剧烈，表明估值对预期的容错率极低</td>
+<td>[phase1-data §9] [phase1-data §8]</td>
+</tr>
+<tr>
+<td>2</td>
+<td>估值极高且增长放缓即遭重罚</td>
+<td>高 PS 倍数 SaaS 公司，增速从 48%→41% 时市场已不满；GAAP 巨亏加剧估值争议</td>
+<td>[phase1-data §9]</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Adobe 等巨头持续投入 + AI 免费设计工具蚕食低端市场</td>
+<td>Adobe Creative Cloud 在大企业市场根基深厚；Canva AI 从非专业设计师市场上攻；Bolt/v0/Lovable 等 AI 代码生成可能跳过设计环节</td>
+<td>[phase1-data §9] [10-K: risk_factors]</td>
+</tr>
+<tr>
+<td>4</td>
+<td>GAAP 亏损状态持续，盈利路径不清晰</td>
+<td>FY2025 GAAP 净利率 -118%，SBC 占营收 129%；即使 SBC 正常化时间表不确定，稀释效应持续（年化 2-3%）</td>
+<td>[phase1-data §9] [10-K: financial_statements]</td>
+</tr>
+</tbody>
+</table>
+<h3>资金流向信号（v4.4 — Read <code>capital_flow.md</code> §4/§5/§6）</h3>
+<p><strong>美股市场不适用</strong>。美股无 A 股特有的陆股通、两融、主力资金流等数据源。</p>
+<p>替代参考——机构持仓变化信号:<br />
+- <strong>Vanguard 两实体合计 4.21% 新进</strong>（Q1 2026），代表被动/指数型资金大量流入 [yfinance:institutional_holders]<br />
+- <strong>Fidelity +24.2%</strong>、<strong>UBS +381.7%</strong> 大幅加仓 [yfinance:institutional_holders]<br />
+- <strong>ICONIQ -72.8%</strong> 大幅减持，可能为锁定期后获利了结 [yfinance:institutional_holders]<br />
+- <strong>VC 仍为最大股东群</strong>: Greylock(13.15%) + Index Ventures(12.98%) + Sequoia(5.69%) + a16z(3.66%) 合计约 35.5%，锁定期后存在减持压力 [yfinance:institutional_holders]<br />
+- <strong>整体信号</strong>: 公募/被动基金加速入场（正面）vs VC/早期投资者锁定期后减持风险（负面），净方向中性偏正。</p>
+<hr />
+</div>
+
+<!-- ============================================================
+     §八 可比公司对标
+     ============================================================ -->
+<div class="section" id="peers">
+<h2>§八 可比公司对标（v4.4 — Read `peer_analysis.md`）</h2>
+<h3>§8.1 A 股同行业对标（自动采集）</h3>
+<p>美股市场无 peer_analysis.md（仅 A 股适用）。以下基于 phase1-data.md §6 竞品信息 + 公开可比公司数据构建。</p>
+<h3>§8.2 上市可比公司对标</h3>
+<table>
+<thead>
+<tr>
+<th>公司</th>
+<th>代码</th>
+<th style="text-align: right;">营收(FY2025, $B)</th>
+<th style="text-align: center;">营收增速</th>
+<th style="text-align: right;">毛利率</th>
+<th style="text-align: right;">Non-GAAP OP Margin</th>
+<th style="text-align: right;">PS 倍数(估)</th>
+<th style="text-align: center;">NDR</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Figma</strong></td>
+<td>FIG</td>
+<td style="text-align: right;">1.06</td>
+<td style="text-align: center;">+41%</td>
+<td style="text-align: right;">82%</td>
+<td style="text-align: right;">~盈亏平衡</td>
+<td style="text-align: right;">高(IPO后波动)</td>
+<td style="text-align: center;">139%</td>
+<td>[yfinance] [10-K]</td>
+</tr>
+<tr>
+<td><strong>Adobe</strong></td>
+<td>ADBE</td>
+<td style="text-align: right;">~21.5</td>
+<td style="text-align: center;">~10%</td>
+<td style="text-align: right;">~88%</td>
+<td style="text-align: right;">~35%</td>
+<td style="text-align: right;">~10x</td>
+<td style="text-align: center;">~110%</td>
+<td>[公开数据/yfinance 参考]</td>
+</tr>
+<tr>
+<td><strong>Atlassian</strong></td>
+<td>TEAM</td>
+<td style="text-align: right;">~4.4</td>
+<td style="text-align: center;">~25%</td>
+<td style="text-align: right;">~82%</td>
+<td style="text-align: right;">~20%</td>
+<td style="text-align: right;">~15x</td>
+<td style="text-align: center;">~115%</td>
+<td>[公开数据/yfinance 参考]</td>
+</tr>
+<tr>
+<td><strong>Datadog</strong></td>
+<td>DDOG</td>
+<td style="text-align: right;">~2.7</td>
+<td style="text-align: center;">~26%</td>
+<td style="text-align: right;">~80%</td>
+<td style="text-align: right;">~25%</td>
+<td style="text-align: right;">~18x</td>
+<td style="text-align: center;">~115%</td>
+<td>[公开数据/yfinance 参考]</td>
+</tr>
+<tr>
+<td><strong>Monday.com</strong></td>
+<td>MNDY</td>
+<td style="text-align: right;">~1.1</td>
+<td style="text-align: center;">~28%</td>
+<td style="text-align: right;">~89%</td>
+<td style="text-align: right;">~15%</td>
+<td style="text-align: right;">~15x</td>
+<td style="text-align: center;">~115%</td>
+<td>[公开数据/yfinance 参考]</td>
+</tr>
+<tr>
+<td><strong>Canva</strong></td>
+<td>Private</td>
+<td style="text-align: right;">~2.5E</td>
+<td style="text-align: center;">~30%E</td>
+<td style="text-align: right;">~90%E</td>
+<td style="text-align: right;">盈利</td>
+<td style="text-align: right;">N/A(私有)</td>
+<td style="text-align: center;">N/A</td>
+<td>[phase1-data §6]</td>
+</tr>
+</tbody>
+</table>
+<p><em>注: Adobe/Atlassian/Datadog/Monday.com 数据为公开市场参考值，非精确最新季度数据，用于方向性对标。Canva 为估计值。</em></p>
+<h3>§8.3 目标公司在 peer 中的分位</h3>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th style="text-align: right;">Figma</th>
+<th style="text-align: right;">Peer 中位数</th>
+<th style="text-align: center;">Figma 分位</th>
+<th>解读</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>营收增速</td>
+<td style="text-align: right;">+41%</td>
+<td style="text-align: right;">~25%</td>
+<td style="text-align: center;"><strong>Top 1</strong></td>
+<td>远超可比公司，增速领先</td>
+</tr>
+<tr>
+<td>毛利率</td>
+<td style="text-align: right;">82%</td>
+<td style="text-align: right;">~85%</td>
+<td style="text-align: center;">中位</td>
+<td>略低于 peer（AI 成本拉低），但仍属优秀区间</td>
+</tr>
+<tr>
+<td>NDR</td>
+<td style="text-align: right;">139%</td>
+<td style="text-align: right;">~115%</td>
+<td style="text-align: center;"><strong>Top 1</strong></td>
+<td>极为突出，表明平台粘性远超同业</td>
+</tr>
+<tr>
+<td>Non-GAAP OP Margin</td>
+<td style="text-align: right;">~0%</td>
+<td style="text-align: right;">~20%</td>
+<td style="text-align: center;"><strong>Bottom</strong></td>
+<td>SBC 拖累，剔除后改善空间大</td>
+</tr>
+<tr>
+<td>营收规模</td>
+<td style="text-align: right;">$1.06B</td>
+<td style="text-align: right;">~$2.5B</td>
+<td style="text-align: center;">较小</td>
+<td>IPO 不到 1 年，仍处高速增长扩张期</td>
+</tr>
+</tbody>
+</table>
+<h3>§8.4 硬判定对比洞察</h3>
+<ol>
+<li>
+<p><strong>增速 + NDR 双领先</strong>: Figma 的 41% 营收增速和 139% NDR 在可比 SaaS 公司中均排名第一。这两个指标的组合（高增长 + 高留存）是 SaaS 公司中最稀缺的特质，理论上可支撑溢价估值。</p>
+</li>
+<li>
+<p><strong>毛利率下滑是差异化的代价</strong>: Figma 82% 毛利率低于 Adobe(88%) 和 Monday.com(89%)，主要因为 AI 基础设施投入推高 COGS。若 AI 功能变现成功（AI credit + add-on），毛利率有望企稳回升。</p>
+</li>
+<li>
+<p><strong>GAAP 盈利能力为 peer 最差</strong>: Figma 是唯一 GAAP 深度亏损的公司（net margin -118%），但这几乎完全由 IPO 后 SBC 驱动。Non-GAAP 口径下已接近盈利，随着 SBC 正常化（预计 1-2 年），盈利能力将快速追赶 peer。</p>
+</li>
+<li>
+<p><strong>估值隐含的增长预期极高</strong>: Figma 作为 IPO 不到 1 年的高增长 SaaS 公司，市场给予的 PS 倍数远高于 Adobe（成熟期）但需与 Datadog/Monday.com（成长期 SaaS）对标。若增速从 46% 回落至 30% 以下，估值将面临显著压缩。</p>
+</li>
+<li>
+<p><strong>Canva 是最直接的私有竞品</strong>: 估值 $260亿+、营收约 $25亿、已盈利——Canva 在非专业设计师市场的主导地位对 Figma 的低端市场构成持续压力，但两者目标用户群重叠有限（专业设计师 vs 非设计师）[phase1-data §6]。</p>
+</li>
+</ol>
+</div>
+
+<!-- ============================================================
+     §九 估值与回报模拟
+     ============================================================ -->
+<div class="section" id="valuation">
+<h2>§九 估值与回报模拟</h2>
+<h3>9.1 估值方法选择</h3>
+<p>Figma 为高增长 SaaS 公司，GAAP 巨额亏损（FY2025 净利率 -118%），但 FCF 已转正（FY2025 FCF $2.37亿，Q1 2026 FCF $88.6M）。PE/PB 估值不适用，采用 <strong>FCF-based DCF</strong> 作为估值锚，辅以 EV/Revenue 可比倍数交叉验证。</p>
+<p><strong>选择 FCF 而非 NI 的理由</strong>: Figma GAAP 亏损完全由 SBC 驱动（FY2025 SBC $13.64亿，占营收 129%），SBC 为非现金费用，FCF 才能反映真实经营价值创造能力 [10-K: financial_statements]。</p>
+<p><strong>SBC 处理</strong>: DCF 中使用 FCF（已自然排除 SBC 非现金影响），但在估算每股公允价值时使用<strong>全稀释股数</strong>（526M shares，Q1 2026 口径），以反映 SBC 的稀释效应 [10-K: risk_factors]。</p>
+<h3>9.2 DCF 估值（FCF-based，7 年预测期 + 永续）</h3>
+<h4>折现率构建</h4>
+<table>
+<thead>
+<tr>
+<th>构成</th>
+<th style="text-align: right;">数值</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>美国 10 年期国债（无风险利率）</td>
+<td style="text-align: right;">4.3%</td>
+<td>市场数据</td>
+</tr>
+<tr>
+<td>成熟市场股权风险溢价</td>
+<td style="text-align: right;">5.5%</td>
+<td>Damodaran 年度更新</td>
+</tr>
+<tr>
+<td>Beta（高增长 SaaS）</td>
+<td style="text-align: right;">1.4x</td>
+<td>同业参照（Datadog/Monday.com）</td>
+</tr>
+<tr>
+<td>股权成本 = 4.3% + 1.4 × 5.5%</td>
+<td style="text-align: right;"><strong>12.0%</strong></td>
+<td>计算值</td>
+</tr>
+</tbody>
+</table>
+<p>有息负债仅 $5,848万 [yfinance:fina_indicator]，债务权重可忽略，WACC ≈ 股权成本 = <strong>12.0%</strong>。</p>
+<p>永续增长率 g = <strong>3.0%</strong>（&lt; r = 12.0% ✅，符合 g &lt; r 强制约束）。</p>
+<h4>关键假设表</h4>
+<table>
+<thead>
+<tr>
+<th>假设参数</th>
+<th style="text-align: right;">🟢 乐观</th>
+<th style="text-align: right;">🟡 基准</th>
+<th style="text-align: right;">🔴 悲观</th>
+<th style="text-align: right;">⚫ 最差</th>
+<th>依据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FY2026 营收增速</td>
+<td style="text-align: right;">47%</td>
+<td style="text-align: right;">42%</td>
+<td style="text-align: right;">33%</td>
+<td style="text-align: right;">20%</td>
+<td>Q1 +46% 趋势 + 指引上调 [10-Q]</td>
+</tr>
+<tr>
+<td>FY2027-28 CAGR</td>
+<td style="text-align: right;">37%</td>
+<td style="text-align: right;">32%</td>
+<td style="text-align: right;">22%</td>
+<td style="text-align: right;">12%</td>
+<td>NDR 139% 支撑，历史减速 [10-Q: mda]</td>
+</tr>
+<tr>
+<td>FY2029-32 CAGR 渐降至</td>
+<td style="text-align: right;">15%</td>
+<td style="text-align: right;">10%</td>
+<td style="text-align: right;">5%</td>
+<td style="text-align: right;">0%</td>
+<td>SaaS 行业成熟期参照</td>
+</tr>
+<tr>
+<td>成熟期 FCF Margin</td>
+<td style="text-align: right;">37%</td>
+<td style="text-align: right;">34%</td>
+<td style="text-align: right;">27%</td>
+<td style="text-align: right;">15%</td>
+<td>Adobe 35%+，行业 25-35% [valuation-frameworks]</td>
+</tr>
+<tr>
+<td>FY2026 FCF Margin</td>
+<td style="text-align: right;">24%</td>
+<td style="text-align: right;">22%</td>
+<td style="text-align: right;">18%</td>
+<td style="text-align: right;">12%</td>
+<td>Q1 2026 FCF margin 27%，含年度奖金拖累 [10-Q: guidance]</td>
+</tr>
+<tr>
+<td>WACC</td>
+<td style="text-align: right;">11%</td>
+<td style="text-align: right;">12%</td>
+<td style="text-align: right;">13%</td>
+<td style="text-align: right;">14%</td>
+<td>乐观/悲观 ±1pp</td>
+</tr>
+<tr>
+<td>永续 g</td>
+<td style="text-align: right;">3.5%</td>
+<td style="text-align: right;">3.0%</td>
+<td style="text-align: right;">2.5%</td>
+<td style="text-align: right;">2.0%</td>
+<td>均 &lt; r ✅</td>
+</tr>
+<tr>
+<td>概率权重</td>
+<td style="text-align: right;"><strong>25%</strong></td>
+<td style="text-align: right;"><strong>45%</strong></td>
+<td style="text-align: right;"><strong>25%</strong></td>
+<td style="text-align: right;"><strong>5%</strong></td>
+<td>标准四情景分布</td>
+</tr>
+</tbody>
+</table>
+<p><strong>假设与历史一致性验证</strong>（防内在矛盾）:<br />
+- FY2023→FY2024 营收 +48%，FY2024→FY2025 +41%，Q1 2026 +46%（加速）。基准情景 FY2026 +42% 与趋势一致 ✅ [data_snapshot §3]<br />
+- FY2025 FCF margin 22.4%（$237M/$1,056M），基准 FY2026 假设 22% 与实际一致 ✅ [yfinance:cashflow]<br />
+- 毛利率下滑趋势（91%→82%→79%）已在 FCF margin 渐进假设中体现 ✅ [phase3-part2 §四]</p>
+<h4>🟢 乐观情景（25% 权重）</h4>
+<p>AI 变现超预期 + 新产品（Sites/Make/Buzz/Draw）快速贡献收入 + Enterprise 渗透加速。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">年度</th>
+<th style="text-align: right;">营收($B)</th>
+<th style="text-align: center;">YoY</th>
+<th style="text-align: right;">FCF Margin</th>
+<th style="text-align: right;">FCF($M)</th>
+<th style="text-align: right;">折现因子(11%)</th>
+<th style="text-align: right;">PV($M)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">FY2026</td>
+<td style="text-align: right;">1.55</td>
+<td style="text-align: center;">+47%</td>
+<td style="text-align: right;">24%</td>
+<td style="text-align: right;">372</td>
+<td style="text-align: right;">0.901</td>
+<td style="text-align: right;">335</td>
+</tr>
+<tr>
+<td style="text-align: center;">FY2027</td>
+<td style="text-align: right;">2.17</td>
+<td style="text-align: center;">+40%</td>
+<td style="text-align: right;">27%</td>
+<td style="text-align: right;">586</td>
+<td style="text-align: right;">0.812</td>
+<td style="text-align: right;">476</td>
+</tr>
+<tr>
+<td style="text-align: center;">FY2028</td>
+<td style="text-align: right;">2.93</td>
+<td style="text-align: center;">+35%</td>
+<td style="text-align: right;">30%</td>
+<td style="text-align: right;">879</td>
+<td style="text-align: right;">0.731</td>
+<td style="text-align: right;">643</td>
+</tr>
+<tr>
+<td style="text-align: center;">FY2029</td>
+<td style="text-align: right;">3.81</td>
+<td style="text-align: center;">+30%</td>
+<td style="text-align: right;">33%</td>
+<td style="text-align: right;">1,257</td>
+<td style="text-align: right;">0.659</td>
+<td style="text-align: right;">828</td>
+</tr>
+<tr>
+<td style="text-align: center;">FY2030</td>
+<td style="text-align: right;">4.76</td>
+<td style="text-align: center;">+25%</td>
+<td style="text-align: right;">35%</td>
+<td style="text-align: right;">1,666</td>
+<td style="text-align: right;">0.593</td>
+<td style="text-align: right;">988</td>
+</tr>
+<tr>
+<td style="text-align: center;">FY2031</td>
+<td style="text-align: right;">5.71</td>
+<td style="text-align: center;">+20%</td>
+<td style="text-align: right;">36%</td>
+<td style="text-align: right;">2,056</td>
+<td style="text-align: right;">0.535</td>
+<td style="text-align: right;">1,100</td>
+</tr>
+<tr>
+<td style="text-align: center;">FY2032</td>
+<td style="text-align: right;">6.57</td>
+<td style="text-align: center;">+15%</td>
+<td style="text-align: right;">37%</td>
+<td style="text-align: right;">2,431</td>
+<td style="text-align: right;">0.482</td>
+<td style="text-align: right;">1,172</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>FCF PV 合计</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><strong>5,542</strong></td>
+</tr>
+</tbody>
+</table>
+<p>终值 = $2,431M × (1+3.5%) / (11%-3.5%) = $2,516M / 7.5% = <strong>$33,551M</strong><br />
+终值 PV = $33,551M × 0.482 = <strong>$16,172M</strong></p>
+<p>EV = $5,542 + $16,172 = <strong>$21,714M</strong><br />
+加回净现金 $345M（现金 $403M − 有息负债 $58M）[yfinance:balancesheet/fina_indicator]<br />
+股权价值 = <strong>$22,059M</strong><br />
+每股公允价值 = $22,059M / 526M shares = <strong>$41.94</strong></p>
+<h4>🟡 基准情景（45% 权重）</h4>
+<p>Q1 增长势头持续但逐步减速，FCF margin 稳步提升至成熟 SaaS 水平。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">年度</th>
+<th style="text-align: right;">营收($B)</th>
+<th style="text-align: center;">YoY</th>
+<th style="text-align: right;">FCF Margin</th>
+<th style="text-align: right;">FCF($M)</th>
+<th style="text-align: right;">折现因子(12%)</th>
+<th style="text-align: right;">PV($M)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">FY2026</td>
+<td style="text-align: right;">1.50</td>
+<td style="text-align: center;">+42%</td>
+<td style="text-align: right;">22%</td>
+<td style="text-align: right;">330</td>
+<td style="text-align: right;">0.893</td>
+<td style="text-align: right;">295</td>
+</tr>
+<tr>
+<td style="text-align: center;">FY2027</td>
+<td style="text-align: right;">2.03</td>
+<td style="text-align: center;">+35%</td>
+<td style="text-align: right;">25%</td>
+<td style="text-align: right;">508</td>
+<td style="text-align: right;">0.797</td>
+<td style="text-align: right;">405</td>
+</tr>
+<tr>
+<td style="text-align: center;">FY2028</td>
+<td style="text-align: right;">2.63</td>
+<td style="text-align: center;">+30%</td>
+<td style="text-align: right;">28%</td>
+<td style="text-align: right;">736</td>
+<td style="text-align: right;">0.712</td>
+<td style="text-align: right;">524</td>
+</tr>
+<tr>
+<td style="text-align: center;">FY2029</td>
+<td style="text-align: right;">3.30</td>
+<td style="text-align: center;">+25%</td>
+<td style="text-align: right;">30%</td>
+<td style="text-align: right;">990</td>
+<td style="text-align: right;">0.636</td>
+<td style="text-align: right;">630</td>
+</tr>
+<tr>
+<td style="text-align: center;">FY2030</td>
+<td style="text-align: right;">3.96</td>
+<td style="text-align: center;">+20%</td>
+<td style="text-align: right;">32%</td>
+<td style="text-align: right;">1,267</td>
+<td style="text-align: right;">0.567</td>
+<td style="text-align: right;">718</td>
+</tr>
+<tr>
+<td style="text-align: center;">FY2031</td>
+<td style="text-align: right;">4.55</td>
+<td style="text-align: center;">+15%</td>
+<td style="text-align: right;">33%</td>
+<td style="text-align: right;">1,502</td>
+<td style="text-align: right;">0.507</td>
+<td style="text-align: right;">762</td>
+</tr>
+<tr>
+<td style="text-align: center;">FY2032</td>
+<td style="text-align: right;">5.01</td>
+<td style="text-align: center;">+10%</td>
+<td style="text-align: right;">34%</td>
+<td style="text-align: right;">1,703</td>
+<td style="text-align: right;">0.452</td>
+<td style="text-align: right;">770</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>FCF PV 合计</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><strong>4,104</strong></td>
+</tr>
+</tbody>
+</table>
+<p>终值 = $1,703M × (1+3%) / (12%-3%) = $1,754M / 9% = <strong>$19,489M</strong><br />
+终值 PV = $19,489M × 0.452 = <strong>$8,809M</strong></p>
+<p>EV = $4,104 + $8,809 = <strong>$12,913M</strong><br />
+股权价值 = $12,913 + $345 = <strong>$13,258M</strong><br />
+每股公允价值 = $13,258M / 526M = <strong>$25.20</strong></p>
+<h4>🔴 悲观情景（25% 权重）</h4>
+<p>增速放缓至 SaaS 行业中位数，AI 变现不及预期，毛利率继续承压。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">年度</th>
+<th style="text-align: right;">营收($B)</th>
+<th style="text-align: center;">YoY</th>
+<th style="text-align: right;">FCF Margin</th>
+<th style="text-align: right;">FCF($M)</th>
+<th style="text-align: right;">折现因子(13%)</th>
+<th style="text-align: right;">PV($M)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">FY2026</td>
+<td style="text-align: right;">1.40</td>
+<td style="text-align: center;">+33%</td>
+<td style="text-align: right;">18%</td>
+<td style="text-align: right;">252</td>
+<td style="text-align: right;">0.885</td>
+<td style="text-align: right;">223</td>
+</tr>
+<tr>
+<td style="text-align: center;">FY2027</td>
+<td style="text-align: right;">1.75</td>
+<td style="text-align: center;">+25%</td>
+<td style="text-align: right;">20%</td>
+<td style="text-align: right;">350</td>
+<td style="text-align: right;">0.783</td>
+<td style="text-align: right;">274</td>
+</tr>
+<tr>
+<td style="text-align: center;">FY2028</td>
+<td style="text-align: right;">2.10</td>
+<td style="text-align: center;">+20%</td>
+<td style="text-align: right;">22%</td>
+<td style="text-align: right;">462</td>
+<td style="text-align: right;">0.693</td>
+<td style="text-align: right;">320</td>
+</tr>
+<tr>
+<td style="text-align: center;">FY2029</td>
+<td style="text-align: right;">2.42</td>
+<td style="text-align: center;">+15%</td>
+<td style="text-align: right;">24%</td>
+<td style="text-align: right;">581</td>
+<td style="text-align: right;">0.613</td>
+<td style="text-align: right;">356</td>
+</tr>
+<tr>
+<td style="text-align: center;">FY2030</td>
+<td style="text-align: right;">2.66</td>
+<td style="text-align: center;">+10%</td>
+<td style="text-align: right;">25%</td>
+<td style="text-align: right;">665</td>
+<td style="text-align: right;">0.543</td>
+<td style="text-align: right;">361</td>
+</tr>
+<tr>
+<td style="text-align: center;">FY2031</td>
+<td style="text-align: right;">2.79</td>
+<td style="text-align: center;">+5%</td>
+<td style="text-align: right;">26%</td>
+<td style="text-align: right;">725</td>
+<td style="text-align: right;">0.480</td>
+<td style="text-align: right;">348</td>
+</tr>
+<tr>
+<td style="text-align: center;">FY2032</td>
+<td style="text-align: right;">2.93</td>
+<td style="text-align: center;">+5%</td>
+<td style="text-align: right;">27%</td>
+<td style="text-align: right;">791</td>
+<td style="text-align: right;">0.425</td>
+<td style="text-align: right;">336</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>FCF PV 合计</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><strong>2,218</strong></td>
+</tr>
+</tbody>
+</table>
+<p>终值 = $791M × (1+2.5%) / (13%-2.5%) = $811M / 10.5% = <strong>$7,721M</strong><br />
+终值 PV = $7,721M × 0.425 = <strong>$3,281M</strong></p>
+<p>EV = $2,218 + $3,281 = <strong>$5,499M</strong><br />
+股权价值 = $5,499 + $345 = <strong>$5,844M</strong><br />
+每股公允价值 = $5,844M / 526M = <strong>$11.11</strong></p>
+<h4>⚫ 最差情景（5% 权重）</h4>
+<p>AI-native 设计工具（Bolt/v0/Lovable 等）颠覆"先设计再开发"范式，Figma 增长急剧放缓，新产品全部失败，客户流失加速。</p>
+<ul>
+<li>营收 FY2026 $1.26B（+20%） → 逐年递减至 FY2032 $2.0B（CAGR ~7%）</li>
+<li>FCF margin 仅 15%（AI 成本居高不下，变现失败）</li>
+<li>WACC 14%，永续 g = 2%</li>
+<li>终年 FCF ≈ $300M</li>
+<li>终值 = $300M × 1.02 / (14%-2%) = $2,550M</li>
+<li>7 年 FCF PV ≈ $700M，终值 PV ≈ $1,100M</li>
+<li>EV ≈ $1,800M + 净现金 $345M = <strong>$2,145M</strong></li>
+<li>每股公允价值 = $2,145M / 526M = <strong>$4.08</strong></li>
+</ul>
+<p>此情景隐含 Figma 从高增长 SaaS 沦为低增长工具型软件，对应 AI 颠覆设计行业的极端尾部风险 [10-K: risk_factors]。</p>
+<h4>概率加权汇总</h4>
+<table>
+<thead>
+<tr>
+<th>情景</th>
+<th style="text-align: right;">权重</th>
+<th style="text-align: right;">每股公允($)</th>
+<th style="text-align: right;">加权贡献($)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🟢 乐观</td>
+<td style="text-align: right;">25%</td>
+<td style="text-align: right;">41.94</td>
+<td style="text-align: right;">10.49</td>
+</tr>
+<tr>
+<td>🟡 基准</td>
+<td style="text-align: right;">45%</td>
+<td style="text-align: right;">25.20</td>
+<td style="text-align: right;">11.34</td>
+</tr>
+<tr>
+<td>🔴 悲观</td>
+<td style="text-align: right;">25%</td>
+<td style="text-align: right;">11.11</td>
+<td style="text-align: right;">2.78</td>
+</tr>
+<tr>
+<td>⚫ 最差</td>
+<td style="text-align: right;">5%</td>
+<td style="text-align: right;">4.08</td>
+<td style="text-align: right;">0.20</td>
+</tr>
+<tr>
+<td><strong>概率加权公允价值</strong></td>
+<td style="text-align: right;"><strong>100%</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><strong>$24.81</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>当前股价</strong>: $20.24 [yfinance: 2026-05-15]<br />
+<strong>概率加权公允 vs 当前</strong>: +$4.57，<strong>+22.6% 潜在上行空间</strong></p>
+<h3>9.3 可比倍数交叉验证</h3>
+<table>
+<thead>
+<tr>
+<th>可比公司</th>
+<th style="text-align: center;">营收增速</th>
+<th style="text-align: right;">EV/FY2026E Rev</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Datadog (DDOG)</td>
+<td style="text-align: center;">~26%</td>
+<td style="text-align: right;">~18x</td>
+<td>[phase3-part3 §8.2]</td>
+</tr>
+<tr>
+<td>Monday.com (MNDY)</td>
+<td style="text-align: center;">~28%</td>
+<td style="text-align: right;">~15x</td>
+<td>[phase3-part3 §8.2]</td>
+</tr>
+<tr>
+<td>Atlassian (TEAM)</td>
+<td style="text-align: center;">~25%</td>
+<td style="text-align: right;">~15x</td>
+<td>[phase3-part3 §8.2]</td>
+</tr>
+<tr>
+<td>Adobe (ADBE)</td>
+<td style="text-align: center;">~10%</td>
+<td style="text-align: right;">~10x</td>
+<td>[phase3-part3 §8.2]</td>
+</tr>
+<tr>
+<td><strong>中位数</strong></td>
+<td style="text-align: center;">~26%</td>
+<td style="text-align: right;"><strong>~15x</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Figma 增速 42-46% 远超可比中位数 26%，NDR 139% 为行业顶尖。参照增速溢价调整（+20-50%），Figma 合理 EV/FY2026E Rev = 15x × 1.3（增速溢价）= <strong>~19.5x</strong>。</p>
+<ul>
+<li>FY2026E 营收（基准）= $1.50B</li>
+<li>隐含 EV = $1.50B × 19.5x = <strong>$29.3B</strong></li>
+<li>扣除 SBC 稀释折扣 10%（SBC 占营收 129% 远超同业）→ 调整后 EV = <strong>$26.3B</strong></li>
+<li>股权价值 = $26.3B + $0.345B = <strong>$26.6B</strong></li>
+<li>每股 = $26.6B / 526M = <strong>$50.6</strong></li>
+</ul>
+<p><strong>但</strong>: 可比倍数法隐含的 $50.6 远高于 DCF 锚 $24.81（差 +104%）。分歧原因:<br />
+1. 可比公司多已度过 SBC 高峰期，GAAP 已盈利，市场给予更高信任度<br />
+2. Figma IPO 不到 1 年，VC 减持压力 + 流通盘结构压制估值<br />
+3. Q2 2025 首份财报 miss 引发的估值创伤尚未完全修复 [phase1-data §8]<br />
+4. DCF 对远期假设更敏感（终值占比 68%），保守假设压低估值</p>
+<p><strong>结论</strong>: 可比倍数法与 DCF 锚差异 &gt;20% 🔴，主因是 Figma 作为新 IPO 公司存在流动性/信任度折价。<strong>以 DCF 概率加权 $24.81 为估值锚</strong>，可比倍数确认长期上行空间存在但短期难以兑现。</p>
+<h3>9.4 技术面定位</h3>
+<p><strong>美股市场不适用</strong>。美股无 A 股特有的技术面分析框架（主力资金流、BOLL 通道、MACD 等指标不在本框架范围内）。</p>
+<p>补充参考: Figma 52 周高 $142.92 / 52 周低 $16.60 [phase1-data §4]。当前 $20.24 接近 52 周低位区域（较低点 +22%，较高点 -86%），表明 IPO 后估值已大幅回归。</p>
+<h3>9.5 估值三角验证表（v4.2 格式）</h3>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th style="text-align: right;">估值（每股$）</th>
+<th style="text-align: left;">角色</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>DCF 概率加权</strong></td>
+<td style="text-align: right;"><strong>$24.81</strong></td>
+<td style="text-align: left;"><strong>⭐ 估值锚</strong></td>
+<td>4 情景加权（25/45/25/5），FCF-based</td>
+</tr>
+<tr>
+<td>可比 EV/Revenue</td>
+<td style="text-align: right;">$50.6</td>
+<td style="text-align: left;">交叉验证</td>
+<td>增速溢价调整后 19.5x FY2026E</td>
+</tr>
+<tr>
+<td>可比（保守，无溢价 15x）</td>
+<td style="text-align: right;">$43.2</td>
+<td style="text-align: left;">交叉验证</td>
+<td>15x FY2026E，不含增速溢价</td>
+</tr>
+</tbody>
+</table>
+<p><strong>分歧判定</strong>: 可比倍数 vs DCF 锚差 &gt;20% 🔴 — 分歧解释已在 §9.3 末尾展开。核心原因: (1) Figma 新 IPO 流通盘/信任度折价; (2) DCF 保守假设（WACC 12%，终值占比高）。长期看可比倍数或为更合理锚定，但当前以 DCF 为锚更审慎。</p>
+<hr />
+</div>
+
+<!-- ============================================================
+     §十 投资回报测算（与 §九 共用情景）
+     ============================================================ -->
+<div class="section" id="invest-sim">
+<h2>§十 投资回报测算（与 §九 共用情景）</h2>
+<h3>10.1 投资参数</h3>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>投资金额</td>
+<td><strong>$1,000,000 USD</strong></td>
+</tr>
+<tr>
+<td>买入价</td>
+<td>$20.24（2026-05-15 收盘）[yfinance]</td>
+</tr>
+<tr>
+<td>买入股数</td>
+<td>49,407 股</td>
+</tr>
+<tr>
+<td>持有期</td>
+<td>12-18 个月</td>
+</tr>
+<tr>
+<td>全稀释股数</td>
+<td>526M（Q1 2026 口径）[10-Q]</td>
+</tr>
+</tbody>
+</table>
+<h3>10.2 四情景回报测算（与 §九 DCF 共用）</h3>
+<table>
+<thead>
+<tr>
+<th>情景</th>
+<th style="text-align: right;">权重</th>
+<th style="text-align: right;">目标价($)</th>
+<th style="text-align: right;">持有市值($)</th>
+<th style="text-align: right;">收益($)</th>
+<th style="text-align: right;">收益率</th>
+<th style="text-align: right;">年化(15 月)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🟢 乐观</td>
+<td style="text-align: right;">25%</td>
+<td style="text-align: right;">41.94</td>
+<td style="text-align: right;">2,072,134</td>
+<td style="text-align: right;">+1,072,134</td>
+<td style="text-align: right;"><strong>+107.2%</strong></td>
+<td style="text-align: right;">+78.5%</td>
+</tr>
+<tr>
+<td>🟡 基准</td>
+<td style="text-align: right;">45%</td>
+<td style="text-align: right;">25.20</td>
+<td style="text-align: right;">1,245,112</td>
+<td style="text-align: right;">+245,112</td>
+<td style="text-align: right;"><strong>+24.5%</strong></td>
+<td style="text-align: right;">+19.0%</td>
+</tr>
+<tr>
+<td>🔴 悲观</td>
+<td style="text-align: right;">25%</td>
+<td style="text-align: right;">11.11</td>
+<td style="text-align: right;">548,910</td>
+<td style="text-align: right;">-451,090</td>
+<td style="text-align: right;"><strong>-45.1%</strong></td>
+<td style="text-align: right;">-37.6%</td>
+</tr>
+<tr>
+<td>⚫ 最差</td>
+<td style="text-align: right;">5%</td>
+<td style="text-align: right;">4.08</td>
+<td style="text-align: right;">201,581</td>
+<td style="text-align: right;">-798,419</td>
+<td style="text-align: right;"><strong>-79.8%</strong></td>
+<td style="text-align: right;">-73.8%</td>
+</tr>
+</tbody>
+</table>
+<h3>10.3 概率加权期望回报</h3>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>数值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>概率加权目标价</td>
+<td>$24.81</td>
+</tr>
+<tr>
+<td>期望收益</td>
+<td>+$225,889</td>
+</tr>
+<tr>
+<td><strong>期望收益率</strong></td>
+<td><strong>+22.6%</strong></td>
+</tr>
+<tr>
+<td>期望年化回报(15 月)</td>
+<td>+17.6%</td>
+</tr>
+</tbody>
+</table>
+<h3>10.4 风险收益比分析</h3>
+<ul>
+<li><strong>上行空间</strong>（乐观情景）: +107%（目标 $41.94）</li>
+<li><strong>下行风险</strong>（悲观情景）: -45%（目标 $11.11）</li>
+<li><strong>上行/下行比</strong>: 2.38x — 非对称性偏多</li>
+<li><strong>盈亏平衡概率</strong>: 基准+乐观情景合计权重 70%，即 <strong>70% 概率获正收益</strong></li>
+</ul>
+<h3>10.5 敏感性：最脆弱假设</h3>
+<p>DCF 最脆弱假设是 <strong>FY2027-2028 营收增速</strong> 和 <strong>成熟期 FCF margin</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>如果...</th>
+<th>对公允价值的影响</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FY2027 增速 +40%（非 +35%）</td>
+<td>公允价值 → ~$28（+13%）</td>
+</tr>
+<tr>
+<td>FY2027 增速 +25%（非 +35%）</td>
+<td>公允价值 → ~$20（-19%）</td>
+</tr>
+<tr>
+<td>成熟 FCF margin 30%（非 34%）</td>
+<td>公允价值 → ~$21（-15%）</td>
+</tr>
+<tr>
+<td>成熟 FCF margin 38%（非 34%）</td>
+<td>公允价值 → ~$29（+17%）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>结论</strong>: 当前 $20.24 买入在基准和乐观情景下均有正回报，且概率加权期望收益率 +22.6%。但下行风险不可忽视——若增速跌至 25% 以下且 AI 变现失败，投资将面临 -45% 至 -80% 亏损。<strong>风险承受能力较低的投资者建议分批建仓或等待进一步确认 AI 变现和 SBC 正常化趋势</strong>。</p>
+<hr />
+</div>
+
+<!-- ============================================================
+     §十一 定性判断（3 框架，无打分）
+     ============================================================ -->
+<div class="section" id="qualitative">
+<h2>§十一 定性判断（3 框架，v4.1 — 无打分）</h2>
+<blockquote>
+<p>估值分析详见 §九。<br />
+会计红旗检查：Piotroski F=3/9（🟠高）、Buffett Quality OCF/NI=-0.2（🟠高）、应收增速89%远超营收41%（🟠高）、Sloan Accrual 高应计比例（🟡中）、Beneish M=-4.557 操纵概率低（🟢低）。<br />
+本章节聚焦不能被定量指标或审计自动替代的"深层判断"。</p>
+</blockquote>
+<h3>框架 1: 护城河判断</h3>
+<p><strong>核心问题</strong>: Figma 的可持续竞争优势是在<strong>加深</strong>还是<strong>侵蚀</strong>？</p>
+<p><strong>判断</strong>: <strong>加深（部分是 — 核心护城河加深，但 AI 范式威胁构成长期侵蚀风险）</strong></p>
+<p><strong>证据链</strong>:<br />
+1. <strong>网络效应自我强化</strong>: NDR 从 FY2024 ~130% 升至 Q1 2026 139%，表明平台粘性在增强而非减弱。团队中一人使用 Figma → 全团队必须使用 → 跨部门扩散（ARR&gt;$100K 客户 YoY+46%）[10-Q: mda] [10-K: financial_statements]<br />
+2. <strong>技术壁垒持续投入</strong>: 浏览器原生 WebGL/WebAssembly 实时协作引擎为核心技术壁垒，2025 年新增 4 个产品（Make/Sites/Buzz/Draw）+ MCP Server 将平台从设计工具扩展为产品开发基础设施，转换成本进一步提高 [10-Q: mda]<br />
+3. <strong>反面证据 — AI 范式威胁</strong>: Bolt/v0/Lovable 等 AI 代码生成工具可能跳过"先设计再开发"环节，从根本上缩小设计工具 TAM。Figma 通过 Make（AI 原型）和 MCP Server 主动应对，但效果尚需验证 [10-K: risk_factors]<br />
+4. <strong>Adobe XD 实质放弃，验证 Figma 护城河</strong>: Adobe 以 $200亿试图收购 Figma 失败后放弃 XD，间接证明 Figma 的护城河已超过巨头从零复制的经济性 [phase1-data §1]</p>
+<p><strong>S 曲线定位</strong>: 早中期 — 营收 $10 亿+、增速 40%+，已过早期验证但远未触及 TAM 天花板。PS 估值为主导，尚不适用 PE 估值。</p>
+<p><strong>护城河类型</strong>: 动态型复合护城河（网络效应 + 转换成本 + 技术壁垒 + 生态系统），具备自我强化特性。</p>
+<p><strong>逻辑蕴含</strong>:<br />
+- 若判断成立（护城河加深）→ 利好长期超额 ROE 假设，利好 DCF 终值倍数的可持续性<br />
+- 若判断推翻（AI 范式颠覆成功）→ 利空终值倍数，利空长期增速假设，DCF 悲观/最差情景概率应上调</p>
+<p><strong>对综合投资观点的支撑方向</strong>: <strong>看多</strong></p>
+<p><strong>未解决问题</strong>: AI-native 设计工具的实际渗透率和替代效果缺乏量化数据（列入 §十二 信息缺口）</p>
+<hr />
+<h3>框架 2: 管理层判断</h3>
+<p><strong>核心问题</strong>: 管理层的<strong>德</strong>（诚信/股东为伴）与<strong>才</strong>（战略/执行/资本配置）是否都合格？</p>
+<p><strong>判断</strong>: <strong>部分是 — "才"优秀，"德"暂无负面信号但双重股权结构构成治理隐患</strong></p>
+<p><strong>证据链</strong>:<br />
+1. <strong>"才"检验 — 战略执行力极强</strong>: Dylan Field 2012 年创立 Figma（当时 20 岁），15 年间从零做到 $10亿+ 营收并成功 IPO；拒绝 Adobe $200亿收购后独立上市，战略定力极强 [phase1-data §1]。2025 年一年推出 4 个新产品（Make/Sites/Buzz/Draw），产品迭代速度远超行业 [10-Q: mda]。<br />
+2. <strong>"才"检验 — 资本配置</strong>: IPO 后有息负债仅 $5,848万 [yfinance:fina_indicator]，几乎零杠杆。SBC 虽高但属 IPO 后 RSU vesting 典型现象（参照 Snowflake/Confluent），非管理层主动稀释。年化稀释率 2-3% 处于行业正常范围 [10-K: risk_factors]。<br />
+3. <strong>"德"检验 — 暂无负面信号但存在结构性隐患</strong>: Beneish M-Score = -4.557（远低于 -1.78 警示线），盈余操纵概率极低 [audit: Beneish, 🟢 低]。无审计意见瑕疵、无诉讼记录。但双重股权结构（Class B 10票/股）使创始人以 3.47% 经济权益控制投票权，小股东无法制衡 [10-K: risk_factors]。<br />
+4. <strong>机构认可度</strong>: 390 家机构持股 76.54%，Vanguard/Fidelity/UBS 大幅加仓 [yfinance:institutional_holders] — 专业投资者对管理层的隐含背书。</p>
+<p><strong>逻辑蕴含</strong>:<br />
+- 若判断成立（"才"优秀 + "德"合格）→ 利好 PE/PB 溢价空间，利好战略执行假设的可信度<br />
+- 若判断推翻（"德"出现瑕疵，如关联交易或自利减持）→ 利空估值，需治理折价</p>
+<p><strong>对综合投资观点的支撑方向</strong>: <strong>看多</strong></p>
+<p><strong>未解决问题</strong>: (1) 创始人 Dylan Field 个人减持计划未披露; (2) 高管团队（CFO/CTO 等）画像信息有限; (3) 双重股权结构下的独立董事独立性存疑</p>
+<hr />
+<h3>框架 3: 催化剂判断</h3>
+<p><strong>核心问题</strong>: 下一个 12 个月是否有可能改变投资结论方向的具体、可观察事件？</p>
+<p><strong>判断</strong>: <strong>是 — 正向催化剂密集，但证伪催化剂同样明确</strong></p>
+<p><strong>证据链</strong>:<br />
+1. <strong>近期正向催化剂（≤3 个月）</strong>:<br />
+   - Q1 2026 大幅超预期（营收 +46%，调整后 EPS $0.10 vs 预期 $0.06）+ 上调全年指引 → 短期估值修复窗口已打开 [phase1-data §2]<br />
+   - AI credit 变现模型已于 2026年3月启动（限额+add-on+pay-as-you-go），Q2/Q3 2026 将首次验证 AI 收入贡献 [10-Q: guidance]<br />
+2. <strong>中期正向催化剂（3-12 个月）</strong>:<br />
+   - 4 个新产品（Make/Sites/Buzz/Draw）FY2026 逐步贡献收入，拓展 TAM [10-Q: mda]<br />
+   - SBC 正常化预期: IPO 后 RSU vesting 高峰 1-2 年内过去，GAAP 利润率将大幅改善 [10-K: financial_statements]<br />
+   - Enterprise 渗透深化: ARR&gt;$100K 客户数 YoY+46%，大客户增速快于整体 [10-K: financial_statements]<br />
+3. <strong>证伪催化剂（若发生则看多逻辑失败）</strong>:<br />
+   - Q2/Q3 2026 营收增速跌至 30% 以下 → 增长叙事崩塌，估值将剧烈压缩 [phase1-data §9: 看空派]<br />
+   - AI credit 变现引发用户大规模反弹/流失，NDR 跌破 120% → 平台粘性叙事受损<br />
+   - VC 股东（Greylock 13.15% + Index 12.98%）集中减持 → 流通盘供给冲击</p>
+<p><strong>时间窗催化剂</strong>:<br />
+- <strong>Q2 2026 财报</strong>（预计 2026年8月中旬）: 验证增长加速是否持续 + AI 变现首季数据<br />
+- <strong>VC 锁定期</strong>: IPO 后通常 6 个月（~2026年初已过），后续减持节奏是关键变量<br />
+- <strong>FY2026 全年指引更新</strong>: 若持续上调 → 强正向信号</p>
+<p><strong>逻辑蕴含</strong>:<br />
+- 近期 ≥2 个正向催化剂 + 基本面支持 → 利好短期上行窗口<br />
+- 但证伪催化剂明确（增速 &lt;30%/NDR &lt;120%/VC 减持），若触发则方向逆转<br />
+- 催化剂密集期（Q2-Q3 2026）波动性将放大</p>
+<p><strong>对综合投资观点的支撑方向</strong>: <strong>看多</strong>（短期催化剂密集，但附条件）</p>
+<p><strong>未解决问题</strong>: (1) FY2026 具体数字指引未完整提取 [10-Q: guidance]; (2) VC 股东减持时间表和规模未知</p>
+<hr />
+<h3>综合判断</h3>
+<p><strong>框架方向分布</strong>（共 3 个框架）:<br />
+- 看多方向: 框架 1（护城河）、框架 2（管理层）、框架 3（催化剂）（共 3 个）<br />
+  - 框架 1: 多重复合护城河加深中（NDR 139%↑ + 4 新产品 + MCP 生态），但 AI 范式长期威胁存在<br />
+  - 框架 2: 创始人战略执行力极强（零到 $10亿+、拒绝 $200亿收购后独立 IPO），Beneish M-Score 无操纵嫌疑<br />
+  - 框架 3: Q1 超预期 + 指引上调 + AI 变现启动，近期催化剂密集<br />
+- 看空方向:（共 0 个）<br />
+- 中性/数据不足:（共 0 个）</p>
+<p><strong>致命看空条款检查</strong>（直接引用 §三快筛）:<br />
+- §三 快筛结果: ✅ PASS — 无非标审计意见、无财务造假、无持续经营疑虑、无重大法律风险、audit 0 个 🔴 致命红旗（仅 3 个 🟠 高）[audit_report §2]</p>
+<p><strong>综合结论</strong>: <strong>看多方向</strong><br />
+（根据 v4.1 黑白分割规则: 3 框架中 3 个判定为"看多方向" ≥2，且无致命看空 → 综合 = 看多方向）</p>
+<p><strong>关键分歧点</strong>:<br />
+- 护城河加深（看多）vs AI 范式颠覆风险（潜在看空）— 分歧焦点是"AI 代码生成是否会根本性减少设计工具需求"<br />
+- 验证方式: 跟踪 Q2/Q3 2026 Figma 新用户增速 + AI 工具（Bolt/v0）的市占率变化 + Figma AI credit 收入贡献</p>
+<p><strong>★ 看多附加风险警示</strong>:<br />
+- 3 个 🟠 高级审计红旗（Piotroski F=3/9、OCF/NI 异常、应收账款增速 89% vs 营收 41%）不构成致命看空，但表明 GAAP 层面的财务健康正在恶化 [audit_report §3]<br />
+- 双重股权结构 + 内部人经济持股仅 3.47% = 治理风险长期存在 [10-K: risk_factors]<br />
+- VC 合计持股 ~35.5% 的减持压力是中期供给面最大不确定性 [yfinance:institutional_holders]</p>
+<p><strong>验证催化剂</strong>（由框架 3 识别）:<br />
+1. Q2 2026 财报 — 时间窗 2026年8月中旬，验证增长加速 + AI 变现<br />
+2. AI credit 收入首季数据 — 时间窗 Q2/Q3 2026，验证 AI 变现模型可行性<br />
+3. VC 减持动态 — 持续跟踪，若 Greylock/Index 大幅减持 → 供给冲击</p>
+</div>
+
+<!-- ============================================================
+     §十二 信息缺口与尽调优先级
+     ============================================================ -->
+<div class="section" id="gaps">
+<h2>§十二 信息缺口与尽调优先级</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>缺口</th>
+<th style="text-align: center;">状态</th>
+<th style="text-align: center;">可得性</th>
+<th>影响的结论</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>ARR / 付费客户数</strong>: Figma 未在 10-K/10-Q 中披露具体 ARR 数字和付费客户总数（仅披露 NDR 139% 和 ARR&gt;$10K/$100K 客户增速）。已尝试搜索 "Figma ARR paying customers 2025 2026"，未找到精确数据</td>
+<td style="text-align: center;">❌ 未获取</td>
+<td style="text-align: center;">中 — 可能在未来投资者日或分析师 consensus 报告中披露</td>
+<td>§九 DCF 估值的营收预测缺乏 ARR 分解验证；§六 维度 2 商业模式评分中 LTV/CAC 无法计算</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>分部/区域营收拆分</strong>: 10-K 报告为单一报告分部（single reportable segment），缺乏按地域（美国/欧洲/亚太）或产品线（Design/FigJam/Slides/Dev Mode）的营收拆分。已尝试搜索 "Figma revenue by region product breakdown"</td>
+<td style="text-align: center;">❌ 未获取</td>
+<td style="text-align: center;">低 — SEC 要求单一分部公司无需拆分，除非公司自愿在 earnings call 中提供</td>
+<td>§四 业务板块分析中各产品收入贡献仅能标注"含在订阅内"；无法评估区域集中度风险</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>中长期盈利指引</strong>: 公司仅提供 FY2026 短期指引（上调营收和 non-GAAP 经营利润），未披露中长期目标利润率、Rule of 40 目标或 SBC 占比下降路径。已尝试搜索 "Figma long-term profitability target margin guidance"</td>
+<td style="text-align: center;">❌ 未获取</td>
+<td style="text-align: center;">中 — SaaS 公司通常在 IPO 后 2-3 年的 analyst day 披露长期框架</td>
+<td>§九 DCF 7 年预测期中 Year 3+ 的利润率假设完全依赖分析师外推，缺乏管理层锚定</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>SBC 逐季趋势与稀释预测</strong>: FY2025 SBC $13.64亿（占营收 129%）为 IPO 后 RSU 集中 vesting 所致，需量化 FY2026-FY2028 SBC 递减曲线及全稀释股数增长预测。10-K 披露了 RSU 未行权余额但未给出 vesting schedule 前瞻</td>
+<td style="text-align: center;">⚠️ 部分获取</td>
+<td style="text-align: center;">中 — 10-K Note 中有 RSU 未行权余额（可据此估算），但精确 vesting schedule 需 proxy statement</td>
+<td>§九 每股公允价值计算依赖全稀释股数假设；§六 维度 3 盈利能力评分中 GAAP vs non-GAAP 差异分析的精确度受限</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>AI 功能采用率与变现数据</strong>: 2026年3月起 AI credit 限额 + AI add-on 订阅，但 Q1 2026 10-Q 未单独披露 AI 收入贡献或 AI credit 消耗量。已搜索 "Figma AI revenue adoption rate 2026"</td>
+<td style="text-align: center;">❌ 未获取</td>
+<td style="text-align: center;">中 — 可能在 Q2 2026 earnings call 中首次披露 AI 变现指标</td>
+<td>§四 业务板块中 AI 新产品标注为"早期变现阶段"但无法量化；§六 维度 4 产品与技术评分中 AI 护城河强度缺乏数据支撑</td>
+</tr>
+</tbody>
+</table>
+<hr />
+</div>
+
+<!-- ============================================================
+     §十三 数据可审计性（时效性+来源+audit 红旗）
+     ============================================================ -->
+<div class="section" id="sources">
+<h2>§十三 数据可审计性（时效性 + 来源 3 类分组）</h2>
+<p><strong>截止日期</strong>: 2026-05-15。<strong>关键待披露</strong>: Q2 2026 10-Q（预计 2026-08 发布）；FY2026 全年指引更新（Q2 earnings call）。</p>
+<h3>[yfinance API]</h3>
+<table>
+<thead>
+<tr>
+<th>数据项</th>
+<th>时效性</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>三表（income / balancesheet / cashflow）</td>
+<td>FY2023-FY2025（截至 20251231）</td>
+<td>3 年完整年度数据 [yfinance:income/balancesheet/cashflow]</td>
+</tr>
+<tr>
+<td>财务指标（fina_indicator）</td>
+<td>FY2023-FY2025</td>
+<td>毛利率/净利率/ROE/资产负债率等 [yfinance:fina_indicator]</td>
+</tr>
+<tr>
+<td>历史行情（daily）</td>
+<td>IPO 后约 199 个交易日</td>
+<td>52 周高 $142.92 / 低 $16.60 [yfinance:daily]</td>
+</tr>
+<tr>
+<td>机构持股（institutional_holders）</td>
+<td>最新可得</td>
+<td>前 10 大机构持股人 [yfinance:institutional_holders]</td>
+</tr>
+<tr>
+<td>主要股东（major_holders）</td>
+<td>最新可得</td>
+<td>内部人/机构/浮动股占比 [yfinance:major_holders]</td>
+</tr>
+</tbody>
+</table>
+<h3>[PDF 原文(SEC EDGAR)]</h3>
+<table>
+<thead>
+<tr>
+<th>文件</th>
+<th>发布日期</th>
+<th>引用章节</th>
+<th>关键提取内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10-K FY2025</td>
+<td>2026-02-18</td>
+<td>revenue_breakdown, business_overview, financial_statements, risk_factors, mda</td>
+<td>营收结构（100% 订阅）、SBC $13.64亿明细、ARR 客户分层、风险因素 [10-K]</td>
+</tr>
+<tr>
+<td>10-Q Q1 2026</td>
+<td>2026-05-14</td>
+<td>mda, guidance, financial_statements</td>
+<td>Q1 营收 $333.4M (+46% YoY)、NDR 139%、AI 变现启动、全年指引上调、4 新产品（Make/Sites/Buzz/Draw）、MCP Server [10-Q]</td>
+</tr>
+</tbody>
+</table>
+<h3>[WebSearch/Tavily]</h3>
+<table>
+<thead>
+<tr>
+<th>数据项</th>
+<th>查询关键词</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ARR / 付费客户数</td>
+<td>"Figma ARR paying customers 2025 2026"</td>
+<td>未找到精确数据，仅有 NDR 和客户分层增速</td>
+</tr>
+<tr>
+<td>区域营收拆分</td>
+<td>"Figma revenue by region product breakdown"</td>
+<td>未找到，公司为单一报告分部</td>
+</tr>
+<tr>
+<td>长期盈利指引</td>
+<td>"Figma long-term profitability target margin guidance"</td>
+<td>未找到正式指引</td>
+</tr>
+<tr>
+<td>AI 变现数据</td>
+<td>"Figma AI revenue adoption rate 2026"</td>
+<td>仅有定性描述（"AI adoption accelerating"），无量化数据</td>
+</tr>
+<tr>
+<td>行业 TAM</td>
+<td>"design collaboration software market size 2026 2033"</td>
+<td>MarkWide Research: 2026-2033 CAGR ~7.3%</td>
+</tr>
+<tr>
+<td>竞品估值</td>
+<td>"Adobe Canva Miro valuation 2026"</td>
+<td>Adobe (ADBE) 上市可比；Canva/Miro 为私有公司，估值来自二级市场报道</td>
+</tr>
+<tr>
+<td>投资社区舆情</td>
+<td>"Figma FIG stock IPO earnings beat"</td>
+<td>Q1 2026 大幅超预期后多空观点采集完成</td>
+</tr>
+</tbody>
+</table>
+<p><strong>详细来源清单见 <code>phase1-data.md</code> §11</strong>。</p>
+<h3>审计红旗汇总（11 框架）</h3>
+<table>
+<thead>
+<tr>
+<th>严重度</th>
+<th style="text-align: center;">数量</th>
+<th>代表性红旗</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🔴 致命</td>
+<td style="text-align: center;">0</td>
+<td>—</td>
+</tr>
+<tr>
+<td>🟠 高</td>
+<td style="text-align: center;">3</td>
+<td>Piotroski F=3/9（财务健康恶化）；Buffett OCF/NI=-0.2（利润含水分，因 GAAP 亏损 + OCF 正）；应收增速 88.8% 远超营收增速 41%（放宽信用条件风险）</td>
+</tr>
+<tr>
+<td>🟡 中</td>
+<td style="text-align: center;">1</td>
+<td>Sloan Accrual 高应计比例 -0.639（</td>
+</tr>
+<tr>
+<td>🟢 低</td>
+<td style="text-align: center;">1</td>
+<td>Beneish M=-4.557（远低于 -1.78 阈值，盈余操纵概率低 ✅）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>补充说明</strong>: Altman Z=-0.736 处于破产风险区，但因 MV=0/RE=0 数据缺失导致公式降级，结论不可靠（ℹ️ 信息级）。DuPont 分解显示 ROE 恶化（-73.6% → -82.8%）完全由净利率驱动（-97.7% → -118.4%），而非杠杆或周转恶化。Governance / Shareholder Flow / Forward Guidance / Valuation / Related-Party 五个框架因美股 yfinance 数据局限未触发信号（⚠️ 数据不足）。</p>
+<p>完整清单: <code>audit_report.md</code>。</p>
+</div>
+
+<!-- ============================================================
+     v4.6.1: 附录/补丁章节追加区(避免 MD→HTML 内容丢失)
+     主报告 §十三 之后的所有 ## 章节(如"附录 v4 修订日志" / "v4.1 补丁")
+     Phase 6 Part B 必须追加到这里, 不得丢弃
+     ============================================================ -->
+<!-- 无附录章节 -->
+
+
+</div>
+</body>
+</html>
