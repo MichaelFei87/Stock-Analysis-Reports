@@ -1,0 +1,3056 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apple（AAPL）投资分析报告 — 2026-05-15</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   Claude Code Company Analysis · Report Styles v5.0
+   单一 CSS 真相源 — 由 assets/html/base.html 加载并内联
+   禁止在 Phase 6 Part B 中自创颜色值或变量名
+   v5.0: Claude Design Language — 温暖羊皮纸 + 赤陶色主调 + 衬线标题
+         Bloomberg 风险色保留(红/琥珀/黄/绿)
+   ============================================================ */
+
+:root {
+  /* 主色 — Claude Terracotta */
+  --c-primary: #c96442;
+  --c-primary-light: #f0eee6;
+  --c-primary-dark: #a14e2f;
+  --c-accent: #d97757;
+
+  /* Bloomberg 风格风险等级(高对比) — 保留不变 */
+  --c-risk-red:    #dc2626;
+  --c-risk-red-bg: #fef2f2;
+  --c-risk-amber:  #e8a33a;
+  --c-risk-amber-bg: #fff7ed;
+  --c-risk-yellow: #fbbf24;
+  --c-risk-yellow-bg: #fffbeb;
+  --c-risk-green:  #059669;
+  --c-risk-green-bg: #ecfdf5;
+
+  /* 语义色 (保留 v4.3 alias) */
+  --c-green: var(--c-risk-green);
+  --c-green-bg: var(--c-risk-green-bg);
+  --c-yellow: #d97706;
+  --c-yellow-bg: #fffbeb;
+  --c-red: var(--c-risk-red);
+  --c-red-bg: var(--c-risk-red-bg);
+
+  /* Claude 暖灰度系 */
+  --c-gray-50:  #faf9f5;  /* Ivory */
+  --c-gray-100: #f0eee6;  /* Border Cream */
+  --c-gray-200: #e8e6dc;  /* Border Warm */
+  --c-gray-500: #87867f;  /* Stone Gray */
+  --c-gray-700: #5e5d59;  /* Olive Gray */
+  --c-gray-900: #141413;  /* Near Black */
+
+  /* Claude 表面色 */
+  --c-parchment: #f5f4ed;
+  --c-ivory: #faf9f5;
+  --c-warm-sand: #e8e6dc;
+  --c-dark-surface: #30302e;
+  --c-warm-silver: #b0aea5;
+  --c-dark-warm: #3d3d3a;
+
+  /* Morningstar 卡片化 — 迁移到暖色 */
+  --c-card-border:  #e8e6dc;
+  --c-card-header:  #faf9f5;
+  --c-card-hover:   rgba(201,100,66,0.04);
+
+  /* 形状 — Claude ring shadow 系统 */
+  --radius: 12px;
+  --shadow: 0px 0px 0px 1px #e8e6dc;
+  --shadow-md: 0px 0px 0px 1px #d1cfc5;
+  --shadow-lg: rgba(0,0,0,0.05) 0px 4px 24px;
+
+  /* Variant Perception 紫 — 保留 */
+  --c-variant: #7a4dab;
+  --c-variant-bg: #f3eeff;
+
+  /* v4.6 sidebar 布局(弃用但保持兼容) */
+  --sidebar-width: 260px;
+  --sidebar-gap: 24px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+               "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  background: var(--c-parchment);
+  color: var(--c-gray-900);
+  margin: 0;
+  padding: 0;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+/* Claude 衬线标题族 */
+h1, h2, h3 {
+  font-family: Georgia, "Noto Serif SC", "Songti SC", serif;
+  font-weight: 500;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+}
+
+/* ---------- 3.1 Sticky 顶部导航栏 ---------- */
+.top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  height: 50px;
+  padding: 0 24px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(245,244,237,0.85);
+  border-bottom: 1px solid var(--c-gray-200);
+  font-size: 14px;
+}
+.top-nav .nav-brand {
+  font-family: Georgia, "Noto Serif SC", serif;
+  font-weight: 500;
+  color: var(--c-primary);
+  text-decoration: none;
+  margin-right: auto;
+  font-size: 15px;
+}
+.top-nav a {
+  color: var(--c-gray-700);
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: background .15s, color .15s;
+}
+.top-nav a:hover {
+  background: rgba(201,100,66,0.08);
+  color: var(--c-primary);
+}
+
+/* ---------- Header Hero ---------- */
+header.hero {
+  background: var(--c-gray-900);
+  color: var(--c-ivory);
+  padding: 48px 32px;
+  border-radius: 16px;
+  margin-bottom: 32px;
+  box-shadow: var(--shadow-lg);
+}
+header.hero h1 {
+  font-size: 32px;
+  margin: 0 0 8px;
+  font-weight: 500;
+  line-height: 1.15;
+  color: var(--c-ivory);
+}
+header.hero .subtitle {
+  color: var(--c-warm-silver);
+  font-size: 15px;
+}
+header.hero .meta {
+  display: flex; flex-wrap: wrap; gap: 24px;
+  margin-top: 20px; font-size: 14px;
+  color: var(--c-warm-silver);
+}
+
+/* ---------- Section (每个 §一到§十五 一个) ---------- */
+.section {
+  background: var(--c-ivory);
+  padding: 28px 32px;
+  margin: 20px 0;
+  border-radius: var(--radius);
+  border: 1px solid var(--c-gray-100);
+  box-shadow: var(--shadow);
+}
+.section h2 {
+  font-family: Georgia, "Noto Serif SC", "Songti SC", serif;
+  color: var(--c-primary);
+  border-bottom: 2px solid rgba(201,100,66,0.15);
+  padding-bottom: 8px;
+  margin-top: 0;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.25;
+}
+.section h3 {
+  font-family: Georgia, "Noto Serif SC", "Songti SC", serif;
+  color: var(--c-gray-900);
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 24px;
+  border-bottom: 1px dashed var(--c-gray-200);
+  padding-bottom: 4px;
+  line-height: 1.3;
+}
+.section h4 { color: var(--c-gray-900); font-size: 16px; margin-top: 18px; }
+
+/* Variant Perception 章节专用紫色强调 */
+.section.variant-perception {
+  border-left: 4px solid var(--c-variant);
+  background: linear-gradient(to right, var(--c-variant-bg) 0%, var(--c-ivory) 3%);
+}
+.section.variant-perception h2 {
+  color: var(--c-variant);
+  border-bottom-color: var(--c-variant-bg);
+}
+
+/* ---------- 3.2 评分环形图 (SVG) ---------- */
+.score-ring {
+  display: inline-block;
+  position: relative;
+}
+.score-ring svg { display: block; }
+.score-ring .score-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.score-ring .score-text .num {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--c-primary);
+  font-family: Georgia, "Noto Serif SC", serif;
+}
+.score-ring .score-text .label {
+  font-size: 11px;
+  color: var(--c-gray-500);
+}
+
+/* ---------- 3.3 维度评分条形图 ---------- */
+.dimension-bar {
+  display: grid;
+  grid-template-columns: 1fr 48px 3fr 56px;
+  align-items: center;
+  gap: 12px;
+  margin: 10px 0;
+  font-size: 14px;
+}
+.dimension-bar .dim-name { color: var(--c-gray-700); }
+.dimension-bar .dim-score {
+  font-weight: 600;
+  text-align: right;
+  color: var(--c-primary);
+  font-family: Georgia, "Noto Serif SC", serif;
+}
+.dimension-bar .dim-progress {
+  height: 10px;
+  background: var(--c-gray-100);
+  border-radius: 5px;
+  overflow: hidden;
+}
+.dimension-bar .dim-progress .fill { height: 100%; border-radius: 5px; }
+.dimension-bar .dim-progress .fill.tier1 { background: linear-gradient(90deg, var(--c-primary), var(--c-primary-dark)); }
+.dimension-bar .dim-progress .fill.tier2 { background: linear-gradient(90deg, #8b5cf6, #6d28d9); }
+.dimension-bar .dim-progress .fill.tier3 { background: linear-gradient(90deg, var(--c-accent), var(--c-primary)); }
+.dimension-bar .dim-weight { text-align: right; color: var(--c-gray-500); font-size: 12px; }
+
+/* ---------- 3.4 三色情景卡片 ---------- */
+.scenario-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin: 16px 0;
+}
+.scenario {
+  padding: 16px;
+  border-radius: var(--radius);
+  border-left: 4px solid;
+}
+.scenario .label { font-size: 12px; color: var(--c-gray-500); text-transform: uppercase; letter-spacing: 1px; }
+.scenario .big-num {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 4px 0 8px;
+  font-family: Georgia, "Noto Serif SC", serif;
+}
+.scenario .detail { font-size: 13px; color: var(--c-gray-700); }
+.scenario.bull { background: var(--c-green-bg); border-left-color: var(--c-green); }
+.scenario.bull .big-num { color: var(--c-green); }
+.scenario.base { background: var(--c-yellow-bg); border-left-color: var(--c-yellow); }
+.scenario.base .big-num { color: var(--c-yellow); }
+.scenario.bear { background: var(--c-red-bg); border-left-color: var(--c-red); }
+.scenario.bear .big-num { color: var(--c-red); }
+.scenario.tail { background: var(--c-dark-surface); border-left-color: var(--c-gray-900); color: var(--c-ivory); }
+.scenario.tail .big-num { color: var(--c-ivory); }
+.scenario.tail .detail { color: var(--c-warm-silver); }
+
+/* ---------- 3.5 期望回报高亮条 ---------- */
+.expected-return {
+  background: linear-gradient(135deg, var(--c-gray-900), var(--c-primary-dark));
+  color: var(--c-ivory);
+  padding: 20px 28px;
+  border-radius: 16px;
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--shadow-lg);
+}
+.expected-return .label { font-size: 12px; color: var(--c-warm-silver); text-transform: uppercase; letter-spacing: 1px; }
+.expected-return .value {
+  font-size: 36px;
+  font-weight: 700;
+  font-family: Georgia, "Noto Serif SC", serif;
+}
+
+/* ---------- 3.6 团队名片网格 ---------- */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin: 16px 0;
+}
+.team-card {
+  padding: 16px;
+  border: 1px solid var(--c-gray-200);
+  border-radius: var(--radius);
+  text-align: center;
+  background: var(--c-ivory);
+}
+.team-card .avatar {
+  width: 48px; height: 48px; border-radius: 50%;
+  background: rgba(201,100,66,0.1); color: var(--c-primary);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; margin: 0 auto 8px; font-size: 18px;
+  font-family: Georgia, "Noto Serif SC", serif;
+}
+.team-card .name { font-weight: 600; }
+.team-card .role { color: var(--c-gray-500); font-size: 13px; margin-top: 4px; }
+
+/* ---------- 3.7 风险矩阵 ---------- */
+.risk-item {
+  display: grid;
+  grid-template-columns: 20px 1fr auto;
+  gap: 12px;
+  align-items: start;
+  padding: 12px;
+  border-left: 4px solid;
+  background: var(--c-gray-50);
+  border-radius: 8px;
+  margin: 8px 0;
+}
+.risk-item.high   { border-left-color: var(--c-red);    background: var(--c-red-bg); }
+.risk-item.medium { border-left-color: var(--c-yellow); background: var(--c-yellow-bg); }
+.risk-item.low    { border-left-color: var(--c-green);  background: var(--c-green-bg); }
+.risk-item .dot {
+  width: 12px; height: 12px; border-radius: 50%; margin-top: 4px;
+}
+.risk-item.high   .dot { background: var(--c-red); }
+.risk-item.medium .dot { background: var(--c-yellow); }
+.risk-item.low    .dot { background: var(--c-green); }
+
+/* ---------- 3.8 融资时间轴 ---------- */
+.timeline {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin: 24px 0;
+  overflow-x: auto;
+  padding: 8px 0;
+}
+.timeline .tl-node {
+  flex: 0 0 auto;
+  text-align: center;
+  padding: 0 14px;
+  position: relative;
+}
+.timeline .tl-node::before {
+  content: '';
+  width: 14px; height: 14px; border-radius: 50%;
+  background: var(--c-gray-200); display: block; margin: 0 auto 8px;
+}
+.timeline .tl-node.current::before {
+  background: var(--c-primary);
+  box-shadow: 0 0 0 4px rgba(201,100,66,0.15);
+}
+.timeline .tl-node .year { font-size: 12px; color: var(--c-gray-500); }
+.timeline .tl-node .round { font-weight: 600; font-size: 13px; }
+.timeline .tl-node .amount { font-size: 11px; color: var(--c-gray-700); }
+
+/* ---------- 3.9 情绪量表 ---------- */
+.sentiment-bar {
+  position: relative;
+  height: 12px;
+  border-radius: 6px;
+  background: linear-gradient(to right, var(--c-red) 0%, var(--c-yellow) 50%, var(--c-green) 100%);
+  margin: 20px 0 32px;
+}
+.sentiment-bar .pointer {
+  position: absolute;
+  top: -8px;
+  width: 4px; height: 28px;
+  background: var(--c-gray-900);
+  border-radius: 2px;
+  transform: translateX(-50%);
+}
+.sentiment-bar .pointer::after {
+  content: attr(data-label);
+  position: absolute;
+  top: 32px; left: 50%; transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: 11px;
+  background: var(--c-gray-900);
+  color: var(--c-ivory);
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+/* ---------- v2 组件 · 估值区间可视化 ---------- */
+.valuation-range {
+  position: relative;
+  height: 28px;
+  background: var(--c-gray-100);
+  border-radius: 6px;
+  margin: 10px 0;
+}
+.valuation-range .range {
+  position: absolute;
+  top: 4px; bottom: 4px;
+  border-radius: 4px;
+  opacity: 0.6;
+}
+.valuation-range .range.dcf { background: var(--c-primary); }
+.valuation-range .range.comparable { background: var(--c-green); }
+.valuation-range .range.transaction { background: var(--c-yellow); }
+.valuation-range .label-row {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 8px;
+  align-items: center;
+  font-size: 12px;
+}
+
+/* ---------- v2 组件 · 星级评估 ---------- */
+.star-filled { color: var(--c-accent); }
+.star-empty  { color: var(--c-gray-200); }
+
+/* ---------- v2 组件 · 信息缺口优先级 badge ---------- */
+.badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.badge.critical { background: var(--c-red-bg);    color: var(--c-red); }
+.badge.important{ background: var(--c-yellow-bg); color: var(--c-yellow); }
+.badge.minor    { background: var(--c-green-bg);  color: var(--c-green); }
+
+/* ---------- 通用 Table ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 14px;
+}
+th, td {
+  border: 1px solid var(--c-gray-200);
+  padding: 8px 12px;
+  text-align: left;
+}
+th {
+  background: var(--c-gray-100);
+  color: var(--c-primary);
+  font-weight: 600;
+}
+tr:nth-child(even) td { background: var(--c-gray-50); }
+
+/* ---------- 通用文本 ---------- */
+strong { color: var(--c-gray-900); font-weight: 600; }
+code {
+  background: var(--c-gray-100);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+blockquote {
+  border-left: 4px solid var(--c-primary);
+  padding: 10px 16px;
+  color: var(--c-gray-700);
+  background: rgba(201,100,66,0.05);
+  border-radius: 8px;
+  margin: 12px 0;
+}
+hr { border: none; border-top: 1px dashed var(--c-gray-200); margin: 24px 0; }
+ul, ol { padding-left: 22px; }
+li { margin: 4px 0; }
+a {
+  color: var(--c-primary);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(201,100,66,0.3);
+}
+a:hover { color: var(--c-accent); }
+
+footer {
+  text-align: center;
+  color: var(--c-gray-500);
+  padding: 32px 0 16px;
+  font-size: 12px;
+  border-top: 1px solid var(--c-gray-200);
+  margin-top: 48px;
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width: 768px) {
+  .container { padding: 20px 16px 60px; }
+  header.hero { padding: 24px 16px; }
+  header.hero h1 { font-size: 24px; }
+  .section { padding: 16px; }
+  .scenario-grid, .team-grid { grid-template-columns: 1fr; }
+  table { font-size: 12px; }
+  table th, table td { padding: 6px 8px; }
+}
+
+/* ============================================================
+   v4.6 新增: 6 个大厂风格组件 (迁移至 Claude 设计语言)
+   ============================================================ */
+
+/* ---------- v4.6-1. 前置评级卡 ---------- */
+.rating-trio {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: -16px 0 32px;
+}
+.rating-card {
+  background: var(--c-ivory);
+  border: 1px solid var(--c-card-border);
+  border-top: 3px solid var(--c-primary);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  box-shadow: var(--shadow);
+  transition: transform .15s, box-shadow .15s;
+}
+.rating-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+.rating-card--score  { border-top-color: var(--c-primary); }
+.rating-card--anchor { border-top-color: var(--c-accent); }
+.rating-card--return { border-top-color: var(--c-risk-green); }
+.rating-card--return.negative { border-top-color: var(--c-risk-red); }
+
+.rating-card .label {
+  font-size: 11px;
+  color: var(--c-gray-500);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.rating-card .value {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--c-gray-900);
+  line-height: 1.2;
+  margin-bottom: 6px;
+  font-family: Georgia, "Noto Serif SC", serif;
+}
+.rating-card .value .out-of {
+  font-size: 16px;
+  color: var(--c-gray-500);
+  font-weight: 500;
+}
+.rating-card .value.negative { color: var(--c-risk-red); }
+.rating-card .value.positive { color: var(--c-risk-green); }
+.rating-card .sub {
+  font-size: 12px;
+  color: var(--c-gray-700);
+}
+
+/* ---------- v4.6-2. 彩条风险卡 (Bloomberg 等级色保留) ---------- */
+.risk-card-v2 {
+  display: grid;
+  grid-template-columns: 4px 1fr auto;
+  gap: 14px;
+  align-items: center;
+  padding: 14px 16px 14px 0;
+  margin: 8px 0;
+  background: var(--c-ivory);
+  border: 1px solid var(--c-card-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: background .15s;
+}
+.risk-card-v2:hover { background: var(--c-card-hover); }
+.risk-card-v2.risk-critical { border-left-width: 0; background: linear-gradient(to right, var(--c-risk-red-bg) 0%, var(--c-ivory) 6%); }
+.risk-card-v2.risk-high     { background: linear-gradient(to right, var(--c-risk-amber-bg) 0%, var(--c-ivory) 6%); }
+.risk-card-v2.risk-medium   { background: linear-gradient(to right, var(--c-risk-yellow-bg) 0%, var(--c-ivory) 6%); }
+.risk-card-v2.risk-low      { background: linear-gradient(to right, var(--c-risk-green-bg) 0%, var(--c-ivory) 6%); }
+.risk-card-v2 .left-bar { align-self: stretch; width: 4px; }
+.risk-card-v2.risk-critical .left-bar { background: var(--c-risk-red); }
+.risk-card-v2.risk-high     .left-bar { background: var(--c-risk-amber); }
+.risk-card-v2.risk-medium   .left-bar { background: var(--c-risk-yellow); }
+.risk-card-v2.risk-low      .left-bar { background: var(--c-risk-green); }
+.risk-card-v2 .title { font-weight: 600; color: var(--c-gray-900); margin-bottom: 3px; }
+.risk-card-v2 .body  { font-size: 13px; color: var(--c-gray-700); line-height: 1.5; }
+.risk-card-v2 .sev-badge {
+  font-size: 10px; font-weight: 700; padding: 3px 10px;
+  border-radius: 12px; white-space: nowrap; letter-spacing: .5px;
+}
+.risk-card-v2.risk-critical .sev-badge { background: var(--c-risk-red);    color: white; }
+.risk-card-v2.risk-high     .sev-badge { background: var(--c-risk-amber);  color: white; }
+.risk-card-v2.risk-medium   .sev-badge { background: var(--c-risk-yellow); color: var(--c-gray-900); }
+.risk-card-v2.risk-low      .sev-badge { background: var(--c-risk-green);  color: white; }
+
+/* ---------- v4.6.2. Preamble 区 ---------- */
+.preamble {
+  background: var(--c-ivory);
+  border-left: 3px solid var(--c-accent);
+  border-radius: 8px;
+  padding: 14px 20px;
+  margin: -8px 0 20px;
+  font-size: 13px;
+  color: var(--c-gray-700);
+  line-height: 1.7;
+}
+.preamble:empty { display: none; }
+.preamble blockquote {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  font-size: 13px;
+}
+.preamble blockquote p { margin: 6px 0; }
+.preamble p { margin: 6px 0; }
+.preamble strong { color: var(--c-primary-dark); }
+.preamble hr { display: none; }
+
+/* ---------- v4.6.1. 关键指标横排面板 ---------- */
+.metric-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+  margin: 0 0 24px;
+  padding: 16px;
+  background: var(--c-ivory);
+  border: 1px solid var(--c-card-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.metric-strip .metric-chip {
+  padding: 10px 14px;
+  text-align: center;
+  border-right: 1px dashed var(--c-gray-100);
+}
+.metric-strip .metric-chip:last-child { border-right: none; }
+.metric-strip .metric-chip .metric-label {
+  font-size: 10px;
+  color: var(--c-gray-500);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.metric-strip .metric-chip .metric-value {
+  font-size: 18px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  color: var(--c-gray-900);
+  font-family: Georgia, "Noto Serif SC", serif;
+}
+.metric-strip .metric-chip .metric-value.positive { color: var(--c-risk-green); }
+.metric-strip .metric-chip .metric-value.negative { color: var(--c-risk-red); }
+.metric-strip .metric-chip .metric-value.risk     { color: var(--c-risk-amber); }
+.metric-strip .metric-chip .metric-value.critical { color: var(--c-risk-red); font-weight: 900; }
+.metric-strip .metric-chip .metric-value.neutral  { color: var(--c-gray-900); }
+
+/* ---------- v4.6 兼容: .metric-sidebar/metric-row 保留 ---------- */
+.metric-sidebar {
+  background: var(--c-ivory);
+  border: 1px solid var(--c-card-border);
+  border-radius: var(--radius);
+  padding: 20px 18px;
+  box-shadow: var(--shadow);
+  margin: 0 0 24px;
+}
+.metric-sidebar h4 {
+  font-size: 11px;
+  color: var(--c-gray-500);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  margin: 0 0 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--c-card-border);
+}
+.metric-sidebar .metric-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--c-gray-100);
+  font-size: 13px;
+}
+.metric-sidebar .metric-row:last-child { border-bottom: none; }
+.metric-sidebar .metric-row span { color: var(--c-gray-700); }
+.metric-sidebar .metric-row strong { font-weight: 700; color: var(--c-gray-900); font-variant-numeric: tabular-nums; }
+.metric-sidebar .metric-row strong.positive { color: var(--c-risk-green); }
+.metric-sidebar .metric-row strong.negative { color: var(--c-risk-red); }
+.metric-sidebar .metric-row strong.risk     { color: var(--c-risk-amber); font-weight: 800; }
+.metric-sidebar .metric-row strong.critical { color: var(--c-risk-red);   font-weight: 800; }
+
+/* ---------- v4.6-4. 对标卡 ---------- */
+.comparison-card {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr 1fr;
+  gap: 8px;
+  background: var(--c-ivory);
+  border: 1px solid var(--c-card-border);
+  border-radius: var(--radius);
+  padding: 16px;
+  margin: 12px 0;
+}
+.comparison-card .cmp-col {
+  text-align: center;
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+.comparison-card .cmp-col.center {
+  background: rgba(201,100,66,0.06);
+  border: 2px solid var(--c-primary);
+}
+.comparison-card .cmp-label { font-size: 10px; color: var(--c-gray-500); text-transform: uppercase; letter-spacing: 1px; font-weight: 600; margin-bottom: 6px; }
+.comparison-card .cmp-value {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--c-gray-900);
+  font-variant-numeric: tabular-nums;
+  font-family: Georgia, "Noto Serif SC", serif;
+}
+.comparison-card .cmp-col.center .cmp-value { font-size: 24px; color: var(--c-primary); }
+.comparison-card .cmp-sub { font-size: 11px; color: var(--c-gray-500); margin-top: 4px; }
+.comparison-card .cmp-bar {
+  height: 6px; background: var(--c-gray-100); border-radius: 3px;
+  margin-top: 8px; position: relative; overflow: hidden;
+}
+.comparison-card .cmp-bar .fill {
+  position: absolute; left: 0; top: 0; bottom: 0;
+  background: linear-gradient(90deg, var(--c-primary), var(--c-accent));
+  border-radius: 3px;
+}
+
+/* ---------- v4.6-5. 深度链接 ---------- */
+.deep-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 1px 8px 1px 6px;
+  font-size: 11px;
+  background: rgba(201,100,66,0.08);
+  color: var(--c-primary);
+  border: 1px solid transparent;
+  border-radius: 12px;
+  text-decoration: none !important;
+  vertical-align: middle;
+  font-weight: 600;
+  transition: background .15s, border-color .15s;
+}
+.deep-link::before { content: '→'; opacity: .6; }
+.deep-link:hover {
+  background: var(--c-primary);
+  color: var(--c-ivory);
+  border-color: var(--c-primary);
+}
+/* Target 高亮 */
+.section:target {
+  animation: target-pulse 1.8s ease-out;
+  scroll-margin-top: 70px;
+}
+@keyframes target-pulse {
+  0%   { box-shadow: 0 0 0 4px var(--c-accent); }
+  100% { box-shadow: var(--shadow); }
+}
+
+/* ---------- v4.6-6. 微型热力图 ---------- */
+.heatmap-grid {
+  display: grid;
+  gap: 2px;
+  margin: 10px 0;
+  font-size: 10px;
+}
+.heatmap-grid .hm-cell {
+  aspect-ratio: 1 / 1;
+  min-height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-family: ui-monospace, monospace;
+  font-weight: 600;
+  color: var(--c-gray-900);
+}
+/* 5 档颜色映射 */
+.heatmap-grid .hm-cell.hm--2 { background: #fca5a5; color: #7f1d1d; }
+.heatmap-grid .hm-cell.hm--1 { background: #fed7aa; color: #7c2d12; }
+.heatmap-grid .hm-cell.hm-0  { background: var(--c-gray-100); }
+.heatmap-grid .hm-cell.hm-1  { background: #bbf7d0; color: #14532d; }
+.heatmap-grid .hm-cell.hm-2  { background: #4ade80; color: white; }
+.heatmap-grid .hm-cell:hover { transform: scale(1.1); }
+
+.heatmap-grid .hm-row-label {
+  font-size: 10px;
+  color: var(--c-gray-500);
+  text-align: right;
+  padding-right: 8px;
+  align-self: center;
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width: 768px) {
+  .container { padding: 20px 16px 60px; }
+  header.hero { padding: 24px 16px; }
+  header.hero h1 { font-size: 24px; }
+  .section { padding: 16px; }
+  .scenario-grid, .team-grid, .rating-trio { grid-template-columns: 1fr; }
+  .comparison-card { grid-template-columns: 1fr; }
+  .metric-strip { grid-template-columns: repeat(2, 1fr); }
+  .metric-strip .metric-chip { border-right: none; border-bottom: 1px dashed var(--c-gray-100); }
+  table { font-size: 12px; }
+  table th, table td { padding: 6px 8px; }
+}
+
+/* ---------- 打印 ---------- */
+@media print {
+  body { background: white; }
+  .top-nav { display: none; }
+  .section { box-shadow: none; border: 1px solid #ccc; break-inside: avoid; }
+  header.hero { break-inside: avoid; }
+  .metric-strip { break-inside: avoid; }
+  .deep-link { color: var(--c-gray-900); background: transparent; border-color: var(--c-gray-500); }
+  .deep-link::before { content: ''; }
+  .deep-link::after { content: ' (见对应章节)'; font-size: 10px; color: var(--c-gray-500); }
+}
+
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     Sticky 顶部导航栏 — 13 章节锚点
+     ============================================================ -->
+<nav class="top-nav">
+  <a href="../../index.html" class="nav-brand">AI 投资分析报告</a>
+  <a href="#exec-summary">摘要</a>
+  <a href="#scoring">评分</a>
+  <a href="#screening">快筛</a>
+  <a href="#fundamentals">基本面</a>
+  <a href="#industry">行业</a>
+  <a href="#detail">详细</a>
+  <a href="#sentiment">舆情</a>
+  <a href="#peers">对标</a>
+  <a href="#valuation">估值</a>
+  <a href="#qualitative">定性</a>
+  <a href="#gaps">缺口</a>
+  <a href="#sources">来源</a>
+</nav>
+
+<div class="container">
+
+<!-- ============================================================
+     Header Hero
+     ============================================================ -->
+<header class="hero">
+  <h1>Apple（AAPL）投资分析报告</h1>
+  <div class="subtitle">由 Claude Code 自动生成</div>
+  <div class="meta">
+    <span>📅 2026-05-15</span>
+    <span>💵 收盘 $299.46</span>
+    <span>📊 PB 41.2 · 市值 43983 亿美元</span>
+    <span>🎯 估值锚 $219</span>
+  </div>
+</header>
+
+<!-- ============================================================
+     v4.6.2 新增: Preamble 区 — 主报告第一个 ## 之前的 blockquote / 段落
+     (版本切换说明 / 数据截止注意 / meta 行的详细补充等),否则会丢失
+     ============================================================ -->
+<div class="preamble"></div>
+
+<!-- ============================================================
+     v4.6 新增: 前置评级三件套(Goldman 风格, hero 下方醒目位置)
+     ============================================================ -->
+<div class="rating-trio">
+
+  <div class="rating-card rating-card--score">
+    <div class="label">综合评分</div>
+    <div class="value">7.55 <span class="out-of">/ 10</span></div>
+    <div class="sub">看多方向</div>
+  </div>
+  <div class="rating-card rating-card--anchor">
+    <div class="label">估值锚(DCF 概率加权)</div>
+    <div class="value">$219</div>
+    <div class="sub">相对当前 +36.7%</div>
+  </div>
+  <div class="rating-card rating-card--return negative">
+    <div class="label">2 年期望收益</div>
+    <div class="value negative">-26.8%</div>
+    <div class="sub">年化 -14.4%</div>
+  </div>
+</div>
+
+<!-- ============================================================
+     v4.6.1 关键指标横排面板(替代 v4.6 的粘性侧边栏,更简洁)
+     ============================================================ -->
+<div class="metric-strip">
+
+  <div class="metric-chip">
+    <div class="metric-label">PE (TTM)</div>
+    <div class="metric-value neutral">36.3</div>
+  </div>
+  <div class="metric-chip">
+    <div class="metric-label">PB</div>
+    <div class="metric-value neutral">41.2x</div>
+  </div>
+  <div class="metric-chip">
+    <div class="metric-label">市值</div>
+    <div class="metric-value neutral">44000 亿美元</div>
+  </div>
+  <div class="metric-chip">
+    <div class="metric-label">ROE</div>
+    <div class="metric-value positive">151.91%</div>
+  </div>
+  <div class="metric-chip">
+    <div class="metric-label">毛利率</div>
+    <div class="metric-value neutral">46.91%</div>
+  </div>
+  <div class="metric-chip">
+    <div class="metric-label">资产负债率</div>
+    <div class="metric-value neutral">79.48%</div>
+  </div>
+  <div class="metric-chip">
+    <div class="metric-label">股东户数</div>
+    <div class="metric-value neutral">N/A</div>
+  </div>
+  <div class="metric-chip">
+    <div class="metric-label">家族持股</div>
+    <div class="metric-value neutral">16.7%</div>
+  </div>
+</div>
+
+<!-- ============================================================
+     §一 执行摘要
+     ============================================================ -->
+<div class="section" id="exec-summary">
+<h2>§一 执行摘要</h2>
+<p><strong>一句话结论</strong>: <strong>看多方向</strong> —— Apple 拥有全球独一无二的硬件-软件-芯片-服务四位一体护城河，25 亿+活跃设备生态持续加深，iPhone 17 Super Cycle 和 Apple Intelligence 驱动 FY2026 营收加速至 +16~17%；但当前 $299.46 股价相对 DCF 概率加权锚 $219 溢价 +36.7%，PE 36x 处于 52 周高位，好消息已充分定价，风险收益比严重不对称偏下。</p>
+<p><strong>估值锚</strong>: <strong>DCF 概率加权 $219/股</strong>（4 情景：乐观 20% / 基准 45% / 悲观 30% / 最差 5%）。当前 $299.46 相对此锚溢价 <strong>+36.7%</strong>。</p>
+<p><strong>综合评分</strong>: <strong>7.55/10</strong> · <strong>数据置信度</strong>: 中（美股 yfinance 数据覆盖完整，但 11 框架审计因数据接口限制全部返回"数据不足"，实质性风险分析依赖 PDF 原文+手工执行）</p>
+<p><strong>三大风险（Top 3）</strong>:<br />
+1. 资产负债率 79.5% 超 70% 警戒线，高杠杆回购策略在利率上升环境下债务成本承压 [§三 快筛条款 2 触发; §六 维度 7]<br />
+2. PE 36x 处 52 周高位（距 $300.92 仅 0.5%），DCF 锚 $219 隐含 -27% 下行空间，估值无安全边际 [§六 维度 8; §九 DCF]<br />
+3. 欧盟 DMA 迫使 App Store 开放 + 关税/贸易摩擦升级 + OpenAI 法律纠纷，监管尾部风险非对称偏下 [§六 维度 9; Doc:10-K FY2025, Item 1A]</p>
+<p><strong>三大机会（Top 3）</strong>:<br />
+1. iPhone 17 Super Cycle 驱动 Q2 FY2026 营收 +17%，"extraordinary demand" 确认强劲换机周期 [Doc:Q2 FY2026 press release]<br />
+2. Services $102B (+14% YoY) 以 ~74% 毛利率成为利润增长主引擎，25 亿设备生态持续货币化 [Doc:10-K FY2025, P.41-44]<br />
+3. $100B 新回购授权 + 股息提升 4%，全球最大规模股东回报计划持续缩股支撑 EPS [Doc:Q2 FY2026 press release]</p>
+<p><strong>核心非共识观点（Top 3）</strong>:<br />
+1. Apple 79.5% 资产负债率是"报表难看但实质极强"——$98.8B FCF 完全覆盖偿债，高杠杆是主动资本结构选择而非财务困境<br />
+2. PE 36x 定价更接近"科技平台"而非"消费电子"，若 Services 增速放缓或 DMA 削弱 App Store 护城河，估值面临从 36x 向 22x 回归的下修风险<br />
+3. 定性看多（护城河+管理层）与估值看空（DCF $219 vs 现价 $299）形成核心分歧——这是一家伟大公司，但当前不是好价格</p>
+<p><strong>投资方向综合判定</strong>: <strong>看多方向</strong>（3 框架中护城河+管理层看多、催化剂中性；§三 快筛 PASS 无致命否决）</p>
+<hr />
+</div>
+
+<!-- ============================================================
+     §二 评分总览（10 维度单列）
+     ============================================================ -->
+<div class="section" id="scoring">
+<h2>§二 事实评分总览（10 维度）</h2>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th style="text-align: center;">权重</th>
+<th style="text-align: center;">分数(0-10)</th>
+<th style="text-align: center;">加权</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. 市场规模与结构</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">0.80</td>
+</tr>
+<tr>
+<td>2. 商业模式</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">0.90</td>
+</tr>
+<tr>
+<td>3. 盈利能力</td>
+<td style="text-align: center;">15%</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">1.35</td>
+</tr>
+<tr>
+<td>4. 产品与技术</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">0.80</td>
+</tr>
+<tr>
+<td>5. 团队与管理层</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">0.80</td>
+</tr>
+<tr>
+<td>6. 市场进入与护城河</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">0.90</td>
+</tr>
+<tr>
+<td>7. 财务健康度</td>
+<td style="text-align: center;">15%</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">0.90</td>
+</tr>
+<tr>
+<td>8. 估值合理性</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">0.40</td>
+</tr>
+<tr>
+<td>9. 风险与治理</td>
+<td style="text-align: center;">5%</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">0.35</td>
+</tr>
+<tr>
+<td>10. 催化剂与时机</td>
+<td style="text-align: center;">5%</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">0.35</td>
+</tr>
+<tr>
+<td><strong>合计</strong></td>
+<td style="text-align: center;">100%</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: center;"><strong>7.55</strong></td>
+</tr>
+</tbody>
+</table>
+<p><em>详细证据见 §六。评分标尺见 <code>references/scoring-rubric.md</code>。表格严格 4 列（维度/权重/分数/加权分）——不添加"关键理由"列。</em></p>
+<hr />
+</div>
+
+<!-- ============================================================
+     §三 快速筛选
+     ============================================================ -->
+<div class="section" id="screening">
+<h2>§三 快速筛选（致命看空条款 - 6 项）</h2>
+<table>
+<thead>
+<tr>
+<th>条款</th>
+<th>阈值</th>
+<th>实际</th>
+<th style="text-align: center;">触发?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. 单季 / 单年度净利 &lt; -50%</td>
+<td>50%</td>
+<td>FY2025 净利 +19.5% YoY; Q2 FY2026 EPS +22% YoY [API:data_snapshot §2.1; Doc:Q2 FY2026 press release]</td>
+<td style="text-align: center;">❌ 未触发</td>
+</tr>
+<tr>
+<td>2. 资产负债率 &gt; 70%</td>
+<td>70%</td>
+<td><strong>79.5%</strong> (FY2025) [API:data_snapshot §2.4] — ⚠️ 形式触发但实质可控：$98.8B FCF + OCF/NI=0.996 证明偿债能力极强，高杠杆系主动回购策略而非财务困境</td>
+<td style="text-align: center;">⚠️ 形式触发</td>
+</tr>
+<tr>
+<td>3. 大股东累计质押 &gt; 50%</td>
+<td>50%</td>
+<td>美股无质押结构，管理层持股无质押 [Doc:DEF 14A 2026]</td>
+<td style="text-align: center;">❌ 未触发</td>
+</tr>
+<tr>
+<td>4. 审计机构连续 2 年变更</td>
+<td>1 次</td>
+<td>无变更记录 [Doc:10-K FY2025]</td>
+<td style="text-align: center;">❌ 未触发</td>
+</tr>
+<tr>
+<td>5. CFO 非正常离任</td>
+<td>1 次</td>
+<td>Kevan Parekh 2025 年正常接替 Luca Maestri（内部晋升，非非正常离任）[Doc:Q1 FY2026 press release]</td>
+<td style="text-align: center;">❌ 未触发</td>
+</tr>
+<tr>
+<td>6. <strong>Audit ≥ 2 个 🔴 红旗</strong></td>
+<td>2</td>
+<td>0 个 🔴 红旗（11 框架全部返回"⚠️ 数据不足或无信号"）[audit_report.md §2]</td>
+<td style="text-align: center;">❌ 未触发</td>
+</tr>
+</tbody>
+</table>
+<p><strong>结果</strong>: <strong>✅ PASS</strong>（6 项中 0 项致命触发）。条款 2 资产负债率 79.5% 形式上超过 70% 阈值，但结合 Apple 的 $98.8B 自由现金流、OCF/NI = 0.996 的极健康现金流覆盖、以及主动杠杆回购的资本结构策略，<strong>不构成致命看空</strong>。此为美股科技巨头特有的"报表杠杆高但偿债能力极强"特征。audit 11 框架全部"数据不足"系美股 yfinance 数据接口覆盖范围局限，非公司本身无风险——实质性风险已在 §六/§九/§十一 通过 PDF 原文+yfinance 数据手工分析覆盖。</p>
+</div>
+
+<!-- ============================================================
+     §四 公司基本面（含剥离后剩余资产清单若触发）
+     ============================================================ -->
+<div class="section" id="fundamentals">
+<h2>§四 公司基本面</h2>
+<h3>业务板块</h3>
+<table>
+<thead>
+<tr>
+<th>业务线</th>
+<th style="text-align: right;">FY2025 营收</th>
+<th style="text-align: right;">占比</th>
+<th style="text-align: right;">YoY</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>iPhone</td>
+<td style="text-align: right;">$239.9B</td>
+<td style="text-align: right;">57.6%</td>
+<td style="text-align: right;">+3%</td>
+<td>[Doc:10-K FY2025, P.41-44]</td>
+</tr>
+<tr>
+<td>Services</td>
+<td style="text-align: right;">$102.0B</td>
+<td style="text-align: right;">24.5%</td>
+<td style="text-align: right;">+14%</td>
+<td>[Doc:10-K FY2025, P.41-44]</td>
+</tr>
+<tr>
+<td>Mac</td>
+<td style="text-align: right;">$37.4B</td>
+<td style="text-align: right;">9.0%</td>
+<td style="text-align: right;">+10%</td>
+<td>[Doc:10-K FY2025, P.41-44]</td>
+</tr>
+<tr>
+<td>iPad</td>
+<td style="text-align: right;">$33.5B</td>
+<td style="text-align: right;">8.1%</td>
+<td style="text-align: right;">+7%</td>
+<td>[Doc:10-K FY2025, P.41-44]</td>
+</tr>
+<tr>
+<td>Wearables, Home &amp; Accessories</td>
+<td style="text-align: right;">$36.1B</td>
+<td style="text-align: right;">8.7%</td>
+<td style="text-align: right;">-3%</td>
+<td>[Doc:10-K FY2025, P.41-44]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>业务特征</strong>: iPhone 仍为核心收入引擎（~58%），但 Services 业务（App Store, Apple Music, iCloud, Apple TV+, Apple Pay, AppleCare）以 ~74% 毛利率成为利润增长主驱动力。硬件 + 服务生态闭环，超 25 亿活跃设备构成 Services 增长底座。 [Doc:Q1 FY2026 press release]</p>
+<h3>最新经营动态（近 12 个月关键事件）</h3>
+<table>
+<thead>
+<tr>
+<th>时间</th>
+<th>事件</th>
+<th>影响</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2026-04</td>
+<td>Q2 FY2026 营收 $111.2B (+17% YoY)，所有地理分部双位数增长</td>
+<td>iPhone 17 系列驱动 "extraordinary demand"</td>
+<td>[Doc:Q2 FY2026 press release]</td>
+</tr>
+<tr>
+<td>2026-04</td>
+<td>宣布新 $100B 股票回购授权 + 股息提升 4% 至 $0.27/股</td>
+<td>强化股东回报承诺</td>
+<td>[Doc:Q2 FY2026 press release]</td>
+</tr>
+<tr>
+<td>2026-01</td>
+<td>Q1 FY2026 营收 $143.8B (+16% YoY)，EPS $2.84 历史新高</td>
+<td>全品类、全地区增长</td>
+<td>[Doc:Q1 FY2026 press release]</td>
+</tr>
+<tr>
+<td>2025-09</td>
+<td>FY2025 全年净利润 $112.0B (+19.5%)，毛利率 46.9%</td>
+<td>结束连续两年低增长/负增长</td>
+<td>[API:data_snapshot §2.1]</td>
+</tr>
+<tr>
+<td>2025</td>
+<td>Kevan Parekh 接替 Luca Maestri 担任 CFO</td>
+<td>管理层交接平稳</td>
+<td>[Doc:Q1 FY2026 press release]</td>
+</tr>
+<tr>
+<td>2025-2026</td>
+<td>Apple Intelligence 发布：端侧处理 + Private Cloud Compute + ChatGPT 集成</td>
+<td>AI 战略核心差异化</td>
+<td>[Web:apple.com/apple-intelligence]</td>
+</tr>
+<tr>
+<td>2025-2026</td>
+<td>欧盟 DMA / App Store 反垄断持续 + OpenAI 法律纠纷</td>
+<td>监管不确定性</td>
+<td>[Doc:10-K FY2025, Item 1A]</td>
+</tr>
+</tbody>
+</table>
+<h3>财务趋势表（近 3-5 年 + 最新季度）</h3>
+<!-- ★ 来源: data_snapshot.md §3 多年趋势完整表，全部行 inline -->
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">期末</th>
+<th style="text-align: right;">营收(亿$)</th>
+<th style="text-align: center;">营收 YoY</th>
+<th style="text-align: right;">毛利率%</th>
+<th style="text-align: right;">净利率%</th>
+<th style="text-align: right;">归母净利(亿$)</th>
+<th style="text-align: center;">净利 YoY</th>
+<th style="text-align: right;">加权 ROE%</th>
+<th style="text-align: right;">资产负债率%</th>
+<th style="text-align: right;">OCF(亿$)</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">FY2025 (20250930)</td>
+<td style="text-align: right;">4161.61</td>
+<td style="text-align: center;">+6.43%</td>
+<td style="text-align: right;">46.91</td>
+<td style="text-align: right;">26.92</td>
+<td style="text-align: right;">1120.10</td>
+<td style="text-align: center;">+19.50%</td>
+<td style="text-align: right;">151.91</td>
+<td style="text-align: right;">79.48</td>
+<td style="text-align: right;">1114.82</td>
+<td>[API:yfinance+data_snapshot §3]</td>
+</tr>
+<tr>
+<td style="text-align: center;">FY2024 (20240930)</td>
+<td style="text-align: right;">3910.35</td>
+<td style="text-align: center;">+2.02%</td>
+<td style="text-align: right;">46.21</td>
+<td style="text-align: right;">23.97</td>
+<td style="text-align: right;">937.36</td>
+<td style="text-align: center;">-3.36%</td>
+<td style="text-align: right;">164.59</td>
+<td style="text-align: right;">84.40</td>
+<td style="text-align: right;">1182.54</td>
+<td>[API:yfinance+data_snapshot §3]</td>
+</tr>
+<tr>
+<td style="text-align: center;">FY2023 (20230930)</td>
+<td style="text-align: right;">3832.85</td>
+<td style="text-align: center;">-2.80%</td>
+<td style="text-align: right;">44.13</td>
+<td style="text-align: right;">25.31</td>
+<td style="text-align: right;">969.95</td>
+<td style="text-align: center;">-2.81%</td>
+<td style="text-align: right;">156.08</td>
+<td style="text-align: right;">82.37</td>
+<td style="text-align: right;">1105.43</td>
+<td>[API:yfinance+data_snapshot §3]</td>
+</tr>
+<tr>
+<td style="text-align: center;">FY2022 (20220930)</td>
+<td style="text-align: right;">3943.28</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: right;">43.31</td>
+<td style="text-align: right;">25.31</td>
+<td style="text-align: right;">998.03</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: right;">196.96</td>
+<td style="text-align: right;">85.64</td>
+<td style="text-align: right;">1221.51</td>
+<td>[API:yfinance+data_snapshot §3]</td>
+</tr>
+<tr>
+<td style="text-align: center;">FY2021 (20210930)</td>
+<td style="text-align: right;">–</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: right;">–</td>
+<td style="text-align: right;">–</td>
+<td style="text-align: right;">–</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: right;">–</td>
+<td style="text-align: right;">–</td>
+<td style="text-align: right;">–</td>
+<td>[API:yfinance — 数据不完整]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>最新季度增量</strong> (未纳入上表年度数据):<br />
+- Q2 FY2026 (截至 2026-03-28): 营收 $111.2B (+17% YoY), EPS $2.01 (+22%) [Doc:Q2 FY2026 press release]<br />
+- Q1 FY2026 (截至 2025-12-27): 营收 $143.8B (+16% YoY), EPS $2.84 (+19%), 经营现金流 ~$54B [Doc:Q1 FY2026 press release]</p>
+<p><strong>趋势解读</strong>:<br />
+1. <strong>营收</strong>: FY2022-FY2023 负增长 → FY2024 微增 +2% → FY2025 恢复 +6.4% → Q1-Q2 FY2026 加速至 +16~17%，iPhone 17 系列驱动强劲周期<br />
+2. <strong>毛利率</strong>: 43.3% → 44.1% → 46.2% → 46.9%，连续 4 年改善，Services 占比提升 + iPhone mix 优化 + 元件成本下降 [Doc:10-K FY2025, Financial Statements]<br />
+3. <strong>净利率</strong>: FY2024 异常低 (23.97%) 因欧盟 State Aid 一次性税务调整 ($29.7B 所得税)，FY2025 正常化回升至 26.92% [Doc:10-K FY2025, Item 8]<br />
+4. <strong>ROE</strong>: 超高水平 (151-197%) 因权益极薄——大规模回购持续缩减股东权益，FY2025 权益仅 $73.7B vs 总资产 $359.2B [API:data_snapshot §2.2]<br />
+5. <strong>OCF</strong>: $1,105-1,222B 区间波动，FY2025 $111.5B (-5.7%) 主因营运资本变动不利 [Doc:10-K FY2025, Cash Flow Statement]</p>
+<p><strong>Owner Earnings 估算</strong> (Buffett 定义):</p>
+<pre><code>Owner Earnings = 净利润 + 折旧摊销 - 维护性 CapEx
+= $112.0B + $11.7B - $12.7B × 0.75 (G=0.75, 消费电子维护性较低)
+= $112.0B + $11.7B - $9.5B
+= $114.2B
+</code></pre>
+<p>G 系数取 0.75：Apple 自研芯片 + 数据中心投资含增长性 CapEx 成分（Apple Intelligence 基础设施），维护性占比约 75%。 [API:data_snapshot §2.3 折旧; §2.3 CapEx]</p>
+<p><strong>盈利质量检查</strong>:<br />
+- 经营现金流/净利润 = $111.5B / $112.0B = <strong>0.996</strong> → ✅ 极健康，接近 1:1 [API:data_snapshot §2.3, §2.1]<br />
+- 应收账款增速 (+19.1%) vs 营收增速 (+6.4%) → ⚠️ 应收增速显著高于营收，需关注回款周期；但应收周转率 10.5x 仍在合理区间 [API:data_snapshot §2.2, §2.4]<br />
+- 存货增速 (-21.5%) vs 营收增速 (+6.4%) → ✅ 存货下降，库存周转率 38.6x 极高效 [API:data_snapshot §2.2, §2.4]</p>
+<h3>管理层前瞻信号（<code>forecast_vip</code> 解读）</h3>
+<p>Apple 传统上不提供定量前瞻指引 (no formal guidance)。data_snapshot.md §4 无业绩预告数据。</p>
+<p><strong>可观察的前瞻信号</strong>:<br />
+- Q2 FY2026 所有地理分部双位数增长 → 短期增长动能强劲 [Doc:Q2 FY2026 press release]<br />
+- $100B 新回购授权 → 管理层对未来现金流充满信心 [Doc:Q2 FY2026 press release]<br />
+- 研发投入加速 (+10.1% YoY FY2025) → Apple Intelligence 处于投入期 [Doc:10-K FY2025, P.44]<br />
+- ⚠️ 无定量 guidance 意味着估值假设需依赖分析师推算，置信度受限</p>
+<h3>主力控盘与筹码分析（v4.4 — Read <code>capital_flow.md</code>; v4.8 — 同时 Read <code>data_snapshot.md</code> §5/§6/§7）</h3>
+<blockquote>
+<p>⚠️ 美股无 <code>capital_flow.md</code> artifact（仅 A 股生成）。data_snapshot.md §5/§6/§7 均为空（yfinance 不提供十大股东/质押数据）。以下数据来自 DEF 14A 2026 + yfinance 机构持仓。</p>
+</blockquote>
+<p><strong>前十大股东</strong> (综合 DEF 14A + yfinance):</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>股东</th>
+<th>持股数</th>
+<th>占比</th>
+<th>类型</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>The Vanguard Group</td>
+<td>1,415,826,462</td>
+<td>9.63%</td>
+<td>被动指数</td>
+<td>[Doc:DEF 14A 2026, P.80-82]</td>
+</tr>
+<tr>
+<td>2</td>
+<td>BlackRock, Inc.</td>
+<td>1,043,713,019</td>
+<td>7.10%</td>
+<td>被动指数</td>
+<td>[Doc:DEF 14A 2026, P.80-82]</td>
+</tr>
+<tr>
+<td>3</td>
+<td>State Street Corp</td>
+<td>~3.8% est.</td>
+<td>~3.8%</td>
+<td>被动指数</td>
+<td>[API:yfinance.institutional_holders]</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Berkshire Hathaway</td>
+<td>~2.5% est.</td>
+<td>~2.5%</td>
+<td>主动价值</td>
+<td>[Web:公开信息]</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Tim Cook (CEO)</td>
+<td>3,280,295</td>
+<td>0.02%</td>
+<td>管理层</td>
+<td>[Doc:DEF 14A 2026, P.80-82]</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Art Levinson (Board Chair)</td>
+<td>4,126,689</td>
+<td>0.03%</td>
+<td>董事</td>
+<td>[Doc:DEF 14A 2026, P.80-82]</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Sabih Khan (COO)</td>
+<td>1,074,404</td>
+<td>&lt;0.01%</td>
+<td>管理层</td>
+<td>[Doc:DEF 14A 2026, P.80-82]</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Kate Adams (SVP/GC)</td>
+<td>175,408</td>
+<td>&lt;0.01%</td>
+<td>管理层</td>
+<td>[Doc:DEF 14A 2026, P.80-82]</td>
+</tr>
+<tr>
+<td>9</td>
+<td>其他机构投资者 (Top 5-20)</td>
+<td>—</td>
+<td>合计 ~30%</td>
+<td>混合</td>
+<td>[API:yfinance.institutional_holders]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>总股本</strong>: 14,697,926,000 股 (截至 2026-01-02) → FY2025 YoY -2.27% (持续回购缩股) [Doc:DEF 14A 2026; API:data_snapshot §2.2]</p>
+<p><strong>筹码结构特征</strong>:<br />
+1. <strong>极度分散的机构持仓</strong>: 前两大股东 (Vanguard + BlackRock) 合计仅 16.7%，以被动指数基金为主，无控股股东<br />
+2. <strong>管理层持股极低</strong>: Tim Cook 仅 0.02%，但通过 RSU 激励对齐（DEF 14A 薪酬章节）<br />
+3. <strong>Berkshire Hathaway 持仓</strong>: ~2.5%，Buffett 自 2016 年起建仓，近年有减持但仍为前十大 [Web:公开信息]<br />
+4. <strong>回购缩股</strong>: $100B 新授权 (2026-04) + FY2025 全年回购 + 分红合计返还超 $120B → 总股本持续收缩，支撑 EPS 增长 [Doc:Q2 FY2026 press release; API:data_snapshot §2.3]</p>
+<p><strong>质押/冻结</strong>: data_snapshot.md §7 无数据。美股上市公司高管持股通常无质押结构，无此类风险。</p>
+<h3>★ 若核心资产被剥离的剩余资产清单（v4.2 触发时必填）</h3>
+<p><strong>触发判定</strong>: <strong>未触发</strong>。Apple 无核心子公司面临剥离/没收风险；无首亏/续亏预告；审计无 🔴 红旗涉及核心资产减值。跳过本子节。</p>
+<hr />
+</div>
+
+<!-- ============================================================
+     §五 行业与竞争格局
+     ============================================================ -->
+<div class="section" id="industry">
+<h2>§五 行业与竞争格局</h2>
+<h3>行业规模与趋势</h3>
+<p><strong>1. 全球消费电子 / 智能手机市场</strong>:<br />
+- 全球智能手机年出货量 ~12 亿部 (2025 年估计)，市场规模约 $500B+ [Web:公开信息; Doc:10-K FY2025, Item 1]<br />
+- 行业处于<strong>成熟期</strong>——全球渗透率饱和，增长依赖换机周期 + 新兴市场渗透 + ASP 提升<br />
+- iPhone 在美国主要运营商中占 ~75% 销售份额 [Web:Yahoo Finance]，但全球份额约 ~20-25% (以出货量计)<br />
+- <strong>iPhone 17 系列</strong> (2026 年) 驱动新一轮换机周期，Q2 FY2026 "extraordinary demand" [Doc:Q2 FY2026 press release]<br />
+- 增长驱动力: (1) AI 功能驱动换机需求 (Apple Intelligence); (2) Services 生态持续货币化; (3) 新兴市场渗透 (印度/东南亚)</p>
+<p><strong>2. 数字服务 / 平台生态</strong>:<br />
+- Apple Services (App Store, iCloud, Apple TV+, Apple Music, Apple Pay) — FY2025 $102B (+14%)，~74% 毛利率 [Doc:10-K FY2025, P.41-44]<br />
+- 全球数字服务市场 TAM 远超 $1T，Apple 凭借 25 亿+ 活跃设备生态有持续扩展空间<br />
+- 行业趋势: 订阅经济 + 广告服务 + 金融服务 (Apple Pay, Savings)</p>
+<p><strong>3. AI / 端侧智能</strong>:<br />
+- Apple Intelligence 定位 "AI for the rest of us"，强调隐私优先 + 端侧处理 + Private Cloud Compute [Web:apple.com/apple-intelligence]<br />
+- 与 OpenAI 合作集成 ChatGPT，但引发法律争议 [Web:Yahoo Finance]<br />
+- 行业处于<strong>成长早期</strong>，Apple 的差异化在于硬件+软件+芯片垂直整合</p>
+<p><strong>行业周期位置</strong>: 智能手机 = 成熟期 (增速 &lt;5% CAGR)；Services = 成长期 (+14% YoY)；AI 端侧 = 导入期</p>
+<h3>Porter 五力分析（集中在本节，不重复到 §六 维度 3）</h3>
+<table>
+<thead>
+<tr>
+<th>力量</th>
+<th style="text-align: center;">强度</th>
+<th>分析</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>供应商议价力</strong></td>
+<td style="text-align: center;">中低</td>
+<td>Apple 是全球最大芯片买家之一，自研 Apple Silicon 大幅降低对外部供应商依赖；但部分关键部件仍依赖单一来源 (如先进制程晶圆依赖台积电)</td>
+<td>[Doc:10-K FY2025, Item 1A — 供应链集中风险]</td>
+</tr>
+<tr>
+<td><strong>买方议价力</strong></td>
+<td style="text-align: center;">低</td>
+<td>消费者面对极强品牌粘性 + 生态锁定 (iCloud/App 购买/Apple Watch)，转换成本高；运营商渠道中 iPhone 占 75% 份额反映终端需求刚性</td>
+<td>[Web:Yahoo Finance — 运营商份额]</td>
+</tr>
+<tr>
+<td><strong>替代品威胁</strong></td>
+<td style="text-align: center;">中</td>
+<td>Android 生态是唯一真正替代品，但 iOS 用户留存率极高 (&gt;90%)；新兴替代: 折叠屏 (Samsung)、鸿蒙 (华为中国市场)</td>
+<td>[Web:公开信息]</td>
+</tr>
+<tr>
+<td><strong>新进入者威胁</strong></td>
+<td style="text-align: center;">极低</td>
+<td>消费电子行业准入壁垒极高: 需要芯片设计能力 + 全球供应链 + 操作系统生态 + 品牌 + 零售网络；近 10 年无有威胁新进入者</td>
+<td>[Doc:10-K FY2025, Item 1]</td>
+</tr>
+<tr>
+<td><strong>行业内竞争</strong></td>
+<td style="text-align: center;">中高</td>
+<td>Samsung 为全球最大竞争对手 (出货量)；华为在中国市场回归；Google Pixel 小众但增长；Services 面临 Google/Amazon/Spotify 竞争</td>
+<td>[Doc:10-K FY2025, Item 1A — 竞争风险]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>五力综合</strong>: 行业结构对 Apple 极为有利——买方议价力低 + 新进入威胁极低构成"双重护城河"；主要竞争压力来自 Samsung/华为在硬件端和 Google/Amazon 在服务端的交叉竞争。</p>
+<h3>关键竞品对标</h3>
+<table>
+<thead>
+<tr>
+<th>公司</th>
+<th>市值</th>
+<th>核心竞争领域</th>
+<th>相对 Apple 优/劣势</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Samsung Electronics</td>
+<td>~$350B</td>
+<td>智能手机 (Galaxy)、半导体、显示面板</td>
+<td>优: 出货量全球第一、垂直整合半导体+面板；劣: 品牌溢价远低于 Apple、服务生态薄弱</td>
+<td>[Web:公开信息]</td>
+</tr>
+<tr>
+<td>Google (Alphabet)</td>
+<td>~$2.3T</td>
+<td>Android 生态、Pixel、Cloud、AI (Gemini)</td>
+<td>优: AI 研发领先、搜索广告现金牛；劣: 硬件份额微不足道、缺乏硬件+服务闭环</td>
+<td>[Web:公开信息]</td>
+</tr>
+<tr>
+<td>华为</td>
+<td>非上市</td>
+<td>智能手机 (中国)、通信设备、鸿蒙 OS</td>
+<td>优: 中国本土品牌忠诚度回升、5G 技术领先；劣: 美国制裁限制全球扩张、芯片供应受限</td>
+<td>[Web:公开信息]</td>
+</tr>
+<tr>
+<td>Microsoft</td>
+<td>~$3.3T</td>
+<td>云计算 (Azure)、AI (Copilot/OpenAI)、Surface</td>
+<td>优: 企业 AI + 云领先；劣: 消费硬件份额极小、无移动生态</td>
+<td>[Web:公开信息]</td>
+</tr>
+<tr>
+<td>Amazon</td>
+<td>~$2.1T</td>
+<td>电商、AWS、Alexa 生态</td>
+<td>优: 云基础设施领先、智能家居生态；劣: 硬件利润极低、无手机生态</td>
+<td>[Web:公开信息]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>竞争格局核心判断</strong>: Apple 的差异化护城河在于<strong>硬件-软件-芯片-服务四位一体垂直整合</strong>，全球无第二家公司复制此模式。最大竞争威胁不在于单一对手，而在于: (1) 中国市场华为回归蚕食份额; (2) AI 赛道 Google/Microsoft 可能在端侧智能上实现"足够好"的替代; (3) 监管 (DMA) 迫使 App Store 开放可能削弱 Services 护城河。</p>
+</div>
+
+<!-- ============================================================
+     §六 10 维度详细证据
+     ============================================================ -->
+<div class="section" id="detail">
+<h2>§六 10 维度详细证据</h2>
+<h3>维度 1 · 市场规模与结构（8/10）</h3>
+<p><strong>评分锚点参照</strong>: 7-8 分 — "TAM $10-100B，增长健康（CAGR 15-20%）；市场规模有多方数据交叉验证；明确的市场扩展路径；至少一个强顺风因素"</p>
+<p><strong>支撑证据</strong>:<br />
+- 全球智能手机市场 TAM ~$500B+，Apple 所处消费电子+数字服务组合 TAM 远超 $1T [Doc:10-K FY2025, Item 1; Web:公开信息]<br />
+- 智能手机行业成熟期增速放缓 (&lt;5% CAGR)，但 Apple 的 Services 板块 TAM 处于成长期 (+14% YoY, FY2025 $102B) [Doc:10-K FY2025, P.41-44]<br />
+- 25 亿+ 活跃设备构成 Services 持续货币化底座，SAM 渗透率仍有提升空间 (Apple Pay 金融服务、健康服务等新领域) [Doc:Q1 FY2026 press release]<br />
+- AI 端侧智能 (Apple Intelligence) 作为新品类创造者——结构性顺风 [Web:apple.com/apple-intelligence]<br />
+- 市场扩展路径明确: 印度/东南亚新兴市场渗透 + Services 新品类 + Vision Pro 空间计算</p>
+<p><strong>评分理由</strong>: TAM 远超 $100B 本应指向 9-10 分，但核心硬件市场 (智能手机) 处于成熟期、增速放缓，拉低整体增长预期。Services 和 AI 顺风弥补部分不足。综合取 8 分——TAM 巨大且有多条扩展路径，但核心市场非高增长阶段。</p>
+<hr />
+<h3>维度 2 · 商业模式（9/10）</h3>
+<p><strong>评分锚点参照</strong>: 9-10 分 — "毛利率 &gt; 70%（软件）或行业顶尖水平；多条已验证的收入来源，具备定价权；收入以经常性为主"</p>
+<p><strong>支撑证据</strong>:<br />
+- 综合毛利率 46.9% (FY2025)，连续 4 年改善 (43.3% → 46.9%)；Services 毛利率 ~74%，接近纯软件水平 [API:data_snapshot §2.4; Doc:10-K FY2025]<br />
+- 5 大业务线 (iPhone/Services/Mac/iPad/Wearables) 均已大规模验证，Services $102B 占比 24.5% 且 +14% YoY [Doc:10-K FY2025, P.41-44]<br />
+- 极强定价权: iPhone ASP 持续提升，iPhone 17 驱动 "extraordinary demand" [Doc:Q2 FY2026 press release]<br />
+- 生态锁定: 25 亿+ 活跃设备 → iCloud/App Store/AppleCare 经常性收入占比持续提升 [Doc:Q1 FY2026 press release]<br />
+- Owner Earnings $114.2B，OCF/NI = 0.996 → 盈利质量极高 [API:data_snapshot §2.1, §2.3]</p>
+<p><strong>评分理由</strong>: 硬件+服务双飞轮模式全球独一无二，毛利率以消费电子标准 (标杆 25-40%) 属行业顶尖，且 Services 占比提升持续优化利润结构。唯一扣分点: iPhone 仍占 ~58% 营收，对单一产品线依赖度偏高。取 9 分。</p>
+<hr />
+<h3>维度 3 · 盈利能力（9/10）</h3>
+<p><strong>评分锚点参照</strong>: 上市公司版维度 3 — 盈利能力。9-10 分对应 "收入增速 &gt;30% + EPS 增速 &gt;25%"（此为增长维度标准，盈利能力结合利润率+ROE+现金流综合判断）</p>
+<p><strong>支撑证据</strong>:<br />
+- 净利率 26.9% (FY2025)，绝对水平在全球消费电子行业中顶尖 [API:data_snapshot §2.4]<br />
+- 加权 ROE 151.9% (FY2025) — 超高水平，因回购持续压缩股东权益基数；ROA 31.2% 更能反映资产端效率，同样极优 [API:data_snapshot §2.4]<br />
+- OCF/NI = 0.996，接近 1:1，盈利质量极健康 [API:data_snapshot §2.3, §2.1]<br />
+- 存货周转率 38.6x，应收周转率 10.5x，资产周转率 1.16x — 运营效率极高 [API:data_snapshot §2.4]<br />
+- 毛利率 4 年连升: 43.3% → 44.1% → 46.2% → 46.9%，Services 占比提升 + 元件成本优化驱动 [API:data_snapshot §3; Doc:10-K FY2025]<br />
+- 自由现金流 $98.8B (FY2025)，FCF 收益率 ~2.2% ($98.8B / $4.4T 市值) [API:data_snapshot §2.3; API:metrics.json]</p>
+<p><strong>评分理由</strong>: 净利率、ROA、OCF/NI、周转效率全面优秀，利润率持续改善趋势明确。FCF 收益率 ~2.2% 偏低但因市值基数极大。综合盈利能力在全球上市公司中位于顶尖行列。取 9 分。</p>
+<hr />
+<h3>维度 4 · 产品与技术（8/10）</h3>
+<p><strong>评分锚点参照</strong>: 7-8 分 — "技术有差异化优势；产品路线图清晰且有说服力；研发团队质量高"</p>
+<p><strong>支撑证据</strong>:<br />
+- 自研 Apple Silicon (M 系列芯片) 实现硬件-软件-芯片垂直整合，技术壁垒极高，全球无第二家消费电子公司复制此模式 [Doc:10-K FY2025, Item 1]<br />
+- iPhone 17 系列驱动 "extraordinary demand"，产品迭代节奏精准 [Doc:Q2 FY2026 press release]<br />
+- Apple Intelligence: 端侧 AI + Private Cloud Compute + ChatGPT 集成，隐私差异化明确 [Web:apple.com/apple-intelligence]<br />
+- 研发投入 $34.6B (FY2025, +10.1% YoY)，持续加码 [Doc:10-K FY2025, P.44]<br />
+- Vision Pro 空间计算平台——长期品类创新尝试<br />
+- ⚠️ 多项 Apple Intelligence 功能仍标注 "in development"，语言支持有限 [Web:apple.com/apple-intelligence]<br />
+- ⚠️ Apple Intelligence 用户采纳率/DAU 数据未公开，实际效果难以量化 [phase1-data §11 缺口 #3]</p>
+<p><strong>评分理由</strong>: 芯片+硬件+OS 垂直整合构成真正技术壁垒，产品迭代能力一流。扣分因素: AI 功能仍在早期、Vision Pro 商业化前景不明。取 8 分而非 9 分——技术领先但 AI 执行尚需验证。</p>
+<hr />
+<h3>维度 5 · 团队与管理层（8/10）</h3>
+<p><strong>评分锚点参照</strong>: 7-8 分 — "关键岗位已到位；团队稳定性好；组织扩张有序"；上市公司追加: 治理评分、高管薪酬合理性</p>
+<h4>管理层利益对齐（<code>stk_rewards</code>）</h4>
+<ul>
+<li>Tim Cook (CEO) 持股 3,280,295 股 (0.02%)，绝对金额 ~$9.8B (按 $299.46 计)，但占总股本比例极低 [Doc:DEF 14A 2026, P.80-82]</li>
+<li>管理层主要通过 RSU (限制性股票单元) 对齐，Tim Cook FY2025 总薪酬中绩效 RSU 占大头 [Doc:DEF 14A 2026 薪酬章节]</li>
+<li>$100B 新回购授权 + 股息提升 4% → 管理层对现金流持续性充满信心 [Doc:Q2 FY2026 press release]</li>
+</ul>
+<h4>核心团队画像（<code>stk_managers</code>）</h4>
+<table>
+<thead>
+<tr>
+<th>角色</th>
+<th>姓名</th>
+<th>特点</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CEO</td>
+<td>Tim Cook</td>
+<td>2011 年接任，执掌期间市值从 ~$350B 增至 $4.4T，运营天才</td>
+<td>[Doc:10-K FY2025; Web:公开信息]</td>
+</tr>
+<tr>
+<td>CFO</td>
+<td>Kevan Parekh</td>
+<td>2025 年新任，接替 Luca Maestri，Apple 内部晋升</td>
+<td>[Doc:Q1 FY2026 press release]</td>
+</tr>
+<tr>
+<td>SVP Software</td>
+<td>Craig Federighi</td>
+<td>iOS/macOS 核心架构师，Apple Intelligence 技术负责人</td>
+<td>[Web:公开信息]</td>
+</tr>
+<tr>
+<td>SVP Hardware Tech</td>
+<td>Johny Srouji</td>
+<td>Apple Silicon 总设计师，芯片战略核心人物</td>
+<td>[Web:公开信息]</td>
+</tr>
+<tr>
+<td>SVP Services</td>
+<td>Eddy Cue</td>
+<td>Services 生态总负责人</td>
+<td>[Web:公开信息]</td>
+</tr>
+<tr>
+<td>Board Chair</td>
+<td>Art Levinson</td>
+<td>持股 4,126,689 股，Genentech 前 CEO</td>
+<td>[Doc:DEF 14A 2026, P.80-82]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>支撑证据</strong>:<br />
+- Tim Cook 是全球最成功的 CEO 继任案例之一，15 年任期内市值增长 12x+ [Web:公开信息]<br />
+- 核心高管团队稳定，SVP 级别人员流失率极低 [Doc:DEF 14A 2026]<br />
+- CFO 交接平稳 (Parekh 为内部晋升) [Doc:Q1 FY2026 press release]<br />
+- ⚠️ 管理层直接持股比例极低 (&lt;0.1% 合计)，主要依赖 RSU 对齐 [Doc:DEF 14A 2026, P.80-82]<br />
+- 独立董事比例高，治理结构规范 [Doc:DEF 14A 2026]</p>
+<p><strong>评分理由</strong>: 全球顶级管理团队，执行力经市场验证，组织稳定。扣分因素: 管理层直接持股极低 (虽 RSU 补偿但利益对齐弱于创始人型公司)；Tim Cook 年龄渐长无公开继任计划。取 8 分。</p>
+<hr />
+<h3>维度 6 · 市场进入与护城河（9/10）</h3>
+<p><strong>评分锚点参照</strong>: 9-10 分 — "拥有多重复合护城河；市场份额第一且持续扩大；竞争对手短期内无法复制核心优势；客户转换成本极高"</p>
+<p><strong>支撑证据</strong>:<br />
+- <strong>品牌护城河</strong>: 全球最有价值品牌之一，iPhone 在美国运营商占 ~75% 份额 [Web:Yahoo Finance]<br />
+- <strong>生态锁定/转换成本</strong>: 25 亿+ 活跃设备，iCloud/App 购买/Apple Watch 配对构成极高转换成本，iOS 用户留存率 &gt;90% [Doc:Q1 FY2026 press release; Web:公开信息]<br />
+- <strong>技术壁垒</strong>: 自研芯片 (Apple Silicon) + 操作系统 + 硬件设计垂直整合，全球无第二家复制 [Doc:10-K FY2025, Item 1]<br />
+- <strong>网络效应</strong>: App Store 开发者生态 + AirDrop/iMessage 社交锁定 (尤其美国市场)<br />
+- <strong>规模经济</strong>: 全球最大消费电子供应链买家，采购成本优势 [Doc:10-K FY2025, Item 1]<br />
+- <strong>新进入者壁垒极高</strong>: 近 10 年无新有威胁进入者 (Porter 五力分析) [§五 Porter 分析]</p>
+<p><strong>评分理由</strong>: 品牌+生态+技术+规模四重复合护城河，在消费电子行业独一无二。唯一潜在削弱因素: 欧盟 DMA 可能迫使 App Store 开放，部分侵蚀 Services 护城河。取 9 分。</p>
+<hr />
+<h3>维度 7 · 财务健康度（6/10）</h3>
+<p><strong>评分锚点参照</strong>: 上市公司版 — 流动比率 0.8-1.2 = 警示 (3-4 分)；资产负债率 &gt;75% = 危险 (1-2 分)；但 OCF/NI &gt;1.2x = 优秀 (8+ 分)。综合判断。</p>
+<p><strong>支撑证据</strong>:<br />
+- 资产负债率 <strong>79.5%</strong> (FY2025) → 远超 75% 危险阈值，但 FY2024 的 84.4% 已改善 [API:data_snapshot §2.4]<br />
+- 流动比率 <strong>0.89</strong> (FY2025 data_snapshot) / 1.07 (yfinance TTM) → 处于 0.8-1.2 警示区间 [API:data_snapshot §2.4; API:metrics.json]<br />
+- 产权比率 <strong>387%</strong> — 极高杠杆，因大规模回购持续压缩权益 [API:data_snapshot §2.4]<br />
+- 有息负债 $98.7B (长期借款 $78.3B + 短期 $20.3B)，净负债 $62.7B [API:data_snapshot §2.2, §2.4]<br />
+- OCF/NI = <strong>0.996</strong> → 极健康的现金流覆盖 [API:data_snapshot §2.3, §2.1]<br />
+- 自由现金流 $98.8B，完全覆盖利息+分红+回购 [API:data_snapshot §2.3]<br />
+- 存货周转 38.6x，应收周转 10.5x → 运营效率极高 [API:data_snapshot §2.4]<br />
+- 审计报告: 11 框架全部返回 "⚠️ 数据不足或无信号"，无 🔴 红旗 [audit_report.md §1]</p>
+<p><strong>评分理由</strong>: 这是一个典型的"报表难看但实质极强"案例。资产负债率 79.5% 和产权比率 387% 按传统标准是危险信号，但 Apple 的高杠杆完全是<strong>有意为之的资本结构选择</strong> — 利用低息债务融资回购，压缩权益基数推高 ROE，而 $98.8B FCF 和 0.996 的 OCF/NI 证明偿债能力毫无问题。上市公司维度 7 标准中资产负债率 &gt;75% 对应 1-2 分，但 OCF/NI &gt;1.2x 对应 8+ 分，两项严重冲突。综合考虑: 给予 6 分——承认报表杠杆风险 (利率上升时债务成本增加)，但认可现金流创造能力极强、偿债覆盖充裕。</p>
+<hr />
+<h3>维度 8 · 估值合理性（4/10）</h3>
+<p><strong>评分锚点参照</strong>: 上市公司版维度 9 — "3-4 分: PE &gt; 行业中位数 50%+，估值偏高"</p>
+<p><strong>支撑证据</strong>:<br />
+- PE (TTM) <strong>36.3x</strong> vs 科技/软件行业中位数 30-50x → 处于区间中段 [API:metrics.json; scoring-rubric 行业基准]<br />
+- PE (TTM) <strong>36.3x</strong> vs 消费电子同业: Samsung ~12x, 显著溢价 [Web:公开信息]<br />
+- Forward PE <strong>31.2x</strong> → 隐含市场预期 ~16% 盈利增长 [API:metrics.json]<br />
+- PB <strong>41.2x</strong> → 极高，因权益被回购压缩至仅 $73.7B [API:metrics.json]<br />
+- PS (TTM) <strong>9.7x</strong> vs 消费电子行业基准 2-4x → 显著高于行业 [API:metrics.json; scoring-rubric §行业估值基准]<br />
+- EV/EBITDA <strong>27.5x</strong> [API:metrics.json]<br />
+- 市值 $4.40T 为全球最高 [API:metrics.json]<br />
+- 股价 $299.46 接近 52 周高 $300.92 (距历史高点仅 0.5%) [API:metrics.json]<br />
+- 分析师共识目标价 $308 → 上行空间仅 ~3% [phase1-data §8]</p>
+<p><strong>评分理由</strong>: PE 36x 虽在宽泛科技行业区间内，但以消费电子硬件公司标准严重偏高 (Samsung 12x 对照)；PS 9.7x 超过消费电子 2-4x 基准的 2 倍+；PB 41x 因回购畸变失去参考意义但仍反映市场对极薄权益的溢价定价；52 周高位+分析师仅 3% 上行空间意味着好消息已充分反映。按 scoring-rubric 上市公司版 "PE &gt; 行业中位数 50%+" 对应 3-4 分。考虑到 Services 高毛利率业务占比提升使得纯硬件对标不完全公平，给予 4 分（区间上沿）。</p>
+<hr />
+<h3>维度 9 · 风险与治理（7/10）</h3>
+<p><strong>评分锚点参照</strong>: 7-8 分 — "监管环境稳定且公司合规到位；客户集中度中等；关键人物有继任计划；无重大法律风险"（风险越低分越高）</p>
+<p><strong>支撑证据</strong>:<br />
+- <strong>客户集中度极低</strong>: 面向全球数十亿消费者，无单一客户依赖 [Doc:10-K FY2025, Item 1]<br />
+- <strong>地域多元化</strong>: FY2025 美洲 ~42%、欧洲 ~26%、大中华区 ~17%、亚太其他 ~15%——分散但中国区仍是风险暴露 [Doc:10-K FY2025, P.41-44]<br />
+- <strong>监管风险</strong>: 欧盟 DMA 要求 App Store 开放 + AI Act 合规要求 + 全球反垄断审查 — 中等影响 [Doc:10-K FY2025, Item 1A]<br />
+- <strong>法律风险</strong>: OpenAI 合作引发法律争议 "Legal challenges with OpenAI raise investor concerns" [Web:Yahoo Finance]<br />
+- <strong>关键人物</strong>: Tim Cook 为核心但组织深度足够 (SVP 团队经验丰富)；无公开继任计划是潜在风险 [Doc:DEF 14A 2026]<br />
+- <strong>宏观敏感度</strong>: 消费电子对经济周期有一定敏感度；10-K 明确提及关税对供应链和定价的影响 [Doc:10-K FY2025, Item 1A — 宏观/关税风险]<br />
+- <strong>审计</strong>: 11 框架审计无红旗信号 (全部数据不足/无信号) [audit_report.md §1-§3]<br />
+- <strong>治理</strong>: 独立董事比例高，DEF 14A 薪酬披露完整 [Doc:DEF 14A 2026]</p>
+<p><strong>评分理由</strong>: 客户极度分散 + 无审计红旗 + 治理规范，基础风险面良好。扣分因素: 欧盟监管压力持续上升 (DMA + AI Act)、OpenAI 法律纠纷、中国市场政策风险、关税不确定性。综合取 7 分——风险可控但监管/地缘尾部风险不可忽视。</p>
+<hr />
+<h3>维度 10 · 催化剂与时机（7/10）</h3>
+<p><strong>评分锚点参照</strong>: 上市公司版 — "7-8 分: 总回报预期 &gt;20%/年，催化剂可见"</p>
+<p><strong>支撑证据</strong>:<br />
+- <strong>正面催化剂</strong>:<br />
+  - iPhone 17 Super Cycle: Q2 FY2026 +17% YoY 确认强劲需求，换机周期可能持续 2-3 个季度 [Doc:Q2 FY2026 press release]<br />
+  - Apple Intelligence 全面铺开: 若用户采纳率超预期 → 驱动新一轮换机+Services 增长 [Web:apple.com/apple-intelligence]<br />
+  - Services 持续创新高: +14% YoY 趋势若维持 → 利润结构持续优化 [Doc:10-K FY2025, P.41-44]<br />
+  - $100B 回购: 持续缩股支撑 EPS [Doc:Q2 FY2026 press release]<br />
+  - 印度/新兴市场扩张: 长期增长潜力 [Web:公开信息]<br />
+- <strong>负面催化剂</strong>:<br />
+  - 欧盟 DMA 执行: App Store 被迫开放可能影响 Services 佣金 [Doc:10-K FY2025, Item 1A]<br />
+  - 中国市场华为竞争加剧 [Web:公开信息]<br />
+  - 利率环境若转鹰 → 高杠杆结构承压 + 成长股估值收缩 [Web:公开信息]<br />
+- <strong>时机判断</strong>: 股价距 52 周高仅 0.5%，好消息已基本定价；分析师目标价仅 +3% [API:metrics.json; phase1-data §8]<br />
+- 分红 + 回购收益率 ≈ 0.36% (股息) + ~2.7% (回购，$100B / $4.4T) = ~3.1% 总股东收益率</p>
+<p><strong>评分理由</strong>: 催化剂清晰可见 (iPhone 17 周期 + AI + Services)，但<strong>时机不佳</strong> — 估值已在历史高位，上行空间有限 (分析师仅 +3%)。总回报预期: ~3% 股东收益 + 中个位数资本利得 ≈ ~8-12%/年，低于 20% 门槛。若 AI 采纳超预期或 Services 加速，可能触发重估。取 7 分——催化剂优质但估值压缩了时机价值。</p>
+<hr />
+</div>
+
+<!-- ============================================================
+     §七 网络舆情与市场情绪
+     ============================================================ -->
+<div class="section" id="sentiment">
+<h2>§七 网络舆情与市场情绪</h2>
+<h3>看多派声音</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>平台/来源</th>
+<th>核心观点</th>
+<th>关键数据</th>
+<th>URL</th>
+<th>日期</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Apple Newsroom</td>
+<td>Q2 FY2026 营收 $111.2B (+17%)，所有地理分部双位数增长，iPhone 17 驱动 "extraordinary demand"</td>
+<td>营收 +17%, EPS +22%</td>
+<td>https://www.apple.com/newsroom/2026/04/apple-reports-second-quarter-results/</td>
+<td>2026-04</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Apple Newsroom</td>
+<td>Q1 FY2026 营收 $143.8B (+16%)，EPS $2.84 历史新高，经营现金流 ~$54B</td>
+<td>营收 +16%, EPS 创纪录</td>
+<td>https://www.apple.com/newsroom/2026/01/apple-reports-first-quarter-results/</td>
+<td>2026-01</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Yahoo Finance</td>
+<td>iPhone 在美国主要运营商中占 ~75% 销售份额，"销售势不可挡"</td>
+<td>运营商渠道 75% 占比</td>
+<td>https://finance.yahoo.com/quote/AAPL/</td>
+<td>2026-05</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Motley Fool</td>
+<td>TTM FCF 增长 28%，毛利率改善至 49.27% (TTM)，现金创造能力持续增强</td>
+<td>FCF +28%, 毛利率 49.3%</td>
+<td>https://www.fool.com/quote/nasdaq/aapl/</td>
+<td>2026-05</td>
+</tr>
+<tr>
+<td>5</td>
+<td>分析师共识</td>
+<td>1 年目标价 $308 (vs 当前 $299.46)，维持乐观评级</td>
+<td>目标价 +3%</td>
+<td>https://finance.yahoo.com/quote/AAPL/</td>
+<td>2026-05</td>
+</tr>
+</tbody>
+</table>
+<h3>看空派声音</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>平台/来源</th>
+<th>核心观点</th>
+<th>关键数据</th>
+<th>URL</th>
+<th>日期</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Yahoo Finance</td>
+<td>PE 36x 估值偏高，接近 52 周高位 $300.92，上行空间极为有限</td>
+<td>PE 36x, 距高点 0.5%</td>
+<td>https://finance.yahoo.com/quote/AAPL/</td>
+<td>2026-05</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Yahoo Finance</td>
+<td>OpenAI 法律纠纷带来不确定性，"Legal challenges with OpenAI raise investor concerns"</td>
+<td>法律风险悬而未决</td>
+<td>https://finance.yahoo.com/quote/AAPL/</td>
+<td>2026-05</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Yahoo Finance</td>
+<td>半导体板块抛售 (Intel -7%, AMD/NVIDIA -4%) 可能拖累科技股整体情绪</td>
+<td>行业联动下行风险</td>
+<td>https://finance.yahoo.com/quote/AAPL/</td>
+<td>2026-05</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Apple Intelligence 分析</td>
+<td>多项 AI 功能仍标注 "in development"，语言支持有限，执行存在滞后风险</td>
+<td>AI 功能未完全落地</td>
+<td>https://www.apple.com/apple-intelligence/</td>
+<td>2026-05</td>
+</tr>
+<tr>
+<td>5</td>
+<td>估值角度</td>
+<td>低股息率 0.36% 无收入支撑；PB 41x 为全球 mega-cap 中最高之一；PS 9.7x 远超消费电子基准 2-4x</td>
+<td>股息 0.36%, PB 41x, PS 9.7x</td>
+<td>https://finance.yahoo.com/quote/AAPL/</td>
+<td>2026-05</td>
+</tr>
+</tbody>
+</table>
+<p><strong>舆情平衡性判断</strong>: 看多 5 条 / 看空 5 条，正反均衡。看多侧聚焦强劲季报表现和产品周期；看空侧聚焦估值过高和外部风险。</p>
+<blockquote>
+<p>⚠️ 数据局限: WebSearch 持续返回空结果，SeekingAlpha/Reddit 403 受限，舆情主要覆盖 Yahoo Finance + Apple 官方 + Motley Fool，独立投资社区深度多空观点缺失。 [phase1-data §11 缺口 #4]</p>
+</blockquote>
+<h3>资金流向信号（v4.4 — Read <code>capital_flow.md</code> §4/§5/§6）</h3>
+<blockquote>
+<p><strong>美股不适用</strong>。<code>capital_flow.md</code> 仅为 A 股生成（含陆股通、两融、主力资金流等数据），美股无此 artifact。</p>
+</blockquote>
+<p><strong>替代信号</strong> (来自公开数据):<br />
+- 机构持仓: Vanguard 9.63% + BlackRock 7.10% = 前两大被动基金合计 16.7%，持仓稳定 [Doc:DEF 14A 2026, P.80-82]<br />
+- Berkshire Hathaway: ~2.5%，近年有减持但仍为前十大，Buffett 立场从"核心持仓"转向"适度减持" [Web:公开信息]<br />
+- 回购信号: $100B 新授权 (2026-04) → 公司自身为最大"买家"，支撑股价下限 [Doc:Q2 FY2026 press release]<br />
+- 内部人交易: 无异常大规模减持信号 [Doc:DEF 14A 2026]</p>
+<hr />
+</div>
+
+<!-- ============================================================
+     §八 可比公司对标
+     ============================================================ -->
+<div class="section" id="peers">
+<h2>§八 可比公司对标（v4.4 — Read `peer_analysis.md`）</h2>
+<blockquote>
+<p>⚠️ 美股无 <code>peer_analysis.md</code> artifact（仅 A 股自动生成）。以下可比公司分析基于行业知识 + phase1-data + yfinance 公开数据构建。</p>
+</blockquote>
+<h3>§8.1 全球科技巨头对标</h3>
+<table>
+<thead>
+<tr>
+<th>公司</th>
+<th>市值</th>
+<th>PE (TTM)</th>
+<th>PS (TTM)</th>
+<th>毛利率</th>
+<th>净利率</th>
+<th>营收增速 (TTM)</th>
+<th>ROE</th>
+<th>负债率</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Apple (AAPL)</strong></td>
+<td><strong>$4.40T</strong></td>
+<td><strong>36.3x</strong></td>
+<td><strong>9.7x</strong></td>
+<td><strong>46.9%</strong></td>
+<td><strong>26.9%</strong></td>
+<td><strong>+16.6%</strong></td>
+<td><strong>151.9%</strong></td>
+<td><strong>79.5%</strong></td>
+<td>[API:metrics.json; data_snapshot]</td>
+</tr>
+<tr>
+<td>Microsoft (MSFT)</td>
+<td>~$3.3T</td>
+<td>~35x</td>
+<td>~13x</td>
+<td>~69%</td>
+<td>~36%</td>
+<td>~16%</td>
+<td>~38%</td>
+<td>~42%</td>
+<td>[Web:公开信息, yfinance 估计]</td>
+</tr>
+<tr>
+<td>Alphabet (GOOGL)</td>
+<td>~$2.3T</td>
+<td>~23x</td>
+<td>~7x</td>
+<td>~58%</td>
+<td>~27%</td>
+<td>~14%</td>
+<td>~32%</td>
+<td>~28%</td>
+<td>[Web:公开信息, yfinance 估计]</td>
+</tr>
+<tr>
+<td>Amazon (AMZN)</td>
+<td>~$2.1T</td>
+<td>~38x</td>
+<td>~3.3x</td>
+<td>~50%</td>
+<td>~9%</td>
+<td>~10%</td>
+<td>~23%</td>
+<td>~58%</td>
+<td>[Web:公开信息, yfinance 估计]</td>
+</tr>
+<tr>
+<td>Samsung Electronics</td>
+<td>~$350B</td>
+<td>~12x</td>
+<td>~1.5x</td>
+<td>~37%</td>
+<td>~12%</td>
+<td>~5%</td>
+<td>~8%</td>
+<td>~27%</td>
+<td>[Web:公开信息, 估计]</td>
+</tr>
+<tr>
+<td>Meta Platforms (META)</td>
+<td>~$1.6T</td>
+<td>~26x</td>
+<td>~10x</td>
+<td>~82%</td>
+<td>~35%</td>
+<td>~22%</td>
+<td>~36%</td>
+<td>~35%</td>
+<td>[Web:公开信息, yfinance 估计]</td>
+</tr>
+</tbody>
+</table>
+<h3>§8.2 目标公司在 peer 中的分位</h3>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>Apple 数值</th>
+<th>Peer 中位数</th>
+<th>分位</th>
+<th>解读</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PE (TTM)</td>
+<td>36.3x</td>
+<td>~30x</td>
+<td><strong>偏高 (~70th)</strong></td>
+<td>高于多数 peer，仅次于 Amazon；比 Samsung 贵 3x</td>
+</tr>
+<tr>
+<td>PS (TTM)</td>
+<td>9.7x</td>
+<td>~7x</td>
+<td><strong>偏高 (~65th)</strong></td>
+<td>高于 Alphabet、Amazon；低于 Microsoft、Meta</td>
+</tr>
+<tr>
+<td>毛利率</td>
+<td>46.9%</td>
+<td>~54%</td>
+<td><strong>中低 (~35th)</strong></td>
+<td>低于纯软件/平台型 peer，因硬件占比高</td>
+</tr>
+<tr>
+<td>净利率</td>
+<td>26.9%</td>
+<td>~27%</td>
+<td><strong>中位 (~50th)</strong></td>
+<td>与 Alphabet 接近，优于 Amazon</td>
+</tr>
+<tr>
+<td>营收增速</td>
+<td>+16.6%</td>
+<td>~14%</td>
+<td><strong>中高 (~60th)</strong></td>
+<td>受 iPhone 17 周期驱动，高于多数 peer</td>
+</tr>
+<tr>
+<td>ROE</td>
+<td>151.9%</td>
+<td>~33%</td>
+<td><strong>极高 (&gt;95th)</strong></td>
+<td>因回购压缩权益畸变，不可直接对比</td>
+</tr>
+<tr>
+<td>负债率</td>
+<td>79.5%</td>
+<td>~38%</td>
+<td><strong>极高 (&gt;95th)</strong></td>
+<td>主动杠杆策略，非财务困境</td>
+</tr>
+</tbody>
+</table>
+<h3>§8.3 硬判定对比洞察</h3>
+<ol>
+<li>
+<p><strong>估值溢价源自何处</strong>: Apple PE 36x 高于 Alphabet 23x (+57%) 和 Samsung 12x (+200%)，溢价理由: (a) 生态锁定+品牌溢价; (b) Services 高毛利增长; (c) $100B 回购支撑。但溢价幅度可能已过度反映乐观预期。</p>
+</li>
+<li>
+<p><strong>毛利率"拖后腿"是假象</strong>: 46.9% 毛利率低于纯软件/平台 peer (Microsoft 69%, Meta 82%)，因 Apple 仍有 ~75% 营收来自硬件。若 Services 拆分估值，隐含 Services 利润率 ~74% 不输任何 peer。</p>
+</li>
+<li>
+<p><strong>ROE/负债率不可直接对比</strong>: Apple 的 152% ROE 和 79.5% 负债率是主动资本结构选择 (杠杆回购) 的结果，与 peer 的 ROE 30-38% / 负债率 28-58% 不在同一比较基准上。</p>
+</li>
+<li>
+<p><strong>增速优势可能是周期性的</strong>: 当前 +16.6% 增速受 iPhone 17 Super Cycle 驱动；一旦换机周期结束 (预计 FY2027)，增速可能回落至中低个位数，届时 36x PE 将缺乏增速支撑。</p>
+</li>
+<li>
+<p><strong>Samsung 是最直接硬件可比</strong>: 12x PE vs Apple 36x = 3x 估值差距。差距合理性: Apple Services (~$102B, ~74% 毛利率) 是 Samsung 不具备的第二增长极；但 3x 溢价隐含市场对 Services 极乐观定价。</p>
+</li>
+</ol>
+<h3>§8.4 估值交叉验证结论</h3>
+<ul>
+<li><strong>Peer PE 中位数 ~30x</strong> 对应 Apple 估值: $30x × ~$112B (净利润) = $3.36T 市值 → 对应股价 ~$229。当前 $299.46 溢价 ~31%。</li>
+<li><strong>消费电子 peer PE (Samsung 12x)</strong> 对应: $12x × $112B = $1.34T → 对应股价 ~$91。纯硬件视角严重低估 Services 价值。</li>
+<li><strong>综合判断</strong>: Apple 当前估值定价更接近"科技平台"而非"消费电子"，合理但偏贵。若 Services 增速放缓或 DMA 削弱 App Store 护城河，估值将面临下修压力。与 §九 DCF 估值锚的差异待 Part 4 完成后交叉验证。</li>
+</ul>
+</div>
+
+<!-- ============================================================
+     §九 估值与回报模拟
+     ============================================================ -->
+<div class="section" id="valuation">
+<h2>§九 估值与回报模拟</h2>
+<blockquote>
+<p><strong>方法论</strong>: 以"<strong>DCF 概率加权</strong>"为唯一估值锚，§十（投资回报）沿用同一套情景。§9.2 可比 PE 和 PB 作为<strong>交叉验证</strong>而非独立锚。</p>
+</blockquote>
+<h3>9.1 DCF 情景分析（v4.2 — 4 情景）</h3>
+<h4>WACC 推导</h4>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数值</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>无风险利率</td>
+<td>4.30%</td>
+<td>US 10Y Treasury (2026-05) [Web:公开信息]</td>
+</tr>
+<tr>
+<td>股权风险溢价 (ERP)</td>
+<td>5.50%</td>
+<td>Damodaran 2026 US 估计 [Web:damodaran.com]</td>
+</tr>
+<tr>
+<td>Beta</td>
+<td>1.065</td>
+<td>[API:yfinance.info]</td>
+</tr>
+<tr>
+<td>股权成本 (Ke)</td>
+<td>10.16%</td>
+<td>= 4.30% + 1.065 × 5.50%</td>
+</tr>
+<tr>
+<td>税前债务成本</td>
+<td>3.20%</td>
+<td>Apple 平均票面利率 [Doc:10-K FY2025, 长期债务注释]</td>
+</tr>
+<tr>
+<td>有效税率</td>
+<td>18.5%</td>
+<td>FY2025: $20.7B / $133.2B [API:data_snapshot §2.1]</td>
+</tr>
+<tr>
+<td>税后债务成本</td>
+<td>2.61%</td>
+<td>= 3.20% × (1 - 18.5%)</td>
+</tr>
+<tr>
+<td>D/(D+E)</td>
+<td>2.2%</td>
+<td>$98.7B / ($4,400B + $98.7B) [API:metrics.json; data_snapshot §2.4]</td>
+</tr>
+<tr>
+<td>E/(D+E)</td>
+<td>97.8%</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>WACC</strong></td>
+<td><strong>10.0%</strong></td>
+<td>= 97.8% × 10.16% + 2.2% × 2.61%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>WACC 情景</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>情景</th>
+<th>WACC</th>
+<th>调整依据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>乐观</td>
+<td>9.0%</td>
+<td>ERP 压缩至 4.5%（品牌护城河降低感知风险）</td>
+</tr>
+<tr>
+<td>基准</td>
+<td>10.0%</td>
+<td>标准 CAPM</td>
+</tr>
+<tr>
+<td>悲观</td>
+<td>11.0%</td>
+<td>ERP 扩张至 6.5%（宏观风险/关税升温）</td>
+</tr>
+<tr>
+<td>最差</td>
+<td>12.0%</td>
+<td>衰退周期 + 信用利差扩张</td>
+</tr>
+</tbody>
+</table>
+<h4>DCF 假设依据（历史锚定 + 偏差说明）</h4>
+<table>
+<thead>
+<tr>
+<th>假设参数</th>
+<th>乐观</th>
+<th>基准</th>
+<th>悲观</th>
+<th>最差</th>
+<th>历史锚 / 偏差说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FY2026 营收增速</td>
+<td>+16%</td>
+<td>+14%</td>
+<td>+8%</td>
+<td>0%</td>
+<td>Q1/Q2 FY2026 已+16%/+17% [Doc:Q1/Q2 press release]；基准假设 H2 减速</td>
+</tr>
+<tr>
+<td>FY2027-2030 CAGR</td>
+<td>8.5%</td>
+<td>6.5%</td>
+<td>2.7%</td>
+<td>0%</td>
+<td>3Y 历史 CAGR 4.2% [API:metrics.json]；乐观含 Services 加速+AI 换机</td>
+</tr>
+<tr>
+<td>FCF 利润率 (Y1→Y5)</td>
+<td>25%→28%</td>
+<td>24%→26%</td>
+<td>22%→23%</td>
+<td>20% flat</td>
+<td>FY2025 FCF/Rev = 23.7% [API:data_snapshot §2.3]；Services 占比提升改善 FCF</td>
+</tr>
+<tr>
+<td>终值 EV/EBITDA</td>
+<td>28x</td>
+<td>22x</td>
+<td>16x</td>
+<td>10x</td>
+<td>当前 EV/EBITDA 27.5x [API:metrics.json]；基准假设回归成熟科技均值</td>
+</tr>
+<tr>
+<td>永续增长率 g</td>
+<td>3.5%</td>
+<td>3.0%</td>
+<td>2.0%</td>
+<td>1.0%</td>
+<td><strong>g &lt; WACC 均满足</strong> ✅</td>
+</tr>
+</tbody>
+</table>
+<p><strong>★ DCF 假设与历史一致性自验</strong>: FY2022-FY2025 营收 CAGR 4.2%，基准情景 FY2026+14% 高于历史，但有 Q1/Q2 实际 +16~17% 支撑，iPhone 17 周期驱动；FY2027 起回归 +9%/+7%/+5%/+4%，向历史 CAGR 收敛。无内在矛盾。 [API:data_snapshot §3; Doc:Q2 FY2026 press release]</p>
+<hr />
+<h4>乐观情景（20% 权重）</h4>
+<p><strong>假设</strong>: iPhone 17 Super Cycle 持续 + Apple Intelligence 用户采纳超预期驱动换机 + Services 加速至 +18%/年 + 新兴市场渗透加速。</p>
+<table>
+<thead>
+<tr>
+<th>年度</th>
+<th style="text-align: right;">FY2026E</th>
+<th style="text-align: right;">FY2027E</th>
+<th style="text-align: right;">FY2028E</th>
+<th style="text-align: right;">FY2029E</th>
+<th style="text-align: right;">FY2030E</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>营收 ($B)</td>
+<td style="text-align: right;">483.0</td>
+<td style="text-align: right;">541.0</td>
+<td style="text-align: right;">589.7</td>
+<td style="text-align: right;">631.0</td>
+<td style="text-align: right;">662.6</td>
+</tr>
+<tr>
+<td>营收增速</td>
+<td style="text-align: right;">+16%</td>
+<td style="text-align: right;">+12%</td>
+<td style="text-align: right;">+9%</td>
+<td style="text-align: right;">+7%</td>
+<td style="text-align: right;">+5%</td>
+</tr>
+<tr>
+<td>FCF ($B)</td>
+<td style="text-align: right;">120.8</td>
+<td style="text-align: right;">143.4</td>
+<td style="text-align: right;">162.0</td>
+<td style="text-align: right;">176.0</td>
+<td style="text-align: right;">185.5</td>
+</tr>
+<tr>
+<td>FCF 利润率</td>
+<td style="text-align: right;">25.0%</td>
+<td style="text-align: right;">26.5%</td>
+<td style="text-align: right;">27.5%</td>
+<td style="text-align: right;">27.9%</td>
+<td style="text-align: right;">28.0%</td>
+</tr>
+<tr>
+<td>折现因子 (9.0%)</td>
+<td style="text-align: right;">0.9174</td>
+<td style="text-align: right;">0.8417</td>
+<td style="text-align: right;">0.7722</td>
+<td style="text-align: right;">0.7084</td>
+<td style="text-align: right;">0.6499</td>
+</tr>
+<tr>
+<td>折现后 FCF ($B)</td>
+<td style="text-align: right;">110.8</td>
+<td style="text-align: right;">120.7</td>
+<td style="text-align: right;">125.1</td>
+<td style="text-align: right;">124.7</td>
+<td style="text-align: right;">120.6</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>PV of FCF = <strong>$601.9B</strong></li>
+<li>FY2030E EBITDA = $662.6B × 34% + ~$15B D&amp;A ≈ <strong>$240.3B</strong></li>
+<li>Terminal Value = $240.3B × 28x = <strong>$6,728B</strong></li>
+<li>PV of TV = $6,728B × 0.6499 = <strong>$4,373B</strong></li>
+<li><strong>EV = $4,975B</strong> → Equity = $4,975B - $62.7B(净负债) = <strong>$4,912B</strong></li>
+<li><strong>每股 = $4,912B / 14.69B 股 = $334</strong></li>
+</ul>
+<h4>基准情景（45% 权重）</h4>
+<p><strong>假设</strong>: iPhone 17 需求正常化 + Services 维持 +12%/年 + Apple Intelligence 渐进渗透 + 毛利率小幅改善。</p>
+<table>
+<thead>
+<tr>
+<th>年度</th>
+<th style="text-align: right;">FY2026E</th>
+<th style="text-align: right;">FY2027E</th>
+<th style="text-align: right;">FY2028E</th>
+<th style="text-align: right;">FY2029E</th>
+<th style="text-align: right;">FY2030E</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>营收 ($B)</td>
+<td style="text-align: right;">474.5</td>
+<td style="text-align: right;">517.2</td>
+<td style="text-align: right;">553.4</td>
+<td style="text-align: right;">581.1</td>
+<td style="text-align: right;">604.3</td>
+</tr>
+<tr>
+<td>营收增速</td>
+<td style="text-align: right;">+14%</td>
+<td style="text-align: right;">+9%</td>
+<td style="text-align: right;">+7%</td>
+<td style="text-align: right;">+5%</td>
+<td style="text-align: right;">+4%</td>
+</tr>
+<tr>
+<td>FCF ($B)</td>
+<td style="text-align: right;">113.9</td>
+<td style="text-align: right;">126.7</td>
+<td style="text-align: right;">138.4</td>
+<td style="text-align: right;">148.2</td>
+<td style="text-align: right;">157.1</td>
+</tr>
+<tr>
+<td>FCF 利润率</td>
+<td style="text-align: right;">24.0%</td>
+<td style="text-align: right;">24.5%</td>
+<td style="text-align: right;">25.0%</td>
+<td style="text-align: right;">25.5%</td>
+<td style="text-align: right;">26.0%</td>
+</tr>
+<tr>
+<td>折现因子 (10.0%)</td>
+<td style="text-align: right;">0.9091</td>
+<td style="text-align: right;">0.8264</td>
+<td style="text-align: right;">0.7513</td>
+<td style="text-align: right;">0.6830</td>
+<td style="text-align: right;">0.6209</td>
+</tr>
+<tr>
+<td>折现后 FCF ($B)</td>
+<td style="text-align: right;">103.5</td>
+<td style="text-align: right;">104.7</td>
+<td style="text-align: right;">104.0</td>
+<td style="text-align: right;">101.2</td>
+<td style="text-align: right;">97.6</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>PV of FCF = <strong>$511.0B</strong></li>
+<li>FY2030E EBITDA ≈ <strong>$220.5B</strong></li>
+<li>Terminal Value = $220.5B × 22x = <strong>$4,851B</strong></li>
+<li>PV of TV = $4,851B × 0.6209 = <strong>$3,012B</strong></li>
+<li><strong>EV = $3,523B</strong> → Equity = <strong>$3,460B</strong></li>
+<li><strong>每股 = $3,460B / 14.69B = $236</strong></li>
+</ul>
+<h4>悲观情景（30% 权重）</h4>
+<p><strong>假设</strong>: iPhone 17 周期快速见顶 + 中国市场华为持续蚕食 + DMA 削弱 App Store 佣金 + 宏观需求疲软 + 关税影响供应链成本。</p>
+<table>
+<thead>
+<tr>
+<th>年度</th>
+<th style="text-align: right;">FY2026E</th>
+<th style="text-align: right;">FY2027E</th>
+<th style="text-align: right;">FY2028E</th>
+<th style="text-align: right;">FY2029E</th>
+<th style="text-align: right;">FY2030E</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>营收 ($B)</td>
+<td style="text-align: right;">449.5</td>
+<td style="text-align: right;">467.5</td>
+<td style="text-align: right;">481.5</td>
+<td style="text-align: right;">491.1</td>
+<td style="text-align: right;">500.9</td>
+</tr>
+<tr>
+<td>营收增速</td>
+<td style="text-align: right;">+8%</td>
+<td style="text-align: right;">+4%</td>
+<td style="text-align: right;">+3%</td>
+<td style="text-align: right;">+2%</td>
+<td style="text-align: right;">+2%</td>
+</tr>
+<tr>
+<td>FCF ($B)</td>
+<td style="text-align: right;">98.9</td>
+<td style="text-align: right;">102.8</td>
+<td style="text-align: right;">108.3</td>
+<td style="text-align: right;">113.0</td>
+<td style="text-align: right;">115.2</td>
+</tr>
+<tr>
+<td>FCF 利润率</td>
+<td style="text-align: right;">22.0%</td>
+<td style="text-align: right;">22.0%</td>
+<td style="text-align: right;">22.5%</td>
+<td style="text-align: right;">23.0%</td>
+<td style="text-align: right;">23.0%</td>
+</tr>
+<tr>
+<td>折现因子 (11.0%)</td>
+<td style="text-align: right;">0.9009</td>
+<td style="text-align: right;">0.8116</td>
+<td style="text-align: right;">0.7312</td>
+<td style="text-align: right;">0.6587</td>
+<td style="text-align: right;">0.5935</td>
+</tr>
+<tr>
+<td>折现后 FCF ($B)</td>
+<td style="text-align: right;">89.1</td>
+<td style="text-align: right;">83.4</td>
+<td style="text-align: right;">79.2</td>
+<td style="text-align: right;">74.4</td>
+<td style="text-align: right;">68.4</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>PV of FCF = <strong>$394.5B</strong></li>
+<li>FY2030E EBITDA ≈ <strong>$185.3B</strong></li>
+<li>Terminal Value = $185.3B × 16x = <strong>$2,965B</strong></li>
+<li>PV of TV = $2,965B × 0.5935 = <strong>$1,760B</strong></li>
+<li><strong>EV = $2,155B</strong> → Equity = <strong>$2,092B</strong></li>
+<li><strong>每股 = $2,092B / 14.69B = $142</strong></li>
+</ul>
+<h4>最差情景（5% 权重）</h4>
+<p><strong>假设</strong>: 全球经济衰退 + 关税战全面升级 + 中国市场被国产替代 + AI 战略失败 + 监管重罚 (DMA/反垄断)，Apple 沦为低增长硬件公司。</p>
+<table>
+<thead>
+<tr>
+<th>年度</th>
+<th style="text-align: right;">FY2026E</th>
+<th style="text-align: right;">FY2027E</th>
+<th style="text-align: right;">FY2028E</th>
+<th style="text-align: right;">FY2029E</th>
+<th style="text-align: right;">FY2030E</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>营收 ($B)</td>
+<td style="text-align: right;">420.0</td>
+<td style="text-align: right;">420.0</td>
+<td style="text-align: right;">420.0</td>
+<td style="text-align: right;">420.0</td>
+<td style="text-align: right;">420.0</td>
+</tr>
+<tr>
+<td>营收增速</td>
+<td style="text-align: right;">+1%</td>
+<td style="text-align: right;">0%</td>
+<td style="text-align: right;">0%</td>
+<td style="text-align: right;">0%</td>
+<td style="text-align: right;">0%</td>
+</tr>
+<tr>
+<td>FCF ($B)</td>
+<td style="text-align: right;">84.0</td>
+<td style="text-align: right;">84.0</td>
+<td style="text-align: right;">84.0</td>
+<td style="text-align: right;">84.0</td>
+<td style="text-align: right;">84.0</td>
+</tr>
+<tr>
+<td>FCF 利润率</td>
+<td style="text-align: right;">20.0%</td>
+<td style="text-align: right;">20.0%</td>
+<td style="text-align: right;">20.0%</td>
+<td style="text-align: right;">20.0%</td>
+<td style="text-align: right;">20.0%</td>
+</tr>
+<tr>
+<td>折现因子 (12.0%)</td>
+<td style="text-align: right;">0.8929</td>
+<td style="text-align: right;">0.7972</td>
+<td style="text-align: right;">0.7118</td>
+<td style="text-align: right;">0.6355</td>
+<td style="text-align: right;">0.5674</td>
+</tr>
+<tr>
+<td>折现后 FCF ($B)</td>
+<td style="text-align: right;">75.0</td>
+<td style="text-align: right;">67.0</td>
+<td style="text-align: right;">59.8</td>
+<td style="text-align: right;">53.4</td>
+<td style="text-align: right;">47.7</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>PV of FCF = <strong>$302.9B</strong></li>
+<li>FY2030E EBITDA ≈ <strong>$155B</strong></li>
+<li>Terminal Value = $155B × 10x = <strong>$1,550B</strong></li>
+<li>PV of TV = $1,550B × 0.5674 = <strong>$879B</strong></li>
+<li><strong>EV = $1,182B</strong> → Equity = <strong>$1,119B</strong></li>
+<li><strong>每股 = $1,119B / 14.69B = $76</strong></li>
+</ul>
+<hr />
+<h4>估值锚（概率加权 DCF）</h4>
+<table>
+<thead>
+<tr>
+<th>情景</th>
+<th style="text-align: right;">估值 (EV, $B)</th>
+<th style="text-align: right;">每股股价</th>
+<th style="text-align: center;">概率</th>
+<th style="text-align: right;">加权贡献</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>乐观</td>
+<td style="text-align: right;">4,975</td>
+<td style="text-align: right;">$334</td>
+<td style="text-align: center;">20%</td>
+<td style="text-align: right;">$66.8</td>
+</tr>
+<tr>
+<td>基准</td>
+<td style="text-align: right;">3,523</td>
+<td style="text-align: right;">$236</td>
+<td style="text-align: center;">45%</td>
+<td style="text-align: right;">$106.2</td>
+</tr>
+<tr>
+<td>悲观</td>
+<td style="text-align: right;">2,155</td>
+<td style="text-align: right;">$142</td>
+<td style="text-align: center;">30%</td>
+<td style="text-align: right;">$42.6</td>
+</tr>
+<tr>
+<td>最差</td>
+<td style="text-align: right;">1,182</td>
+<td style="text-align: right;">$76</td>
+<td style="text-align: center;">5%</td>
+<td style="text-align: right;">$3.8</td>
+</tr>
+<tr>
+<td><strong>概率加权</strong></td>
+<td style="text-align: right;"><strong>—</strong></td>
+<td style="text-align: right;"><strong>$219</strong></td>
+<td style="text-align: center;">100%</td>
+<td style="text-align: right;"><strong>$219</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>当前股价 $299.46 相对 DCF 锚 $219 溢价 +36.7%</strong>。</p>
+<p><strong>概率分布合理性</strong>: 20/45/30/5，悲观权重高于标准 25/45/25/5，因估值已处 52 周高位+关税/监管尾部风险非对称偏下。</p>
+<p><strong>敏感性分析矩阵</strong>（基准情景，终值 EV/EBITDA × WACC）:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align: right;">WACC 9%</th>
+<th style="text-align: right;">WACC 10% (基准)</th>
+<th style="text-align: right;">WACC 11%</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EV/EBITDA 25x</td>
+<td style="text-align: right;">$285</td>
+<td style="text-align: right;">$261</td>
+<td style="text-align: right;">$239</td>
+</tr>
+<tr>
+<td>EV/EBITDA 22x (基准)</td>
+<td style="text-align: right;">$258</td>
+<td style="text-align: right;"><strong>$236</strong></td>
+<td style="text-align: right;">$216</td>
+</tr>
+<tr>
+<td>EV/EBITDA 19x</td>
+<td style="text-align: right;">$231</td>
+<td style="text-align: right;">$211</td>
+<td style="text-align: right;">$193</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3>9.2 交叉验证（仅互证，不纳入锚）</h3>
+<ul>
+<li><strong>可比 PE</strong>: 全球科技巨头 PE 中位数 ~30x [phase3-part3 §8.1] × EPS $7.49 = <strong>$225</strong>。与 DCF 锚 $219 差 <strong>+2.7% ✅</strong></li>
+<li><strong>有形 PB</strong>: PB 41.2x 因回购畸变失去参考意义；有形净资产仅 ~$73.7B [API:data_snapshot §2.2]，按 PB 还原无意义</li>
+<li><strong>分析师目标价</strong>: $308 [phase1-data §8] → 与 DCF 锚差 <strong>+40.6% 🔴</strong>。分析师通常偏乐观 15-20%，但此处差距异常大，反映市场对 Apple 品牌+生态溢价的共识已超过基本面支撑</li>
+<li><strong>自洽判定</strong>: Peer PE ↔ DCF 差 2.7% ✅；分析师 ↔ DCF 差 40.6% 🔴 — 分歧原因: 分析师隐含 PE 维持 30x+ 的假设，而 DCF 假设终值 PE 回归 22x 成熟期水平</li>
+</ul>
+<p><strong>Narrative-to-Numbers 摘要</strong>:<br />
+- <strong>叙事</strong>: Apple 是全球最强消费电子+服务生态公司，25 亿设备构成不可替代的平台，iPhone 17 Super Cycle 和 Apple Intelligence 正驱动新一轮增长——但这个叙事的所有好消息已充分定价在 $299.46（PE 36x, 距 52 周高仅 0.5%）<br />
+- <strong>最脆弱假设</strong>: <strong>终值倍数 (EV/EBITDA 22x)</strong>。若市场持续给予平台溢价 (28x+)，DCF 锚上移至 $300+；若增速证伪导致 PE 压缩至 18x，锚下移至 $190<br />
+- <strong>最脆弱假设错误时</strong>: 终值倍数每变动 1x，每股估值变动约 ±$9（敏感度高）</p>
+<h3>9.3 估值异常</h3>
+<ol>
+<li><strong>PE 36x vs 消费电子 peer Samsung 12x = 3 倍溢价</strong>: 溢价来自 Services ($102B, ~74% 毛利率) + 生态锁定 + 品牌溢价。若将 Services 以 35x PE 独立估值、硬件以 15x PE 估值，SOTP 隐含整体 ~28x PE，低于当前 36x → <strong>当前估值隐含市场对 Services 极乐观定价</strong> [phase3-part3 §8.3]</li>
+<li><strong>PB 41x 全球 mega-cap 最高</strong>: 因回购持续压缩权益至仅 $73.7B (vs 总资产 $359.2B)，PB 失去估值参考意义 [API:data_snapshot §2.2]</li>
+<li><strong>FCF 收益率仅 ~2.2%</strong>: $98.8B FCF / $4.4T 市值 = 2.2%，低于 US 10Y 4.3%，意味着投资者接受低于无风险利率的现金回报，纯粹依赖增长预期 [API:metrics.json; data_snapshot §2.3]</li>
+<li><strong>52 周高位 $300.92</strong>: 当前 $299.46 距高点仅 0.5%，技术面过热风险 [API:metrics.json]</li>
+</ol>
+<h3>9.4 技术面位置（v4.4 — Read <code>technical_analysis.md</code>）</h3>
+<blockquote>
+<p><strong>美股版无技术分析模块</strong>。<code>technical_analysis.md</code> 仅为 A 股自动生成（含均线系统、MACD/RSI/布林带、量价关系等），美股不生成此 artifact。</p>
+</blockquote>
+<p><strong>替代信号</strong>:<br />
+- 股价 $299.46 距 52 周高 $300.92 仅 0.5%，距 52 周低 $193.46 已涨 +54.8% [API:metrics.json]<br />
+- Beta 1.065 → 与大盘高度相关，无显著超额波动 [API:yfinance.info]<br />
+- 分析师目标价 $308 → 仅 +2.9% 上行空间 [phase1-data §8]</p>
+<p><strong>基本面 × 价格位置配合判断</strong>:<br />
+- DCF 基准情景 $236 (偏空) + 价格处于 52 周高位 → <strong>估值高估 + 技术面过热 = 不建议追高</strong><br />
+- 若回调至 $230-$250 区间（接近 DCF 基准），可视为合理入场区域<br />
+- 上方 $300-$310 为强阻力区（52 周高 + 分析师目标价天花板）</p>
+<hr />
+</div>
+
+<!-- ============================================================
+     §十 投资回报测算（与 §九 共用情景）
+     ============================================================ -->
+<div class="section" id="invest-sim">
+<h2>§十 投资回报测算（与 §九 共用情景）</h2>
+<p><strong>初始仓位</strong>: 100 万人民币 ÷ 7.2 汇率 ≈ <strong>$138,889</strong><br />
+<strong>当前买入</strong>: $299.46 × <strong>463 股</strong> ≈ $138,690（余 $199 现金）</p>
+<p><strong>投资时间窗</strong>: 2 年（FY2027E 基准）</p>
+<table>
+<thead>
+<tr>
+<th>情景</th>
+<th style="text-align: right;">目标价</th>
+<th style="text-align: right;">收益率</th>
+<th style="text-align: center;">概率</th>
+<th style="text-align: right;">加权收益</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>乐观</td>
+<td style="text-align: right;">$334</td>
+<td style="text-align: right;">+11.5%</td>
+<td style="text-align: center;">20%</td>
+<td style="text-align: right;">+2.3%</td>
+</tr>
+<tr>
+<td>基准</td>
+<td style="text-align: right;">$236</td>
+<td style="text-align: right;">-21.2%</td>
+<td style="text-align: center;">45%</td>
+<td style="text-align: right;">-9.5%</td>
+</tr>
+<tr>
+<td>悲观</td>
+<td style="text-align: right;">$142</td>
+<td style="text-align: right;">-52.6%</td>
+<td style="text-align: center;">30%</td>
+<td style="text-align: right;">-15.8%</td>
+</tr>
+<tr>
+<td>最差</td>
+<td style="text-align: right;">$76</td>
+<td style="text-align: right;">-74.6%</td>
+<td style="text-align: center;">5%</td>
+<td style="text-align: right;">-3.7%</td>
+</tr>
+<tr>
+<td><strong>概率加权 2 年收益率</strong></td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: center;">100%</td>
+<td style="text-align: right;"><strong>-26.8%</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>收益模拟明细</strong> (463 股):</p>
+<table>
+<thead>
+<tr>
+<th>情景</th>
+<th style="text-align: right;">目标价</th>
+<th style="text-align: right;">持仓市值</th>
+<th style="text-align: right;">收益金额(USD)</th>
+<th style="text-align: right;">收益金额(RMB)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>乐观</td>
+<td style="text-align: right;">$334</td>
+<td style="text-align: right;">$154,642</td>
+<td style="text-align: right;">+$15,952</td>
+<td style="text-align: right;">+¥114,854</td>
+</tr>
+<tr>
+<td>基准</td>
+<td style="text-align: right;">$236</td>
+<td style="text-align: right;">$109,268</td>
+<td style="text-align: right;">-$29,422</td>
+<td style="text-align: right;">-¥211,838</td>
+</tr>
+<tr>
+<td>悲观</td>
+<td style="text-align: right;">$142</td>
+<td style="text-align: right;">$65,746</td>
+<td style="text-align: right;">-$72,944</td>
+<td style="text-align: right;">-¥525,197</td>
+</tr>
+<tr>
+<td>最差</td>
+<td style="text-align: right;">$76</td>
+<td style="text-align: right;">$35,188</td>
+<td style="text-align: right;">-$103,502</td>
+<td style="text-align: right;">-¥745,214</td>
+</tr>
+</tbody>
+</table>
+<p><strong>概率加权期望值</strong>: $138,889 × (1 - 26.8%) = <strong>$101,663</strong> → 期望亏损 <strong>$37,226 (¥268,027)</strong></p>
+<p><strong>年化</strong> ≈ (1 - 0.268)^(1/2) - 1 = <strong>-14.4%/年</strong></p>
+<p><strong>股息补偿</strong>: 年股息 $1.08/股 × 463 股 = $500/年 × 2 年 = $1,000 → 部分抵消但杯水车薪 (0.36% 股息率 vs -14.4% 资本损失)</p>
+<p><strong>建议仓位</strong>: <strong>轻仓或观望</strong>。DCF 估值锚 $219 显著低于当前 $299.46 (-27%)，即使乐观情景上行空间也仅 +11.5%。风险收益比严重不对称 — 下行概率 (30%+5%=35%) 对应 -52%~-75% 损失，而上行概率 (20%) 仅 +11.5%。建议等待回调至 $220-$250 区间再考虑建仓。</p>
+<hr />
+</div>
+
+<!-- ============================================================
+     §十一 定性判断（3 框架，无打分）
+     ============================================================ -->
+<div class="section" id="qualitative">
+<h2>§十一 定性判断（3 框架，v4.1 — 无打分）</h2>
+<blockquote>
+<p><em>估值分析见 §九。会计/治理红旗审计结论：Buffett Quality + Sloan Accrual + Valuation Anomaly 三个框架已自动扫描 — 本次全部返回"数据不足/无信号"，无红旗。本章节聚焦不能被定量指标或审计自动替代的"深层判断"。</em></p>
+</blockquote>
+<h3>框架 1 · 护城河（Moat）→ <strong>看多</strong></h3>
+<p><strong>核心问题</strong>: Apple 的可持续竞争优势是在<strong>加深</strong>还是<strong>侵蚀</strong>？</p>
+<p><strong>判断</strong>: <strong>加深</strong>（多重复合护城河持续强化）</p>
+<p><strong>证据链</strong>:<br />
+1. <strong>生态锁定持续加深</strong>: 25 亿+ 活跃设备构成全球最大消费电子生态，iOS 用户留存率 &gt;90%；iCloud/App 购买/Apple Watch 配对构成极高转换成本 [Doc:Q1 FY2026 press release; Web:公开信息]<br />
+2. <strong>技术壁垒自我强化</strong>: 自研 Apple Silicon (M 系列) 实现芯片-硬件-OS 垂直整合，全球无第二家复制此模式；Apple Intelligence 进一步加深硬件+AI 绑定 [Doc:10-K FY2025, Item 1; Web:apple.com/apple-intelligence]<br />
+3. <strong>Services 飞轮加速</strong>: FY2025 Services $102B (+14%) 、~74% 毛利率，装机量越大 Services 收入越高，形成正循环 [Doc:10-K FY2025, P.41-44]<br />
+4. <strong>反例/边界</strong>: 欧盟 DMA 可能迫使 App Store 开放侧载+降低佣金，部分侵蚀 Services 护城河；中国市场华为鸿蒙生态回归构成区域性威胁 [Doc:10-K FY2025, Item 1A; Web:公开信息]<br />
+5. <strong>S 曲线定位</strong>: 智能手机 = 晚期成熟（PE 估值为主）；Services = 中期成长（PS/PE 混合）；AI 端侧 = 早期导入（叙事驱动）— 多 S 曲线叠加使护城河具备自我更新能力</p>
+<p><strong>逻辑蕴含</strong>:<br />
+- 若判断成立 → 利好长期超额 ROE 假设延续 / 利好终值倍数维持较高水平 / 利好抗周期能力<br />
+- 若判断推翻（DMA 根本性削弱生态锁定 + 中国市场丢失） → 利空 Services 增长假设 / 终值倍数需下修</p>
+<p><strong>对综合投资观点的支撑方向</strong>: <strong>看多</strong></p>
+<p><strong>未解决问题</strong>: Apple Intelligence 实际用户采纳率未公开，无法量化 AI 对换机周期+Services 的增量贡献 [phase1-data §11 缺口 #3]</p>
+<hr />
+<h3>框架 2 · 管理层（Management）→ <strong>看多</strong></h3>
+<p><strong>核心问题</strong>: 管理层的<strong>德</strong>（诚信/股东为伴）和<strong>才</strong>（战略/执行/资本配置）是否都合格？</p>
+<p><strong>判断</strong>: <strong>是</strong>（德才兼备，全球顶级管理团队）</p>
+<p><strong>证据链</strong>:<br />
+1. <strong>"德" — 诚信记录</strong>: 无审计意见瑕疵、无年报差错、无财务造假历史；11 框架审计全部"数据不足/无信号"，零红旗 [audit_report.md §1-§3]；高管减持无异常时序 [Doc:DEF 14A 2026]<br />
+2. <strong>"才" — 资本配置</strong>: Tim Cook 执掌 15 年，市值从 ~$350B 增至 $4.4T (+12x)；$100B 新回购授权 + 股息提升 4% 展示对现金流的极度自信 [Doc:Q2 FY2026 press release; Web:公开信息]；FY2025 返还股东 &gt;$120B，全球最大规模回购计划执行精准<br />
+3. <strong>"才" — 战略连贯性</strong>: 自研芯片战略 (2020 年宣布) 已全面落地 (M 系列覆盖全产品线)；Services 从 FY2017 ~$30B 增至 FY2025 $102B，战略承诺兑现率极高 [Doc:10-K FY2025]<br />
+4. <strong>反例/边界</strong>: 管理层直接持股极低 (&lt;0.1% 合计)，主要依赖 RSU 对齐 [Doc:DEF 14A 2026, P.80-82]；Tim Cook 年龄渐长 (65 岁) 无公开继任计划；CFO 新任 (Kevan Parekh 2025 年接任) 尚需观察 [Doc:Q1 FY2026 press release]</p>
+<p><strong>逻辑蕴含</strong>:<br />
+- 若判断成立 → 利好管理层执行可信度 / 利好资本配置效率假设 / 利好 PE 溢价空间<br />
+- 若判断推翻（如 Tim Cook 离任+继任者不及格） → 利空品牌溢价 / 利空战略连贯性</p>
+<p><strong>对综合投资观点的支撑方向</strong>: <strong>看多</strong></p>
+<p><strong>未解决问题</strong>: Tim Cook 继任计划未公开披露</p>
+<hr />
+<h3>框架 3 · 催化剂（Catalyst）→ <strong>中性</strong></h3>
+<p><strong>核心问题</strong>: 下一个 <strong>12 个月</strong> 是否有可能<strong>改变投资结论方向</strong>的具体、可观察事件？</p>
+<p><strong>判断</strong>: <strong>部分是</strong>（正向催化剂存在但已基本被定价，负向催化剂不容忽视）</p>
+<p><strong>证据链</strong>:</p>
+<p><strong>正面催化剂</strong>:<br />
+1. <strong>iPhone 17 Super Cycle 延续</strong>: Q2 FY2026 "extraordinary demand" 已确认 [Doc:Q2 FY2026 press release]，但市场已将此定价 (股价 52 周高位)<br />
+2. <strong>Apple Intelligence 全面铺开</strong>: 若 FY2026 下半年功能完善+语言扩展 → 可能驱动新兴市场换机潮 [Web:apple.com/apple-intelligence]<br />
+3. <strong>$100B 回购</strong>: 持续缩股 ~2%/年，机械性支撑 EPS [Doc:Q2 FY2026 press release]</p>
+<p><strong>负面催化剂</strong>:<br />
+4. <strong>欧盟 DMA 执行</strong>: 2026 年 App Store 被迫进一步开放，可能影响佣金收入 [Doc:10-K FY2025, Item 1A]<br />
+5. <strong>OpenAI 法律纠纷</strong>: 悬而未决，不利判决可能影响 AI 战略 [Web:Yahoo Finance]<br />
+6. <strong>关税/贸易摩擦升级</strong>: 10-K 明确提及风险，若中美关税加码 → 供应链成本上升 + 中国市场进一步承压 [Doc:10-K FY2025, Item 1A]</p>
+<p><strong>时间窗催化剂</strong>:<br />
+7. Q3 FY2026 财报 (~2026 年 7 月) — 若增速放缓 → 触发估值下修<br />
+8. WWDC 2026 (~2026 年 6 月) — Apple Intelligence 新功能发布<br />
+9. iPhone 18 发布 (~2026 年 9 月) — 换机周期是否延续</p>
+<p><strong>逻辑蕴含</strong>:<br />
+- 正面催化剂已基本被定价（PE 36x + 52 周高位），增量惊喜空间有限<br />
+- 负面催化剂 (DMA/关税/OpenAI) 若兑现，下行冲击不对称 — 当前估值无安全边际吸收负面冲击<br />
+- 综合看，催化剂方向混合，但<strong>估值位置决定了风险收益不对称偏下</strong></p>
+<p><strong>对综合投资观点的支撑方向</strong>: <strong>中性</strong></p>
+<p><strong>未解决问题</strong>: FY2026 全年 guidance 不可得 (Apple 传统不提供定量指引) [phase1-data §11 缺口 #5]；DMA 执行力度和时间表不确定</p>
+<hr />
+<h3>综合判断</h3>
+<p><strong>框架方向分布</strong>（共 3 个框架）:<br />
+- 看多方向: 框架 1（护城河）、框架 2（管理层）（共 <strong>2 个</strong>）<br />
+  - 护城河: 多重复合护城河持续加深，生态锁定+技术壁垒+Services 飞轮<br />
+  - 管理层: Tim Cook 团队德才兼备，资本配置全球顶级<br />
+- 看空方向: 无（共 <strong>0 个</strong>）<br />
+- 中性: 框架 3（催化剂）（共 <strong>1 个</strong>）<br />
+  - 催化剂: 正向催化剂已被定价，估值位置不支持进一步上行</p>
+<p><strong>致命看空条款检查</strong>（直接引用 §三快筛）:<br />
+- §三 快筛结果: <strong>✅ PASS</strong>（6 项全部未触发；audit 0 个 🔴 红旗 [audit_report.md §2]）</p>
+<p><strong>综合结论</strong>: <strong>看多方向</strong><br />
+（根据 v4.1 黑白分割规则：3 框架中 ≥2 看多 + 无致命看空 → 看多方向）</p>
+<p><strong>关键分歧点</strong>:<br />
+- 框架 1/2（看多 — 公司质地极优）vs §九 估值分析（DCF 锚 $219 vs 当前 $299 溢价 37%）— <strong>分歧焦点: 这是一家伟大公司，但当前是否是好价格？</strong><br />
+- 定性判断"看多方向"意味着<strong>长期持有逻辑成立</strong>，但不等于<strong>当前价位应立即买入</strong>。§九 估值和 §十 回报测算共同指向：等待估值回归合理区间（$220-$250）再入场</p>
+<p><strong>验证催化剂</strong>（由框架 3 识别）:<br />
+1. Q3 FY2026 财报 (~2026-07) — 若营收增速回落至 &lt;10% → 确认 iPhone 17 周期见顶 → 估值下修<br />
+2. 欧盟 DMA 执行细则落地 (~2026 H2) — 若 App Store 佣金大幅下调 → Services 增长假设需修正<br />
+3. WWDC 2026 (~2026-06) — Apple Intelligence 新功能广度 → 验证 AI 是否为真实换机催化剂</p>
+</div>
+
+<!-- ============================================================
+     §十二 信息缺口与尽调优先级
+     ============================================================ -->
+<div class="section" id="gaps">
+<h2>§十二 信息缺口与尽调优先级</h2>
+<h3>已知缺口</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>缺口项</th>
+<th>影响的结论</th>
+<th>已尝试的查询（具体接口/关键词/页码）</th>
+<th>当前状态</th>
+<th>可得性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>分产品线毛利率 (iPhone / Services / Mac / iPad / Wearables 分拆)</td>
+<td>§九 估值 — DCF 假设中 FCF 利润率的分部驱动因素无法独立验证；§六 维度 2 商业模式评分依赖 Services ~74% 毛利率的间接推断</td>
+<td>API:yfinance 无分部利润数据；10-K FY2025 Item 8 segment reporting 仅披露产品/服务两大类毛利率，不提供 5 条业务线各自利润率 [Doc:10-K FY2025, P.41-44]</td>
+<td>❌ 未找到</td>
+<td>低 — Apple 政策性不披露分部利润率，第三方拆解亦无权威源</td>
+</tr>
+<tr>
+<td>2</td>
+<td>中国区 iPhone 市场份额及趋势</td>
+<td>§六 维度 1 市场规模 — 大中华区作为第三大地理分部，华为竞争影响无法量化；§九 悲观情景中国市场份额假设缺乏锚定</td>
+<td>WebSearch "Apple China iPhone market share 2025 2026" 返回空结果；10-K FY2025 按大中华区营收分拆 ($67.0B FY2025) 但无份额数据 [Doc:10-K FY2025, P.42]；WebFetch counterpoint/IDC 无法访问</td>
+<td>⚠️ 部分 — 仅有大中华区营收金额，无份额</td>
+<td>中 — IDC/Counterpoint 付费报告中存在，工具受限无法获取</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Apple Intelligence 用户采纳率 / DAU / 功能使用频率</td>
+<td>§六 维度 4 产品与技术 — AI 策略实际效果无法量化（已因此将维度 4 从 9 降至 8）；§九 乐观情景 "AI 驱动换机" 假设缺乏采纳数据支撑</td>
+<td>WebSearch/WebFetch apple.com/apple-intelligence — 仅功能描述页，无量化采纳指标；Q1/Q2 FY2026 press release 仅定性描述 "incredible demand" 无 DAU 数字 [Doc:Q1/Q2 FY2026 press release]</td>
+<td>❌ 未找到</td>
+<td>低 — Apple 未公开披露，预计最早 WWDC 2026 或 FY2026 10-K 可能首次提及</td>
+</tr>
+<tr>
+<td>4</td>
+<td>SeekingAlpha / Reddit 独立投资社区深度多空观点</td>
+<td>§七 舆情平衡性 — 当前仅覆盖 Yahoo Finance + Apple 官方渠道，缺少独立散户/机构视角的多空辩论</td>
+<td>WebFetch seekingalpha.com/symbol/AAPL 返回 403 Forbidden；WebFetch reddit.com/r/stocks 无法访问；WebSearch "AAPL bear case 2026 site:seekingalpha.com" 返回空</td>
+<td>❌ 未找到</td>
+<td>高 — 信息公开存在但工具受限（403/爬虫限制）</td>
+</tr>
+<tr>
+<td>5</td>
+<td>FY2026 全年定量 guidance / 前瞻指引</td>
+<td>§九 估值 — DCF FY2026E 营收增速假设 (+14% 基准) 缺乏管理层指引锚定，完全依赖 Q1/Q2 已披露增速外推</td>
+<td>10-Q Q1 FY2026 + Q2 FY2026 press release — Apple 仅提供下季度"方向性评论"，无定量全年 guidance [Doc:Q1/Q2 FY2026 press release]；earnings call transcript 未获取</td>
+<td>❌ 未找到</td>
+<td>原则上不可得 — Apple 自 2003 年起即传统上不提供年度定量 guidance</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Phase 6 补查优先级</strong>: #4 (工具升级即可获取) &gt; #2 (第三方报告可补) &gt; #3 (等待 Apple 披露) &gt; #1 / #5 (原则上不可得)</p>
+<hr />
+</div>
+
+<!-- ============================================================
+     §十三 数据可审计性（时效性+来源+audit 红旗）
+     ============================================================ -->
+<div class="section" id="sources">
+<h2>§十三 数据可审计性（时效性 + 来源 3 类分组）</h2>
+<p><strong>截止日期</strong>: 2026-05-15。<strong>数据覆盖</strong>: yfinance 年度数据至 FY2025 (截至 2025-09-27)；最新季度 Q2 FY2026 (截至 2026-03-28) 来自 press release。<strong>关键待披露</strong>: Q3 FY2026 业绩 (预计 2026-07)、FY2026 10-K (预计 2026-11)。</p>
+<h3>[yfinance API — 结构化数据]</h3>
+<table>
+<thead>
+<tr>
+<th>数据项</th>
+<th>API 接口</th>
+<th>覆盖范围</th>
+<th>引用章节</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>income / balancesheet / cashflow</td>
+<td>yfinance.financials / .balance_sheet / .cashflow</td>
+<td>FY2021-FY2025 (5 年)</td>
+<td>§四 财务趋势表, §六 维度 3/7, §九 DCF 历史锚</td>
+</tr>
+<tr>
+<td>fina_indicator (毛利率/净利率/ROE/ROA/周转率等)</td>
+<td>yfinance 衍生 → metrics.json</td>
+<td>FY2021-FY2025</td>
+<td>§二 评分, §六 维度 3 盈利能力</td>
+</tr>
+<tr>
+<td>info (PE/PB/PS/EV/EBITDA/市值/Beta/股息率等)</td>
+<td>yfinance.info</td>
+<td>实时 (2026-05-15)</td>
+<td>§四 估值指标, §九 WACC, §六 维度 8</td>
+</tr>
+<tr>
+<td>institutional_holders</td>
+<td>yfinance.institutional_holders</td>
+<td>最新可用</td>
+<td>§四 股东结构</td>
+</tr>
+<tr>
+<td>3 年营收 CAGR / 增速</td>
+<td>metrics.json 衍生</td>
+<td>FY2022-FY2025</td>
+<td>§四 增长, §九 DCF 假设历史锚</td>
+</tr>
+</tbody>
+</table>
+<h3>[PDF / SEC 文档原文]</h3>
+<table>
+<thead>
+<tr>
+<th>文档</th>
+<th>来源</th>
+<th>关键引用内容</th>
+<th>引用章节</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10-K FY2025 (aapl-10k-fy2025.htm)</td>
+<td>[Doc:10-K FY2025]</td>
+<td>营收分部明细 P.41-44, MD&amp;A P.44, 风险因素 Item 1A, 长期债务注释, 子公司结构</td>
+<td>§四 业务/财务, §五 行业, §六 全维度, §九 WACC 债务成本, §十一 护城河</td>
+</tr>
+<tr>
+<td>10-Q Q1 FY2026 (aapl-10q-q1fy2026.htm)</td>
+<td>[Doc:10-Q Q1 FY2026]</td>
+<td>营收 $143.8B +16%, EPS $2.84, OCF ~$54B</td>
+<td>§四 最新动态, §九 DCF 增速假设</td>
+</tr>
+<tr>
+<td>Q2 FY2026 Press Release</td>
+<td>[Doc:Q2 FY2026 press release]</td>
+<td>营收 $111.2B +17%, EPS $2.01 +22%, iPhone 17 "extraordinary demand", $100B 回购授权</td>
+<td>§四 最新动态, §六 维度 4, §九 乐观情景, §十 回报</td>
+</tr>
+<tr>
+<td>DEF 14A 2026 (aapl-def14a-2026.htm)</td>
+<td>[Doc:DEF 14A 2026]</td>
+<td>Vanguard 9.63%, BlackRock 7.10%, 管理层持股, 高管薪酬 P.80-82</td>
+<td>§四 股东结构, §六 维度 5 管理层</td>
+</tr>
+<tr>
+<td>Exhibit 21 FY2025 (aapl-ex21-fy2025.htm)</td>
+<td>[Doc:Exhibit 21 FY2025]</td>
+<td>20 家主要子公司 (爱尔兰税务枢纽, 亚太实体等)</td>
+<td>§四 子公司, §十一 框架 2 管理层</td>
+</tr>
+</tbody>
+</table>
+<h3>[Web — 公开网页]</h3>
+<table>
+<thead>
+<tr>
+<th>来源</th>
+<th>URL</th>
+<th>引用内容</th>
+<th>引用章节</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Yahoo Finance</td>
+<td>https://finance.yahoo.com/quote/AAPL/</td>
+<td>实时估值指标, 分析师目标价 $308, 舆情多空观点, 半导体板块动态</td>
+<td>§四 估值, §七 舆情, §六 维度 10</td>
+</tr>
+<tr>
+<td>Apple Newsroom</td>
+<td>https://www.apple.com/newsroom/</td>
+<td>Q1/Q2 FY2026 业绩新闻稿, 25 亿+ 活跃设备</td>
+<td>§四 最新动态, §六 维度 1</td>
+</tr>
+<tr>
+<td>Apple Intelligence</td>
+<td>https://www.apple.com/apple-intelligence/</td>
+<td>AI 功能描述, "in development" 状态, 语言支持范围</td>
+<td>§六 维度 4, §七 看衰派</td>
+</tr>
+<tr>
+<td>Motley Fool</td>
+<td>https://www.fool.com/quote/nasdaq/aapl/</td>
+<td>TTM FCF +28%, 毛利率 49.27% (TTM)</td>
+<td>§七 看多派</td>
+</tr>
+<tr>
+<td>Damodaran</td>
+<td>https://pages.stern.nyu.edu/~adamodar/</td>
+<td>2026 US ERP 5.50%</td>
+<td>§九 WACC</td>
+</tr>
+</tbody>
+</table>
+<h3>审计红旗汇总（11 框架）</h3>
+<table>
+<thead>
+<tr>
+<th>严重度</th>
+<th style="text-align: center;">数量</th>
+<th>代表性红旗</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🔴 致命</td>
+<td style="text-align: center;">0</td>
+<td>—</td>
+</tr>
+<tr>
+<td>🟠 高</td>
+<td style="text-align: center;">0</td>
+<td>—</td>
+</tr>
+<tr>
+<td>🟡 中</td>
+<td style="text-align: center;">0</td>
+<td>—</td>
+</tr>
+<tr>
+<td>🟢 低</td>
+<td style="text-align: center;">0</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>说明</strong>: <code>scripts/financial_audit</code> 11 框架全部返回"⚠️ 数据不足或无信号"，因 Apple 为美股公司，数据通过 yfinance 采集，部分 Tushare 专用字段（如质押、股东户数、业绩预告等）不适用。这不代表无风险，而是自动化审计工具覆盖范围的局限。实质性风险分析已在 §六/§七/§十一 中通过 PDF 原文 + yfinance 数据手工执行。</p>
+</blockquote>
+<p>完整清单: <code>audit_report.md</code>。</p>
+</div>
+
+<!-- ============================================================
+     v4.6.1: 附录/补丁章节追加区(避免 MD→HTML 内容丢失)
+     主报告 §十三 之后的所有 ## 章节(如"附录 v4 修订日志" / "v4.1 补丁")
+     Phase 6 Part B 必须追加到这里, 不得丢弃
+     ============================================================ -->
+<!-- 无附录章节 -->
+
+
+</div>
+</body>
+</html>

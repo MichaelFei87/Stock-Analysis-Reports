@@ -302,6 +302,49 @@
           "variant": "amber"
         }
       ]
+    },
+    {
+      "slug": "AAPL_Apple",
+      "ticker": "AAPL",
+      "name": "Apple Inc.",
+      "name_cn": "Apple",
+      "sector": "Consumer Electronics",
+      "market": "us",
+      "report_date": "",
+      "version": "v1",
+      "composite_score": 7.55,
+      "verdict": "Bullish",
+      "verdict_tone": "bullish",
+      "valuation_tag": "估值锚 219.0 元",
+      "one_liner": "看多方向 —— Apple 拥有全球独一无二的硬件-软件-芯片-服务四位一体护城河，25 亿+活跃设备生态持续加深，iPhone 17 Super Cycle 和 Apple Intelligence 驱动 FY2026 营收加速至 +16~17%；但当前 $299.46 股价相对 DCF 概率加权锚 $219 溢价 +36.7%，PE 36x 处于 52 周高位，好消息已充分定价，风险收益比严重不对称偏下。",
+      "metrics": [
+        {
+          "label": "综合评分",
+          "value": "7.55/10",
+          "tone": "neutral"
+        },
+        {
+          "label": "期望收益",
+          "value": "-26.8%",
+          "tone": "negative"
+        },
+        {
+          "label": "估值锚",
+          "value": "219.0元",
+          "tone": "neutral"
+        }
+      ],
+      "expected_return_short": "-26.8%",
+      "badges": [
+        {
+          "label": "Bullish 7.55/10",
+          "variant": "amber"
+        },
+        {
+          "label": "估值锚 219.0 元",
+          "variant": "amber"
+        }
+      ]
     }
   ]
 }
