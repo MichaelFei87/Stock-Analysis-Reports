@@ -1,0 +1,43 @@
+{
+  "slug": "NVDA_英伟达",
+  "ticker": "NVDA",
+  "name": "NVIDIA Corporation",
+  "name_cn": "英伟达",
+  "sector": "Semiconductors",
+  "market": "us",
+  "report_date": "",
+  "version": "v1",
+  "composite_score": 8.55,
+  "verdict": "Neutral",
+  "verdict_tone": "bullish",
+  "valuation_tag": "估值锚 213.7 元",
+  "one_liner": "中性-分歧 — 英伟达基本面在全球半导体行业中独树一帜（三年营收 CAGR 88.3%、毛利率 71.1%、ROE 101.5%、FCF $96.7B），CUDA 生态+一年一代产品节奏构筑短期不可逾越的护城河；但当前 $225.83 已略高于概率加权 DCF 公允价值 $213.7（溢价 +5.7%），安全边际为负，期望回报 -5.4%（2 年），只有 AI 超级周期延续的乐观情景才能带来正回报。",
+  "metrics": [
+    {
+      "label": "综合评分",
+      "value": "8.55/10",
+      "tone": "neutral"
+    },
+    {
+      "label": "期望收益",
+      "value": "-5.4%",
+      "tone": "neutral"
+    },
+    {
+      "label": "估值锚",
+      "value": "213.7元",
+      "tone": "neutral"
+    }
+  ],
+  "expected_return_short": "-5.4%",
+  "badges": [
+    {
+      "label": "Neutral 8.55/10",
+      "variant": "amber"
+    },
+    {
+      "label": "估值锚 213.7 元",
+      "variant": "amber"
+    }
+  ]
+}
