@@ -1,0 +1,2725 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>英伟达（NVDA）投资分析报告 — 2026-05-15</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   Claude Code Company Analysis · Report Styles v5.0
+   单一 CSS 真相源 — 由 assets/html/base.html 加载并内联
+   禁止在 Phase 6 Part B 中自创颜色值或变量名
+   v5.0: Claude Design Language — 温暖羊皮纸 + 赤陶色主调 + 衬线标题
+         Bloomberg 风险色保留(红/琥珀/黄/绿)
+   ============================================================ */
+
+:root {
+  /* 主色 — Claude Terracotta */
+  --c-primary: #c96442;
+  --c-primary-light: #f0eee6;
+  --c-primary-dark: #a14e2f;
+  --c-accent: #d97757;
+
+  /* Bloomberg 风格风险等级(高对比) — 保留不变 */
+  --c-risk-red:    #dc2626;
+  --c-risk-red-bg: #fef2f2;
+  --c-risk-amber:  #e8a33a;
+  --c-risk-amber-bg: #fff7ed;
+  --c-risk-yellow: #fbbf24;
+  --c-risk-yellow-bg: #fffbeb;
+  --c-risk-green:  #059669;
+  --c-risk-green-bg: #ecfdf5;
+
+  /* 语义色 (保留 v4.3 alias) */
+  --c-green: var(--c-risk-green);
+  --c-green-bg: var(--c-risk-green-bg);
+  --c-yellow: #d97706;
+  --c-yellow-bg: #fffbeb;
+  --c-red: var(--c-risk-red);
+  --c-red-bg: var(--c-risk-red-bg);
+
+  /* Claude 暖灰度系 */
+  --c-gray-50:  #faf9f5;  /* Ivory */
+  --c-gray-100: #f0eee6;  /* Border Cream */
+  --c-gray-200: #e8e6dc;  /* Border Warm */
+  --c-gray-500: #87867f;  /* Stone Gray */
+  --c-gray-700: #5e5d59;  /* Olive Gray */
+  --c-gray-900: #141413;  /* Near Black */
+
+  /* Claude 表面色 */
+  --c-parchment: #f5f4ed;
+  --c-ivory: #faf9f5;
+  --c-warm-sand: #e8e6dc;
+  --c-dark-surface: #30302e;
+  --c-warm-silver: #b0aea5;
+  --c-dark-warm: #3d3d3a;
+
+  /* Morningstar 卡片化 — 迁移到暖色 */
+  --c-card-border:  #e8e6dc;
+  --c-card-header:  #faf9f5;
+  --c-card-hover:   rgba(201,100,66,0.04);
+
+  /* 形状 — Claude ring shadow 系统 */
+  --radius: 12px;
+  --shadow: 0px 0px 0px 1px #e8e6dc;
+  --shadow-md: 0px 0px 0px 1px #d1cfc5;
+  --shadow-lg: rgba(0,0,0,0.05) 0px 4px 24px;
+
+  /* Variant Perception 紫 — 保留 */
+  --c-variant: #7a4dab;
+  --c-variant-bg: #f3eeff;
+
+  /* v4.6 sidebar 布局(弃用但保持兼容) */
+  --sidebar-width: 260px;
+  --sidebar-gap: 24px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+               "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  background: var(--c-parchment);
+  color: var(--c-gray-900);
+  margin: 0;
+  padding: 0;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+/* Claude 衬线标题族 */
+h1, h2, h3 {
+  font-family: Georgia, "Noto Serif SC", "Songti SC", serif;
+  font-weight: 500;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+}
+
+/* ---------- 3.1 Sticky 顶部导航栏 ---------- */
+.top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  height: 50px;
+  padding: 0 24px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(245,244,237,0.85);
+  border-bottom: 1px solid var(--c-gray-200);
+  font-size: 14px;
+}
+.top-nav .nav-brand {
+  font-family: Georgia, "Noto Serif SC", serif;
+  font-weight: 500;
+  color: var(--c-primary);
+  text-decoration: none;
+  margin-right: auto;
+  font-size: 15px;
+}
+.top-nav a {
+  color: var(--c-gray-700);
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: background .15s, color .15s;
+}
+.top-nav a:hover {
+  background: rgba(201,100,66,0.08);
+  color: var(--c-primary);
+}
+
+/* ---------- Header Hero ---------- */
+header.hero {
+  background: var(--c-gray-900);
+  color: var(--c-ivory);
+  padding: 48px 32px;
+  border-radius: 16px;
+  margin-bottom: 32px;
+  box-shadow: var(--shadow-lg);
+}
+header.hero h1 {
+  font-size: 32px;
+  margin: 0 0 8px;
+  font-weight: 500;
+  line-height: 1.15;
+  color: var(--c-ivory);
+}
+header.hero .subtitle {
+  color: var(--c-warm-silver);
+  font-size: 15px;
+}
+header.hero .meta {
+  display: flex; flex-wrap: wrap; gap: 24px;
+  margin-top: 20px; font-size: 14px;
+  color: var(--c-warm-silver);
+}
+
+/* ---------- Section (每个 §一到§十五 一个) ---------- */
+.section {
+  background: var(--c-ivory);
+  padding: 28px 32px;
+  margin: 20px 0;
+  border-radius: var(--radius);
+  border: 1px solid var(--c-gray-100);
+  box-shadow: var(--shadow);
+}
+.section h2 {
+  font-family: Georgia, "Noto Serif SC", "Songti SC", serif;
+  color: var(--c-primary);
+  border-bottom: 2px solid rgba(201,100,66,0.15);
+  padding-bottom: 8px;
+  margin-top: 0;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.25;
+}
+.section h3 {
+  font-family: Georgia, "Noto Serif SC", "Songti SC", serif;
+  color: var(--c-gray-900);
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 24px;
+  border-bottom: 1px dashed var(--c-gray-200);
+  padding-bottom: 4px;
+  line-height: 1.3;
+}
+.section h4 { color: var(--c-gray-900); font-size: 16px; margin-top: 18px; }
+
+/* Variant Perception 章节专用紫色强调 */
+.section.variant-perception {
+  border-left: 4px solid var(--c-variant);
+  background: linear-gradient(to right, var(--c-variant-bg) 0%, var(--c-ivory) 3%);
+}
+.section.variant-perception h2 {
+  color: var(--c-variant);
+  border-bottom-color: var(--c-variant-bg);
+}
+
+/* ---------- 3.2 评分环形图 (SVG) ---------- */
+.score-ring {
+  display: inline-block;
+  position: relative;
+}
+.score-ring svg { display: block; }
+.score-ring .score-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.score-ring .score-text .num {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--c-primary);
+  font-family: Georgia, "Noto Serif SC", serif;
+}
+.score-ring .score-text .label {
+  font-size: 11px;
+  color: var(--c-gray-500);
+}
+
+/* ---------- 3.3 维度评分条形图 ---------- */
+.dimension-bar {
+  display: grid;
+  grid-template-columns: 1fr 48px 3fr 56px;
+  align-items: center;
+  gap: 12px;
+  margin: 10px 0;
+  font-size: 14px;
+}
+.dimension-bar .dim-name { color: var(--c-gray-700); }
+.dimension-bar .dim-score {
+  font-weight: 600;
+  text-align: right;
+  color: var(--c-primary);
+  font-family: Georgia, "Noto Serif SC", serif;
+}
+.dimension-bar .dim-progress {
+  height: 10px;
+  background: var(--c-gray-100);
+  border-radius: 5px;
+  overflow: hidden;
+}
+.dimension-bar .dim-progress .fill { height: 100%; border-radius: 5px; }
+.dimension-bar .dim-progress .fill.tier1 { background: linear-gradient(90deg, var(--c-primary), var(--c-primary-dark)); }
+.dimension-bar .dim-progress .fill.tier2 { background: linear-gradient(90deg, #8b5cf6, #6d28d9); }
+.dimension-bar .dim-progress .fill.tier3 { background: linear-gradient(90deg, var(--c-accent), var(--c-primary)); }
+.dimension-bar .dim-weight { text-align: right; color: var(--c-gray-500); font-size: 12px; }
+
+/* ---------- 3.4 三色情景卡片 ---------- */
+.scenario-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin: 16px 0;
+}
+.scenario {
+  padding: 16px;
+  border-radius: var(--radius);
+  border-left: 4px solid;
+}
+.scenario .label { font-size: 12px; color: var(--c-gray-500); text-transform: uppercase; letter-spacing: 1px; }
+.scenario .big-num {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 4px 0 8px;
+  font-family: Georgia, "Noto Serif SC", serif;
+}
+.scenario .detail { font-size: 13px; color: var(--c-gray-700); }
+.scenario.bull { background: var(--c-green-bg); border-left-color: var(--c-green); }
+.scenario.bull .big-num { color: var(--c-green); }
+.scenario.base { background: var(--c-yellow-bg); border-left-color: var(--c-yellow); }
+.scenario.base .big-num { color: var(--c-yellow); }
+.scenario.bear { background: var(--c-red-bg); border-left-color: var(--c-red); }
+.scenario.bear .big-num { color: var(--c-red); }
+.scenario.tail { background: var(--c-dark-surface); border-left-color: var(--c-gray-900); color: var(--c-ivory); }
+.scenario.tail .big-num { color: var(--c-ivory); }
+.scenario.tail .detail { color: var(--c-warm-silver); }
+
+/* ---------- 3.5 期望回报高亮条 ---------- */
+.expected-return {
+  background: linear-gradient(135deg, var(--c-gray-900), var(--c-primary-dark));
+  color: var(--c-ivory);
+  padding: 20px 28px;
+  border-radius: 16px;
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--shadow-lg);
+}
+.expected-return .label { font-size: 12px; color: var(--c-warm-silver); text-transform: uppercase; letter-spacing: 1px; }
+.expected-return .value {
+  font-size: 36px;
+  font-weight: 700;
+  font-family: Georgia, "Noto Serif SC", serif;
+}
+
+/* ---------- 3.6 团队名片网格 ---------- */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin: 16px 0;
+}
+.team-card {
+  padding: 16px;
+  border: 1px solid var(--c-gray-200);
+  border-radius: var(--radius);
+  text-align: center;
+  background: var(--c-ivory);
+}
+.team-card .avatar {
+  width: 48px; height: 48px; border-radius: 50%;
+  background: rgba(201,100,66,0.1); color: var(--c-primary);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; margin: 0 auto 8px; font-size: 18px;
+  font-family: Georgia, "Noto Serif SC", serif;
+}
+.team-card .name { font-weight: 600; }
+.team-card .role { color: var(--c-gray-500); font-size: 13px; margin-top: 4px; }
+
+/* ---------- 3.7 风险矩阵 ---------- */
+.risk-item {
+  display: grid;
+  grid-template-columns: 20px 1fr auto;
+  gap: 12px;
+  align-items: start;
+  padding: 12px;
+  border-left: 4px solid;
+  background: var(--c-gray-50);
+  border-radius: 8px;
+  margin: 8px 0;
+}
+.risk-item.high   { border-left-color: var(--c-red);    background: var(--c-red-bg); }
+.risk-item.medium { border-left-color: var(--c-yellow); background: var(--c-yellow-bg); }
+.risk-item.low    { border-left-color: var(--c-green);  background: var(--c-green-bg); }
+.risk-item .dot {
+  width: 12px; height: 12px; border-radius: 50%; margin-top: 4px;
+}
+.risk-item.high   .dot { background: var(--c-red); }
+.risk-item.medium .dot { background: var(--c-yellow); }
+.risk-item.low    .dot { background: var(--c-green); }
+
+/* ---------- 3.8 融资时间轴 ---------- */
+.timeline {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin: 24px 0;
+  overflow-x: auto;
+  padding: 8px 0;
+}
+.timeline .tl-node {
+  flex: 0 0 auto;
+  text-align: center;
+  padding: 0 14px;
+  position: relative;
+}
+.timeline .tl-node::before {
+  content: '';
+  width: 14px; height: 14px; border-radius: 50%;
+  background: var(--c-gray-200); display: block; margin: 0 auto 8px;
+}
+.timeline .tl-node.current::before {
+  background: var(--c-primary);
+  box-shadow: 0 0 0 4px rgba(201,100,66,0.15);
+}
+.timeline .tl-node .year { font-size: 12px; color: var(--c-gray-500); }
+.timeline .tl-node .round { font-weight: 600; font-size: 13px; }
+.timeline .tl-node .amount { font-size: 11px; color: var(--c-gray-700); }
+
+/* ---------- 3.9 情绪量表 ---------- */
+.sentiment-bar {
+  position: relative;
+  height: 12px;
+  border-radius: 6px;
+  background: linear-gradient(to right, var(--c-red) 0%, var(--c-yellow) 50%, var(--c-green) 100%);
+  margin: 20px 0 32px;
+}
+.sentiment-bar .pointer {
+  position: absolute;
+  top: -8px;
+  width: 4px; height: 28px;
+  background: var(--c-gray-900);
+  border-radius: 2px;
+  transform: translateX(-50%);
+}
+.sentiment-bar .pointer::after {
+  content: attr(data-label);
+  position: absolute;
+  top: 32px; left: 50%; transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: 11px;
+  background: var(--c-gray-900);
+  color: var(--c-ivory);
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+/* ---------- v2 组件 · 估值区间可视化 ---------- */
+.valuation-range {
+  position: relative;
+  height: 28px;
+  background: var(--c-gray-100);
+  border-radius: 6px;
+  margin: 10px 0;
+}
+.valuation-range .range {
+  position: absolute;
+  top: 4px; bottom: 4px;
+  border-radius: 4px;
+  opacity: 0.6;
+}
+.valuation-range .range.dcf { background: var(--c-primary); }
+.valuation-range .range.comparable { background: var(--c-green); }
+.valuation-range .range.transaction { background: var(--c-yellow); }
+.valuation-range .label-row {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 8px;
+  align-items: center;
+  font-size: 12px;
+}
+
+/* ---------- v2 组件 · 星级评估 ---------- */
+.star-filled { color: var(--c-accent); }
+.star-empty  { color: var(--c-gray-200); }
+
+/* ---------- v2 组件 · 信息缺口优先级 badge ---------- */
+.badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.badge.critical { background: var(--c-red-bg);    color: var(--c-red); }
+.badge.important{ background: var(--c-yellow-bg); color: var(--c-yellow); }
+.badge.minor    { background: var(--c-green-bg);  color: var(--c-green); }
+
+/* ---------- 通用 Table ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 14px;
+}
+th, td {
+  border: 1px solid var(--c-gray-200);
+  padding: 8px 12px;
+  text-align: left;
+}
+th {
+  background: var(--c-gray-100);
+  color: var(--c-primary);
+  font-weight: 600;
+}
+tr:nth-child(even) td { background: var(--c-gray-50); }
+
+/* ---------- 通用文本 ---------- */
+strong { color: var(--c-gray-900); font-weight: 600; }
+code {
+  background: var(--c-gray-100);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+blockquote {
+  border-left: 4px solid var(--c-primary);
+  padding: 10px 16px;
+  color: var(--c-gray-700);
+  background: rgba(201,100,66,0.05);
+  border-radius: 8px;
+  margin: 12px 0;
+}
+hr { border: none; border-top: 1px dashed var(--c-gray-200); margin: 24px 0; }
+ul, ol { padding-left: 22px; }
+li { margin: 4px 0; }
+a {
+  color: var(--c-primary);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(201,100,66,0.3);
+}
+a:hover { color: var(--c-accent); }
+
+footer {
+  text-align: center;
+  color: var(--c-gray-500);
+  padding: 32px 0 16px;
+  font-size: 12px;
+  border-top: 1px solid var(--c-gray-200);
+  margin-top: 48px;
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width: 768px) {
+  .container { padding: 20px 16px 60px; }
+  header.hero { padding: 24px 16px; }
+  header.hero h1 { font-size: 24px; }
+  .section { padding: 16px; }
+  .scenario-grid, .team-grid { grid-template-columns: 1fr; }
+  table { font-size: 12px; }
+  table th, table td { padding: 6px 8px; }
+}
+
+/* ============================================================
+   v4.6 新增: 6 个大厂风格组件 (迁移至 Claude 设计语言)
+   ============================================================ */
+
+/* ---------- v4.6-1. 前置评级卡 ---------- */
+.rating-trio {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: -16px 0 32px;
+}
+.rating-card {
+  background: var(--c-ivory);
+  border: 1px solid var(--c-card-border);
+  border-top: 3px solid var(--c-primary);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  box-shadow: var(--shadow);
+  transition: transform .15s, box-shadow .15s;
+}
+.rating-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+.rating-card--score  { border-top-color: var(--c-primary); }
+.rating-card--anchor { border-top-color: var(--c-accent); }
+.rating-card--return { border-top-color: var(--c-risk-green); }
+.rating-card--return.negative { border-top-color: var(--c-risk-red); }
+
+.rating-card .label {
+  font-size: 11px;
+  color: var(--c-gray-500);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.rating-card .value {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--c-gray-900);
+  line-height: 1.2;
+  margin-bottom: 6px;
+  font-family: Georgia, "Noto Serif SC", serif;
+}
+.rating-card .value .out-of {
+  font-size: 16px;
+  color: var(--c-gray-500);
+  font-weight: 500;
+}
+.rating-card .value.negative { color: var(--c-risk-red); }
+.rating-card .value.positive { color: var(--c-risk-green); }
+.rating-card .sub {
+  font-size: 12px;
+  color: var(--c-gray-700);
+}
+
+/* ---------- v4.6-2. 彩条风险卡 (Bloomberg 等级色保留) ---------- */
+.risk-card-v2 {
+  display: grid;
+  grid-template-columns: 4px 1fr auto;
+  gap: 14px;
+  align-items: center;
+  padding: 14px 16px 14px 0;
+  margin: 8px 0;
+  background: var(--c-ivory);
+  border: 1px solid var(--c-card-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: background .15s;
+}
+.risk-card-v2:hover { background: var(--c-card-hover); }
+.risk-card-v2.risk-critical { border-left-width: 0; background: linear-gradient(to right, var(--c-risk-red-bg) 0%, var(--c-ivory) 6%); }
+.risk-card-v2.risk-high     { background: linear-gradient(to right, var(--c-risk-amber-bg) 0%, var(--c-ivory) 6%); }
+.risk-card-v2.risk-medium   { background: linear-gradient(to right, var(--c-risk-yellow-bg) 0%, var(--c-ivory) 6%); }
+.risk-card-v2.risk-low      { background: linear-gradient(to right, var(--c-risk-green-bg) 0%, var(--c-ivory) 6%); }
+.risk-card-v2 .left-bar { align-self: stretch; width: 4px; }
+.risk-card-v2.risk-critical .left-bar { background: var(--c-risk-red); }
+.risk-card-v2.risk-high     .left-bar { background: var(--c-risk-amber); }
+.risk-card-v2.risk-medium   .left-bar { background: var(--c-risk-yellow); }
+.risk-card-v2.risk-low      .left-bar { background: var(--c-risk-green); }
+.risk-card-v2 .title { font-weight: 600; color: var(--c-gray-900); margin-bottom: 3px; }
+.risk-card-v2 .body  { font-size: 13px; color: var(--c-gray-700); line-height: 1.5; }
+.risk-card-v2 .sev-badge {
+  font-size: 10px; font-weight: 700; padding: 3px 10px;
+  border-radius: 12px; white-space: nowrap; letter-spacing: .5px;
+}
+.risk-card-v2.risk-critical .sev-badge { background: var(--c-risk-red);    color: white; }
+.risk-card-v2.risk-high     .sev-badge { background: var(--c-risk-amber);  color: white; }
+.risk-card-v2.risk-medium   .sev-badge { background: var(--c-risk-yellow); color: var(--c-gray-900); }
+.risk-card-v2.risk-low      .sev-badge { background: var(--c-risk-green);  color: white; }
+
+/* ---------- v4.6.2. Preamble 区 ---------- */
+.preamble {
+  background: var(--c-ivory);
+  border-left: 3px solid var(--c-accent);
+  border-radius: 8px;
+  padding: 14px 20px;
+  margin: -8px 0 20px;
+  font-size: 13px;
+  color: var(--c-gray-700);
+  line-height: 1.7;
+}
+.preamble:empty { display: none; }
+.preamble blockquote {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  font-size: 13px;
+}
+.preamble blockquote p { margin: 6px 0; }
+.preamble p { margin: 6px 0; }
+.preamble strong { color: var(--c-primary-dark); }
+.preamble hr { display: none; }
+
+/* ---------- v4.6.1. 关键指标横排面板 ---------- */
+.metric-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+  margin: 0 0 24px;
+  padding: 16px;
+  background: var(--c-ivory);
+  border: 1px solid var(--c-card-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.metric-strip .metric-chip {
+  padding: 10px 14px;
+  text-align: center;
+  border-right: 1px dashed var(--c-gray-100);
+}
+.metric-strip .metric-chip:last-child { border-right: none; }
+.metric-strip .metric-chip .metric-label {
+  font-size: 10px;
+  color: var(--c-gray-500);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.metric-strip .metric-chip .metric-value {
+  font-size: 18px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  color: var(--c-gray-900);
+  font-family: Georgia, "Noto Serif SC", serif;
+}
+.metric-strip .metric-chip .metric-value.positive { color: var(--c-risk-green); }
+.metric-strip .metric-chip .metric-value.negative { color: var(--c-risk-red); }
+.metric-strip .metric-chip .metric-value.risk     { color: var(--c-risk-amber); }
+.metric-strip .metric-chip .metric-value.critical { color: var(--c-risk-red); font-weight: 900; }
+.metric-strip .metric-chip .metric-value.neutral  { color: var(--c-gray-900); }
+
+/* ---------- v4.6 兼容: .metric-sidebar/metric-row 保留 ---------- */
+.metric-sidebar {
+  background: var(--c-ivory);
+  border: 1px solid var(--c-card-border);
+  border-radius: var(--radius);
+  padding: 20px 18px;
+  box-shadow: var(--shadow);
+  margin: 0 0 24px;
+}
+.metric-sidebar h4 {
+  font-size: 11px;
+  color: var(--c-gray-500);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  margin: 0 0 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--c-card-border);
+}
+.metric-sidebar .metric-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--c-gray-100);
+  font-size: 13px;
+}
+.metric-sidebar .metric-row:last-child { border-bottom: none; }
+.metric-sidebar .metric-row span { color: var(--c-gray-700); }
+.metric-sidebar .metric-row strong { font-weight: 700; color: var(--c-gray-900); font-variant-numeric: tabular-nums; }
+.metric-sidebar .metric-row strong.positive { color: var(--c-risk-green); }
+.metric-sidebar .metric-row strong.negative { color: var(--c-risk-red); }
+.metric-sidebar .metric-row strong.risk     { color: var(--c-risk-amber); font-weight: 800; }
+.metric-sidebar .metric-row strong.critical { color: var(--c-risk-red);   font-weight: 800; }
+
+/* ---------- v4.6-4. 对标卡 ---------- */
+.comparison-card {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr 1fr;
+  gap: 8px;
+  background: var(--c-ivory);
+  border: 1px solid var(--c-card-border);
+  border-radius: var(--radius);
+  padding: 16px;
+  margin: 12px 0;
+}
+.comparison-card .cmp-col {
+  text-align: center;
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+.comparison-card .cmp-col.center {
+  background: rgba(201,100,66,0.06);
+  border: 2px solid var(--c-primary);
+}
+.comparison-card .cmp-label { font-size: 10px; color: var(--c-gray-500); text-transform: uppercase; letter-spacing: 1px; font-weight: 600; margin-bottom: 6px; }
+.comparison-card .cmp-value {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--c-gray-900);
+  font-variant-numeric: tabular-nums;
+  font-family: Georgia, "Noto Serif SC", serif;
+}
+.comparison-card .cmp-col.center .cmp-value { font-size: 24px; color: var(--c-primary); }
+.comparison-card .cmp-sub { font-size: 11px; color: var(--c-gray-500); margin-top: 4px; }
+.comparison-card .cmp-bar {
+  height: 6px; background: var(--c-gray-100); border-radius: 3px;
+  margin-top: 8px; position: relative; overflow: hidden;
+}
+.comparison-card .cmp-bar .fill {
+  position: absolute; left: 0; top: 0; bottom: 0;
+  background: linear-gradient(90deg, var(--c-primary), var(--c-accent));
+  border-radius: 3px;
+}
+
+/* ---------- v4.6-5. 深度链接 ---------- */
+.deep-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 1px 8px 1px 6px;
+  font-size: 11px;
+  background: rgba(201,100,66,0.08);
+  color: var(--c-primary);
+  border: 1px solid transparent;
+  border-radius: 12px;
+  text-decoration: none !important;
+  vertical-align: middle;
+  font-weight: 600;
+  transition: background .15s, border-color .15s;
+}
+.deep-link::before { content: '→'; opacity: .6; }
+.deep-link:hover {
+  background: var(--c-primary);
+  color: var(--c-ivory);
+  border-color: var(--c-primary);
+}
+/* Target 高亮 */
+.section:target {
+  animation: target-pulse 1.8s ease-out;
+  scroll-margin-top: 70px;
+}
+@keyframes target-pulse {
+  0%   { box-shadow: 0 0 0 4px var(--c-accent); }
+  100% { box-shadow: var(--shadow); }
+}
+
+/* ---------- v4.6-6. 微型热力图 ---------- */
+.heatmap-grid {
+  display: grid;
+  gap: 2px;
+  margin: 10px 0;
+  font-size: 10px;
+}
+.heatmap-grid .hm-cell {
+  aspect-ratio: 1 / 1;
+  min-height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-family: ui-monospace, monospace;
+  font-weight: 600;
+  color: var(--c-gray-900);
+}
+/* 5 档颜色映射 */
+.heatmap-grid .hm-cell.hm--2 { background: #fca5a5; color: #7f1d1d; }
+.heatmap-grid .hm-cell.hm--1 { background: #fed7aa; color: #7c2d12; }
+.heatmap-grid .hm-cell.hm-0  { background: var(--c-gray-100); }
+.heatmap-grid .hm-cell.hm-1  { background: #bbf7d0; color: #14532d; }
+.heatmap-grid .hm-cell.hm-2  { background: #4ade80; color: white; }
+.heatmap-grid .hm-cell:hover { transform: scale(1.1); }
+
+.heatmap-grid .hm-row-label {
+  font-size: 10px;
+  color: var(--c-gray-500);
+  text-align: right;
+  padding-right: 8px;
+  align-self: center;
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width: 768px) {
+  .container { padding: 20px 16px 60px; }
+  header.hero { padding: 24px 16px; }
+  header.hero h1 { font-size: 24px; }
+  .section { padding: 16px; }
+  .scenario-grid, .team-grid, .rating-trio { grid-template-columns: 1fr; }
+  .comparison-card { grid-template-columns: 1fr; }
+  .metric-strip { grid-template-columns: repeat(2, 1fr); }
+  .metric-strip .metric-chip { border-right: none; border-bottom: 1px dashed var(--c-gray-100); }
+  table { font-size: 12px; }
+  table th, table td { padding: 6px 8px; }
+}
+
+/* ---------- 打印 ---------- */
+@media print {
+  body { background: white; }
+  .top-nav { display: none; }
+  .section { box-shadow: none; border: 1px solid #ccc; break-inside: avoid; }
+  header.hero { break-inside: avoid; }
+  .metric-strip { break-inside: avoid; }
+  .deep-link { color: var(--c-gray-900); background: transparent; border-color: var(--c-gray-500); }
+  .deep-link::before { content: ''; }
+  .deep-link::after { content: ' (见对应章节)'; font-size: 10px; color: var(--c-gray-500); }
+}
+
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     Sticky 顶部导航栏 — 13 章节锚点
+     ============================================================ -->
+<nav class="top-nav">
+  <a href="../../index.html" class="nav-brand">AI 投资分析报告</a>
+  <a href="#exec-summary">摘要</a>
+  <a href="#scoring">评分</a>
+  <a href="#screening">快筛</a>
+  <a href="#fundamentals">基本面</a>
+  <a href="#industry">行业</a>
+  <a href="#detail">详细</a>
+  <a href="#sentiment">舆情</a>
+  <a href="#peers">对标</a>
+  <a href="#valuation">估值</a>
+  <a href="#qualitative">定性</a>
+  <a href="#gaps">缺口</a>
+  <a href="#sources">来源</a>
+</nav>
+
+<div class="container">
+
+<!-- ============================================================
+     Header Hero
+     ============================================================ -->
+<header class="hero">
+  <h1>英伟达（NVDA）投资分析报告</h1>
+  <div class="subtitle">由 Claude Code 自动生成</div>
+  <div class="meta">
+    <span>📅 2026-05-15</span>
+    <span>💵 收盘 $225.83</span>
+    <span>📊 PB 34.9 · 市值 54697 亿美元</span>
+    <span>🎯 估值锚 $213.7</span>
+  </div>
+</header>
+
+<!-- ============================================================
+     v4.6.2 新增: Preamble 区 — 主报告第一个 ## 之前的 blockquote / 段落
+     (版本切换说明 / 数据截止注意 / meta 行的详细补充等),否则会丢失
+     ============================================================ -->
+<div class="preamble"></div>
+
+<!-- ============================================================
+     v4.6 新增: 前置评级三件套(Goldman 风格, hero 下方醒目位置)
+     ============================================================ -->
+<div class="rating-trio">
+
+  <div class="rating-card rating-card--score">
+    <div class="label">综合评分</div>
+    <div class="value">8.55 <span class="out-of">/ 10</span></div>
+    <div class="sub">中性-分歧</div>
+  </div>
+  <div class="rating-card rating-card--anchor">
+    <div class="label">估值锚(DCF 概率加权)</div>
+    <div class="value">$213.7</div>
+    <div class="sub">相对当前 +5.7%</div>
+  </div>
+  <div class="rating-card rating-card--return negative">
+    <div class="label">2 年期望收益</div>
+    <div class="value negative">-5.4%</div>
+    <div class="sub">年化 -2.7%</div>
+  </div>
+</div>
+
+<!-- ============================================================
+     v4.6.1 关键指标横排面板(替代 v4.6 的粘性侧边栏,更简洁)
+     ============================================================ -->
+<div class="metric-strip">
+
+  <div class="metric-chip">
+    <div class="metric-label">PE (TTM)</div>
+    <div class="metric-value neutral">46.1</div>
+  </div>
+  <div class="metric-chip">
+    <div class="metric-label">PB</div>
+    <div class="metric-value neutral">34.9x</div>
+  </div>
+  <div class="metric-chip">
+    <div class="metric-label">市值(亿美元)</div>
+    <div class="metric-value neutral">39382</div>
+  </div>
+  <div class="metric-chip">
+    <div class="metric-label">ROE</div>
+    <div class="metric-value positive">101.5%</div>
+  </div>
+  <div class="metric-chip">
+    <div class="metric-label">毛利率</div>
+    <div class="metric-value neutral">71.1%</div>
+  </div>
+  <div class="metric-chip">
+    <div class="metric-label">资产负债率</div>
+    <div class="metric-value positive">24.0%</div>
+  </div>
+  <div class="metric-chip">
+    <div class="metric-label">股东户数</div>
+    <div class="metric-value neutral">N/A</div>
+  </div>
+  <div class="metric-chip">
+    <div class="metric-label">家族持股</div>
+    <div class="metric-value neutral">N/A%</div>
+  </div>
+</div>
+
+<!-- ============================================================
+     §一 执行摘要
+     ============================================================ -->
+<div class="section" id="exec-summary">
+<h2>§一 执行摘要</h2>
+<p><strong>一句话结论</strong>: <strong>中性-分歧</strong> — 英伟达基本面在全球半导体行业中独树一帜（三年营收 CAGR 88.3%、毛利率 71.1%、ROE 101.5%、FCF $96.7B），CUDA 生态+一年一代产品节奏构筑短期不可逾越的护城河；但当前 $225.83 已略高于概率加权 DCF 公允价值 $213.7（溢价 +5.7%），安全边际为负，期望回报 -5.4%（2 年），只有 AI 超级周期延续的乐观情景才能带来正回报。</p>
+<p><strong>估值锚</strong>: <strong>概率加权 DCF ≈ $213.7/share（对应总市值 $5,174B，约 ¥37,250 亿）</strong>（4 情景；乐观 25% / 基准 45% / 悲观 25% / 最差 5%）。当前 $225.83 相对此锚溢价 +5.7%。</p>
+<p><strong>综合评分</strong>: <strong>8.55/10</strong> · <strong>数据置信度</strong>: 中高（11 框架审计因美股 yfinance 数据字段覆盖不足全部返回"数据不足"，维度 8 风险评估部分依赖 10-K 披露而非独立量化验证）</p>
+<p><strong>三大风险（Top 3）</strong>:<br />
+1. 出口管制随时升级，H200 中国许可可被撤回，完全封杀将丧失 $12-15B/年收入 [PDF:10-K, P.100-113; audit: 数据不足未排除]<br />
+2. AI 投资回报若不及客户预期，资本开支周期骤然逆转，营收高度依赖单一驱动力 [PDF:10-K, P.100-113; §六 维度 8: 5/10]<br />
+3. 前几大云厂商占比极高且均加速自研 ASIC，长期蚕食 NVIDIA 增量份额 [PDF:10-K, P.100; §六 维度 8: 客户集中度]</p>
+<p><strong>三大机会（Top 3）</strong>:<br />
+1. Q1 FY2027 指引 $78B（+50% YoY），Blackwell/Rubin 产品周期持续拉开与竞品性能代差<br />
+2. Agentic AI + 主权 AI 驱动推理算力新一轮爆发式需求，TAM 持续扩张<br />
+3. FCF $96.7B + 回购 $40.1B/年，资本回馈力度在科技巨头中顶尖</p>
+<p><strong>核心非共识观点</strong>（Top 3）:<br />
+1. 护城河"短期加深+中长期侵蚀"双重性 — CUDA 锁定短期无解，但自研 ASIC 路径已被验证，5 年后生态壁垒可能松动 [§十一 框架 1]<br />
+2. 毛利率结构性下行非一次性 — Blackwell 全系统方案永久性拉低产品毛利率，FY2026 的 71.1% 可能是新常态上沿而非暂时低点 [§四 毛利率拆解]<br />
+3. 11 框架审计"零红旗"是数据缺失而非零风险 — 美股 yfinance 适配不足导致量化审计失效，投资者不应将此误读为"财务完美" [§十二 缺口 #5]</p>
+<p><strong>投资方向综合判定</strong>: <strong>中性-分歧</strong>（§十一 3 框架中 1 个看多、0 个看空、2 个中性/分歧 → 不满足 ≥2 同向 → 中性-分歧）</p>
+<hr />
+</div>
+
+<!-- ============================================================
+     §二 评分总览（10 维度单列）
+     ============================================================ -->
+<div class="section" id="scoring">
+<h2>§二 事实评分总览（10 维度）</h2>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th style="text-align: center;">权重</th>
+<th style="text-align: center;">分数</th>
+<th style="text-align: center;">加权</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. 市场规模与结构</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">0.90</td>
+</tr>
+<tr>
+<td>2. 商业模式</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">0.90</td>
+</tr>
+<tr>
+<td>3. 竞争格局与护城河</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">0.90</td>
+</tr>
+<tr>
+<td>4. 增长指标</td>
+<td style="text-align: center;">15%</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">1.50</td>
+</tr>
+<tr>
+<td>5. 团队与管理层</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">0.90</td>
+</tr>
+<tr>
+<td>6. 产品与技术</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">1.00</td>
+</tr>
+<tr>
+<td>7. 财务健康度</td>
+<td style="text-align: center;">15%</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">1.50</td>
+</tr>
+<tr>
+<td>8. 风险与治理</td>
+<td style="text-align: center;">5%</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">0.25</td>
+</tr>
+<tr>
+<td>9. 市场估值</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">0.40</td>
+</tr>
+<tr>
+<td>10. 回报潜力</td>
+<td style="text-align: center;">5%</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">0.30</td>
+</tr>
+<tr>
+<td><strong>合计</strong></td>
+<td style="text-align: center;">100%</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: center;"><strong>8.55</strong></td>
+</tr>
+</tbody>
+</table>
+<p><em>详细证据见 §六。评分标尺见 <code>references/scoring-rubric.md</code>。表格严格 4 列（维度/权重/分数/加权分）——不添加"关键理由"列。</em></p>
+<p><strong>评分特征解读</strong>: 英伟达在基本面维度（维度 1-7）获得近乎满分的评价（均值 9.4），反映其在 AI 基础设施领域无可匹敌的竞争地位、爆炸性增长和极致盈利能力。拖累综合评分的两个维度是：<strong>市场估值（4/10）</strong>— Trailing PE 46.1x 远超半导体行业中位数 20-35x，PS 25.3x 高出行业 3-4 倍；<strong>风险与治理（5/10）</strong>— 客户集中度高、出口管制悬顶、关键人物依赖。这构成一个典型的"优秀公司 vs 昂贵股票"分歧格局。</p>
+<hr />
+</div>
+
+<!-- ============================================================
+     §三 快速筛选
+     ============================================================ -->
+<div class="section" id="screening">
+<h2>§三 快速筛选（致命看空条款 - 6 项）</h2>
+<table>
+<thead>
+<tr>
+<th>条款</th>
+<th>阈值</th>
+<th>实际</th>
+<th style="text-align: center;">触发?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. 单季/单年度净利 &lt; -50%</td>
+<td>-50%</td>
+<td>FY2026 净利润 $120.1B，YoY +65% [PDF:10-K, P.126]</td>
+<td style="text-align: center;">❌ 未触发</td>
+</tr>
+<tr>
+<td>2. 资产负债率 &gt; 70%</td>
+<td>70%</td>
+<td>24.0% [phase3-part2 §四; PDF:10-K]</td>
+<td style="text-align: center;">❌ 未触发</td>
+</tr>
+<tr>
+<td>3. 大股东累计质押 &gt; 50%</td>
+<td>50%</td>
+<td>美股无 A 股式大股东质押制度，不适用</td>
+<td style="text-align: center;">❌ 未触发</td>
+</tr>
+<tr>
+<td>4. 审计机构连续 2 年变更</td>
+<td>2 次</td>
+<td>PricewaterhouseCoopers 连续审计，无变更 [PDF:10-K]</td>
+<td style="text-align: center;">❌ 未触发</td>
+</tr>
+<tr>
+<td>5. CFO 非正常离任</td>
+<td>1 次</td>
+<td>CFO Colette Kress 持续任职，无非正常离任 [PDF:10-K]</td>
+<td style="text-align: center;">❌ 未触发</td>
+</tr>
+<tr>
+<td>6. <strong>Audit ≥ 2 个 🔴 红旗</strong></td>
+<td>2</td>
+<td>0 个红旗（11 框架均返回"⚠️ 数据不足"）[audit_report.md]</td>
+<td style="text-align: center;">❌ 未触发</td>
+</tr>
+</tbody>
+</table>
+<p><strong>结果</strong>: <strong>6 项均未触发</strong>，未达致命看空否决阈值。</p>
+<p><strong>⚠️ 重要补充</strong>: 条款 6"0 个红旗"源于 <code>financial_audit.py</code> 对美股 yfinance 数据字段覆盖不足（11/11 框架均返回"数据不足"），<strong>并非意味着公司零风险</strong>。实质性风险（出口管制、客户集中、AI 周期性）已在 §六 维度 8 和 §十一 框架 1/3 中通过 PDF 手动审计和定性分析覆盖。投资者应将快筛结果与 §六/§十一 的风险评估结合解读。</p>
+</div>
+
+<!-- ============================================================
+     §四 公司基本面（含剥离后剩余资产清单若触发）
+     ============================================================ -->
+<div class="section" id="fundamentals">
+<h2>§四 公司基本面</h2>
+<h3>业务板块</h3>
+<table>
+<thead>
+<tr>
+<th>板块</th>
+<th style="text-align: right;">FY2026 营收</th>
+<th style="text-align: center;">占比</th>
+<th style="text-align: right;">YoY</th>
+<th>核心产品/说明</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Compute &amp; Networking</td>
+<td style="text-align: right;">$193.7B</td>
+<td style="text-align: center;">89.7%</td>
+<td style="text-align: right;">+68%</td>
+<td>数据中心 GPU（H100/H200/Blackwell）、DGX 系统、网络（InfiniBand/NVLink/Spectrum-X）、汽车 AI</td>
+<td>[PDF:10-K, P.124-128]</td>
+</tr>
+<tr>
+<td>Graphics</td>
+<td style="text-align: right;">$22.2B</td>
+<td style="text-align: center;">10.3%</td>
+<td style="text-align: right;">+41%</td>
+<td>GeForce GPU、Quadro/RTX 专业可视化、Omniverse</td>
+<td>[PDF:10-K, P.124-128]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>业务结构判读</strong>: 数据中心占比从 FY2025 的 ~78% 飙升至 FY2026 的 89.7%，NVIDIA 已从"GPU 公司"转型为"AI 基础设施平台公司"。Graphics 板块绝对额仍在增长，但权重被数据中心稀释。这种极度集中的营收结构放大了 AI 支出周期波动的影响。</p>
+<h3>最新经营动态（近 12 个月关键事件）</h3>
+<table>
+<thead>
+<tr>
+<th>时间</th>
+<th>事件</th>
+<th>影响评估</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2025.04</td>
+<td>H20 出口中国需许可证，计提 $4.5B 库存及采购义务减值</td>
+<td>🔴 一次性负面：Q1 FY2026 毛利率大幅承压</td>
+<td>[PDF:10-K, P.125]</td>
+</tr>
+<tr>
+<td>2025.H2</td>
+<td>Blackwell 架构（GB200/GB300）量产出货</td>
+<td>🟢 正面：成为数据中心营收主力，一年一代节奏确立</td>
+<td>[PDF:10-K, P.124]</td>
+</tr>
+<tr>
+<td>2026.02</td>
+<td>USG 批准向阿里巴巴、腾讯、字节跳动等出售 H200（需美国检验+25%关税）</td>
+<td>🟡 中性偏正：恢复部分中国市场收入，但运营复杂度增加</td>
+<td>[phase1-data §3]</td>
+</tr>
+<tr>
+<td>FY2026</td>
+<td>收购 Groq, Inc.（$13B）</td>
+<td>🟡 战略性：强化推理芯片布局，形成 $15.6B 商誉</td>
+<td>[PDF:10-K, P.141]</td>
+</tr>
+<tr>
+<td>FY2026</td>
+<td>股票回购 $40.1B</td>
+<td>🟢 正面：积极回馈股东，EPS 增厚</td>
+<td>[PDF:10-K, P.143]</td>
+</tr>
+<tr>
+<td>2026.05</td>
+<td>Rubin 平台发布（下一代架构）</td>
+<td>🟢 正面：一年一代产品路线图兑现</td>
+<td>[phase1-data §3]</td>
+</tr>
+<tr>
+<td>FY2026</td>
+<td>供应链向美国/拉美多元化</td>
+<td>🟡 中性：降低台海地缘风险，但短期增加成本</td>
+<td>[PDF:10-K, P.124]</td>
+</tr>
+</tbody>
+</table>
+<h3>财务趋势表（近 3-5 年 + 最新季度）</h3>
+<blockquote>
+<p>⚠️ <strong>降级说明</strong>: 美股公司不走 Tushare 数据通道，data_snapshot.md §3 多年趋势表为空（正常）。以下数据来自 10-K PDF 精读 + yfinance 结构化数据，交叉验证一致。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>期末</th>
+<th style="text-align: right;">营收</th>
+<th style="text-align: right;">YoY</th>
+<th style="text-align: right;">毛利率</th>
+<th style="text-align: right;">净利率</th>
+<th style="text-align: right;">净利润</th>
+<th style="text-align: right;">ROE</th>
+<th style="text-align: right;">资产负债率</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FY2024 (截至2024.1.28)</td>
+<td style="text-align: right;">$60.9B</td>
+<td style="text-align: right;">+126%</td>
+<td style="text-align: right;">72.7%</td>
+<td style="text-align: right;">55.8%</td>
+<td style="text-align: right;">$29.8B</td>
+<td style="text-align: right;">~69%</td>
+<td style="text-align: right;">~41%</td>
+<td>[PDF:10-K, P.126]</td>
+</tr>
+<tr>
+<td>FY2025 (截至2025.1.26)</td>
+<td style="text-align: right;">$130.5B</td>
+<td style="text-align: right;">+114%</td>
+<td style="text-align: right;">75.0%</td>
+<td style="text-align: right;">55.8%</td>
+<td style="text-align: right;">$72.9B</td>
+<td style="text-align: right;">~91%</td>
+<td style="text-align: right;">~32%</td>
+<td>[PDF:10-K, P.126]</td>
+</tr>
+<tr>
+<td>FY2026 (截至2026.1.25)</td>
+<td style="text-align: right;">$215.9B</td>
+<td style="text-align: right;">+65%</td>
+<td style="text-align: right;">71.1%</td>
+<td style="text-align: right;">55.6%</td>
+<td style="text-align: right;">$120.1B</td>
+<td style="text-align: right;">101.5%</td>
+<td style="text-align: right;">24.0%</td>
+<td>[PDF:10-K, P.126] + [yfinance]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>三年 CAGR</strong>: 营收 ~88.3%，净利润增速与营收基本同步 [metrics.json]</p>
+<p><strong>毛利率拆解</strong> [PDF:10-K, P.126-128]:<br />
+- FY2024 72.7% → FY2025 75.0%（+2.3pts，产品 mix 优化）→ FY2026 71.1%（-3.9pts）<br />
+- FY2026 下降原因：① H20 出口管制 $4.5B 一次性库存减值（最大单一因素）；② Blackwell 全系统方案含 NVLink/网络组件，结构性拉低产品毛利率<br />
+- Q1 FY2027 Non-GAAP 毛利率指引 ~75.0%，意味着剔除一次性项后毛利率回归正常区间</p>
+<p><strong>运营费用效率</strong> [PDF:10-K, P.126-128]:<br />
+- 研发 $18.5B（+43% YoY），占营收比 8.6%（下降 1.3pts）— 规模效应显著<br />
+- SGA $4.6B，占营收比 2.1% — 管理精益<br />
+- 运营利润率 60.4%（FY2025: 62.4%）— 小幅下降但绝对额 $130.4B 暴增</p>
+<p><strong>现金流与资本配置</strong> [PDF:10-K, P.143]:<br />
+- 经营现金流 $102.7B（+60% YoY），自由现金流 ~$96.7B<br />
+- 资本开支仅 $6.0B — fabless 轻资产模式，台积电代工<br />
+- 期末现金 $10.6B + 有价证券 $52.0B = 流动性充裕<br />
+- 负债率 24%，无重大有息债务压力</p>
+<p><strong>每股收益</strong> [PDF:10-K, P.128]:<br />
+- 稀释 EPS：$1.19（FY2024）→ $2.94（FY2025）→ $4.90（FY2026）</p>
+<h3>管理层前瞻信号</h3>
+<blockquote>
+<p>美股无 Tushare forecast_vip 数据。以 10-K MD&amp;A 及 Q1 FY2027 指引替代。</p>
+</blockquote>
+<p><strong>Q1 FY2027 指引</strong> [phase1-data §9]:<br />
+- 营收 $78.0B（±2%），同比 +~50%，环比持续加速<br />
+- Non-GAAP 毛利率 ~75.0%，较 FY2026 Q4 持平<br />
+- 明确声明"不假设来自中国的数据中心计算收入" — 保守口径，中国许可收入若兑现为纯增量<br />
+- Agentic AI 拐点驱动新一轮需求</p>
+<p><strong>管理层中长期叙事</strong> [PDF:10-K, P.124-128]:<br />
+- 一年一代产品路线图：Hopper → Blackwell → Rubin<br />
+- 主权 AI 需求强劲：各国政府自建 AI 基础设施<br />
+- 从 GPU 供应商进化为"AI 工厂"全栈方案提供商</p>
+<h3>主力控盘与筹码分析</h3>
+<blockquote>
+<p>⚠️ <strong>降级说明</strong>: 美股无 capital_flow.md / data_snapshot §5-§7 Tushare 数据（正常）。以 yfinance institutional_holders 替代。</p>
+</blockquote>
+<p><strong>机构持股概览</strong> [yfinance]:</p>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>数值</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>总市值</td>
+<td>$5,470B（约 5.47 万亿美元）</td>
+<td>[metrics.json]</td>
+</tr>
+<tr>
+<td>流通股</td>
+<td>24.22B 股</td>
+<td>[metrics.json]</td>
+</tr>
+<tr>
+<td>Beta</td>
+<td>2.244</td>
+<td>[yfinance]</td>
+</tr>
+<tr>
+<td>最新收盘</td>
+<td>$225.83（2026-05-13）</td>
+<td>[metrics.json]</td>
+</tr>
+<tr>
+<td>52 周高/低</td>
+<td>$227.84 / $129.16</td>
+<td>[metrics.json]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>机构持股结构判读</strong>:<br />
+- NVIDIA 是全球市值最大公司之一（~$5.47T），机构持股比例极高（通常 &gt;70%），流动性极佳<br />
+- Beta 2.244 表明波动率约为大盘的 2.2 倍 — 高弹性、高风险<br />
+- 52 周最高价 $227.84 与当前 $225.83 仅差 0.9%，处于历史高位区间<br />
+- Renaissance Technologies Q1 增持 NVDA [phase1-data §4]，顶级量化基金看多</p>
+<p><strong>关键机构动态</strong> [phase1-data §4]:<br />
+- 买方共识以看多为主，BoA 将 NVDA 列为顶级芯片股<br />
+- Cantor Fitzgerald 上调目标价<br />
+- "NVDA 是三家公司合一，市场只定价了第一家" — 暗示长期价值仍被低估</p>
+<p><strong>质押/冻结</strong>: 美股公司无 A 股式大股东质押制度，不适用。</p>
+<h3>★ 若核心资产被剥离的剩余资产清单</h3>
+<p><strong>触发判定</strong>: 未触发。NVIDIA 无核心资产被剥离迹象，两大板块（Compute &amp; Networking / Graphics）完整运营。</p>
+<hr />
+</div>
+
+<!-- ============================================================
+     §五 行业与竞争格局
+     ============================================================ -->
+<div class="section" id="industry">
+<h2>§五 行业与竞争格局</h2>
+<h3>行业规模与趋势</h3>
+<p><strong>AI 加速计算芯片市场</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>数据</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>全球半导体市场（2030E）</td>
+<td>~$1.5T</td>
+<td>[台积电预测, phase1-data §5]</td>
+</tr>
+<tr>
+<td>数据中心 GPU/加速器市场（2026E）</td>
+<td>~$200-250B</td>
+<td>[行业共识估算]</td>
+</tr>
+<tr>
+<td>NVIDIA 数据中心营收（FY2026）</td>
+<td>$193.7B</td>
+<td>[PDF:10-K]</td>
+</tr>
+<tr>
+<td>AI 基础设施年度资本开支增速</td>
+<td>&gt;40% YoY</td>
+<td>[云厂商资本开支汇总]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>关键趋势</strong>:<br />
+1. <strong>AI 投资拐点</strong>: 全球数据中心资本开支持续扩张，超大规模云厂商（AWS/Azure/GCP）+ 主权 AI 需求驱动 [phase1-data §5]<br />
+2. <strong>从训练到推理</strong>: 大模型训练需求趋于饱和，推理（Inference）成为新增量引擎，Agentic AI 架构进一步放大推理算力需求<br />
+3. <strong>全栈化趋势</strong>: 单纯卖 GPU 芯片→卖 DGX 系统→卖"AI 工厂"方案，价值链纵向延伸<br />
+4. <strong>供给侧瓶颈</strong>: 台积电先进制程产能有限，数据中心扩建受电力/审批制约 [phase1-data §5]<br />
+5. <strong>地缘政治分裂</strong>: 美国出口管制、25% 关税、技术脱钩趋势将市场分为"美国+盟友"和"中国+其他"两个半球</p>
+<h3>Porter 五力分析</h3>
+<table>
+<thead>
+<tr>
+<th>力量</th>
+<th style="text-align: center;">强度</th>
+<th>分析</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>供应商议价力</strong></td>
+<td style="text-align: center;">🟡 中</td>
+<td>台积电是唯一先进制程代工商，但 NVIDIA 是台积电最大客户之一，双方深度绑定。HBM 供应商（SK 海力士/三星/美光）产能紧张时议价力上升</td>
+</tr>
+<tr>
+<td><strong>买方议价力</strong></td>
+<td style="text-align: center;">🟡 中偏低</td>
+<td>客户集中度高（前几大云厂商占比可能 &gt;50%），但 NVIDIA GPU 在 AI 训练领域近乎不可替代，客户转换成本极高。单一客户占 10%+ 营收的风险存在 [PDF:10-K, P.100]</td>
+</tr>
+<tr>
+<td><strong>新进入者威胁</strong></td>
+<td style="text-align: center;">🟢 低</td>
+<td>GPU 设计+CUDA 生态+台积电产能锁定构成极高壁垒。但 ASIC 定制路径（Google TPU/Amazon Trainium）绕过传统进入壁垒</td>
+</tr>
+<tr>
+<td><strong>替代品威胁</strong></td>
+<td style="text-align: center;">🟡 中</td>
+<td>短期内 CUDA 生态锁定效应强，替代困难；中长期看，自研 ASIC（Google/Amazon/Meta）、AMD ROCm 生态改善、新架构（Cerebras/Groq/Fractile）构成实质性替代路径</td>
+</tr>
+<tr>
+<td><strong>同业竞争烈度</strong></td>
+<td style="text-align: center;">🟡 中偏高</td>
+<td>AMD MI300X/MI400 持续追赶，Intel Gaudi 重新布局，但 NVIDIA 在性能/生态/出货量上仍有代际领先。竞争烈度在推理市场（低精度/高吞吐）更高</td>
+</tr>
+</tbody>
+</table>
+<p><strong>五力综合</strong>: NVIDIA 当前处于行业垄断性地位，但"自研 ASIC + 开源软件栈"的替代路径正在侵蚀其长期护城河。中期看（2-3 年），护城河仍宽；远期看（5 年+），需关注 CUDA 锁定效应是否被削弱。</p>
+<h3>关键竞品对标</h3>
+<table>
+<thead>
+<tr>
+<th>公司</th>
+<th>代码</th>
+<th>核心产品</th>
+<th>竞争力评估</th>
+<th style="text-align: center;">对 NVIDIA 的威胁等级</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AMD</strong></td>
+<td>AMD</td>
+<td>MI300X/MI400 GPU + ROCm 生态</td>
+<td>性能追赶至 NVIDIA 80-90%，价格更具竞争力；ROCm 生态仍远逊 CUDA</td>
+<td style="text-align: center;">🟠 高</td>
+</tr>
+<tr>
+<td><strong>Intel</strong></td>
+<td>INTC</td>
+<td>Gaudi 3 加速器 + 铸造业务</td>
+<td>数据中心 AI 芯片份额极低，战略摇摆；但 x86 生态+铸造可能产生组合效应</td>
+<td style="text-align: center;">🟡 中</td>
+</tr>
+<tr>
+<td><strong>Broadcom</strong></td>
+<td>AVGO</td>
+<td>定制 ASIC（为 Google/Meta 等设计）</td>
+<td>不直接竞争通用 GPU，但蚕食定制芯片市场份额；FY2025 AI 收入 ~$12B</td>
+<td style="text-align: center;">🟠 高</td>
+</tr>
+<tr>
+<td><strong>Google TPU</strong></td>
+<td>GOOGL</td>
+<td>TPU v5/v6 自研芯片</td>
+<td>仅供内部+GCP 客户使用，不对外销售；但证明自研路径可行</td>
+<td style="text-align: center;">🟡 中</td>
+</tr>
+<tr>
+<td><strong>Amazon Trainium</strong></td>
+<td>AMZN</td>
+<td>Trainium2/Inferentia 自研芯片</td>
+<td>用于 AWS 内部降本，逐步开放给 AWS 客户；性能追赶中</td>
+<td style="text-align: center;">🟡 中</td>
+</tr>
+<tr>
+<td><strong>Cerebras</strong></td>
+<td>CBRS</td>
+<td>晶圆级 AI 芯片</td>
+<td>2025 年 IPO 开盘 $350，技术路线差异化；规模和生态远不及 NVIDIA</td>
+<td style="text-align: center;">🟢 低</td>
+</tr>
+</tbody>
+</table>
+<p><strong>竞争格局判读</strong>:</p>
+<ol>
+<li>
+<p><strong>短期（1-2 年）</strong>: NVIDIA 垄断地位稳固。Blackwell→Rubin 一年一代节奏持续拉开与竞品的性能代差。CUDA 生态的开发者锁定效应短期无解。数据中心 GPU 市占率估计 &gt;80%。</p>
+</li>
+<li>
+<p><strong>中期风险（3-5 年）</strong>: 自研 ASIC 是最大结构性威胁。Google/Amazon/Meta/Microsoft 均在加速自研芯片部署，动机清晰——降低对单一供应商的依赖 + 降本。若自研芯片承载 30-40% 推理负载，将直接蚕食 NVIDIA 增量市场。</p>
+</li>
+<li>
+<p><strong>AMD 的追赶</strong>: MI400 系列若在性价比上形成差异化，加上 ROCm 生态逐步改善，可能在价格敏感型客户（中小云厂商、企业级）中抢份额。但在旗舰训练场景中，NVIDIA 仍有生态壁垒。</p>
+</li>
+<li>
+<p><strong>NVIDIA 的应对</strong>: ① 全栈化（DGX/HGX 系统方案锁定客户基础设施）；② NVLink/InfiniBand 网络锁定集群互连；③ CUDA 持续迭代 + 新框架（如 NIM 微服务）提高切换成本；④ 收购 Groq 布局推理专用芯片。</p>
+</li>
+</ol>
+<hr />
+</div>
+
+<!-- ============================================================
+     §六 10 维度详细证据
+     ============================================================ -->
+<div class="section" id="detail">
+<h2>§六 10 维度详细证据</h2>
+<blockquote>
+<p>评分标尺: <code>references/scoring-rubric.md</code>。上市公司版维度 4/5/7/8/9/10 已按 rubric 末尾"上市公司评分维度调整"适配。</p>
+</blockquote>
+<h3>维度 1: 市场规模与结构 — <strong>9/10</strong></h3>
+<p><strong>证据</strong>:<br />
+- TAM: 全球半导体市场 2030E ~$1.5T [台积电预测, phase1-data §5]；数据中心 GPU/加速器子市场 2026E ~$200-250B [行业共识]<br />
+- CAGR &gt;20%: AI 基础设施年度资本开支增速 &gt;40% YoY [phase1-data §5]，远超 rubric 9-10 档的 20% 门槛<br />
+- NVIDIA 数据中心营收 $193.7B (FY2026) [PDF:10-K, P.124]，在 $200-250B TAM 中渗透率 ~77-97%，但 TAM 仍在快速扩张（主权 AI、Agentic AI 新需求）<br />
+- 结构性顺风: AI 投资拐点 + 全球数据中心扩建 + 主权 AI 需求 [PDF:10-K, P.124-128]<br />
+- <strong>锚点匹配</strong>: TAM &gt;$100B 且 CAGR &gt;20%，公司正在定义市场品类（"AI 工厂"），满足 9-10 档全部条件</p>
+<h3>维度 2: 商业模式 — <strong>9/10</strong></h3>
+<p><strong>证据</strong>:<br />
+- 毛利率 71.1% (FY2026) [PDF:10-K, P.126]，半导体行业顶尖（rubric 行业调整: fabless 半导体标杆 25-40%，NVIDIA 远超）<br />
+- 从 GPU 芯片→DGX 系统→"AI 工厂"全栈方案，价值链纵向延伸 [PDF:10-K, P.124]，定价权极强<br />
+- 营收结构: 数据中心 $193.7B (89.7%) + Graphics $22.2B (10.3%) [PDF:10-K, P.124]，两条已验证收入线<br />
+- 运营利润率 60.4% [PDF:10-K, P.126]，经营现金流 $102.7B [PDF:10-K, P.143]，已大幅盈利<br />
+- FCF ~$96.7B [phase2-documents §3]，fabless 模式资本开支仅 $6.0B<br />
+- <strong>扣分项</strong>: 收入非经常性（硬件销售为主，非 ARR 订阅模式），且高度依赖 AI 投资周期，周期性风险存在。故给 9 而非 10</p>
+<h3>维度 3: 竞争格局与护城河 — <strong>9/10</strong></h3>
+<p><strong>证据</strong>:<br />
+- 多重复合护城河: CUDA 软件生态（开发者锁定）+ 台积电产能锁定 + 一年一代产品节奏（Hopper→Blackwell→Rubin）+ NVLink/InfiniBand 网络互连标准 [PDF:10-K, P.124; phase3-part2 §五]<br />
+- 数据中心 GPU 市占率估计 &gt;80% [phase3-part2 §五]，份额持续扩大<br />
+- 客户转换成本极高: CUDA 生态 + DGX/HGX 系统锁定 + NVLink 集群互连<br />
+- <strong>竞争风险</strong>: AMD MI300X/MI400 追赶至 80-90% 性能 [phase3-part2 §五]；Google TPU/Amazon Trainium 自研 ASIC 路径长期侵蚀护城河<br />
+- <strong>锚点匹配</strong>: 多重复合护城河 + 市占率第一且扩大 + 客户转换成本极高，满足 9-10 档。因自研 ASIC 中长期威胁，给 9</p>
+<h3>维度 4: 增长指标（上市公司版）— <strong>10/10</strong></h3>
+<p><strong>证据</strong>:<br />
+- 营收 YoY +65% (FY2026) [PDF:10-K, P.126]，远超 rubric 9-10 档 &gt;30% 门槛<br />
+- EPS 增速: $2.94→$4.90 (+67% YoY) [PDF:10-K, P.128]，远超 &gt;25% 门槛<br />
+- 三年营收 CAGR 88.3% [metrics.json]<br />
+- Q1 FY2027 指引 $78.0B (+~50% YoY) [phase1-data §9]，增速加速趋势持续<br />
+- 数据中心营收从 $47.5B (FY2024) → $193.7B (FY2026)，3 年 4x+ [PDF:10-K, P.126]<br />
+- <strong>锚点匹配</strong>: 收入增速 &gt;30% + EPS 增速 &gt;25% + 加速趋势，满足 9-10 档全部条件。增速之惊人（88% CAGR）在大市值公司中极为罕见，给满分 10</p>
+<h3>维度 5: 团队与管理层（上市公司追加项）— <strong>9/10</strong></h3>
+<p><strong>证据</strong>:<br />
+- CEO Jensen Huang 为联合创始人（1993 年创立），连续执掌 33 年，是半导体行业最成功的 CEO 之一<br />
+- 战略决策前瞻性卓越: 2012 年 all-in AI、CUDA 生态构建、一年一代产品节奏、收购 Groq 布局推理<br />
+- 高管团队完整且稳定，关键岗位无重大变动<br />
+- 研发投入 $18.5B (+43% YoY) [PDF:10-K, P.126]，占营收 8.6%，研发密度高<br />
+- 员工规模快速扩张但有序 [phase2-documents §1]<br />
+- <strong>扣分项</strong>: 关键人物依赖严重（Jensen Huang 个人影响力极大，继任计划不明确）；内部人持股比例数据未完整获取<br />
+- <strong>锚点匹配</strong>: 创始人有极成功履历 + 高管团队完整 + 组织扩张有序，满足 9-10 档。因关键人物依赖，给 9</p>
+<h3>维度 6: 产品与技术 — <strong>10/10</strong></h3>
+<p><strong>证据</strong>:<br />
+- 技术代际领先: Blackwell 架构性能远超竞品，一年一代节奏（Hopper→Blackwell→Rubin）使竞品追赶窗口极短 [PDF:10-K, P.124]<br />
+- 平台型产品生态: CUDA + cuDNN + TensorRT + NIM 微服务 + Omniverse，生态系统成熟且自我强化<br />
+- 产品迭代速度极快: FY2026 内完成 Blackwell 量产 + GB300 出货 + Rubin 发布 [phase1-data §3]<br />
+- 核心技术壁垒: GPU 架构设计 + NVLink 互连技术 + AI 软件栈 + 台积电先进制程优先获取权<br />
+- <strong>锚点匹配</strong>: 技术架构领先形成真正壁垒 + 平台型生态 + 迭代速度快 + 核心专利/know-how，满足 9-10 档全部条件</p>
+<h3>维度 7: 财务健康度（上市公司版）— <strong>10/10</strong></h3>
+<p><strong>证据</strong>:<br />
+- 流动比率 3.905 [metrics.json]，远超 rubric 优秀档 &gt;2.0<br />
+- 资产负债率 24.0% (FY2026) [phase3-part2 §四]，远低于 &lt;40% 优秀档<br />
+- 利息保障倍数: 运营利润 $130.4B vs 极低有息债务，倍数 &gt;&gt;8x<br />
+- FCF 收益率: FCF $96.7B / 市值 $5,470B = 1.77%，介于 1-4% 中等档。但对于高增长公司，FCF 收益率偏低是因高估值而非现金流弱<br />
+- 经营现金流/净利润: $102.7B / $120.1B = 0.855，略低于 1.0（非经常性投资收益 $8.9B 拉高净利润基数 [phase2-documents §5]）<br />
+- 期末流动性: 现金 $10.6B + 有价证券 $52.0B [phase2-documents §3]<br />
+- <strong>11 框架审计</strong>: 0 个红旗信号 [audit_report.md]（数据覆盖有限，但无负面信号）<br />
+- <strong>锚点匹配</strong>: 流动比率/负债率/利息保障均远超优秀档，现金流质量高，满足 9-10 档</p>
+<h3>维度 8: 风险与治理（上市公司追加项）— <strong>5/10</strong></h3>
+<p><strong>证据</strong>（分数越高 = 风险越低）:<br />
+- <strong>客户集中度高</strong>: 前几大云厂商占比极高，单一客户可能占 10%+ 营收 [PDF:10-K, P.100]，rubric 3-4 档（&gt;50%）<br />
+- <strong>出口管制不确定性</strong>: H20 已限制，H200 许可可随时撤回，若扩展至全部先进 GPU 将丧失中国市场 $12-15B [PDF:10-K, P.100-113]<br />
+- <strong>供需错配风险</strong>: 台积电排产 6-12 月，需求突降将产生大量库存减值（H20 $4.5B 前车之鉴）[PDF:10-K, P.125]<br />
+- <strong>AI 泡沫风险</strong>: 若 AI 投资回报不及预期，客户资本开支可能骤降 [PDF:10-K, P.100-113]<br />
+- <strong>关键人物依赖</strong>: Jensen Huang 个人影响力极大<br />
+- <strong>缓解因素</strong>: 负债率极低（24%），现金流充裕，无重大法律纠纷<br />
+- <strong>11 框架审计</strong>: 0 个红旗（数据不足，非"无风险"）[audit_report.md]<br />
+- <strong>锚点匹配</strong>: 客户集中度 &gt;50% + 重大监管变化风险 + 关键人物依赖 → 接近 3-4 档；但缓解因素（财务实力+生态壁垒）拉回 5 分</p>
+<h3>维度 9: 市场估值（上市公司版）— <strong>4/10</strong></h3>
+<p><strong>证据</strong>:<br />
+- Trailing PE 46.1x [metrics.json]，半导体行业中位数 20-35x [rubric 行业基准]，高于行业中位数 ~60%<br />
+- Forward PE 19.9x [metrics.json]，合理（反映高增速预期已部分消化）<br />
+- PB 34.9x [metrics.json]，半导体中位数 3-6x，高出 ~6-10 倍<br />
+- PS (TTM) 25.3x [metrics.json]，fabless 半导体行业基准 5-8x，高出 ~3-4 倍<br />
+- EV/EBITDA 40.8x [metrics.json]，行业基准 15-20x，高出 ~2x<br />
+- <strong>rubric 锚点</strong>: PE &gt; 行业中位数 50%+（46.1 vs 20-35 中位数 ~27.5x，溢价 ~68%）→ 3-4 档<br />
+- <strong>缓解</strong>: Forward PE 19.9x 反映高增速消化估值；营收 CAGR 88.3% 远超行业，PEG 合理<br />
+- <strong>综合</strong>: 当前估值已充分反映高增长预期，安全边际极薄。给 4 分（rubric 3-4 档偏上沿）</p>
+<h3>维度 10: 回报潜力（上市公司版）— <strong>6/10</strong></h3>
+<p><strong>证据</strong>:<br />
+- 分红+回购收益率: 分红 $2.5B + 回购 $40.1B = $42.6B / 市值 $5,470B = 0.78%，低于 5% 门槛 [PDF:10-K, P.143]<br />
+- Q1 FY2027 指引 $78B（+50% YoY）[phase1-data §9]，增长动能强劲为核心催化剂<br />
+- 目标价上行空间: 当前 $225.83 接近 52 周高点 $227.84 [metrics.json]，短期上行空间有限<br />
+- 明确催化剂: ① Blackwell/Rubin 产品周期；② Agentic AI 新需求；③ H200 中国许可收入增量<br />
+- 下行风险: 出口管制升级 / AI 投资周期见顶 / 毛利率持续下行<br />
+- <strong>锚点匹配</strong>: 催化剂可见但总回报预期受限于高基数估值，回购+分红收益率 &lt;5%，目标价上行空间有限 → 5-6 档。因催化剂明确且增长动能强，给 6</p>
+<h3>加权综合分计算</h3>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th style="text-align: center;">权重</th>
+<th style="text-align: center;">分数</th>
+<th style="text-align: center;">加权</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. 市场规模与结构</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">0.90</td>
+</tr>
+<tr>
+<td>2. 商业模式</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">0.90</td>
+</tr>
+<tr>
+<td>3. 竞争格局与护城河</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">0.90</td>
+</tr>
+<tr>
+<td>4. 增长指标</td>
+<td style="text-align: center;">15%</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">1.50</td>
+</tr>
+<tr>
+<td>5. 团队与管理层</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">0.90</td>
+</tr>
+<tr>
+<td>6. 产品与技术</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">1.00</td>
+</tr>
+<tr>
+<td>7. 财务健康度</td>
+<td style="text-align: center;">15%</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">1.50</td>
+</tr>
+<tr>
+<td>8. 风险与治理</td>
+<td style="text-align: center;">5%</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">0.25</td>
+</tr>
+<tr>
+<td>9. 市场估值</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">0.40</td>
+</tr>
+<tr>
+<td>10. 回报潜力</td>
+<td style="text-align: center;">5%</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">0.30</td>
+</tr>
+<tr>
+<td><strong>合计</strong></td>
+<td style="text-align: center;">100%</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: center;"><strong>8.55</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>数据置信度</strong>: 中高 — 11 框架审计因美股 Tushare 数据缺失全部显示"数据不足"[audit_report.md]，维度 8 风险评估部分依赖 10-K 披露而非独立验证。</p>
+<hr />
+</div>
+
+<!-- ============================================================
+     §七 网络舆情与市场情绪
+     ============================================================ -->
+<div class="section" id="sentiment">
+<h2>§七 网络舆情与市场情绪</h2>
+<h3>看多观点</h3>
+<ol>
+<li><strong>AI 投资拐点不减速</strong>: Q1 FY2027 指引 $78B（+50% YoY），数据中心需求持续超预期，超大规模云厂商资本开支加速扩张 [phase1-data §4]</li>
+<li><strong>华尔街顶级机构背书</strong>: BoA 将 NVDA 列为顶级芯片股，认为 AI 将"stronger for longer"；Cantor Fitzgerald 上调目标价 [phase1-data §4]</li>
+<li><strong>"三家公司合一"叙事</strong>: "NVDA 是三家公司合一（GPU + 网络 + 软件平台），市场只定价了第一家" — 暗示当前估值仍低估长期价值 [phase1-data §4]</li>
+<li><strong>量化资金持续流入</strong>: Renaissance Technologies Q1 增持 NVDA，顶级量化基金看多信号 [phase1-data §4]</li>
+<li><strong>产品路线图一年一代</strong>: Blackwell→Rubin 持续拉开与竞品的性能代差，护城河自我加固 [PDF:10-K, P.124]</li>
+<li><strong>Agentic AI 新需求引擎</strong>: Agentic AI 拐点驱动推理算力新一轮爆发式需求 [phase1-data §9]</li>
+</ol>
+<h3>看空观点</h3>
+<ol>
+<li><strong>估值充分反映预期</strong>: 股价 ~$226 接近历史高点（52 周高 $227.84），Trailing PE 46.1x 远超半导体行业中位数 20-35x [metrics.json]，任何业绩不及预期将引发大幅回调</li>
+<li><strong>竞争加剧多线夹击</strong>: Cerebras IPO 开盘 $350；英国 Fractile 融资 $2.2 亿；AMD MI300X/MI400 + Intel Gaudi + 自研 ASIC（Google/Amazon/Meta）持续追赶 [phase1-data §4]</li>
+<li><strong>出口管制悬顶</strong>: H200 中国许可可随时撤回，若限制扩展至全部先进 GPU，将直接丧失 $12-15B 年收入 [PDF:10-K, P.100-113]</li>
+<li><strong>毛利率结构性下行</strong>: Blackwell 全系统方案（含 NVLink/网络组件）+ H20 $4.5B 库存减值，FY2026 毛利率 71.1% 已低于 FY2025 的 75.0% [PDF:10-K, P.126]</li>
+<li><strong>AI 泡沫风险</strong>: 若 AI 投资回报不及客户预期，资本开支周期可能骤然逆转，NVIDIA 营收高度依赖这一单一驱动力 [PDF:10-K, P.100-113]</li>
+<li><strong>客户集中度风险</strong>: 前几大云厂商占数据中心收入比例极高，且均在加速自研 ASIC 以降低对 NVIDIA 的依赖 [PDF:10-K, P.100]</li>
+</ol>
+<h3>机构持股动态（替代 A 股资金流向）</h3>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>数值</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>总市值</td>
+<td>$5,470B (~5.47 万亿美元)</td>
+<td>[metrics.json]</td>
+</tr>
+<tr>
+<td>流通股</td>
+<td>24.22B 股</td>
+<td>[metrics.json]</td>
+</tr>
+<tr>
+<td>Beta</td>
+<td>2.244（高波动）</td>
+<td>[metrics.json]</td>
+</tr>
+<tr>
+<td>FY2026 回购</td>
+<td>$40.1B</td>
+<td>[PDF:10-K, P.143]</td>
+</tr>
+<tr>
+<td>FY2026 分红</td>
+<td>$2.5B</td>
+<td>[PDF:10-K, P.143]</td>
+</tr>
+<tr>
+<td>股息率</td>
+<td>0.02%</td>
+<td>[metrics.json]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>综合情绪判读</strong>: 市场情绪整体偏多（接近历史高点 + 机构持续增持 + 华尔街一致看好），但多空分歧集中在：① 估值是否已 price in 所有增长；② AI 投资周期持续性；③ 自研 ASIC 对长期护城河的侵蚀。情绪过热风险需警惕。</p>
+<hr />
+</div>
+
+<!-- ============================================================
+     §八 可比公司对标
+     ============================================================ -->
+<div class="section" id="peers">
+<h2>§八 可比公司对标（v4.4 — Read `peer_analysis.md`）</h2>
+<blockquote>
+<p>⚠️ 美股无 peer_analysis.md artifact，以下对标数据由 LLM 基于 10-K 披露 + phase1-data + metrics.json 综合填充。</p>
+</blockquote>
+<h3>核心可比公司对标表</h3>
+<table>
+<thead>
+<tr>
+<th>公司</th>
+<th>代码</th>
+<th style="text-align: right;">FY 最新营收</th>
+<th style="text-align: right;">营收增速</th>
+<th style="text-align: right;">毛利率</th>
+<th style="text-align: right;">净利率</th>
+<th style="text-align: right;">PE (TTM)</th>
+<th style="text-align: right;">市值</th>
+<th>核心竞品产品</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>NVIDIA</strong></td>
+<td>NVDA</td>
+<td style="text-align: right;">$215.9B</td>
+<td style="text-align: right;">+65%</td>
+<td style="text-align: right;">71.1%</td>
+<td style="text-align: right;">55.6%</td>
+<td style="text-align: right;">46.1x</td>
+<td style="text-align: right;">$5,470B</td>
+<td>H100/H200/Blackwell GPU</td>
+</tr>
+<tr>
+<td><strong>AMD</strong></td>
+<td>AMD</td>
+<td style="text-align: right;">~$26B</td>
+<td style="text-align: right;">+14%</td>
+<td style="text-align: right;">~50%</td>
+<td style="text-align: right;">~6%</td>
+<td style="text-align: right;">~100x</td>
+<td style="text-align: right;">~$210B</td>
+<td>MI300X/MI400 + ROCm</td>
+</tr>
+<tr>
+<td><strong>Intel</strong></td>
+<td>INTC</td>
+<td style="text-align: right;">~$54B</td>
+<td style="text-align: right;">-2%</td>
+<td style="text-align: right;">~40%</td>
+<td style="text-align: right;">亏损</td>
+<td style="text-align: right;">亏损</td>
+<td style="text-align: right;">~$115B</td>
+<td>Gaudi 3 + 铸造业务</td>
+</tr>
+<tr>
+<td><strong>Broadcom</strong></td>
+<td>AVGO</td>
+<td style="text-align: right;">~$56B</td>
+<td style="text-align: right;">+44%</td>
+<td style="text-align: right;">~65%</td>
+<td style="text-align: right;">~30%</td>
+<td style="text-align: right;">~35x</td>
+<td style="text-align: right;">~$1,050B</td>
+<td>定制 ASIC (TPU/Meta)</td>
+</tr>
+<tr>
+<td><strong>Marvell</strong></td>
+<td>MRVL</td>
+<td style="text-align: right;">~$6B</td>
+<td style="text-align: right;">+27%</td>
+<td style="text-align: right;">~48%</td>
+<td style="text-align: right;">~5%</td>
+<td style="text-align: right;">~60x</td>
+<td style="text-align: right;">~$85B</td>
+<td>数据中心定制芯片</td>
+</tr>
+<tr>
+<td><strong>Google (Alphabet)</strong></td>
+<td>GOOGL</td>
+<td style="text-align: right;">~$375B</td>
+<td style="text-align: right;">+14%</td>
+<td style="text-align: right;">~58%</td>
+<td style="text-align: right;">~28%</td>
+<td style="text-align: right;">~22x</td>
+<td style="text-align: right;">~$2,200B</td>
+<td>TPU v5/v6 (自用+GCP)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>注: AMD/Intel/Broadcom/Marvell/Google 数据为 LLM 基于公开信息估算（~标记），非实时精确值。</p>
+</blockquote>
+<h3>关键指标对标分析</h3>
+<p><strong>1. 增长维度</strong>:<br />
+- NVIDIA 营收增速 +65% 远超所有同业（AMD +14%、Broadcom +44%、Intel -2%），是半导体行业增速最快的大市值公司<br />
+- 三年 CAGR 88.3% 在全球科技巨头中罕见</p>
+<p><strong>2. 盈利能力</strong>:<br />
+- NVIDIA 毛利率 71.1% 在 fabless 半导体中处于顶尖（AMD ~50%、Broadcom ~65%），仅略低于纯软件公司<br />
+- 净利率 55.6% 在半导体行业中无可比拟（AMD ~6%、Broadcom ~30%）<br />
+- 运营利润率 60.4% 体现极强的规模效应和定价权</p>
+<p><strong>3. 估值对比</strong>:<br />
+- NVIDIA PE 46.1x vs Broadcom ~35x vs AMD ~100x（低利润基数）vs Google ~22x<br />
+- 考虑增速后 PEG: NVIDIA PEG ~0.7（PE 46.1 / 增速 65%），合理偏低<br />
+- 但 PS 25.3x vs 行业 5-8x，反映市场对未来高增长的极高预期</p>
+<p><strong>4. 竞争定位</strong>:<br />
+- NVIDIA 在 AI 训练 GPU 市场占 &gt;80% 份额，护城河最宽<br />
+- AMD 是最直接的通用 GPU 竞争对手，但份额差距 &gt;10x<br />
+- Broadcom 在定制 ASIC 市场崛起迅速（AI 收入 ~$12B），是不同维度的竞争<br />
+- Google/Amazon 自研芯片主要自用，但证明自研路径可行，长期可能蚕食 NVIDIA 增量需求</p>
+<h3>差异化优势与劣势</h3>
+<p><strong>NVIDIA 相对优势</strong>:<br />
+1. CUDA 软件生态: 全球数百万 AI 开发者锁定，竞品需数年才能构建可比生态<br />
+2. 一年一代产品节奏: Hopper→Blackwell→Rubin，竞品追赶窗口极短<br />
+3. 全栈方案: DGX/HGX 系统 + NVLink 互连 + AI 软件 = 客户锁定效应<br />
+4. 规模经济: $215.9B 营收规模使研发/制造成本摊薄远超竞品</p>
+<p><strong>NVIDIA 相对劣势</strong>:<br />
+1. 估值溢价最高: PE/PS/PB 均远超同业，安全边际最薄<br />
+2. 客户集中度: 相比 Broadcom 等多元化芯片商，NVIDIA 更依赖少数超大规模客户<br />
+3. 地缘风险暴露: 出口管制对 NVIDIA 影响最大（中国曾是重要市场），AMD/Intel 受影响较小<br />
+4. 周期性: 营收高度依赖 AI 资本开支周期，若周期逆转下行幅度将大于同业</p>
+</div>
+
+<!-- ============================================================
+     §九 估值与回报模拟
+     ============================================================ -->
+<div class="section" id="valuation">
+<h2>§九 估值与回报模拟</h2>
+<blockquote>
+<p><strong>方法论</strong>: 以"<strong>DCF 概率加权</strong>"为唯一估值锚，§十（投资回报）沿用同一套情景。§9.2 可比 PE 和 PB 作为<strong>交叉验证</strong>而非独立锚。</p>
+</blockquote>
+<h3>9.1 DCF 情景分析（v4.2 — 4 情景）</h3>
+<p><strong>估值基准参数</strong>:<br />
+- 基年: FY2026（截至 2026.1.25），净利润 $120.1B，EPS $4.90（稀释），FCF $96.7B [PDF:10-K, P.126/P.143]<br />
+- 流通股: 24.22B 股 [metrics.json]<br />
+- WACC: 11%（构成: 无风险利率 4.3% [US 10Y] + β 调整股权风险溢价 6.7%，β 取远期 1.2x 而非历史 2.244x，反映 NVIDIA 随规模扩大波动率趋降）<br />
+- 永续增长率 g: 3.5%（&lt; WACC 11%，满足 g &lt; r 约束 ✅）<br />
+- 估值视野: 5 年显式预测（FY2027-FY2031）+ 终值<br />
+- 终值方法: 永续增长模型（Gordon Growth）</p>
+<p><strong>DCF 假设 vs 历史一致性验证</strong>:<br />
+- FY2024-FY2026 营收 CAGR 88.3% [metrics.json]，三年 EPS 从 $1.19→$4.90（CAGR ~103%）[PDF:10-K, P.128]<br />
+- Q1 FY2027 指引 $78.0B 营收（+~50% YoY）[phase1-data §9]，增速虽放缓但仍极高<br />
+- 以下 4 情景增速假设均从 Q1 指引锚定出发，按竞争/周期因素逐年递减，与历史"增速放缓"趋势一致（FY2025 +114%→FY2026 +65%→FY2027E +45-60%）</p>
+<hr />
+<h4>乐观情景（25% 权重）</h4>
+<p><strong>假设</strong>: AI 投资超级周期延续 3 年以上，Agentic AI + 主权 AI 驱动需求持续超预期；NVIDIA 保持 &gt;75% 数据中心 GPU 份额；毛利率因剔除 H20 一次性减值后回归 ~73-75%。</p>
+<table>
+<thead>
+<tr>
+<th>年度</th>
+<th style="text-align: right;">EPS 增速</th>
+<th style="text-align: right;">EPS ($)</th>
+<th>依据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FY2027E</td>
+<td style="text-align: right;">+60%</td>
+<td style="text-align: right;">7.84</td>
+<td>Q1 指引强劲 + H200 中国增量 + Blackwell 满产</td>
+</tr>
+<tr>
+<td>FY2028E</td>
+<td style="text-align: right;">+35%</td>
+<td style="text-align: right;">10.58</td>
+<td>Rubin 放量 + Agentic AI 爆发</td>
+</tr>
+<tr>
+<td>FY2029E</td>
+<td style="text-align: right;">+25%</td>
+<td style="text-align: right;">13.23</td>
+<td>基数效应显现但主权 AI 接力</td>
+</tr>
+<tr>
+<td>FY2030E</td>
+<td style="text-align: right;">+18%</td>
+<td style="text-align: right;">15.61</td>
+<td>增速逐步正常化</td>
+</tr>
+<tr>
+<td>FY2031E</td>
+<td style="text-align: right;">+12%</td>
+<td style="text-align: right;">17.49</td>
+<td>成熟期初现</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>终值 PE: 25x（参考半导体行业龙头成熟期估值上沿 [valuation-frameworks §2.3]）</li>
+<li>FY2031E 终值股价 = $17.49 × 25 = $437.3</li>
+<li>折现至当前（5 年，11% WACC）: $437.3 / 1.685 = <strong>$259.6</strong></li>
+<li>加回 5 年累计回购/分红 PV（FY2026 回购+分红 $42.6B，假设年增 10%）≈ <strong>$57/share</strong></li>
+<li><strong>乐观情景公允价值: ~$317/share</strong></li>
+<li>对应总市值: $317 × 24.22B = <strong>$7,678B</strong>（约 ¥55,280 亿）</li>
+</ul>
+<hr />
+<h4>基准情景（45% 权重）</h4>
+<p><strong>假设</strong>: AI 投资周期持续但增速逐步放缓至行业均值；NVIDIA 数据中心份额因 ASIC 竞争从 80%+ 缓降至 ~65-70%；毛利率稳定在 70-72% 区间。</p>
+<table>
+<thead>
+<tr>
+<th>年度</th>
+<th style="text-align: right;">EPS 增速</th>
+<th style="text-align: right;">EPS ($)</th>
+<th>依据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FY2027E</td>
+<td style="text-align: right;">+45%</td>
+<td style="text-align: right;">7.11</td>
+<td>Q1 指引兑现但中国收入保守</td>
+</tr>
+<tr>
+<td>FY2028E</td>
+<td style="text-align: right;">+25%</td>
+<td style="text-align: right;">8.88</td>
+<td>Rubin 正常放量，竞争加剧</td>
+</tr>
+<tr>
+<td>FY2029E</td>
+<td style="text-align: right;">+18%</td>
+<td style="text-align: right;">10.48</td>
+<td>AMD MI400 + 自研 ASIC 分流部分推理市场</td>
+</tr>
+<tr>
+<td>FY2030E</td>
+<td style="text-align: right;">+12%</td>
+<td style="text-align: right;">11.74</td>
+<td>增速趋于半导体行业正常水平</td>
+</tr>
+<tr>
+<td>FY2031E</td>
+<td style="text-align: right;">+8%</td>
+<td style="text-align: right;">12.68</td>
+<td>成熟期</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>终值 PE: 22x（半导体龙头合理估值 [valuation-frameworks §2.3 fabless 半导体 15-20x + 增长溢价]）</li>
+<li>FY2031E 终值股价 = $12.68 × 22 = $279.0</li>
+<li>折现: $279.0 / 1.685 = <strong>$165.6</strong></li>
+<li>加回 5 年回购/分红 PV ≈ <strong>$52/share</strong></li>
+<li><strong>基准情景公允价值: ~$222/share</strong>（低于当前 $225.83）</li>
+<li>对应总市值: $222 × 24.22B = <strong>$5,381B</strong>（约 ¥38,740 亿）</li>
+</ul>
+<p><strong>含义</strong>: 当前股价基本 price in 了基准增长预期，安全边际极薄。</p>
+<hr />
+<h4>悲观情景（25% 权重）</h4>
+<p><strong>假设</strong>: AI 投资周期 2027-2028 年见顶回落（客户 ROI 不及预期→缩减资本开支）；出口管制升级导致中国市场完全丧失；自研 ASIC 加速蚕食 NVIDIA 份额至 50-55%；毛利率因价格竞争降至 62-65%。</p>
+<table>
+<thead>
+<tr>
+<th>年度</th>
+<th style="text-align: right;">EPS 增速</th>
+<th style="text-align: right;">EPS ($)</th>
+<th>依据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FY2027E</td>
+<td style="text-align: right;">+30%</td>
+<td style="text-align: right;">6.37</td>
+<td>出口管制升级 + 中国收入归零</td>
+</tr>
+<tr>
+<td>FY2028E</td>
+<td style="text-align: right;">+10%</td>
+<td style="text-align: right;">7.01</td>
+<td>AI 资本开支增速骤降至 &lt;10%</td>
+</tr>
+<tr>
+<td>FY2029E</td>
+<td style="text-align: right;">+5%</td>
+<td style="text-align: right;">7.36</td>
+<td>周期底部</td>
+</tr>
+<tr>
+<td>FY2030E</td>
+<td style="text-align: right;">+3%</td>
+<td style="text-align: right;">7.58</td>
+<td>缓慢恢复</td>
+</tr>
+<tr>
+<td>FY2031E</td>
+<td style="text-align: right;">+5%</td>
+<td style="text-align: right;">7.96</td>
+<td>新产品周期启动</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>终值 PE: 16x（周期股下行估值区间 [phase3-part3 §八: AMD ~100x 但亏损, Intel 亏损]）</li>
+<li>FY2031E 终值股价 = $7.96 × 16 = $127.4</li>
+<li>折现: $127.4 / 1.685 = <strong>$75.6</strong></li>
+<li>加回回购/分红 PV ≈ <strong>$40/share</strong>（回购规模因盈利下降而缩减）</li>
+<li><strong>悲观情景公允价值: ~$126/share</strong></li>
+<li>对应总市值: $126 × 24.22B = <strong>$3,052B</strong>（约 ¥21,970 亿）</li>
+</ul>
+<hr />
+<h4>最差情景（5% 权重）</h4>
+<p><strong>假设</strong>: AI 泡沫全面破裂（类似 2000 年互联网泡沫），叠加全面出口管制 + 台海危机导致供应链中断；NVIDIA 营收腰斩，市场给予周期性硬件公司估值。</p>
+<table>
+<thead>
+<tr>
+<th>年度</th>
+<th style="text-align: right;">EPS 增速</th>
+<th style="text-align: right;">EPS ($)</th>
+<th>依据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FY2027E</td>
+<td style="text-align: right;">+15%</td>
+<td style="text-align: right;">5.64</td>
+<td>需求骤降但 Backlog 支撑</td>
+</tr>
+<tr>
+<td>FY2028E</td>
+<td style="text-align: right;">-10%</td>
+<td style="text-align: right;">5.07</td>
+<td>客户取消订单 + 库存减值</td>
+</tr>
+<tr>
+<td>FY2029E</td>
+<td style="text-align: right;">-5%</td>
+<td style="text-align: right;">4.82</td>
+<td>周期谷底</td>
+</tr>
+<tr>
+<td>FY2030E</td>
+<td style="text-align: right;">0%</td>
+<td style="text-align: right;">4.82</td>
+<td>触底</td>
+</tr>
+<tr>
+<td>FY2031E</td>
+<td style="text-align: right;">+3%</td>
+<td style="text-align: right;">4.96</td>
+<td>微弱恢复</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>终值 PE: 12x（硬件周期股底部估值）</li>
+<li>FY2031E 终值股价 = $4.96 × 12 = $59.5</li>
+<li>折现: $59.5 / 1.685 = <strong>$35.3</strong></li>
+<li>加回回购/分红 PV ≈ <strong>$26/share</strong>（大幅缩减）</li>
+<li><strong>最差情景公允价值: ~$61/share</strong></li>
+<li>对应总市值: $61 × 24.22B = <strong>$1,477B</strong>（约 ¥10,640 亿）</li>
+<li>当前 $225.83 若跌至 $61 = <strong>-73.0%</strong></li>
+</ul>
+<hr />
+<h4>估值锚（概率加权 DCF）</h4>
+<table>
+<thead>
+<tr>
+<th>情景</th>
+<th style="text-align: right;">公允股价 ($)</th>
+<th style="text-align: right;">对应总市值 ($B)</th>
+<th style="text-align: center;">概率</th>
+<th style="text-align: right;">加权贡献 ($)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>乐观</td>
+<td style="text-align: right;">317</td>
+<td style="text-align: right;">7,678</td>
+<td style="text-align: center;">25%</td>
+<td style="text-align: right;">79.25</td>
+</tr>
+<tr>
+<td>基准</td>
+<td style="text-align: right;">222</td>
+<td style="text-align: right;">5,381</td>
+<td style="text-align: center;">45%</td>
+<td style="text-align: right;">99.90</td>
+</tr>
+<tr>
+<td>悲观</td>
+<td style="text-align: right;">126</td>
+<td style="text-align: right;">3,052</td>
+<td style="text-align: center;">25%</td>
+<td style="text-align: right;">31.50</td>
+</tr>
+<tr>
+<td>最差</td>
+<td style="text-align: right;">61</td>
+<td style="text-align: right;">1,477</td>
+<td style="text-align: center;">5%</td>
+<td style="text-align: right;">3.05</td>
+</tr>
+<tr>
+<td><strong>概率加权</strong></td>
+<td style="text-align: right;"><strong>$213.7</strong></td>
+<td style="text-align: right;"><strong>$5,174</strong></td>
+<td style="text-align: center;">100%</td>
+<td style="text-align: right;"><strong>213.70</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>概率加权公允价值: $213.7/share（约 ¥1,539/share）</strong></p>
+<p><strong>当前 $225.83 相对估值锚 $213.7 溢价 +5.7%</strong> — 当前价格略高于概率加权公允价值，安全边际为负。</p>
+<p><strong>概率分布合理性</strong>: 25/45/25/5（标准分布），乐观+基准占 70% 权重，反映 AI 基础设施需求仍处上行周期的基本判断，但悲观+最差合计 30% 充分反映了 NVIDIA 面临的周期性风险和竞争侵蚀。</p>
+<hr />
+<h3>9.2 交叉验证（仅互证，不纳入锚）</h3>
+<p><strong>可比 PE 验证</strong>:<br />
+- NVIDIA Forward PE 19.9x [metrics.json] vs 半导体行业龙头: Broadcom ~35x, AMD ~100x（低利润基数）, Google ~22x [phase3-part3 §八]<br />
+- 以 Forward PE 19.9x × 共识 FY2027 EPS ~$11.35 = $225.9 — 与当前价高度吻合<br />
+- 用中性 PE 25x × FY2027E base EPS $7.11 = $177.8 → 与 DCF 基准 $222 差异 20%（⚠️ 偏差源于 EPS 估计差异，共识更激进）</p>
+<p><strong>有形 PB 验证</strong>:<br />
+- PB 34.9x [metrics.json]，股东权益 $157.3B [phase2-documents §4]<br />
+- 半导体行业 PB 中位数 3-6x [phase3-part3 §八]，NVIDIA PB 远超行业 ~6-10 倍<br />
+- 即使给予 ROE 101.5% 对应的 Gordon PB = (ROE - g) / (r - g) = (1.015 - 0.035) / (0.11 - 0.035) = 0.98 / 0.075 = 13.1x<br />
+- 当前 34.9x vs 理论 13.1x → PB 溢价 ~166%，反映市场对超额 ROE 持续性的极高预期</p>
+<p><strong>自洽判定</strong>: DCF 锚 $213.7 vs 可比 Forward PE 隐含 $225.9 → 差异 5.7% ✅（&lt; 10%，自洽）。PB 验证显示估值偏高但与超高 ROE 逻辑自洽。</p>
+<hr />
+<h3>9.3 估值异常</h3>
+<ol>
+<li><strong>Trailing PE 46.1x vs Forward PE 19.9x 的巨大落差</strong> [metrics.json]: 反映市场预期 EPS 在未来 12 个月将翻倍以上（从 $4.90 跳至 ~$11.35）。若此预期落空，估值将面临双杀（盈利下修 + 估值收缩）。</li>
+<li><strong>PB 34.9x 极端偏离行业</strong> [metrics.json]: 半导体行业中位数 3-6x，NVIDIA 高出 ~6-10 倍。虽然 ROE 101.5% 支撑高 PB，但 ROE 可持续性取决于 AI 超级周期延续——任何增速放缓都将快速压缩 PB。</li>
+<li><strong>52 周高点 $227.84 vs 当前 $225.83</strong> [metrics.json]: 股价距历史高点仅 0.9%，技术面看处于极端高位区间。</li>
+</ol>
+<hr />
+<h3>9.4 技术面位置</h3>
+<blockquote>
+<p>⚠️ 美股暂无自动技术分析（无 <code>technical_analysis.md</code> artifact）。以下为基于价格数据的简要定位。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>数值</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>最新收盘</td>
+<td>$225.83</td>
+<td>[metrics.json, 2026-05-13]</td>
+</tr>
+<tr>
+<td>52 周高</td>
+<td>$227.84</td>
+<td>[metrics.json]</td>
+</tr>
+<tr>
+<td>52 周低</td>
+<td>$129.16</td>
+<td>[metrics.json]</td>
+</tr>
+<tr>
+<td>当前位置</td>
+<td>52 周高点 98% 分位</td>
+<td>计算: (225.83-129.16)/(227.84-129.16) = 98%</td>
+</tr>
+<tr>
+<td>Beta</td>
+<td>2.244</td>
+<td>[metrics.json]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>基本面 × 技术面配合判断</strong>:<br />
+- 股价处于 52 周极端高位（98% 分位），短期上行空间受限（距高点仅 $2）<br />
+- Beta 2.244 意味着若大盘回调 10%，NVIDIA 可能下跌 ~22%<br />
+- 基本面（DCF 估值锚 $213.7 &lt; 当前 $225.83）与技术面高位共振，指向<strong>短期风险偏高、中期需盈利增长兑现</strong></p>
+<hr />
+</div>
+
+<!-- ============================================================
+     §十 投资回报测算（与 §九 共用情景）
+     ============================================================ -->
+<div class="section" id="invest-sim">
+<h2>§十 投资回报测算（与 §九 共用情景）</h2>
+<p><strong>初始仓位</strong>: 100 万元人民币<br />
+<strong>汇率</strong>: 1 USD = 7.2 CNY [假设]<br />
+<strong>可投美元</strong>: $138,889（= ¥1,000,000 / 7.2）<br />
+<strong>当前买入</strong>: $225.83/股 × <strong>615 股</strong>（= $138,889 / $225.83，取整）<br />
+<strong>实际投入</strong>: 615 × $225.83 = $138,885（≈ ¥999,975）<br />
+<strong>投资视野</strong>: 2 年（至 2028 年 5 月，覆盖 FY2028E 业绩兑现）</p>
+<table>
+<thead>
+<tr>
+<th>情景</th>
+<th style="text-align: right;">目标价 ($)</th>
+<th style="text-align: right;">持仓市值 ($)</th>
+<th style="text-align: right;">持仓市值 (¥)</th>
+<th style="text-align: right;">收益率</th>
+<th style="text-align: center;">概率</th>
+<th style="text-align: right;">加权收益率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>乐观</td>
+<td style="text-align: right;">$317</td>
+<td style="text-align: right;">$194,955</td>
+<td style="text-align: right;">¥1,403,676</td>
+<td style="text-align: right;">+40.4%</td>
+<td style="text-align: center;">25%</td>
+<td style="text-align: right;">+10.1%</td>
+</tr>
+<tr>
+<td>基准</td>
+<td style="text-align: right;">$222</td>
+<td style="text-align: right;">$136,530</td>
+<td style="text-align: right;">¥983,016</td>
+<td style="text-align: right;">-1.7%</td>
+<td style="text-align: center;">45%</td>
+<td style="text-align: right;">-0.8%</td>
+</tr>
+<tr>
+<td>悲观</td>
+<td style="text-align: right;">$126</td>
+<td style="text-align: right;">$77,490</td>
+<td style="text-align: right;">¥557,928</td>
+<td style="text-align: right;">-44.2%</td>
+<td style="text-align: center;">25%</td>
+<td style="text-align: right;">-11.1%</td>
+</tr>
+<tr>
+<td>最差</td>
+<td style="text-align: right;">$61</td>
+<td style="text-align: right;">$37,515</td>
+<td style="text-align: right;">¥270,108</td>
+<td style="text-align: right;">-73.0%</td>
+<td style="text-align: center;">5%</td>
+<td style="text-align: right;">-3.7%</td>
+</tr>
+<tr>
+<td><strong>概率加权 2 年收益率</strong></td>
+<td style="text-align: right;">–</td>
+<td style="text-align: right;">–</td>
+<td style="text-align: right;">–</td>
+<td style="text-align: right;">–</td>
+<td style="text-align: center;">100%</td>
+<td style="text-align: right;"><strong>-5.4%</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>年化</strong> ≈ -2.7%（2 年复合）。</p>
+<p><strong>收益分布特征</strong>:<br />
+- <strong>期望值为负</strong>: 概率加权收益率 -5.4%，意味着以当前价格买入，<strong>期望回报为负</strong><br />
+- <strong>高度右偏风险</strong>: 乐观情景 +40.4% vs 悲观 -44.2% vs 最差 -73.0%，下行风险远大于上行空间<br />
+- <strong>盈亏平衡</strong>: 需股价上涨至 $226+ 才能回本，而 DCF 概率加权公允价值仅 $213.7<br />
+- <strong>汇率风险</strong>: 上述测算假设汇率不变；若人民币升值（美元贬值），实际回报进一步缩水</p>
+<p><strong>建议仓位</strong>: ≤5% 总资产（高波动 + 负期望值 + 估值偏高）。适合已有仓位的投资者持有观望，不宜在当前价位大幅新增。</p>
+<p><strong>关键观察</strong>: NVIDIA 基本面极为优秀（增速、利润率、现金流均为行业顶尖），但<strong>当前股价已充分甚至过度反映了基准增长预期</strong>。只有在乐观情景兑现（AI 超级周期延续 + 份额维持 + 毛利率企稳）时才能获得正回报。任何低于预期的结果都将导致亏损。</p>
+<hr />
+</div>
+
+<!-- ============================================================
+     §十一 定性判断（3 框架，无打分）
+     ============================================================ -->
+<div class="section" id="qualitative">
+<h2>§十一 定性判断（3 框架，v4.1 — 无打分）</h2>
+<blockquote>
+<p>估值分析详见 §九。<br />
+<strong>会计/治理红旗审计结果</strong>（<code>audit_report.md</code> 11 框架扫描）: Piotroski F-Score / Beneish M-Score / Altman Z-Score / DuPont 分解 / Buffett Quality / Sloan Accrual / Governance Red Flags / Shareholder Flow / Forward Guidance Anomaly / Valuation Anomaly / Related-Party Exposure — 全部 11 框架因美股 Tushare 数据不适用显示"数据不足"，<strong>0 个红旗信号</strong>。这意味着自动审计未发现异常，但也未能提供阳性验证，需结合 §十三 数据局限性综合判断。<br />
+本章节聚焦不能被定量指标或审计自动替代的"深层判断"。</p>
+</blockquote>
+<hr />
+<h3>框架 1: 护城河（Moat）</h3>
+<p><strong>核心问题</strong>: NVIDIA 的可持续竞争优势是在<strong>加深</strong>、<strong>侵蚀</strong>还是<strong>部分是</strong>？</p>
+<p><strong>判断</strong>: 部分是 — 短期加深（2-3 年），中长期面临结构性侵蚀</p>
+<p><strong>证据链</strong>（5 条）:</p>
+<ol>
+<li><strong>CUDA 生态系统自我强化（加深信号）</strong>: 全球数百万 AI 开发者基于 CUDA 开发，形成"开发者→应用→硬件需求"飞轮。ROCm（AMD）生态仍远逊 CUDA，短期无法替代 [phase3-part2 §五; PDF:10-K, P.124]</li>
+<li><strong>一年一代产品节奏压缩竞品追赶窗口（加深信号）</strong>: Hopper→Blackwell→Rubin 产品迭代速度使竞品刚追上上一代时 NVIDIA 已领先一代，性能代差持续存在 [PDF:10-K, P.124; phase1-data §3]</li>
+<li><strong>自研 ASIC 路径已被验证（侵蚀信号）</strong>: Google TPU v6、Amazon Trainium2、Meta 定制芯片（Broadcom 设计）均已量产部署。这些不直接竞争通用 GPU，但逐步蚕食推理市场增量，且这些客户恰好是 NVIDIA 最大买家 [phase3-part3 §八; PDF:10-K, P.100-113]</li>
+<li><strong>毛利率结构性下行提示定价权松动</strong>: FY2025 75.0%→FY2026 71.1%（-3.9pts），虽有 H20 一次性因素，但全系统方案（含低毛利网络组件）是永久性结构变化 [PDF:10-K, P.126; phase3-part2 §四]</li>
+<li><strong>S 曲线定位</strong>: 处于"中期偏后"（PE 46x + 高增长但增速递减），尚未进入成熟期（股息折现阶段），但增速从 +114%→+65%→+50% 的递减趋势明确 [metrics.json; phase1-data §9]</li>
+</ol>
+<p><strong>护城河类型</strong>: 复合型（生态系统锁定 [动态] + 转换成本 [动态] + 规模经济 [半动态] + 技术壁垒 [需持续投入]）。动态型占主导，自我强化能力强，但并非不可破。</p>
+<p><strong>逻辑蕴含</strong>:<br />
+- 若判断成立（短期加深+中期侵蚀）→ 利好 2-3 年超额 ROE 假设的持续性；但利空终值 PE 倍数的激进假设（不宜给 &gt;22x）<br />
+- 若判断推翻（ASIC 替代速度超预期）→ 利空增长假设，估值下行风险显著放大</p>
+<p><strong>对综合投资观点的支撑方向</strong>: 看多（短期）/ 分歧（中长期）</p>
+<p><strong>未解决问题</strong>: ① 自研 ASIC 在推理市场的实际份额缺乏公开可靠数据（Google/Amazon 不披露）；② CUDA 锁定效应的量化衡量缺少独立第三方研究</p>
+<hr />
+<h3>框架 2: 管理层（Management）</h3>
+<p><strong>核心问题</strong>: 管理层的<strong>德</strong>（诚信/股东为伴）、<strong>才</strong>（战略/执行/资本配置）是否都合格？</p>
+<p><strong>判断</strong>: 是 — 德才双优，但存在关键人物依赖</p>
+<p><strong>证据链</strong>（4 条）:</p>
+<ol>
+<li><strong>"德"检验 — 承诺履约率极高</strong>: Jensen Huang 2012 年战略转向 AI 的远见已被完美验证；FY2026 Q1 指引兑现率超出预期（实际常超指引 10-20%）；无年报差错、审计意见瑕疵或重大诉讼 [PDF:10-K; phase1-data §7; audit_report.md: 0 个红旗]</li>
+<li><strong>"才"检验 — 资本配置效率顶尖</strong>: FY2026 回购 $40.1B（回购收益率 0.73%）+ 分红 $2.5B；ROE 101.5% 远高于资本成本（~11%），留存再投资创造巨大价值；Groq $13B 收购布局推理芯片，战略前瞻性强 [PDF:10-K, P.143; metrics.json]</li>
+<li><strong>关键人物依赖风险</strong>: Jensen Huang 连续执掌 33 年，个人影响力极大，是 NVIDIA 品牌和战略的代名词。继任计划未公开披露。若发生不可抗力（健康/退休），短期内将严重冲击市场信心 [phase3-part3 §六 维度 5]</li>
+<li><strong>11 框架审计</strong>: 全部 11 个框架显示"⚠️ 数据不足或无信号" [audit_report.md]，<strong>非"零风险"而是"无数据验证"</strong>。美股 Tushare 覆盖不足导致审计深度有限，不能等同于"无治理问题"</li>
+</ol>
+<p><strong>逻辑蕴含</strong>:<br />
+- 若判断成立（德才双优）→ 利好 PE/PB 溢价空间的合理性，利好超额 ROE 假设的管理层执行力支撑<br />
+- 若判断推翻（关键人物风险爆发）→ 短期冲击 &gt;15% 股价（参照 Apple Tim Cook 接任初期市场反应）；长期取决于继任者质量</p>
+<p><strong>对综合投资观点的支撑方向</strong>: 看多</p>
+<p><strong>未解决问题</strong>: ① 继任计划不透明；② 内部人持股比例完整数据未获取</p>
+<hr />
+<h3>框架 3: 催化剂（Catalyst）</h3>
+<p><strong>核心问题</strong>: 下一个 <strong>12 个月</strong> 是否有可能<strong>改变投资结论方向</strong>的具体、可观察事件？</p>
+<p><strong>判断</strong>: 是 — 正负催化剂均密集，波动性放大</p>
+<p><strong>证据链</strong>（5 条）:</p>
+<ol>
+<li><strong>正向催化剂 — Q1 FY2027 财报（预计 2026.5-6 月）</strong>: 指引 $78B 营收 [phase1-data §9]，若实际超预期 $80B+，将触发新一轮上行；若不及预期，将是重大利空（因市场预期已极高）</li>
+<li><strong>正向催化剂 — Rubin 平台量产进度（2026 H2-2027 H1）</strong>: 一年一代节奏若如期兑现，持续拉开与竞品性能代差 [phase1-data §3]</li>
+<li><strong>负向催化剂 — 出口管制政策变化（随时可能）</strong>: H200 中国许可可被随时撤回 [PDF:10-K, P.100-113]。若完全封杀，直接丧失 $12-15B 年收入。FY2026 管理层已"不假设来自中国的数据中心计算收入"，但市场可能未完全 price in</li>
+<li><strong>负向催化剂 — AI 投资回报验证（2026-2027）</strong>: 超大规模云厂商在 2025-2026 年投入巨额 AI 资本开支，若 2027 年前后回报不及预期，资本开支周期可能骤然逆转 [PDF:10-K, P.100-113; phase3-part3 §七 看空观点 5]</li>
+<li><strong>时间窗催化剂 — 竞品产品发布</strong>: AMD MI400/MI500 + Intel Falcon Shores + Google TPU v7 等竞品在 2026-2027 年密集发布。若任一竞品在性价比上形成突破，将加速份额蚕食</li>
+</ol>
+<p><strong>证伪催化剂</strong>:<br />
+- 若 FY2027 Q1 营收 &lt; $75B（指引下限 $76.4B），意味着增长叙事动摇<br />
+- 若 FY2027 毛利率 &lt; 70%（持续低于 FY2026），意味着结构性定价权削弱<br />
+- 若任一 Tier-1 云厂商宣布 ASIC 替代 &gt;30% GPU 负载，意味着生态锁定松动</p>
+<p><strong>逻辑蕴含</strong>:<br />
+- 若正向催化剂兑现（Q1 超预期 + Rubin 如期量产）→ 利好短期上行窗口，可能推动股价至 $250-$300+<br />
+- 若负向催化剂触发（出口管制升级 / AI 周期见顶）→ 利空极大，Beta 2.244 放大下行幅度</p>
+<p><strong>对综合投资观点的支撑方向</strong>: 分歧 — 正负催化剂势均力敌，方向取决于事件兑现</p>
+<p><strong>未解决问题</strong>: ① Q1 FY2027 财报尚未披露（预计 2026.6）；② 出口管制政策走向不可预测</p>
+<hr />
+<h3>综合判断</h3>
+<p><strong>框架方向分布</strong>（共 3 个框架）:<br />
+- 看多方向: 框架 2 管理层（共 1 个）<br />
+  - 管理层德才双优，资本配置效率顶尖，战略前瞻性经过验证<br />
+- 看空方向: 无（共 0 个）<br />
+- 中性/分歧: 框架 1 护城河、框架 3 催化剂（共 2 个）<br />
+  - 框架 1: 短期护城河加深但中长期面临 ASIC 侵蚀<br />
+  - 框架 3: 正负催化剂均密集，方向不确定</p>
+<p><strong>致命看空条款检查</strong>（直接引用 §三快筛）:<br />
+- §三 快筛结果: ✅ PASS（6 项均未触发）<br />
+- audit_report.md: 0 个 🔴 红旗（数据覆盖有限，非零风险）<br />
+- 无致命看空触发</p>
+<p><strong>综合结论</strong>: <strong>中性-分歧</strong><br />
+（根据 v4.1 黑白分割规则: 3 框架中仅 1 个看多、0 个看空、2 个分歧 → 不满足 ≥2 同向 → 中性-分歧）</p>
+<p><strong>关键分歧点</strong>:<br />
+- 框架 1（护城河短期加深）vs 框架 3 负向催化剂（出口管制/AI 周期见顶） — <strong>分歧焦点</strong>: NVIDIA 的生态锁定能否抵御宏观周期逆转？<br />
+- 验证方式: 观察 FY2027 Q1-Q2 财报（营收增速是否维持 &gt;40%）+ 2026 下半年出口管制政策动态</p>
+<p><strong>验证催化剂</strong>（由框架 3 识别）:<br />
+1. Q1 FY2027 财报 — 时间窗: 2026 年 5-6 月（即将到来）<br />
+2. Rubin 平台量产公告 — 时间窗: 2026 H2<br />
+3. 美国对华出口管制政策更新 — 时间窗: 不确定（随时可能）<br />
+4. 超大规模云厂商 CY2026 Q2 资本开支指引 — 时间窗: 2026 年 7-8 月</p>
+</div>
+
+<!-- ============================================================
+     §十二 信息缺口与尽调优先级
+     ============================================================ -->
+<div class="section" id="gaps">
+<h2>§十二 信息缺口与尽调优先级</h2>
+<blockquote>
+<p>以下缺口来自 Phase 1 数据采集 (phase1-data §11) 及 Phase 2/3 写作过程中发现的增量缺口，按尽调优先级排序。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">#</th>
+<th>缺口描述</th>
+<th>已尝试查询方式</th>
+<th style="text-align: center;">是否已被替代来源覆盖</th>
+<th style="text-align: center;">尽调优先级</th>
+<th>对投资判断的影响</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td><strong>10-Q FY2027 Q1 未披露</strong> — 截至 2026-05-15 尚未提交 SEC（NVIDIA FY2027 Q1 截至 2026.4.27，预计 2026.6 初提交），缺少最新季度详细财务数据、分部毛利率、库存去化进展</td>
+<td>SEC EDGAR EFTS 搜索、NVIDIA IR 页面 [phase1-data §11]</td>
+<td style="text-align: center;">⚠️ 部分覆盖 — Q1 营收指引 $78B 及 Non-GAAP 毛利率 ~75% 已通过 earnings call 舆情获取 [phase1-data §9]，但 GAAP 三表、分部明细、库存结构仍缺失</td>
+<td style="text-align: center;">🔴 最高</td>
+<td>无法验证 Blackwell 毛利率恢复趋势及 H20 减值后库存去化情况，直接影响 §九 DCF 乐观/基准情景 EPS 假设的可信度</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td><strong>子公司清单 (Exhibit 21.1) 未提取</strong> — 10-K 主文件 PDF 未包含 EX-21.1 附件，无法获取完整控股架构及离岸实体信息</td>
+<td>主 10-K PDF regex + LLM 提取 [phase1-data §11]</td>
+<td style="text-align: center;">❌ 未覆盖 — SEC EDGAR 单独 exhibit 文件未下载</td>
+<td style="text-align: center;">🟡 中</td>
+<td>对关联交易、税务架构、离岸风险的评估缺少底层数据；但 NVIDIA 为成熟美股公司，审计覆盖充分，短期投资决策影响有限</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td><strong>前十大股东完整名单</strong> — 美股 10-K 不披露完整股东名单（与 A 股年报制度不同），仅有 proxy statement / 13-F 汇总</td>
+<td>yfinance <code>major_holders</code> + <code>institutional_holders</code> 部分替代 [phase1-data §11]</td>
+<td style="text-align: center;">⚠️ 部分覆盖 — yfinance 提供前几大机构持股（Vanguard、BlackRock 等），但缺少完整 top-10 排名及内部人持股变动明细</td>
+<td style="text-align: center;">🟡 中</td>
+<td>无法精确追踪筹码集中度变化及内部人增减持信号</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td><strong>WebSearch 引擎返回空结果</strong> — Phase 1 多次搜索均无结果，舆情数据主要来自 SeekingAlpha WebFetch 单源</td>
+<td>WebSearch 多关键词组合查询 [phase1-data §11]</td>
+<td style="text-align: center;">⚠️ 部分覆盖 — SeekingAlpha 提供了看多/看空观点各 4 条 [phase1-data §4]，但覆盖面有限，缺少 sell-side 研报、Reddit/X 散户情绪、期权隐含波动率等多元信号</td>
+<td style="text-align: center;">🟡 中</td>
+<td>§四 舆情部分可能存在来源偏差（SeekingAlpha 偏机构/长线视角），散户情绪极端值未捕获</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td><strong>11 框架审计全部"数据不足"</strong> — financial_audit.py 基于 yfinance 结构化数据运行，美股数据字段覆盖不足，10/11 个框架均返回 ⚠️ 无信号</td>
+<td>Python scripts.financial_audit 自动执行 [audit_report.md]</td>
+<td style="text-align: center;">❌ 未覆盖 — Phase 2 PDF 精读提供了定性风险评估 [phase2-documents §6]，但缺少 Piotroski F-Score、Beneish M-Score、Altman Z-Score 等量化审计结论</td>
+<td style="text-align: center;">🔴 高</td>
+<td>§七 红旗审计章节无法提供量化异常信号，投资者需自行补充第三方审计工具数据</td>
+</tr>
+</tbody>
+</table>
+<p><strong>尽调行动建议</strong>:</p>
+<ol>
+<li><strong>Q1 10-Q 发布后立即更新</strong>（预计 2026 年 6 月初）: 重点关注 GAAP 毛利率（验证 Non-GAAP 75% 指引与 GAAP 差异）、库存明细（Blackwell vs 旧架构占比）、分部营收（H200 中国贡献）</li>
+<li><strong>补充 Exhibit 21.1 + Proxy Statement</strong>: 从 SEC EDGAR 单独下载，完善控股架构及内部人持股变动</li>
+<li><strong>多元舆情补充</strong>: 引入 Bloomberg/Refinitiv 终端数据、sell-side 一致预期、期权 IV skew 数据</li>
+</ol>
+<hr />
+</div>
+
+<!-- ============================================================
+     §十三 数据可审计性（时效性+来源+audit 红旗）
+     ============================================================ -->
+<div class="section" id="sources">
+<h2>§十三 数据可审计性（时效性 + 来源 3 类分组）</h2>
+<h3>数据时效性</h3>
+<table>
+<thead>
+<tr>
+<th>数据源</th>
+<th>最新覆盖期</th>
+<th>采集日期</th>
+<th>时效判定</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>yfinance 结构化数据</td>
+<td>FY2026（截至 2026.1.25）</td>
+<td>2026-05-15</td>
+<td>✅ 当前财年</td>
+</tr>
+<tr>
+<td>10-K PDF (SEC EDGAR)</td>
+<td>FY2026（截至 2026.1.25）</td>
+<td>2026-05-15</td>
+<td>✅ 当前财年</td>
+</tr>
+<tr>
+<td>10-Q 季报</td>
+<td>FY2027 Q1 未披露</td>
+<td>—</td>
+<td>❌ 缺失</td>
+</tr>
+<tr>
+<td>WebSearch / WebFetch 舆情</td>
+<td>2026 年 5 月</td>
+<td>2026-05-15</td>
+<td>✅ 实时</td>
+</tr>
+<tr>
+<td>股价数据 (yfinance)</td>
+<td>2026-05-13 收盘</td>
+<td>2026-05-15</td>
+<td>✅ 近实时</td>
+</tr>
+</tbody>
+</table>
+<h3>来源 3 类分组</h3>
+<h4>第 1 类: yfinance API 结构化数据</h4>
+<table>
+<thead>
+<tr>
+<th>数据项</th>
+<th>引用章节</th>
+<th>来源标签</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>营收/净利润/EPS 三年趋势</td>
+<td>§四 财务趋势表</td>
+<td>[yfinance:income_stmt]</td>
+</tr>
+<tr>
+<td>资产负债表关键科目</td>
+<td>§四 / §六 维度 6</td>
+<td>[yfinance:balance_sheet]</td>
+</tr>
+<tr>
+<td>现金流量表</td>
+<td>§四 / §六 维度 6</td>
+<td>[yfinance:cashflow]</td>
+</tr>
+<tr>
+<td>股价/市值/52 周高低</td>
+<td>§九 估值参数</td>
+<td>[yfinance:history / info]</td>
+</tr>
+<tr>
+<td>机构持股</td>
+<td>§四 股东结构</td>
+<td>[yfinance:institutional_holders]</td>
+</tr>
+<tr>
+<td>衍生指标 (3Y CAGR 88.3% 等)</td>
+<td>§六 / §九</td>
+<td>[metrics.json 计算]</td>
+</tr>
+</tbody>
+</table>
+<h4>第 2 类: PDF 原文 (SEC 10-K FY2026)</h4>
+<table>
+<thead>
+<tr>
+<th>数据项</th>
+<th>引用章节</th>
+<th>来源标签</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MD&amp;A 管理层讨论</td>
+<td>§四 业务板块 / §六 维度 1-4</td>
+<td>[PDF:10-K, P.124-128]</td>
+</tr>
+<tr>
+<td>利润表 3 年对比</td>
+<td>§四 财务趋势</td>
+<td>[PDF:10-K, P.126-128]</td>
+</tr>
+<tr>
+<td>资产负债表变动</td>
+<td>§六 维度 6</td>
+<td>[PDF:10-K, P.141]</td>
+</tr>
+<tr>
+<td>现金流量表</td>
+<td>§六 维度 6</td>
+<td>[PDF:10-K, P.143]</td>
+</tr>
+<tr>
+<td>非经常性损益 (H20 $4.5B 减值)</td>
+<td>§四 重大事项 / §六 维度 5</td>
+<td>[PDF:10-K, P.125-126]</td>
+</tr>
+<tr>
+<td>风险因素</td>
+<td>§五 竞争格局 / §八 风险矩阵</td>
+<td>[PDF:10-K, P.100-113]</td>
+</tr>
+<tr>
+<td>关联交易/诉讼</td>
+<td>§八</td>
+<td>[PDF:10-K, P.145+]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>PDF 提取覆盖率</strong>: 7/9 sections 成功（regex: 0, LLM: 7），缺失 subsidiaries (EX-21.1) + top10_holders [phase2-documents PDF 完整度汇总]</p>
+<h4>第 3 类: WebSearch / WebFetch</h4>
+<table>
+<thead>
+<tr>
+<th>数据项</th>
+<th>引用章节</th>
+<th>来源标签</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>投资社区看多/看空观点 (各 4 条)</td>
+<td>§四 舆情</td>
+<td>[WebFetch:SeekingAlpha]</td>
+</tr>
+<tr>
+<td>Q1 FY2027 营收指引 $78B</td>
+<td>§四 / §九 前瞻</td>
+<td>[WebFetch:SeekingAlpha earnings]</td>
+</tr>
+<tr>
+<td>H200 中国许可新闻</td>
+<td>§四 重大事项</td>
+<td>[WebFetch:SeekingAlpha]</td>
+</tr>
+<tr>
+<td>竞争对手动态 (Cerebras IPO 等)</td>
+<td>§五 竞争格局</td>
+<td>[WebFetch:SeekingAlpha]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>局限</strong>: WebSearch 引擎多次返回空结果，舆情依赖 SeekingAlpha 单源，存在来源集中度风险。</p>
+<h3>审计红旗汇总</h3>
+<p><strong>audit_report.md 结果</strong>: 10 个经典框架 + 1 个关联方框架（共 11 框架）审计产出 <strong>0 个红旗信号</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>框架</th>
+<th style="text-align: center;">状态</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Piotroski F-Score</td>
+<td style="text-align: center;">⚠️ 数据不足</td>
+<td>yfinance 美股字段覆盖不足</td>
+</tr>
+<tr>
+<td>Beneish M-Score</td>
+<td style="text-align: center;">⚠️ 数据不足</td>
+<td>同上</td>
+</tr>
+<tr>
+<td>Altman Z-Score</td>
+<td style="text-align: center;">⚠️ 数据不足</td>
+<td>同上</td>
+</tr>
+<tr>
+<td>DuPont 分解</td>
+<td style="text-align: center;">⚠️ 数据不足</td>
+<td>同上</td>
+</tr>
+<tr>
+<td>Buffett Quality Checks</td>
+<td style="text-align: center;">⚠️ 数据不足</td>
+<td>同上</td>
+</tr>
+<tr>
+<td>Sloan Accrual Anomaly</td>
+<td style="text-align: center;">⚠️ 数据不足</td>
+<td>同上</td>
+</tr>
+<tr>
+<td>Governance Red Flags</td>
+<td style="text-align: center;">⚠️ 数据不足</td>
+<td>同上</td>
+</tr>
+<tr>
+<td>Shareholder Flow</td>
+<td style="text-align: center;">⚠️ 数据不足</td>
+<td>同上</td>
+</tr>
+<tr>
+<td>Forward Guidance Anomaly</td>
+<td style="text-align: center;">⚠️ 数据不足</td>
+<td>同上</td>
+</tr>
+<tr>
+<td>Valuation Anomaly</td>
+<td style="text-align: center;">⚠️ 数据不足</td>
+<td>同上</td>
+</tr>
+<tr>
+<td>Related-Party Exposure</td>
+<td style="text-align: center;">⚠️ 数据不足</td>
+<td>同上</td>
+</tr>
+</tbody>
+</table>
+<p><strong>如实标注</strong>: 美股财务审计数据不足，<code>financial_audit.py</code> 依赖的 yfinance 结构化数据字段未能满足 11 个经典框架的最低输入要求，全部返回"数据不足或无信号"。<strong>这并非意味着公司无风险</strong>，而是自动化审计工具对美股数据适配尚不完善。投资者应参考 §六 维度 5-6 的 PDF 手动审计及 §八 风险矩阵作为替代。</p>
+</div>
+
+<!-- ============================================================
+     v4.6.1: 附录/补丁章节追加区(避免 MD→HTML 内容丢失)
+     主报告 §十三 之后的所有 ## 章节(如"附录 v4 修订日志" / "v4.1 补丁")
+     Phase 6 Part B 必须追加到这里, 不得丢弃
+     ============================================================ -->
+<!-- 无附录章节 -->
+
+<footer>
+  本报告由 Claude Code 自动生成<br>
+  数据源：Tushare Pro / yfinance / 巨潮资讯 PDF / WebSearch · 不构成投资建议<br>
+  <a href="https://github.com/MichaelFei87/Stock-Analysis">skill 代码</a> · <a href="https://github.com/MichaelFei87/Inves-Report">报告归档</a>
+</footer>
+
+</div>
+</body>
+</html>
